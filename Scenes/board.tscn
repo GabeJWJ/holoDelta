@@ -1,0 +1,204 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs6ginkulskya"]
+
+[ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
+[ext_resource type="Script" path="res://Scripts/MapCamera2D.gd" id="2_pceco"]
+[ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
+[ext_resource type="Texture2D" uid="uid://djuk0g87nhrhc" path="res://cardbutton.png" id="4_ipp72"]
+
+[node name="Board" type="Node2D"]
+position = Vector2(1020, 1566)
+script = ExtResource("3_0fpdy")
+player_side = ExtResource("1_ima0g")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://Scenes/side.tscn")
+spawn_path = NodePath("..")
+spawn_limit = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Info" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 329.0
+offset_bottom = 1079.0
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.623529)
+
+[node name="Preview" type="TextureRect" parent="CanvasLayer/Info"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 309.0
+offset_bottom = 429.0
+texture = ExtResource("4_ipp72")
+
+[node name="CardText" type="Label" parent="CanvasLayer/Info"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 10.0
+offset_top = 449.0
+offset_right = 312.0
+offset_bottom = 1064.0
+autowrap_mode = 3
+
+[node name="Host" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 960.0
+offset_top = 336.0
+offset_right = 1069.0
+offset_bottom = 390.0
+text = "Host"
+
+[node name="Join" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 960.0
+offset_top = 396.0
+offset_right = 1069.0
+offset_bottom = 450.0
+text = "Join"
+
+[node name="MenuButton" type="MenuButton" parent="CanvasLayer"]
+offset_left = 39.0
+offset_top = 352.0
+offset_right = 477.0
+offset_bottom = 429.0
+theme_override_font_sizes/font_size = 50
+text = "Choose Deck"
+flat = false
+
+[node name="IPPrompt" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_left = 763.0
+offset_top = 334.0
+offset_right = 1054.0
+offset_bottom = 446.0
+color = Color(0.0885599, 0.0885599, 0.0885599, 0.768627)
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/IPPrompt"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 55.0
+offset_right = 278.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 30
+placeholder_text = "localhost"
+
+[node name="Label" type="Label" parent="CanvasLayer/IPPrompt"]
+layout_mode = 0
+offset_left = 11.0
+offset_right = 279.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 30
+text = "Enter IP Address"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Steam Connect" type="Button" parent="CanvasLayer"]
+offset_left = 850.0
+offset_top = 386.0
+offset_right = 1149.0
+offset_bottom = 438.0
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "Connect with Steam"
+
+[node name="Direct Connect" type="Button" parent="CanvasLayer"]
+offset_left = 880.0
+offset_top = 448.0
+offset_right = 1114.0
+offset_bottom = 498.0
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "Connect with IP"
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+offset_left = 739.0
+offset_top = 8.0
+offset_right = 1230.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 100
+text = "holoDelta"
+
+[node name="Subtitle" type="Label" parent="CanvasLayer/Title"]
+layout_mode = 0
+offset_left = -19.0
+offset_top = 118.0
+offset_right = 499.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 30
+text = "An Unofficial Hololive TCG Simulator"
+
+[node name="SteamHost" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 960.0
+offset_top = 336.0
+offset_right = 1069.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 30
+text = "Host"
+
+[node name="SteamJoin" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 960.0
+offset_top = 396.0
+offset_right = 1069.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 30
+text = "Join"
+
+[node name="LobbyList" type="ScrollContainer" parent="CanvasLayer"]
+visible = false
+offset_left = 830.0
+offset_top = 370.0
+offset_right = 1169.0
+offset_bottom = 995.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/LobbyList"]
+layout_mode = 2
+
+[node name="CancelLobby" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1154.0
+offset_top = 564.0
+offset_right = 1257.0
+offset_bottom = 614.0
+theme_override_font_sizes/font_size = 30
+text = "Cancel"
+
+[node name="CancelIPJoin" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1154.0
+offset_top = 564.0
+offset_right = 1257.0
+offset_bottom = 614.0
+theme_override_font_sizes/font_size = 30
+text = "Cancel"
+
+[node name="Deck Creation" type="Button" parent="CanvasLayer"]
+offset_left = 40.0
+offset_top = 246.0
+offset_right = 475.0
+offset_bottom = 323.0
+theme_override_font_sizes/font_size = 50
+text = "Create/Edit Deck"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, 200)
+zoom = Vector2(0.6, 0.6)
+script = ExtResource("2_pceco")
+zoom_min = 0.25
+zoom_max = 3.0
+pan_speed = 0.0
+drag_inertia = 0.0
+
+[connection signal="pressed" from="CanvasLayer/Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/Join" to="." method="_on_join_pressed"]
+[connection signal="text_submitted" from="CanvasLayer/IPPrompt/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="CanvasLayer/Steam Connect" to="." method="_on_steam_connect_pressed"]
+[connection signal="pressed" from="CanvasLayer/Direct Connect" to="." method="_on_direct_connect_pressed"]
+[connection signal="pressed" from="CanvasLayer/SteamHost" to="." method="_on_steam_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/SteamJoin" to="." method="_on_steam_join_pressed"]
+[connection signal="pressed" from="CanvasLayer/CancelLobby" to="." method="_on_cancel_lobby_pressed"]
+[connection signal="pressed" from="CanvasLayer/CancelIPJoin" to="." method="_on_cancel_ip_join_pressed"]
+[connection signal="pressed" from="CanvasLayer/Deck Creation" to="." method="_on_deck_creation_pressed"]

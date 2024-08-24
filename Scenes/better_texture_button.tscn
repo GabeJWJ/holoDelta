@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ytwles2vik3j"]
+
+[ext_resource type="Texture2D" uid="uid://djuk0g87nhrhc" path="res://cardbutton.png" id="1_5o57l"]
+[ext_resource type="Script" path="res://Scripts/better_texture_button.gd" id="1_pfkje"]
+[ext_resource type="Texture2D" uid="uid://ckina22q7em5y" path="res://cardbuttonhover.png" id="2_wtcn7"]
+
+[node name="betterTextureButton" type="Node2D"]
+script = ExtResource("1_pfkje")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 309.0
+offset_bottom = 429.0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 309.0
+offset_bottom = 429.0
+mouse_filter = 1
+texture_normal = ExtResource("1_5o57l")
+texture_hover = ExtResource("2_wtcn7")
+
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton" to="." method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

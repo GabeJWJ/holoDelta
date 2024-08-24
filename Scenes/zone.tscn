@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://md0n47hsxcob"]
+
+[ext_resource type="Texture2D" uid="uid://s5m7fkn1lou3" path="res://zonebutton.png" id="1_at652"]
+[ext_resource type="Script" path="res://Scripts/zone.gd" id="1_oaxcq"]
+[ext_resource type="Texture2D" uid="uid://dtwx3yh72x8us" path="res://zonebuttonhover.png" id="2_ao8ke"]
+
+[node name="Zone" type="Node2D"]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_oaxcq")
+
+[node name="ZoneButton" type="TextureButton" parent="."]
+visible = false
+offset_left = -154.0
+offset_top = -214.0
+offset_right = 155.0
+offset_bottom = 215.0
+texture_normal = ExtResource("1_at652")
+texture_hover = ExtResource("2_ao8ke")
+
+[connection signal="mouse_entered" from="ZoneButton" to="." method="_on_zone_button_mouse_entered"]
+[connection signal="mouse_exited" from="ZoneButton" to="." method="_on_zone_button_mouse_exited"]
+[connection signal="pressed" from="ZoneButton" to="." method="_on_zone_button_pressed"]

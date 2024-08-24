@@ -1,0 +1,174 @@
+[gd_scene load_steps=9 format=3 uid="uid://j87r323v31qv"]
+
+[ext_resource type="Script" path="res://Scripts/side.gd" id="1_vy6dv"]
+[ext_resource type="PackedScene" uid="uid://md0n47hsxcob" path="res://Scenes/zone.tscn" id="2_a11wy"]
+[ext_resource type="Texture2D" uid="uid://cp7k5oles16v1" path="res://side.jpg" id="2_hegt3"]
+[ext_resource type="PackedScene" uid="uid://hxi6y3mwpmp8" path="res://Scenes/fuda.tscn" id="3_4khac"]
+[ext_resource type="PackedScene" uid="uid://xo7x52x42xjv" path="res://side.glb" id="4_bqq78"]
+[ext_resource type="Texture2D" uid="uid://bcans1dkc8eyo" path="res://cheerBack.png" id="5_2ycg0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehvxa"]
+albedo_texture = ExtResource("5_2ycg0")
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ddblg"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
+[node name="Side" type="Node2D"]
+script = ExtResource("1_vy6dv")
+
+[node name="Zones" type="Node2D" parent="."]
+
+[node name="Center" parent="Zones" instance=ExtResource("2_a11wy")]
+z_index = 1
+position = Vector2(26.5, -253)
+
+[node name="Collab" parent="Zones" instance=ExtResource("2_a11wy")]
+z_index = 1
+position = Vector2(-363, -253)
+zoneID = 1
+
+[node name="Back1" parent="Zones" instance=ExtResource("2_a11wy")]
+z_index = 1
+position = Vector2(-500, 250)
+zoneID = 2
+
+[node name="Back2" parent="Zones" instance=ExtResource("2_a11wy")]
+z_index = 1
+position = Vector2(-250, 250)
+zoneID = 3
+
+[node name="Back3" parent="Zones" instance=ExtResource("2_a11wy")]
+z_index = 1
+position = Vector2(0, 250)
+zoneID = 4
+
+[node name="Back4" parent="Zones" instance=ExtResource("2_a11wy")]
+z_index = 1
+position = Vector2(250, 250)
+zoneID = 5
+
+[node name="Back5" parent="Zones" instance=ExtResource("2_a11wy")]
+z_index = 1
+position = Vector2(500, 250)
+zoneID = 6
+
+[node name="Side" type="Sprite2D" parent="."]
+texture = ExtResource("2_hegt3")
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = -1050.0
+offset_top = -540.0
+offset_right = -1010.0
+offset_bottom = -500.0
+scale = Vector2(1.041, 1.041)
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+physics_object_picking = true
+size = Vector2i(2040, 1044)
+render_target_update_mode = 4
+
+[node name="Node3D" type="Node3D" parent="SubViewportContainer/SubViewport"]
+
+[node name="side" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("4_bqq78")]
+transform = Transform3D(1.55, 0, 0, 0, 1, 0, 0, 0, 1.55, 0, 0, 0)
+visible = false
+
+[node name="Deck" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1524, 0, -0.627289)
+
+[node name="CheerDeck" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4789, 1.90735e-06, 4.81324)
+
+[node name="Plane" parent="SubViewportContainer/SubViewport/Node3D/CheerDeck/fuda" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ehvxa")
+
+[node name="Archive" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.152, 0, 4.92489)
+archive = true
+
+[node name="Holopower" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.5563, 0, -5.67446)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.1049, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(0.879607, -2.07935e-08, 0.475701, -0.475701, -3.84488e-08, 0.879607, 0, -1, -4.37113e-08, 12.5408, 13.1639, 3.32323)
+light_energy = 16.0
+light_indirect_energy = 4.676
+spot_range = 307.097
+spot_angle = 62.5486
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Node3D"]
+transform = Transform3D(0.974193, 9.82017e-09, -0.225716, 0.225716, -1.90691e-08, 0.974193, 5.26254e-09, -1, -2.07936e-08, -11.2511, 13.1639, 3.32323)
+light_energy = 16.0
+light_indirect_energy = 4.676
+spot_range = 155.908
+spot_angle = 52.5533
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_ddblg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Prompt" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.5
+offset_top = -57.0
+offset_right = 125.5
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.623529)
+
+[node name="Input" type="Label" parent="CanvasLayer/Prompt"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.01
+anchor_right = 0.05
+anchor_bottom = 0.01
+offset_right = 231.0
+offset_bottom = 110.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+text = "Draw X cards
+X="
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Prompt/Input"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 46.0
+offset_right = 215.0
+offset_bottom = 103.0
+theme_override_font_sizes/font_size = 35
+placeholder_text = "7"
+max_length = 2
+
+[connection signal="zone_clicked" from="Zones/Center" to="." method="_on_zone_clicked"]
+[connection signal="zone_clicked" from="Zones/Collab" to="." method="_on_zone_clicked"]
+[connection signal="zone_clicked" from="Zones/Back1" to="." method="_on_zone_clicked"]
+[connection signal="zone_clicked" from="Zones/Back2" to="." method="_on_zone_clicked"]
+[connection signal="zone_clicked" from="Zones/Back3" to="." method="_on_zone_clicked"]
+[connection signal="zone_clicked" from="Zones/Back4" to="." method="_on_zone_clicked"]
+[connection signal="zone_clicked" from="Zones/Back5" to="." method="_on_zone_clicked"]
+[connection signal="id_pressed" from="PopupMenu" to="." method="_on_popup_menu_id_pressed"]
+[connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Deck" to="." method="_on_deck_clicked"]
+[connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Holopower" to="." method="_on_holopower_clicked"]
+[connection signal="text_submitted" from="CanvasLayer/Prompt/Input/LineEdit" to="." method="_on_line_edit_text_submitted"]
+
+[editable path="SubViewportContainer/SubViewport/Node3D/CheerDeck"]

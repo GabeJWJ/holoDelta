@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=3 uid="uid://4fkqvw0xk8ra"]
+
+[ext_resource type="Script" path="res://Scripts/card.gd" id="1_wdbwf"]
+[ext_resource type="Texture2D" uid="uid://bsimtm4ayc81d" path="res://hBP01-041.png" id="2_yigco"]
+[ext_resource type="Texture2D" uid="uid://djuk0g87nhrhc" path="res://cardbutton.png" id="4_84wmg"]
+[ext_resource type="Texture2D" uid="uid://ckina22q7em5y" path="res://cardbuttonhover.png" id="5_f6tys"]
+[ext_resource type="Texture2D" uid="uid://d2bjrwsls2wp5" path="res://damageCounter.png" id="5_p2v7u"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ekrpc"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:visible")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath(".:rested")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath("DamageCounter:visible")
+properties/4/spawn = true
+properties/4/replication_mode = 1
+properties/5/path = NodePath("DamageCounter/Label:text")
+properties/5/spawn = true
+properties/5/replication_mode = 1
+properties/6/path = NodePath(".:damage")
+properties/6/spawn = true
+properties/6/replication_mode = 1
+properties/7/path = NodePath(".:trulyHidden")
+properties/7/spawn = true
+properties/7/replication_mode = 1
+properties/8/path = NodePath(".:z_index")
+properties/8/spawn = true
+properties/8/replication_mode = 1
+
+[node name="Card" type="Node2D"]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_wdbwf")
+
+[node name="Front" type="Sprite2D" parent="."]
+texture = ExtResource("2_yigco")
+
+[node name="CardButton" type="TextureButton" parent="."]
+offset_left = -155.0
+offset_top = -215.0
+offset_right = 154.0
+offset_bottom = 214.0
+texture_normal = ExtResource("4_84wmg")
+texture_hover = ExtResource("5_f6tys")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_ekrpc")
+
+[node name="DamageCounter" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-110.667, -176)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_p2v7u")
+
+[node name="Label" type="Label" parent="DamageCounter"]
+offset_left = -48.0
+offset_top = -30.2222
+offset_right = 21.0
+offset_bottom = 24.7778
+rotation = -0.174533
+theme_override_font_sizes/font_size = 40
+text = "100"
+
+[node name="Amount" type="Label" parent="."]
+visible = false
+offset_left = 101.333
+offset_top = -250.667
+offset_right = 187.333
+offset_bottom = -181.667
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 50
+text = "x10"
+
+[connection signal="mouse_entered" from="CardButton" to="." method="_on_card_button_mouse_entered"]
+[connection signal="mouse_exited" from="CardButton" to="." method="_on_card_button_mouse_exited"]
+[connection signal="pressed" from="CardButton" to="." method="_on_card_button_pressed"]
