@@ -784,14 +784,13 @@ func _on_deck_clicked():
 	
 	if is_multiplayer_authority():
 		
-		if is_turn:
-			popup.add_item("Draw",200)
-			popup.add_item("Draw X",201)
-			popup.add_item("Mill",202)
-			popup.add_item("Mill X",203)
-			popup.add_item("Holopower",204)
-			
-			popup.add_separator()
+		popup.add_item("Draw",200)
+		popup.add_item("Draw X",201)
+		popup.add_item("Mill",202)
+		popup.add_item("Mill X",203)
+		popup.add_item("Holopower",204)
+		
+		popup.add_separator()
 		
 		popup.add_item("Shuffle hand into Deck", 250)
 		
