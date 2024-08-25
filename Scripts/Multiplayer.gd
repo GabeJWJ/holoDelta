@@ -332,3 +332,7 @@ func _on_cancel_ip_join_pressed():
 	$CanvasLayer/Host.visible = true
 	$CanvasLayer/Join.visible = true
 	$CanvasLayer/CancelIPJoin.visible = false
+
+
+func _on_exit_pressed():
+	get_tree().quit()

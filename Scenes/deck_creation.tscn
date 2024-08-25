@@ -165,12 +165,31 @@ filters = PackedStringArray("*.json")
 use_native_dialog = true
 
 [node name="MainMenu" type="Button" parent="CanvasLayer"]
-offset_left = 962.0
+offset_left = 540.0
 offset_top = 1010.0
-offset_right = 1278.0
+offset_right = 856.0
 offset_bottom = 1060.0
 theme_override_font_sizes/font_size = 30
 text = "Return to Main Menu"
+
+[node name="Clear" type="Button" parent="CanvasLayer"]
+offset_left = 357.0
+offset_top = 1010.0
+offset_right = 518.0
+offset_bottom = 1060.0
+theme_override_font_sizes/font_size = 30
+text = "Clear Deck"
+
+[node name="Problems" type="ScrollContainer" parent="CanvasLayer"]
+offset_left = 875.0
+offset_top = 995.0
+offset_right = 1283.0
+offset_bottom = 1067.0
+
+[node name="ProblemList" type="Label" parent="CanvasLayer/Problems"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
 
 [connection signal="pressed" from="CanvasLayer/LoadDeck" to="." method="_on_load_deck_pressed"]
 [connection signal="pressed" from="CanvasLayer/SaveDeck" to="." method="_on_save_deck_pressed"]

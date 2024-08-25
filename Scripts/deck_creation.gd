@@ -51,6 +51,7 @@ func _ready():
 		newCardButton.scale = Vector2(0.6,0.6)
 		newCardButton.position = Vector2(100 + 200*(index % 3), 150 + 280*(index / 3))
 		newCardButton.card_clicked.connect(_on_menu_card_clicked)
+		newCardButton.card_right_clicked.connect(_on_menu_card_right_clicked)
 	
 	oshi_tab.custom_minimum_size = Vector2(0, (oshi_tab.get_child_count() / 3)*280 + 300)
 	main_tab.custom_minimum_size = Vector2(0, (main_tab.get_child_count()/3)*280 + 300)
@@ -192,6 +193,40 @@ func _on_menu_card_clicked(card_id):
 	
 	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 
+func _on_menu_card_right_clicked(card_id):
+	if $CanvasLayer/LoadDialog.visible or $CanvasLayer/SaveDialog.visible:
+		return
+	
+	var actualCard = all_cards[card_id]
+	if actualCard.cardType == "Oshi":
+		return
+	var alreadyHere
+	if actualCard.cardType == "Cheer":
+		alreadyHere = find_in_deck_with_number(actualCard.cardNumber,actualCard.artNum,cheer_deck)
+		if alreadyHere != null:
+			alreadyHere.set_amount_hidden(true)
+			alreadyHere.update_amount(alreadyHere.get_amount()-1)
+			in_deck_dictionary[actualCard.cardNumber] -= 1
+			#deck_info.cheerDeck
+		total_cheer -= 1
+	else:
+		alreadyHere = find_in_deck_with_number(actualCard.cardNumber,actualCard.artNum,main_deck)
+		if alreadyHere != null:
+			alreadyHere.set_amount_hidden(true)
+			alreadyHere.update_amount(alreadyHere.get_amount()-1)
+			in_deck_dictionary[actualCard.cardNumber] -= 1
+			#deck_info.cheerDeck
+		total_main -= 1
+	
+	if alreadyHere != null and in_deck_dictionary[actualCard.cardNumber] == 0:
+		in_deck_dictionary.erase(actualCard.cardNumber)
+		alreadyHere.name = "PleaseDelete"
+		alreadyHere.queue_free()
+		update_main_deck_children()
+		update_cheer_deck_children()
+	
+	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
+
 func _on_deck_card_clicked(card_id):
 	if $CanvasLayer/LoadDialog.visible or $CanvasLayer/SaveDialog.visible:
 		return
@@ -220,14 +255,35 @@ func find_in_deck_with_number(cardNumber,artNum,areaToCheck):
 			return cardButton
 
 func is_deck_legal():
+	$CanvasLayer/Problems/ProblemList.text = ""
+	
+	if oshiCard == null:
+		$CanvasLayer/Problems/ProblemList.text += "No oshi selected\n"
+	
+	if total_main < 50:
+		$CanvasLayer/Problems/ProblemList.text += "Too few cards in main deck\n"
+	elif total_main > 50:
+		$CanvasLayer/Problems/ProblemList.text += "Too many cards in main deck\n"
+	if total_cheer < 20:
+		$CanvasLayer/Problems/ProblemList.text += "Too few cards in cheer deck\n"
+	elif total_cheer > 20:
+		$CanvasLayer/Problems/ProblemList.text += "Too many cards in cheer deck\n"
+	
 	var found_debut = false
+	var too_many_copies = false
 	for cardButton in main_deck.get_children():
-		pass
+		if cardButton.cardType == "Holomem" and cardButton.level == 0 and !cardButton.name.contains("PleaseDelete"):
+			found_debut = true
+	if !found_debut:
+		$CanvasLayer/Problems/ProblemList.text += "No debut holomems\n"
+	
 	for cardNumber in in_deck_dictionary:
 		var data = database.select_rows("mainCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
 		if data.cardLimit != -1 and in_deck_dictionary[cardNumber] > data.cardLimit:
-			return false
-	return total_main == 50 and total_cheer == 20 and oshiCard != null
+			too_many_copies = true
+			$CanvasLayer/Problems/ProblemList.text += "Too many copies of " + cardNumber + "\n"
+	
+	return total_main == 50 and total_cheer == 20 and oshiCard != null and found_debut and !too_many_copies
 
 func update_main_deck_children():
 	var index = 0

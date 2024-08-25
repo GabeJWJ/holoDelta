@@ -183,13 +183,22 @@ offset_bottom = 323.0
 theme_override_font_sizes/font_size = 50
 text = "Create/Edit Deck"
 
+[node name="Exit" type="Button" parent="CanvasLayer"]
+offset_left = 1658.0
+offset_top = 991.0
+offset_right = 1911.0
+offset_bottom = 1068.0
+theme_override_font_sizes/font_size = 50
+text = "Exit Game"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, 200)
 zoom = Vector2(0.6, 0.6)
 script = ExtResource("2_pceco")
 zoom_min = 0.25
 zoom_max = 3.0
-pan_speed = 0.0
+pan_speed = 300.0
+pan_margin = 0.0
 drag_inertia = 0.0
 
 [connection signal="pressed" from="CanvasLayer/Host" to="." method="_on_host_pressed"]
@@ -202,3 +211,4 @@ drag_inertia = 0.0
 [connection signal="pressed" from="CanvasLayer/CancelLobby" to="." method="_on_cancel_lobby_pressed"]
 [connection signal="pressed" from="CanvasLayer/CancelIPJoin" to="." method="_on_cancel_ip_join_pressed"]
 [connection signal="pressed" from="CanvasLayer/Deck Creation" to="." method="_on_deck_creation_pressed"]
+[connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_exit_pressed"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://4fkqvw0xk8ra"]
+[gd_scene load_steps=8 format=3 uid="uid://4fkqvw0xk8ra"]
 
 [ext_resource type="Script" path="res://Scripts/card.gd" id="1_wdbwf"]
 [ext_resource type="Texture2D" uid="uid://bsimtm4ayc81d" path="res://hBP01-041.png" id="2_yigco"]
 [ext_resource type="Texture2D" uid="uid://djuk0g87nhrhc" path="res://cardbutton.png" id="4_84wmg"]
 [ext_resource type="Texture2D" uid="uid://ckina22q7em5y" path="res://cardbuttonhover.png" id="5_f6tys"]
 [ext_resource type="Texture2D" uid="uid://d2bjrwsls2wp5" path="res://damageCounter.png" id="5_p2v7u"]
+[ext_resource type="Texture2D" uid="uid://b1x4nb22w47b5" path="res://extraCounter.png" id="6_tkoyl"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ekrpc"]
 properties/0/path = NodePath(".:position")
@@ -79,6 +80,22 @@ theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 50
 text = "x10"
 
+[node name="ExtraCounter" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-88, -100)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("6_tkoyl")
+
+[node name="Label" type="Label" parent="ExtraCounter"]
+offset_left = -26.6667
+offset_top = -40.8889
+offset_right = 42.3333
+offset_bottom = 14.1111
+rotation = 0.174533
+theme_override_font_sizes/font_size = 40
+text = "100"
+
+[connection signal="gui_input" from="CardButton" to="." method="_on_card_button_gui_input"]
 [connection signal="mouse_entered" from="CardButton" to="." method="_on_card_button_mouse_entered"]
 [connection signal="mouse_exited" from="CardButton" to="." method="_on_card_button_mouse_exited"]
 [connection signal="pressed" from="CardButton" to="." method="_on_card_button_pressed"]

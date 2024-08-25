@@ -25,6 +25,7 @@ var currentFuda = null
 var currentAttached = null
 var currentPrompt = -1
 var playing = null
+var revealed = []
 
 @onready var zones = [[centerZone,-1], [collabZone,-1], [backZone1,-1], [backZone2,-1], [backZone3,-1], [backZone4,-1], [backZone5,-1]]
 
@@ -45,7 +46,6 @@ var database : SQLite
 @export var preliminary_phase = true
 var penalty = 0
 var preliminary_holomem_in_center = false
-var preliminary_holomem_in_back = false
 @export var is_turn = false
 var first_turn = true
 var player1 = false
@@ -217,7 +217,7 @@ func yes_mulligan():
 	if hasLegalHand():
 		no_mulligan()
 	else:
-		$CanvasLayer/Question/Label.text = "No Debut or SPOT holomems.\nYou must mulligan."
+		$CanvasLayer/Question/Label.text = "No Debut holomems.\nYou must mulligan."
 		$CanvasLayer/Question/Yes.visible = false
 		$CanvasLayer/Question/No.visible = false
 		$CanvasLayer/Question/OK.visible = true
@@ -245,6 +245,7 @@ func specialStart3():
 	
 	preliminary_phase = false
 	$CanvasLayer/Ready.visible = false
+	$CanvasLayer/OpponentLabel.visible = false
 	
 	if is_turn:
 		$"CanvasLayer/End Turn".visible = true
@@ -263,7 +264,7 @@ func specialStart3():
 
 func hasLegalHand():
 	for actualCard in hand:
-		if actualCard.cardType == "Holomem" and actualCard.level < 1:
+		if actualCard.cardType == "Holomem" and actualCard.level == 0:
 			return true
 	return false
 
@@ -667,9 +668,9 @@ func _on_card_clicked(card_id):
 	
 	if preliminary_phase:
 		if actualCard.cardType == "Holomem" and actualCard in hand and actualCard.level < 1:
-			if !preliminary_holomem_in_center:
+			if !preliminary_holomem_in_center and actualCard.level == 0:
 				popup.add_item("Play (hidden) to center", 102)
-			elif !preliminary_holomem_in_back:
+			if preliminary_holomem_in_center or actualCard.level == -1:
 				popup.add_item("Play (hidden) to back", 103)
 	else:
 		match actualCard.cardType:
@@ -703,6 +704,9 @@ func _on_card_clicked(card_id):
 						popup.add_item("Add Damage", 10)
 						if actualCard.damage > 0:
 							popup.add_item("Remove Damage", 11)
+						popup.add_item("Add Extra HP", 12)
+						if actualCard.extra_hp > 0:
+							popup.add_item("Remove Extra HP", 13)
 			"Support":
 				if actualCard in hand:
 					if is_turn:
@@ -713,7 +717,7 @@ func _on_card_clicked(card_id):
 							var cantUseLimited = used_limited or (first_turn and player1)
 							if playing == null and !(actualCard.limited and cantUseLimited):
 								popup.add_item("Play",120)
-				else:
+				elif playing == currentCard:
 					popup.add_item("Archive",20)
 			"Oshi":
 				for i in range(actualCard.oshi_skills.size()):
@@ -755,6 +759,8 @@ func _on_card_clicked(card_id):
 					popup.add_item("Return to Hand",3)
 				if find_what_zone(currentCard) == centerZone and all_occupied_zones(true).size() > 0 :
 					popup.add_item("Switch to Back", 8)
+			elif playing != currentCard:
+				popup.add_item("Add to Hand",21)
 	
 	if popup.item_count > 0:
 		popup.visible = true
@@ -878,6 +884,9 @@ func _on_list_card_clicked(card_id):
 				elif currentAttached != null and all_occupied_zones().size() > 1:
 					popup.add_item("Reattach",622)
 	
+	if currentFuda == deck:
+		popup.add_item("Reveal", 630)
+	
 	if popup.item_count > 0:
 		popup.add_separator()
 	
@@ -911,6 +920,7 @@ func _on_popup_menu_id_pressed(id):
 			currentCard = -1
 		2: #Archive
 			all_cards[currentCard].clear_damage()
+			all_cards[currentCard].clear_extra_hp()
 			add_to_fuda(currentCard,archive)
 			remove_old_card(currentCard,true)
 			if playing == currentCard:
@@ -919,6 +929,7 @@ func _on_popup_menu_id_pressed(id):
 		3: #Return to Hand
 			var actualCard = all_cards[currentCard]
 			actualCard.clear_damage()
+			actualCard.clear_extra_hp()
 			actualCard.unrest()
 			add_to_hand(currentCard)
 			remove_old_card(currentCard,true)
@@ -947,11 +958,22 @@ func _on_popup_menu_id_pressed(id):
 		11: #Remove Damage
 			set_prompt("Heal X Damage\nX=",20,3)
 			currentPrompt = 11
+		12: #Add Extra HP
+			set_prompt("Add X HP\nX=",10,2)
+			currentPrompt = 12
+		13: #Remove Extra HP
+			set_prompt("Remove X HP\nX=",10,2)
+			currentPrompt = 13
 		20: #Archive Support in Play
 			add_to_fuda(currentCard,archive)
 			if playing == currentCard:
 				all_cards[currentCard].z_index = 1
 			playing = null
+			currentCard = -1
+		21: #Add Revealed Card to Hand
+			add_to_hand(currentCard)
+			all_cards[currentCard].z_index = 1
+			revealed.erase(currentCard)
 			currentCard = -1
 		30: #Reveal and Attach Life
 			var possibleZones = all_occupied_zones()
@@ -1038,8 +1060,9 @@ func _on_popup_menu_id_pressed(id):
 			actualCard.z_index = 2
 			remove_from_hand(currentCard)
 			actualCard.position = Vector2(0,0)
-			currentCard = -1
 			playing = currentCard
+			currentCard = -1
+			
 		121: #Attach Support
 			var possibleZones = all_occupied_zones()
 			showZoneSelection(possibleZones)
@@ -1157,6 +1180,16 @@ func _on_popup_menu_id_pressed(id):
 			hideLookAt(false)
 			showZoneSelection(possibleZones)
 			currentPrompt = 622
+		630: #Reveal Card From Deck
+			var actualCard = all_cards[currentCard]
+			actualCard.z_index = 2
+			remove_from_fuda(currentCard,deck)
+			removeFromLookAt(currentCard)
+			actualCard.position = Vector2(300,100*revealed.size())
+			if revealed.size() > 0:
+				move_behind.rpc(revealed[-1],currentCard)
+			revealed.append(currentCard)
+			currentCard = -1
 		650: #Add to Hand
 			if currentFuda:
 				remove_from_fuda(currentCard,currentFuda)
@@ -1234,6 +1267,20 @@ func _on_line_edit_text_submitted(new_text):
 			if new_text.is_valid_int() and input > 0:
 				var actualCard = all_cards[currentCard]
 				actualCard.add_damage(-1 * input)
+				currentCard = -1
+				remove_prompt()
+		12: #Add Extra HP
+			var input = new_text.to_int()
+			if new_text.is_valid_int() and input > 0:
+				var actualCard = all_cards[currentCard]
+				actualCard.add_extra_hp(input)
+				currentCard = -1
+				remove_prompt()
+		13: #Remove Extra HP
+			var input = new_text.to_int()
+			if new_text.is_valid_int() and input > 0:
+				var actualCard = all_cards[currentCard]
+				actualCard.add_extra_hp(-1 * input)
 				currentCard = -1
 				remove_prompt()
 		70: #Oshi Skill X Cost
@@ -1316,7 +1363,6 @@ func _on_zone_clicked(zone_id):
 			move_card_to_zone(currentCard,actualZoneInfo[0])
 			remove_from_hand(currentCard,true)
 			hideZoneSelection()
-			preliminary_holomem_in_back = true
 		121: #Attach Support
 			var actualCard = all_cards[currentCard]
 			var attachTo = find_in_zone(actualZoneInfo[0])
@@ -1390,6 +1436,12 @@ func set_is_turn(value:bool):
 func set_player1(value:bool):
 	if is_multiplayer_authority():
 		player1 = value
+		if player1:
+			$CanvasLayer/OpponentLabel/Label.text = "Opponent Going Second"
+			$CanvasLayer/OpponentLabel.visible = true
+		else:
+			$CanvasLayer/OpponentLabel/Label.text = "Opponent Going First"
+			$CanvasLayer/OpponentLabel.visible = true
 
 func end_turn():
 	if is_turn:

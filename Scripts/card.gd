@@ -9,8 +9,11 @@ extends Node2D
 
 @onready var damageCounter = $DamageCounter
 @onready var damageCounterText = $DamageCounter/Label
+@onready var extraCounter = $ExtraCounter
+@onready var extraCounterText = $ExtraCounter/Label
 
 signal card_clicked(card_id)
+signal card_right_clicked(card_id)
 signal card_mouse_over(card_id)
 signal card_mouse_left
 signal move_behind_request(id1,id2)
@@ -27,6 +30,7 @@ var attached = []
 @export var level:int
 @export var hp:int
 @export var damage:int = 0
+@export var extra_hp:int
 @export var status:Array
 @export var baton_pass_cost:int
 @export var buzz:bool
@@ -91,6 +95,7 @@ func setup_info(number,database,art_code):
 			buzz = bool(data2.buzz)
 			hp = data2.hp
 			damage = 0
+			extra_hp = 0
 			baton_pass_cost = data2.batonPassCost
 			status = []
 			holomem_color = PackedStringArray()
@@ -173,7 +178,7 @@ func full_desc():
 					result += "2nd Bloom "
 			if buzz:
 				result += "Buzz "
-			result += "Holomem\nHP: " + str(hp - damage) + "/" + str(hp) +"\nTags: " + getTagsAsText()
+			result += "Holomem\nHP: " + str(hp + extra_hp - damage) + "/" + str(hp+extra_hp) +"\nTags: " + getTagsAsText()
 		"Support":
 			result += "Support"
 			if supportType != null:
@@ -233,6 +238,11 @@ func update_damage():
 	else:
 		damageCounterText.text = str(damage)
 		damageCounter.visible = true
+	if extra_hp == 0:
+		extraCounter.visible = false
+	else:
+		extraCounterText.text = str(extra_hp)
+		extraCounter.visible = true
 
 func add_damage(amount):
 	damage += amount
@@ -244,6 +254,18 @@ func add_damage(amount):
 
 func clear_damage():
 	damage = 0
+	update_damage()
+
+func add_extra_hp(amount):
+	extra_hp += amount
+	if extra_hp < 0:
+		extra_hp = 0
+	if extra_hp > 999:
+		extra_hp = 999
+	update_damage()
+
+func clear_extra_hp():
+	extra_hp = 0
 	update_damage()
 
 func update_attached():
@@ -272,6 +294,7 @@ func rest():
 		rested = true
 		
 		damageCounter.rotation = -1.571
+		extraCounter.rotation = -1.571
 		
 		for card in onTopOf:
 			card.rest()
@@ -288,6 +311,7 @@ func unrest():
 		rested = false
 		
 		damageCounter.rotation = 0
+		extraCounter.rotation = 0
 		
 		for card in onTopOf:
 			card.unrest()
@@ -316,6 +340,7 @@ func playOnTopOf(other_card):
 		attach(att)
 	other_card.attached = []
 	other_card.clear_damage()
+	other_card.clear_extra_hp()
 	
 	move_to(other_card.position)
 	
@@ -325,6 +350,7 @@ func playOnTopOf(other_card):
 
 func bloom(other_card):
 	damage = other_card.damage
+	extra_hp = other_card.extra_hp
 	status.append_array(other_card.status)
 	playOnTopOf(other_card)
 	update_damage()
@@ -382,3 +408,8 @@ func _on_card_button_mouse_entered():
 
 func _on_card_button_mouse_exited():
 	emit_signal("card_mouse_left")
+
+
+func _on_card_button_gui_input(event):
+	if event is InputEventMouseButton and event.pressed and event.button_index == 2:
+		emit_signal("card_right_clicked",cardID)
