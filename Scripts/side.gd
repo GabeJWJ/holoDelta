@@ -589,7 +589,7 @@ func removeFromLookAt(card_id):
 func hideLookAt(endOfAction=true):
 	if currentFuda:
 		currentFuda._update_looking(false)
-		if currentFuda in [deck, cheerDeck]:
+		if currentFuda in [deck, cheerDeck] and currentPrompt != 297:
 			currentFuda.shuffle()
 	elif currentPrompt == 297:
 		deck._update_looking(false)
