@@ -72,6 +72,7 @@ func _on_host_pressed():
 	$CanvasLayer/Info.visible = true
 	$CanvasLayer/Title.visible = false
 	$"CanvasLayer/Deck Creation".visible = false
+	$CanvasLayer/Exit.visible = false
 
 func _on_steam_host_pressed():
 	peer.create_lobby(SteamMultiplayerPeer.LOBBY_TYPE_FRIENDS_ONLY,2)
@@ -89,6 +90,7 @@ func _on_steam_host_pressed():
 	$CanvasLayer/Info.visible = true
 	$CanvasLayer/Title.visible = false
 	$"CanvasLayer/Deck Creation".visible = false
+	$CanvasLayer/Exit.visible = false
 
 
 func _on_steam_join_pressed():
@@ -228,6 +230,7 @@ func _join_steam_lobby(lobby_id):
 	$CanvasLayer/Title.visible = false
 	$"CanvasLayer/Deck Creation".visible = false
 	$CanvasLayer/CancelLobby.visible = false
+	$CanvasLayer/Exit.visible = false
 
 func _on_line_edit_text_submitted(new_text):
 	ip_prompt.visible = false
@@ -244,6 +247,7 @@ func _on_line_edit_text_submitted(new_text):
 	$CanvasLayer/Title.visible = false
 	$"CanvasLayer/Deck Creation".visible = false
 	$CanvasLayer/CancelIPJoin.visible = false
+	$CanvasLayer/Exit.visible = false
 
 func connect_info(side_id):
 	connect_info_all.rpc(side_id)
