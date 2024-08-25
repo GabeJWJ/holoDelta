@@ -305,11 +305,11 @@ func update_cheer_deck_children():
 
 func update_info(card_id):
 	$CanvasLayer/Info/Preview.texture = all_cards[card_id].cardFront
-	$CanvasLayer/Info/CardText.text = all_cards[card_id].full_desc()
+	$CanvasLayer/Info/ScrollContainer/CardText.text = all_cards[card_id].full_desc()
 
 func clear_info():
 	$CanvasLayer/Info/Preview.texture = load("res://cardbutton.png")
-	$CanvasLayer/Info/CardText.text = ""
+	$CanvasLayer/Info/ScrollContainer/CardText.text = ""
 
 
 func _on_load_deck_pressed():

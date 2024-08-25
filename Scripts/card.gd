@@ -341,6 +341,7 @@ func playOnTopOf(other_card):
 	other_card.attached = []
 	other_card.clear_damage()
 	other_card.clear_extra_hp()
+	other_card.status = []
 	
 	move_to(other_card.position)
 	
@@ -355,6 +356,25 @@ func bloom(other_card):
 	playOnTopOf(other_card)
 	update_damage()
 	bloomed_this_turn = true
+
+func unbloom():
+	if onTopOf.size() == 0:
+		return
+	else:
+		var newCard = onTopOf.pop_front()
+		newCard.onTopOf = onTopOf
+		onTopOf = []
+		for attachCard in attached:
+			newCard.attach(attachCard)
+		attached = []
+		newCard.status.append_array(status)
+		newCard.damage = damage
+		newCard.extra_hp = extra_hp
+		newCard.update_damage()
+		status = []
+		clear_damage()
+		clear_extra_hp()
+		unrest()
 
 func attach(other_card):
 	other_card.unrest()

@@ -4,6 +4,7 @@ extends Node2D
 var steam = false
 var peer
 var _hosted_lobby_id = 0
+var _joined_lobby_id = 0
 @export var player_side: PackedScene
 @onready var json = JSON.new()
 @onready var ip_prompt= $CanvasLayer/IPPrompt
@@ -73,6 +74,7 @@ func _on_host_pressed():
 	$CanvasLayer/Title.visible = false
 	$"CanvasLayer/Deck Creation".visible = false
 	$CanvasLayer/Exit.visible = false
+	$CanvasLayer/MainMenu.visible = true
 
 func _on_steam_host_pressed():
 	peer.create_lobby(SteamMultiplayerPeer.LOBBY_TYPE_FRIENDS_ONLY,2)
@@ -91,6 +93,7 @@ func _on_steam_host_pressed():
 	$CanvasLayer/Title.visible = false
 	$"CanvasLayer/Deck Creation".visible = false
 	$CanvasLayer/Exit.visible = false
+	$CanvasLayer/MainMenu.visible = true
 
 
 func _on_steam_join_pressed():
@@ -231,6 +234,7 @@ func _join_steam_lobby(lobby_id):
 	$"CanvasLayer/Deck Creation".visible = false
 	$CanvasLayer/CancelLobby.visible = false
 	$CanvasLayer/Exit.visible = false
+	$CanvasLayer/MainMenu.visible = true
 
 func _on_line_edit_text_submitted(new_text):
 	ip_prompt.visible = false
@@ -248,6 +252,7 @@ func _on_line_edit_text_submitted(new_text):
 	$"CanvasLayer/Deck Creation".visible = false
 	$CanvasLayer/CancelIPJoin.visible = false
 	$CanvasLayer/Exit.visible = false
+	$CanvasLayer/MainMenu.visible = true
 
 func connect_info(side_id):
 	connect_info_all.rpc(side_id)
@@ -268,11 +273,11 @@ func _on_list_exit():
 
 func update_info(card_num, desc, art_data):
 	$CanvasLayer/Info/Preview.texture = art_data
-	$CanvasLayer/Info/CardText.text = desc
+	$CanvasLayer/Info/ScrollContainer/CardText.text = desc
 
 func clear_info():
 	$CanvasLayer/Info/Preview.texture = load("res://cardbutton.png")
-	$CanvasLayer/Info/CardText.text = ""
+	$CanvasLayer/Info/ScrollContainer/CardText.text = ""
 
 
 func _restart(id=null):
@@ -337,6 +342,30 @@ func _on_cancel_ip_join_pressed():
 	$CanvasLayer/Join.visible = true
 	$CanvasLayer/CancelIPJoin.visible = false
 
-
 func _on_exit_pressed():
 	get_tree().quit()
+
+func _on_main_menu_pressed():
+	$CanvasLayer/MainMenu/Confirmation.visible = true
+
+func _on_no_pressed():
+	$CanvasLayer/MainMenu/Confirmation.visible = false
+
+@rpc("any_peer","call_remote","reliable")
+func _close_lobby():
+	if _hosted_lobby_id != 0:
+		_restart()
+	if _joined_lobby_id != 0:
+		Steam.leaveLobby(_joined_lobby_id)
+
+func _on_yes_pressed():
+	if steam:
+		_close_lobby.rpc()
+	else:
+		if multiplayer.is_server():
+			for i in multiplayer.get_peers():
+				multiplayer.multiplayer_peer.disconnect_peer(i)
+		else:
+			multiplayer.multiplayer_peer.disconnect_peer(1)
+	
+	_restart()

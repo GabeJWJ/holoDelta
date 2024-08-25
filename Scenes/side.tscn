@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://j87r323v31qv"]
+[gd_scene load_steps=13 format=3 uid="uid://j87r323v31qv"]
 
 [ext_resource type="Script" path="res://Scripts/side.gd" id="1_vy6dv"]
 [ext_resource type="PackedScene" uid="uid://md0n47hsxcob" path="res://Scenes/zone.tscn" id="2_a11wy"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bcans1dkc8eyo" path="res://cheerBack.png" id="5_2ycg0"]
 [ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="7_3wwxl"]
 [ext_resource type="StyleBox" uid="uid://ilsjg8vo6p8q" path="res://side.tres" id="8_f6ll5"]
+[ext_resource type="Texture2D" uid="uid://cxhb21jecugn" path="res://SPup.png" id="9_7k57a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehvxa"]
 albedo_texture = ExtResource("5_2ycg0")
@@ -352,57 +353,6 @@ offset_bottom = 219.0
 theme_override_font_sizes/font_size = 40
 text = "OK"
 
-[node name="MainMenu" type="Button" parent="CanvasLayer"]
-offset_left = 1581.0
-offset_top = 1026.0
-offset_right = 1916.0
-offset_bottom = 1076.0
-theme_override_colors/font_color = Color(0.760664, 0.18676, 0.19329, 1)
-theme_override_font_sizes/font_size = 30
-text = "Return to Main Menu"
-
-[node name="Confirmation" type="ColorRect" parent="CanvasLayer/MainMenu"]
-visible = false
-top_level = true
-layout_mode = 0
-offset_left = 593.0
-offset_top = 382.0
-offset_right = 1397.0
-offset_bottom = 653.0
-color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="CanvasLayer/MainMenu/Confirmation"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -389.0
-offset_right = 389.0
-offset_bottom = 110.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 50
-text = "Really Return to Menu?"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Yes" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
-layout_mode = 0
-offset_left = 236.0
-offset_top = 148.0
-offset_right = 310.0
-offset_bottom = 211.0
-theme_override_font_sizes/font_size = 40
-text = "Yes"
-
-[node name="No" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
-layout_mode = 0
-offset_left = 472.0
-offset_top = 148.0
-offset_right = 546.0
-offset_bottom = 211.0
-theme_override_font_sizes/font_size = 40
-text = "No"
-
 [node name="OpponentLabel" type="ColorRect" parent="CanvasLayer"]
 visible = false
 anchors_preset = 5
@@ -430,6 +380,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "Opponent"
+
+[node name="SPmarker" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(533, -448)
+texture = ExtResource("9_7k57a")
 
 [connection signal="zone_clicked" from="Zones/Center" to="." method="_on_zone_clicked"]
 [connection signal="zone_info_clear" from="Zones/Center" to="." method="clear_info"]
@@ -471,8 +426,5 @@ text = "Opponent"
 [connection signal="pressed" from="CanvasLayer/Question/Yes" to="." method="yes_mulligan"]
 [connection signal="pressed" from="CanvasLayer/Question/No" to="." method="no_mulligan"]
 [connection signal="pressed" from="CanvasLayer/Question/OK" to="." method="yes_mulligan"]
-[connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
-[connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/Yes" to="." method="_on_yes_pressed"]
-[connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/No" to="." method="_on_no_pressed"]
 
 [editable path="SubViewportContainer/SubViewport/Node3D/CheerDeck"]

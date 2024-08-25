@@ -33,13 +33,19 @@ offset_right = 309.0
 offset_bottom = 429.0
 texture = ExtResource("4_ipp72")
 
-[node name="CardText" type="Label" parent="CanvasLayer/Info"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Info"]
 layout_mode = 1
 anchors_preset = -1
 offset_left = 10.0
 offset_top = 449.0
 offset_right = 312.0
 offset_bottom = 1064.0
+
+[node name="CardText" type="Label" parent="CanvasLayer/Info/ScrollContainer"]
+custom_minimum_size = Vector2(302, 615)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 autowrap_mode = 3
 
 [node name="Host" type="Button" parent="CanvasLayer"]
@@ -191,6 +197,58 @@ offset_bottom = 1068.0
 theme_override_font_sizes/font_size = 50
 text = "Exit Game"
 
+[node name="MainMenu" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1581.0
+offset_top = 1026.0
+offset_right = 1916.0
+offset_bottom = 1076.0
+theme_override_colors/font_color = Color(0.760664, 0.18676, 0.19329, 1)
+theme_override_font_sizes/font_size = 30
+text = "Return to Main Menu"
+
+[node name="Confirmation" type="ColorRect" parent="CanvasLayer/MainMenu"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 593.0
+offset_top = 382.0
+offset_right = 1397.0
+offset_bottom = 653.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/MainMenu/Confirmation"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -389.0
+offset_right = 389.0
+offset_bottom = 110.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "Really Return to Menu?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Yes" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 148.0
+offset_right = 310.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 40
+text = "Yes"
+
+[node name="No" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 148.0
+offset_right = 546.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 40
+text = "No"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, 200)
 zoom = Vector2(0.6, 0.6)
@@ -212,3 +270,6 @@ drag_inertia = 0.0
 [connection signal="pressed" from="CanvasLayer/CancelIPJoin" to="." method="_on_cancel_ip_join_pressed"]
 [connection signal="pressed" from="CanvasLayer/Deck Creation" to="." method="_on_deck_creation_pressed"]
 [connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/No" to="." method="_on_no_pressed"]

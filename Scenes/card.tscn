@@ -35,6 +35,12 @@ properties/7/replication_mode = 1
 properties/8/path = NodePath(".:z_index")
 properties/8/spawn = true
 properties/8/replication_mode = 1
+properties/9/path = NodePath("ExtraCounter:visible")
+properties/9/spawn = true
+properties/9/replication_mode = 1
+properties/10/path = NodePath("ExtraCounter/Label:text")
+properties/10/spawn = true
+properties/10/replication_mode = 1
 
 [node name="Card" type="Node2D"]
 scale = Vector2(0.75, 0.75)

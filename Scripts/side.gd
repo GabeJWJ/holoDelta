@@ -19,6 +19,7 @@ extends Node2D
 @onready var archive = $SubViewportContainer/SubViewport/Node3D/Archive
 @onready var holopower = $SubViewportContainer/SubViewport/Node3D/Holopower
 @onready var die = $SubViewportContainer/SubViewport/Node3D/Die
+@onready var spMarker = $SPmarker
 
 var currentCard = -1
 var currentFuda = null
@@ -588,6 +589,8 @@ func removeFromLookAt(card_id):
 func hideLookAt(endOfAction=true):
 	if currentFuda:
 		currentFuda._update_looking(false)
+		if currentFuda in [deck, cheerDeck]:
+			currentFuda.shuffle()
 	elif currentPrompt == 297:
 		deck._update_looking(false)
 	
@@ -600,7 +603,10 @@ func hideLookAt(endOfAction=true):
 		currentPrompt = -1
 		currentFuda = null
 		currentAttached = null
-	
+
+@rpc("any_peer","call_local","reliable")
+func flipSPdown():
+	spMarker.texture = load("res://SPdown.png")
 
 func showZoneSelection(zones_list,show_cancel=true):
 	for zone in zones_list:
@@ -707,6 +713,10 @@ func _on_card_clicked(card_id):
 						popup.add_item("Add Extra HP", 12)
 						if actualCard.extra_hp > 0:
 							popup.add_item("Remove Extra HP", 13)
+						
+						if actualCard.onTopOf.size() > 0:
+							popup.add_separator()
+							popup.add_item("Unbloom", 15)
 			"Support":
 				if actualCard in hand:
 					if is_turn:
@@ -759,7 +769,7 @@ func _on_card_clicked(card_id):
 					popup.add_item("Return to Hand",3)
 				if find_what_zone(currentCard) == centerZone and all_occupied_zones(true).size() > 0 :
 					popup.add_item("Switch to Back", 8)
-			elif playing != currentCard:
+			elif playing != currentCard and actualCard.cardType != "Cheer":
 				popup.add_item("Add to Hand",21)
 	
 	if popup.item_count > 0:
@@ -964,6 +974,15 @@ func _on_popup_menu_id_pressed(id):
 		13: #Remove Extra HP
 			set_prompt("Remove X HP\nX=",10,2)
 			currentPrompt = 13
+		15: #Unbloom
+			var actualCard = all_cards[currentCard]
+			var newCard = actualCard.onTopOf[0].cardID
+			actualCard.unbloom()
+			for index in range(zones.size()):
+				if zones[index][1] == currentCard:
+					zones[index][1] = newCard
+			add_to_hand(currentCard)
+			currentCard = -1
 		20: #Archive Support in Play
 			add_to_fuda(currentCard,archive)
 			if playing == currentCard:
@@ -996,6 +1015,7 @@ func _on_popup_menu_id_pressed(id):
 				mill(holopower,archive,skill[1])
 				if skill[2]:
 					used_sp_oshi_skill = true
+					flipSPdown.rpc()
 				else:
 					used_oshi_skill = true
 				currentCard = -1
@@ -1008,6 +1028,7 @@ func _on_popup_menu_id_pressed(id):
 				mill(holopower,archive,skill[1])
 				if skill[2]:
 					used_sp_oshi_skill = true
+					flipSPdown.rpc()
 				else:
 					used_oshi_skill = true
 				currentCard = -1
@@ -1033,8 +1054,6 @@ func _on_popup_menu_id_pressed(id):
 			$CanvasLayer/Ready.disabled = false
 		103: #Play Hidden to Back
 			var possibleZones = all_unoccupied_back_zones()
-			if zones[0][1] == -1:
-				possibleZones.append(centerZone)
 			showZoneSelection(possibleZones)
 			currentPrompt = 103
 		110: #Return to top of deck
@@ -1290,6 +1309,7 @@ func _on_line_edit_text_submitted(new_text):
 				var skill = all_cards[currentCard].oshi_skills[0]
 				if skill[2]:
 					used_sp_oshi_skill = true
+					flipSPdown.rpc()
 				else:
 					used_oshi_skill = true
 				currentCard = -1
@@ -1301,6 +1321,7 @@ func _on_line_edit_text_submitted(new_text):
 				var skill = all_cards[currentCard].oshi_skills[1]
 				if skill[2]:
 					used_sp_oshi_skill = true
+					flipSPdown.rpc()
 				else:
 					used_oshi_skill = true
 				currentCard = -1
@@ -1454,18 +1475,3 @@ func end_turn():
 			if actualCard.cardType == "Holomem":
 				actualCard.bloomed_this_turn = false
 		emit_signal("ended_turn")
-
-
-func _on_main_menu_pressed():
-	$CanvasLayer/MainMenu/Confirmation.visible = true
-
-func _on_no_pressed():
-	$CanvasLayer/MainMenu/Confirmation.visible = false
-
-func _on_yes_pressed():
-	if multiplayer.is_server():
-		for i in multiplayer.get_peers():
-			multiplayer.multiplayer_peer.disconnect_peer(i)
-	else:
-		multiplayer.multiplayer_peer.disconnect_peer(1)
-	get_parent()._restart()

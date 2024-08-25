@@ -23,13 +23,19 @@ offset_right = 309.0
 offset_bottom = 429.0
 texture = ExtResource("1_nx5dq")
 
-[node name="CardText" type="Label" parent="CanvasLayer/Info"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Info"]
 layout_mode = 1
 anchors_preset = -1
 offset_left = 10.0
 offset_top = 449.0
 offset_right = 312.0
 offset_bottom = 1064.0
+
+[node name="CardText" type="Label" parent="CanvasLayer/Info/ScrollContainer"]
+custom_minimum_size = Vector2(302, 615)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 autowrap_mode = 3
 
 [node name="PossibleCards" type="TabContainer" parent="CanvasLayer"]
