@@ -196,3 +196,4 @@ size_flags_vertical = 6
 [connection signal="file_selected" from="CanvasLayer/LoadDialog" to="." method="_on_load_dialog_file_selected"]
 [connection signal="file_selected" from="CanvasLayer/SaveDialog" to="." method="_on_save_dialog_file_selected"]
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/Clear" to="." method="_on_clear_pressed"]

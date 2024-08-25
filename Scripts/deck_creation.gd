@@ -360,3 +360,21 @@ func _on_save_dialog_file_selected(path):
 
 func _on_main_menu_pressed():
 	get_tree().change_scene_to_file("res://Scenes/board.tscn")
+
+
+func _on_clear_pressed():
+	in_deck_dictionary = {}
+	total_cheer = 0
+	total_main = 0
+	for cB in main_deck.get_children():
+		cB.name = "PleaseDelete"
+		cB.queue_free()
+	for cB in cheer_deck.get_children():
+		cB.name = "PleaseDelete"
+		cB.queue_free()
+	oshiCard.queue_free()
+	
+	update_main_deck_children()
+	update_cheer_deck_children()
+	
+	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
