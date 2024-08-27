@@ -685,7 +685,7 @@ func _on_card_clicked(card_id):
 					if actualCard in hand and is_turn:
 						if first_unoccupied_back_zone() and actualCard.level < 1 and all_occupied_zones().size() < 6:
 							popup.add_item("Play",100)
-						if all_bloomable_zones(actualCard).size() > 0 and !(first_turn and player1):
+						if all_bloomable_zones(actualCard).size() > 0 and !first_turn:
 							popup.add_item("Bloom",101)
 					elif find_what_zone(currentCard):
 						if is_turn:
@@ -769,7 +769,7 @@ func _on_card_clicked(card_id):
 					popup.add_item("Return to Hand",3)
 				if find_what_zone(currentCard) == centerZone and all_occupied_zones(true).size() > 0 :
 					popup.add_item("Switch to Back", 8)
-			elif playing != currentCard and actualCard.cardType != "Cheer":
+			elif currentCard in revealed:
 				popup.add_item("Add to Hand",21)
 	
 	if popup.item_count > 0:
@@ -893,7 +893,7 @@ func _on_list_card_clicked(card_id):
 				elif currentAttached != null and all_occupied_zones().size() > 1:
 					popup.add_item("Reattach",622)
 	
-	if currentFuda == deck:
+	if currentFuda in [deck,archive] and actualCard.cardType != "Cheer":
 		popup.add_item("Reveal", 630)
 	
 	if popup.item_count > 0:
@@ -1201,7 +1201,7 @@ func _on_popup_menu_id_pressed(id):
 		630: #Reveal Card From Deck
 			var actualCard = all_cards[currentCard]
 			actualCard.z_index = 2
-			remove_from_fuda(currentCard,deck)
+			remove_from_fuda(currentCard,currentFuda)
 			removeFromLookAt(currentCard)
 			actualCard.position = Vector2(300,100*revealed.size())
 			if revealed.size() > 0:
@@ -1213,6 +1213,7 @@ func _on_popup_menu_id_pressed(id):
 				remove_from_fuda(currentCard,currentFuda)
 			elif currentAttached:
 				remove_from_attached(currentCard,currentAttached)
+			all_cards[currentCard].unrest()
 			add_to_hand(currentCard)
 			removeFromLookAt(currentCard)
 			currentCard = -1
@@ -1221,6 +1222,7 @@ func _on_popup_menu_id_pressed(id):
 				remove_from_fuda(currentCard,currentFuda)
 			elif currentAttached:
 				remove_from_attached(currentCard,currentAttached)
+			all_cards[currentCard].unrest()
 			add_to_fuda(currentCard,deck)
 			removeFromLookAt(currentCard)
 			currentCard = -1
@@ -1229,6 +1231,7 @@ func _on_popup_menu_id_pressed(id):
 				remove_from_fuda(currentCard,currentFuda)
 			elif currentAttached:
 				remove_from_attached(currentCard,currentAttached)
+			all_cards[currentCard].unrest()
 			add_to_fuda(currentCard,deck,-1)
 			removeFromLookAt(currentCard)
 			currentCard = -1
@@ -1237,6 +1240,7 @@ func _on_popup_menu_id_pressed(id):
 				remove_from_fuda(currentCard,currentFuda)
 			elif currentAttached:
 				remove_from_attached(currentCard,currentAttached)
+			all_cards[currentCard].unrest()
 			add_to_fuda(currentCard,cheerDeck)
 			removeFromLookAt(currentCard)
 			currentCard = -1
@@ -1245,6 +1249,7 @@ func _on_popup_menu_id_pressed(id):
 				remove_from_fuda(currentCard,currentFuda)
 			elif currentAttached:
 				remove_from_attached(currentCard,currentAttached)
+			all_cards[currentCard].unrest()
 			add_to_fuda(currentCard,cheerDeck,-1)
 			removeFromLookAt(currentCard)
 			currentCard = -1
@@ -1253,6 +1258,7 @@ func _on_popup_menu_id_pressed(id):
 				remove_from_fuda(currentCard,currentFuda)
 			elif currentAttached:
 				remove_from_attached(currentCard,currentAttached)
+			all_cards[currentCard].unrest()
 			add_to_fuda(currentCard,archive)
 			removeFromLookAt(currentCard)
 			currentCard = -1
@@ -1261,6 +1267,7 @@ func _on_popup_menu_id_pressed(id):
 				remove_from_fuda(currentCard,currentFuda)
 			elif currentAttached:
 				remove_from_attached(currentCard,currentAttached)
+			all_cards[currentCard].unrest()
 			add_to_fuda(currentCard,holopower)
 			removeFromLookAt(currentCard)
 			currentCard = -1
