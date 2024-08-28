@@ -39,6 +39,7 @@ func _ready():
 	else:
 		print("An error occurred when trying to access the path.")
 	
+	ProjectSettings.set_as_basic("AllowUnrevealed",true)
 	$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed = ProjectSettings.get_setting("AllowUnrevealed",false)
 
 
@@ -383,3 +384,4 @@ func _on_options_pressed():
 
 func _on_check_unrevealed_pressed():
 	ProjectSettings.set_setting("AllowUnrevealed",$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed)
+	ProjectSettings.save_custom("override.cfg")
