@@ -32,13 +32,15 @@ func _ready():
 	database.path = "res://cardData.db"
 	database.open_db()
 	
-	var art_data = database.select_rows("cardHasArt","",["cardID","art_index"])
+	var art_data = database.select_rows("cardHasArt","",["cardID","art_index","unrevealed"])
 	
 	art_data.sort_custom(custom_art_row_sort)
 	
 	for art_row in art_data:
 		var cardNumber = art_row.cardID
 		var artCode = art_row.art_index
+		if bool(art_row.unrevealed) and !ProjectSettings.get_setting("AllowUnrevealed",false):
+			continue
 		var newCardButton = create_card_button(cardNumber,artCode)
 		if newCardButton.cardType == "Oshi":
 			oshi_tab.add_child(newCardButton)

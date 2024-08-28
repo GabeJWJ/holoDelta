@@ -38,6 +38,8 @@ func _ready():
 				$CanvasLayer/MenuButton.get_popup().add_item(json.data.deckName)
 	else:
 		print("An error occurred when trying to access the path.")
+	
+	$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed = ProjectSettings.get_setting("AllowUnrevealed",false)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -75,6 +77,7 @@ func _on_host_pressed():
 	$"CanvasLayer/Deck Creation".visible = false
 	$CanvasLayer/Exit.visible = false
 	$CanvasLayer/MainMenu.visible = true
+	$CanvasLayer/Options.visible = false
 
 func _on_steam_host_pressed():
 	peer.create_lobby(SteamMultiplayerPeer.LOBBY_TYPE_FRIENDS_ONLY,2)
@@ -94,6 +97,7 @@ func _on_steam_host_pressed():
 	$"CanvasLayer/Deck Creation".visible = false
 	$CanvasLayer/Exit.visible = false
 	$CanvasLayer/MainMenu.visible = true
+	$CanvasLayer/Options.visible = false
 
 
 func _on_steam_join_pressed():
@@ -235,6 +239,7 @@ func _join_steam_lobby(lobby_id):
 	$CanvasLayer/CancelLobby.visible = false
 	$CanvasLayer/Exit.visible = false
 	$CanvasLayer/MainMenu.visible = true
+	$CanvasLayer/Options.visible = false
 
 func _on_line_edit_text_submitted(new_text):
 	ip_prompt.visible = false
@@ -253,6 +258,7 @@ func _on_line_edit_text_submitted(new_text):
 	$CanvasLayer/CancelIPJoin.visible = false
 	$CanvasLayer/Exit.visible = false
 	$CanvasLayer/MainMenu.visible = true
+	$CanvasLayer/Options.visible = false
 
 func connect_info(side_id):
 	connect_info_all.rpc(side_id)
@@ -369,3 +375,11 @@ func _on_yes_pressed():
 			multiplayer.multiplayer_peer.disconnect_peer(1)
 	
 	_restart()
+
+
+func _on_options_pressed():
+	$CanvasLayer/Options/OptionBackground.visible = !$CanvasLayer/Options/OptionBackground.visible
+
+
+func _on_check_unrevealed_pressed():
+	ProjectSettings.set_setting("AllowUnrevealed",$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed)

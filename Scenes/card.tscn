@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://4fkqvw0xk8ra"]
 
 [ext_resource type="Script" path="res://Scripts/card.gd" id="1_wdbwf"]
-[ext_resource type="Texture2D" uid="uid://bsimtm4ayc81d" path="res://hBP01-041.png" id="2_yigco"]
+[ext_resource type="Texture2D" uid="uid://gxcpgcuj06xt" path="res://Sou_Desu_Ne.png" id="2_xq6kt"]
 [ext_resource type="Texture2D" uid="uid://djuk0g87nhrhc" path="res://cardbutton.png" id="4_84wmg"]
 [ext_resource type="Texture2D" uid="uid://ckina22q7em5y" path="res://cardbuttonhover.png" id="5_f6tys"]
 [ext_resource type="Texture2D" uid="uid://d2bjrwsls2wp5" path="res://damageCounter.png" id="5_p2v7u"]
@@ -47,7 +47,7 @@ scale = Vector2(0.75, 0.75)
 script = ExtResource("1_wdbwf")
 
 [node name="Front" type="Sprite2D" parent="."]
-texture = ExtResource("2_yigco")
+texture = ExtResource("2_xq6kt")
 
 [node name="CardButton" type="TextureButton" parent="."]
 offset_left = -155.0

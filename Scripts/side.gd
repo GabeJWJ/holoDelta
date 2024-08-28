@@ -210,13 +210,13 @@ func yes_mulligan():
 		remove_from_hand(hand_id)
 	deck.cardList.shuffle()
 	
-	if penalty > 6:
-		penalty = 6
-	
 	draw(7-penalty)
 	
 	if hasLegalHand():
 		no_mulligan()
+	elif penalty == 6:
+		$CanvasLayer/Question/Label.text = "You lose."
+		$CanvasLayer/Question/OK.visible = false
 	else:
 		$CanvasLayer/Question/Label.text = "No Debut holomems.\nYou must mulligan."
 		$CanvasLayer/Question/Yes.visible = false
@@ -893,7 +893,7 @@ func _on_list_card_clicked(card_id):
 				elif currentAttached != null and all_occupied_zones().size() > 1:
 					popup.add_item("Reattach",622)
 	
-	if currentFuda in [deck,archive] and actualCard.cardType != "Cheer":
+	if currentFuda in [deck,archive,holopower] and actualCard.cardType != "Cheer":
 		popup.add_item("Reveal", 630)
 	
 	if popup.item_count > 0:

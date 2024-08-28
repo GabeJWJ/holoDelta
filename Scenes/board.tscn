@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=9 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" path="res://Scripts/MapCamera2D.gd" id="2_pceco"]
 [ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
 [ext_resource type="Texture2D" uid="uid://djuk0g87nhrhc" path="res://cardbutton.png" id="4_ipp72"]
+[ext_resource type="Texture2D" uid="uid://chv6t7kvxgx0s" path="res://gear.png" id="4_n5n8m"]
+[ext_resource type="Texture2D" uid="uid://biy2phmp4flym" path="res://gearSelected.png" id="5_13mvd"]
+[ext_resource type="Texture2D" uid="uid://dt60hgar0dc4g" path="res://checkOff.png" id="6_1x0cl"]
+[ext_resource type="Texture2D" uid="uid://tqwtibgdslug" path="res://checkOn.png" id="7_n8awk"]
 
 [node name="Board" type="Node2D"]
 position = Vector2(1020, 1566)
@@ -249,6 +253,45 @@ offset_bottom = 211.0
 theme_override_font_sizes/font_size = 40
 text = "No"
 
+[node name="Options" type="TextureButton" parent="CanvasLayer"]
+y_sort_enabled = true
+offset_left = 1816.0
+offset_top = 22.0
+offset_right = 2216.0
+offset_bottom = 422.0
+scale = Vector2(0.2, 0.2)
+toggle_mode = true
+texture_normal = ExtResource("4_n5n8m")
+texture_pressed = ExtResource("5_13mvd")
+
+[node name="OptionBackground" type="ColorRect" parent="CanvasLayer/Options"]
+visible = false
+layout_mode = 0
+offset_left = -2445.0
+offset_top = -45.0
+offset_right = -60.0
+offset_bottom = 2800.0
+color = Color(0, 0, 0, 0.623529)
+
+[node name="CheckUnrevealed" type="TextureButton" parent="CanvasLayer/Options/OptionBackground"]
+layout_mode = 0
+offset_left = 49.9994
+offset_top = 40.0
+offset_right = 449.999
+offset_bottom = 440.0
+toggle_mode = true
+texture_normal = ExtResource("6_1x0cl")
+texture_pressed = ExtResource("7_n8awk")
+
+[node name="Unrevealed" type="Label" parent="CanvasLayer/Options/OptionBackground/CheckUnrevealed"]
+layout_mode = 0
+offset_left = 414.999
+offset_top = 90.0
+offset_right = 2135.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 150
+text = "Allow Unrevealed Cards"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, 200)
 zoom = Vector2(0.6, 0.6)
@@ -273,3 +316,5 @@ drag_inertia = 0.0
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/Yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/No" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options/OptionBackground/CheckUnrevealed" to="." method="_on_check_unrevealed_pressed"]

@@ -7,6 +7,8 @@ extends Node2D
 @export var faceDown = false
 @export var trulyHidden = false
 
+var notFound = false
+
 @onready var damageCounter = $DamageCounter
 @onready var damageCounterText = $DamageCounter/Label
 @onready var extraCounter = $ExtraCounter
@@ -64,11 +66,25 @@ func _process(delta):
 func setup_info(number,database,art_code):
 	cardNumber = number
 	artNum = art_code
-	var data1 = database.select_rows("mainCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
+	var data1 = database.select_rows("mainCards","cardID LIKE '" + cardNumber + "'", ["*"])
+	var art_data = database.select_rows("cardHasArt","cardID LIKE '" + cardNumber + "' AND art_index = " + str(art_code), ["*"])
+	if data1.is_empty() or art_data.is_empty():
+		notFound = true
+		cardFront = ImageTexture.create_from_image(Image.load_from_file("res://Sou_Desu_Ne.png"))
+		$Front.texture = cardFront
+		return
+	elif art_data[0].unrevealed and !ProjectSettings.get_setting("AllowUnrevealed",false):
+		notFound = true
+		cardFront = ImageTexture.create_from_image(Image.load_from_file("res://spoilers.png"))
+		$Front.texture = cardFront
+		return
+	else:
+		data1 = data1[0]
+		art_data = art_data[0]
 	cardType = data1.cardType
 	cardName = data1.cardName
 	cardText = data1.cardText
-	var art_data = database.select_rows("cardHasArt","cardID LIKE '" + cardNumber + "' AND art_index = " + str(art_code), ["*"])[0]
+	
 	var image = Image.new()
 	image.load_png_from_buffer(art_data.art)
 	cardFront = ImageTexture.create_from_image(image)
