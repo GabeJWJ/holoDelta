@@ -161,6 +161,7 @@ ok_button_text = "Open"
 file_mode = 0
 access = 2
 filters = PackedStringArray("*.json")
+show_hidden_files = true
 use_native_dialog = true
 
 [node name="SaveDialog" type="FileDialog" parent="CanvasLayer"]
@@ -168,6 +169,7 @@ position = Vector2i(300, 300)
 size = Vector2i(392, 159)
 access = 2
 filters = PackedStringArray("*.json")
+show_hidden_files = true
 use_native_dialog = true
 
 [node name="MainMenu" type="Button" parent="CanvasLayer"]

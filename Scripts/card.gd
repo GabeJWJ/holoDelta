@@ -73,7 +73,7 @@ func setup_info(number,database,art_code):
 		cardFront = ImageTexture.create_from_image(Image.load_from_file("res://Sou_Desu_Ne.png"))
 		$Front.texture = cardFront
 		return
-	elif art_data[0].unrevealed and !ProjectSettings.get_setting("AllowUnrevealed",false):
+	elif art_data[0].unrevealed and !Settings.settings.AllowUnrevealed:
 		notFound = true
 		cardFront = ImageTexture.create_from_image(Image.load_from_file("res://spoilers.png"))
 		$Front.texture = cardFront
@@ -82,8 +82,15 @@ func setup_info(number,database,art_code):
 		data1 = data1[0]
 		art_data = art_data[0]
 	cardType = data1.cardType
-	cardName = data1.cardName
-	cardText = data1.cardText
+	
+	match Settings.settings.Language:
+		"English":
+			cardName = data1.cardName
+			cardText = data1.cardText
+		"日本語":
+			cardName = data1.jpName
+			cardText = data1.jpText
+	
 	
 	var image = Image.new()
 	image.load_png_from_buffer(art_data.art)
@@ -97,13 +104,21 @@ func setup_info(number,database,art_code):
 			life = data2.life
 			oshi_color = PackedStringArray()
 			for row in database.select_rows("oshiHasColor","cardID LIKE '" + cardNumber + "'", ["*"]):
-				oshi_color.append(row.color)
+				match Settings.settings.Language:
+					"English":
+						oshi_color.append(row.color)
+					"日本語":
+						oshi_color.append(Settings.to_jp[row.color])
 			oshi_name = PackedStringArray()
 			for row in database.select_rows("oshiHasName","cardID LIKE '" + cardNumber + "'", ["*"]):
-				oshi_name.append(row.name)
+				match Settings.settings.Language:
+					"English":
+						oshi_name.append(row.name)
+					"日本語":
+						oshi_name.append(Settings.to_jp[row.name])
 			oshi_skills = []
 			for row in database.select_rows("oshiHasSkill","cardID LIKE '" + cardNumber + "'", ["*"]):
-				oshi_skills.append([row.skillName,row.cost,bool(row.sp)])
+				oshi_skills.append([Settings.en_or_jp(row.skillName,row.jpName),row.cost,bool(row.sp)])
 		"Holomem":
 			bloomed_this_turn = false
 			var data2 = database.select_rows("holomemCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
@@ -116,13 +131,25 @@ func setup_info(number,database,art_code):
 			status = []
 			holomem_color = PackedStringArray()
 			for row in database.select_rows("holomemHasColor","cardID LIKE '" + cardNumber + "'", ["*"]):
-				holomem_color.append(row.color)
+				match Settings.settings.Language:
+					"English":
+						holomem_color.append(row.color)
+					"日本語":
+						holomem_color.append(Settings.to_jp[row.color])
 			holomem_name = PackedStringArray()
 			for row in database.select_rows("holomemHasName","cardID LIKE '" + cardNumber + "'", ["*"]):
-				holomem_name.append(row.name)
+				match Settings.settings.Language:
+					"English":
+						holomem_name.append(row.name)
+					"日本語":
+						holomem_name.append(Settings.to_jp[row.name])
 			tags = PackedStringArray()
 			for row in database.select_rows("holomemHasTag","cardID LIKE '" + cardNumber + "'", ["*"]):
-				tags.append(row.tag)
+				match Settings.settings.Language:
+					"English":
+						tags.append(row.tag)
+					"日本語":
+						tags.append(Settings.to_jp[row.tag])
 			
 			var namesText = getNamesAsText()
 			if cardName != namesText:
@@ -132,7 +159,12 @@ func setup_info(number,database,art_code):
 		"Support":
 			var data2 = database.select_rows("supportCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
 			limited = bool(data2.limited)
-			supportType = data2.supportType
+			match Settings.settings.Language:
+				"English":
+					supportType = data2.supportType
+				"日本語":
+					supportType = Settings.to_jp[data2.supportType]
+			
 
 func getNamesAsText():
 	match cardType:
@@ -140,12 +172,20 @@ func getNamesAsText():
 			if oshi_name.size() == 0:
 				return "Nobody?"
 			else:
-				return "/".join(oshi_name)
+				match Settings.settings.Language:
+					"English":
+						return "/".join(oshi_name)
+					"日本語":
+						return "と".join(oshi_name)
 		"Holomem":
 			if holomem_name.size() == 0:
 				return "Nobody?"
 			else:
-				return "/".join(holomem_name)
+				match Settings.settings.Language:
+					"English":
+						return "/".join(holomem_name)
+					"日本語":
+						return "と".join(holomem_name)
 	
 	return "idk"
 
@@ -153,14 +193,31 @@ func getColorsAsText():
 	match cardType:
 		"Oshi":
 			if oshi_color.size() == 0:
-				return "Colorless"
+				match Settings.settings.Language:
+					"English":
+						return "Colorless"
+					"日本語":
+						return "無"
 			else:
-				return "/".join(oshi_color)
+				match Settings.settings.Language:
+					"English":
+						return "/".join(oshi_color)
+					"日本語":
+						return "".join(oshi_color)
 		"Holomem":
 			if holomem_color.size() == 0:
-				return "Colorless"
+				match Settings.settings.Language:
+					"English":
+						return "Colorless"
+					"日本語":
+						return "無"
 			else:
-				return "/".join(holomem_color)
+				match Settings.settings.Language:
+					"English":
+						return "/".join(holomem_color)
+					"日本語":
+						return "".join(holomem_color)
+				
 	
 	return "idk"
 
@@ -180,34 +237,64 @@ func full_desc():
 	
 	match cardType:
 		"Oshi":
-			result += getColorsAsText() + " Oshi Holomem\nLife: " + str(life)
+			match Settings.settings.Language:
+				"English":
+					result += getColorsAsText() + " Oshi Holomem\nLife: " + str(life)
+				"日本語":
+					result += getColorsAsText() + "の推しホロメン\nライフ: " + str(life)
 		"Holomem":
-			result += getColorsAsText() + " "
-			match level:
-				-1:
-					result += "SPOT "
-				0:
-					result += "Debut "
-				1:
-					result += "1st Bloom "
-				2:
-					result += "2nd Bloom "
-			if buzz:
-				result += "Buzz "
-			result += "Holomem\nHP: " + str(hp + extra_hp - damage) + "/" + str(hp+extra_hp) +"\nTags: " + getTagsAsText()
+			match Settings.settings.Language:
+				"English":
+					result += getColorsAsText() + " "
+					match level:
+						-1:
+							result += "SPOT "
+						0:
+							result += "Debut "
+						1:
+							result += "1st Bloom "
+						2:
+							result += "2nd Bloom "
+					if buzz:
+						result += "Buzz "
+					result += "Holomem\nHP: " + str(hp + extra_hp - damage) + "/" + str(hp+extra_hp) +"\nTags: " + getTagsAsText()
+				"日本語":
+					result += getColorsAsText() + "の"
+					match level:
+						-1:
+							result += "SPOT"
+						0:
+							result += "Debut"
+						1:
+							result += "1st"
+						2:
+							result += "2nd"
+					if buzz:
+						result += " Buzz"
+					result += "ホロメン\nHP: " + str(hp + extra_hp - damage) + "/" + str(hp+extra_hp) +"\nタグ: " + getTagsAsText()
 		"Support":
-			result += "Support"
+			match Settings.settings.Language:
+				"English":
+					result += "Support "
+				"日本語":
+					result += "サポート"
+			
 			if supportType != null:
-				result += " (" + supportType + ")"
+				result += "(" + supportType + ")"
 	
 	result += "\n\n" + cardText
 	
 	if cardType == "Holomem":
-		if baton_pass_cost == 0:
-			result += "\n\nBaton Pass: Free"
-		else:
-			result += "\n\nBaton Pass: " + str(baton_pass_cost) + " Any Color"
-	
+		match Settings.settings.Language:
+			"English":
+				if baton_pass_cost == 0:
+					result += "\n\nBaton Pass: Free"
+				else:
+					result += "\n\nBaton Pass: " + str(baton_pass_cost) + " Any Color"
+			"日本語":
+				result += "\n\nバトンタッチ: "
+				for i in baton_pass_cost:
+					result += "無"
 	return result
 
 
@@ -409,7 +496,7 @@ func flipDown():
 	if faceDown:
 		pass
 	else:
-		if cardType == "Cheer":
+		if cardType in ["Cheer","Oshi"]:
 			$Front.texture = load("res://cheerBack.png")
 		else:
 			$Front.texture = load("res://holoBack.png")

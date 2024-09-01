@@ -19,6 +19,7 @@ config/windows_native_icon="res://icon.ico"
 [autoload]
 
 SteamManager="*res://Scripts/steam.gd"
+Settings="*res://Scripts/settings.gd"
 
 [display]
 

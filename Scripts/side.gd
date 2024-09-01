@@ -102,7 +102,10 @@ func _ready():
 	
 	database = SQLite.new()
 	database.read_only = true
-	database.path = "res://cardData.db"
+	if OS.has_feature("editor"):
+		database.path = "res://cardData.db"
+	else:
+		database.path = OS.get_executable_path().get_base_dir() + "/cardData.db"
 	database.open_db()
 	
 	oshiCard = create_card(oshi[0],oshi[1])
@@ -270,6 +273,7 @@ func hasLegalHand():
 	return false
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -284,7 +288,7 @@ func create_card(number,art_code):
 	newCard.cardID = new_id
 	newCard.card_clicked.connect(_on_card_clicked)
 	newCard.card_mouse_over.connect(update_info)
-	newCard.card_mouse_left.connect(clear_info)
+	#newCard.card_mouse_left.connect(clear_info)
 	newCard.move_behind_request.connect(_on_move_behind_request)
 	all_cards.append(newCard)
 	newCard.set_multiplayer_authority(name.to_int())
@@ -542,7 +546,7 @@ func popupForAttached():
 	
 	if currentPrompt != -1:
 		return
-	popup.add_item("Look at attached",51)
+	popup.add_item(Settings.en_or_jp("Look at attached","添付を見る"),51)
 		
 	if popup.item_count > 0:
 		popup.visible = true
@@ -560,16 +564,11 @@ func popupForArchive():
 	if currentPrompt != -1:
 		return
 	
-	popup.add_item("Search",497)
+	popup.add_item(Settings.en_or_jp("Search","一覧を見る"),497)
 		
 	if popup.item_count > 0:
 		popup.visible = true
 		popup.position = get_viewport().get_mouse_position()
-
-@rpc("any_peer","call_remote","reliable")
-func wannaPopupForArchive():
-	if archive.cardList.size() > 0:
-		popupForArchive.rpc()
 
 func removeFromLookAt(card_id):
 	var remaining = lookAtList.get_children().size() - 1
@@ -640,6 +639,18 @@ func _on_zone_enter(zone_id):
 	if card_id != -1:
 		update_info(card_id)
 
+func _on_archive_mouse_entered():
+	if archive.cardList.size() > 0:
+		update_info(archive.cardList[0].cardID)
+	elif !is_multiplayer_authority():
+		archive_opponent_mouse_enter.rpc()
+
+@rpc("any_peer","call_remote","reliable")
+func archive_opponent_mouse_enter():
+	if archive.cardList.size() > 0:
+		update_info.rpc(archive.cardList[0].cardID)
+
+@rpc("any_peer","call_remote","reliable")
 func update_info(card_id):
 	var actualCard = all_cards[card_id]
 	if !actualCard.trulyHidden and (is_multiplayer_authority() or !actualCard.faceDown):
@@ -684,15 +695,15 @@ func _on_card_clicked(card_id):
 				if is_multiplayer_authority():
 					if actualCard in hand and is_turn:
 						if first_unoccupied_back_zone() and actualCard.level < 1 and all_occupied_zones().size() < 6:
-							popup.add_item("Play",100)
+							popup.add_item(Settings.en_or_jp("Play","場に出す"),100)
 						if all_bloomable_zones(actualCard).size() > 0 and !first_turn:
 							popup.add_item("Bloom",101)
 					elif find_what_zone(currentCard):
 						if is_turn:
 							if actualCard.rested:
-								popup.add_item("Unrest", 1)
+								popup.add_item(Settings.en_or_jp("Unrest","縦向きにさせたる"), 1)
 							else:
-								popup.add_item("Rest", 0)
+								popup.add_item(Settings.en_or_jp("Rest","お休みさせたる"), 0)
 							
 							var currentZone = find_what_zone(currentCard)
 							if currentZone:
@@ -701,9 +712,9 @@ func _on_card_clicked(card_id):
 								if currentZone == collabZone and first_unoccupied_back_zone():
 									popup.add_item("Move to Back", 5)
 								if find_in_zone(collabZone) == -1 and currentZone != centerZone and !actualCard.rested and !collabed:
-									popup.add_item("Collab", 6)
+									popup.add_item(Settings.en_or_jp("Collab","コラボする"), 6)
 								if currentZone == centerZone and all_occupied_zones(true).size() > 0 and !used_baton_pass:
-									popup.add_item("Baton Pass", 7)
+									popup.add_item(Settings.en_or_jp("Baton Pass","バトンタッチする"), 7)
 							
 							popup.add_separator()
 						
@@ -726,9 +737,9 @@ func _on_card_clicked(card_id):
 						else:
 							var cantUseLimited = used_limited or (first_turn and player1)
 							if playing == null and !(actualCard.limited and cantUseLimited):
-								popup.add_item("Play",120)
+								popup.add_item(Settings.en_or_jp("Play","使う"),120)
 				elif playing == currentCard:
-					popup.add_item("Archive",20)
+					popup.add_item(Settings.en_or_jp("Archive","アーカイブする"),20)
 			"Oshi":
 				for i in range(actualCard.oshi_skills.size()):
 					var skill = actualCard.oshi_skills[i]
@@ -745,7 +756,7 @@ func _on_card_clicked(card_id):
 					var canUseSkill = (skill[2] and !used_sp_oshi_skill) or (!skill[2] and !used_oshi_skill)
 					var canPayCost = (skill[1] >= 0 and holopower.cardList.size() >= skill[1]) or (skill[1] == -1 and holopower.cardList.size() > 0)
 					if canUseSkill and canPayCost:
-						popup.add_item("\"" + skill[0] + "\"" + sp_string + "-" + cost_string,70+i) #Will cause problems if an oshi has more than 2 skills
+						popup.add_item(Settings.en_or_jp("\"","「") + skill[0] + Settings.en_or_jp("\"","」") + sp_string + "-" + cost_string,70+i) #Will cause problems if an oshi has more than 2 skills
 		
 		if popup.item_count > 0 and actualCard.cardType != "Oshi":
 			popup.add_separator()
@@ -754,23 +765,25 @@ func _on_card_clicked(card_id):
 			popup.add_item("Reveal and attach", 30)
 		
 		if find_what_zone(currentCard) and actualCard.attached.size() > 0:
-			popup.add_item("Look at attached",50)
+			popup.add_item(Settings.en_or_jp("Look at attached","添付を見る"),50)
 			popup.add_separator()
 		
 		if actualCard.cardType != "Oshi":
 			if actualCard in hand:
 				popup.add_item("Put on top of Deck",110)
 				popup.add_item("Put on bottom of Deck",111)
-				popup.add_item("Archive",112)
+				popup.add_item(Settings.en_or_jp("Archive","アーカイブする"),112)
 				popup.add_item("Holopower",113)
 			elif find_what_zone(currentCard):
-				popup.add_item("Archive",2)
+				popup.add_item(Settings.en_or_jp("Archive","アーカイブする"),2)
 				if actualCard.attached.size() == 0:
 					popup.add_item("Return to Hand",3)
 				if find_what_zone(currentCard) == centerZone and all_occupied_zones(true).size() > 0 :
 					popup.add_item("Switch to Back", 8)
 			elif currentCard in revealed:
 				popup.add_item("Add to Hand",21)
+				if actualCard.cardType == "Support" and actualCard.supportType in ["Tool","Mascot","Fan"] and all_occupied_zones().size() > 0:
+					popup.add_item("Attach",22)
 	
 	if popup.item_count > 0:
 		popup.visible = true
@@ -784,8 +797,8 @@ func _on_deck_clicked():
 	
 	if is_multiplayer_authority():
 		
-		popup.add_item("Draw",200)
-		popup.add_item("Draw X",201)
+		popup.add_item(Settings.en_or_jp("Draw","引く"),200)
+		popup.add_item(Settings.en_or_jp("Draw X","X枚引く"),201)
 		popup.add_item("Mill",202)
 		popup.add_item("Mill X",203)
 		popup.add_item("Holopower",204)
@@ -796,7 +809,7 @@ func _on_deck_clicked():
 		
 		popup.add_separator()
 		popup.add_item("Look at X",297)
-		popup.add_item("Search",298)
+		popup.add_item(Settings.en_or_jp("Search","一覧を見る"),298)
 		popup.add_item("Shuffle",299)
 		
 	if popup.item_count > 0:
@@ -816,7 +829,7 @@ func _on_cheer_deck_clicked():
 		if popup.item_count > 0:
 			popup.add_separator()
 		
-		popup.add_item("Search",398)
+		popup.add_item(Settings.en_or_jp("Search","一覧を見る"),398)
 		popup.add_item("Shuffle",399)
 		
 	if popup.item_count > 0:
@@ -828,13 +841,13 @@ func _on_archive_clicked():
 		return
 	
 	if !is_multiplayer_authority():
-		wannaPopupForArchive.rpc()
+		popupForArchive()
 		return
 	
 	popup.clear()
 	
 	
-	popup.add_item("Search",498)
+	popup.add_item(Settings.en_or_jp("Search","一覧を見る"),498)
 		
 	if popup.item_count > 0:
 		popup.visible = true
@@ -852,7 +865,7 @@ func _on_holopower_clicked():
 		
 		popup.add_separator()
 		
-		popup.add_item("Search",598)
+		popup.add_item(Settings.en_or_jp("Search","一覧を見る"),598)
 		popup.add_item("Shuffle",599)
 		
 	if popup.item_count > 0:
@@ -876,9 +889,9 @@ func _on_list_card_clicked(card_id):
 		"Holomem":
 			if first_unoccupied_back_zone() and actualCard.level < 1 and is_turn:
 				if currentFuda == deck:
-					popup.add_item("Play",600)
+					popup.add_item(Settings.en_or_jp("Play","場に出す"),600)
 				elif currentFuda == archive:
-					popup.add_item("Play",610)
+					popup.add_item(Settings.en_or_jp("Play","場に出す"),610)
 			if all_bloomable_zones(actualCard).size() > 0 and is_turn and !(first_turn and player1):
 				if currentFuda == deck:
 					popup.add_item("Bloom",601)
@@ -910,7 +923,7 @@ func _on_list_card_clicked(card_id):
 		popup.add_item("Put on top of Cheer Deck",653)
 		popup.add_item("Put on bottom of Cheer Deck",654)
 	if currentFuda != archive:
-		popup.add_item("Archive",655)
+		popup.add_item(Settings.en_or_jp("Archive","アーカイブする"),655)
 	if currentFuda != holopower and actualCard.cardType != "Cheer":
 		popup.add_item("Holopower",656)
 	
@@ -993,6 +1006,10 @@ func _on_popup_menu_id_pressed(id):
 			all_cards[currentCard].z_index = 1
 			revealed.erase(currentCard)
 			currentCard = -1
+		22: #Attach Revealed Support
+			var possibleZones = all_occupied_zones()
+			showZoneSelection(possibleZones)
+			currentPrompt = 22
 		30: #Reveal and Attach Life
 			var possibleZones = all_occupied_zones()
 			var cheerCard = all_cards[currentCard]
@@ -1371,6 +1388,13 @@ func _on_zone_clicked(zone_id):
 		8: #Switch to Back
 			switch_cards_in_zones(centerZone,actualZoneInfo[0])
 			hideZoneSelection()
+		22: #Attach Revealed Support
+			var actualCard = all_cards[currentCard]
+			var attachTo = find_in_zone(actualZoneInfo[0])
+			actualCard.z_index = 0
+			revealed.erase(currentCard)
+			all_cards[attachTo].attach(actualCard)
+			hideZoneSelection()
 		30: #Attach Cheer
 			var actualCard = all_cards[currentCard]
 			var attachTo = find_in_zone(actualZoneInfo[0])
@@ -1481,3 +1505,4 @@ func end_turn():
 			if actualCard.cardType == "Holomem":
 				actualCard.bloomed_this_turn = false
 		emit_signal("ended_turn")
+

@@ -292,6 +292,53 @@ offset_bottom = 295.0
 theme_override_font_sizes/font_size = 150
 text = "Allow Unrevealed Cards"
 
+[node name="InfoButton" type="Button" parent="CanvasLayer"]
+offset_left = 7.0
+offset_top = 1044.0
+offset_right = 46.0
+offset_bottom = 1075.0
+text = "info"
+
+[node name="DeckLocation" type="Label" parent="CanvasLayer/InfoButton"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.01
+anchor_bottom = 0.015
+offset_left = 1.0
+offset_top = -26.0
+offset_right = 1629.8
+offset_bottom = -3.465
+text = "Decks are located at "
+
+[node name="Popup" type="Popup" parent="CanvasLayer"]
+size = Vector2i(1920, 1080)
+
+[node name="Label" type="Label" parent="CanvasLayer/Popup"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -21.0
+offset_right = 150.0
+offset_bottom = 21.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "vspvjfspvs"
+
+[node name="LanguageSelect" type="MenuButton" parent="CanvasLayer"]
+offset_left = 1811.0
+offset_top = 112.0
+offset_right = 1907.0
+offset_bottom = 164.0
+theme_override_font_sizes/font_size = 25
+text = "English"
+flat = false
+item_count = 2
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "日本語"
+popup/item_1/id = 1
+
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, 200)
 zoom = Vector2(0.6, 0.6)
@@ -318,3 +365,4 @@ drag_inertia = 0.0
 [connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/No" to="." method="_on_no_pressed"]
 [connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Options/OptionBackground/CheckUnrevealed" to="." method="_on_check_unrevealed_pressed"]
+[connection signal="pressed" from="CanvasLayer/InfoButton" to="." method="_on_info_button_pressed"]

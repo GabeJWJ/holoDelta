@@ -25,11 +25,28 @@ var opponentReady = false
 func _ready():
 	randomize()
 	$CanvasLayer/MenuButton.get_popup().index_pressed.connect(_set_deck_info)
+	$CanvasLayer/LanguageSelect.get_popup().index_pressed.connect(_on_language_selected)
+	if !DirAccess.dir_exists_absolute("user://Decks"):
+		DirAccess.make_dir_absolute("user://Decks")
+		var azki_string = FileAccess.get_file_as_string("res://Decks/starter_azki.json")
+		var sora_string = FileAccess.get_file_as_string("res://Decks/starter_sora.json")
+		var file_access := FileAccess.open("user://Decks/starter_azki.json", FileAccess.WRITE)
+		if not file_access:
+			print("An error happened while saving data: ", FileAccess.get_open_error())
+			return
+
+		file_access.store_line(azki_string)
+		file_access.close()
+		file_access = FileAccess.open("user://Decks/starter_sora.json", FileAccess.WRITE)
+		if not file_access:
+			print("An error happened while saving data: ", FileAccess.get_open_error())
+			return
+
+		file_access.store_line(sora_string)
+		file_access.close()
 	var path
-	if !OS.has_feature("editor"):
-		path = OS.get_executable_path().get_base_dir() + "/Decks"
-	else:
-		path = "res://Decks"
+	path = "user://Decks"
+	$CanvasLayer/InfoButton/DeckLocation.text += ProjectSettings.globalize_path("user://Decks")
 	var dir = DirAccess.open(path)
 	if dir:
 		for file_name in dir.get_files():
@@ -39,8 +56,10 @@ func _ready():
 	else:
 		print("An error occurred when trying to access the path.")
 	
-	ProjectSettings.set_as_basic("AllowUnrevealed",true)
-	$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed = ProjectSettings.get_setting("AllowUnrevealed",false)
+	
+	$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed = Settings.settings.AllowUnrevealed
+	$CanvasLayer/Title.text = Settings.en_or_jp("holoDelta","ホロデルタ")
+	$CanvasLayer/LanguageSelect.text = Settings.settings.Language
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -79,6 +98,8 @@ func _on_host_pressed():
 	$CanvasLayer/Exit.visible = false
 	$CanvasLayer/MainMenu.visible = true
 	$CanvasLayer/Options.visible = false
+	$CanvasLayer/InfoButton.visible = false
+	$CanvasLayer/LanguageSelect.visible = false
 
 func _on_steam_host_pressed():
 	peer.create_lobby(SteamMultiplayerPeer.LOBBY_TYPE_FRIENDS_ONLY,2)
@@ -99,6 +120,8 @@ func _on_steam_host_pressed():
 	$CanvasLayer/Exit.visible = false
 	$CanvasLayer/MainMenu.visible = true
 	$CanvasLayer/Options.visible = false
+	$CanvasLayer/InfoButton.visible = false
+	$CanvasLayer/LanguageSelect.visible = false
 
 
 func _on_steam_join_pressed():
@@ -241,6 +264,8 @@ func _join_steam_lobby(lobby_id):
 	$CanvasLayer/Exit.visible = false
 	$CanvasLayer/MainMenu.visible = true
 	$CanvasLayer/Options.visible = false
+	$CanvasLayer/InfoButton.visible = false
+	$CanvasLayer/LanguageSelect.visible = false
 
 func _on_line_edit_text_submitted(new_text):
 	ip_prompt.visible = false
@@ -260,6 +285,8 @@ func _on_line_edit_text_submitted(new_text):
 	$CanvasLayer/Exit.visible = false
 	$CanvasLayer/MainMenu.visible = true
 	$CanvasLayer/Options.visible = false
+	$CanvasLayer/InfoButton.visible = false
+	$CanvasLayer/LanguageSelect.visible = false
 
 func connect_info(side_id):
 	connect_info_all.rpc(side_id)
@@ -294,12 +321,16 @@ func _restart(id=null):
 func _on_steam_connect_pressed():
 	$"CanvasLayer/Steam Connect".visible = false
 	$"CanvasLayer/Direct Connect".visible = false
-	$CanvasLayer/SteamHost.visible = true
-	$CanvasLayer/SteamJoin.visible = true
 	peer = SteamMultiplayerPeer.new()
 	peer.lobby_created.connect(_on_lobby_created)
 	steam = true
-	SteamManager.initialize_steam()
+	var connected = SteamManager.initialize_steam()
+	if connected != null:
+		$CanvasLayer/Popup/Label.text = str(connected)
+		$CanvasLayer/Popup.visible = true
+	else:
+		$CanvasLayer/SteamHost.visible = true
+		$CanvasLayer/SteamJoin.visible = true
 
 
 func _on_direct_connect_pressed():
@@ -383,5 +414,13 @@ func _on_options_pressed():
 
 
 func _on_check_unrevealed_pressed():
-	ProjectSettings.set_setting("AllowUnrevealed",$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed)
-	ProjectSettings.save_custom("override.cfg")
+	Settings.update_settings("AllowUnrevealed",$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed)
+
+func _on_language_selected(index_selected):
+	Settings.update_settings("Language",Settings.languages[index_selected])
+	$CanvasLayer/LanguageSelect.text = Settings.settings.Language
+	$CanvasLayer/Title.text = Settings.en_or_jp("holoDelta","ホロデルタ")
+
+
+func _on_info_button_pressed():
+	$CanvasLayer/InfoButton/DeckLocation.visible = !$CanvasLayer/InfoButton/DeckLocation.visible

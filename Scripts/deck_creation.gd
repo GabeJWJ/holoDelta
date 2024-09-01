@@ -20,16 +20,14 @@ var oshiCard
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var path
-	if !OS.has_feature("editor"):
-		path = OS.get_executable_path().get_base_dir() + "/Decks"
-	else:
-		path = "res://Decks"
-	
-	
 	database = SQLite.new()
 	database.read_only = true
-	database.path = "res://cardData.db"
+	if OS.has_feature("editor"):
+		database.path = "res://cardData.db"
+	else:
+		database.path = OS.get_executable_path().get_base_dir() + "/cardData.db"
+		$CanvasLayer/LoadDialog.root_subfolder = ProjectSettings.globalize_path("users://Decks")
+		$CanvasLayer/SaveDialog.root_subfolder = ProjectSettings.globalize_path("users://Decks")
 	database.open_db()
 	
 	var art_data = database.select_rows("cardHasArt","",["cardID","art_index","unrevealed"])
@@ -39,7 +37,7 @@ func _ready():
 	for art_row in art_data:
 		var cardNumber = art_row.cardID
 		var artCode = art_row.art_index
-		if bool(art_row.unrevealed) and !ProjectSettings.get_setting("AllowUnrevealed",false):
+		if bool(art_row.unrevealed) and !Settings.settings.AllowUnrevealed:
 			continue
 		var newCardButton = create_card_button(cardNumber,artCode)
 		if newCardButton.cardType == "Oshi":
@@ -132,7 +130,7 @@ func create_card_button(number,art_code):
 	
 	#newCard.card_clicked.connect(_on_card_clicked)
 	newCard.card_mouse_over.connect(update_info)
-	newCard.card_mouse_left.connect(clear_info)
+	#newCard.card_mouse_left.connect(clear_info)
 	all_cards.append(newCard)
 	return newCard
 

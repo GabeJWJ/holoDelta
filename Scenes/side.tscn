@@ -411,6 +411,7 @@ texture = ExtResource("9_7k57a")
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Deck" to="." method="_on_deck_clicked"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/CheerDeck" to="." method="_on_cheer_deck_clicked"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Archive" to="." method="_on_archive_clicked"]
+[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/Node3D/Archive" to="." method="_on_archive_mouse_entered"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Holopower" to="." method="_on_holopower_clicked"]
 [connection signal="die_result" from="SubViewportContainer/SubViewport/Node3D/Die" to="." method="_on_die_result"]
 [connection signal="text_submitted" from="CanvasLayer/Prompt/Input/LineEdit" to="." method="_on_line_edit_text_submitted"]

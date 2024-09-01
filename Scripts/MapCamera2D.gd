@@ -126,6 +126,8 @@ func _input(event):
 					_change_zoom(zoom_factor if zoom_factor > 1 else 1 / zoom_factor, false)
 		
 		if pan_keyboard && !event.echo:
+			if _pan_direction == Vector2.ZERO and !event.pressed:
+				return
 			match event.keycode:
 				KEY_LEFT:
 					_pan_direction -= Vector2(1 if event.pressed else -1, 0)

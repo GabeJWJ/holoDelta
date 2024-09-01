@@ -1,8 +1,10 @@
 extends Node3D
 
 signal fuda_clicked
+signal mouse_entered
+signal mouse_exited
 
-var cardList = []
+@export var cardList = []
 @export var archive := false
 @onready var count = $Count
 @onready var looking = $Looking
@@ -15,7 +17,10 @@ func _ready():
 	if archive:
 		database = SQLite.new()
 		database.read_only = true
-		database.path = "res://cardData.db"
+		if OS.has_feature("editor"):
+			database.path = "res://cardData.db"
+		else:
+			database.path = OS.get_executable_path().get_base_dir() + "/cardData.db"
 		database.open_db()
 
 
@@ -46,7 +51,7 @@ func archive_texture_sanity(cardNum, artNum):
 	var image
 	if art_data.is_empty():
 		image = Image.load_from_file("res://Sou_Desu_Ne.png")
-	elif art_data[0].unrevealed and !ProjectSettings.get_setting("AllowUnrevealed",false):
+	elif art_data[0].unrevealed and !Settings.settings.AllowUnrevealed:
 		image = Image.load_from_file("res://spoilers.png")
 	else:
 		image = Image.new()
@@ -69,3 +74,11 @@ func _update_looking(value:bool,look_count=-1):
 		looking.get_node("Label3D").visible = true
 	else:
 		looking.get_node("Label3D").visible = false
+
+
+func _on_static_body_3d_mouse_entered():
+	emit_signal("mouse_entered")
+
+
+func _on_static_body_3d_mouse_exited():
+	emit_signal("mouse_exited")
