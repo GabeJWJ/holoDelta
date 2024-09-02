@@ -70,7 +70,11 @@ func setup_info(number,database,art_code):
 	var art_data = database.select_rows("cardHasArt","cardID LIKE '" + cardNumber + "' AND art_index = " + str(art_code), ["*"])
 	if data1.is_empty() or art_data.is_empty():
 		notFound = true
-		cardFront = ImageTexture.create_from_image(Image.load_from_file("res://Sou_Desu_Ne.png"))
+		match Settings.settings.Language:
+			"English":
+				cardFront = ImageTexture.create_from_image(Image.load_from_file("res://Sou_Desu_Ne.png"))
+			"日本語":
+				cardFront = ImageTexture.create_from_image(Image.load_from_file("res://Sou_Desu_Ne_JP.png"))
 		$Front.texture = cardFront
 		return
 	elif art_data[0].unrevealed and !Settings.settings.AllowUnrevealed:

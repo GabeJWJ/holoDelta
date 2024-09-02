@@ -58,6 +58,12 @@ func _ready():
 	cheer_tab.custom_minimum_size = Vector2(0, (cheer_tab.get_child_count()/3)*280 + 300)
 	
 	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
+	
+	match Settings.settings.Language:
+		"English":
+			$CanvasLayer/Info/ScrollContainer/CardText.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		"日本語":
+			$CanvasLayer/Info/ScrollContainer/CardText.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 
 func custom_art_row_sort(a,b):
 	if a.cardID < b.cardID:

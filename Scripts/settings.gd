@@ -34,6 +34,8 @@ func _ready():
 		to_jp[row.type] = row.jpName
 	for row in tag_data:
 		to_jp[row.tagName] = row.jpName
+	
+	locale()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,6 +47,7 @@ func update_settings(key, value):
 	var file_access = FileAccess.open("user://settings.json",FileAccess.WRITE)
 	file_access.store_line(JSON.stringify(settings))
 	file_access.close()
+	locale()
 
 func en_or_jp(en_text,jp_text):
 	match settings.Language:
@@ -54,3 +57,10 @@ func en_or_jp(en_text,jp_text):
 			return jp_text
 		_:
 			return en_text
+
+func locale():
+	match settings.Language:
+		"English":
+			TranslationServer.set_locale("en")
+		"日本語":
+			TranslationServer.set_locale("ja")

@@ -50,7 +50,7 @@ custom_minimum_size = Vector2(302, 615)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-autowrap_mode = 3
+autowrap_mode = 1
 
 [node name="Host" type="Button" parent="CanvasLayer"]
 visible = false

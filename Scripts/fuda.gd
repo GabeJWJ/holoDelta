@@ -50,7 +50,11 @@ func archive_texture_sanity(cardNum, artNum):
 	var art_data = database.select_rows("cardHasArt","cardID LIKE '" + cardNum + "' AND art_index = " + str(artNum), ["*"])
 	var image
 	if art_data.is_empty():
-		image = Image.load_from_file("res://Sou_Desu_Ne.png")
+		match Settings.settings.Language:
+			"English":
+				image = Image.load_from_file("res://Sou_Desu_Ne.png")
+			"日本語":
+				image = Image.load_from_file("res://Sou_Desu_Ne_JP.png")
 	elif art_data[0].unrevealed and !Settings.settings.AllowUnrevealed:
 		image = Image.load_from_file("res://spoilers.png")
 	else:

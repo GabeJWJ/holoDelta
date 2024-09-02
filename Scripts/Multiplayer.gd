@@ -60,6 +60,11 @@ func _ready():
 	$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed = Settings.settings.AllowUnrevealed
 	$CanvasLayer/Title.text = Settings.en_or_jp("holoDelta","ホロデルタ")
 	$CanvasLayer/LanguageSelect.text = Settings.settings.Language
+	match Settings.settings.Language:
+		"English":
+			$CanvasLayer/Info/ScrollContainer/CardText.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		"日本語":
+			$CanvasLayer/Info/ScrollContainer/CardText.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -420,6 +425,11 @@ func _on_language_selected(index_selected):
 	Settings.update_settings("Language",Settings.languages[index_selected])
 	$CanvasLayer/LanguageSelect.text = Settings.settings.Language
 	$CanvasLayer/Title.text = Settings.en_or_jp("holoDelta","ホロデルタ")
+	match Settings.settings.Language:
+		"English":
+			$CanvasLayer/Info/ScrollContainer/CardText.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		"日本語":
+			$CanvasLayer/Info/ScrollContainer/CardText.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 
 
 func _on_info_button_pressed():
