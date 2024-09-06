@@ -31,7 +31,7 @@ Quick notes:
 
 Adding cards to cardData.db
 
-I tend to use DB Browser for SQLite to modify the db file, but anything works probably. IF USING DB BROWSER, keep in mind that it will not automatically save your changes. You have to press “Write Changes” or Ctrl+S.
+I tend to use DB Browser for SQLite (https://sqlitebrowser.org/) to modify the db file, but anything works probably. IF USING DB BROWSER, keep in mind that it will not automatically save your changes. You have to press “Write Changes” or Ctrl+S.
 
 Tables:
 
