@@ -48,20 +48,20 @@ func shuffle():
 @rpc("any_peer", "call_local", "reliable")
 func archive_texture_sanity(cardNum, artNum):
 	var art_data = database.select_rows("cardHasArt","cardID LIKE '" + cardNum + "' AND art_index = " + str(artNum), ["*"])
-	var image
+	var newMaterial = StandardMaterial3D.new()
 	if art_data.is_empty():
 		match Settings.settings.Language:
 			"English":
-				image = Image.load_from_file("res://Sou_Desu_Ne.png")
+				newMaterial.albedo_texture = load("res://Sou_Desu_Ne.png")
 			"日本語":
-				image = Image.load_from_file("res://Sou_Desu_Ne_JP.png")
+				newMaterial.albedo_texture = load("res://Sou_Desu_Ne_JP.png")
 	elif art_data[0].unrevealed and !Settings.settings.AllowUnrevealed:
-		image = Image.load_from_file("res://spoilers.png")
+		newMaterial.albedo_texture = load("res://spoilers.png")
 	else:
-		image = Image.new()
+		var image = Image.new()
 		image.load_png_from_buffer(art_data[0].art)
-	var newMaterial = StandardMaterial3D.new()
-	newMaterial.albedo_texture = ImageTexture.create_from_image(image)
+		newMaterial.albedo_texture = ImageTexture.create_from_image(image)
+	
 	$fuda/Plane.set_surface_override_material(0,newMaterial)
 
 

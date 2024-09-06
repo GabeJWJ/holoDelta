@@ -22,7 +22,7 @@ signal move_behind_request(id1,id2)
 
 @export var cardName:String
 @export var cardText:String
-@export var cardFront:ImageTexture
+var cardFront
 @export var artNum:int
 
 var onTopOf = []
@@ -72,14 +72,14 @@ func setup_info(number,database,art_code):
 		notFound = true
 		match Settings.settings.Language:
 			"English":
-				cardFront = ImageTexture.create_from_image(Image.load_from_file("res://Sou_Desu_Ne.png"))
+				cardFront = load("res://Sou_Desu_Ne.png")
 			"日本語":
-				cardFront = ImageTexture.create_from_image(Image.load_from_file("res://Sou_Desu_Ne_JP.png"))
+				cardFront = load("res://Sou_Desu_Ne_JP.png")
 		$Front.texture = cardFront
 		return
 	elif art_data[0].unrevealed and !Settings.settings.AllowUnrevealed:
 		notFound = true
-		cardFront = ImageTexture.create_from_image(Image.load_from_file("res://spoilers.png"))
+		cardFront = load("res://spoilers.png")
 		$Front.texture = cardFront
 		return
 	else:

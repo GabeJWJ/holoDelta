@@ -232,36 +232,36 @@ color = Color(0, 0, 0, 0.623529)
 
 [node name="Go First" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 956.0
-offset_top = 493.0
-offset_right = 1094.0
-offset_bottom = 550.0
+offset_left = 914.0
+offset_top = 459.0
+offset_right = 1052.0
+offset_bottom = 516.0
 theme_override_font_sizes/font_size = 35
 text = "Go First"
 
 [node name="Go Second" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 935.0
-offset_top = 558.0
-offset_right = 1119.0
-offset_bottom = 615.0
+offset_left = 893.0
+offset_top = 524.0
+offset_right = 1077.0
+offset_bottom = 581.0
 theme_override_font_sizes/font_size = 35
 text = "Go Second"
 
 [node name="End Turn" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 1724.0
+offset_left = 1704.0
 offset_top = 22.0
-offset_right = 1904.0
+offset_right = 1884.0
 offset_bottom = 85.0
 theme_override_font_sizes/font_size = 40
 text = "End Turn"
 
 [node name="Ready" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 1747.0
+offset_left = 1727.0
 offset_top = 124.0
-offset_right = 1903.0
+offset_right = 1883.0
 offset_bottom = 201.0
 theme_override_font_sizes/font_size = 50
 disabled = true
@@ -269,10 +269,10 @@ text = "Ready"
 
 [node name="Question" type="ColorRect" parent="CanvasLayer"]
 visible = false
-offset_left = 611.0
-offset_top = 428.0
-offset_right = 1415.0
-offset_bottom = 699.0
+offset_left = 602.0
+offset_top = 385.0
+offset_right = 1406.0
+offset_bottom = 656.0
 color = Color(0, 0, 0, 0.623529)
 
 [node name="Label" type="Label" parent="CanvasLayer/Question"]
