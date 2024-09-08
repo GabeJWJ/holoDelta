@@ -433,7 +433,17 @@ func has_name_in_common(other_card):
 	return false
 
 func can_bloom(other_card):
-	return cardType == "Holomem" and level > -1 and other_card.cardType == "Holomem" and other_card.level >=0 and other_card.level <= level and level <= other_card.level+1 and has_name_in_common(other_card) and other_card.damage < hp and !other_card.bloomed_this_turn
+	if cardType == "Holomem" and level > -1 and other_card.cardType == "Holomem" and other_card.level >=0 and has_name_in_common(other_card) and other_card.damage < hp:
+		if other_card.level <= level:
+			var difference = level - other_card.level
+			if difference <= 1:
+				if other_card.bloomed_this_turn:
+					return Settings.bloomCode.Instant
+				else:
+					return Settings.bloomCode.OK
+			else:
+				return Settings.bloomCode.Skip
+	return Settings.bloomCode.No
 
 func playOnTopOf(other_card):
 	if other_card.rested:

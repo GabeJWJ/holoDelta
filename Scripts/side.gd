@@ -443,10 +443,12 @@ func all_occupied_zones(only_back=false,except_id=null):
 	return result
 
 func all_bloomable_zones(card_check):
-	var result = []
+	var result = {Settings.bloomCode.OK:[],Settings.bloomCode.Instant:[],Settings.bloomCode.Skip:[]}
 	for zone in zones:
-		if zone[1] != -1 and card_check.can_bloom(all_cards[zone[1]]):
-			result.append(zone[0])
+		if zone[1] != -1:
+			var bloom_code = card_check.can_bloom(all_cards[zone[1]])
+			if bloom_code != Settings.bloomCode.No:
+				result[bloom_code].append(zone[0])
 	
 	return result
 
@@ -696,8 +698,14 @@ func _on_card_clicked(card_id):
 					if actualCard in hand and is_turn:
 						if first_unoccupied_back_zone() and actualCard.level < 1 and all_occupied_zones().size() < 6:
 							popup.add_item(Settings.en_or_jp("Play","場に出す"),100)
-						if all_bloomable_zones(actualCard).size() > 0 and !first_turn:
-							popup.add_item("Bloom",101)
+						if !first_turn:
+							var bloomable = all_bloomable_zones(actualCard)
+							if bloomable[Settings.bloomCode.OK].size() > 0:
+								popup.add_item("Bloom",101)
+							if bloomable[Settings.bloomCode.Skip].size() > 0:
+								popup.add_item("Skip Bloom",104)
+							if bloomable[Settings.bloomCode.Instant].size() > 0:
+								popup.add_item("Instant Bloom",105)
 					elif find_what_zone(currentCard):
 						if is_turn:
 							if actualCard.rested:
@@ -892,7 +900,7 @@ func _on_list_card_clicked(card_id):
 					popup.add_item(Settings.en_or_jp("Play","場に出す"),600)
 				elif currentFuda == archive:
 					popup.add_item(Settings.en_or_jp("Play","場に出す"),610)
-			if all_bloomable_zones(actualCard).size() > 0 and is_turn and !(first_turn and player1):
+			if all_bloomable_zones(actualCard)[Settings.bloomCode.OK].size() > 0 and is_turn and !first_turn:
 				if currentFuda == deck:
 					popup.add_item("Bloom",601)
 				elif currentFuda == archive:
@@ -1059,7 +1067,15 @@ func _on_popup_menu_id_pressed(id):
 			showZoneSelection(possibleZones)
 			currentPrompt = 100
 		101: #Bloom
-			var possibleZones = all_bloomable_zones(all_cards[currentCard])
+			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.OK]
+			showZoneSelection(possibleZones)
+			currentPrompt = 101
+		104: #Skip Bloom
+			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.Skip]
+			showZoneSelection(possibleZones)
+			currentPrompt = 101
+		105: #Instant Bloom
+			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.Instant]
 			showZoneSelection(possibleZones)
 			currentPrompt = 101
 		102: #Play Hidden to Center
@@ -1404,6 +1420,7 @@ func _on_zone_clicked(zone_id):
 		100: #Play
 			move_card_to_zone(currentCard,actualZoneInfo[0])
 			remove_from_hand(currentCard)
+			all_cards[currentCard].bloomed_this_turn = true
 			hideZoneSelection()
 		101: #Bloom
 			var actualCard = all_cards[currentCard]
@@ -1432,6 +1449,7 @@ func _on_zone_clicked(zone_id):
 		600: #Play From Deck
 			remove_from_fuda(currentCard,deck)
 			move_card_to_zone(currentCard,actualZoneInfo[0])
+			all_cards[currentCard].bloomed_this_turn = true
 			hideZoneSelection()
 		601: #Bloom From Deck
 			remove_from_fuda(currentCard,deck)
@@ -1447,6 +1465,7 @@ func _on_zone_clicked(zone_id):
 		610: #Play From Archive
 			remove_from_fuda(currentCard,archive)
 			move_card_to_zone(currentCard,actualZoneInfo[0])
+			all_cards[currentCard].bloomed_this_turn = true
 			hideZoneSelection()
 		611: #Bloom From Archive
 			remove_from_fuda(currentCard,archive)

@@ -3,6 +3,7 @@ extends Node
 var settings
 @onready var json = JSON.new()
 var languages = ["English","日本語"]
+enum bloomCode {OK,Instant,Skip,No}
 
 var to_jp = {}
 
