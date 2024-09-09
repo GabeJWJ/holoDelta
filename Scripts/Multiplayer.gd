@@ -310,13 +310,30 @@ func _on_list_exit():
 	$Camera2D.canGo = true
 
 
-func update_info(card_num, desc, art_data):
+func prepare_attached_card_for_display(card_texture):
+	var ac_img = TextureRect.new()
+	ac_img.texture = card_texture
+	ac_img.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	ac_img.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT
+	ac_img.custom_minimum_size = Vector2(66, 91)
+	return ac_img
+
+
+func update_info(card_num, desc, art_data, attached_cards):
 	$CanvasLayer/Info/Preview.texture = art_data
 	$CanvasLayer/Info/ScrollContainer/CardText.text = desc
+	for ac in $CanvasLayer/Info/AttachedCardsList/HBoxContainer.get_children():
+		ac.free()  # free cards if there are any in here still somehow
+	for attached_card_texture in attached_cards:
+		# print(attached_card)
+		var ac_img = prepare_attached_card_for_display(attached_card_texture)
+		$CanvasLayer/Info/AttachedCardsList/HBoxContainer.add_child(ac_img)
 
 func clear_info():
 	$CanvasLayer/Info/Preview.texture = load("res://cardbutton.png")
 	$CanvasLayer/Info/ScrollContainer/CardText.text = ""
+	for ac in $CanvasLayer/Info/AttachedCardsList/HBoxContainer.get_children():
+		ac.free()
 
 
 func _restart(id=null):

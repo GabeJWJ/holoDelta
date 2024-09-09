@@ -60,7 +60,7 @@ signal made_turn_choice(choice)
 signal rps(choice)
 signal ready_decided
 
-signal card_info_set(card_num, desc, art_data)
+signal card_info_set(card_num, desc, art_data, attached_cards)
 signal card_info_clear
 
 signal entered_list
@@ -656,7 +656,11 @@ func archive_opponent_mouse_enter():
 func update_info(card_id):
 	var actualCard = all_cards[card_id]
 	if !actualCard.trulyHidden and (is_multiplayer_authority() or !actualCard.faceDown):
-		emit_signal("card_info_set",actualCard.cardNumber,actualCard.full_desc(),actualCard.cardFront)
+		var attached_cards = []
+		for attached_card in actualCard.attached:
+			attached_cards.push_back(attached_card.cardFront)
+			# print(attached_card.cardNumber,attached_card.cardFront)
+		emit_signal("card_info_set",actualCard.cardNumber,actualCard.full_desc(),actualCard.cardFront,attached_cards)
 
 func clear_info():
 	emit_signal("card_info_clear")

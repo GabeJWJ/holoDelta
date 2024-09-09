@@ -43,7 +43,7 @@ anchors_preset = -1
 offset_left = 10.0
 offset_top = 449.0
 offset_right = 312.0
-offset_bottom = 1064.0
+offset_bottom = 958.0
 
 [node name="CardText" type="Label" parent="CanvasLayer/Info/ScrollContainer"]
 custom_minimum_size = Vector2(302, 615)
@@ -51,6 +51,52 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 autowrap_mode = 1
+
+[node name="AttachedCardsBackground" type="ColorRect" parent="CanvasLayer/Info"]
+layout_mode = 2
+offset_left = 10.0
+offset_top = 967.0
+offset_right = 312.0
+offset_bottom = 1066.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.18359, 0.18359, 0.18359, 1)
+
+[node name="AttachedCardsList" type="ScrollContainer" parent="CanvasLayer/Info"]
+layout_direction = 2
+layout_mode = 0
+offset_left = 14.0
+offset_top = 971.0
+offset_right = 308.0
+offset_bottom = 1062.0
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Info/AttachedCardsList"]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AttachedCardsLabel" type="Node2D" parent="CanvasLayer/Info"]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Info/AttachedCardsLabel"]
+offset_left = 200.0
+offset_top = 967.0
+offset_right = 312.0
+offset_bottom = 990.0
+color = Color(0.117647, 0.117647, 0.117647, 0.337255)
+
+[node name="Label" type="Label" parent="CanvasLayer/Info/AttachedCardsLabel"]
+offset_left = 200.0
+offset_top = 967.0
+offset_right = 312.0
+offset_bottom = 990.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 15
+text = "Attached Cards"
+horizontal_alignment = 2
 
 [node name="Host" type="Button" parent="CanvasLayer"]
 visible = false
