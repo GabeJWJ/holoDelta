@@ -379,9 +379,11 @@ func remove_from_fuda(card_id,fuda):
 	fuda.update_size()
 
 func remove_from_attached(card_id,attached):
-	remove_from_card_list(card_id,attached.attached)
-	
-	attached.update_attached()
+	if all_cards[card_id] in attached.attached:
+		remove_from_card_list(card_id,attached.attached)
+		attached.update_attached()
+	elif all_cards[card_id] in attached.onTopOf:
+		remove_from_card_list(card_id,attached.onTopOf)
 
 func add_to_card_list(card_id,list_of_cards,bottom=false):
 	var new_position = 0
@@ -772,9 +774,16 @@ func _on_card_clicked(card_id):
 		if life.size() > 0 and actualCard == life[0] and all_occupied_zones().size() > 0:
 			popup.add_item("Reveal and attach", 30)
 		
-		if find_what_zone(currentCard) and actualCard.attached.size() > 0:
-			popup.add_item(Settings.en_or_jp("Look at attached","添付を見る"),50)
-			popup.add_separator()
+		if find_what_zone(currentCard):
+			var serf = false
+			if actualCard.attached.size() > 0:
+				popup.add_item(Settings.en_or_jp("Look at attached","添付を見る"),50)
+				serf = true
+			if actualCard.onTopOf.size() > 0:
+				popup.add_item("Look at past blooms",52)
+				serf = true
+			if serf:
+				popup.add_separator()
 		
 		if actualCard.cardType != "Oshi":
 			if actualCard in hand:
@@ -1033,6 +1042,10 @@ func _on_popup_menu_id_pressed(id):
 			currentAttached = all_cards[currentCard]
 			wannaLookAtAttached.rpc(currentCard)
 			currentPrompt = 51
+		52: #Look At Past Blooms
+			currentAttached = all_cards[currentCard]
+			showLookAt(currentAttached.onTopOf)
+			currentPrompt = 52
 		70:
 			var skill = all_cards[currentCard].oshi_skills[0]
 			if skill[1] >= 0:
