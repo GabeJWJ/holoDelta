@@ -77,7 +77,6 @@ func _on_lobby_created(connect, lobby_id):
 	Steam.setLobbyJoinable(_hosted_lobby_id,true)
 	
 	chosen = true
-	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
 
 func _on_host_pressed():
 	peer.create_server(25565,1)
@@ -103,6 +102,7 @@ func _on_host_pressed():
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
+	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
 
 func _on_steam_host_pressed():
 	peer.create_lobby(SteamMultiplayerPeer.LOBBY_TYPE_PUBLIC,20)
@@ -127,6 +127,7 @@ func _on_steam_host_pressed():
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
 	$CanvasLayer/JoinOptions.visible = true
+	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
 
 func _on_public_private_chosen(chosen_index):
 	$CanvasLayer/SteamHost/MenuButton.text = $CanvasLayer/SteamHost/MenuButton.get_popup().get_item_text(chosen_index)
@@ -523,6 +524,7 @@ func _on_yes_pressed():
 		if multiplayer.is_server():
 			for i in multiplayer.get_peers():
 				multiplayer.multiplayer_peer.disconnect_peer(i)
+			_restart()
 		else:
 			multiplayer.multiplayer_peer.disconnect_peer(1)
 

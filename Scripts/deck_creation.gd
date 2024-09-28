@@ -372,6 +372,7 @@ func _update_tabs():
 		holomem_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
 		holomem_card.visible = true
 		index += 1
+	$CanvasLayer/PossibleCards/Holomem/ScrollContainer.scroll_vertical = 0
 	
 	index = 0
 	for oshi_card in oshi_cards:
@@ -381,6 +382,7 @@ func _update_tabs():
 		oshi_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
 		oshi_card.visible = true
 		index += 1
+	$CanvasLayer/PossibleCards/Oshi/ScrollContainer.scroll_vertical = 0
 	
 	index = 0
 	for support_card in support_cards:
@@ -390,6 +392,7 @@ func _update_tabs():
 		support_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
 		support_card.visible = true
 		index += 1
+	$CanvasLayer/PossibleCards/Support/ScrollContainer.scroll_vertical = 0
 	
 	oshi_tab.custom_minimum_size = Vector2(0, (oshi_tab.get_child_count() / 5)*100 + 120)
 	holomem_tab.custom_minimum_size = Vector2(0, (holomem_tab.get_child_count()/5)*100 + 120)

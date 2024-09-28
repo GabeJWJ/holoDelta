@@ -426,7 +426,7 @@ MagnaDrake for helping with the Mac release
 Weiss and Chill for the visibility he's brought to this project
 
 And assorted thanks to:
-Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran (Passion English), Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa"
+Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran (Passion English), Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87"
 autowrap_mode = 3
 
 [node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]
@@ -458,6 +458,14 @@ offset_right = 1622.8
 offset_bottom = -6.465
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Decks are located at "
+
+[node name="Close" type="Button" parent="CanvasLayer/InfoButton/Info"]
+layout_mode = 0
+offset_left = 1034.0
+offset_top = 617.0
+offset_right = 1075.0
+offset_bottom = 630.0
+text = "Close"
 
 [node name="Popup" type="Popup" parent="CanvasLayer"]
 size = Vector2i(1280, 720)
@@ -621,6 +629,7 @@ zoom = Vector2(0.27, 0.27)
 [connection signal="drag_ended" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="pressed" from="CanvasLayer/InfoButton" to="." method="_on_info_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/InfoButton/Info/DeckLocationButton" to="." method="_on_deck_location_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/InfoButton/Info/Close" to="." method="_on_info_button_pressed"]
 [connection signal="cancel" from="CanvasLayer/DeckList" to="." method="_hide_deck_list"]
 [connection signal="selected" from="CanvasLayer/DeckList" to="." method="_on_deck_list_selected"]
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]

@@ -33,7 +33,7 @@ theme_override_font_sizes/font_size = 14
 autowrap_mode = 1
 
 [node name="LockOff" type="Sprite2D" parent="."]
-z_index = 4
+z_index = 2
 position = Vector2(275, 20)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("3_7wkbs")

@@ -38,7 +38,7 @@ func _new_info(card_to_show):
 	for attached_card in card_to_show.attached:
 		if attached_card.cardType == "Cheer":
 			var preview = TextureRect.new()
-			preview.z_index = 3
+			preview.z_index = 1
 			preview.scale = Vector2(0.75,0.75)
 			preview.texture = cheer[attached_card.cheer_color]
 			cheer_result[attached_card.cheer_color].append(preview)
@@ -89,7 +89,7 @@ func _set_showing(to_show,cheer_show):
 
 func _show_specific(showing_id):
 	$Info/ScrollContainer/CardText.text = showing[showing_id][1]
-	showing[showing_id][0].z_index = 2
+	showing[showing_id][0].z_index = 1
 	showing[showing_id][0].position.y = 3
 	showing_grays[showing_id].visible = false
 	current_showing = showing_id
