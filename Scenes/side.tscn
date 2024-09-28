@@ -1,14 +1,30 @@
-[gd_scene load_steps=13 format=3 uid="uid://j87r323v31qv"]
+[gd_scene load_steps=34 format=3 uid="uid://j87r323v31qv"]
 
 [ext_resource type="Script" path="res://Scripts/side.gd" id="1_vy6dv"]
+[ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="2_0kggm"]
 [ext_resource type="PackedScene" uid="uid://md0n47hsxcob" path="res://Scenes/zone.tscn" id="2_a11wy"]
-[ext_resource type="Texture2D" uid="uid://cp7k5oles16v1" path="res://side.jpg" id="2_hegt3"]
 [ext_resource type="PackedScene" uid="uid://hxi6y3mwpmp8" path="res://Scenes/fuda.tscn" id="3_4khac"]
 [ext_resource type="PackedScene" uid="uid://xo7x52x42xjv" path="res://side.glb" id="4_bqq78"]
 [ext_resource type="Texture2D" uid="uid://bcans1dkc8eyo" path="res://cheerBack.png" id="5_2ycg0"]
 [ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="7_3wwxl"]
 [ext_resource type="StyleBox" uid="uid://ilsjg8vo6p8q" path="res://side.tres" id="8_f6ll5"]
+[ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="8_u8usn"]
 [ext_resource type="Texture2D" uid="uid://cxhb21jecugn" path="res://SPup.png" id="9_7k57a"]
+[ext_resource type="AudioStream" uid="uid://byvrlx4gp0oh6" path="res://HaruTsunXAssets/Draw Card 1.wav" id="11_jlv7i"]
+[ext_resource type="AudioStream" uid="uid://d1gc0wj65aaim" path="res://HaruTsunXAssets/Draw Card 2.wav" id="12_r7y3m"]
+[ext_resource type="AudioStream" uid="uid://dk6835owvl36j" path="res://HaruTsunXAssets/Draw Card 3.wav" id="13_062vp"]
+[ext_resource type="AudioStream" uid="uid://cejnys2aetdd8" path="res://HaruTsunXAssets/Draw Card 4.wav" id="14_tcnti"]
+[ext_resource type="AudioStream" uid="uid://b3gpfd8s1j0m2" path="res://HaruTsunXAssets/Draw Card 5.wav" id="15_vjbsw"]
+[ext_resource type="AudioStream" uid="uid://d2msysdonv41s" path="res://HaruTsunXAssets/Draw Card 6.wav" id="16_tpx6e"]
+[ext_resource type="AudioStream" uid="uid://bd2tpkm0etxbj" path="res://HaruTsunXAssets/Card Shuffle 1.wav" id="17_2spk2"]
+[ext_resource type="AudioStream" uid="uid://ctbwauo6nw5yq" path="res://HaruTsunXAssets/Card Shuffle 2.wav" id="18_ohtfm"]
+[ext_resource type="AudioStream" uid="uid://e1tdbawmq6hx" path="res://HaruTsunXAssets/Card Shuffle 3.wav" id="19_a6wvd"]
+[ext_resource type="AudioStream" uid="uid://n18ctlpyptml" path="res://HaruTsunXAssets/Card Shuffle 4.wav" id="20_2u3sr"]
+[ext_resource type="AudioStream" uid="uid://citw8blr274yn" path="res://HaruTsunXAssets/Die Roll 2.wav" id="22_ptb4f"]
+[ext_resource type="AudioStream" uid="uid://cfaofku10o646" path="res://HaruTsunXAssets/Card Move 1.wav" id="23_o1mwf"]
+[ext_resource type="AudioStream" uid="uid://nn13swso7n21" path="res://HaruTsunXAssets/Place Card 1.wav" id="24_q5bqm"]
+[ext_resource type="AudioStream" uid="uid://bp0x05dxnfc2o" path="res://HaruTsunXAssets/Place Card 2.wav" id="25_30rg1"]
+[ext_resource type="AudioStream" uid="uid://cxg5uowbntxl3" path="res://HaruTsunXAssets/Place Card 3.wav" id="26_u0kxe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehvxa"]
 albedo_texture = ExtResource("5_2ycg0")
@@ -38,64 +54,135 @@ properties/6/replication_mode = 2
 properties/7/path = NodePath(".:preliminary_phase")
 properties/7/spawn = true
 properties/7/replication_mode = 2
+properties/8/path = NodePath(".:can_do_things")
+properties/8/spawn = true
+properties/8/replication_mode = 2
 
 [sub_resource type="Theme" id="Theme_y8s1y"]
 HScrollBar/styles/grabber = null
 HScrollBar/styles/scroll = ExtResource("8_f6ll5")
 HScrollBar/styles/scroll_focus = ExtResource("8_f6ll5")
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dstwm"]
+playback_mode = 1
+random_pitch = 1.3
+random_volume_offset_db = 0.15
+streams_count = 6
+stream_0/stream = ExtResource("11_jlv7i")
+stream_0/weight = 2.0
+stream_1/stream = ExtResource("12_r7y3m")
+stream_1/weight = 2.0
+stream_2/stream = ExtResource("13_062vp")
+stream_2/weight = 2.0
+stream_3/stream = ExtResource("14_tcnti")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("15_vjbsw")
+stream_4/weight = 2.0
+stream_5/stream = ExtResource("16_tpx6e")
+stream_5/weight = 2.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qmp8k"]
+playback_mode = 1
+random_pitch = 1.3
+random_volume_offset_db = 0.15
+streams_count = 4
+stream_0/stream = ExtResource("17_2spk2")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("18_ohtfm")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("19_a6wvd")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("20_2u3sr")
+stream_3/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_e0j4a"]
+playback_mode = 1
+random_pitch = 1.3
+random_volume_offset_db = 0.15
+streams_count = 1
+stream_0/stream = ExtResource("22_ptb4f")
+stream_0/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4b5bi"]
+playback_mode = 1
+random_pitch = 1.3
+random_volume_offset_db = 0.15
+streams_count = 1
+stream_0/stream = ExtResource("23_o1mwf")
+stream_0/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1ol4w"]
+playback_mode = 1
+random_pitch = 1.3
+random_volume_offset_db = 0.15
+streams_count = 3
+stream_0/stream = ExtResource("24_q5bqm")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("25_30rg1")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("26_u0kxe")
+stream_2/weight = 1.0
+
 [node name="Side" type="Node2D"]
 script = ExtResource("1_vy6dv")
+
+[node name="gradient" type="Sprite2D" parent="."]
+position = Vector2(-1758, -532)
+texture = ExtResource("2_0kggm")
+centered = false
 
 [node name="Zones" type="Node2D" parent="."]
 
 [node name="Center" parent="Zones" instance=ExtResource("2_a11wy")]
 z_index = 1
-position = Vector2(26.5, -253)
+position = Vector2(0, -223)
 
 [node name="Collab" parent="Zones" instance=ExtResource("2_a11wy")]
 z_index = 1
-position = Vector2(-363, -253)
+position = Vector2(-430, -223)
 zoneID = 1
 
 [node name="Back1" parent="Zones" instance=ExtResource("2_a11wy")]
 z_index = 1
-position = Vector2(-500, 250)
+position = Vector2(-950, 380)
 zoneID = 2
 
 [node name="Back2" parent="Zones" instance=ExtResource("2_a11wy")]
 z_index = 1
-position = Vector2(-250, 250)
+position = Vector2(-600, 380)
 zoneID = 3
 
 [node name="Back3" parent="Zones" instance=ExtResource("2_a11wy")]
 z_index = 1
-position = Vector2(0, 250)
+position = Vector2(-250, 380)
 zoneID = 4
 
 [node name="Back4" parent="Zones" instance=ExtResource("2_a11wy")]
 z_index = 1
-position = Vector2(250, 250)
+position = Vector2(100, 380)
 zoneID = 5
 
 [node name="Back5" parent="Zones" instance=ExtResource("2_a11wy")]
 z_index = 1
-position = Vector2(500, 250)
+position = Vector2(450, 380)
 zoneID = 6
 
-[node name="Side" type="Sprite2D" parent="."]
-texture = ExtResource("2_hegt3")
+[node name="Back6" parent="Zones" instance=ExtResource("2_a11wy")]
+z_index = 1
+position = Vector2(800, 380)
+zoneID = 7
 
 [node name="PopupMenu" type="PopupMenu" parent="."]
-theme_override_font_sizes/font_size = 30
-theme_override_font_sizes/font_separator_size = 40
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 20
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-offset_left = -1050.0
-offset_top = -540.0
-offset_right = -1010.0
-offset_bottom = -500.0
-scale = Vector2(1.041, 1.041)
+clip_contents = true
+offset_left = -1690.0
+offset_top = -530.0
+offset_right = 350.0
+offset_bottom = 514.0
+scale = Vector2(1.53, 1.53)
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 transparent_bg = true
@@ -111,40 +198,41 @@ transform = Transform3D(1.55, 0, 0, 0, 1, 0, 0, 0, 1.55, 0, 0, 0)
 visible = false
 
 [node name="Deck" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1524, 0, -0.627289)
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 16.5929, 0, -0.627)
 
 [node name="CheerDeck" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4789, 1.90735e-06, 4.81324)
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -16.6171, 0, -0.627)
 
 [node name="Plane" parent="SubViewportContainer/SubViewport/Node3D/CheerDeck/fuda" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_ehvxa")
 
 [node name="Archive" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.152, 0, 4.92489)
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 21.2319, 0, -0.627)
 archive = true
 
 [node name="Holopower" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.5563, 0, -5.67446)
+transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 15.9969, 0, -5.674)
 
 [node name="Die" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("7_3wwxl")]
-transform = Transform3D(0.944325, 0, -0.329015, 0, 1, 0, 0.329015, 0, 0.944325, 9.82936, -9.53674e-07, -0.0197659)
+transform = Transform3D(0.944325, 0, -0.329015, 0, 1, 0, 0.329015, 0, 0.944325, 13.2699, 0, -0.02)
 
 [node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/Node3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.1049, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 16.5, 3.8)
+size = 0.15
 
 [node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Node3D"]
-transform = Transform3D(0.879607, -2.07935e-08, 0.475701, -0.475701, -3.84488e-08, 0.879607, 0, -1, -4.37113e-08, 12.5408, 13.1639, 3.32323)
+transform = Transform3D(0.879607, -2.07935e-08, 0.475701, -0.475701, -3.84488e-08, 0.879607, 0, -1, -4.37113e-08, 21.5293, 13.4707, 3.32323)
 light_energy = 16.0
 light_indirect_energy = 4.676
 spot_range = 307.097
 spot_angle = 62.5486
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Node3D"]
-transform = Transform3D(0.974193, 9.82017e-09, -0.225716, 0.225716, -1.90691e-08, 0.974193, 5.26254e-09, -1, -2.07936e-08, -11.2511, 13.1639, 3.32323)
+transform = Transform3D(0.375692, 0.774292, -0.509243, 0.148634, 0.492041, 0.85779, 0.914748, -0.397956, 0.0697697, -27.5446, 17.0795, -0.403971)
 light_energy = 16.0
 light_indirect_energy = 4.676
-spot_range = 155.908
-spot_angle = 52.5533
+spot_range = 136.037
+spot_angle = 48.0811
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_ddblg")
@@ -158,13 +246,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -125.5
-offset_top = -57.0
-offset_right = 125.5
-offset_bottom = 57.0
+offset_left = 102.0
+offset_top = -56.0
+offset_right = 367.0
+offset_bottom = 39.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.623529)
+theme = ExtResource("8_u8usn")
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [node name="Input" type="Label" parent="CanvasLayer/Prompt"]
 layout_mode = 1
@@ -173,10 +262,13 @@ anchor_left = 0.01
 anchor_top = 0.01
 anchor_right = 0.05
 anchor_bottom = 0.01
-offset_right = 231.0
-offset_bottom = 110.0
+offset_left = 0.04
+offset_top = -0.14
+offset_right = 246.2
+offset_bottom = 91.86
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 35
+theme_override_constants/line_spacing = 20
+theme_override_font_sizes/font_size = 30
 text = "Draw X cards
 X="
 
@@ -184,28 +276,29 @@ X="
 layout_mode = 0
 offset_left = 54.0
 offset_top = 46.0
-offset_right = 215.0
-offset_bottom = 103.0
-theme_override_font_sizes/font_size = 35
+offset_right = 241.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 30
 placeholder_text = "7"
 max_length = 2
 
 [node name="Submit" type="Button" parent="CanvasLayer/Prompt"]
 layout_mode = 0
-offset_left = 262.5
-offset_top = 58.0
-offset_right = 421.5
-offset_bottom = 111.0
-theme_override_font_sizes/font_size = 30
+offset_left = 287.0
+offset_top = 41.0
+offset_right = 446.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 25
 text = "Submit"
 
 [node name="Cancel" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 1365.0
-offset_top = 700.0
-offset_right = 1661.0
-offset_bottom = 788.0
-theme_override_font_sizes/font_size = 30
+offset_left = 1130.0
+offset_top = 559.0
+offset_right = 1264.0
+offset_bottom = 584.0
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 25
 text = "Cancel"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
@@ -215,10 +308,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -600.0
-offset_top = -190.0
-offset_right = 701.0
-offset_bottom = 160.0
+offset_left = -223.0
+offset_top = -130.0
+offset_right = 610.0
+offset_bottom = 152.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_y8s1y")
@@ -228,63 +321,70 @@ vertical_scroll_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 0.623529)
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [node name="Go First" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 914.0
-offset_top = 459.0
-offset_right = 1052.0
-offset_bottom = 516.0
-theme_override_font_sizes/font_size = 35
+offset_left = 765.0
+offset_top = 286.0
+offset_right = 960.0
+offset_bottom = 324.0
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 25
 text = "Go First"
 
 [node name="Go Second" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 893.0
-offset_top = 524.0
-offset_right = 1077.0
-offset_bottom = 581.0
-theme_override_font_sizes/font_size = 35
+offset_left = 766.0
+offset_top = 354.0
+offset_right = 961.0
+offset_bottom = 392.0
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 25
 text = "Go Second"
 
 [node name="End Turn" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 1704.0
-offset_top = 22.0
-offset_right = 1884.0
-offset_bottom = 85.0
-theme_override_font_sizes/font_size = 40
+offset_left = 1124.0
+offset_top = 15.0
+offset_right = 1268.0
+offset_bottom = 40.0
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 25
 text = "End Turn"
 
 [node name="Ready" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 1727.0
-offset_top = 124.0
-offset_right = 1883.0
-offset_bottom = 201.0
-theme_override_font_sizes/font_size = 50
+offset_left = 1153.0
+offset_top = 71.0
+offset_right = 1267.0
+offset_bottom = 104.0
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 25
 disabled = true
 text = "Ready"
 
 [node name="Question" type="ColorRect" parent="CanvasLayer"]
 visible = false
-offset_left = 602.0
-offset_top = 385.0
-offset_right = 1406.0
-offset_bottom = 656.0
-color = Color(0, 0, 0, 0.623529)
+offset_left = 422.0
+offset_top = 213.0
+offset_right = 1225.0
+offset_bottom = 483.0
+theme = ExtResource("8_u8usn")
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [node name="Label" type="Label" parent="CanvasLayer/Question"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -389.0
-offset_right = 389.0
-offset_bottom = 110.0
+offset_left = -303.0
+offset_top = 47.0
+offset_right = 318.0
+offset_bottom = 157.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 50
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
 text = "Pick an option."
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -293,9 +393,9 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 100.0
 offset_top = 175.0
-offset_right = 201.0
-offset_bottom = 238.0
-theme_override_font_sizes/font_size = 40
+offset_right = 267.0
+offset_bottom = 218.0
+theme_override_font_sizes/font_size = 30
 text = "Rock"
 
 [node name="Paper" type="Button" parent="CanvasLayer/Question"]
@@ -307,20 +407,20 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -71.0
 offset_top = -96.0
-offset_right = 50.0
-offset_bottom = -33.0
+offset_right = 96.0
+offset_bottom = -53.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 text = "Paper"
 
 [node name="Scissors" type="Button" parent="CanvasLayer/Question"]
 layout_mode = 0
-offset_left = 563.0
-offset_top = 178.0
-offset_right = 722.0
-offset_bottom = 241.0
-theme_override_font_sizes/font_size = 40
+offset_left = 561.0
+offset_top = 174.0
+offset_right = 728.0
+offset_bottom = 217.0
+theme_override_font_sizes/font_size = 30
 text = "Scissors"
 
 [node name="Yes" type="Button" parent="CanvasLayer/Question"]
@@ -358,12 +458,13 @@ visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -248.5
-offset_top = 50.0
-offset_right = 248.5
-offset_bottom = 98.0
+offset_left = -28.0
+offset_top = 10.0
+offset_right = 469.0
+offset_bottom = 58.0
 grow_horizontal = 2
-color = Color(0.537255, 0.537255, 0.537255, 0.607843)
+theme = ExtResource("8_u8usn")
+color = Color(0.180392, 0.32549, 0.45098, 1)
 
 [node name="Label" type="Label" parent="CanvasLayer/OpponentLabel"]
 layout_mode = 1
@@ -378,6 +479,7 @@ offset_right = 73.5
 offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 text = "Opponent"
 
@@ -385,6 +487,33 @@ text = "Opponent"
 z_index = 4
 position = Vector2(533, -448)
 texture = ExtResource("9_7k57a")
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="Drawing" type="AudioStreamPlayer" parent="Audio"]
+stream = SubResource("AudioStreamRandomizer_dstwm")
+max_polyphony = 20
+bus = &"SFX"
+
+[node name="Shuffling" type="AudioStreamPlayer" parent="Audio"]
+stream = SubResource("AudioStreamRandomizer_qmp8k")
+max_polyphony = 20
+bus = &"SFX"
+
+[node name="Rolling" type="AudioStreamPlayer" parent="Audio"]
+stream = SubResource("AudioStreamRandomizer_e0j4a")
+max_polyphony = 20
+bus = &"SFX"
+
+[node name="Moving" type="AudioStreamPlayer" parent="Audio"]
+stream = SubResource("AudioStreamRandomizer_4b5bi")
+max_polyphony = 20
+bus = &"SFX"
+
+[node name="Placing" type="AudioStreamPlayer" parent="Audio"]
+stream = SubResource("AudioStreamRandomizer_1ol4w")
+max_polyphony = 20
+bus = &"SFX"
 
 [connection signal="zone_clicked" from="Zones/Center" to="." method="_on_zone_clicked"]
 [connection signal="zone_info_clear" from="Zones/Center" to="." method="clear_info"]
@@ -407,12 +536,19 @@ texture = ExtResource("9_7k57a")
 [connection signal="zone_clicked" from="Zones/Back5" to="." method="_on_zone_clicked"]
 [connection signal="zone_info_clear" from="Zones/Back5" to="." method="clear_info"]
 [connection signal="zone_info_set" from="Zones/Back5" to="." method="_on_zone_enter"]
+[connection signal="zone_clicked" from="Zones/Back6" to="." method="_on_zone_clicked"]
+[connection signal="zone_info_clear" from="Zones/Back6" to="." method="clear_info"]
+[connection signal="zone_info_set" from="Zones/Back6" to="." method="_on_zone_enter"]
 [connection signal="id_pressed" from="PopupMenu" to="." method="_on_popup_menu_id_pressed"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Deck" to="." method="_on_deck_clicked"]
+[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/Deck" to="." method="_on_fuda_shuffled"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/CheerDeck" to="." method="_on_cheer_deck_clicked"]
+[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/CheerDeck" to="." method="_on_fuda_shuffled"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Archive" to="." method="_on_archive_clicked"]
 [connection signal="mouse_entered" from="SubViewportContainer/SubViewport/Node3D/Archive" to="." method="_on_archive_mouse_entered"]
+[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/Archive" to="." method="_on_fuda_shuffled"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Holopower" to="." method="_on_holopower_clicked"]
+[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/Holopower" to="." method="_on_fuda_shuffled"]
 [connection signal="die_result" from="SubViewportContainer/SubViewport/Node3D/Die" to="." method="_on_die_result"]
 [connection signal="text_submitted" from="CanvasLayer/Prompt/Input/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="CanvasLayer/Prompt/Submit" to="." method="_on_submit_pressed"]

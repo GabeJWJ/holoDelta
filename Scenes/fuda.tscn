@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://hxi6y3mwpmp8"]
+[gd_scene load_steps=10 format=3 uid="uid://hxi6y3mwpmp8"]
 
 [ext_resource type="Script" path="res://Scripts/fuda.gd" id="1_ur466"]
 [ext_resource type="Texture2D" uid="uid://bnf1otkfbvwpe" path="res://fuda_holoBack.png" id="2_e8bpv"]
 [ext_resource type="Texture2D" uid="uid://dk0eucyj0a30u" path="res://looking.png" id="3_j4t88"]
+[ext_resource type="FontFile" uid="uid://cwcpnlqkxpowr" path="res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf" id="3_nja4d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5tbyw"]
 resource_name = "Material.001"
@@ -66,6 +67,9 @@ properties/4/replication_mode = 2
 properties/5/path = NodePath("Looking/Label3D:visible")
 properties/5/spawn = true
 properties/5/replication_mode = 2
+properties/6/path = NodePath(".:remaining")
+properties/6/spawn = true
+properties/6/replication_mode = 2
 
 [node name="Fuda" type="Node3D"]
 script = ExtResource("1_ur466")
@@ -90,6 +94,8 @@ replication_config = SubResource("SceneReplicationConfig_icc00")
 [node name="Count" type="Label3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, -2.18557e-07, 5, 0, -5, -2.18557e-07, 1.43896, 0.98643, -2.24916)
 text = "50"
+font = ExtResource("3_nja4d")
+font_size = 30
 
 [node name="Looking" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.63754, 1.00149, -2.26188)

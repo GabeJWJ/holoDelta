@@ -1,0 +1,126 @@
+2a60927148abd1d33b818b535e306557
+::res://::1727489314
+cardbutton.png::CompressedTexture2D::7832901381268324732::1723242461::1723242463::1::::<><>::
+cardbuttonhover.png::CompressedTexture2D::5492035607315042980::1723242412::1723242414::1::::<><>::
+cardover.png::CompressedTexture2D::3116091972804841707::1726785591::1726785594::1::::<><>::
+checkOff.png::CompressedTexture2D::8558376531900300080::1724883131::1724883145::1::::<><>::
+checkOn.png::CompressedTexture2D::1367988199121574938::1724883141::1724883145::1::::<><>::
+cheerBack.png::CompressedTexture2D::2527621206865264374::1723387747::1723388576::1::::<><>::
+damageCounter.png::CompressedTexture2D::9057003202336632268::1723827382::1723827385::1::::<><>::
+default_bus_layout.tres::AudioBusLayout::6856092409398706901::1727479941::0::1::::<><>::
+dice.glb::PackedScene::4677506281152683595::1724011827::1724011829::1::::<><>::uid://cxve1evmnetka::::res://dice_diceTexture.png
+diceTexture.png::CompressedTexture2D::6433874871537099333::1724011450::1724011717::1::::<><>::
+dice_diceTexture.png::CompressedTexture2D::6430826245605865680::1724011717::1724011718::1::::<><>::
+export_presets.cfg::TextFile::-1::1727488767::0::1::::<><>::
+extraCounter.png::CompressedTexture2D::4260595410226711080::1724532984::1724532991::1::::<><>::
+fuda.glb::PackedScene::8607722904086237889::1723341744::1723341745::1::::<><>::uid://bnf1otkfbvwpe::::res://fuda_holoBack.png
+fuda_holoBack.png::CompressedTexture2D::3310802196305479218::1723341745::1723341745::1::::<><>::
+gear.png::CompressedTexture2D::5309433059728029184::1724881838::1724881842::1::::<><>::
+gearSelected.png::CompressedTexture2D::2999143031529661888::1724882538::1724883145::1::::<><>::
+holoBack.png::CompressedTexture2D::3336795388195450204::1723342929::1723343030::1::::<><>::
+icon.png::CompressedTexture2D::4378256076830001714::1724453456::1724453615::1::::<><>::
+icon.svg::CompressedTexture2D::9129729486023827746::1723238216::1723238221::1::::<><>::
+img_sec4en_02-pc.jpg::CompressedTexture2D::2781286026224442937::1723387464::1723387751::1::::<><>::
+looking.png::CompressedTexture2D::7913038657724651910::1724293903::1724293920::1::::<><>::
+playmat.jpg::CompressedTexture2D::6224395212174312674::1726782273::1726782315::1::::<><>::
+README.md::TextFile::-1::1725720767::0::1::::<><>::
+side.glb::PackedScene::1645230327755001323::1723343028::1723343031::1::::<><>::uid://kbd5hgci0rwo::::res://side_side.jpg
+side.jpg::CompressedTexture2D::5892395606358017040::1723296940::1723296947::1::::<><>::
+side.tres::StyleBoxFlat::585328249506593126::1727449150::0::1::::<><>::
+side_side.jpg::CompressedTexture2D::704188915964671942::1723343030::1723343031::1::::<><>::
+Sou_Desu_Ne.png::CompressedTexture2D::468762290217139957::1724854352::1724854355::1::::<><>::
+Sou_Desu_Ne_JP.png::CompressedTexture2D::861329195955758567::1725489925::1725489931::1::::<><>::
+SPdown.png::CompressedTexture2D::1175491796918451600::1724603644::1724603646::1::::<><>::
+spoilers.png::CompressedTexture2D::7159719625060015514::1724885033::1724885035::1::::<><>::
+SPup.png::CompressedTexture2D::188286639072444569::1724603584::1724603646::1::::<><>::
+template.jpg::CompressedTexture2D::3806027027803328202::1725927529::1726782315::1::::<><>::
+zonebutton.png::CompressedTexture2D::1326116546115179796::1723761290::1723761329::1::::<><>::
+zonebuttonhover.png::CompressedTexture2D::8539714156719191142::1723761326::1723761329::1::::<><>::
+::res://addons/::1727489279
+::res://addons/godot-git-plugin/::1727489279
+git_plugin.gdextension::GDExtension::-1::1724456515::0::1::::<><>::
+plugin.cfg::TextFile::-1::1724456515::0::1::::<><>::
+THIRDPARTY.md::TextFile::-1::1724456515::0::1::::<><>::
+::res://addons/godot-git-plugin/linux/::1727489279
+::res://addons/godot-git-plugin/macos/::1727489279
+::res://addons/godot-git-plugin/win64/::1727489309
+::res://addons/godot-sqlite/::1727489279
+gdsqlite.gdextension::GDExtension::-1::1723418983::0::1::::<><>::
+godot-sqlite.gd::GDScript::-1::1723418983::0::1::::<>EditorPlugin<>::
+LICENSE.md::TextFile::-1::1723418983::0::1::::<><>::
+plugin.cfg::TextFile::-1::1723418983::0::1::::<><>::
+::res://addons/godot-sqlite/bin/::1727489309
+::res://addons/godot-sqlite/bin/libgdsqlite.macos.template_debug.framework/::1727489279
+::res://addons/godot-sqlite/bin/libgdsqlite.macos.template_release.framework/::1727489279
+::res://CheerIcons/::1727489279
+Blue.webp::CompressedTexture2D::2690754033630473423::1726267969::1726267998::1::::<><>::
+Colorless.webp::CompressedTexture2D::7118755510854554357::1726268066::1726268073::1::::<><>::
+Green.webp::CompressedTexture2D::2895741718958969198::1726268035::1726268073::1::::<><>::
+Purple.webp::CompressedTexture2D::1221693495104094229::1726268041::1726268073::1::::<><>::
+Red.webp::CompressedTexture2D::181525255293861004::1726268046::1726268073::1::::<><>::
+White.webp::CompressedTexture2D::7891838757154194484::1726268053::1726268073::1::::<><>::
+Yellow.webp::CompressedTexture2D::7118050530297755839::1726268059::1726268073::1::::<><>::
+::res://CyberAssets/::1727489279
+::res://CyberAssets/DeckBuilder/::1727489279
+61457.png::CompressedTexture2D::3590835965717031109::1727475610::1727475621::1::::<><>::
+Deck_Builder_BG.png::CompressedTexture2D::926239585205452833::1727475598::1727475621::1::::<><>::
+::res://CyberAssets/Game Side Menu/::1727489279
+Card Text Side Menu.svg::CompressedTexture2D::8596218107874937087::1726780755::1726782315::1::::<><>::
+Notification.png::CompressedTexture2D::7487957599071720348::1726778843::1726782317::1::::<><>::
+Notification.svg::CompressedTexture2D::1832499169576926319::1726778945::1726782317::1::::<><>::
+Side Menu.png::CompressedTexture2D::6455161655577702391::1726782954::1726782965::1::::<><>::
+::res://CyberAssets/Main Menu Assets/::1727489279
+HoloDelta BG (Light Mode).svg::CompressedTexture2D::748325811781799636::1725541170::1725756223::1::::<><>::
+TCG2SAB002.ttf::FontFile::6322059256102713437::1725544581::1725732370::1::::<><>::
+text box.png::CompressedTexture2D::3743452613481588030::1725543191::1725732370::1::::<><>::
+Text Box.svg::CompressedTexture2D::3770342858250923561::1725542970::1725732370::1::::<><>::
+text_box_disabled.png::CompressedTexture2D::1976513377688946185::1727480249::1727480254::1::::<><>::
+::res://CyberAssets/Playmat/::1727489279
+playmat.png::CompressedTexture2D::1512394094147572133::1726778019::1726782315::1::::<><>::
+playmat.svg::CompressedTexture2D::7930818776813431939::1726778146::1726782315::1::::<><>::
+::res://Decks/::1727489279
+starter_azki.json::JSON::-1::1724360498::0::1::::<><>::
+starter_sora.json::JSON::-1::1724360498::0::1::::<><>::
+::res://HaruTsunXAssets/::1727489279
+Card Move 1.wav::AudioStreamWAV::5124645109789525301::1727103908::1727145922::1::::<><>::
+Card Shuffle 1.wav::AudioStreamWAV::2653906368651107199::1727103516::1727145922::1::::<><>::
+Card Shuffle 2.wav::AudioStreamWAV::6109830621624774808::1727103602::1727145922::1::::<><>::
+Card Shuffle 3.wav::AudioStreamWAV::335588229941591681::1727103641::1727145922::1::::<><>::
+Card Shuffle 4.wav::AudioStreamWAV::968137036899794951::1727103781::1727145922::1::::<><>::
+Die Roll 1.wav::AudioStreamWAV::5967226264829942863::1727104184::1727145922::1::::<><>::
+Die Roll 2.wav::AudioStreamWAV::5374970069183294785::1727104163::1727145922::1::::<><>::
+Draw Card 1.wav::AudioStreamWAV::4115357949581155325::1727103680::1727145922::1::::<><>::
+Draw Card 2.wav::AudioStreamWAV::8996725501891190556::1727103716::1727145922::1::::<><>::
+Draw Card 3.wav::AudioStreamWAV::7927201459181984767::1727103756::1727145922::1::::<><>::
+Draw Card 4.wav::AudioStreamWAV::5073009308820668715::1727103814::1727145922::1::::<><>::
+Draw Card 5.wav::AudioStreamWAV::4365014465344949503::1727103838::1727145922::1::::<><>::
+Draw Card 6.wav::AudioStreamWAV::9080270077987452658::1727104046::1727145922::1::::<><>::
+Place Card 1.wav::AudioStreamWAV::940921502382283012::1727104101::1727145922::1::::<><>::
+Place Card 2.wav::AudioStreamWAV::3492305499193836740::1727103989::1727145922::1::::<><>::
+Place Card 3.wav::AudioStreamWAV::6401429032622578166::1727104011::1727145922::1::::<><>::
+::res://Scenes/::1727489279
+better_texture_button.tscn::PackedScene::1725111081368755545::1727488548::0::1::::<><>::uid://djuk0g87nhrhc::::res://cardbutton.png<>res://Scripts/better_texture_button.gd<>uid://ckina22q7em5y::::res://cardbuttonhover.png
+board.tscn::PackedScene::6100615550730200088::1727489187::0::1::::<><>::uid://j87r323v31qv::::res://Scenes/side.tscn<>res://Scripts/Multiplayer.gd<>uid://kwq21hbtxatg::::res://CyberAssets/Main Menu Assets/HoloDelta BG (Light Mode).svg<>uid://chrab4uqxsh2s::::res://Scenes/info_panel.tscn<>uid://chv6t7kvxgx0s::::res://gear.png<>uid://biy2phmp4flym::::res://gearSelected.png<>uid://cx76tmf8royup::::res://CyberAssets/Game Side Menu/Side Menu.png<>uid://c2xsywtxro80x::::res://Themes/button.tres<>uid://dt60hgar0dc4g::::res://checkOff.png<>uid://1dw81uea60el::::res://CyberAssets/Game Side Menu/Notification.svg<>uid://tqwtibgdslug::::res://checkOn.png<>uid://cvqdjg5xohy5a::::res://Scenes/deck_list.tscn<>uid://citw8blr274yn::::res://HaruTsunXAssets/Die Roll 2.wav
+card.tscn::PackedScene::2046435235046484262::1727488547::0::1::::<><>::res://Scripts/card.gd<>uid://gxcpgcuj06xt::::res://Sou_Desu_Ne.png<>uid://djuk0g87nhrhc::::res://cardbutton.png<>uid://ckina22q7em5y::::res://cardbuttonhover.png<>uid://d2bjrwsls2wp5::::res://damageCounter.png<>uid://b1x4nb22w47b5::::res://extraCounter.png
+deck_creation.tscn::PackedScene::1607859076631188342::1727488548::0::1::::<><>::res://Scripts/deck_creation.gd<>uid://cx76tmf8royup::::res://CyberAssets/Game Side Menu/Side Menu.png<>uid://chrab4uqxsh2s::::res://Scenes/info_panel.tscn<>uid://c2xsywtxro80x::::res://Themes/button.tres<>uid://cvqdjg5xohy5a::::res://Scenes/deck_list.tscn<>uid://ngxbbonnmuab::::res://CyberAssets/DeckBuilder/Deck_Builder_BG.png
+deck_list.tscn::PackedScene::6280035713521542740::1727488549::0::1::::<><>::res://Scripts/deck_list.gd<>uid://c2xsywtxro80x::::res://Themes/button.tres
+die.tscn::PackedScene::2308843151223697769::1727488548::0::1::::<><>::res://Scripts/die.gd<>uid://b7v23y5f6dbxr::::res://dice.glb
+fuda.tscn::PackedScene::539344993752940583::1727488548::0::1::::<><>::res://Scripts/fuda.gd<>uid://bnf1otkfbvwpe::::res://fuda_holoBack.png<>uid://dk0eucyj0a30u::::res://looking.png<>uid://cwcpnlqkxpowr::::res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf
+info_panel.tscn::PackedScene::5299261035297011396::1727488548::0::1::::<><>::res://Scripts/info_panel.gd<>uid://c2xsywtxro80x::::res://Themes/button.tres<>uid://brfosqsw30a1j::::res://CyberAssets/DeckBuilder/61457.png
+side.tscn::PackedScene::701798874556083469::1727488548::0::1::::<><>::res://Scripts/side.gd<>uid://cuxe458wilybi::::res://playmat.jpg<>uid://md0n47hsxcob::::res://Scenes/zone.tscn<>uid://hxi6y3mwpmp8::::res://Scenes/fuda.tscn<>uid://xo7x52x42xjv::::res://side.glb<>uid://bcans1dkc8eyo::::res://cheerBack.png<>uid://75okrvwhh5cf::::res://Scenes/die.tscn<>uid://ilsjg8vo6p8q::::res://side.tres<>uid://c2xsywtxro80x::::res://Themes/button.tres<>uid://cxhb21jecugn::::res://SPup.png<>uid://byvrlx4gp0oh6::::res://HaruTsunXAssets/Draw Card 1.wav<>uid://d1gc0wj65aaim::::res://HaruTsunXAssets/Draw Card 2.wav<>uid://dk6835owvl36j::::res://HaruTsunXAssets/Draw Card 3.wav<>uid://cejnys2aetdd8::::res://HaruTsunXAssets/Draw Card 4.wav<>uid://b3gpfd8s1j0m2::::res://HaruTsunXAssets/Draw Card 5.wav<>uid://d2msysdonv41s::::res://HaruTsunXAssets/Draw Card 6.wav<>uid://bd2tpkm0etxbj::::res://HaruTsunXAssets/Card Shuffle 1.wav<>uid://ctbwauo6nw5yq::::res://HaruTsunXAssets/Card Shuffle 2.wav<>uid://e1tdbawmq6hx::::res://HaruTsunXAssets/Card Shuffle 3.wav<>uid://n18ctlpyptml::::res://HaruTsunXAssets/Card Shuffle 4.wav<>uid://citw8blr274yn::::res://HaruTsunXAssets/Die Roll 2.wav<>uid://cfaofku10o646::::res://HaruTsunXAssets/Card Move 1.wav<>uid://nn13swso7n21::::res://HaruTsunXAssets/Place Card 1.wav<>uid://bp0x05dxnfc2o::::res://HaruTsunXAssets/Place Card 2.wav<>uid://cxg5uowbntxl3::::res://HaruTsunXAssets/Place Card 3.wav
+zone.tscn::PackedScene::850001970012397469::1727488548::0::1::::<><>::uid://s5m7fkn1lou3::::res://zonebutton.png<>res://Scripts/zone.gd<>uid://dtwx3yh72x8us::::res://zonebuttonhover.png
+::res://Scripts/::1727489279
+better_texture_button.gd::GDScript::-1::1723918097::0::1::::<>Node2D<>::
+card.gd::GDScript::-1::1726972166::0::1::::<>Node2D<>::
+deck_creation.gd::GDScript::-1::1727486152::0::1::::<>Node2D<>::
+deck_list.gd::GDScript::-1::1726712760::0::1::::<>Node2D<>::
+die.gd::GDScript::-1::1724295981::0::1::::<>Node3D<>::
+fuda.gd::GDScript::-1::1726674274::0::1::::<>Node3D<>::
+info_panel.gd::GDScript::-1::1727477396::0::1::::<>Node2D<>::
+Multiplayer.gd::GDScript::-1::1727489177::0::1::::<>Node2D<>::
+settings.gd::GDScript::-1::1727487266::0::1::::<>Node<>::
+side.gd::GDScript::-1::1727475566::0::1::::<>Node2D<>::
+steam.gd::GDScript::-1::1725125947::0::1::::<>Node<>::
+zone.gd::GDScript::-1::1724015557::0::1::::<>Node2D<>::
+::res://Themes/::1727489279
+button.tres::Theme::6716557784813273997::1727480290::0::1::::<><>::uid://cwcpnlqkxpowr::::res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf<>uid://3fo5e4j2doqj::::res://CyberAssets/Main Menu Assets/text_box_disabled.png<>uid://btlmd875gxsio::::res://CyberAssets/Main Menu Assets/text box.png

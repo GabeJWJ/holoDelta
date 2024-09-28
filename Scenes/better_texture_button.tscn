@@ -10,10 +10,12 @@ script = ExtResource("1_pfkje")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 309.0
 offset_bottom = 429.0
+scale = Vector2(0.75, 0.75)
 
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_right = 309.0
 offset_bottom = 429.0
+scale = Vector2(0.75, 0.75)
 mouse_filter = 1
 texture_normal = ExtResource("1_5o57l")
 texture_hover = ExtResource("2_wtcn7")

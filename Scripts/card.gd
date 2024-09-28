@@ -6,6 +6,7 @@ extends Node2D
 @export var rested = false
 @export var faceDown = false
 @export var trulyHidden = false
+@export var onstage = false
 
 var notFound = false
 
@@ -27,6 +28,7 @@ var cardFront
 
 var onTopOf = []
 var attached = []
+@export var attachedTo = -1
 
 #Holomem Variables - Should be null otherwise
 @export var level:int
@@ -51,6 +53,8 @@ var attached = []
 @export var limited:bool
 @export_enum("Staff","Item","Event","Tool","Mascot","Fan") var supportType:String
 
+#Cheer variables
+@export var cheer_color:String
 
 
 # Called when the node enters the scene tree for the first time.
@@ -168,7 +172,12 @@ func setup_info(number,database,art_code):
 					supportType = data2.supportType
 				"日本語":
 					supportType = Settings.to_jp[data2.supportType]
-			
+		"Cheer":
+			var data2 = database.select_rows("cheerCards","cardID LIKE '" + cardNumber + "'", ["*"])
+			if data2.is_empty():
+				cheer_color = "Colorless"
+			else:
+				cheer_color = data2[0].color
 
 func getNamesAsText():
 	match cardType:
@@ -225,6 +234,24 @@ func getColorsAsText():
 	
 	return "idk"
 
+#Shoutout to whamer for the idea to add powers of 2
+func getColorOrder():
+	var colorToPrime = {"White":1,"Green":2,"Red":4,"Blue":8,"Purple":16,"Yellow":32,
+						Settings.to_jp["White"]:1,Settings.to_jp["Green"]:2,Settings.to_jp["Red"]:4,
+						Settings.to_jp["Blue"]:8,Settings.to_jp["Purple"]:16,Settings.to_jp["Yellow"]:32}
+	match cardType:
+		"Oshi":
+			var result = 0
+			for color in oshi_color:
+				result += colorToPrime[color]
+			return result
+		"Holomem":
+			var result = 0
+			for color in holomem_color:
+				result += colorToPrime[color]
+			return result
+	return 0
+
 func getTagsAsText():
 	if cardType == "Holomem":
 		if tags.size() == 0:
@@ -261,7 +288,13 @@ func full_desc():
 							result += "2nd Bloom "
 					if buzz:
 						result += "Buzz "
-					result += "Holomem\nHP: " + str(hp + extra_hp - damage) + "/" + str(hp+extra_hp) +"\nTags: " + getTagsAsText()
+					result += "Holomem\nHP: "
+					if onstage:
+						result += str(hp + extra_hp - damage) + "/"
+					result += str(hp + extra_hp)
+					if extra_hp > 0:
+						result += " (+" + str(extra_hp) + ")"
+					result += "\nTags: " + getTagsAsText()
 				"日本語":
 					result += getColorsAsText() + "の"
 					match level:
@@ -275,7 +308,13 @@ func full_desc():
 							result += "2nd"
 					if buzz:
 						result += " Buzz"
-					result += "ホロメン\nHP: " + str(hp + extra_hp - damage) + "/" + str(hp+extra_hp) +"\nタグ: " + getTagsAsText()
+					result += "ホロメン\nHP: "
+					if onstage:
+						result += str(hp + extra_hp - damage) + "/"
+					result += str(hp + extra_hp)
+					if extra_hp > 0:
+						result += " (+" + str(extra_hp) + ")"
+					result += "\nタグ: " + getTagsAsText()
 		"Support":
 			match Settings.settings.Language:
 				"English":
@@ -325,6 +364,9 @@ func has_name(name_check):
 		"Holomem":
 			return name_check in holomem_name
 	return false
+
+func has_tag(tag_check):
+	return tag_check in tags
 
 
 func update_amount(new_amount):
@@ -376,8 +418,22 @@ func clear_extra_hp():
 	update_damage()
 
 func update_attached():
-	for i in range(attached.size()):
-		attached[i].position = position + Vector2(50+(20*i),0)
+	var cheer_i = 0
+	var support_i = 0
+	for attached_card in attached:
+		attached_card.attachedTo = cardID
+		if attached_card.cardType == "Cheer":
+			if rested:
+				attached_card.position = position - Vector2(50, -10 - 35*(cheer_i+1))
+			else:
+				attached_card.position = position + Vector2(0, 35*(cheer_i+1))
+			cheer_i += 1
+		else:
+			if rested:
+				attached_card.position = position - Vector2(50-(20*support_i), 50)
+			else:
+				attached_card.position = position + Vector2(50+(20*support_i),0)
+			support_i += 1
 
 
 func move_to(new_position):
@@ -406,8 +462,7 @@ func rest():
 		for card in onTopOf:
 			card.rest()
 		
-		for card in attached:
-			card.rest()
+		update_attached()
 		
 func unrest():
 	if !rested:
@@ -423,8 +478,7 @@ func unrest():
 		for card in onTopOf:
 			card.unrest()
 		
-		for card in attached:
-			card.unrest()
+		update_attached()
 
 func has_name_in_common(other_card):
 	for potentialName in holomem_name:
@@ -433,7 +487,7 @@ func has_name_in_common(other_card):
 	return false
 
 func can_bloom(other_card):
-	if cardType == "Holomem" and level > -1 and other_card.cardType == "Holomem" and other_card.level >=0 and has_name_in_common(other_card) and other_card.damage < hp:
+	if cardType == "Holomem" and level > 0 and other_card.cardType == "Holomem" and other_card.level >=0 and has_name_in_common(other_card) and other_card.damage < hp:
 		if other_card.level <= level:
 			var difference = level - other_card.level
 			if difference <= 1:
@@ -473,6 +527,7 @@ func bloom(other_card):
 	playOnTopOf(other_card)
 	update_damage()
 	bloomed_this_turn = true
+	onstage = true
 
 func unbloom():
 	if onTopOf.size() == 0:
@@ -488,15 +543,15 @@ func unbloom():
 		newCard.damage = damage
 		newCard.extra_hp = extra_hp
 		newCard.update_damage()
+		newCard.onstage = true
 		status = []
 		clear_damage()
 		clear_extra_hp()
 		unrest()
+		onstage = false
 
 func attach(other_card):
 	other_card.unrest()
-	if rested:
-		other_card.rest()
 	attached.append(other_card)
 	if attached.size() > 1:
 		emit_signal("move_behind_request",other_card.cardID, attached[-2].cardID)

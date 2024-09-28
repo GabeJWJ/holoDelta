@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dk6835owvl36j"
+path="res://.godot/imported/Draw Card 3.wav-5794b7679f6560b198f370eddbdc8feb.sample"
+
+[deps]
+
+source_file="res://HaruTsunXAssets/Draw Card 3.wav"
+dest_files=["res://.godot/imported/Draw Card 3.wav-5794b7679f6560b198f370eddbdc8feb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

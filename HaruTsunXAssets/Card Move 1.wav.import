@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cfaofku10o646"
+path="res://.godot/imported/Card Move 1.wav-ee8b10e43314df1e96dd9c11a652a3bc.sample"
+
+[deps]
+
+source_file="res://HaruTsunXAssets/Card Move 1.wav"
+dest_files=["res://.godot/imported/Card Move 1.wav-ee8b10e43314df1e96dd9c11a652a3bc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxg5uowbntxl3"
+path="res://.godot/imported/Place Card 3.wav-f5375af9bde378564f0100ec2b0d1a83.sample"
+
+[deps]
+
+source_file="res://HaruTsunXAssets/Place Card 3.wav"
+dest_files=["res://.godot/imported/Place Card 3.wav-f5375af9bde378564f0100ec2b0d1a83.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -4,8 +4,11 @@ var settings
 @onready var json = JSON.new()
 var languages = ["English","日本語"]
 enum bloomCode {OK,Instant,Skip,No}
+var version = "1.1.0"
 
 var to_jp = {}
+
+@onready var sfx_bus_index = AudioServer.get_bus_index("SFX")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,6 +16,9 @@ func _ready():
 		settings = json.data
 	else:
 		settings = {"AllowUnrevealed":false,"Language":"English"}
+	
+	if !settings.has("SFXVolume"):
+		settings["SFXVolume"] = 0
 	
 	var database = SQLite.new()
 	database.read_only = true
@@ -50,7 +56,9 @@ func update_settings(key, value):
 	file_access.close()
 	locale()
 
-func en_or_jp(en_text,jp_text):
+func en_or_jp(en_text,jp_text=""):
+	if jp_text == "":
+		jp_text = to_jp[en_text]
 	match settings.Language:
 		"English":
 			return en_text

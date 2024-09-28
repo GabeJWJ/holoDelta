@@ -3,8 +3,10 @@ extends Node3D
 signal fuda_clicked
 signal mouse_entered
 signal mouse_exited
+signal shuffled
 
 @export var cardList = []
+@export var remaining = 0
 @export var archive := false
 @onready var count = $Count
 @onready var looking = $Looking
@@ -22,6 +24,7 @@ func _ready():
 		else:
 			database.path = OS.get_executable_path().get_base_dir() + "/cardData.db"
 		database.open_db()
+	get_tree().get_root().size_changed.connect(update_text)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -36,7 +39,11 @@ func update_size():
 			archive_texture_sanity.rpc(cardList[0].cardNumber, cardList[0].artNum)
 		visible = true
 		scale.y = 0.02 * cardList.size()
-		count.text = str(cardList.size())
+		remaining = cardList.size()
+		update_text()
+
+func update_text():
+	count.text = str(remaining)
 
 func shuffle():
 	cardList.shuffle()
@@ -44,6 +51,7 @@ func shuffle():
 	tween.tween_property(self,"scale",scale*0.7,0.2)
 	tween.tween_property(self,"scale",scale,0.2)
 	update_size()
+	emit_signal("shuffled")
 
 @rpc("any_peer", "call_local", "reliable")
 func archive_texture_sanity(cardNum, artNum):
@@ -67,9 +75,8 @@ func archive_texture_sanity(cardNum, artNum):
 
 func _on_static_body_3d_input_event(_camera, event, _position, _normal, _shape_idx):
 	var mouse_click = event as InputEventMouseButton
-	if mouse_click and mouse_click.button_index == 1 and mouse_click.pressed:
+	if mouse_click and mouse_click.button_index == 1 and mouse_click.is_released():
 		emit_signal("fuda_clicked")
-		
 
 func _update_looking(value:bool,look_count=-1):
 	looking.visible = value

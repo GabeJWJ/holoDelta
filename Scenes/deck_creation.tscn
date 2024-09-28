@@ -1,207 +1,540 @@
-[gd_scene load_steps=3 format=3 uid="uid://w54g66g0fow1"]
+[gd_scene load_steps=7 format=3 uid="uid://w54g66g0fow1"]
 
-[ext_resource type="Texture2D" uid="uid://djuk0g87nhrhc" path="res://cardbutton.png" id="1_nx5dq"]
 [ext_resource type="Script" path="res://Scripts/deck_creation.gd" id="1_vhmc0"]
+[ext_resource type="Texture2D" uid="uid://cx76tmf8royup" path="res://CyberAssets/Game Side Menu/Side Menu.png" id="2_dcm3l"]
+[ext_resource type="PackedScene" uid="uid://chrab4uqxsh2s" path="res://Scenes/info_panel.tscn" id="2_xdide"]
+[ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="3_da1xd"]
+[ext_resource type="PackedScene" uid="uid://cvqdjg5xohy5a" path="res://Scenes/deck_list.tscn" id="4_lmglq"]
+[ext_resource type="Texture2D" uid="uid://ngxbbonnmuab" path="res://CyberAssets/DeckBuilder/Deck_Builder_BG.png" id="6_t38qv"]
 
 [node name="DeckCreation" type="Node2D"]
 script = ExtResource("1_vhmc0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Info" type="ColorRect" parent="CanvasLayer"]
-offset_right = 329.0
-offset_bottom = 1079.0
-size_flags_vertical = 3
-color = Color(0, 0, 0, 0.623529)
+[node name="SideMenu" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(-84, 0)
+scale = Vector2(1.01172, 0.997)
+texture = ExtResource("2_dcm3l")
+centered = false
 
-[node name="Preview" type="TextureRect" parent="CanvasLayer/Info"]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 309.0
-offset_bottom = 429.0
-texture = ExtResource("1_nx5dq")
-
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Info"]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 10.0
-offset_top = 449.0
-offset_right = 312.0
-offset_bottom = 1064.0
-
-[node name="CardText" type="Label" parent="CanvasLayer/Info/ScrollContainer"]
-custom_minimum_size = Vector2(302, 615)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-autowrap_mode = 1
+[node name="InfoPanel" parent="CanvasLayer" instance=ExtResource("2_xdide")]
+allowed_to_scroll = false
 
 [node name="PossibleCards" type="TabContainer" parent="CanvasLayer"]
-offset_left = 1305.0
-offset_top = 9.0
-offset_right = 1916.0
-offset_bottom = 1080.0
-theme_override_font_sizes/font_size = 40
+offset_left = 886.0
+offset_top = 2.0
+offset_right = 1278.0
+offset_bottom = 718.0
+theme = ExtResource("3_da1xd")
 
-[node name="Oshi" type="ScrollContainer" parent="CanvasLayer/PossibleCards"]
+[node name="Oshi" type="Control" parent="CanvasLayer/PossibleCards"]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PossibleCards/Oshi"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/Oshi"]
+layout_mode = 2
+offset_top = 84.0
+offset_right = 392.0
+offset_bottom = 689.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PossibleCards/Oshi/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(1, 1, 1, 0)
 
-[node name="Main Deck" type="ScrollContainer" parent="CanvasLayer/PossibleCards"]
+[node name="NameSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Oshi"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 54.0
+offset_right = 160.0
+offset_bottom = 67.0
+text = "Name"
+flat = false
+
+[node name="ColorSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Oshi"]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 54.0
+offset_right = 256.0
+offset_bottom = 67.0
+text = "Color"
+flat = false
+
+[node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/Oshi"]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 54.0
+offset_right = 370.0
+offset_bottom = 67.0
+text = "Clear Filters"
+
+[node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/Oshi"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 378.0
+offset_bottom = 40.0
+placeholder_text = "Search"
+
+[node name="Holomem" type="Control" parent="CanvasLayer/PossibleCards"]
 visible = false
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PossibleCards/Main Deck"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/Holomem"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 117.0
+offset_right = -2.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PossibleCards/Holomem/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(1, 1, 1, 0)
 
-[node name="Cheer" type="ScrollContainer" parent="CanvasLayer/PossibleCards"]
+[node name="NameSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Holomem"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 54.0
+offset_right = 177.0
+offset_bottom = 67.0
+text = "Name"
+flat = false
+
+[node name="ColorSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Holomem"]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 54.0
+offset_right = 368.0
+offset_bottom = 67.0
+text = "Color"
+flat = false
+
+[node name="LevelSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Holomem"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 89.0
+offset_right = 101.0
+offset_bottom = 102.0
+text = "Level"
+flat = false
+item_count = 5
+popup/item_0/text = "Any Level"
+popup/item_0/id = 0
+popup/item_1/text = "Debut"
+popup/item_1/id = 1
+popup/item_2/text = "1st"
+popup/item_2/id = 2
+popup/item_3/text = "2nd"
+popup/item_3/id = 3
+popup/item_4/text = "SPOT"
+popup/item_4/id = 4
+
+[node name="TagSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Holomem"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 90.0
+offset_right = 254.0
+offset_bottom = 103.0
+text = "Tags"
+flat = false
+
+[node name="BuzzSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/Holomem"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.02
+anchor_bottom = 0.012
+offset_left = 123.0
+offset_top = 87.0
+offset_right = 170.16
+offset_bottom = 94.732
+text = "Buzz"
+
+[node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/Holomem"]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 90.0
+offset_right = 369.0
+offset_bottom = 103.0
+text = "Clear Filters"
+
+[node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/Holomem"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 378.0
+offset_bottom = 40.0
+placeholder_text = "Search"
+
+[node name="Support" type="Control" parent="CanvasLayer/PossibleCards"]
 visible = false
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PossibleCards/Cheer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/Support"]
+layout_mode = 2
+offset_top = 86.0
+offset_right = 392.0
+offset_bottom = 689.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PossibleCards/Support/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(1, 1, 1, 0)
 
-[node name="YourDeck" type="ColorRect" parent="CanvasLayer"]
-offset_left = 346.0
-offset_top = 17.0
-offset_right = 1285.0
-offset_bottom = 908.0
-color = Color(0, 0, 0, 0.623529)
+[node name="TypeSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Support"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 53.0
+offset_right = 153.0
+offset_bottom = 66.0
+text = "Type"
+flat = false
 
-[node name="MainDeck" type="ScrollContainer" parent="CanvasLayer/YourDeck"]
+[node name="LimitedSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/Support"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.02
+anchor_bottom = 0.012
+offset_left = 178.0
+offset_top = 51.0
+offset_right = 245.16
+offset_bottom = 58.732
+text = "Limited"
+
+[node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/Support"]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 53.0
+offset_right = 370.0
+offset_bottom = 66.0
+text = "Clear Filters"
+
+[node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/Support"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 378.0
+offset_bottom = 40.0
+placeholder_text = "Search"
+
+[node name="Cheer" type="Control" parent="CanvasLayer/PossibleCards"]
+visible = false
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/Cheer"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 47.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PossibleCards/Cheer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0)
+
+[node name="Multiple" type="Label" parent="CanvasLayer/PossibleCards/Cheer"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 61.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "1x"
+
+[node name="OneMultiple" type="Button" parent="CanvasLayer/PossibleCards/Cheer"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 14.0
+offset_right = 138.0
+offset_bottom = 27.0
+text = "1"
+
+[node name="FiveMultiple" type="Button" parent="CanvasLayer/PossibleCards/Cheer"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 14.0
+offset_right = 210.0
+offset_bottom = 27.0
+text = "5
+"
+
+[node name="TenMultiple" type="Button" parent="CanvasLayer/PossibleCards/Cheer"]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 14.0
+offset_right = 285.0
+offset_bottom = 27.0
+text = "10"
+
+[node name="TwentyMultiple" type="Button" parent="CanvasLayer/PossibleCards/Cheer"]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 14.0
+offset_right = 359.0
+offset_bottom = 27.0
+text = "20"
+
+[node name="YourStuff" type="TabContainer" parent="CanvasLayer"]
+offset_left = 303.0
+offset_top = 2.0
+offset_right = 884.0
+offset_bottom = 626.0
+theme = ExtResource("3_da1xd")
+
+[node name="Deck" type="ColorRect" parent="CanvasLayer/YourStuff"]
+layout_mode = 2
+theme = ExtResource("3_da1xd")
+color = Color(0.113725, 0.164706, 0.223529, 0)
+
+[node name="MainDeck" type="ScrollContainer" parent="CanvasLayer/YourStuff/Deck"]
 layout_mode = 0
 offset_left = 7.0
-offset_top = 8.0
-offset_right = 927.0
-offset_bottom = 569.0
+offset_top = 6.0
+offset_right = 573.0
+offset_bottom = 412.0
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/YourDeck/MainDeck"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/YourStuff/Deck/MainDeck"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0.277528, 0.277528, 0.277528, 1)
+color = Color(0.180392, 0.32549, 0.45098, 1)
 
-[node name="CheerDeck" type="ScrollContainer" parent="CanvasLayer/YourDeck"]
+[node name="CheerDeck" type="ScrollContainer" parent="CanvasLayer/YourStuff/Deck"]
 layout_mode = 0
-offset_left = 229.0
-offset_top = 580.0
-offset_right = 928.0
-offset_bottom = 881.0
+offset_left = 131.0
+offset_top = 422.0
+offset_right = 573.0
+offset_bottom = 583.0
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/YourDeck/CheerDeck"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/YourStuff/Deck/CheerDeck"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0.277528, 0.277528, 0.277528, 1)
+color = Color(0.180392, 0.32549, 0.45098, 1)
 
-[node name="MainCount" type="Label" parent="CanvasLayer/YourDeck"]
+[node name="MainCount" type="Label" parent="CanvasLayer/YourStuff/Deck"]
+z_index = 1
 layout_mode = 0
-offset_left = -6.0
-offset_top = -16.0
-offset_right = 57.0
-offset_bottom = 26.0
+offset_left = 13.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 19.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 15
 text = "0/50"
 
-[node name="CheerCount" type="Label" parent="CanvasLayer/YourDeck"]
+[node name="CheerCount" type="Label" parent="CanvasLayer/YourStuff/Deck"]
+z_index = 1
 layout_mode = 0
-offset_left = 212.0
-offset_top = 561.0
-offset_right = 275.0
-offset_bottom = 603.0
+offset_left = 143.0
+offset_top = 416.0
+offset_right = 193.0
+offset_bottom = 434.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 15
 text = "0/20"
 
+[node name="Analytics" type="ColorRect" parent="CanvasLayer/YourStuff"]
+visible = false
+layout_mode = 2
+theme = ExtResource("3_da1xd")
+color = Color(0, 0, 0, 0)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/YourStuff/Analytics"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 575.0
+offset_bottom = 582.0
+
+[node name="Stats" type="Label" parent="CanvasLayer/YourStuff/Analytics/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
 [node name="LoadDeck" type="Button" parent="CanvasLayer"]
-offset_left = 357.0
-offset_top = 920.0
-offset_right = 645.0
-offset_bottom = 983.0
-theme_override_font_sizes/font_size = 40
-text = "Load From File"
+offset_left = 313.0
+offset_top = 639.0
+offset_right = 469.0
+offset_bottom = 664.0
+theme = ExtResource("3_da1xd")
+theme_override_font_sizes/font_size = 20
+text = "Load"
 
 [node name="SaveDeck" type="Button" parent="CanvasLayer"]
-offset_left = 1043.0
-offset_top = 920.0
-offset_right = 1279.0
-offset_bottom = 983.0
-theme_override_font_sizes/font_size = 40
-text = "Save To File"
+offset_left = 798.0
+offset_top = 640.0
+offset_right = 874.0
+offset_bottom = 661.0
+theme = ExtResource("3_da1xd")
+theme_override_font_sizes/font_size = 20
+text = "Save"
 
 [node name="DeckName" type="LineEdit" parent="CanvasLayer"]
-offset_left = 704.0
-offset_top = 920.0
-offset_right = 1038.0
-offset_bottom = 983.0
-theme_override_font_sizes/font_size = 25
+offset_left = 507.0
+offset_top = 631.0
+offset_right = 775.0
+offset_bottom = 671.0
+theme = ExtResource("3_da1xd")
+theme_override_font_sizes/font_size = 15
 placeholder_text = "Custom Deck"
 
-[node name="LoadDialog" type="FileDialog" parent="CanvasLayer"]
-title = "Open a File"
-position = Vector2i(300, 300)
-size = Vector2i(392, 159)
-ok_button_text = "Open"
-file_mode = 0
-access = 2
-filters = PackedStringArray("*.json")
-show_hidden_files = true
-use_native_dialog = true
-
-[node name="SaveDialog" type="FileDialog" parent="CanvasLayer"]
-position = Vector2i(300, 300)
-size = Vector2i(392, 159)
-access = 2
-filters = PackedStringArray("*.json")
-show_hidden_files = true
-use_native_dialog = true
+[node name="DeckList" parent="CanvasLayer" instance=ExtResource("4_lmglq")]
+visible = false
+z_index = 4
 
 [node name="MainMenu" type="Button" parent="CanvasLayer"]
-offset_left = 540.0
-offset_top = 1010.0
-offset_right = 856.0
-offset_bottom = 1060.0
-theme_override_font_sizes/font_size = 30
-text = "Return to Main Menu"
+offset_left = 404.0
+offset_top = 686.0
+offset_right = 469.0
+offset_bottom = 701.0
+theme = ExtResource("3_da1xd")
+theme_override_font_sizes/font_size = 10
+text = "Main Menu"
 
 [node name="Clear" type="Button" parent="CanvasLayer"]
-offset_left = 357.0
-offset_top = 1010.0
-offset_right = 518.0
-offset_bottom = 1060.0
-theme_override_font_sizes/font_size = 30
+offset_left = 314.0
+offset_top = 686.0
+offset_right = 380.0
+offset_bottom = 701.0
+theme = ExtResource("3_da1xd")
+theme_override_font_sizes/font_size = 10
 text = "Clear Deck"
 
 [node name="Problems" type="ScrollContainer" parent="CanvasLayer"]
-offset_left = 875.0
-offset_top = 995.0
-offset_right = 1283.0
-offset_bottom = 1067.0
+offset_left = 503.0
+offset_top = 673.0
+offset_right = 882.0
+offset_bottom = 715.0
+theme = ExtResource("3_da1xd")
 
 [node name="ProblemList" type="Label" parent="CanvasLayer/Problems"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
+[node name="SavePrompt" type="ColorRect" parent="CanvasLayer"]
+visible = false
+z_index = 3
+offset_left = 470.0
+offset_top = 63.0
+offset_right = 907.0
+offset_bottom = 681.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/SavePrompt"]
+layout_mode = 0
+offset_right = 437.0
+offset_bottom = 520.0
+theme = ExtResource("3_da1xd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SavePrompt/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="FileName" type="LineEdit" parent="CanvasLayer/SavePrompt"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 571.0
+offset_right = 300.0
+offset_bottom = 608.0
+theme = ExtResource("3_da1xd")
+theme_override_font_sizes/font_size = 20
+placeholder_text = "custom_deck"
+
+[node name="Save" type="Button" parent="CanvasLayer/SavePrompt/FileName"]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 5.0
+offset_right = 387.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 20
+text = "Save"
+
+[node name="Cancel" type="Button" parent="CanvasLayer/SavePrompt"]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 576.0
+offset_right = 535.0
+offset_bottom = 597.0
+theme = ExtResource("3_da1xd")
+theme_override_font_sizes/font_size = 20
+text = "Cancel"
+
+[node name="OverwriteConfirm" type="ColorRect" parent="CanvasLayer/SavePrompt"]
+visible = false
+layout_mode = 0
+offset_left = -361.0
+offset_top = 21.0
+offset_right = 687.0
+offset_bottom = 514.0
+theme = ExtResource("3_da1xd")
+color = Color(0.113725, 0.164706, 0.223529, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/SavePrompt/OverwriteConfirm"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 18.0
+offset_right = 1039.0
+offset_bottom = 171.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Overwrite ?"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="Yes" type="Button" parent="CanvasLayer/SavePrompt/OverwriteConfirm"]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 353.0
+offset_right = 363.0
+offset_bottom = 394.0
+theme_override_font_sizes/font_size = 40
+text = "Yes"
+
+[node name="No" type="Button" parent="CanvasLayer/SavePrompt/OverwriteConfirm"]
+layout_mode = 0
+offset_left = 667.0
+offset_top = 355.0
+offset_right = 802.0
+offset_bottom = 396.0
+theme_override_font_sizes/font_size = 40
+text = "No"
+
+[node name="DeckBuilderBg" type="Sprite2D" parent="."]
+position = Vector2(587, 347)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("6_t38qv")
+
+[connection signal="pressed" from="CanvasLayer/PossibleCards/Oshi/ClearFilters" to="." method="_on_oshi_clear_filters_pressed"]
+[connection signal="text_changed" from="CanvasLayer/PossibleCards/Oshi/Search" to="." method="_on_oshi_search"]
+[connection signal="toggled" from="CanvasLayer/PossibleCards/Holomem/BuzzSelect" to="." method="_on_holomem_buzz_select"]
+[connection signal="pressed" from="CanvasLayer/PossibleCards/Holomem/ClearFilters" to="." method="_on_holomem_clear_filters_pressed"]
+[connection signal="text_changed" from="CanvasLayer/PossibleCards/Holomem/Search" to="." method="_on_holomem_search"]
+[connection signal="toggled" from="CanvasLayer/PossibleCards/Support/LimitedSelect" to="." method="_on_support_limited_select"]
+[connection signal="pressed" from="CanvasLayer/PossibleCards/Support/ClearFilters" to="." method="_on_support_clear_filters_pressed"]
+[connection signal="text_changed" from="CanvasLayer/PossibleCards/Support/Search" to="." method="_on_support_search"]
+[connection signal="pressed" from="CanvasLayer/PossibleCards/Cheer/OneMultiple" to="." method="_on_cheer_multiple_set" binds= [1]]
+[connection signal="pressed" from="CanvasLayer/PossibleCards/Cheer/FiveMultiple" to="." method="_on_cheer_multiple_set" binds= [5]]
+[connection signal="pressed" from="CanvasLayer/PossibleCards/Cheer/TenMultiple" to="." method="_on_cheer_multiple_set" binds= [10]]
+[connection signal="pressed" from="CanvasLayer/PossibleCards/Cheer/TwentyMultiple" to="." method="_on_cheer_multiple_set" binds= [20]]
 [connection signal="pressed" from="CanvasLayer/LoadDeck" to="." method="_on_load_deck_pressed"]
 [connection signal="pressed" from="CanvasLayer/SaveDeck" to="." method="_on_save_deck_pressed"]
-[connection signal="file_selected" from="CanvasLayer/LoadDialog" to="." method="_on_load_dialog_file_selected"]
-[connection signal="file_selected" from="CanvasLayer/SaveDialog" to="." method="_on_save_dialog_file_selected"]
+[connection signal="cancel" from="CanvasLayer/DeckList" to="." method="_hide_deck_list"]
+[connection signal="selected" from="CanvasLayer/DeckList" to="." method="load_from_deck_info"]
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/Clear" to="." method="_on_clear_pressed"]
+[connection signal="text_submitted" from="CanvasLayer/SavePrompt/FileName" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="CanvasLayer/SavePrompt/FileName/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="CanvasLayer/SavePrompt/Cancel" to="." method="_hide_save_prompt"]
+[connection signal="pressed" from="CanvasLayer/SavePrompt/OverwriteConfirm/Yes" to="." method="_on_save_pressed" binds= [true]]
+[connection signal="pressed" from="CanvasLayer/SavePrompt/OverwriteConfirm/No" to="." method="_hide_save_prompt"]

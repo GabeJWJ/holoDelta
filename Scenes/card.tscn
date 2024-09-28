@@ -44,9 +44,15 @@ properties/10/replication_mode = 2
 properties/11/path = NodePath(".:extra_hp")
 properties/11/spawn = true
 properties/11/replication_mode = 2
+properties/12/path = NodePath(".:onstage")
+properties/12/spawn = true
+properties/12/replication_mode = 2
+properties/13/path = NodePath(".:attachedTo")
+properties/13/spawn = true
+properties/13/replication_mode = 2
 
 [node name="Card" type="Node2D"]
-scale = Vector2(0.75, 0.75)
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_wdbwf")
 
 [node name="Front" type="Sprite2D" parent="."]

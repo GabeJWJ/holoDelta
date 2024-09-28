@@ -1,13 +1,28 @@
-[gd_scene load_steps=9 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=16 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
-[ext_resource type="Script" path="res://Scripts/MapCamera2D.gd" id="2_pceco"]
 [ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
-[ext_resource type="Texture2D" uid="uid://djuk0g87nhrhc" path="res://cardbutton.png" id="4_ipp72"]
+[ext_resource type="Texture2D" uid="uid://kwq21hbtxatg" path="res://CyberAssets/Main Menu Assets/HoloDelta BG (Light Mode).svg" id="3_t0eaa"]
+[ext_resource type="PackedScene" uid="uid://chrab4uqxsh2s" path="res://Scenes/info_panel.tscn" id="4_7im2k"]
 [ext_resource type="Texture2D" uid="uid://chv6t7kvxgx0s" path="res://gear.png" id="4_n5n8m"]
 [ext_resource type="Texture2D" uid="uid://biy2phmp4flym" path="res://gearSelected.png" id="5_13mvd"]
+[ext_resource type="Texture2D" uid="uid://cx76tmf8royup" path="res://CyberAssets/Game Side Menu/Side Menu.png" id="5_ct7jt"]
+[ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="5_fdkx6"]
 [ext_resource type="Texture2D" uid="uid://dt60hgar0dc4g" path="res://checkOff.png" id="6_1x0cl"]
+[ext_resource type="Texture2D" uid="uid://1dw81uea60el" path="res://CyberAssets/Game Side Menu/Notification.svg" id="7_kmt2w"]
 [ext_resource type="Texture2D" uid="uid://tqwtibgdslug" path="res://checkOn.png" id="7_n8awk"]
+[ext_resource type="PackedScene" uid="uid://cvqdjg5xohy5a" path="res://Scenes/deck_list.tscn" id="10_058xr"]
+[ext_resource type="AudioStream" uid="uid://citw8blr274yn" path="res://HaruTsunXAssets/Die Roll 2.wav" id="12_lpjdh"]
+
+[sub_resource type="Gradient" id="Gradient_8vfua"]
+colors = PackedColorArray(0.691703, 0.82893, 0.968311, 1, 0.989179, 0.909736, 0.929764, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xoxh0"]
+gradient = SubResource("Gradient_8vfua")
+width = 1280
+height = 720
+fill_from = Vector2(0.111111, 0.87478)
+fill_to = Vector2(0.934524, 0.282187)
 
 [node name="Board" type="Node2D"]
 position = Vector2(1020, 1566)
@@ -21,75 +36,130 @@ spawn_limit = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Info" type="ColorRect" parent="CanvasLayer"]
+[node name="gradient" type="Sprite2D" parent="CanvasLayer"]
+texture = SubResource("GradientTexture2D_xoxh0")
+centered = false
+
+[node name="bg" type="Sprite2D" parent="CanvasLayer/gradient"]
+scale = Vector2(0.667, 0.667)
+texture = ExtResource("3_t0eaa")
+centered = false
+
+[node name="Sidebar" type="ColorRect" parent="CanvasLayer"]
 visible = false
-offset_right = 329.0
-offset_bottom = 1079.0
-size_flags_vertical = 3
-color = Color(0, 0, 0, 0.623529)
+offset_right = 370.0
+offset_bottom = 720.0
+theme = ExtResource("5_fdkx6")
+color = Color(0, 0, 0, 0.843137)
 
-[node name="Preview" type="TextureRect" parent="CanvasLayer/Info"]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 309.0
-offset_bottom = 429.0
-texture = ExtResource("4_ipp72")
+[node name="CardTextSideMenu" type="Sprite2D" parent="CanvasLayer/Sidebar"]
+position = Vector2(-10, 0)
+scale = Vector2(1.01172, 0.997)
+texture = ExtResource("5_ct7jt")
+centered = false
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Info"]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 10.0
-offset_top = 449.0
-offset_right = 312.0
-offset_bottom = 1064.0
+[node name="InfoPanel" parent="CanvasLayer/Sidebar" instance=ExtResource("4_7im2k")]
+position = Vector2(75, 0)
 
-[node name="CardText" type="Label" parent="CanvasLayer/Info/ScrollContainer"]
-custom_minimum_size = Vector2(302, 615)
+[node name="ChatWindow" type="Node2D" parent="CanvasLayer/Sidebar"]
+visible = false
+position = Vector2(70, 0)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Sidebar/ChatWindow"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 293.0
+offset_bottom = 675.0
+theme = ExtResource("5_fdkx6")
+horizontal_scroll_mode = 0
+
+[node name="Chat" type="Label" parent="CanvasLayer/Sidebar/ChatWindow/ScrollContainer"]
+custom_minimum_size = Vector2(280, 670)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-autowrap_mode = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+autowrap_mode = 3
+
+[node name="ToSend" type="LineEdit" parent="CanvasLayer/Sidebar/ChatWindow"]
+offset_left = 10.0
+offset_top = 680.0
+offset_right = 227.0
+offset_bottom = 715.0
+theme = ExtResource("5_fdkx6")
+
+[node name="Send" type="Button" parent="CanvasLayer/Sidebar/ChatWindow/ToSend"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 9.0
+offset_right = 272.0
+offset_bottom = 24.0
+text = "Send"
+
+[node name="Tabs" type="Node2D" parent="CanvasLayer/Sidebar"]
+
+[node name="CardInfo" type="Button" parent="CanvasLayer/Sidebar/Tabs"]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 55.0
+offset_bottom = 28.0
+theme = ExtResource("5_fdkx6")
+toggle_mode = true
+button_pressed = true
+text = "Card"
+
+[node name="Chat" type="Button" parent="CanvasLayer/Sidebar/Tabs"]
+visible = false
+offset_left = 15.0
+offset_top = 45.0
+offset_right = 55.0
+offset_bottom = 58.0
+theme = ExtResource("5_fdkx6")
+toggle_mode = true
+text = "Chat"
+
+[node name="Notification" type="Sprite2D" parent="CanvasLayer/Sidebar/Tabs/Chat"]
+visible = false
+position = Vector2(44, -5.00006)
+scale = Vector2(0.004, 0.004)
+texture = ExtResource("7_kmt2w")
 
 [node name="Host" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 960.0
-offset_top = 336.0
-offset_right = 1069.0
-offset_bottom = 390.0
+offset_left = 591.0
+offset_top = 306.0
+offset_right = 671.0
+offset_bottom = 336.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
 text = "Host"
 
 [node name="Join" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 960.0
-offset_top = 396.0
-offset_right = 1069.0
-offset_bottom = 450.0
+offset_left = 591.0
+offset_top = 374.0
+offset_right = 671.0
+offset_bottom = 404.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
 text = "Join"
-
-[node name="MenuButton" type="MenuButton" parent="CanvasLayer"]
-offset_left = 39.0
-offset_top = 352.0
-offset_right = 477.0
-offset_bottom = 429.0
-theme_override_font_sizes/font_size = 50
-text = "Choose Deck"
-flat = false
 
 [node name="IPPrompt" type="ColorRect" parent="CanvasLayer"]
 visible = false
-offset_left = 763.0
-offset_top = 334.0
-offset_right = 1054.0
-offset_bottom = 446.0
-color = Color(0.0885599, 0.0885599, 0.0885599, 0.768627)
+offset_left = 470.0
+offset_top = 298.0
+offset_right = 816.0
+offset_bottom = 410.0
+theme = ExtResource("5_fdkx6")
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [node name="LineEdit" type="LineEdit" parent="CanvasLayer/IPPrompt"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 55.0
-offset_right = 278.0
+offset_right = 329.0
 offset_bottom = 94.0
 theme_override_font_sizes/font_size = 30
 placeholder_text = "localhost"
@@ -99,167 +169,153 @@ layout_mode = 0
 offset_left = 11.0
 offset_right = 279.0
 offset_bottom = 46.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 text = "Enter IP Address"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Steam Connect" type="Button" parent="CanvasLayer"]
-offset_left = 850.0
-offset_top = 386.0
-offset_right = 1149.0
-offset_bottom = 438.0
-theme_override_font_sizes/font_size = 30
+offset_left = 498.0
+offset_top = 300.0
+offset_right = 779.0
+offset_bottom = 340.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
 disabled = true
 text = "Connect with Steam"
 
 [node name="Direct Connect" type="Button" parent="CanvasLayer"]
-offset_left = 880.0
-offset_top = 448.0
-offset_right = 1114.0
-offset_bottom = 498.0
-theme_override_font_sizes/font_size = 30
+offset_left = 498.0
+offset_top = 370.0
+offset_right = 779.0
+offset_bottom = 410.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
 disabled = true
 text = "Connect with IP"
 
 [node name="Title" type="Label" parent="CanvasLayer"]
-offset_left = 739.0
-offset_top = 8.0
-offset_right = 1230.0
-offset_bottom = 145.0
+offset_left = 349.0
+offset_top = 15.0
+offset_right = 937.0
+offset_bottom = 152.0
+theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 100
 text = "holoDelta"
 
 [node name="Subtitle" type="Label" parent="CanvasLayer/Title"]
 layout_mode = 0
-offset_left = -19.0
+offset_left = -43.0
 offset_top = 118.0
-offset_right = 499.0
+offset_right = 638.0
 offset_bottom = 160.0
 theme_override_font_sizes/font_size = 30
 text = "An Unofficial Hololive TCG Simulator"
 
 [node name="SteamHost" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 960.0
-offset_top = 336.0
-offset_right = 1069.0
-offset_bottom = 390.0
-theme_override_font_sizes/font_size = 30
+offset_left = 591.0
+offset_top = 306.0
+offset_right = 671.0
+offset_bottom = 336.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
 text = "Host"
+
+[node name="MenuButton" type="MenuButton" parent="CanvasLayer/SteamHost"]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 3.0
+offset_right = 187.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 18
+text = "Public"
+flat = false
+item_count = 2
+popup/item_0/text = "Public"
+popup/item_0/id = 0
+popup/item_1/text = "Friends Only"
+popup/item_1/id = 1
 
 [node name="SteamJoin" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 960.0
-offset_top = 396.0
-offset_right = 1069.0
-offset_bottom = 450.0
-theme_override_font_sizes/font_size = 30
+offset_left = 591.0
+offset_top = 374.0
+offset_right = 671.0
+offset_bottom = 404.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
 text = "Join"
 
 [node name="LobbyList" type="ScrollContainer" parent="CanvasLayer"]
 visible = false
-offset_left = 830.0
-offset_top = 370.0
-offset_right = 1169.0
-offset_bottom = 995.0
+offset_left = 790.0
+offset_top = 183.0
+offset_right = 1075.0
+offset_bottom = 710.0
+theme = ExtResource("5_fdkx6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/LobbyList"]
 layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
 
 [node name="CancelLobby" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 1154.0
-offset_top = 564.0
-offset_right = 1257.0
-offset_bottom = 614.0
-theme_override_font_sizes/font_size = 30
+offset_left = 1091.0
+offset_top = 365.0
+offset_right = 1172.0
+offset_bottom = 395.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
 text = "Cancel"
 
 [node name="CancelIPJoin" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 1154.0
-offset_top = 564.0
-offset_right = 1257.0
-offset_bottom = 614.0
-theme_override_font_sizes/font_size = 30
+offset_left = 900.0
+offset_top = 361.0
+offset_right = 981.0
+offset_bottom = 391.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
 text = "Cancel"
 
 [node name="Deck Creation" type="Button" parent="CanvasLayer"]
-offset_left = 40.0
-offset_top = 246.0
-offset_right = 475.0
-offset_bottom = 323.0
-theme_override_font_sizes/font_size = 50
-text = "Create/Edit Deck"
+offset_left = 22.0
+offset_top = 205.0
+offset_right = 320.0
+offset_bottom = 265.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 25
+text = " Create/Edit Deck "
+
+[node name="DeckSelect" type="Button" parent="CanvasLayer"]
+offset_left = 23.0
+offset_top = 295.0
+offset_right = 321.0
+offset_bottom = 355.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 25
+text = "Choose Deck"
 
 [node name="Exit" type="Button" parent="CanvasLayer"]
-offset_left = 1658.0
-offset_top = 991.0
-offset_right = 1911.0
-offset_bottom = 1068.0
-theme_override_font_sizes/font_size = 50
+offset_left = 1091.0
+offset_top = 660.0
+offset_right = 1263.0
+offset_bottom = 696.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 25
 text = "Exit Game"
-
-[node name="MainMenu" type="Button" parent="CanvasLayer"]
-visible = false
-offset_left = 1581.0
-offset_top = 1026.0
-offset_right = 1916.0
-offset_bottom = 1076.0
-theme_override_colors/font_color = Color(0.760664, 0.18676, 0.19329, 1)
-theme_override_font_sizes/font_size = 30
-text = "Return to Main Menu"
-
-[node name="Confirmation" type="ColorRect" parent="CanvasLayer/MainMenu"]
-visible = false
-top_level = true
-layout_mode = 0
-offset_left = 593.0
-offset_top = 382.0
-offset_right = 1397.0
-offset_bottom = 653.0
-color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="CanvasLayer/MainMenu/Confirmation"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -389.0
-offset_right = 389.0
-offset_bottom = 110.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 50
-text = "Really Return to Menu?"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Yes" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
-layout_mode = 0
-offset_left = 236.0
-offset_top = 148.0
-offset_right = 310.0
-offset_bottom = 211.0
-theme_override_font_sizes/font_size = 40
-text = "Yes"
-
-[node name="No" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
-layout_mode = 0
-offset_left = 472.0
-offset_top = 148.0
-offset_right = 546.0
-offset_bottom = 211.0
-theme_override_font_sizes/font_size = 40
-text = "No"
 
 [node name="Options" type="TextureButton" parent="CanvasLayer"]
 y_sort_enabled = true
-offset_left = 1816.0
-offset_top = 22.0
-offset_right = 2216.0
-offset_bottom = 422.0
-scale = Vector2(0.2, 0.2)
+offset_left = 1211.0
+offset_top = 8.0
+offset_right = 1611.0
+offset_bottom = 408.0
+scale = Vector2(0.15, 0.15)
+theme = ExtResource("5_fdkx6")
 toggle_mode = true
 texture_normal = ExtResource("4_n5n8m")
 texture_pressed = ExtResource("5_13mvd")
@@ -271,7 +327,7 @@ offset_left = -2445.0
 offset_top = -45.0
 offset_right = -60.0
 offset_bottom = 2800.0
-color = Color(0, 0, 0, 0.623529)
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [node name="CheckUnrevealed" type="TextureButton" parent="CanvasLayer/Options/OptionBackground"]
 layout_mode = 0
@@ -285,34 +341,127 @@ texture_pressed = ExtResource("7_n8awk")
 
 [node name="Unrevealed" type="Label" parent="CanvasLayer/Options/OptionBackground/CheckUnrevealed"]
 layout_mode = 0
-offset_left = 414.999
-offset_top = 90.0
-offset_right = 2135.0
-offset_bottom = 295.0
-theme_override_font_sizes/font_size = 150
+offset_left = 468.334
+offset_top = 125.0
+offset_right = 2216.33
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 120
 text = "Allow Unrevealed Cards"
 
+[node name="SFXSlider" type="HSlider" parent="CanvasLayer/Options/OptionBackground"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 558.0
+offset_right = 1858.0
+offset_bottom = 692.0
+theme = ExtResource("5_fdkx6")
+min_value = -72.0
+max_value = 6.0
+scrollable = false
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/SFXSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = -0.763
+anchor_right = 0.028
+anchor_bottom = -0.763
+offset_left = 1844.67
+offset_top = 109.242
+offset_right = 2171.67
+offset_bottom = 220.242
+theme_override_font_sizes/font_size = 110
+text = "SFX"
+
+[node name="Test" type="AudioStreamPlayer" parent="CanvasLayer/Options/OptionBackground/SFXSlider"]
+stream = ExtResource("12_lpjdh")
+bus = &"SFX"
+
 [node name="InfoButton" type="Button" parent="CanvasLayer"]
-offset_left = 7.0
-offset_top = 1044.0
-offset_right = 46.0
-offset_bottom = 1075.0
+offset_left = 20.0
+offset_top = 683.0
+offset_right = 65.0
+offset_bottom = 704.0
+theme = ExtResource("5_fdkx6")
 text = "info"
 
-[node name="DeckLocation" type="Label" parent="CanvasLayer/InfoButton"]
+[node name="Info" type="ColorRect" parent="CanvasLayer/InfoButton"]
+visible = false
+layout_mode = 0
+offset_left = 83.0
+offset_top = -640.0
+offset_right = 1171.0
+offset_bottom = 4.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="MadeBy" type="Label" parent="CanvasLayer/InfoButton/Info"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 1084.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "By and large by Gabriel JW Johnson"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/InfoButton/Info"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 75.0
+offset_right = 1082.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Special thanks to:
+Ogbajoj, without whose spreadsheet this never would have been made
+Cyber for helping with the graphic design
+HaruTsunX for helping with the sound design
+MagnaDrake for helping with the Mac release
+よるみ for helping with the Japanese option
+Weiss and Chill for the visibility he's brought to this project
+
+And assorted thanks to:
+Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran (Passion English), Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa"
+autowrap_mode = 3
+
+[node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 619.0
+offset_right = 220.0
+offset_bottom = 636.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Version "
+
+[node name="DeckLocationButton" type="Button" parent="CanvasLayer/InfoButton/Info"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 620.0
+offset_right = 120.0
+offset_bottom = 633.0
+text = "Deck Location"
+
+[node name="DeckLocation" type="Label" parent="CanvasLayer/InfoButton/Info/DeckLocationButton"]
 visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.01
 anchor_bottom = 0.015
-offset_left = 1.0
-offset_top = -26.0
-offset_right = 1629.8
-offset_bottom = -3.465
+offset_left = -6.0
+offset_top = -29.0
+offset_right = 1622.8
+offset_bottom = -6.465
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Decks are located at "
 
 [node name="Popup" type="Popup" parent="CanvasLayer"]
-size = Vector2i(1920, 1080)
+size = Vector2i(1280, 720)
+theme = ExtResource("5_fdkx6")
 
 [node name="Label" type="Label" parent="CanvasLayer/Popup"]
 anchors_preset = 4
@@ -322,15 +471,17 @@ offset_top = -21.0
 offset_right = 150.0
 offset_bottom = 21.0
 grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "vspvjfspvs"
 
 [node name="LanguageSelect" type="MenuButton" parent="CanvasLayer"]
-offset_left = 1811.0
-offset_top = 112.0
-offset_right = 1907.0
-offset_bottom = 164.0
-theme_override_font_sizes/font_size = 25
+offset_left = 1200.0
+offset_top = 82.0
+offset_right = 1267.0
+offset_bottom = 103.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 15
 text = "English"
 flat = false
 item_count = 2
@@ -339,16 +490,120 @@ popup/item_0/id = 0
 popup/item_1/text = "日本語"
 popup/item_1/id = 1
 
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, 200)
-zoom = Vector2(0.6, 0.6)
-script = ExtResource("2_pceco")
-zoom_min = 0.25
-zoom_max = 3.0
-pan_speed = 300.0
-pan_margin = 0.0
-drag_inertia = 0.0
+[node name="DeckList" parent="CanvasLayer" instance=ExtResource("10_058xr")]
+visible = false
 
+[node name="JoinOptions" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/JoinOptions"]
+layout_mode = 0
+offset_top = 132.0
+offset_right = 1280.0
+offset_bottom = 697.0
+theme = ExtResource("5_fdkx6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/JoinOptions/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Label" type="Label" parent="CanvasLayer/JoinOptions"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 1277.0
+offset_bottom = 109.0
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+text = "Waiting for player to join..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JoinWait" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="Label" type="Label" parent="CanvasLayer/JoinWait"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 1277.0
+offset_bottom = 109.0
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+text = "Waiting for host..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenu" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1171.0
+offset_top = 691.0
+offset_right = 1269.0
+offset_bottom = 707.0
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(0.760664, 0.18676, 0.19329, 1)
+theme_override_font_sizes/font_size = 15
+text = "Main Menu"
+
+[node name="Confirmation" type="ColorRect" parent="CanvasLayer/MainMenu"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 254.0
+offset_right = 1029.0
+offset_bottom = 484.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="Label" type="Label" parent="CanvasLayer/MainMenu/Confirmation"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -389.0
+offset_right = 389.0
+offset_bottom = 110.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Really Return to Menu?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Yes" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 148.0
+offset_right = 239.0
+offset_bottom = 190.0
+theme_override_font_sizes/font_size = 25
+text = "Yes"
+
+[node name="No" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 148.0
+offset_right = 475.0
+offset_bottom = 190.0
+theme_override_font_sizes/font_size = 25
+text = "No"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-670, -400)
+zoom = Vector2(0.27, 0.27)
+
+[connection signal="text_submitted" from="CanvasLayer/Sidebar/ChatWindow/ToSend" to="." method="send_message"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/ChatWindow/ToSend/Send" to="." method="send_message_on_click"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/CardInfo" to="." method="_on_card_info_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/Chat" to="." method="_on_chat_pressed"]
 [connection signal="pressed" from="CanvasLayer/Host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Join" to="." method="_on_join_pressed"]
 [connection signal="text_submitted" from="CanvasLayer/IPPrompt/LineEdit" to="." method="_on_line_edit_text_submitted"]
@@ -359,10 +614,15 @@ drag_inertia = 0.0
 [connection signal="pressed" from="CanvasLayer/CancelLobby" to="." method="_on_cancel_lobby_pressed"]
 [connection signal="pressed" from="CanvasLayer/CancelIPJoin" to="." method="_on_cancel_ip_join_pressed"]
 [connection signal="pressed" from="CanvasLayer/Deck Creation" to="." method="_on_deck_creation_pressed"]
+[connection signal="pressed" from="CanvasLayer/DeckSelect" to="." method="_on_deck_select_pressed"]
 [connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options/OptionBackground/CheckUnrevealed" to="." method="_on_check_unrevealed_pressed"]
+[connection signal="drag_ended" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="pressed" from="CanvasLayer/InfoButton" to="." method="_on_info_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/InfoButton/Info/DeckLocationButton" to="." method="_on_deck_location_button_pressed"]
+[connection signal="cancel" from="CanvasLayer/DeckList" to="." method="_hide_deck_list"]
+[connection signal="selected" from="CanvasLayer/DeckList" to="." method="_on_deck_list_selected"]
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/Yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/No" to="." method="_on_no_pressed"]
-[connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="CanvasLayer/Options/OptionBackground/CheckUnrevealed" to="." method="_on_check_unrevealed_pressed"]
-[connection signal="pressed" from="CanvasLayer/InfoButton" to="." method="_on_info_button_pressed"]
