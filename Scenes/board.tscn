@@ -196,10 +196,10 @@ disabled = true
 text = "Connect with IP"
 
 [node name="Title" type="Label" parent="CanvasLayer"]
-offset_left = 349.0
-offset_top = 15.0
-offset_right = 937.0
-offset_bottom = 152.0
+offset_left = 358.0
+offset_top = 17.0
+offset_right = 946.0
+offset_bottom = 154.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 100
 text = "holoDelta"
