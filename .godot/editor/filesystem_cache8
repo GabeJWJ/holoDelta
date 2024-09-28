@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1727489314
+::res://::1727491873
 cardbutton.png::CompressedTexture2D::7832901381268324732::1723242461::1723242463::1::::<><>::
 cardbuttonhover.png::CompressedTexture2D::5492035607315042980::1723242412::1723242414::1::::<><>::
 cardover.png::CompressedTexture2D::3116091972804841707::1726785591::1726785594::1::::<><>::
@@ -11,7 +11,7 @@ default_bus_layout.tres::AudioBusLayout::6856092409398706901::1727479941::0::1::
 dice.glb::PackedScene::4677506281152683595::1724011827::1724011829::1::::<><>::uid://cxve1evmnetka::::res://dice_diceTexture.png
 diceTexture.png::CompressedTexture2D::6433874871537099333::1724011450::1724011717::1::::<><>::
 dice_diceTexture.png::CompressedTexture2D::6430826245605865680::1724011717::1724011718::1::::<><>::
-export_presets.cfg::TextFile::-1::1727488767::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1727489439::0::1::::<><>::
 extraCounter.png::CompressedTexture2D::4260595410226711080::1724532984::1724532991::1::::<><>::
 fuda.glb::PackedScene::8607722904086237889::1723341744::1723341745::1::::<><>::uid://bnf1otkfbvwpe::::res://fuda_holoBack.png
 fuda_holoBack.png::CompressedTexture2D::3310802196305479218::1723341745::1723341745::1::::<><>::
@@ -26,7 +26,7 @@ playmat.jpg::CompressedTexture2D::6224395212174312674::1726782273::1726782315::1
 README.md::TextFile::-1::1725720767::0::1::::<><>::
 side.glb::PackedScene::1645230327755001323::1723343028::1723343031::1::::<><>::uid://kbd5hgci0rwo::::res://side_side.jpg
 side.jpg::CompressedTexture2D::5892395606358017040::1723296940::1723296947::1::::<><>::
-side.tres::StyleBoxFlat::585328249506593126::1727449150::0::1::::<><>::
+side.tres::StyleBoxFlat::585328249506593126::1727489364::0::1::::<><>::
 side_side.jpg::CompressedTexture2D::704188915964671942::1723343030::1723343031::1::::<><>::
 Sou_Desu_Ne.png::CompressedTexture2D::468762290217139957::1724854352::1724854355::1::::<><>::
 Sou_Desu_Ne_JP.png::CompressedTexture2D::861329195955758567::1725489925::1725489931::1::::<><>::
@@ -43,13 +43,13 @@ plugin.cfg::TextFile::-1::1724456515::0::1::::<><>::
 THIRDPARTY.md::TextFile::-1::1724456515::0::1::::<><>::
 ::res://addons/godot-git-plugin/linux/::1727489279
 ::res://addons/godot-git-plugin/macos/::1727489279
-::res://addons/godot-git-plugin/win64/::1727489309
+::res://addons/godot-git-plugin/win64/::1727491867
 ::res://addons/godot-sqlite/::1727489279
 gdsqlite.gdextension::GDExtension::-1::1723418983::0::1::::<><>::
 godot-sqlite.gd::GDScript::-1::1723418983::0::1::::<>EditorPlugin<>::
 LICENSE.md::TextFile::-1::1723418983::0::1::::<><>::
 plugin.cfg::TextFile::-1::1723418983::0::1::::<><>::
-::res://addons/godot-sqlite/bin/::1727489309
+::res://addons/godot-sqlite/bin/::1727491867
 ::res://addons/godot-sqlite/bin/libgdsqlite.macos.template_debug.framework/::1727489279
 ::res://addons/godot-sqlite/bin/libgdsqlite.macos.template_release.framework/::1727489279
 ::res://CheerIcons/::1727489279
@@ -98,17 +98,17 @@ Draw Card 6.wav::AudioStreamWAV::9080270077987452658::1727104046::1727145922::1:
 Place Card 1.wav::AudioStreamWAV::940921502382283012::1727104101::1727145922::1::::<><>::
 Place Card 2.wav::AudioStreamWAV::3492305499193836740::1727103989::1727145922::1::::<><>::
 Place Card 3.wav::AudioStreamWAV::6401429032622578166::1727104011::1727145922::1::::<><>::
-::res://Scenes/::1727489279
-better_texture_button.tscn::PackedScene::1725111081368755545::1727488548::0::1::::<><>::uid://djuk0g87nhrhc::::res://cardbutton.png<>res://Scripts/better_texture_button.gd<>uid://ckina22q7em5y::::res://cardbuttonhover.png
-board.tscn::PackedScene::6100615550730200088::1727489187::0::1::::<><>::uid://j87r323v31qv::::res://Scenes/side.tscn<>res://Scripts/Multiplayer.gd<>uid://kwq21hbtxatg::::res://CyberAssets/Main Menu Assets/HoloDelta BG (Light Mode).svg<>uid://chrab4uqxsh2s::::res://Scenes/info_panel.tscn<>uid://chv6t7kvxgx0s::::res://gear.png<>uid://biy2phmp4flym::::res://gearSelected.png<>uid://cx76tmf8royup::::res://CyberAssets/Game Side Menu/Side Menu.png<>uid://c2xsywtxro80x::::res://Themes/button.tres<>uid://dt60hgar0dc4g::::res://checkOff.png<>uid://1dw81uea60el::::res://CyberAssets/Game Side Menu/Notification.svg<>uid://tqwtibgdslug::::res://checkOn.png<>uid://cvqdjg5xohy5a::::res://Scenes/deck_list.tscn<>uid://citw8blr274yn::::res://HaruTsunXAssets/Die Roll 2.wav
-card.tscn::PackedScene::2046435235046484262::1727488547::0::1::::<><>::res://Scripts/card.gd<>uid://gxcpgcuj06xt::::res://Sou_Desu_Ne.png<>uid://djuk0g87nhrhc::::res://cardbutton.png<>uid://ckina22q7em5y::::res://cardbuttonhover.png<>uid://d2bjrwsls2wp5::::res://damageCounter.png<>uid://b1x4nb22w47b5::::res://extraCounter.png
-deck_creation.tscn::PackedScene::1607859076631188342::1727488548::0::1::::<><>::res://Scripts/deck_creation.gd<>uid://cx76tmf8royup::::res://CyberAssets/Game Side Menu/Side Menu.png<>uid://chrab4uqxsh2s::::res://Scenes/info_panel.tscn<>uid://c2xsywtxro80x::::res://Themes/button.tres<>uid://cvqdjg5xohy5a::::res://Scenes/deck_list.tscn<>uid://ngxbbonnmuab::::res://CyberAssets/DeckBuilder/Deck_Builder_BG.png
-deck_list.tscn::PackedScene::6280035713521542740::1727488549::0::1::::<><>::res://Scripts/deck_list.gd<>uid://c2xsywtxro80x::::res://Themes/button.tres
-die.tscn::PackedScene::2308843151223697769::1727488548::0::1::::<><>::res://Scripts/die.gd<>uid://b7v23y5f6dbxr::::res://dice.glb
-fuda.tscn::PackedScene::539344993752940583::1727488548::0::1::::<><>::res://Scripts/fuda.gd<>uid://bnf1otkfbvwpe::::res://fuda_holoBack.png<>uid://dk0eucyj0a30u::::res://looking.png<>uid://cwcpnlqkxpowr::::res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf
-info_panel.tscn::PackedScene::5299261035297011396::1727488548::0::1::::<><>::res://Scripts/info_panel.gd<>uid://c2xsywtxro80x::::res://Themes/button.tres<>uid://brfosqsw30a1j::::res://CyberAssets/DeckBuilder/61457.png
-side.tscn::PackedScene::701798874556083469::1727488548::0::1::::<><>::res://Scripts/side.gd<>uid://cuxe458wilybi::::res://playmat.jpg<>uid://md0n47hsxcob::::res://Scenes/zone.tscn<>uid://hxi6y3mwpmp8::::res://Scenes/fuda.tscn<>uid://xo7x52x42xjv::::res://side.glb<>uid://bcans1dkc8eyo::::res://cheerBack.png<>uid://75okrvwhh5cf::::res://Scenes/die.tscn<>uid://ilsjg8vo6p8q::::res://side.tres<>uid://c2xsywtxro80x::::res://Themes/button.tres<>uid://cxhb21jecugn::::res://SPup.png<>uid://byvrlx4gp0oh6::::res://HaruTsunXAssets/Draw Card 1.wav<>uid://d1gc0wj65aaim::::res://HaruTsunXAssets/Draw Card 2.wav<>uid://dk6835owvl36j::::res://HaruTsunXAssets/Draw Card 3.wav<>uid://cejnys2aetdd8::::res://HaruTsunXAssets/Draw Card 4.wav<>uid://b3gpfd8s1j0m2::::res://HaruTsunXAssets/Draw Card 5.wav<>uid://d2msysdonv41s::::res://HaruTsunXAssets/Draw Card 6.wav<>uid://bd2tpkm0etxbj::::res://HaruTsunXAssets/Card Shuffle 1.wav<>uid://ctbwauo6nw5yq::::res://HaruTsunXAssets/Card Shuffle 2.wav<>uid://e1tdbawmq6hx::::res://HaruTsunXAssets/Card Shuffle 3.wav<>uid://n18ctlpyptml::::res://HaruTsunXAssets/Card Shuffle 4.wav<>uid://citw8blr274yn::::res://HaruTsunXAssets/Die Roll 2.wav<>uid://cfaofku10o646::::res://HaruTsunXAssets/Card Move 1.wav<>uid://nn13swso7n21::::res://HaruTsunXAssets/Place Card 1.wav<>uid://bp0x05dxnfc2o::::res://HaruTsunXAssets/Place Card 2.wav<>uid://cxg5uowbntxl3::::res://HaruTsunXAssets/Place Card 3.wav
-zone.tscn::PackedScene::850001970012397469::1727488548::0::1::::<><>::uid://s5m7fkn1lou3::::res://zonebutton.png<>res://Scripts/zone.gd<>uid://dtwx3yh72x8us::::res://zonebuttonhover.png
+::res://Scenes/::1727489366
+better_texture_button.tscn::PackedScene::1725111081368755545::1727489366::0::1::::<><>::uid://djuk0g87nhrhc::::res://cardbutton.png<>res://Scripts/better_texture_button.gd<>uid://ckina22q7em5y::::res://cardbuttonhover.png
+board.tscn::PackedScene::6100615550730200088::1727489365::0::1::::<><>::uid://j87r323v31qv::::res://Scenes/side.tscn<>res://Scripts/Multiplayer.gd<>uid://kwq21hbtxatg::::res://CyberAssets/Main Menu Assets/HoloDelta BG (Light Mode).svg<>uid://chrab4uqxsh2s::::res://Scenes/info_panel.tscn<>uid://chv6t7kvxgx0s::::res://gear.png<>uid://biy2phmp4flym::::res://gearSelected.png<>uid://cx76tmf8royup::::res://CyberAssets/Game Side Menu/Side Menu.png<>uid://c2xsywtxro80x::::res://Themes/button.tres<>uid://dt60hgar0dc4g::::res://checkOff.png<>uid://1dw81uea60el::::res://CyberAssets/Game Side Menu/Notification.svg<>uid://tqwtibgdslug::::res://checkOn.png<>uid://cvqdjg5xohy5a::::res://Scenes/deck_list.tscn<>uid://citw8blr274yn::::res://HaruTsunXAssets/Die Roll 2.wav
+card.tscn::PackedScene::2046435235046484262::1727489364::0::1::::<><>::res://Scripts/card.gd<>uid://gxcpgcuj06xt::::res://Sou_Desu_Ne.png<>uid://djuk0g87nhrhc::::res://cardbutton.png<>uid://ckina22q7em5y::::res://cardbuttonhover.png<>uid://d2bjrwsls2wp5::::res://damageCounter.png<>uid://b1x4nb22w47b5::::res://extraCounter.png
+deck_creation.tscn::PackedScene::1607859076631188342::1727489366::0::1::::<><>::res://Scripts/deck_creation.gd<>uid://cx76tmf8royup::::res://CyberAssets/Game Side Menu/Side Menu.png<>uid://chrab4uqxsh2s::::res://Scenes/info_panel.tscn<>uid://c2xsywtxro80x::::res://Themes/button.tres<>uid://cvqdjg5xohy5a::::res://Scenes/deck_list.tscn<>uid://ngxbbonnmuab::::res://CyberAssets/DeckBuilder/Deck_Builder_BG.png
+deck_list.tscn::PackedScene::6280035713521542740::1727489366::0::1::::<><>::res://Scripts/deck_list.gd<>uid://c2xsywtxro80x::::res://Themes/button.tres
+die.tscn::PackedScene::2308843151223697769::1727489366::0::1::::<><>::res://Scripts/die.gd<>uid://b7v23y5f6dbxr::::res://dice.glb
+fuda.tscn::PackedScene::539344993752940583::1727489366::0::1::::<><>::res://Scripts/fuda.gd<>uid://bnf1otkfbvwpe::::res://fuda_holoBack.png<>uid://dk0eucyj0a30u::::res://looking.png<>uid://cwcpnlqkxpowr::::res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf
+info_panel.tscn::PackedScene::5299261035297011396::1727489366::0::1::::<><>::res://Scripts/info_panel.gd<>uid://c2xsywtxro80x::::res://Themes/button.tres<>uid://brfosqsw30a1j::::res://CyberAssets/DeckBuilder/61457.png
+side.tscn::PackedScene::701798874556083469::1727489366::0::1::::<><>::res://Scripts/side.gd<>uid://cuxe458wilybi::::res://playmat.jpg<>uid://md0n47hsxcob::::res://Scenes/zone.tscn<>uid://hxi6y3mwpmp8::::res://Scenes/fuda.tscn<>uid://xo7x52x42xjv::::res://side.glb<>uid://bcans1dkc8eyo::::res://cheerBack.png<>uid://75okrvwhh5cf::::res://Scenes/die.tscn<>uid://ilsjg8vo6p8q::::res://side.tres<>uid://c2xsywtxro80x::::res://Themes/button.tres<>uid://cxhb21jecugn::::res://SPup.png<>uid://byvrlx4gp0oh6::::res://HaruTsunXAssets/Draw Card 1.wav<>uid://d1gc0wj65aaim::::res://HaruTsunXAssets/Draw Card 2.wav<>uid://dk6835owvl36j::::res://HaruTsunXAssets/Draw Card 3.wav<>uid://cejnys2aetdd8::::res://HaruTsunXAssets/Draw Card 4.wav<>uid://b3gpfd8s1j0m2::::res://HaruTsunXAssets/Draw Card 5.wav<>uid://d2msysdonv41s::::res://HaruTsunXAssets/Draw Card 6.wav<>uid://bd2tpkm0etxbj::::res://HaruTsunXAssets/Card Shuffle 1.wav<>uid://ctbwauo6nw5yq::::res://HaruTsunXAssets/Card Shuffle 2.wav<>uid://e1tdbawmq6hx::::res://HaruTsunXAssets/Card Shuffle 3.wav<>uid://n18ctlpyptml::::res://HaruTsunXAssets/Card Shuffle 4.wav<>uid://citw8blr274yn::::res://HaruTsunXAssets/Die Roll 2.wav<>uid://cfaofku10o646::::res://HaruTsunXAssets/Card Move 1.wav<>uid://nn13swso7n21::::res://HaruTsunXAssets/Place Card 1.wav<>uid://bp0x05dxnfc2o::::res://HaruTsunXAssets/Place Card 2.wav<>uid://cxg5uowbntxl3::::res://HaruTsunXAssets/Place Card 3.wav
+zone.tscn::PackedScene::850001970012397469::1727489366::0::1::::<><>::uid://s5m7fkn1lou3::::res://zonebutton.png<>res://Scripts/zone.gd<>uid://dtwx3yh72x8us::::res://zonebuttonhover.png
 ::res://Scripts/::1727489279
 better_texture_button.gd::GDScript::-1::1723918097::0::1::::<>Node2D<>::
 card.gd::GDScript::-1::1726972166::0::1::::<>Node2D<>::
@@ -122,5 +122,5 @@ settings.gd::GDScript::-1::1727487266::0::1::::<>Node<>::
 side.gd::GDScript::-1::1727475566::0::1::::<>Node2D<>::
 steam.gd::GDScript::-1::1725125947::0::1::::<>Node<>::
 zone.gd::GDScript::-1::1724015557::0::1::::<>Node2D<>::
-::res://Themes/::1727489279
-button.tres::Theme::6716557784813273997::1727480290::0::1::::<><>::uid://cwcpnlqkxpowr::::res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf<>uid://3fo5e4j2doqj::::res://CyberAssets/Main Menu Assets/text_box_disabled.png<>uid://btlmd875gxsio::::res://CyberAssets/Main Menu Assets/text box.png
+::res://Themes/::1727489364
+button.tres::Theme::6716557784813273997::1727489364::0::1::::<><>::uid://cwcpnlqkxpowr::::res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf<>uid://3fo5e4j2doqj::::res://CyberAssets/Main Menu Assets/text_box_disabled.png<>uid://btlmd875gxsio::::res://CyberAssets/Main Menu Assets/text box.png

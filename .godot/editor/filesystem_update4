@@ -10,3 +10,4 @@ res://Scenes/die.tscn
 res://Scenes/deck_creation.tscn
 res://Scenes/info_panel.tscn
 res://Scenes/deck_list.tscn
+res://Scripts/deck_creation.gd

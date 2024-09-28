@@ -717,7 +717,7 @@ func is_deck_legal():
 	for cardButton in main_deck.get_children():
 		if cardButton.cardType == "Holomem" and cardButton.level == 0 and !cardButton.name.contains("PleaseDelete"):
 			found_debut = true
-		if cardButton.amount < 0:
+		if cardButton.get_amount() < 0:
 			$CanvasLayer/Problems/ProblemList.text += "Negative amount of" + cardButton.cardNumber + "\n"
 			nonsensical = true
 		if cardButton.cardType in ["Cheer","Oshi"]:
@@ -727,7 +727,7 @@ func is_deck_legal():
 		$CanvasLayer/Problems/ProblemList.text += "No debut holomems\n"
 	
 	for cardButton in cheer_deck.get_children():
-		if cardButton.amount < 0:
+		if cardButton.get_amount() < 0:
 			$CanvasLayer/Problems/ProblemList.text += "Negative amount of" + cardButton.cardNumber + "\n"
 			nonsensical = true
 		if cardButton.cardType in ["Holomem","Support"]:
