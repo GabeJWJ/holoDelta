@@ -43,6 +43,14 @@ var life = []
 @export var deckList:Array
 @export var cheerDeckList:Array
 
+@export var defaultCheer:CompressedTexture2D = preload("res://cheerBack.png")
+@export var defaultMain:CompressedTexture2D = preload("res://holoBack.png")
+@export var mainSleeve:PackedByteArray
+@export var cheerSleeve:PackedByteArray
+@export var oshiSleeve:PackedByteArray
+@export var playmatBuffer:PackedByteArray
+@export var diceBuffer:PackedByteArray
+
 var database : SQLite
 
 @export var preliminary_phase = true
@@ -62,7 +70,7 @@ signal made_turn_choice(choice)
 signal rps(choice)
 signal ready_decided
 
-signal card_info_set(card_to_show)
+signal card_info_set(top_card, card_to_show)
 signal card_info_clear
 
 signal entered_list
@@ -104,6 +112,27 @@ func _ready():
 		oshi = deckInfo.oshi
 		deckList = deckInfo.deck
 		cheerDeckList = deckInfo.cheerDeck
+		if deckInfo.has("sleeve"):
+			mainSleeve = deckInfo.sleeve
+		if deckInfo.has("cheerSleeve"):
+			cheerSleeve = deckInfo.cheerSleeve
+		if deckInfo.has("oshiSleeve"):
+			oshiSleeve = deckInfo.oshiSleeve
+		if get_parent().playmat:
+			playmatBuffer = get_parent().playmat.save_webp_to_buffer(true)
+			$gradient.texture = ImageTexture.create_from_image(get_parent().playmat)
+		if get_parent().dice:
+			diceBuffer = get_parent().dice.save_webp_to_buffer(true)
+			$SubViewportContainer/SubViewport/Node3D/Die.new_texture(get_parent().dice)
+	else:
+		if playmatBuffer and !playmatBuffer.is_empty():
+			var image = Image.new()
+			image.load_webp_from_buffer(playmatBuffer)
+			$gradient.texture = ImageTexture.create_from_image(image)
+		if diceBuffer and !diceBuffer.is_empty():
+			var image = Image.new()
+			image.load_webp_from_buffer(diceBuffer)
+			$SubViewportContainer/SubViewport/Node3D/Die.new_texture(image)
 	
 	database = SQLite.new()
 	database.read_only = true
@@ -113,20 +142,41 @@ func _ready():
 		database.path = OS.get_executable_path().get_base_dir() + "/cardData.db"
 	database.open_db()
 	
-	oshiCard = create_card(oshi[0],oshi[1])
+	var oshiBack
+	if oshiSleeve.is_empty():
+		oshiBack = defaultCheer.get_image()
+	else:
+		var image = Image.new()
+		image.load_webp_from_buffer(oshiSleeve)
+		oshiBack = image
+	oshiCard = create_card(oshi[0],oshi[1],oshiBack)
 	oshiCard.position = Vector2(430,-223)
 	oshiCard.visible = false
 	oshiCard.z_index = 1
 	
+	var cheerBack
+	if cheerSleeve.is_empty():
+		cheerBack = defaultCheer.get_image()
+	else:
+		var image = Image.new()
+		image.load_webp_from_buffer(cheerSleeve)
+		cheerBack = image
 	for info in cheerDeckList:
 		for i in range(info[1]):
-			var newCard1 = create_card(info[0],info[2])
+			var newCard1 = create_card(info[0],info[2],cheerBack)
 			cheerDeck.cardList.append(newCard1)
 			newCard1.visible = false
 	
+	var mainBack
+	if mainSleeve.is_empty():
+		mainBack = defaultMain.get_image()
+	else:
+		var image = Image.new()
+		image.load_webp_from_buffer(mainSleeve)
+		mainBack = image
 	for info in deckList:
 		for i in range(info[1]):
-			var newCard1 = create_card(info[0],info[2])
+			var newCard1 = create_card(info[0],info[2],mainBack)
 			deck.cardList.append(newCard1)
 			newCard1.visible = false
 			newCard1.z_index = 1
@@ -135,9 +185,12 @@ func _ready():
 	cheerDeck.cardList.shuffle()
 	
 	deck.update_size()
+	deck.update_back(mainBack)
 	cheerDeck.update_size()
+	cheerDeck.update_back(cheerBack)
 	archive.update_size()
 	holopower.update_size()
+	holopower.update_back(mainBack)
 	
 	database.close_db()
 	
@@ -286,12 +339,12 @@ func _process(delta):
 	pass
 
 
-func create_card(number,art_code):
+func create_card(number,art_code,back):
 	var new_id = all_cards.size()
 	var newCard = card.instantiate()
 	add_child(newCard,true)
 	newCard.name = "Card" + str(new_id)
-	newCard.setup_info(number,database,art_code)
+	newCard.setup_info(number,database,art_code,back)
 	newCard.cardID = new_id
 	newCard.attachedTo = new_id
 	newCard.card_clicked.connect(_on_card_clicked)
@@ -396,6 +449,7 @@ func remove_from_fuda(card_id,fuda):
 func remove_from_attached(card_id,attached):
 	if all_cards[card_id] in attached.attached:
 		remove_from_card_list(card_id,attached.attached)
+		all_cards[card_id].attachedTo = card_id
 		attached.update_attached()
 	elif all_cards[card_id] in attached.onTopOf:
 		remove_from_card_list(card_id,attached.onTopOf)
@@ -411,6 +465,7 @@ func add_to_card_list(card_id,list_of_cards,bottom=false):
 	cardToGo.onTopOf.reverse()
 	for newCard in cardToGo.attached:
 		add_to_card_list(newCard.cardID,list_of_cards,bottom)
+		newCard.attachedTo = newCard.cardID
 	for newCard in cardToGo.onTopOf:
 		add_to_card_list(newCard.cardID,list_of_cards,bottom)
 	
@@ -668,10 +723,10 @@ func _on_archive_mouse_entered():
 
 @rpc("any_peer","call_remote","reliable")
 func update_info(card_id):
-	var firstCard = all_cards[card_id]
-	var actualCard = all_cards[firstCard.attachedTo]
+	var actualCard = all_cards[card_id]
+	var topCard = all_cards[actualCard.attachedTo]
 	if !actualCard.trulyHidden and (is_multiplayer_authority() or !actualCard.faceDown):
-		emit_signal("card_info_set",actualCard)
+		emit_signal("card_info_set",topCard,actualCard)
 
 func clear_info():
 	emit_signal("card_info_clear")
@@ -690,21 +745,18 @@ func _on_card_clicked(card_id):
 	if currentPrompt != -1 or !can_do_things:
 		return
 	
+	reset_popup()
+	currentCard = card_id
+	
+	var actualCard = all_cards[currentCard]
 	
 	if !is_multiplayer_authority():
-		currentCard = card_id
-		var actualCard = all_cards[currentCard]
 		if actualCard.attached.size() > 0:
 			popup.add_item(Settings.en_or_jp("Look at attached","添付を見る"),50)
 		if actualCard.onTopOf.size() > 0:
 			popup.add_item("Look at past blooms",52)
 		show_popup()
 		return
-	
-	reset_popup()
-	currentCard = card_id
-	
-	var actualCard = all_cards[currentCard]
 	
 	if preliminary_phase:
 		if actualCard.cardType == "Holomem" and actualCard in hand and actualCard.level < 1:

@@ -42,6 +42,11 @@ func update_size():
 		remaining = cardList.size()
 		update_text()
 
+func update_back(back):
+	var newMaterial = StandardMaterial3D.new()
+	newMaterial.albedo_texture = ImageTexture.create_from_image(back)
+	$fuda/Plane.set_surface_override_material(0,newMaterial)
+
 func update_text():
 	count.text = str(remaining)
 

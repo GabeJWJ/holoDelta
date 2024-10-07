@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=18 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://tqwtibgdslug" path="res://checkOn.png" id="7_n8awk"]
 [ext_resource type="PackedScene" uid="uid://cvqdjg5xohy5a" path="res://Scenes/deck_list.tscn" id="10_058xr"]
 [ext_resource type="AudioStream" uid="uid://citw8blr274yn" path="res://HaruTsunXAssets/Die Roll 2.wav" id="12_lpjdh"]
+[ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="14_rk7pw"]
+[ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="15_ycoxv"]
 
 [sub_resource type="Gradient" id="Gradient_8vfua"]
 colors = PackedColorArray(0.691703, 0.82893, 0.968311, 1, 0.989179, 0.909736, 0.929764, 1)
@@ -211,7 +213,7 @@ offset_top = 118.0
 offset_right = 638.0
 offset_bottom = 160.0
 theme_override_font_sizes/font_size = 30
-text = "An Unofficial Hololive TCG Simulator"
+text = "An Unofficial Hololive OCG Simulator"
 
 [node name="SteamHost" type="Button" parent="CanvasLayer"]
 visible = false
@@ -355,8 +357,8 @@ offset_top = 558.0
 offset_right = 1858.0
 offset_bottom = 692.0
 theme = ExtResource("5_fdkx6")
-min_value = -72.0
-max_value = 6.0
+min_value = -30.0
+max_value = 10.0
 scrollable = false
 tick_count = 11
 ticks_on_borders = true
@@ -498,9 +500,6 @@ popup/item_0/id = 0
 popup/item_1/text = "日本語"
 popup/item_1/id = 1
 
-[node name="DeckList" parent="CanvasLayer" instance=ExtResource("10_058xr")]
-visible = false
-
 [node name="JoinOptions" type="ColorRect" parent="CanvasLayer"]
 visible = false
 offset_right = 1280.0
@@ -550,6 +549,109 @@ theme_override_font_sizes/font_size = 35
 text = "Waiting for host..."
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PlaymatDiceCustom" type="Button" parent="CanvasLayer"]
+offset_left = 92.0
+offset_top = 683.0
+offset_right = 218.0
+offset_bottom = 704.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
+text = "Cosmetics"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PlaymatDiceCustom"]
+visible = false
+layout_mode = 0
+offset_left = -91.0
+offset_top = -680.0
+offset_right = 1189.0
+offset_bottom = 35.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 11.0
+offset_right = 3520.0
+offset_bottom = 1491.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("14_rk7pw")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 814.0
+offset_top = 87.0
+offset_right = 854.0
+offset_bottom = 127.0
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 0
+
+[node name="Die" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport" instance=ExtResource("15_ycoxv")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 200, -50, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport"]
+transform = Transform3D(0.598005, -0.466652, 0.651633, -0.125598, 0.748419, 0.651225, -0.79159, -0.47128, 0.388948, 201.31, -48.3055, 1.06256)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.979879, 0.19959, 0, -0.19959, 0.979879, 201.193, -47.9198, 4.06729)
+light_energy = 4.173
+spot_range = 8.92789
+spot_angle = 42.239
+
+[node name="Exit" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 1057.0
+offset_top = 580.0
+offset_right = 1221.0
+offset_bottom = 620.0
+theme_override_font_sizes/font_size = 30
+text = "Exit"
+
+[node name="Playmat" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 580.0
+offset_right = 492.0
+offset_bottom = 620.0
+theme_override_font_sizes/font_size = 30
+text = "Load Playmat From File"
+
+[node name="LoadDialog" type="FileDialog" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat"]
+title = "Open a File"
+position = Vector2i(300, 300)
+size = Vector2i(392, 159)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.jpg")
+show_hidden_files = true
+use_native_dialog = true
+
+[node name="Dice" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 580.0
+offset_right = 901.0
+offset_bottom = 620.0
+theme_override_font_sizes/font_size = 30
+text = "Load Die From File"
+
+[node name="LoadDialog" type="FileDialog" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/Dice"]
+title = "Open a File"
+position = Vector2i(300, 300)
+size = Vector2i(392, 159)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png")
+show_hidden_files = true
+use_native_dialog = true
+
+[node name="DeckList" parent="CanvasLayer" instance=ExtResource("10_058xr")]
+visible = false
 
 [node name="MainMenu" type="Button" parent="CanvasLayer"]
 visible = false
@@ -627,9 +729,17 @@ zoom = Vector2(0.27, 0.27)
 [connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Options/OptionBackground/CheckUnrevealed" to="." method="_on_check_unrevealed_pressed"]
 [connection signal="drag_ended" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="drag_started" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="CanvasLayer/InfoButton" to="." method="_on_info_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/InfoButton/Info/DeckLocationButton" to="." method="_on_deck_location_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/InfoButton/Info/Close" to="." method="_on_info_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom" to="." method="_on_playmat_dice_custom_pressed"]
+[connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Exit" to="." method="_on_cosmetics_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat" to="." method="_on_playmat_pressed"]
+[connection signal="file_selected" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat/LoadDialog" to="." method="_on_playmat_load_dialog_file_selected"]
+[connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Dice" to="." method="_on_dice_pressed"]
+[connection signal="file_selected" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Dice/LoadDialog" to="." method="_on_dice_load_dialog_file_selected"]
 [connection signal="cancel" from="CanvasLayer/DeckList" to="." method="_hide_deck_list"]
 [connection signal="selected" from="CanvasLayer/DeckList" to="." method="_on_deck_list_selected"]
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]

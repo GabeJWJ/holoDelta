@@ -24,6 +24,7 @@ signal move_behind_request(id1,id2)
 @export var cardName:String
 @export var cardText:String
 var cardFront
+var cardBack
 @export var artNum:int
 
 var onTopOf = []
@@ -67,7 +68,7 @@ func _process(delta):
 	pass
 
 
-func setup_info(number,database,art_code):
+func setup_info(number,database,art_code,back=null):
 	cardNumber = number
 	artNum = art_code
 	var data1 = database.select_rows("mainCards","cardID LIKE '" + cardNumber + "'", ["*"])
@@ -105,6 +106,9 @@ func setup_info(number,database,art_code):
 	cardFront = ImageTexture.create_from_image(image)
 	#$Front.texture = load("res://CardFronts/" + number + ".png")
 	$Front.texture = cardFront
+	
+	if back:
+		cardBack = ImageTexture.create_from_image(back)
 	
 	match cardType:
 		"Oshi":
@@ -565,10 +569,7 @@ func flipDown():
 	if faceDown:
 		pass
 	else:
-		if cardType in ["Cheer","Oshi"]:
-			$Front.texture = load("res://cheerBack.png")
-		else:
-			$Front.texture = load("res://holoBack.png")
+		$Front.texture = cardBack
 		faceDown = true
 
 @rpc("any_peer","call_local","reliable")
@@ -576,7 +577,6 @@ func flipUp():
 	if !faceDown:
 		pass
 	else:
-		#$Front.texture = load("res://CardFronts/" + number + ".png")
 		$Front.texture = cardFront
 		faceDown = false
 		trulyHidden = false

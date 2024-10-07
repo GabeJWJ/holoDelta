@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://w54g66g0fow1"]
+[gd_scene load_steps=10 format=3 uid="uid://w54g66g0fow1"]
 
 [ext_resource type="Script" path="res://Scripts/deck_creation.gd" id="1_vhmc0"]
 [ext_resource type="Texture2D" uid="uid://cx76tmf8royup" path="res://CyberAssets/Game Side Menu/Side Menu.png" id="2_dcm3l"]
 [ext_resource type="PackedScene" uid="uid://chrab4uqxsh2s" path="res://Scenes/info_panel.tscn" id="2_xdide"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="3_da1xd"]
 [ext_resource type="PackedScene" uid="uid://cvqdjg5xohy5a" path="res://Scenes/deck_list.tscn" id="4_lmglq"]
+[ext_resource type="PackedScene" uid="uid://gfca1xt2vdra" path="res://Scenes/sleeve_select.tscn" id="5_0bh18"]
 [ext_resource type="Texture2D" uid="uid://ngxbbonnmuab" path="res://CyberAssets/DeckBuilder/Deck_Builder_BG.png" id="6_t38qv"]
+[ext_resource type="Texture2D" uid="uid://bnsmsduvikadg" path="res://holoBack.png" id="6_to43o"]
+[ext_resource type="Texture2D" uid="uid://bcans1dkc8eyo" path="res://cheerBack.png" id="7_kh04n"]
 
 [node name="DeckCreation" type="Node2D"]
 script = ExtResource("1_vhmc0")
@@ -359,6 +362,56 @@ offset_bottom = 582.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Sleeves" type="Control" parent="CanvasLayer/YourStuff"]
+visible = false
+layout_mode = 2
+theme = ExtResource("3_da1xd")
+
+[node name="Main" parent="CanvasLayer/YourStuff/Sleeves" instance=ExtResource("5_0bh18")]
+position = Vector2(50, 50)
+scale = Vector2(0.5, 0.5)
+default_sleeve = ExtResource("6_to43o")
+
+[node name="Label" type="Label" parent="CanvasLayer/YourStuff/Sleeves/Main"]
+offset_top = -60.0
+offset_right = 313.0
+offset_bottom = 9.0
+theme = ExtResource("3_da1xd")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Main Deck"
+horizontal_alignment = 1
+
+[node name="Cheer" parent="CanvasLayer/YourStuff/Sleeves" instance=ExtResource("5_0bh18")]
+position = Vector2(225, 50)
+scale = Vector2(0.5, 0.5)
+default_sleeve = ExtResource("7_kh04n")
+
+[node name="Label" type="Label" parent="CanvasLayer/YourStuff/Sleeves/Cheer"]
+offset_top = -60.0
+offset_right = 313.0
+offset_bottom = 9.0
+theme = ExtResource("3_da1xd")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Cheer"
+horizontal_alignment = 1
+
+[node name="Oshi" parent="CanvasLayer/YourStuff/Sleeves" instance=ExtResource("5_0bh18")]
+position = Vector2(400, 50)
+scale = Vector2(0.5, 0.5)
+default_sleeve = ExtResource("7_kh04n")
+
+[node name="Label" type="Label" parent="CanvasLayer/YourStuff/Sleeves/Oshi"]
+offset_top = -60.0
+offset_right = 313.0
+offset_bottom = 9.0
+theme = ExtResource("3_da1xd")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Oshi"
+horizontal_alignment = 1
 
 [node name="LoadDeck" type="Button" parent="CanvasLayer"]
 offset_left = 313.0

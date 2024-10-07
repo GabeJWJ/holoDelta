@@ -4,7 +4,7 @@ var settings
 @onready var json = JSON.new()
 var languages = ["English","日本語"]
 enum bloomCode {OK,Instant,Skip,No}
-var version = "1.1.0"
+var version = "1.1.1"
 
 var to_jp = {}
 

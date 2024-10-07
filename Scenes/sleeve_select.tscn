@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://gfca1xt2vdra"]
+
+[ext_resource type="Script" path="res://Scripts/sleeveSelect.gd" id="1_06yeu"]
+[ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="3_w64fp"]
+
+[node name="sleeveSelect" type="Node2D"]
+script = ExtResource("1_06yeu")
+
+[node name="Preview" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LoadSleeve" type="Button" parent="."]
+offset_left = 14.0
+offset_top = 452.0
+offset_right = 296.0
+offset_bottom = 483.0
+theme = ExtResource("3_w64fp")
+theme_override_font_sizes/font_size = 30
+text = "Load From File"
+
+[node name="LoadDialog" type="FileDialog" parent="LoadSleeve"]
+title = "Open a File"
+position = Vector2i(300, 300)
+size = Vector2i(392, 159)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png")
+show_hidden_files = true
+use_native_dialog = true
+
+[node name="Default" type="Button" parent="."]
+offset_left = 15.0
+offset_top = 510.0
+offset_right = 297.0
+offset_bottom = 541.0
+theme = ExtResource("3_w64fp")
+theme_override_font_sizes/font_size = 30
+text = "To Default"
+
+[connection signal="pressed" from="LoadSleeve" to="." method="_on_load_sleeve_pressed"]
+[connection signal="file_selected" from="LoadSleeve/LoadDialog" to="." method="_on_load_dialog_file_selected"]
+[connection signal="pressed" from="Default" to="." method="_on_default_pressed"]

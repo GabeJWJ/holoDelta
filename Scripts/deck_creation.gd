@@ -3,8 +3,14 @@ extends Node2D
 var database
 
 const card = preload("res://Scenes/card.tscn")
+const default_sleeve = preload("res://holoBack.png")
+const default_cheer_sleeve = preload("res://cheerBack.png")
+const default_oshi_sleeve = preload("res://cheerBack.png")
 var all_cards = []
 var in_deck_dictionary = {}
+var sleeve = default_sleeve
+var cheer_sleeve = default_cheer_sleeve
+var oshi_sleeve = default_oshi_sleeve
 var total_main = 0
 var total_cheer = 0
 var total_debut = 0
@@ -63,6 +69,10 @@ var oshiCard
 						,Settings.to_jp["Tool"],Settings.to_jp["Mascot"],Settings.to_jp["Fan"]]
 
 @onready var list = $CanvasLayer/SavePrompt/ScrollContainer/VBoxContainer
+
+@onready var mainSleeveSelect = $CanvasLayer/YourStuff/Sleeves/Main
+@onready var cheerSleeveSelect = $CanvasLayer/YourStuff/Sleeves/Cheer
+@onready var oshiSleeveSelect = $CanvasLayer/YourStuff/Sleeves/Oshi
 
 func choose(n,k):
 	var result = 1
@@ -487,6 +497,25 @@ func load_from_deck_info(deck_info):
 	for card_info in deck_info.cheerDeck:
 		create_cheer_deck_card(card_info[0],card_info[2],card_info[1])
 	
+	if deck_info.has("sleeve"):
+		var image = Image.new()
+		image.load_webp_from_buffer(deck_info.sleeve)
+		mainSleeveSelect.new_sleeve(image)
+	else:
+		mainSleeveSelect.new_sleeve()
+	if deck_info.has("cheerSleeve"):
+		var image = Image.new()
+		image.load_webp_from_buffer(deck_info.cheerSleeve)
+		cheerSleeveSelect.new_sleeve(image)
+	else:
+		cheerSleeveSelect.new_sleeve()
+	if deck_info.has("oshiSleeve"):
+		var image = Image.new()
+		image.load_webp_from_buffer(deck_info.oshiSleeve)
+		oshiSleeveSelect.new_sleeve(image)
+	else:
+		oshiSleeveSelect.new_sleeve()
+	
 	update_main_deck_children()
 	update_cheer_deck_children()
 	
@@ -657,12 +686,13 @@ func _on_deck_card_clicked(card_id):
 	else:
 		add_holomem(actualCard,-1)
 		total_main -= 1
-	if in_deck_dictionary[actualCard.cardNumber] <= 0:
-		in_deck_dictionary.erase(actualCard.cardNumber)
+	if actualCard.get_amount() <= 0:
 		actualCard.name = "PleaseDelete"
 		actualCard.queue_free()
 		update_main_deck_children()
 		update_cheer_deck_children()
+	if in_deck_dictionary[actualCard.cardNumber] <= 0:
+		in_deck_dictionary.erase(actualCard.cardNumber)
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
 	
@@ -789,7 +819,7 @@ func update_analytics():
 	analytics.text = result
 
 func update_info(card_id):
-	$CanvasLayer/InfoPanel._new_info(all_cards[card_id])
+	$CanvasLayer/InfoPanel._new_info(all_cards[card_id],all_cards[card_id])
 
 func clear_info():
 	$CanvasLayer/InfoPanel._clear_showing()
@@ -810,7 +840,6 @@ func _on_save_deck_pressed():
 	if dir:
 		for file_name in dir.get_files():
 			if file_name.ends_with(".json"):
-				print(file_name)
 				var deckButton = Button.new()
 				deckButton.text = "Overwrite " + file_name
 				deckButton.pressed.connect(_save_deck_to_file.bind(path + "/" + file_name))
@@ -834,6 +863,13 @@ func _save_deck_to_file(path):
 	
 	deck_info.deck = []
 	deck_info.cheerDeck = []
+	
+	if mainSleeveSelect.current_sleeve != null:
+		deck_info.sleeve = Array(mainSleeveSelect.current_sleeve.save_webp_to_buffer(true))
+	if cheerSleeveSelect.current_sleeve != null:
+		deck_info.cheerSleeve = Array(cheerSleeveSelect.current_sleeve.save_webp_to_buffer(true))
+	if oshiSleeveSelect.current_sleeve != null:
+		deck_info.oshiSleeve = Array(oshiSleeveSelect.current_sleeve.save_webp_to_buffer(true))
 	
 	for cB in main_deck.get_children():
 		deck_info.deck.append([cB.cardNumber,cB.get_amount(),cB.artNum])

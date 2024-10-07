@@ -40,3 +40,8 @@ func _on_static_body_3d_input_event(_camera, event, _position, _normal, _shape_i
 	var mouse_click = event as InputEventMouseButton
 	if mouse_click and mouse_click.button_index == 1 and mouse_click.pressed:
 		roll()
+
+func new_texture(image):
+	var newMaterial = StandardMaterial3D.new()
+	newMaterial.albedo_texture = ImageTexture.create_from_image(image)
+	$dice/Cube.set_surface_override_material(0,newMaterial)

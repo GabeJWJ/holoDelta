@@ -26,3 +26,5 @@ shape = SubResource("BoxShape3D_iskk3")
 replication_config = SubResource("SceneReplicationConfig_iluht")
 
 [connection signal="input_event" from="dice/StaticBody3D" to="." method="_on_static_body_3d_input_event"]
+
+[editable path="dice"]

@@ -57,6 +57,21 @@ properties/7/replication_mode = 2
 properties/8/path = NodePath(".:can_do_things")
 properties/8/spawn = true
 properties/8/replication_mode = 2
+properties/9/path = NodePath(".:mainSleeve")
+properties/9/spawn = true
+properties/9/replication_mode = 0
+properties/10/path = NodePath(".:cheerSleeve")
+properties/10/spawn = true
+properties/10/replication_mode = 0
+properties/11/path = NodePath(".:oshiSleeve")
+properties/11/spawn = true
+properties/11/replication_mode = 0
+properties/12/path = NodePath(".:playmatBuffer")
+properties/12/spawn = true
+properties/12/replication_mode = 0
+properties/13/path = NodePath(".:diceBuffer")
+properties/13/spawn = true
+properties/13/replication_mode = 0
 
 [sub_resource type="Theme" id="Theme_y8s1y"]
 HScrollBar/styles/grabber = null

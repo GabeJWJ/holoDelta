@@ -12,7 +12,8 @@ var _joined_lobby_id = 0
 var friendsOnly = 0
 
 var deckInfo
-var possibleDecks = []
+var playmat
+var dice
 
 var yourSide
 var opponentSide
@@ -56,6 +57,19 @@ func _ready():
 	$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed = Settings.settings.AllowUnrevealed
 	$CanvasLayer/Options/OptionBackground/SFXSlider.value = Settings.settings.SFXVolume
 	AudioServer.set_bus_volume_db(Settings.sfx_bus_index, Settings.settings.SFXVolume)
+	if Settings.settings.SFXVolume <= -29:
+		AudioServer.set_bus_mute(Settings.sfx_bus_index, true)
+	else:
+		AudioServer.set_bus_mute(Settings.sfx_bus_index, false)
+	if Settings.settings.has("Playmat") and Settings.settings.Playmat.size() > 0:
+		playmat = Image.new()
+		playmat.load_webp_from_buffer(Settings.settings.Playmat)
+		playmat.resize(3485,1480)
+		$CanvasLayer/PlaymatDiceCustom/ColorRect/TextureRect.texture = ImageTexture.create_from_image(playmat)
+	if Settings.settings.has("Dice") and Settings.settings.Dice.size() > 0:
+		dice = Image.new()
+		dice.load_webp_from_buffer(Settings.settings.Dice)
+		$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(dice)
 	$CanvasLayer/Title.text = Settings.en_or_jp("holoDelta","ホロデルタ")
 	$CanvasLayer/LanguageSelect.text = Settings.settings.Language
 	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
@@ -85,9 +99,6 @@ func _on_host_pressed():
 	multiplayer.peer_disconnected.connect(_restart)
 	_add_player()
 	call_deferred("add_child",yourSide,true)
-	#yourSide.oshi = deckInfo.oshi
-	#yourSide.deckList = deckInfo.deck
-	#yourSide.cheerDeckList = deckInfo.cheerDeck
 	$CanvasLayer/Host.visible = false
 	$CanvasLayer/Join.visible = false
 	$CanvasLayer/DeckSelect.visible = false
@@ -99,6 +110,7 @@ func _on_host_pressed():
 	$CanvasLayer/InfoButton.visible = false
 	$CanvasLayer/LanguageSelect.visible = false
 	$CanvasLayer/gradient.visible = false
+	$CanvasLayer/PlaymatDiceCustom.visible = false
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
@@ -123,6 +135,7 @@ func _on_steam_host_pressed():
 	$CanvasLayer/InfoButton.visible = false
 	$CanvasLayer/LanguageSelect.visible = false
 	$CanvasLayer/gradient.visible = false
+	$CanvasLayer/PlaymatDiceCustom.visible = false
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
@@ -233,7 +246,7 @@ func _connect_turn_buttons(side_id):
 	side.ready_decided.connect(_your_ready)
 
 @rpc("any_peer","call_remote","reliable")
-func _start(opponent_id, deck_json):
+func _start(opponent_id, deck_json, playmat_buffer, dice_buffer):
 	opponentSide = possibleSides[opponent_id]
 	set_chosen.rpc_id(opponent_id)
 	
@@ -248,6 +261,16 @@ func _start(opponent_id, deck_json):
 	opponentSide.oshi = json.data.oshi
 	opponentSide.deckList = json.data.deck
 	opponentSide.cheerDeckList = json.data.cheerDeck
+	if json.data.has("sleeve"):
+		opponentSide.mainSleeve = json.data.sleeve
+	if json.data.has("cheerSleeve"):
+		opponentSide.cheerSleeve = json.data.cheerSleeve
+	if json.data.has("oshiSleeve"):
+		opponentSide.oshiSleeve = json.data.oshiSleeve
+	if playmat_buffer:
+		opponentSide.playmatBuffer = playmat_buffer
+	if dice_buffer:
+		opponentSide.diceBuffer = dice_buffer
 	
 	add_child(opponentSide)
 	_connect_turn_buttons.rpc(opponentSide.name)
@@ -314,18 +337,31 @@ func _all_ready():
 	opponentSide.specialStart3.rpc()
 
 func _please_add_join_option():
-	_add_join_option.rpc(multiplayer.get_unique_id(),Steam.getPersonaName(),JSON.stringify(deckInfo))
+	var playmat_buffer
+	if playmat:
+		playmat_buffer = playmat.save_webp_to_buffer(true)
+	var dice_buffer
+	if dice:
+		dice_buffer = dice.save_webp_to_buffer(true)
+	_add_join_option.rpc_id(1,Steam.getPersonaName(),JSON.stringify(deckInfo),playmat_buffer,dice_buffer)
 
 @rpc("any_peer","call_remote","reliable")
-func _add_join_option(opponent_id, steam_name, deck_json):
+func _add_join_option(steam_name, deck_json, playmat_buffer, dice_buffer):
+	var opponent_id = multiplayer.get_remote_sender_id()
 	var newJoinButton = Button.new()
-	newJoinButton.name = str(opponent_id)
+	newJoinButton.name = str(multiplayer.get_remote_sender_id())
 	newJoinButton.text = steam_name
-	newJoinButton.pressed.connect(_start.bind(opponent_id, deck_json))
+	newJoinButton.pressed.connect(_start.bind(opponent_id, deck_json, playmat_buffer, dice_buffer))
 	$CanvasLayer/JoinOptions/ScrollContainer/VBoxContainer.add_child(newJoinButton)
 
 func _please_start():
-	_start.rpc(multiplayer.get_unique_id(), JSON.stringify(deckInfo))
+	var playmat_buffer
+	if playmat:
+		playmat_buffer = playmat.save_webp_to_buffer(true)
+	var dice_buffer
+	if dice:
+		dice_buffer = dice.save_webp_to_buffer(true)
+	_start.rpc(multiplayer.get_unique_id(), JSON.stringify(deckInfo), playmat_buffer, dice_buffer)
 
 func _on_join_pressed():
 	peer = ENetMultiplayerPeer.new()
@@ -356,6 +392,7 @@ func _join_steam_lobby(lobby_id):
 	$CanvasLayer/InfoButton.visible = false
 	$CanvasLayer/LanguageSelect.visible = false
 	$CanvasLayer/gradient.visible = false
+	$CanvasLayer/PlaymatDiceCustom.visible = false
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
@@ -381,6 +418,7 @@ func _on_line_edit_text_submitted(new_text):
 	$CanvasLayer/InfoButton.visible = false
 	$CanvasLayer/LanguageSelect.visible = false
 	$CanvasLayer/gradient.visible = false
+	$CanvasLayer/PlaymatDiceCustom.visible = false
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
@@ -395,8 +433,8 @@ func connect_info_all(side_id):
 	side.card_info_clear.connect(clear_info)
 
 
-func update_info(card):
-	$CanvasLayer/Sidebar/InfoPanel._new_info(card)
+func update_info(topCard, card):
+	$CanvasLayer/Sidebar/InfoPanel._new_info(topCard, card)
 
 func clear_info():
 	$CanvasLayer/Sidebar/InfoPanel._clear_showing()
@@ -409,7 +447,7 @@ func _restart(id=null):
 func _on_steam_player_disconnect(id=0):
 	if opponentSide and id == opponentSide.name.to_int():
 		_restart()
-	elif inGame == false:
+	elif inGame == false and $CanvasLayer/JoinOptions/ScrollContainer/VBoxContainer.has_node(str(id)):
 		$CanvasLayer/JoinOptions/ScrollContainer/VBoxContainer.get_node(str(id)).queue_free()
 
 
@@ -585,9 +623,38 @@ func send_message_on_click():
 	send_message($CanvasLayer/Sidebar/ChatWindow/ToSend.text)
 
 
-func _on_sfx_slider_drag_ended(value_changed):
-	if value_changed:
-		var new_value = $CanvasLayer/Options/OptionBackground/SFXSlider.value
-		AudioServer.set_bus_volume_db(Settings.sfx_bus_index, new_value)
-		Settings.update_settings("SFXVolume", new_value)
-		$CanvasLayer/Options/OptionBackground/SFXSlider/Test.play()
+func _on_sfx_slider_drag_ended(value_changed=null):
+	$CanvasLayer/Options/OptionBackground/SFXSlider/Test.play()
+
+
+func _on_sfx_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(Settings.sfx_bus_index, value)
+	Settings.update_settings("SFXVolume", value)
+	if value <= -29:
+		AudioServer.set_bus_mute(Settings.sfx_bus_index, true)
+	else:
+		AudioServer.set_bus_mute(Settings.sfx_bus_index, false)
+
+
+func _on_playmat_dice_custom_pressed():
+	$CanvasLayer/PlaymatDiceCustom/ColorRect.visible = true
+
+func _on_cosmetics_exit_pressed():
+	$CanvasLayer/PlaymatDiceCustom/ColorRect.visible = false
+
+func _on_playmat_pressed():
+	$CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat/LoadDialog.visible = true
+
+func _on_dice_pressed():
+	$CanvasLayer/PlaymatDiceCustom/ColorRect/Dice/LoadDialog.visible = true
+
+func _on_playmat_load_dialog_file_selected(path):
+	playmat = Image.load_from_file(path)
+	playmat.resize(3485,1480)
+	$CanvasLayer/PlaymatDiceCustom/ColorRect/TextureRect.texture = ImageTexture.create_from_image(playmat)
+	Settings.update_settings("Playmat",Array(playmat.save_webp_to_buffer(true)))
+
+func _on_dice_load_dialog_file_selected(path):
+	dice = Image.load_from_file(path)
+	$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(dice)
+	Settings.update_settings("Dice",Array(dice.save_webp_to_buffer(true)))

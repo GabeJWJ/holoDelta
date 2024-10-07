@@ -1,6 +1,6 @@
 extends Node2D
 
-var showing_card_id = -1
+var showing_card_ids = []
 var showing_player_id = -1
 var showing = []
 var showing_grays = []
@@ -26,16 +26,23 @@ func _process(delta):
 	pass
 
 
-func _new_info(card_to_show):
-	if (card_to_show.cardID == showing_card_id and card_to_show.get_multiplayer_authority() == showing_player_id) or locked:
+func _new_info(top_card, card_to_show):
+	if locked:
 		return
+	if card_to_show.cardID in showing_card_ids and top_card.get_multiplayer_authority() == showing_player_id:
+		_change_show(showing_card_ids.find(card_to_show.cardID) - current_showing)
+		return
+	
+	_clear_showing()
 	
 	var result = []
 	var cheer_result = {"White":[],"Green":[],"Red":[],"Blue":[],"Purple":[],"Yellow":[],"Colorless":[]}
-	result.append([card_to_show.cardFront,card_to_show.full_desc()])
-	for stacked_card in card_to_show.onTopOf:
+	result.append([top_card.cardFront,top_card.full_desc()])
+	showing_card_ids.append(top_card.cardID)
+	for stacked_card in top_card.onTopOf:
+		showing_card_ids.append(stacked_card.cardID)
 		result.append([stacked_card.cardFront,stacked_card.full_desc()])
-	for attached_card in card_to_show.attached:
+	for attached_card in top_card.attached:
 		if attached_card.cardType == "Cheer":
 			var preview = TextureRect.new()
 			preview.z_index = 1
@@ -43,14 +50,13 @@ func _new_info(card_to_show):
 			preview.texture = cheer[attached_card.cheer_color]
 			cheer_result[attached_card.cheer_color].append(preview)
 		else:
+			showing_card_ids.append(attached_card.cardID)
 			result.append([attached_card.cardFront,attached_card.full_desc()])
 	
 	_set_showing(result,cheer_result)
-	showing_card_id = card_to_show.cardID
 	showing_player_id = card_to_show.get_multiplayer_authority()
 
 func _set_showing(to_show,cheer_show):
-	_clear_showing()
 	cheer_attached = cheer_show
 	var max_offset = clamp(100 * (to_show.size() - 1),75,140)
 	var each_offset = 75
@@ -112,7 +118,7 @@ func _clear_showing():
 			icon.queue_free()
 		cheer_attached[cheer_color].clear()
 	$Info/ScrollContainer/CardText.text = ""
-	showing_card_id = -1
+	showing_card_ids = []
 	showing_player_id = -1
 
 func update_word_wrap():
