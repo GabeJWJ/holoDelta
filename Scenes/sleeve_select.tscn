@@ -26,7 +26,7 @@ size = Vector2i(392, 159)
 ok_button_text = "Open"
 file_mode = 0
 access = 2
-filters = PackedStringArray("*.png")
+filters = PackedStringArray("*.png,*.webp")
 show_hidden_files = true
 use_native_dialog = true
 

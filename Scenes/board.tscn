@@ -522,7 +522,7 @@ size = Vector2i(392, 159)
 ok_button_text = "Open"
 file_mode = 0
 access = 2
-filters = PackedStringArray("*.jpg")
+filters = PackedStringArray("*.jpg,*.webp")
 show_hidden_files = true
 use_native_dialog = true
 
@@ -542,7 +542,7 @@ size = Vector2i(392, 159)
 ok_button_text = "Open"
 file_mode = 0
 access = 2
-filters = PackedStringArray("*.png")
+filters = PackedStringArray("*.png,*.webp")
 show_hidden_files = true
 use_native_dialog = true
 
@@ -593,7 +593,7 @@ MagnaDrake for helping with the Mac release
 Weiss and Chill for the visibility he's brought to this project
 
 And assorted thanks to:
-Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran (Passion English), Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87"
+Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth"
 autowrap_mode = 3
 
 [node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]
