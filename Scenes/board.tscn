@@ -381,110 +381,6 @@ text = "SFX"
 stream = ExtResource("12_lpjdh")
 bus = &"SFX"
 
-[node name="InfoButton" type="Button" parent="CanvasLayer"]
-offset_left = 20.0
-offset_top = 683.0
-offset_right = 65.0
-offset_bottom = 704.0
-theme = ExtResource("5_fdkx6")
-text = "info"
-
-[node name="Info" type="ColorRect" parent="CanvasLayer/InfoButton"]
-visible = false
-layout_mode = 0
-offset_left = 83.0
-offset_top = -640.0
-offset_right = 1171.0
-offset_bottom = 4.0
-color = Color(0.113725, 0.164706, 0.223529, 0.905882)
-
-[node name="MadeBy" type="Label" parent="CanvasLayer/InfoButton/Info"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 4.0
-offset_right = 1084.0
-offset_bottom = 67.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 25
-text = "By and large by Gabriel JW Johnson"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Label" type="Label" parent="CanvasLayer/InfoButton/Info"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 75.0
-offset_right = 1082.0
-offset_bottom = 373.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
-text = "Special thanks to:
-Ogbajoj, without whose spreadsheet this never would have been made
-Cyber for helping with the graphic design
-HaruTsunX for helping with the sound design
-MagnaDrake for helping with the Mac release
-よるみ for helping with the Japanese option
-Weiss and Chill for the visibility he's brought to this project
-
-And assorted thanks to:
-Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran (Passion English), Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87"
-autowrap_mode = 3
-
-[node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]
-layout_mode = 0
-offset_left = 138.0
-offset_top = 619.0
-offset_right = 220.0
-offset_bottom = 636.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Version "
-
-[node name="DeckLocationButton" type="Button" parent="CanvasLayer/InfoButton/Info"]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 620.0
-offset_right = 120.0
-offset_bottom = 633.0
-text = "Deck Location"
-
-[node name="DeckLocation" type="Label" parent="CanvasLayer/InfoButton/Info/DeckLocationButton"]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.01
-anchor_bottom = 0.015
-offset_left = -6.0
-offset_top = -29.0
-offset_right = 1622.8
-offset_bottom = -6.465
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Decks are located at "
-
-[node name="Close" type="Button" parent="CanvasLayer/InfoButton/Info"]
-layout_mode = 0
-offset_left = 1034.0
-offset_top = 617.0
-offset_right = 1075.0
-offset_bottom = 630.0
-text = "Close"
-
-[node name="Popup" type="Popup" parent="CanvasLayer"]
-size = Vector2i(1280, 720)
-theme = ExtResource("5_fdkx6")
-
-[node name="Label" type="Label" parent="CanvasLayer/Popup"]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -21.0
-offset_right = 150.0
-offset_bottom = 21.0
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
-text = "vspvjfspvs"
-
 [node name="LanguageSelect" type="MenuButton" parent="CanvasLayer"]
 offset_left = 1200.0
 offset_top = 82.0
@@ -650,8 +546,112 @@ filters = PackedStringArray("*.png")
 show_hidden_files = true
 use_native_dialog = true
 
+[node name="InfoButton" type="Button" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 683.0
+offset_right = 65.0
+offset_bottom = 704.0
+theme = ExtResource("5_fdkx6")
+text = "info"
+
+[node name="Info" type="ColorRect" parent="CanvasLayer/InfoButton"]
+visible = false
+layout_mode = 0
+offset_left = 83.0
+offset_top = -640.0
+offset_right = 1171.0
+offset_bottom = 4.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="MadeBy" type="Label" parent="CanvasLayer/InfoButton/Info"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 1084.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "By and large by Gabriel JW Johnson"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/InfoButton/Info"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 75.0
+offset_right = 1082.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Special thanks to:
+Ogbajoj, without whose spreadsheet this never would have been made
+Cyber for helping with the graphic design
+HaruTsunX for helping with the sound design
+MagnaDrake for helping with the Mac release
+よるみ for helping with the Japanese option
+Weiss and Chill for the visibility he's brought to this project
+
+And assorted thanks to:
+Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran (Passion English), Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87"
+autowrap_mode = 3
+
+[node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 619.0
+offset_right = 220.0
+offset_bottom = 636.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Version "
+
+[node name="DeckLocationButton" type="Button" parent="CanvasLayer/InfoButton/Info"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 620.0
+offset_right = 120.0
+offset_bottom = 633.0
+text = "Deck Location"
+
+[node name="DeckLocation" type="Label" parent="CanvasLayer/InfoButton/Info/DeckLocationButton"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.01
+anchor_bottom = 0.015
+offset_left = -6.0
+offset_top = -29.0
+offset_right = 1622.8
+offset_bottom = -6.465
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Decks are located at "
+
+[node name="Close" type="Button" parent="CanvasLayer/InfoButton/Info"]
+layout_mode = 0
+offset_left = 1034.0
+offset_top = 617.0
+offset_right = 1075.0
+offset_bottom = 630.0
+text = "Close"
+
 [node name="DeckList" parent="CanvasLayer" instance=ExtResource("10_058xr")]
 visible = false
+
+[node name="Popup" type="Popup" parent="CanvasLayer"]
+size = Vector2i(1280, 720)
+theme = ExtResource("5_fdkx6")
+
+[node name="Label" type="Label" parent="CanvasLayer/Popup"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -21.0
+offset_right = 150.0
+offset_bottom = 21.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "vspvjfspvs"
 
 [node name="MainMenu" type="Button" parent="CanvasLayer"]
 visible = false
@@ -731,15 +731,15 @@ zoom = Vector2(0.27, 0.27)
 [connection signal="drag_ended" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="drag_started" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="value_changed" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
-[connection signal="pressed" from="CanvasLayer/InfoButton" to="." method="_on_info_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/InfoButton/Info/DeckLocationButton" to="." method="_on_deck_location_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/InfoButton/Info/Close" to="." method="_on_info_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom" to="." method="_on_playmat_dice_custom_pressed"]
 [connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Exit" to="." method="_on_cosmetics_exit_pressed"]
 [connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat" to="." method="_on_playmat_pressed"]
 [connection signal="file_selected" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat/LoadDialog" to="." method="_on_playmat_load_dialog_file_selected"]
 [connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Dice" to="." method="_on_dice_pressed"]
 [connection signal="file_selected" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Dice/LoadDialog" to="." method="_on_dice_load_dialog_file_selected"]
+[connection signal="pressed" from="CanvasLayer/InfoButton" to="." method="_on_info_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/InfoButton/Info/DeckLocationButton" to="." method="_on_deck_location_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/InfoButton/Info/Close" to="." method="_on_info_button_pressed"]
 [connection signal="cancel" from="CanvasLayer/DeckList" to="." method="_hide_deck_list"]
 [connection signal="selected" from="CanvasLayer/DeckList" to="." method="_on_deck_list_selected"]
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
