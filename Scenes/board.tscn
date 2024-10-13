@@ -100,6 +100,56 @@ offset_right = 272.0
 offset_bottom = 24.0
 text = "Send"
 
+[node name="OptionsWindow" type="Node2D" parent="CanvasLayer/Sidebar"]
+visible = false
+position = Vector2(70, 0)
+
+[node name="SFXSlider" type="HSlider" parent="CanvasLayer/Sidebar/OptionsWindow"]
+offset_left = 25.0
+offset_top = 91.0
+offset_right = 1838.0
+offset_bottom = 225.0
+scale = Vector2(0.12, 0.12)
+theme = ExtResource("5_fdkx6")
+min_value = -30.0
+max_value = 10.0
+scrollable = false
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Sidebar/OptionsWindow/SFXSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = -0.763
+anchor_right = 0.028
+anchor_bottom = -0.763
+offset_left = 1844.67
+offset_top = 109.242
+offset_right = 2171.67
+offset_bottom = 220.242
+theme_override_font_sizes/font_size = 110
+text = "SFX"
+
+[node name="HideCosmetics" type="TextureButton" parent="CanvasLayer/Sidebar/OptionsWindow"]
+offset_left = 26.0
+offset_top = 17.0
+offset_right = 426.0
+offset_bottom = 417.0
+scale = Vector2(0.12, 0.12)
+toggle_mode = true
+texture_normal = ExtResource("6_1x0cl")
+texture_pressed = ExtResource("7_n8awk")
+
+[node name="Unrevealed" type="Label" parent="CanvasLayer/Sidebar/OptionsWindow/HideCosmetics"]
+layout_mode = 0
+offset_left = 468.334
+offset_top = 125.0
+offset_right = 2216.33
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 120
+text = "Hide Opponent Cosmetics"
+
 [node name="Tabs" type="Node2D" parent="CanvasLayer/Sidebar"]
 
 [node name="CardInfo" type="Button" parent="CanvasLayer/Sidebar/Tabs"]
@@ -127,6 +177,15 @@ visible = false
 position = Vector2(44, -5.00006)
 scale = Vector2(0.004, 0.004)
 texture = ExtResource("7_kmt2w")
+
+[node name="Options" type="Button" parent="CanvasLayer/Sidebar/Tabs"]
+offset_left = 15.0
+offset_top = 185.0
+offset_right = 55.0
+offset_bottom = 198.0
+theme = ExtResource("5_fdkx6")
+toggle_mode = true
+text = "Sett."
 
 [node name="Host" type="Button" parent="CanvasLayer"]
 visible = false
@@ -508,10 +567,10 @@ text = "Exit"
 
 [node name="Playmat" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
 layout_mode = 0
-offset_left = 44.0
-offset_top = 580.0
-offset_right = 492.0
-offset_bottom = 620.0
+offset_left = 45.0
+offset_top = 550.0
+offset_right = 493.0
+offset_bottom = 590.0
 theme_override_font_sizes/font_size = 30
 text = "Load Playmat From File"
 
@@ -529,9 +588,9 @@ use_native_dialog = true
 [node name="Dice" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
 layout_mode = 0
 offset_left = 545.0
-offset_top = 580.0
+offset_top = 550.0
 offset_right = 901.0
-offset_bottom = 620.0
+offset_bottom = 590.0
 theme_override_font_sizes/font_size = 30
 text = "Load Die From File"
 
@@ -546,13 +605,32 @@ filters = PackedStringArray("*.png,*.webp")
 show_hidden_files = true
 use_native_dialog = true
 
+[node name="PlaymatDefault" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 620.0
+offset_right = 493.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 25
+text = "Playmat to Default"
+
+[node name="DiceDefault" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 620.0
+offset_right = 901.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 25
+text = "Die to Default"
+
 [node name="InfoButton" type="Button" parent="CanvasLayer"]
 offset_left = 20.0
 offset_top = 683.0
 offset_right = 65.0
 offset_bottom = 704.0
 theme = ExtResource("5_fdkx6")
-text = "info"
+theme_override_font_sizes/font_size = 15
+text = "Info"
 
 [node name="Info" type="ColorRect" parent="CanvasLayer/InfoButton"]
 visible = false
@@ -593,7 +671,7 @@ MagnaDrake for helping with the Mac release
 Weiss and Chill for the visibility he's brought to this project
 
 And assorted thanks to:
-Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth"
+Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata"
 autowrap_mode = 3
 
 [node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]
@@ -712,8 +790,13 @@ zoom = Vector2(0.27, 0.27)
 
 [connection signal="text_submitted" from="CanvasLayer/Sidebar/ChatWindow/ToSend" to="." method="send_message"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/ChatWindow/ToSend/Send" to="." method="send_message_on_click"]
+[connection signal="drag_ended" from="CanvasLayer/Sidebar/OptionsWindow/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="drag_started" from="CanvasLayer/Sidebar/OptionsWindow/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="CanvasLayer/Sidebar/OptionsWindow/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="toggled" from="CanvasLayer/Sidebar/OptionsWindow/HideCosmetics" to="." method="_on_hide_cosmetics_toggled"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/CardInfo" to="." method="_on_card_info_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/Chat" to="." method="_on_chat_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/Options" to="." method="_on_sidebar_options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Join" to="." method="_on_join_pressed"]
 [connection signal="text_submitted" from="CanvasLayer/IPPrompt/LineEdit" to="." method="_on_line_edit_text_submitted"]
@@ -737,6 +820,8 @@ zoom = Vector2(0.27, 0.27)
 [connection signal="file_selected" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat/LoadDialog" to="." method="_on_playmat_load_dialog_file_selected"]
 [connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Dice" to="." method="_on_dice_pressed"]
 [connection signal="file_selected" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Dice/LoadDialog" to="." method="_on_dice_load_dialog_file_selected"]
+[connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/PlaymatDefault" to="." method="_on_playmat_default_pressed"]
+[connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/DiceDefault" to="." method="_on_dice_default_pressed"]
 [connection signal="pressed" from="CanvasLayer/InfoButton" to="." method="_on_info_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/InfoButton/Info/DeckLocationButton" to="." method="_on_deck_location_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/InfoButton/Info/Close" to="." method="_on_info_button_pressed"]

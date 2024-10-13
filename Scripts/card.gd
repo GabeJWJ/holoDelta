@@ -589,6 +589,11 @@ func trulyHide():
 		flipDown()
 		trulyHidden = true
 
+func updateBack(newBack):
+	cardBack = newBack
+	if faceDown:
+		$Front.texture = cardBack
+
 
 func _on_card_button_pressed():
 	emit_signal("card_clicked",cardID)

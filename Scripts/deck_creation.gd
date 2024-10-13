@@ -898,6 +898,7 @@ func _on_save_pressed(confirmed=false):
 	if !confirmed and FileAccess.file_exists("user://Decks/" + file_name):
 		$CanvasLayer/SavePrompt/OverwriteConfirm/Label.text = "Overwrite " + file_name + "?"
 		$CanvasLayer/SavePrompt/OverwriteConfirm.visible = true
+		$CanvasLayer/SavePrompt/ScrollContainer.scroll_vertical = 0
 	else:
 		_save_deck_to_file("user://Decks/" + file_name)
 

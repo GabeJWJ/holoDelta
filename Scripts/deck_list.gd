@@ -33,6 +33,7 @@ func _all_decks():
 				deckButton.pressed.connect(_set_selected.bind(json.data))
 				list.add_child(deckButton)
 		list.move_child(loadButton,-1)
+		$ScrollContainer.scroll_vertical = 0
 	else:
 		print("An error occurred when trying to access the path.")
 

@@ -4,7 +4,7 @@ var settings
 @onready var json = JSON.new()
 var languages = ["English","日本語"]
 enum bloomCode {OK,Instant,Skip,No}
-var version = "1.1.1"
+var version = "1.1.1.1"
 
 var to_jp = {}
 
@@ -50,7 +50,10 @@ func _process(delta):
 	pass
 
 func update_settings(key, value):
-	settings[key] = value
+	if value == null:
+		settings.erase(key)
+	else:
+		settings[key] = value
 	var file_access = FileAccess.open("user://settings.json",FileAccess.WRITE)
 	file_access.store_line(JSON.stringify(settings))
 	file_access.close()

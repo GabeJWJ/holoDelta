@@ -598,8 +598,9 @@ func showLookAt(list_of_cards):
 		newButton.scale = Vector2(0.7,0.7)
 		newButton.position = Vector2(210*i+5,5)
 	
-	lookAtList.custom_minimum_size = Vector2(list_of_cards.size()*280 + 10, 0)
+	lookAtList.custom_minimum_size = Vector2(list_of_cards.size()*220 + 10, 0)
 	lookAt.get_h_scroll_bar().custom_minimum_size.y = 30
+	lookAt.scroll_horizontal = 0
 	
 	if lookAtList.get_child_count() >0:
 		lookAt.visible = true
@@ -710,6 +711,55 @@ func _on_cancel_pressed():
 	hideLookAt()
 	remove_prompt()
 	hideZoneSelection()
+
+func _hide_cosmetics():
+	for cardB in all_cards:
+		if cardB.cardType in ["Cheer","Oshi"]:
+			cardB.updateBack(defaultCheer)
+		else:
+			cardB.updateBack(defaultMain)
+	deck.update_back(defaultMain.get_image())
+	holopower.update_back(defaultMain.get_image())
+	cheerDeck.update_back(defaultCheer.get_image())
+	
+	$gradient.texture = get_parent().default_playmat
+	$SubViewportContainer/SubViewport/Node3D/Die.new_texture(get_parent().default_dice)
+
+func _redo_cosmetics():
+	var updated_cheer = false
+	var updated_main = false
+	for cardB in all_cards:
+		match cardB.cardType:
+			"Oshi":
+				if !oshiSleeve.is_empty():
+					var image = Image.new()
+					image.load_webp_from_buffer(oshiSleeve)
+					cardB.updateBack(ImageTexture.create_from_image(image))
+			"Cheer":
+				if !cheerSleeve.is_empty():
+					var image = Image.new()
+					image.load_webp_from_buffer(cheerSleeve)
+					cardB.updateBack(ImageTexture.create_from_image(image))
+					if !updated_cheer:
+						cheerDeck.update_back(image)
+						updated_cheer = true
+			_:
+				if !mainSleeve.is_empty():
+					var image = Image.new()
+					image.load_webp_from_buffer(mainSleeve)
+					cardB.updateBack(ImageTexture.create_from_image(image))
+					if !updated_main:
+						deck.update_back(image)
+						holopower.update_back(image)
+						updated_main = true
+	if !playmatBuffer.is_empty():
+		var image = Image.new()
+		image.load_webp_from_buffer(playmatBuffer)
+		$gradient.texture = ImageTexture.create_from_image(image)
+	if !diceBuffer.is_empty():
+		var image = Image.new()
+		image.load_webp_from_buffer(diceBuffer)
+		$SubViewportContainer/SubViewport/Node3D/Die.new_texture(image)
 
 
 func _on_zone_enter(zone_id):
@@ -840,7 +890,7 @@ func _on_card_clicked(card_id):
 					if canUseSkill and canPayCost:
 						popup.add_item(Settings.en_or_jp("\"","「") + skill[0] + Settings.en_or_jp("\"","」") + sp_string + "-" + cost_string,70+i) 
 		
-		if popup.item_count > 0 and actualCard.cardType != "Oshi":
+		if popup.item_count > 0 and actualCard.cardType != "Oshi" and playing != currentCard:
 			popup.add_separator()
 		
 		if life.size() > 0 and actualCard == life[0] and all_occupied_zones().size() > 0:

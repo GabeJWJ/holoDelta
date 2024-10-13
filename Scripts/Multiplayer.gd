@@ -15,6 +15,9 @@ var deckInfo
 var playmat
 var dice
 
+var default_playmat = preload("res://playmat.jpg")
+var default_dice = preload("res://diceTexture.png").get_image()
+
 var yourSide
 var opponentSide
 var possibleSides = {}
@@ -248,7 +251,6 @@ func _connect_turn_buttons(side_id):
 @rpc("any_peer","call_remote","reliable")
 func _start(opponent_id, deck_json, playmat_buffer, dice_buffer):
 	opponentSide = possibleSides[opponent_id]
-	set_chosen.rpc_id(opponent_id)
 	
 	Steam.setLobbyJoinable(_hosted_lobby_id,false)
 	for possible_id in possibleSides:
@@ -273,6 +275,7 @@ func _start(opponent_id, deck_json, playmat_buffer, dice_buffer):
 		opponentSide.diceBuffer = dice_buffer
 	
 	add_child(opponentSide)
+	set_chosen.rpc_id(opponent_id)
 	_connect_turn_buttons.rpc(opponentSide.name)
 	yourSide.specialStart()
 	opponentSide.call_deferred("_start")
@@ -287,6 +290,8 @@ func set_chosen():
 	chosen = true
 	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
 	$CanvasLayer/JoinWait.visible = false
+	yourSide = get_node(str(multiplayer.get_unique_id()))
+	opponentSide = get_node("1")
 
 func _your_rps(choice):
 	if multiplayer.get_unique_id() == 1:
@@ -594,14 +599,31 @@ func _on_deck_location_button_pressed():
 
 func _on_card_info_pressed():
 	$CanvasLayer/Sidebar/ChatWindow.visible = false
+	$CanvasLayer/Sidebar/OptionsWindow.visible = false
+	
 	$CanvasLayer/Sidebar/Tabs/Chat.button_pressed = false
+	$CanvasLayer/Sidebar/Tabs/Options.button_pressed = false
+	
 	$CanvasLayer/Sidebar/InfoPanel.visible = true
 
 func _on_chat_pressed():
 	$CanvasLayer/Sidebar/InfoPanel.visible = false
+	$CanvasLayer/Sidebar/OptionsWindow.visible = false
+	
 	$CanvasLayer/Sidebar/Tabs/CardInfo.button_pressed = false
+	$CanvasLayer/Sidebar/Tabs/Options.button_pressed = false
+	
 	$CanvasLayer/Sidebar/ChatWindow.visible = true
 	$CanvasLayer/Sidebar/Tabs/Chat/Notification.visible = false
+
+func _on_sidebar_options_pressed():
+	$CanvasLayer/Sidebar/InfoPanel.visible = false
+	$CanvasLayer/Sidebar/ChatWindow.visible = false
+	
+	$CanvasLayer/Sidebar/Tabs/CardInfo.button_pressed = false
+	$CanvasLayer/Sidebar/Tabs/Chat.button_pressed = false
+	
+	$CanvasLayer/Sidebar/OptionsWindow.visible = true
 
 
 @rpc("any_peer","call_local","reliable")
@@ -658,3 +680,22 @@ func _on_dice_load_dialog_file_selected(path):
 	dice = Image.load_from_file(path)
 	$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(dice)
 	Settings.update_settings("Dice",Array(dice.save_webp_to_buffer(true)))
+
+
+func _on_playmat_default_pressed():
+	playmat = null
+	$CanvasLayer/PlaymatDiceCustom/ColorRect/TextureRect.texture = default_playmat
+	Settings.update_settings("Playmat",null)
+
+
+func _on_dice_default_pressed():
+	dice = null
+	$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(default_dice)
+	Settings.update_settings("Dice",null)
+
+
+func _on_hide_cosmetics_toggled(toggled_on):
+	if toggled_on:
+		opponentSide._hide_cosmetics()
+	else:
+		opponentSide._redo_cosmetics()

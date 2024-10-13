@@ -62,6 +62,9 @@ func _set_showing(to_show,cheer_show):
 	var each_offset = 75
 	if to_show.size() > 1:
 		each_offset = clamp((max_offset-10)/(to_show.size()-1),0,75)
+		$ScrollIcon.visible = true
+	else:
+		$ScrollIcon.visible = false
 	for i in range(to_show.size()):
 		var entry = to_show[-i-1]
 		var preview = TextureRect.new()
@@ -120,6 +123,7 @@ func _clear_showing():
 	$Info/ScrollContainer/CardText.text = ""
 	showing_card_ids = []
 	showing_player_id = -1
+	$ScrollIcon.visible = false
 
 func update_word_wrap():
 	match Settings.settings.Language:

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://chrab4uqxsh2s"]
+[gd_scene load_steps=5 format=3 uid="uid://chrab4uqxsh2s"]
 
 [ext_resource type="Script" path="res://Scripts/info_panel.gd" id="1_dle75"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="2_ducyq"]
 [ext_resource type="Texture2D" uid="uid://brfosqsw30a1j" path="res://CyberAssets/DeckBuilder/61457.png" id="3_7wkbs"]
+[ext_resource type="Texture2D" uid="uid://syjyaota42p2" path="res://CyberAssets/Game Side Menu/scroll_icon_2.png" id="4_onx1c"]
 
 [node name="InfoPanel" type="Node2D"]
 script = ExtResource("1_dle75")
@@ -47,3 +48,11 @@ theme = ExtResource("2_ducyq")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 110
 text = "CTRL"
+
+[node name="ScrollIcon" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.823529)
+z_index = 4
+position = Vector2(28, 36)
+scale = Vector2(0.132812, 0.132812)
+texture = ExtResource("4_onx1c")
