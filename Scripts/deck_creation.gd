@@ -1,7 +1,5 @@
 extends Node2D
 
-var database
-
 const card = preload("res://Scenes/card.tscn")
 const default_sleeve = preload("res://holoBack.png")
 const default_cheer_sleeve = preload("res://cheerBack.png")
@@ -85,15 +83,7 @@ func mulligan_odds(draw_count):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	database = SQLite.new()
-	database.read_only = true
-	if OS.has_feature("editor"):
-		database.path = "res://cardData.db"
-	else:
-		database.path = OS.get_executable_path().get_base_dir() + "/cardData.db"
-	database.open_db()
-	
-	var art_data = database.select_rows("cardHasArt","",["cardID","art_index","unrevealed"])
+	var art_data = Database.db.select_rows("cardHasArt","",["cardID","art_index","unrevealed"])
 	
 	art_data.sort_custom(custom_art_row_sort)
 	
@@ -489,7 +479,7 @@ func load_from_deck_info(deck_info):
 	if oshiCard == null:
 		create_oshi(deck_info.oshi[0],deck_info.oshi[1])
 	else:
-		oshiCard.setup_info(deck_info.oshi[0],database,deck_info.oshi[1])
+		oshiCard.setup_info(deck_info.oshi[0],deck_info.oshi[1])
 	
 	for card_info in deck_info.deck:
 		create_main_deck_card(card_info[0],card_info[2],card_info[1])
@@ -553,7 +543,7 @@ func create_card_button(number,art_code):
 	var new_id = all_cards.size()
 	var newCard = card.instantiate()
 	newCard.name = "Card" + str(new_id)
-	newCard.setup_info(number,database,art_code)
+	newCard.setup_info(number,art_code)
 	newCard.cardID = new_id
 	
 	#newCard.card_clicked.connect(_on_card_clicked)
@@ -607,7 +597,7 @@ func _on_menu_card_clicked(card_id):
 			if oshiCard == null:
 				create_oshi(actualCard.cardNumber,actualCard.artNum)
 			else:
-				oshiCard.setup_info(actualCard.cardNumber,database,actualCard.artNum)
+				oshiCard.setup_info(actualCard.cardNumber,actualCard.artNum)
 		"Cheer":
 			var alreadyHere = find_in_deck_with_number(actualCard.cardNumber,actualCard.artNum,cheer_deck)
 			if alreadyHere == null:
@@ -768,7 +758,7 @@ func is_deck_legal():
 			nonsensical = true
 	
 	for cardNumber in in_deck_dictionary:
-		var data = database.select_rows("mainCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
+		var data = Database.db.select_rows("mainCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
 		if data.cardLimit != -1 and in_deck_dictionary[cardNumber] > data.cardLimit:
 			too_many_copies = true
 			$CanvasLayer/Problems/ProblemList.text += "Too many copies of " + cardNumber + "\n"
@@ -865,11 +855,11 @@ func _save_deck_to_file(path):
 	deck_info.cheerDeck = []
 	
 	if mainSleeveSelect.current_sleeve != null:
-		deck_info.sleeve = Array(mainSleeveSelect.current_sleeve.save_webp_to_buffer(true))
+		deck_info.sleeve = Array(mainSleeveSelect.current_sleeve.save_webp_to_buffer(true, 0.45))
 	if cheerSleeveSelect.current_sleeve != null:
-		deck_info.cheerSleeve = Array(cheerSleeveSelect.current_sleeve.save_webp_to_buffer(true))
+		deck_info.cheerSleeve = Array(cheerSleeveSelect.current_sleeve.save_webp_to_buffer(true, 0.45))
 	if oshiSleeveSelect.current_sleeve != null:
-		deck_info.oshiSleeve = Array(oshiSleeveSelect.current_sleeve.save_webp_to_buffer(true))
+		deck_info.oshiSleeve = Array(oshiSleeveSelect.current_sleeve.save_webp_to_buffer(true, 0.45))
 	
 	for cB in main_deck.get_children():
 		deck_info.deck.append([cB.cardNumber,cB.get_amount(),cB.artNum])

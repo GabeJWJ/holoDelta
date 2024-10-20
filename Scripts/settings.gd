@@ -4,7 +4,7 @@ var settings
 @onready var json = JSON.new()
 var languages = ["English","日本語"]
 enum bloomCode {OK,Instant,Skip,No}
-var version = "1.1.1.1"
+var version = "1.1.2"
 
 var to_jp = {}
 
@@ -20,18 +20,10 @@ func _ready():
 	if !settings.has("SFXVolume"):
 		settings["SFXVolume"] = 0
 	
-	var database = SQLite.new()
-	database.read_only = true
-	if OS.has_feature("editor"):
-		database.path = "res://cardData.db"
-	else:
-		database.path = OS.get_executable_path().get_base_dir() + "/cardData.db"
-	database.open_db()
-	
-	var color_data = database.select_rows("colors","",["*"])
-	var name_data = database.select_rows("holomemNames","",["*"])
-	var supp_type_data = database.select_rows("supportTypes","",["*"])
-	var tag_data = database.select_rows("tags","",["*"])
+	var color_data = Database.db.select_rows("colors","",["*"])
+	var name_data = Database.db.select_rows("holomemNames","",["*"])
+	var supp_type_data = Database.db.select_rows("supportTypes","",["*"])
+	var tag_data = Database.db.select_rows("tags","",["*"])
 	
 	for row in color_data:
 		to_jp[row.colorName] = row.jpName

@@ -26,9 +26,12 @@ var inGame = false
 
 var yourRPS = -1
 var opponentRPS = -1
-
+var yourMulligan = false
+var opponentMulligan = false
 var yourReady = false
 var opponentReady = false
+
+var firstTurn = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -236,7 +239,9 @@ func _add_player(id=1):
 		yourSide.ended_turn.connect(_on_end_turn)
 		yourSide.made_turn_choice.connect(_on_your_choice_made)
 		yourSide.rps.connect(_your_rps)
+		yourSide.mulligan_done.connect(_your_mulligan)
 		yourSide.ready_decided.connect(_your_ready)
+		yourSide.sent_game_message.connect(_on_side_gave_game_message)
 	else:
 		possibleSides[id] = side
 
@@ -246,7 +251,9 @@ func _connect_turn_buttons(side_id):
 	side.ended_turn.connect(_on_opponent_end_turn)
 	side.made_turn_choice.connect(_on_opponent_choice_made)
 	side.rps.connect(_your_rps)
+	side.mulligan_done.connect(_your_mulligan)
 	side.ready_decided.connect(_your_ready)
+	side.sent_game_message.connect(_on_side_gave_game_message)
 
 @rpc("any_peer","call_remote","reliable")
 func _start(opponent_id, deck_json, playmat_buffer, dice_buffer):
@@ -323,6 +330,36 @@ func _rps_decide():
 		opponentSide.rps_end.rpc()
 		opponentSide._show_turn_choice.rpc()
 
+@rpc("any_peer","call_remote","reliable")
+func _on_your_choice_made(choice):
+	yourSide.set_player1.rpc(choice)
+	yourSide.set_is_turn.rpc(choice)
+	opponentSide.set_player1.rpc(!choice)
+	opponentSide.set_is_turn.rpc(!choice)
+	yourSide.specialStart2()
+	opponentSide.specialStart2.rpc()
+
+func _on_opponent_choice_made(choice):
+	_on_your_choice_made.rpc(!choice)
+
+func _your_mulligan():
+	if multiplayer.get_unique_id() == 1:
+		yourMulligan = true
+		if opponentMulligan:
+			_all_mulligan()
+	else:
+		_opponent_mulligan.rpc()
+
+@rpc("any_peer","call_remote","reliable")
+func _opponent_mulligan():
+	opponentMulligan = true
+	if yourMulligan:
+		_all_mulligan()
+
+func _all_mulligan():
+	yourSide.specialStart3()
+	opponentSide.specialStart3.rpc()
+
 func _your_ready():
 	if multiplayer.get_unique_id() == 1:
 		yourReady = true
@@ -338,16 +375,17 @@ func _opponent_ready():
 		_all_ready()
 
 func _all_ready():
-	yourSide.specialStart3()
-	opponentSide.specialStart3.rpc()
+	yourSide.specialStart4()
+	opponentSide.specialStart4.rpc()
+	_enable_steps.rpc()
 
 func _please_add_join_option():
 	var playmat_buffer
 	if playmat:
-		playmat_buffer = playmat.save_webp_to_buffer(true)
+		playmat_buffer = playmat.save_webp_to_buffer(true,0.6)
 	var dice_buffer
 	if dice:
-		dice_buffer = dice.save_webp_to_buffer(true)
+		dice_buffer = dice.save_webp_to_buffer(true,0.4)
 	_add_join_option.rpc_id(1,Steam.getPersonaName(),JSON.stringify(deckInfo),playmat_buffer,dice_buffer)
 
 @rpc("any_peer","call_remote","reliable")
@@ -481,19 +519,10 @@ func _on_direct_connect_pressed():
 	peer = ENetMultiplayerPeer.new()
 
 @rpc("any_peer","call_remote","reliable")
-func _on_your_choice_made(choice):
-	yourSide.set_player1.rpc(choice)
-	yourSide.set_is_turn.rpc(choice)
-	opponentSide.set_player1.rpc(!choice)
-	opponentSide.set_is_turn.rpc(!choice)
-	yourSide.specialStart2()
-	opponentSide.specialStart2.rpc()
-
-func _on_opponent_choice_made(choice):
-	_on_your_choice_made.rpc(!choice)
-
-@rpc("any_peer","call_remote","reliable")
 func _on_end_turn(fromOpponent = false):
+	if firstTurn:
+		_enable_steps.rpc(true)
+		firstTurn = false
 	if fromOpponent:
 		yourSide.set_is_turn.rpc(true)
 		opponentSide.set_is_turn.rpc(false)
@@ -629,10 +658,11 @@ func _on_sidebar_options_pressed():
 @rpc("any_peer","call_local","reliable")
 func send_message_rpc(message):
 	if multiplayer.get_remote_sender_id() == multiplayer.get_unique_id():
-		chat.text += "\nYou: "
+		chat.text += "\n\nYou: "
 	else:
-		chat.text += "\nOpponent: "
+		chat.text += "\n\nOpponent: "
 	chat.text += message
+	$CanvasLayer/Sidebar/ChatWindow/ScrollContainer.scroll_vertical = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer.get_v_scroll_bar().max_value
 	if !$CanvasLayer/Sidebar/ChatWindow.visible:
 		$CanvasLayer/Sidebar/Tabs/Chat/Notification.visible = true
 
@@ -643,6 +673,18 @@ func send_message(message):
 
 func send_message_on_click():
 	send_message($CanvasLayer/Sidebar/ChatWindow/ToSend.text)
+
+@rpc("any_peer","call_local","reliable")
+func game_message(message):
+	if multiplayer.get_remote_sender_id() == multiplayer.get_unique_id():
+		chat.text += "\nYou "
+	else:
+		chat.text += "\nOpponent "
+	chat.text += message
+	$CanvasLayer/Sidebar/ChatWindow/ScrollContainer.scroll_vertical = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer.get_v_scroll_bar().max_value
+
+func _on_side_gave_game_message(message):
+	game_message.rpc(message)
 
 
 func _on_sfx_slider_drag_ended(value_changed=null):
@@ -699,3 +741,64 @@ func _on_hide_cosmetics_toggled(toggled_on):
 		opponentSide._hide_cosmetics()
 	else:
 		opponentSide._redo_cosmetics()
+
+@rpc("any_peer","call_local","reliable")
+func _select_step(step_id):
+	for stepButton in $CanvasLayer/Sidebar/Steps.get_children():
+		if stepButton.name.contains(str(step_id)):
+			stepButton.set_pressed_no_signal(true)
+		else:
+			stepButton.set_pressed_no_signal(false)
+	yourSide.step = step_id
+
+func _on_step_pressed(toggle_on, step_id):
+	$CanvasLayer/Sidebar/Steps.get_node("Step" + str(step_id)).set_pressed_no_signal(!toggle_on)
+	if !yourSide.is_turn:
+		return
+	_select_step.rpc(step_id)
+
+@rpc("any_peer","call_local","reliable")
+func _enable_steps(allow_performance = false):
+	for stepButton in $CanvasLayer/Sidebar/Steps.get_children():
+		if stepButton.name.contains("5"):
+			stepButton.disabled = !allow_performance
+		else:
+			stepButton.disabled = false
+
+func _steps_enabled():
+	for stepButton in $CanvasLayer/Sidebar/Steps.get_children():
+		if !stepButton.disabled:
+			return true
+	return false
+
+func _next_step():
+	var result = yourSide.step + 1
+	if result == 5 and $CanvasLayer/Sidebar/Steps/Step5.disabled:
+		result = 6
+	return result
+
+func _last_step():
+	var result = yourSide.step - 1
+	if result == 0:
+		result = 1
+	elif result == 5 and $CanvasLayer/Sidebar/Steps/Step5.disabled:
+		result = 4
+	return result
+
+func _unhandled_key_input(event):
+	if yourSide != null:
+		if event.is_action_pressed("SwapPanels"):
+			if $CanvasLayer/Sidebar/ChatWindow.visible:
+				_on_card_info_pressed()
+			elif $CanvasLayer/Sidebar/InfoPanel.visible:
+				_on_chat_pressed()
+		if yourSide.is_turn and _steps_enabled():
+			if event.is_action_pressed("Next Step"):
+				var newStep = _next_step()
+				if newStep == 7:
+					yourSide.end_turn()
+				else:
+					_select_step.rpc(newStep)
+			elif event.is_action_pressed("Last Step"):
+				var newStep = _last_step()
+				_select_step.rpc(newStep)

@@ -33,4 +33,5 @@ func new_sleeve(image=null):
 		$Default.disabled = false
 		image.resize(309,429)
 		current_sleeve = image
+		#print(len(image.save_webp_to_buffer(true,0.45)))
 	$Preview.texture = ImageTexture.create_from_image(image)

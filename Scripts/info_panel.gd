@@ -29,9 +29,6 @@ func _process(delta):
 func _new_info(top_card, card_to_show):
 	if locked:
 		return
-	if card_to_show.cardID in showing_card_ids and top_card.get_multiplayer_authority() == showing_player_id:
-		_change_show(showing_card_ids.find(card_to_show.cardID) - current_showing)
-		return
 	
 	_clear_showing()
 	
@@ -53,10 +50,10 @@ func _new_info(top_card, card_to_show):
 			showing_card_ids.append(attached_card.cardID)
 			result.append([attached_card.cardFront,attached_card.full_desc()])
 	
-	_set_showing(result,cheer_result)
+	_set_showing(result, cheer_result, showing_card_ids.find(card_to_show.cardID))
 	showing_player_id = card_to_show.get_multiplayer_authority()
 
-func _set_showing(to_show,cheer_show):
+func _set_showing(to_show, cheer_show, start_index):
 	cheer_attached = cheer_show
 	var max_offset = clamp(100 * (to_show.size() - 1),75,140)
 	var each_offset = 75
@@ -94,7 +91,7 @@ func _set_showing(to_show,cheer_show):
 			$Info.add_child(icon)
 			icon.position = Vector2(15+(each_offset*cheer_i),190)
 			cheer_i += 1
-	_show_specific(0)
+	_show_specific(start_index)
 
 func _show_specific(showing_id):
 	$Info/ScrollContainer/CardText.text = showing[showing_id][1]
@@ -141,7 +138,7 @@ func _input(event):
 			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 				_change_show()
 	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_CTRL:
+		if event.is_action_pressed("LockInfo"):
 			locked = !locked
 			if locked:
 				$LockOff.modulate.a = 1

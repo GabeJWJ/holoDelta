@@ -68,11 +68,11 @@ func _process(delta):
 	pass
 
 
-func setup_info(number,database,art_code,back=null):
+func setup_info(number,art_code,back=null):
 	cardNumber = number
 	artNum = art_code
-	var data1 = database.select_rows("mainCards","cardID LIKE '" + cardNumber + "'", ["*"])
-	var art_data = database.select_rows("cardHasArt","cardID LIKE '" + cardNumber + "' AND art_index = " + str(art_code), ["*"])
+	var data1 = Database.db.select_rows("mainCards","cardID LIKE '" + cardNumber + "'", ["*"])
+	var art_data = Database.db.select_rows("cardHasArt","cardID LIKE '" + cardNumber + "' AND art_index = " + str(art_code), ["*"])
 	if data1.is_empty() or art_data.is_empty():
 		notFound = true
 		match Settings.settings.Language:
@@ -112,28 +112,28 @@ func setup_info(number,database,art_code,back=null):
 	
 	match cardType:
 		"Oshi":
-			var data2 = database.select_rows("oshiCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
+			var data2 = Database.db.select_rows("oshiCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
 			life = data2.life
 			oshi_color = PackedStringArray()
-			for row in database.select_rows("oshiHasColor","cardID LIKE '" + cardNumber + "'", ["*"]):
+			for row in Database.db.select_rows("oshiHasColor","cardID LIKE '" + cardNumber + "'", ["*"]):
 				match Settings.settings.Language:
 					"English":
 						oshi_color.append(row.color)
 					"日本語":
 						oshi_color.append(Settings.to_jp[row.color])
 			oshi_name = PackedStringArray()
-			for row in database.select_rows("oshiHasName","cardID LIKE '" + cardNumber + "'", ["*"]):
+			for row in Database.db.select_rows("oshiHasName","cardID LIKE '" + cardNumber + "'", ["*"]):
 				match Settings.settings.Language:
 					"English":
 						oshi_name.append(row.name)
 					"日本語":
 						oshi_name.append(Settings.to_jp[row.name])
 			oshi_skills = []
-			for row in database.select_rows("oshiHasSkill","cardID LIKE '" + cardNumber + "'", ["*"]):
+			for row in Database.db.select_rows("oshiHasSkill","cardID LIKE '" + cardNumber + "'", ["*"]):
 				oshi_skills.append([Settings.en_or_jp(row.skillName,row.jpName),row.cost,bool(row.sp)])
 		"Holomem":
 			bloomed_this_turn = false
-			var data2 = database.select_rows("holomemCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
+			var data2 = Database.db.select_rows("holomemCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
 			level = data2.level
 			buzz = bool(data2.buzz)
 			hp = data2.hp
@@ -142,21 +142,21 @@ func setup_info(number,database,art_code,back=null):
 			baton_pass_cost = data2.batonPassCost
 			status = []
 			holomem_color = PackedStringArray()
-			for row in database.select_rows("holomemHasColor","cardID LIKE '" + cardNumber + "'", ["*"]):
+			for row in Database.db.select_rows("holomemHasColor","cardID LIKE '" + cardNumber + "'", ["*"]):
 				match Settings.settings.Language:
 					"English":
 						holomem_color.append(row.color)
 					"日本語":
 						holomem_color.append(Settings.to_jp[row.color])
 			holomem_name = PackedStringArray()
-			for row in database.select_rows("holomemHasName","cardID LIKE '" + cardNumber + "'", ["*"]):
+			for row in Database.db.select_rows("holomemHasName","cardID LIKE '" + cardNumber + "'", ["*"]):
 				match Settings.settings.Language:
 					"English":
 						holomem_name.append(row.name)
 					"日本語":
 						holomem_name.append(Settings.to_jp[row.name])
 			tags = PackedStringArray()
-			for row in database.select_rows("holomemHasTag","cardID LIKE '" + cardNumber + "'", ["*"]):
+			for row in Database.db.select_rows("holomemHasTag","cardID LIKE '" + cardNumber + "'", ["*"]):
 				match Settings.settings.Language:
 					"English":
 						tags.append(row.tag)
@@ -169,7 +169,7 @@ func setup_info(number,database,art_code,back=null):
 			if buzz:
 				cardName += " buzz!"
 		"Support":
-			var data2 = database.select_rows("supportCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
+			var data2 = Database.db.select_rows("supportCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
 			limited = bool(data2.limited)
 			match Settings.settings.Language:
 				"English":
@@ -177,7 +177,7 @@ func setup_info(number,database,art_code,back=null):
 				"日本語":
 					supportType = Settings.to_jp[data2.supportType]
 		"Cheer":
-			var data2 = database.select_rows("cheerCards","cardID LIKE '" + cardNumber + "'", ["*"])
+			var data2 = Database.db.select_rows("cheerCards","cardID LIKE '" + cardNumber + "'", ["*"])
 			if data2.is_empty():
 				cheer_color = "Colorless"
 			else:
@@ -518,7 +518,13 @@ func playOnTopOf(other_card):
 	other_card.clear_extra_hp()
 	other_card.status = []
 	
-	move_to(other_card.position)
+	var newPos = other_card.position
+	move_to(newPos)
+	if rested:
+		newPos += Vector2(50, 50)
+	position = newPos - Vector2(0,100)
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "position", newPos, 0.1)
 	
 	emit_signal("move_behind_request",other_card.cardID, cardID)
 	for i in range(1, onTopOf.size()):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=20 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
@@ -12,8 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://1dw81uea60el" path="res://CyberAssets/Game Side Menu/Notification.svg" id="7_kmt2w"]
 [ext_resource type="Texture2D" uid="uid://tqwtibgdslug" path="res://checkOn.png" id="7_n8awk"]
 [ext_resource type="PackedScene" uid="uid://cvqdjg5xohy5a" path="res://Scenes/deck_list.tscn" id="10_058xr"]
+[ext_resource type="Theme" uid="uid://das1sj7oj6yqf" path="res://Themes/step.tres" id="10_dyxng"]
 [ext_resource type="AudioStream" uid="uid://citw8blr274yn" path="res://HaruTsunXAssets/Die Roll 2.wav" id="12_lpjdh"]
 [ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="14_rk7pw"]
+[ext_resource type="Script" path="res://Scripts/RemapButton.gd" id="14_x8gke"]
 [ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="15_ycoxv"]
 
 [sub_resource type="Gradient" id="Gradient_8vfua"]
@@ -186,6 +188,68 @@ offset_bottom = 198.0
 theme = ExtResource("5_fdkx6")
 toggle_mode = true
 text = "Sett."
+
+[node name="Steps" type="Node2D" parent="CanvasLayer/Sidebar"]
+
+[node name="Step1" type="Button" parent="CanvasLayer/Sidebar/Steps"]
+offset_left = 10.0
+offset_top = 360.0
+offset_right = 62.0
+offset_bottom = 381.0
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+text = "Reset"
+
+[node name="Step2" type="Button" parent="CanvasLayer/Sidebar/Steps"]
+offset_left = 10.0
+offset_top = 395.0
+offset_right = 62.0
+offset_bottom = 416.0
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+text = "Draw"
+
+[node name="Step3" type="Button" parent="CanvasLayer/Sidebar/Steps"]
+offset_left = 10.0
+offset_top = 430.0
+offset_right = 62.0
+offset_bottom = 451.0
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+text = "Cheer"
+
+[node name="Step4" type="Button" parent="CanvasLayer/Sidebar/Steps"]
+offset_left = 10.0
+offset_top = 465.0
+offset_right = 62.0
+offset_bottom = 486.0
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+text = "Main"
+
+[node name="Step5" type="Button" parent="CanvasLayer/Sidebar/Steps"]
+offset_left = 10.0
+offset_top = 500.0
+offset_right = 62.0
+offset_bottom = 521.0
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+text = "Perf."
+
+[node name="Step6" type="Button" parent="CanvasLayer/Sidebar/Steps"]
+offset_left = 10.0
+offset_top = 540.0
+offset_right = 62.0
+offset_bottom = 561.0
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+text = "End"
 
 [node name="Host" type="Button" parent="CanvasLayer"]
 visible = false
@@ -439,6 +503,106 @@ text = "SFX"
 [node name="Test" type="AudioStreamPlayer" parent="CanvasLayer/Options/OptionBackground/SFXSlider"]
 stream = ExtResource("12_lpjdh")
 bus = &"SFX"
+
+[node name="Actions" type="Control" parent="CanvasLayer/Options/OptionBackground"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Draw" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 905.0
+offset_right = 1125.0
+offset_bottom = 1025.0
+theme_override_font_sizes/font_size = 110
+text = "D"
+script = ExtResource("14_x8gke")
+action = "Draw"
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/Draw"]
+layout_mode = 0
+offset_left = 1150.0
+offset_right = 1843.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 110
+text = "Draw Card"
+
+[node name="Tabs" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 1105.0
+offset_right = 1125.0
+offset_bottom = 1225.0
+theme_override_font_sizes/font_size = 110
+text = "TAB"
+script = ExtResource("14_x8gke")
+action = "SwapPanels"
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/Tabs"]
+layout_mode = 0
+offset_left = 1150.0
+offset_right = 1995.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 110
+text = "Switch Tabs"
+
+[node name="LockInfo" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 1305.0
+offset_right = 1125.0
+offset_bottom = 1425.0
+theme_override_font_sizes/font_size = 110
+text = "CTRL"
+script = ExtResource("14_x8gke")
+action = "LockInfo"
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/LockInfo"]
+layout_mode = 0
+offset_left = 1150.0
+offset_right = 2235.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 110
+text = "Lock Info Panel"
+
+[node name="LastStep" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 1505.0
+offset_right = 1125.0
+offset_bottom = 1625.0
+theme_override_font_sizes/font_size = 110
+text = "["
+script = ExtResource("14_x8gke")
+action = "Last Step"
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/LastStep"]
+layout_mode = 0
+offset_left = 1150.0
+offset_right = 2074.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 110
+text = "To Last Step"
+
+[node name="NextStep" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 1705.0
+offset_right = 1125.0
+offset_bottom = 1825.0
+theme_override_font_sizes/font_size = 110
+text = "]"
+script = ExtResource("14_x8gke")
+action = "Next Step"
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/NextStep"]
+layout_mode = 0
+offset_left = 1150.0
+offset_right = 2092.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 110
+text = "To Next Step"
 
 [node name="LanguageSelect" type="MenuButton" parent="CanvasLayer"]
 offset_left = 1200.0
@@ -747,9 +911,9 @@ visible = false
 top_level = true
 layout_mode = 0
 offset_left = 392.0
-offset_top = 254.0
+offset_top = 320.0
 offset_right = 1029.0
-offset_bottom = 484.0
+offset_bottom = 550.0
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [node name="Label" type="Label" parent="CanvasLayer/MainMenu/Confirmation"]
@@ -797,6 +961,12 @@ zoom = Vector2(0.27, 0.27)
 [connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/CardInfo" to="." method="_on_card_info_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/Chat" to="." method="_on_chat_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/Options" to="." method="_on_sidebar_options_pressed"]
+[connection signal="toggled" from="CanvasLayer/Sidebar/Steps/Step1" to="." method="_on_step_pressed" binds= [1]]
+[connection signal="toggled" from="CanvasLayer/Sidebar/Steps/Step2" to="." method="_on_step_pressed" binds= [2]]
+[connection signal="toggled" from="CanvasLayer/Sidebar/Steps/Step3" to="." method="_on_step_pressed" binds= [3]]
+[connection signal="toggled" from="CanvasLayer/Sidebar/Steps/Step4" to="." method="_on_step_pressed" binds= [4]]
+[connection signal="toggled" from="CanvasLayer/Sidebar/Steps/Step5" to="." method="_on_step_pressed" binds= [5]]
+[connection signal="toggled" from="CanvasLayer/Sidebar/Steps/Step6" to="." method="_on_step_pressed" binds= [6]]
 [connection signal="pressed" from="CanvasLayer/Host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Join" to="." method="_on_join_pressed"]
 [connection signal="text_submitted" from="CanvasLayer/IPPrompt/LineEdit" to="." method="_on_line_edit_text_submitted"]

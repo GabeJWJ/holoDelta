@@ -10,20 +10,11 @@ signal shuffled
 @export var archive := false
 @onready var count = $Count
 @onready var looking = $Looking
-var database
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	count.rotation -= rotation
 	looking.rotation -= rotation
-	if archive:
-		database = SQLite.new()
-		database.read_only = true
-		if OS.has_feature("editor"):
-			database.path = "res://cardData.db"
-		else:
-			database.path = OS.get_executable_path().get_base_dir() + "/cardData.db"
-		database.open_db()
 	get_tree().get_root().size_changed.connect(update_text)
 
 
@@ -60,7 +51,7 @@ func shuffle():
 
 @rpc("any_peer", "call_local", "reliable")
 func archive_texture_sanity(cardNum, artNum):
-	var art_data = database.select_rows("cardHasArt","cardID LIKE '" + cardNum + "' AND art_index = " + str(artNum), ["*"])
+	var art_data = Database.db.select_rows("cardHasArt","cardID LIKE '" + cardNum + "' AND art_index = " + str(artNum), ["*"])
 	var newMaterial = StandardMaterial3D.new()
 	if art_data.is_empty():
 		match Settings.settings.Language:

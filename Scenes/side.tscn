@@ -72,6 +72,12 @@ properties/12/replication_mode = 0
 properties/13/path = NodePath(".:diceBuffer")
 properties/13/spawn = true
 properties/13/replication_mode = 0
+properties/14/path = NodePath(".:forced_mulligan_cards")
+properties/14/spawn = true
+properties/14/replication_mode = 2
+properties/15/path = NodePath(".:step")
+properties/15/spawn = true
+properties/15/replication_mode = 2
 
 [sub_resource type="Theme" id="Theme_y8s1y"]
 HScrollBar/styles/grabber = null
@@ -215,10 +221,10 @@ visible = false
 [node name="Deck" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 16.5929, 0, -0.627)
 
-[node name="CheerDeck" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+[node name="Cheer Deck" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -16.6171, 0, -0.627)
 
-[node name="Plane" parent="SubViewportContainer/SubViewport/Node3D/CheerDeck/fuda" index="0"]
+[node name="Plane" parent="SubViewportContainer/SubViewport/Node3D/Cheer Deck/fuda" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_ehvxa")
 
 [node name="Archive" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
@@ -382,9 +388,9 @@ text = "Ready"
 [node name="Question" type="ColorRect" parent="CanvasLayer"]
 visible = false
 offset_left = 422.0
-offset_top = 213.0
+offset_top = 130.0
 offset_right = 1225.0
-offset_bottom = 483.0
+offset_bottom = 400.0
 theme = ExtResource("8_u8usn")
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
@@ -498,6 +504,37 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 text = "Opponent"
 
+[node name="MulliganWarning" type="ColorRect" parent="CanvasLayer/OpponentLabel"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -248.5
+offset_top = 75.0
+offset_right = 248.5
+offset_bottom = 123.0
+grow_horizontal = 2
+theme = ExtResource("8_u8usn")
+color = Color(0.180392, 0.32549, 0.45098, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/OpponentLabel/MulliganWarning"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.5
+offset_top = -21.0
+offset_right = 73.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Viewing Mulliganed Cards"
+
 [node name="SPmarker" type="Sprite2D" parent="."]
 z_index = 4
 position = Vector2(533, -448)
@@ -557,8 +594,8 @@ bus = &"SFX"
 [connection signal="id_pressed" from="PopupMenu" to="." method="_on_popup_menu_id_pressed"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Deck" to="." method="_on_deck_clicked"]
 [connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/Deck" to="." method="_on_fuda_shuffled"]
-[connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/CheerDeck" to="." method="_on_cheer_deck_clicked"]
-[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/CheerDeck" to="." method="_on_fuda_shuffled"]
+[connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Cheer Deck" to="." method="_on_cheer_deck_clicked"]
+[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/Cheer Deck" to="." method="_on_fuda_shuffled"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Archive" to="." method="_on_archive_clicked"]
 [connection signal="mouse_entered" from="SubViewportContainer/SubViewport/Node3D/Archive" to="." method="_on_archive_mouse_entered"]
 [connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/Archive" to="." method="_on_fuda_shuffled"]
@@ -579,4 +616,4 @@ bus = &"SFX"
 [connection signal="pressed" from="CanvasLayer/Question/No" to="." method="no_mulligan"]
 [connection signal="pressed" from="CanvasLayer/Question/OK" to="." method="yes_mulligan"]
 
-[editable path="SubViewportContainer/SubViewport/Node3D/CheerDeck"]
+[editable path="SubViewportContainer/SubViewport/Node3D/Cheer Deck"]

@@ -39,16 +39,6 @@ position = Vector2(275, 20)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("3_7wkbs")
 
-[node name="Label" type="Label" parent="LockOff"]
-offset_left = -185.714
-offset_top = 271.429
-offset_right = 186.286
-offset_bottom = 382.429
-theme = ExtResource("2_ducyq")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 110
-text = "CTRL"
-
 [node name="ScrollIcon" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0.823529)
