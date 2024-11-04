@@ -32,6 +32,11 @@ var yourReady = false
 var opponentReady = false
 
 var firstTurn = true
+const downloadLocalLink = "https://github.com/GabeJWJ/holoDelta/raw/refs/heads/master/cardLocalization/"
+const downloadDBLink = "https://github.com/GabeJWJ/holoDelta/raw/refs/heads/master/cardData.db"
+var downloadedDB = false
+var downloadedIteration = false
+var downloadedLocal = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -83,6 +88,56 @@ func _ready():
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"日本語":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
+	
+	if FileAccess.file_exists("user://cardData.db") and DirAccess.dir_exists_absolute("user://cardLocalizations"):
+		Database._connect()
+		Settings._connect_local()
+	else:
+		DirAccess.make_dir_absolute("user://cardLocalizations")
+		$CanvasLayer/Popup/Label.text = "Downloading db..."
+		$CanvasLayer/Popup.visible = true
+		var dbRequest = HTTPRequest.new()
+		add_child(dbRequest)
+		var iterRequest = HTTPRequest.new()
+		add_child(iterRequest)
+		download(downloadDBLink, "user://cardData.db", dbRequest, _downloaded_db)
+		download(downloadLocalLink + "_iteration.txt", "user://cardLocalizations/_iteration.txt", iterRequest, _downloaded_iteration)
+		for lang in Settings.languages:
+			var langRequest = HTTPRequest.new()
+			add_child(langRequest)
+			downloadedLocal[lang[0]] = false
+			download(downloadLocalLink + "%s.po" % lang[0], "user://cardLocalizations/%s.po" % lang[0], langRequest, _downloaded_local.bind(lang[0]))
+
+#Stolen from https://forum.godotengine.org/t/how-to-download-files-from-the-internet-using-gdscript/8163/2
+func download(link, path, http, callback):
+	http.request_completed.connect(_http_request_completed.bind(callback))
+	http.set_download_file(path)
+	var request = http.request(link)
+	if request != OK:
+		push_error("Http request error")
+
+func _http_request_completed(result, _response_code, _headers, _body, callback):
+	if result != OK:
+		push_error("Download Failed")
+		callback.call()
+
+func _downloaded_db():
+	downloadedDB = true
+	Database._connect()
+	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
+		$CanvasLayer/Popup.visible = false
+
+func _downloaded_iteration():
+	downloadedIteration = true
+	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
+		$CanvasLayer/Popup.visible = false
+
+func _downloaded_local(lang):
+	downloadedLocal[lang] = true
+	if !downloadedLocal.values().has(false):
+		Settings._connect_local()
+	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
+		$CanvasLayer/Popup.visible = false
 
 func _on_lobby_created(connect, lobby_id):
 	_hosted_lobby_id = lobby_id

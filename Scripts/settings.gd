@@ -5,8 +5,6 @@ var settings
 var languages = [["en","English"], ["ja","日本語"]]
 enum bloomCode {OK,Instant,Skip,No}
 var version = "1.1.3"
-var downloadLocalLink = ""
-var downloadDBLink = "https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/GabeJWJ/holoDelta/blob/master/cardData.db"
 
 var cardText = {}
 
@@ -29,11 +27,6 @@ func _ready():
 		"日本語":
 			TranslationServer.set_locale("ja")
 			update_settings("Language", "ja")
-	
-	var iteration = FileAccess.get_file_as_string("user://cardLocalization/_iteration.txt")
-	Database._connect()
-	for lang in languages:
-		cardText[lang[0]] = load("user://cardLocalization/" + lang[0] + ".po") as Translation
 	
 	locale()
 
@@ -61,3 +54,7 @@ func get_language():
 	for possible in languages:
 		if possible[0] == settings.Language:
 			return possible[1]
+
+func _connect_local():
+	for lang in languages:
+		cardText[lang[0]] = load("user://cardLocalization/" + lang[0] + ".po") as Translation
