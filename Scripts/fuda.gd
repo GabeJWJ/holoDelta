@@ -17,11 +17,6 @@ func _ready():
 	looking.rotation -= rotation
 	get_tree().get_root().size_changed.connect(update_text)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func update_size():
 	if cardList.size() == 0:
 		visible = false

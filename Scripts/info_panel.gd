@@ -18,12 +18,6 @@ var cheer = {"Blue":load("res://CheerIcons/Blue.webp"),"Red":load("res://CheerIc
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$LockOff.modulate.a = 0.5
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 
 func _new_info(top_card, card_to_show):
@@ -94,7 +88,7 @@ func _set_showing(to_show, cheer_show, start_index):
 	_show_specific(start_index)
 
 func _show_specific(showing_id):
-	$Info/ScrollContainer/CardText.text = showing[showing_id][1]
+	%CardText.text = showing[showing_id][1]
 	showing[showing_id][0].z_index = 1
 	showing[showing_id][0].position.y = 3
 	showing_grays[showing_id].visible = false
@@ -117,7 +111,7 @@ func _clear_showing():
 		for icon in cheer_attached[cheer_color]:
 			icon.queue_free()
 		cheer_attached[cheer_color].clear()
-	$Info/ScrollContainer/CardText.text = ""
+	%CardText.text = ""
 	showing_card_ids = []
 	showing_player_id = -1
 	$ScrollIcon.visible = false
@@ -125,9 +119,9 @@ func _clear_showing():
 func update_word_wrap():
 	match Settings.settings.Language:
 		"English":
-			$Info/ScrollContainer/CardText.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+			%CardText.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"日本語":
-			$Info/ScrollContainer/CardText.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
+			%CardText.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 
 func _input(event):
 	var mouse_pos = get_viewport().get_mouse_position()

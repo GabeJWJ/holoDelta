@@ -2,11 +2,13 @@ extends Node
 
 var settings
 @onready var json = JSON.new()
-var languages = ["English","日本語"]
+var languages = [["en","English"], ["ja","日本語"]]
 enum bloomCode {OK,Instant,Skip,No}
-var version = "1.1.2"
+var version = "1.1.3"
+var downloadLocalLink = ""
+var downloadDBLink = "https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/GabeJWJ/holoDelta/blob/master/cardData.db"
 
-var to_jp = {}
+var cardText = {}
 
 @onready var sfx_bus_index = AudioServer.get_bus_index("SFX")
 
@@ -15,31 +17,25 @@ func _ready():
 	if json.parse(FileAccess.get_file_as_string("user://settings.json")) == 0:
 		settings = json.data
 	else:
-		settings = {"AllowUnrevealed":false,"Language":"English"}
+		settings = {"AllowUnrevealed":false,"Language":OS.get_locale_language()}
 	
 	if !settings.has("SFXVolume"):
 		settings["SFXVolume"] = 0
 	
-	var color_data = Database.db.select_rows("colors","",["*"])
-	var name_data = Database.db.select_rows("holomemNames","",["*"])
-	var supp_type_data = Database.db.select_rows("supportTypes","",["*"])
-	var tag_data = Database.db.select_rows("tags","",["*"])
+	match settings.Language:
+		"English":
+			TranslationServer.set_locale("en")
+			update_settings("Language", "en")
+		"日本語":
+			TranslationServer.set_locale("ja")
+			update_settings("Language", "ja")
 	
-	for row in color_data:
-		to_jp[row.colorName] = row.jpName
-	for row in name_data:
-		to_jp[row.name] = row.jpName
-	for row in supp_type_data:
-		to_jp[row.type] = row.jpName
-	for row in tag_data:
-		to_jp[row.tagName] = row.jpName
+	var iteration = FileAccess.get_file_as_string("user://cardLocalization/_iteration.txt")
+	Database._connect()
+	for lang in languages:
+		cardText[lang[0]] = load("user://cardLocalization/" + lang[0] + ".po") as Translation
 	
 	locale()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 func update_settings(key, value):
 	if value == null:
@@ -51,20 +47,17 @@ func update_settings(key, value):
 	file_access.close()
 	locale()
 
-func en_or_jp(en_text,jp_text=""):
-	if jp_text == "":
-		jp_text = to_jp[en_text]
-	match settings.Language:
-		"English":
-			return en_text
-		"日本語":
-			return jp_text
-		_:
-			return en_text
+func trans(key):
+	var result = cardText[settings.Language].get_message(key)
+	if result == "":
+		return key
+	else:
+		return result
 
 func locale():
-	match settings.Language:
-		"English":
-			TranslationServer.set_locale("en")
-		"日本語":
-			TranslationServer.set_locale("ja")
+	TranslationServer.set_locale(settings.Language)
+
+func get_language():
+	for possible in languages:
+		if possible[0] == settings.Language:
+			return possible[1]

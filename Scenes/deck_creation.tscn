@@ -52,7 +52,7 @@ offset_left = 14.0
 offset_top = 54.0
 offset_right = 160.0
 offset_bottom = 67.0
-text = "Name"
+text = "NAME"
 flat = false
 
 [node name="ColorSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Oshi"]
@@ -61,7 +61,7 @@ offset_left = 183.0
 offset_top = 54.0
 offset_right = 256.0
 offset_bottom = 67.0
-text = "Color"
+text = "COLOR"
 flat = false
 
 [node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/Oshi"]
@@ -70,7 +70,7 @@ offset_left = 278.0
 offset_top = 54.0
 offset_right = 370.0
 offset_bottom = 67.0
-text = "Clear Filters"
+text = "FILTER_CLEAR"
 
 [node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/Oshi"]
 layout_mode = 0
@@ -78,7 +78,7 @@ offset_left = 8.0
 offset_top = 7.0
 offset_right = 378.0
 offset_bottom = 40.0
-placeholder_text = "Search"
+placeholder_text = "SEARCH"
 
 [node name="Holomem" type="Control" parent="CanvasLayer/PossibleCards"]
 visible = false
@@ -104,7 +104,7 @@ offset_left = 14.0
 offset_top = 54.0
 offset_right = 177.0
 offset_bottom = 67.0
-text = "Name"
+text = "NAME"
 flat = false
 
 [node name="ColorSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Holomem"]
@@ -113,7 +113,7 @@ offset_left = 205.0
 offset_top = 54.0
 offset_right = 368.0
 offset_bottom = 67.0
-text = "Color"
+text = "COLOR"
 flat = false
 
 [node name="LevelSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Holomem"]
@@ -122,18 +122,18 @@ offset_left = 15.0
 offset_top = 89.0
 offset_right = 101.0
 offset_bottom = 102.0
-text = "Level"
+text = "LEVEL"
 flat = false
 item_count = 5
-popup/item_0/text = "Any Level"
+popup/item_0/text = "LEVEL_ANY"
 popup/item_0/id = 0
-popup/item_1/text = "Debut"
+popup/item_1/text = "LEVEL_DEBUT"
 popup/item_1/id = 1
-popup/item_2/text = "1st"
+popup/item_2/text = "LEVEL_1"
 popup/item_2/id = 2
-popup/item_3/text = "2nd"
+popup/item_3/text = "LEVEL_2"
 popup/item_3/id = 3
-popup/item_4/text = "SPOT"
+popup/item_4/text = "LEVEL_SPOT"
 popup/item_4/id = 4
 
 [node name="TagSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Holomem"]
@@ -142,7 +142,7 @@ offset_left = 204.0
 offset_top = 90.0
 offset_right = 254.0
 offset_bottom = 103.0
-text = "Tags"
+text = "TAG_PLURAL"
 flat = false
 
 [node name="BuzzSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/Holomem"]
@@ -154,7 +154,7 @@ offset_left = 123.0
 offset_top = 87.0
 offset_right = 170.16
 offset_bottom = 94.732
-text = "Buzz"
+text = "BUZZ"
 
 [node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/Holomem"]
 layout_mode = 0
@@ -162,7 +162,7 @@ offset_left = 277.0
 offset_top = 90.0
 offset_right = 369.0
 offset_bottom = 103.0
-text = "Clear Filters"
+text = "FILTER_CLEAR"
 
 [node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/Holomem"]
 layout_mode = 0
@@ -170,7 +170,7 @@ offset_left = 8.0
 offset_top = 7.0
 offset_right = 378.0
 offset_bottom = 40.0
-placeholder_text = "Search"
+placeholder_text = "SEARCH"
 
 [node name="Support" type="Control" parent="CanvasLayer/PossibleCards"]
 visible = false
@@ -194,7 +194,7 @@ offset_left = 16.0
 offset_top = 53.0
 offset_right = 153.0
 offset_bottom = 66.0
-text = "Type"
+text = "SUPPORT_TYPE"
 flat = false
 
 [node name="LimitedSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/Support"]
@@ -206,7 +206,7 @@ offset_left = 178.0
 offset_top = 51.0
 offset_right = 245.16
 offset_bottom = 58.732
-text = "Limited"
+text = "SUPPORT_LIMITED"
 
 [node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/Support"]
 layout_mode = 0
@@ -214,7 +214,7 @@ offset_left = 278.0
 offset_top = 53.0
 offset_right = 370.0
 offset_bottom = 66.0
-text = "Clear Filters"
+text = "FILTER_CLEAR"
 
 [node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/Support"]
 layout_mode = 0
@@ -222,7 +222,7 @@ offset_left = 8.0
 offset_top = 7.0
 offset_right = 378.0
 offset_bottom = 40.0
-placeholder_text = "Search"
+placeholder_text = "SEARCH"
 
 [node name="Cheer" type="Control" parent="CanvasLayer/PossibleCards"]
 visible = false
@@ -246,6 +246,7 @@ offset_left = 10.0
 offset_top = 10.0
 offset_right = 61.0
 offset_bottom = 35.0
+auto_translate = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 text = "1x"
@@ -256,6 +257,7 @@ offset_left = 98.0
 offset_top = 14.0
 offset_right = 138.0
 offset_bottom = 27.0
+auto_translate = false
 text = "1"
 
 [node name="FiveMultiple" type="Button" parent="CanvasLayer/PossibleCards/Cheer"]
@@ -264,6 +266,7 @@ offset_left = 170.0
 offset_top = 14.0
 offset_right = 210.0
 offset_bottom = 27.0
+auto_translate = false
 text = "5
 "
 
@@ -273,6 +276,7 @@ offset_left = 245.0
 offset_top = 14.0
 offset_right = 285.0
 offset_bottom = 27.0
+auto_translate = false
 text = "10"
 
 [node name="TwentyMultiple" type="Button" parent="CanvasLayer/PossibleCards/Cheer"]
@@ -281,6 +285,7 @@ offset_left = 319.0
 offset_top = 14.0
 offset_right = 359.0
 offset_bottom = 27.0
+auto_translate = false
 text = "20"
 
 [node name="YourStuff" type="TabContainer" parent="CanvasLayer"]
@@ -328,6 +333,7 @@ offset_left = 13.0
 offset_top = 1.0
 offset_right = 69.0
 offset_bottom = 19.0
+auto_translate = false
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 15
@@ -340,6 +346,7 @@ offset_left = 143.0
 offset_top = 416.0
 offset_right = 193.0
 offset_bottom = 434.0
+auto_translate = false
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 15
@@ -362,6 +369,7 @@ offset_bottom = 582.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+auto_translate = false
 
 [node name="Sleeves" type="Control" parent="CanvasLayer/YourStuff"]
 visible = false
@@ -380,7 +388,7 @@ offset_bottom = 9.0
 theme = ExtResource("3_da1xd")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
-text = "Main Deck"
+text = "MAIN_DECK"
 horizontal_alignment = 1
 
 [node name="Cheer" parent="CanvasLayer/YourStuff/Sleeves" instance=ExtResource("5_0bh18")]
@@ -395,7 +403,7 @@ offset_bottom = 9.0
 theme = ExtResource("3_da1xd")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
-text = "Cheer"
+text = "CHEER"
 horizontal_alignment = 1
 
 [node name="Oshi" parent="CanvasLayer/YourStuff/Sleeves" instance=ExtResource("5_0bh18")]
@@ -410,7 +418,7 @@ offset_bottom = 9.0
 theme = ExtResource("3_da1xd")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
-text = "Oshi"
+text = "OSHI"
 horizontal_alignment = 1
 
 [node name="LoadDeck" type="Button" parent="CanvasLayer"]
@@ -420,7 +428,7 @@ offset_right = 469.0
 offset_bottom = 664.0
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 20
-text = "Load"
+text = "LOAD"
 
 [node name="SaveDeck" type="Button" parent="CanvasLayer"]
 offset_left = 798.0
@@ -429,7 +437,7 @@ offset_right = 874.0
 offset_bottom = 661.0
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 20
-text = "Save"
+text = "DECK_SAVE"
 
 [node name="DeckName" type="LineEdit" parent="CanvasLayer"]
 offset_left = 507.0
@@ -438,7 +446,7 @@ offset_right = 775.0
 offset_bottom = 671.0
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 15
-placeholder_text = "Custom Deck"
+placeholder_text = "DEFAULT_DECK_NAME"
 
 [node name="DeckList" parent="CanvasLayer" instance=ExtResource("4_lmglq")]
 visible = false
@@ -451,7 +459,7 @@ offset_right = 469.0
 offset_bottom = 701.0
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 10
-text = "Main Menu"
+text = "MENU"
 
 [node name="Clear" type="Button" parent="CanvasLayer"]
 offset_left = 314.0
@@ -460,7 +468,7 @@ offset_right = 380.0
 offset_bottom = 701.0
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 10
-text = "Clear Deck"
+text = "DECK_CLEAR"
 
 [node name="Problems" type="ScrollContainer" parent="CanvasLayer"]
 offset_left = 503.0
@@ -473,6 +481,7 @@ theme = ExtResource("3_da1xd")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
+auto_translate = false
 
 [node name="SavePrompt" type="ColorRect" parent="CanvasLayer"]
 visible = false
@@ -502,7 +511,7 @@ offset_right = 300.0
 offset_bottom = 608.0
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 20
-placeholder_text = "custom_deck"
+placeholder_text = "DEFAULT_DECK_FILE"
 
 [node name="Save" type="Button" parent="CanvasLayer/SavePrompt/FileName"]
 layout_mode = 0
@@ -511,7 +520,7 @@ offset_top = 5.0
 offset_right = 387.0
 offset_bottom = 26.0
 theme_override_font_sizes/font_size = 20
-text = "Save"
+text = "DECK_SAVE"
 
 [node name="Cancel" type="Button" parent="CanvasLayer/SavePrompt"]
 layout_mode = 0
@@ -521,7 +530,7 @@ offset_right = 535.0
 offset_bottom = 597.0
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 20
-text = "Cancel"
+text = "DECK_SAVE_CANCEL"
 
 [node name="OverwriteConfirm" type="ColorRect" parent="CanvasLayer/SavePrompt"]
 visible = false
@@ -539,6 +548,7 @@ offset_left = 12.0
 offset_top = 18.0
 offset_right = 1039.0
 offset_bottom = 171.0
+auto_translate = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 40
 text = "Overwrite ?"
@@ -552,7 +562,7 @@ offset_top = 353.0
 offset_right = 363.0
 offset_bottom = 394.0
 theme_override_font_sizes/font_size = 40
-text = "Yes"
+text = "YES"
 
 [node name="No" type="Button" parent="CanvasLayer/SavePrompt/OverwriteConfirm"]
 layout_mode = 0
@@ -561,7 +571,7 @@ offset_top = 355.0
 offset_right = 802.0
 offset_bottom = 396.0
 theme_override_font_sizes/font_size = 40
-text = "No"
+text = "NO"
 
 [node name="DeckBuilderBg" type="Sprite2D" parent="."]
 position = Vector2(587, 347)

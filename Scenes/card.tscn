@@ -81,6 +81,7 @@ offset_top = -30.2222
 offset_right = 21.0
 offset_bottom = 24.7778
 rotation = -0.174533
+auto_translate = false
 theme_override_font_sizes/font_size = 40
 text = "100"
 
@@ -90,6 +91,7 @@ offset_left = 101.333
 offset_top = -250.667
 offset_right = 187.333
 offset_bottom = -181.667
+auto_translate = false
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 50
@@ -107,6 +109,7 @@ offset_top = -40.8889
 offset_right = 42.3333
 offset_bottom = 14.1111
 rotation = 0.174533
+auto_translate = false
 theme_override_font_sizes/font_size = 40
 text = "100"
 

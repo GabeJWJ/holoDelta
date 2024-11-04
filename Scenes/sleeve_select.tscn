@@ -17,12 +17,13 @@ offset_right = 296.0
 offset_bottom = 483.0
 theme = ExtResource("3_w64fp")
 theme_override_font_sizes/font_size = 30
-text = "Load From File"
+text = "SLEEVE_LOAD"
 
 [node name="LoadDialog" type="FileDialog" parent="LoadSleeve"]
 title = "Open a File"
 position = Vector2i(300, 300)
 size = Vector2i(392, 159)
+auto_translate = false
 ok_button_text = "Open"
 file_mode = 0
 access = 2
@@ -37,7 +38,7 @@ offset_right = 297.0
 offset_bottom = 541.0
 theme = ExtResource("3_w64fp")
 theme_override_font_sizes/font_size = 30
-text = "To Default"
+text = "SLEEVE_DEFAULT"
 
 [connection signal="pressed" from="LoadSleeve" to="." method="_on_load_sleeve_pressed"]
 [connection signal="file_selected" from="LoadSleeve/LoadDialog" to="." method="_on_load_dialog_file_selected"]

@@ -8,15 +8,6 @@ signal zone_clicked(zone_id)
 signal zone_info_set(zone_id)
 signal zone_info_clear
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 
 func showButton():
 	button.visible = true

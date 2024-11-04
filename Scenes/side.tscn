@@ -1,11 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://j87r323v31qv"]
+[gd_scene load_steps=32 format=3 uid="uid://j87r323v31qv"]
 
 [ext_resource type="Script" path="res://Scripts/side.gd" id="1_vy6dv"]
 [ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="2_0kggm"]
 [ext_resource type="PackedScene" uid="uid://md0n47hsxcob" path="res://Scenes/zone.tscn" id="2_a11wy"]
 [ext_resource type="PackedScene" uid="uid://hxi6y3mwpmp8" path="res://Scenes/fuda.tscn" id="3_4khac"]
 [ext_resource type="PackedScene" uid="uid://xo7x52x42xjv" path="res://side.glb" id="4_bqq78"]
-[ext_resource type="Texture2D" uid="uid://bcans1dkc8eyo" path="res://cheerBack.png" id="5_2ycg0"]
 [ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="7_3wwxl"]
 [ext_resource type="StyleBox" uid="uid://ilsjg8vo6p8q" path="res://side.tres" id="8_f6ll5"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="8_u8usn"]
@@ -25,9 +24,6 @@
 [ext_resource type="AudioStream" uid="uid://nn13swso7n21" path="res://HaruTsunXAssets/Place Card 1.wav" id="24_q5bqm"]
 [ext_resource type="AudioStream" uid="uid://bp0x05dxnfc2o" path="res://HaruTsunXAssets/Place Card 2.wav" id="25_30rg1"]
 [ext_resource type="AudioStream" uid="uid://cxg5uowbntxl3" path="res://HaruTsunXAssets/Place Card 3.wav" id="26_u0kxe"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehvxa"]
-albedo_texture = ExtResource("5_2ycg0")
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ddblg"]
 properties/0/path = NodePath(".:position")
@@ -218,20 +214,17 @@ render_target_update_mode = 4
 transform = Transform3D(1.55, 0, 0, 0, 1, 0, 0, 0, 1.55, 0, 0, 0)
 visible = false
 
-[node name="Deck" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+[node name="DECK" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 16.5929, 0, -0.627)
 
-[node name="Cheer Deck" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+[node name="CHEERDECK" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -16.6171, 0, -0.627)
 
-[node name="Plane" parent="SubViewportContainer/SubViewport/Node3D/Cheer Deck/fuda" index="0"]
-surface_material_override/0 = SubResource("StandardMaterial3D_ehvxa")
-
-[node name="Archive" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+[node name="ARCHIVE" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 21.2319, 0, -0.627)
 archive = true
 
-[node name="Holopower" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+[node name="HOLOPOWER" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
 transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 15.9969, 0, -5.674)
 
 [node name="Die" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("7_3wwxl")]
@@ -287,6 +280,7 @@ offset_left = 0.04
 offset_top = -0.14
 offset_right = 246.2
 offset_bottom = 91.86
+auto_translate = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/line_spacing = 20
 theme_override_font_sizes/font_size = 30
@@ -299,6 +293,7 @@ offset_left = 54.0
 offset_top = 46.0
 offset_right = 241.0
 offset_bottom = 85.0
+auto_translate = false
 theme_override_font_sizes/font_size = 30
 placeholder_text = "7"
 max_length = 2
@@ -310,7 +305,7 @@ offset_top = 41.0
 offset_right = 446.0
 offset_bottom = 88.0
 theme_override_font_sizes/font_size = 25
-text = "Submit"
+text = "PROMPT_SUBMIT"
 
 [node name="Cancel" type="Button" parent="CanvasLayer"]
 visible = false
@@ -320,7 +315,7 @@ offset_right = 1264.0
 offset_bottom = 584.0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
-text = "Cancel"
+text = "PROMPT_CANCEL"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
 visible = false
@@ -352,7 +347,7 @@ offset_right = 960.0
 offset_bottom = 324.0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
-text = "Go First"
+text = "CHOICE_FIRST"
 
 [node name="Go Second" type="Button" parent="CanvasLayer"]
 visible = false
@@ -362,7 +357,7 @@ offset_right = 961.0
 offset_bottom = 392.0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
-text = "Go Second"
+text = "CHOICE_SECOND"
 
 [node name="End Turn" type="Button" parent="CanvasLayer"]
 visible = false
@@ -372,7 +367,7 @@ offset_right = 1268.0
 offset_bottom = 40.0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
-text = "End Turn"
+text = "END_TURN"
 
 [node name="Ready" type="Button" parent="CanvasLayer"]
 visible = false
@@ -383,7 +378,7 @@ offset_bottom = 104.0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
 disabled = true
-text = "Ready"
+text = "START_READY"
 
 [node name="Question" type="ColorRect" parent="CanvasLayer"]
 visible = false
@@ -406,7 +401,7 @@ offset_bottom = 157.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 40
-text = "Pick an option."
+text = "RPS_SELECT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -417,7 +412,7 @@ offset_top = 175.0
 offset_right = 267.0
 offset_bottom = 218.0
 theme_override_font_sizes/font_size = 30
-text = "Rock"
+text = "RPS_ROCK"
 
 [node name="Paper" type="Button" parent="CanvasLayer/Question"]
 layout_mode = 1
@@ -433,7 +428,7 @@ offset_bottom = -53.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 30
-text = "Paper"
+text = "RPS_PAPER"
 
 [node name="Scissors" type="Button" parent="CanvasLayer/Question"]
 layout_mode = 0
@@ -442,7 +437,7 @@ offset_top = 174.0
 offset_right = 728.0
 offset_bottom = 217.0
 theme_override_font_sizes/font_size = 30
-text = "Scissors"
+text = "RPS_SCISSORS"
 
 [node name="Yes" type="Button" parent="CanvasLayer/Question"]
 visible = false
@@ -452,7 +447,7 @@ offset_top = 148.0
 offset_right = 310.0
 offset_bottom = 211.0
 theme_override_font_sizes/font_size = 40
-text = "Yes"
+text = "YES"
 
 [node name="No" type="Button" parent="CanvasLayer/Question"]
 visible = false
@@ -462,7 +457,7 @@ offset_top = 148.0
 offset_right = 546.0
 offset_bottom = 211.0
 theme_override_font_sizes/font_size = 40
-text = "No"
+text = "NO"
 
 [node name="OK" type="Button" parent="CanvasLayer/Question"]
 visible = false
@@ -502,7 +497,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
-text = "Opponent"
+text = "OPPONENT"
 
 [node name="MulliganWarning" type="ColorRect" parent="CanvasLayer/OpponentLabel"]
 visible = false
@@ -533,7 +528,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
-text = "Viewing Mulliganed Cards"
+text = "MULLIGAN_TEXT"
 
 [node name="SPmarker" type="Sprite2D" parent="."]
 z_index = 4
@@ -592,15 +587,15 @@ bus = &"SFX"
 [connection signal="zone_info_clear" from="Zones/Back6" to="." method="clear_info"]
 [connection signal="zone_info_set" from="Zones/Back6" to="." method="_on_zone_enter"]
 [connection signal="id_pressed" from="PopupMenu" to="." method="_on_popup_menu_id_pressed"]
-[connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Deck" to="." method="_on_deck_clicked"]
-[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/Deck" to="." method="_on_fuda_shuffled"]
-[connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Cheer Deck" to="." method="_on_cheer_deck_clicked"]
-[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/Cheer Deck" to="." method="_on_fuda_shuffled"]
-[connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Archive" to="." method="_on_archive_clicked"]
-[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/Node3D/Archive" to="." method="_on_archive_mouse_entered"]
-[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/Archive" to="." method="_on_fuda_shuffled"]
-[connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/Holopower" to="." method="_on_holopower_clicked"]
-[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/Holopower" to="." method="_on_fuda_shuffled"]
+[connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/DECK" to="." method="_on_deck_clicked"]
+[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/DECK" to="." method="_on_fuda_shuffled"]
+[connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/CHEERDECK" to="." method="_on_cheer_deck_clicked"]
+[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/CHEERDECK" to="." method="_on_fuda_shuffled"]
+[connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/ARCHIVE" to="." method="_on_archive_clicked"]
+[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/Node3D/ARCHIVE" to="." method="_on_archive_mouse_entered"]
+[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/ARCHIVE" to="." method="_on_fuda_shuffled"]
+[connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/HOLOPOWER" to="." method="_on_holopower_clicked"]
+[connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/HOLOPOWER" to="." method="_on_fuda_shuffled"]
 [connection signal="die_result" from="SubViewportContainer/SubViewport/Node3D/Die" to="." method="_on_die_result"]
 [connection signal="text_submitted" from="CanvasLayer/Prompt/Input/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="CanvasLayer/Prompt/Submit" to="." method="_on_submit_pressed"]
@@ -615,5 +610,3 @@ bus = &"SFX"
 [connection signal="pressed" from="CanvasLayer/Question/Yes" to="." method="yes_mulligan"]
 [connection signal="pressed" from="CanvasLayer/Question/No" to="." method="no_mulligan"]
 [connection signal="pressed" from="CanvasLayer/Question/OK" to="." method="yes_mulligan"]
-
-[editable path="SubViewportContainer/SubViewport/Node3D/Cheer Deck"]

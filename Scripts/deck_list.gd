@@ -6,15 +6,6 @@ extends Node2D
 signal selected(deckInfo)
 signal cancel
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 
 func _clear_decks():
 	for deckButton in list.get_children():
@@ -29,6 +20,7 @@ func _all_decks():
 		for file_name in dir.get_files():
 			if json.parse(FileAccess.get_file_as_string(path + "/" + file_name)) == 0:
 				var deckButton = Button.new()
+				deckButton.auto_translate = false
 				deckButton.text = json.data.deckName
 				deckButton.pressed.connect(_set_selected.bind(json.data))
 				list.add_child(deckButton)

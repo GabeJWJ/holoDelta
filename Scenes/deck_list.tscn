@@ -24,12 +24,13 @@ size_flags_vertical = 6
 [node name="Load" type="Button" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "Load From File"
+text = "DECK_LOAD"
 
 [node name="LoadDialog" type="FileDialog" parent="."]
 title = "Open a File"
 position = Vector2i(300, 300)
 size = Vector2i(392, 159)
+auto_translate = false
 ok_button_text = "Open"
 file_mode = 0
 access = 2
@@ -43,7 +44,7 @@ offset_top = 19.0
 offset_right = 468.0
 offset_bottom = 32.0
 theme = ExtResource("2_kyui4")
-text = "Cancel"
+text = "DECK_SELECT_CANCEL"
 
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Load" to="." method="_on_load_pressed"]
 [connection signal="file_selected" from="LoadDialog" to="." method="_on_load_dialog_file_selected"]

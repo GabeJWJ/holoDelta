@@ -100,7 +100,7 @@ offset_left = 235.0
 offset_top = 9.0
 offset_right = 272.0
 offset_bottom = 24.0
-text = "Send"
+text = "SEND_CHAT"
 
 [node name="OptionsWindow" type="Node2D" parent="CanvasLayer/Sidebar"]
 visible = false
@@ -130,6 +130,7 @@ offset_left = 1844.67
 offset_top = 109.242
 offset_right = 2171.67
 offset_bottom = 220.242
+auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "SFX"
 
@@ -150,7 +151,7 @@ offset_top = 125.0
 offset_right = 2216.33
 offset_bottom = 330.0
 theme_override_font_sizes/font_size = 120
-text = "Hide Opponent Cosmetics"
+text = "OPTION_COSMETICS_HIDE"
 
 [node name="Tabs" type="Node2D" parent="CanvasLayer/Sidebar"]
 
@@ -162,7 +163,7 @@ offset_bottom = 28.0
 theme = ExtResource("5_fdkx6")
 toggle_mode = true
 button_pressed = true
-text = "Card"
+text = "TAB_INFO"
 
 [node name="Chat" type="Button" parent="CanvasLayer/Sidebar/Tabs"]
 visible = false
@@ -172,7 +173,7 @@ offset_right = 55.0
 offset_bottom = 58.0
 theme = ExtResource("5_fdkx6")
 toggle_mode = true
-text = "Chat"
+text = "TAB_CHAT"
 
 [node name="Notification" type="Sprite2D" parent="CanvasLayer/Sidebar/Tabs/Chat"]
 visible = false
@@ -187,7 +188,7 @@ offset_right = 55.0
 offset_bottom = 198.0
 theme = ExtResource("5_fdkx6")
 toggle_mode = true
-text = "Sett."
+text = "TAB_SETTINGS"
 
 [node name="Steps" type="Node2D" parent="CanvasLayer/Sidebar"]
 
@@ -199,7 +200,7 @@ offset_bottom = 381.0
 theme = ExtResource("10_dyxng")
 disabled = true
 toggle_mode = true
-text = "Reset"
+text = "STEP1"
 
 [node name="Step2" type="Button" parent="CanvasLayer/Sidebar/Steps"]
 offset_left = 10.0
@@ -209,7 +210,7 @@ offset_bottom = 416.0
 theme = ExtResource("10_dyxng")
 disabled = true
 toggle_mode = true
-text = "Draw"
+text = "STEP2"
 
 [node name="Step3" type="Button" parent="CanvasLayer/Sidebar/Steps"]
 offset_left = 10.0
@@ -219,7 +220,7 @@ offset_bottom = 451.0
 theme = ExtResource("10_dyxng")
 disabled = true
 toggle_mode = true
-text = "Cheer"
+text = "STEP3"
 
 [node name="Step4" type="Button" parent="CanvasLayer/Sidebar/Steps"]
 offset_left = 10.0
@@ -229,7 +230,7 @@ offset_bottom = 486.0
 theme = ExtResource("10_dyxng")
 disabled = true
 toggle_mode = true
-text = "Main"
+text = "STEP4"
 
 [node name="Step5" type="Button" parent="CanvasLayer/Sidebar/Steps"]
 offset_left = 10.0
@@ -239,7 +240,7 @@ offset_bottom = 521.0
 theme = ExtResource("10_dyxng")
 disabled = true
 toggle_mode = true
-text = "Perf."
+text = "STEP5"
 
 [node name="Step6" type="Button" parent="CanvasLayer/Sidebar/Steps"]
 offset_left = 10.0
@@ -249,7 +250,7 @@ offset_bottom = 561.0
 theme = ExtResource("10_dyxng")
 disabled = true
 toggle_mode = true
-text = "End"
+text = "STEP6"
 
 [node name="Host" type="Button" parent="CanvasLayer"]
 visible = false
@@ -259,7 +260,7 @@ offset_right = 671.0
 offset_bottom = 336.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
-text = "Host"
+text = "CONNECT_HOST"
 
 [node name="Join" type="Button" parent="CanvasLayer"]
 visible = false
@@ -269,7 +270,7 @@ offset_right = 671.0
 offset_bottom = 404.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
-text = "Join"
+text = "CONNECT_JOIN"
 
 [node name="IPPrompt" type="ColorRect" parent="CanvasLayer"]
 visible = false
@@ -286,6 +287,7 @@ offset_left = 8.0
 offset_top = 55.0
 offset_right = 329.0
 offset_bottom = 94.0
+auto_translate = false
 theme_override_font_sizes/font_size = 30
 placeholder_text = "localhost"
 
@@ -296,7 +298,7 @@ offset_right = 279.0
 offset_bottom = 46.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
-text = "Enter IP Address"
+text = "CONNECT_DIRECT_PROMPT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -308,7 +310,7 @@ offset_bottom = 340.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 disabled = true
-text = "Connect with Steam"
+text = "CONNECT_STEAM"
 
 [node name="Direct Connect" type="Button" parent="CanvasLayer"]
 offset_left = 498.0
@@ -318,7 +320,7 @@ offset_bottom = 410.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 disabled = true
-text = "Connect with IP"
+text = "CONNECT_DIRECT"
 
 [node name="Title" type="Label" parent="CanvasLayer"]
 offset_left = 358.0
@@ -327,7 +329,8 @@ offset_right = 946.0
 offset_bottom = 154.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 100
-text = "holoDelta"
+text = "TITLE"
+horizontal_alignment = 1
 
 [node name="Subtitle" type="Label" parent="CanvasLayer/Title"]
 layout_mode = 0
@@ -336,7 +339,8 @@ offset_top = 118.0
 offset_right = 638.0
 offset_bottom = 160.0
 theme_override_font_sizes/font_size = 30
-text = "An Unofficial Hololive OCG Simulator"
+text = "SUBTITLE"
+horizontal_alignment = 1
 
 [node name="SteamHost" type="Button" parent="CanvasLayer"]
 visible = false
@@ -346,7 +350,7 @@ offset_right = 671.0
 offset_bottom = 336.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
-text = "Host"
+text = "CONNECT_HOST"
 
 [node name="MenuButton" type="MenuButton" parent="CanvasLayer/SteamHost"]
 layout_mode = 0
@@ -355,12 +359,12 @@ offset_top = 3.0
 offset_right = 187.0
 offset_bottom = 28.0
 theme_override_font_sizes/font_size = 18
-text = "Public"
+text = "CONNECT_STEAM_PUBLIC"
 flat = false
 item_count = 2
-popup/item_0/text = "Public"
+popup/item_0/text = "CONNECT_STEAM_PUBLIC"
 popup/item_0/id = 0
-popup/item_1/text = "Friends Only"
+popup/item_1/text = "CONNECT_STEAM_FRIENDS"
 popup/item_1/id = 1
 
 [node name="SteamJoin" type="Button" parent="CanvasLayer"]
@@ -371,7 +375,7 @@ offset_right = 671.0
 offset_bottom = 404.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
-text = "Join"
+text = "CONNECT_JOIN"
 
 [node name="LobbyList" type="ScrollContainer" parent="CanvasLayer"]
 visible = false
@@ -394,7 +398,7 @@ offset_right = 1172.0
 offset_bottom = 395.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
-text = "Cancel"
+text = "CONNECT_SEARCH_CANCEL"
 
 [node name="CancelIPJoin" type="Button" parent="CanvasLayer"]
 visible = false
@@ -404,7 +408,7 @@ offset_right = 981.0
 offset_bottom = 391.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
-text = "Cancel"
+text = "CONNECT_IP_CANCEL"
 
 [node name="Deck Creation" type="Button" parent="CanvasLayer"]
 offset_left = 22.0
@@ -413,7 +417,7 @@ offset_right = 320.0
 offset_bottom = 265.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
-text = " Create/Edit Deck "
+text = "DECK_CREATE"
 
 [node name="DeckSelect" type="Button" parent="CanvasLayer"]
 offset_left = 23.0
@@ -422,7 +426,7 @@ offset_right = 321.0
 offset_bottom = 355.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
-text = "Choose Deck"
+text = "DECK_SELECT"
 
 [node name="Exit" type="Button" parent="CanvasLayer"]
 offset_left = 1091.0
@@ -431,7 +435,7 @@ offset_right = 1263.0
 offset_bottom = 696.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
-text = "Exit Game"
+text = "EXIT"
 
 [node name="Options" type="TextureButton" parent="CanvasLayer"]
 y_sort_enabled = true
@@ -471,7 +475,7 @@ offset_top = 125.0
 offset_right = 2216.33
 offset_bottom = 330.0
 theme_override_font_sizes/font_size = 120
-text = "Allow Unrevealed Cards"
+text = "OPTION_UNREVEALED"
 
 [node name="SFXSlider" type="HSlider" parent="CanvasLayer/Options/OptionBackground"]
 layout_mode = 0
@@ -497,6 +501,7 @@ offset_left = 1844.67
 offset_top = 109.242
 offset_right = 2171.67
 offset_bottom = 220.242
+auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "SFX"
 
@@ -515,6 +520,7 @@ offset_left = 125.0
 offset_top = 905.0
 offset_right = 1125.0
 offset_bottom = 1025.0
+auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "D"
 script = ExtResource("14_x8gke")
@@ -526,7 +532,7 @@ offset_left = 1150.0
 offset_right = 1843.0
 offset_bottom = 111.0
 theme_override_font_sizes/font_size = 110
-text = "Draw Card"
+text = "ACTION_DRAW"
 
 [node name="Tabs" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 layout_mode = 0
@@ -534,6 +540,7 @@ offset_left = 125.0
 offset_top = 1105.0
 offset_right = 1125.0
 offset_bottom = 1225.0
+auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "TAB"
 script = ExtResource("14_x8gke")
@@ -545,7 +552,7 @@ offset_left = 1150.0
 offset_right = 1995.0
 offset_bottom = 111.0
 theme_override_font_sizes/font_size = 110
-text = "Switch Tabs"
+text = "ACTION_TABS"
 
 [node name="LockInfo" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 layout_mode = 0
@@ -553,6 +560,7 @@ offset_left = 125.0
 offset_top = 1305.0
 offset_right = 1125.0
 offset_bottom = 1425.0
+auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "CTRL"
 script = ExtResource("14_x8gke")
@@ -564,7 +572,7 @@ offset_left = 1150.0
 offset_right = 2235.0
 offset_bottom = 111.0
 theme_override_font_sizes/font_size = 110
-text = "Lock Info Panel"
+text = "ACTION_LOCK"
 
 [node name="LastStep" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 layout_mode = 0
@@ -572,6 +580,7 @@ offset_left = 125.0
 offset_top = 1505.0
 offset_right = 1125.0
 offset_bottom = 1625.0
+auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "["
 script = ExtResource("14_x8gke")
@@ -583,7 +592,7 @@ offset_left = 1150.0
 offset_right = 2074.0
 offset_bottom = 111.0
 theme_override_font_sizes/font_size = 110
-text = "To Last Step"
+text = "ACTION_LSTEP"
 
 [node name="NextStep" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 layout_mode = 0
@@ -591,6 +600,7 @@ offset_left = 125.0
 offset_top = 1705.0
 offset_right = 1125.0
 offset_bottom = 1825.0
+auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "]"
 script = ExtResource("14_x8gke")
@@ -602,13 +612,14 @@ offset_left = 1150.0
 offset_right = 2092.0
 offset_bottom = 111.0
 theme_override_font_sizes/font_size = 110
-text = "To Next Step"
+text = "ACTION_NSTEP"
 
 [node name="LanguageSelect" type="MenuButton" parent="CanvasLayer"]
 offset_left = 1200.0
 offset_top = 82.0
 offset_right = 1267.0
 offset_bottom = 103.0
+auto_translate = false
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 15
 text = "English"
@@ -646,7 +657,7 @@ offset_bottom = 109.0
 theme = ExtResource("5_fdkx6")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 35
-text = "Waiting for player to join..."
+text = "CONNECT_STEAM_HOSTWAIT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -665,7 +676,7 @@ offset_bottom = 109.0
 theme = ExtResource("5_fdkx6")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 35
-text = "Waiting for host..."
+text = "CONNECT_STEAM_JOINWAIT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -676,7 +687,7 @@ offset_right = 218.0
 offset_bottom = 704.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
-text = "Cosmetics"
+text = "COSMETICS"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/PlaymatDiceCustom"]
 visible = false
@@ -727,7 +738,7 @@ offset_top = 580.0
 offset_right = 1221.0
 offset_bottom = 620.0
 theme_override_font_sizes/font_size = 30
-text = "Exit"
+text = "COSMETICS_CANCEL"
 
 [node name="Playmat" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
 layout_mode = 0
@@ -736,12 +747,13 @@ offset_top = 550.0
 offset_right = 493.0
 offset_bottom = 590.0
 theme_override_font_sizes/font_size = 30
-text = "Load Playmat From File"
+text = "COSMETICS_PM"
 
 [node name="LoadDialog" type="FileDialog" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat"]
 title = "Open a File"
 position = Vector2i(300, 300)
 size = Vector2i(392, 159)
+auto_translate = false
 ok_button_text = "Open"
 file_mode = 0
 access = 2
@@ -756,12 +768,13 @@ offset_top = 550.0
 offset_right = 901.0
 offset_bottom = 590.0
 theme_override_font_sizes/font_size = 30
-text = "Load Die From File"
+text = "COSMETICS_D"
 
 [node name="LoadDialog" type="FileDialog" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/Dice"]
 title = "Open a File"
 position = Vector2i(300, 300)
 size = Vector2i(392, 159)
+auto_translate = false
 ok_button_text = "Open"
 file_mode = 0
 access = 2
@@ -776,7 +789,7 @@ offset_top = 620.0
 offset_right = 493.0
 offset_bottom = 650.0
 theme_override_font_sizes/font_size = 25
-text = "Playmat to Default"
+text = "COSMETICS_PM_DEFAULT"
 
 [node name="DiceDefault" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
 layout_mode = 0
@@ -785,7 +798,7 @@ offset_top = 620.0
 offset_right = 901.0
 offset_bottom = 650.0
 theme_override_font_sizes/font_size = 25
-text = "Die to Default"
+text = "COSMETICS_D_DEFAULT"
 
 [node name="InfoButton" type="Button" parent="CanvasLayer"]
 offset_left = 20.0
@@ -794,7 +807,7 @@ offset_right = 65.0
 offset_bottom = 704.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 15
-text = "Info"
+text = "INFO"
 
 [node name="Info" type="ColorRect" parent="CanvasLayer/InfoButton"]
 visible = false
@@ -811,6 +824,7 @@ offset_left = 4.0
 offset_top = 4.0
 offset_right = 1084.0
 offset_bottom = 67.0
+auto_translate = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 text = "By and large by Gabriel JW Johnson"
@@ -824,6 +838,7 @@ offset_left = 4.0
 offset_top = 75.0
 offset_right = 1082.0
 offset_bottom = 373.0
+auto_translate = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "Special thanks to:
@@ -844,6 +859,7 @@ offset_left = 138.0
 offset_top = 619.0
 offset_right = 220.0
 offset_bottom = 636.0
+auto_translate = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Version "
 
@@ -853,7 +869,7 @@ offset_left = 13.0
 offset_top = 620.0
 offset_right = 120.0
 offset_bottom = 633.0
-text = "Deck Location"
+text = "INFO_DLOC"
 
 [node name="DeckLocation" type="Label" parent="CanvasLayer/InfoButton/Info/DeckLocationButton"]
 visible = false
@@ -866,7 +882,6 @@ offset_top = -29.0
 offset_right = 1622.8
 offset_bottom = -6.465
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Decks are located at "
 
 [node name="Close" type="Button" parent="CanvasLayer/InfoButton/Info"]
 layout_mode = 0
@@ -874,7 +889,7 @@ offset_left = 1034.0
 offset_top = 617.0
 offset_right = 1075.0
 offset_bottom = 630.0
-text = "Close"
+text = "INFO_CANCEL"
 
 [node name="DeckList" parent="CanvasLayer" instance=ExtResource("10_058xr")]
 visible = false
@@ -891,6 +906,7 @@ offset_top = -21.0
 offset_right = 150.0
 offset_bottom = 21.0
 grow_vertical = 2
+auto_translate = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "vspvjfspvs"
@@ -904,7 +920,7 @@ offset_bottom = 707.0
 theme = ExtResource("5_fdkx6")
 theme_override_colors/font_color = Color(0.760664, 0.18676, 0.19329, 1)
 theme_override_font_sizes/font_size = 15
-text = "Main Menu"
+text = "MENU"
 
 [node name="Confirmation" type="ColorRect" parent="CanvasLayer/MainMenu"]
 visible = false
@@ -926,7 +942,7 @@ offset_right = 389.0
 offset_bottom = 110.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 35
-text = "Really Return to Menu?"
+text = "MENU_PROMPT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -937,7 +953,7 @@ offset_top = 148.0
 offset_right = 239.0
 offset_bottom = 190.0
 theme_override_font_sizes/font_size = 25
-text = "Yes"
+text = "YES"
 
 [node name="No" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
 layout_mode = 0
@@ -946,7 +962,7 @@ offset_top = 148.0
 offset_right = 475.0
 offset_bottom = 190.0
 theme_override_font_sizes/font_size = 25
-text = "No"
+text = "NO"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-670, -400)

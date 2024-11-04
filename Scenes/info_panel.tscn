@@ -14,24 +14,18 @@ offset_bottom = 720.0
 size_flags_vertical = 3
 color = Color(0, 0, 0, 0)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Info"]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 10.0
-offset_top = 224.0
-offset_right = 291.0
-offset_bottom = 710.0
-
-[node name="CardText" type="Label" parent="Info/ScrollContainer"]
+[node name="CardText" type="RichTextLabel" parent="Info"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 360)
 layout_mode = 2
+offset_left = 5.0
+offset_top = 224.0
+offset_right = 295.0
+offset_bottom = 710.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("2_ducyq")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
-autowrap_mode = 1
+bbcode_enabled = true
 
 [node name="LockOff" type="Sprite2D" parent="."]
 z_index = 2

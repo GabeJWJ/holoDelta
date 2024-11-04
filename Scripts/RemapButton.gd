@@ -13,13 +13,18 @@ func _init():
 
 func _ready():
 	set_process_unhandled_input(false)
+	if Settings.settings.has(action):
+		var event = InputEventKey.new()
+		event.keycode = OS.find_keycode_from_string(Settings.settings[action])
+		InputMap.action_erase_events(action)
+		InputMap.action_add_event(action, event)
 	update_key_text()
 
 
 func _toggled(button_pressed):
 	set_process_unhandled_input(button_pressed)
 	if button_pressed:
-		text = "... Waiting ..."
+		text = tr("REMAP_WAIT")
 		release_focus()
 	else:
 		update_key_text()
@@ -34,4 +39,5 @@ func _unhandled_input(event):
 
 
 func update_key_text():
-	text = "%s" % InputMap.action_get_events(action)[0].as_text()
+	text = InputMap.action_get_events(action)[0].as_text()
+	Settings.update_settings(action,InputMap.action_get_events(action)[0].as_text_keycode())

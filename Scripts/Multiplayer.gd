@@ -76,8 +76,7 @@ func _ready():
 		dice = Image.new()
 		dice.load_webp_from_buffer(Settings.settings.Dice)
 		$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(dice)
-	$CanvasLayer/Title.text = Settings.en_or_jp("holoDelta","ホロデルタ")
-	$CanvasLayer/LanguageSelect.text = Settings.settings.Language
+	$CanvasLayer/LanguageSelect.text = Settings.get_language()
 	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
 		"English":
@@ -185,7 +184,7 @@ func _on_lobby_match_list(these_lobbies: Array) -> void:
 		if lobby_version == Settings.version:
 			lobbyButton.pressed.connect(_join_steam_lobby.bind(this_lobby))
 		else:
-			lobbyButton.text += " (Version mismatch)"
+			lobbyButton.text += " " + tr("VERSION_MISMATCH")
 			#lobbyButton.pressed.connect(_join_steam_lobby.bind(this_lobby))
 			lobbyButton.disabled = true
 		if is_friend or !lobby_friends_only:
@@ -599,6 +598,7 @@ func _on_yes_pressed():
 			_restart()
 		else:
 			multiplayer.multiplayer_peer.disconnect_peer(1)
+			_restart()
 
 
 func _on_options_pressed():
@@ -609,14 +609,13 @@ func _on_check_unrevealed_pressed():
 	Settings.update_settings("AllowUnrevealed",$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed)
 
 func _on_language_selected(index_selected):
-	Settings.update_settings("Language",Settings.languages[index_selected])
-	$CanvasLayer/LanguageSelect.text = Settings.settings.Language
-	$CanvasLayer/Title.text = Settings.en_or_jp("holoDelta","ホロデルタ")
+	Settings.update_settings("Language",Settings.languages[index_selected][0])
+	$CanvasLayer/LanguageSelect.text = Settings.languages[index_selected][1]
 	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"English":
+		"en":
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		"日本語":
+		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 
 
@@ -658,9 +657,9 @@ func _on_sidebar_options_pressed():
 @rpc("any_peer","call_local","reliable")
 func send_message_rpc(message):
 	if multiplayer.get_remote_sender_id() == multiplayer.get_unique_id():
-		chat.text += "\n\nYou: "
+		chat.text += "\n\n" + tr("YOU") + ": "
 	else:
-		chat.text += "\n\nOpponent: "
+		chat.text += "\n\n" + tr("OPPONENT") + ": "
 	chat.text += message
 	$CanvasLayer/Sidebar/ChatWindow/ScrollContainer.scroll_vertical = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer.get_v_scroll_bar().max_value
 	if !$CanvasLayer/Sidebar/ChatWindow.visible:
@@ -677,10 +676,10 @@ func send_message_on_click():
 @rpc("any_peer","call_local","reliable")
 func game_message(message):
 	if multiplayer.get_remote_sender_id() == multiplayer.get_unique_id():
-		chat.text += "\nYou "
+		chat.text += "\n" +message.format({person = tr("YOU")})
 	else:
-		chat.text += "\nOpponent "
-	chat.text += message
+		chat.text += "\n" +message.format({person = tr("OPPONENT")})
+	
 	$CanvasLayer/Sidebar/ChatWindow/ScrollContainer.scroll_vertical = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer.get_v_scroll_bar().max_value
 
 func _on_side_gave_game_message(message):
