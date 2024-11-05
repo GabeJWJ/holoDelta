@@ -110,6 +110,10 @@ msgid "DECK_SELECT"
 msgstr "Choose Deck"
 
 #: Scenes/board.tscn
+msgid "UPDATE\t_DB"
+msgstr "Update DB"
+
+#: Scenes/board.tscn
 msgid "EXIT"
 msgstr "Exit Game"
 

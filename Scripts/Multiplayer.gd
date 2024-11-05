@@ -98,13 +98,15 @@ func _ready():
 		int_iteration = int(FileAccess.get_file_as_string("user://cardLocalization/_iteration.txt"))
 		$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_ITER")
 		$CanvasLayer/Popup.visible = true
-		$HTTPManager.job(downloadLocalLink + "_iteration.txt").on_failure(_iter_failed).on_success(_iter_succeeded).download("user://cardLocalization/_iteration.txt")
+		$HTTPManager.job(downloadLocalLink + "_iteration.txt").on_failure(_iter_failed).on_success(_iter_succeeded).download("user://cardLocalization/temp_iteration.txt")
 	else:
 		_download_everything()
 
 func _iter_succeeded(_result):
-	if int_iteration != int(FileAccess.get_file_as_string("user://cardLocalization/_iteration.txt")):
+	if int_iteration != int(FileAccess.get_file_as_string("user://cardLocalization/temp_iteration.txt")):
 		$CanvasLayer/Update/Notification.visible = true
+		$CanvasLayer/Popup.visible = false
+		DirAccess.remove_absolute("user://cardLocalization/temp_iteration.txt")
 	else:
 		$CanvasLayer/Popup.visible = false
 		Database._connect()
