@@ -81,7 +81,11 @@ func setup_info(number,art_code,back=null):
 		return
 	else:
 		data1 = data1[0]
-		art_data = art_data[0]
+		var temp_ad = art_data[0]
+		for ad in art_data:
+			if ad.lang == Settings.settings.Language and (Settings.settings.AllowProxies or !bool(ad.proxy)):
+				temp_ad = ad
+		art_data = temp_ad
 	cardType = data1.cardType
 	unlimited = data1.cardLimit == -1
 	

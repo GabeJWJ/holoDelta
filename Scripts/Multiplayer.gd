@@ -37,6 +37,7 @@ const downloadDBLink = "https://github.com/GabeJWJ/holoDelta/raw/refs/heads/mast
 var downloadedDB = false
 var downloadedIteration = false
 var downloadedLocal = {}
+var int_iteration
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -66,6 +67,7 @@ func _ready():
 	
 	
 	$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed = Settings.settings.AllowUnrevealed
+	$CanvasLayer/Options/OptionBackground/AllowProxies.button_pressed = Settings.settings.AllowProxies
 	$CanvasLayer/Options/OptionBackground/SFXSlider.value = Settings.settings.SFXVolume
 	AudioServer.set_bus_volume_db(Settings.sfx_bus_index, Settings.settings.SFXVolume)
 	if Settings.settings.SFXVolume <= -29:
@@ -89,24 +91,33 @@ func _ready():
 		"日本語":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 	
-	if FileAccess.file_exists("user://cardData.db") and DirAccess.dir_exists_absolute("user://cardLocalizations"):
-		Database._connect()
-		Settings._connect_local()
-	else:
-		DirAccess.make_dir_absolute("user://cardLocalizations")
-		$CanvasLayer/Popup/Label.text = "Downloading db..."
-		$CanvasLayer/Popup.visible = true
-		var dbRequest = HTTPRequest.new()
-		add_child(dbRequest)
+	var int_iteration_exists = FileAccess.file_exists("user://cardData.db") and DirAccess.dir_exists_absolute("user://cardLocalization") \
+	and FileAccess.file_exists("user://cardLocalization/_iteration.txt")
+	
+	if int_iteration_exists:
+		int_iteration = int(FileAccess.get_file_as_string("user://cardLocalization/_iteration.txt"))
 		var iterRequest = HTTPRequest.new()
 		add_child(iterRequest)
-		download(downloadDBLink, "user://cardData.db", dbRequest, _downloaded_db)
-		download(downloadLocalLink + "_iteration.txt", "user://cardLocalizations/_iteration.txt", iterRequest, _downloaded_iteration)
-		for lang in Settings.languages:
-			var langRequest = HTTPRequest.new()
-			add_child(langRequest)
-			downloadedLocal[lang[0]] = false
-			download(downloadLocalLink + "%s.po" % lang[0], "user://cardLocalizations/%s.po" % lang[0], langRequest, _downloaded_local.bind(lang[0]))
+		download(downloadLocalLink + "_iteration.txt", "user://cardLocalization/_iteration.txt", iterRequest, _checked_iteration)
+	else:
+		_download_everything()
+		
+
+func _download_everything():
+	DirAccess.make_dir_absolute("user://cardLocalization")
+	$CanvasLayer/Popup/Label.text = tr("DOWNLOADING")
+	$CanvasLayer/Popup.visible = true
+	var dbRequest = HTTPRequest.new()
+	add_child(dbRequest)
+	var iterRequest = HTTPRequest.new()
+	add_child(iterRequest)
+	download(downloadDBLink, "user://cardData.db", dbRequest, _downloaded_db)
+	download(downloadLocalLink + "_iteration.txt", "user://cardLocalization/_iteration.txt", iterRequest, _downloaded_iteration)
+	for lang in Settings.languages:
+		var langRequest = HTTPRequest.new()
+		add_child(langRequest)
+		downloadedLocal[lang[0]] = false
+		download(downloadLocalLink + "%s.po" % lang[0], "user://cardLocalization/%s.po" % lang[0], langRequest, _downloaded_local.bind(lang[0]))
 
 #Stolen from https://forum.godotengine.org/t/how-to-download-files-from-the-internet-using-gdscript/8163/2
 func download(link, path, http, callback):
@@ -119,7 +130,14 @@ func download(link, path, http, callback):
 func _http_request_completed(result, _response_code, _headers, _body, callback):
 	if result != OK:
 		push_error("Download Failed")
-		callback.call()
+	callback.call()
+
+func _checked_iteration():
+	if int_iteration != int(FileAccess.get_file_as_string("user://cardLocalization/_iteration.txt")):
+		_download_everything()
+	else:
+		Database._connect()
+		Settings._connect_local()
 
 func _downloaded_db():
 	downloadedDB = true
@@ -662,6 +680,9 @@ func _on_options_pressed():
 
 func _on_check_unrevealed_pressed():
 	Settings.update_settings("AllowUnrevealed",$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed)
+
+func _on_allow_proxies_pressed():
+	Settings.update_settings("AllowProxies",$CanvasLayer/Options/OptionBackground/AllowProxies.button_pressed)
 
 func _on_language_selected(index_selected):
 	Settings.update_settings("Language",Settings.languages[index_selected][0])

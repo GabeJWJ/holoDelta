@@ -1,4 +1,4 @@
-# LANGUAGE translation for holoDelta - future for the following files:
+# LANGUAGE translation for holoDelta for the following files:
 # res://Scenes/board.tscn
 # res://Scenes/deck_list.tscn
 # res://Scenes/sleeve_select.tscn
@@ -21,7 +21,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: holoDelta - future\n"
+"Project-Id-Version: holoDelta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
@@ -124,6 +124,10 @@ msgstr ""
 
 #: Scenes/board.tscn
 msgid "OPTION_UNREVEALED"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "OPTION_PROXY"
 msgstr ""
 
 #: Scenes/board.tscn
@@ -1084,6 +1088,10 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "MESSAGE_DIERESULT"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOADING"
 msgstr ""
 
 #: Scripts/Multiplayer.gd

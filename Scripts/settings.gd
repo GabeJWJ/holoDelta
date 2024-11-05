@@ -20,6 +20,9 @@ func _ready():
 	if !settings.has("SFXVolume"):
 		settings["SFXVolume"] = 0
 	
+	if !settings.has("AllowProxies"):
+		settings["AllowProxies"] = false
+	
 	match settings.Language:
 		"English":
 			TranslationServer.set_locale("en")

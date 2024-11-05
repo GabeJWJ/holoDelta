@@ -477,12 +477,31 @@ offset_bottom = 330.0
 theme_override_font_sizes/font_size = 120
 text = "OPTION_UNREVEALED"
 
+[node name="AllowProxies" type="TextureButton" parent="CanvasLayer/Options/OptionBackground"]
+layout_mode = 0
+offset_left = 56.6661
+offset_top = 418.333
+offset_right = 456.666
+offset_bottom = 818.333
+toggle_mode = true
+texture_normal = ExtResource("6_1x0cl")
+texture_pressed = ExtResource("7_n8awk")
+
+[node name="Proxies" type="Label" parent="CanvasLayer/Options/OptionBackground/AllowProxies"]
+layout_mode = 0
+offset_left = 468.334
+offset_top = 125.0
+offset_right = 2216.33
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 120
+text = "OPTION_PROXY"
+
 [node name="SFXSlider" type="HSlider" parent="CanvasLayer/Options/OptionBackground"]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 558.0
-offset_right = 1858.0
-offset_bottom = 692.0
+offset_left = 51.6667
+offset_top = 936.333
+offset_right = 1864.67
+offset_bottom = 1070.33
 theme = ExtResource("5_fdkx6")
 min_value = -30.0
 max_value = 10.0
@@ -511,8 +530,9 @@ bus = &"SFX"
 
 [node name="Actions" type="Control" parent="CanvasLayer/Options/OptionBackground"]
 anchors_preset = 0
+offset_top = 400.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 440.0
 
 [node name="Draw" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 layout_mode = 0
@@ -997,6 +1017,7 @@ zoom = Vector2(0.27, 0.27)
 [connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Options/OptionBackground/CheckUnrevealed" to="." method="_on_check_unrevealed_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options/OptionBackground/AllowProxies" to="." method="_on_allow_proxies_pressed"]
 [connection signal="drag_ended" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="drag_started" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="value_changed" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_value_changed"]

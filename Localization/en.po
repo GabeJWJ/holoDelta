@@ -118,6 +118,10 @@ msgid "OPTION_UNREVEALED"
 msgstr "Allow Unrevealed Cards"
 
 #: Scenes/board.tscn
+msgid "OPTION_PROXY"
+msgstr "Allow Proxies"
+
+#: Scenes/board.tscn
 msgid "ACTION_DRAW"
 msgstr "Draw Card"
 
@@ -1072,6 +1076,10 @@ msgstr "{person} ended turn"
 #: Scripts/side.gd
 msgid "MESSAGE_DIERESULT"
 msgstr "{person} rolled a {amount}"
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOADING"
+msgstr "Downloading db..."
 
 #: Scripts/Multiplayer.gd
 msgid "VERSION_MISMATCH"

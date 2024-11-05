@@ -132,6 +132,10 @@ msgid "OPTION_UNREVEALED"
 msgstr ""
 
 #: Scenes/board.tscn
+msgid "OPTION_PROXY"
+msgstr ""
+
+#: Scenes/board.tscn
 msgid "ACTION_DRAW"
 msgstr ""
 
@@ -620,6 +624,10 @@ msgid "CARD_STAGE_HAND"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_COLLAB"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "CARD_HOLOMEM_SWITCH"
 msgstr ""
 
@@ -785,6 +793,10 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "MESSAGE_STAGE_COLLAB"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "MESSAGE_STAGE_MOVECOLLAB"
 msgstr ""
 
 #: Scripts/side.gd
@@ -996,6 +1008,10 @@ msgid "MESSAGE_ATTACHED_HOLOPOWER"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "MESSAGE_ARTS_DAMAGE"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "MESSAGE_DECK_LOOKATX"
 msgstr ""
 
@@ -1017,6 +1033,10 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "MESSAGE_CHEER_ATTACH"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "PROMPT_ART_DAMAGE"
 msgstr ""
 
 #: Scripts/side.gd
@@ -1057,6 +1077,10 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "MESSAGE_DIERESULT"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOADING"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
