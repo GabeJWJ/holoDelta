@@ -1933,6 +1933,7 @@ func end_turn():
 		step = 1
 		first_turn = false
 		used_limited = false
+		collabed = false
 		used_baton_pass = false
 		used_oshi_skill = false
 		can_undo_shuffle_hand = null

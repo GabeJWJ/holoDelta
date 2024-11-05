@@ -188,6 +188,7 @@ func _on_host_pressed():
 	$CanvasLayer/LanguageSelect.visible = false
 	$CanvasLayer/gradient.visible = false
 	$CanvasLayer/PlaymatDiceCustom.visible = false
+	$CanvasLayer/Update.visible = false
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
@@ -213,6 +214,7 @@ func _on_steam_host_pressed():
 	$CanvasLayer/LanguageSelect.visible = false
 	$CanvasLayer/gradient.visible = false
 	$CanvasLayer/PlaymatDiceCustom.visible = false
+	$CanvasLayer/Update.visible = false
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
@@ -507,6 +509,7 @@ func _join_steam_lobby(lobby_id):
 	$CanvasLayer/LanguageSelect.visible = false
 	$CanvasLayer/gradient.visible = false
 	$CanvasLayer/PlaymatDiceCustom.visible = false
+	$CanvasLayer/Update.visible = false
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
@@ -533,6 +536,7 @@ func _on_line_edit_text_submitted(new_text):
 	$CanvasLayer/LanguageSelect.visible = false
 	$CanvasLayer/gradient.visible = false
 	$CanvasLayer/PlaymatDiceCustom.visible = false
+	$CanvasLayer/Update.visible = false
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
