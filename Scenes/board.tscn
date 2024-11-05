@@ -867,10 +867,10 @@ Cyber for helping with the graphic design
 HaruTsunX for helping with the sound design
 MagnaDrake for helping with the Mac release
 よるみ for helping with the Japanese option
-Weiss and Chill for the visibility he's brought to this project
+Weiss and Chill for the EN proxies and the visibility he's brought to this project
 
 And assorted thanks to:
-Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata"
+Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata, dr. AKA, Peeko, Soulscythe"
 autowrap_mode = 3
 
 [node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]

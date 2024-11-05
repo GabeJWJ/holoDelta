@@ -71,6 +71,8 @@ var oshiCard
 @onready var cheerSleeveSelect = $CanvasLayer/YourStuff/Sleeves/Cheer
 @onready var oshiSleeveSelect = $CanvasLayer/YourStuff/Sleeves/Oshi
 
+var cardsFound = []
+
 func choose(n,k):
 	var result = 1
 	for i in range(k):
@@ -91,8 +93,9 @@ func _ready():
 	for art_row in art_data:
 		var cardNumber = art_row.cardID
 		var artCode = art_row.art_index
-		if bool(art_row.unrevealed) and !Settings.settings.AllowUnrevealed:
+		if (bool(art_row.unrevealed) and !Settings.settings.AllowUnrevealed) or [cardNumber, artCode] in cardsFound:
 			continue
+		cardsFound.append([cardNumber, artCode])
 		var newCardButton = create_card_button(cardNumber,artCode)
 		match newCardButton.cardType:
 			"Oshi":
