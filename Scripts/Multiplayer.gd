@@ -96,66 +96,60 @@ func _ready():
 	
 	if int_iteration_exists:
 		int_iteration = int(FileAccess.get_file_as_string("user://cardLocalization/_iteration.txt"))
-		var iterRequest = HTTPRequest.new()
-		add_child(iterRequest)
-		download(downloadLocalLink + "_iteration.txt", "user://cardLocalization/_iteration.txt", iterRequest, _checked_iteration)
+		$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_ITER")
+		$CanvasLayer/Popup.visible = true
+		$HTTPManager.job(downloadLocalLink + "_iteration.txt").on_failure(_iter_failed).on_success(_iter_succeeded).download("user://cardLocalization/_iteration.txt")
 	else:
 		_download_everything()
-		
+
+func _iter_succeeded(_result):
+	if int_iteration != int(FileAccess.get_file_as_string("user://cardLocalization/_iteration.txt")):
+		$CanvasLayer/Update/Notification.visible = true
+	else:
+		$CanvasLayer/Popup.visible = false
+		Database._connect()
+		Settings._connect_local()
+
+func _iter_failed(_result):
+	print(_result)
+	$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_ITER_AGAIN")
+	$HTTPManager.job(downloadLocalLink + "_iteration.txt").on_failure(_iter_failed).on_success(_iter_succeeded).download("user://cardLocalization/_iteration.txt")
 
 func _download_everything():
 	DirAccess.make_dir_absolute("user://cardLocalization")
 	$CanvasLayer/Popup/Label.text = tr("DOWNLOADING")
 	$CanvasLayer/Popup.visible = true
-	var dbRequest = HTTPRequest.new()
-	add_child(dbRequest)
-	var iterRequest = HTTPRequest.new()
-	add_child(iterRequest)
-	download(downloadDBLink, "user://cardData.db", dbRequest, _downloaded_db)
-	download(downloadLocalLink + "_iteration.txt", "user://cardLocalization/_iteration.txt", iterRequest, _downloaded_iteration)
+	$HTTPManager.job(downloadDBLink).on_failure(_download_failed).on_success(_downloaded_db).download("user://cardData.db")
+	$HTTPManager.job(downloadLocalLink + "_iteration.txt").on_failure(_download_failed).on_success(_downloaded_iteration).download("user://cardLocalization/_iteration.txt")
 	for lang in Settings.languages:
-		var langRequest = HTTPRequest.new()
-		add_child(langRequest)
 		downloadedLocal[lang[0]] = false
-		download(downloadLocalLink + "%s.po" % lang[0], "user://cardLocalization/%s.po" % lang[0], langRequest, _downloaded_local.bind(lang[0]))
+		$HTTPManager.job(downloadLocalLink + "%s.po" % lang[0]).on_failure(_download_failed).on_success(_downloaded_local.bind(lang[0])).download("user://cardLocalization/%s.po" % lang[0])
 
-#Stolen from https://forum.godotengine.org/t/how-to-download-files-from-the-internet-using-gdscript/8163/2
-func download(link, path, http, callback):
-	http.request_completed.connect(_http_request_completed.bind(callback))
-	http.set_download_file(path)
-	var request = http.request(link)
-	if request != OK:
-		push_error("Http request error")
+func _download_failed(_result):
+	$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_ERROR")
+	_download_everything()
 
-func _http_request_completed(result, _response_code, _headers, _body, callback):
-	if result != OK:
-		push_error("Download Failed")
-	callback.call()
-
-func _checked_iteration():
-	if int_iteration != int(FileAccess.get_file_as_string("user://cardLocalization/_iteration.txt")):
-		_download_everything()
-	else:
-		Database._connect()
-		Settings._connect_local()
-
-func _downloaded_db():
+func _downloaded_db(_result):
 	downloadedDB = true
 	Database._connect()
 	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
 		$CanvasLayer/Popup.visible = false
 
-func _downloaded_iteration():
+func _downloaded_iteration(_result):
 	downloadedIteration = true
 	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
 		$CanvasLayer/Popup.visible = false
 
-func _downloaded_local(lang):
+func _downloaded_local(_result, lang):
 	downloadedLocal[lang] = true
 	if !downloadedLocal.values().has(false):
 		Settings._connect_local()
 	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
 		$CanvasLayer/Popup.visible = false
+
+func _download_progress(_assigned_files, _current_files, total_bytes, current_bytes):
+	$CanvasLayer/Popup/ProgressBar.max_value = total_bytes
+	$CanvasLayer/Popup/ProgressBar.value = current_bytes
 
 func _on_lobby_created(connect, lobby_id):
 	_hosted_lobby_id = lobby_id

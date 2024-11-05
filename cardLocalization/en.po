@@ -2533,3 +2533,33 @@ msgstr "(Once per game) Can be used when your Purple Center holomem uses an Art:
 msgid "EXTRA_DUO"
 msgstr "This holomem is also treated as both {firstName} and {secondName}."
 
+msgid "hSD03-002_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-003_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-004_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-002_ART_0_NAME"
+msgstr "Mogu mogu~ Okayu"
+
+msgid "hSD03-003_ART_0_NAME"
+msgstr "Please let me into your house"
+
+msgid "hSD03-003_COLLAB_NAME"
+msgstr "I'll come to your house...!"
+
+msgid "hSD03-003_COLLAB_EFFECT"
+msgstr "If your Center holomem has #Gamers, deal 10 special damage to your opponent's Center holomem and one of their Back holomems. holomems Downed with this effect do not reduce LIFE."
+
+msgid "hSD03-004_ART_0_NAME"
+msgstr "Student Cat"
+
+msgid "hSD03-004_COLLAB_NAME"
+msgstr "Would you like to go to school with me...?"
+
+msgid "hSD03-004_COLLAB_EFFECT"
+msgstr "You may reveal one card from the top of your deck. If that card is a Debut or Spot holomem, send the top card of your Cheer Deck to this holomem. Then put that card on the bottom of your deck."
+

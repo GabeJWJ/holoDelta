@@ -1078,8 +1078,20 @@ msgid "MESSAGE_DIERESULT"
 msgstr "{person} rolled a {amount}"
 
 #: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_ITER"
+msgstr "Checking for db update"
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_ITER_AGAIN"
+msgstr "Something went wrong. Trying again..."
+
+#: Scripts/Multiplayer.gd
 msgid "DOWNLOADING"
 msgstr "Downloading db..."
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_ERROR"
+msgstr "Download Failed. Trying again..."
 
 #: Scripts/Multiplayer.gd
 msgid "VERSION_MISMATCH"

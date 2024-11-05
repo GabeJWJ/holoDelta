@@ -1,6 +1,6 @@
 extends Node
 
-var settings
+var settings = {}
 @onready var json = JSON.new()
 var languages = [["en","English"], ["ja","日本語"]]
 enum bloomCode {OK,Instant,Skip,No}
@@ -12,10 +12,16 @@ var cardText = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(OS.get_locale_language())
+	
 	if json.parse(FileAccess.get_file_as_string("user://settings.json")) == 0:
 		settings = json.data
-	else:
-		settings = {"AllowUnrevealed":false,"Language":OS.get_locale_language()}
+	
+	if !settings.has("AllowUnrevealed"):
+		settings["AllowUnrevealed"] = false
+	
+	if !settings.has("Language"):
+		settings["Language"] = OS.get_locale_language()
 	
 	if !settings.has("SFXVolume"):
 		settings["SFXVolume"] = 0

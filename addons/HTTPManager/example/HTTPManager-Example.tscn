@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq0l3g1vrbr0w"]
+
+[ext_resource type="Script" path="res://addons/HTTPManager/example/HTTPManager-Example.gd" id="1_2hlte"]
+[ext_resource type="Script" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="2_o1fp1"]
+[ext_resource type="Texture2D" uid="uid://bead4mo500aiv" path="res://icon.svg" id="3_ryo4l"]
+
+[node name="HTTPManager-Example" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2hlte")
+
+[node name="HTTPManager" type="Node" parent="."]
+script = ExtResource("2_o1fp1")
+use_cache = true
+display_progress = true
+accept_cookies = true
+print_debug = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 53.0
+offset_right = 146.0
+offset_bottom = 131.0
+text = "go"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 240.0
+offset_right = 158.0
+offset_bottom = 266.0
+text = "Load a texture "
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 279.0
+offset_right = 344.0
+offset_bottom = 579.0
+texture = ExtResource("3_ryo4l")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 240.0
+offset_right = 604.0
+offset_bottom = 266.0
+text = "Load a texture, no cache"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 279.0
+offset_right = 717.0
+offset_bottom = 579.0
+texture = ExtResource("3_ryo4l")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 802.0
+offset_top = 240.0
+offset_right = 919.0
+offset_bottom = 266.0
+text = "Load a text"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 278.0
+offset_right = 1101.0
+offset_bottom = 578.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

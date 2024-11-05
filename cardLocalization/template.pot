@@ -2533,3 +2533,33 @@ msgstr ""
 msgid "EXTRA_DUO"
 msgstr ""
 
+msgid "hSD03-002_NAME"
+msgstr ""
+
+msgid "hSD03-003_NAME"
+msgstr ""
+
+msgid "hSD03-004_NAME"
+msgstr ""
+
+msgid "hSD03-002_ART_0_NAME"
+msgstr ""
+
+msgid "hSD03-003_ART_0_NAME"
+msgstr ""
+
+msgid "hSD03-003_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD03-003_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD03-004_ART_0_NAME"
+msgstr ""
+
+msgid "hSD03-004_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD03-004_COLLAB_EFFECT"
+msgstr ""
+

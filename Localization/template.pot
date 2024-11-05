@@ -1091,7 +1091,19 @@ msgid "MESSAGE_DIERESULT"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_ITER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_ITER_AGAIN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
 msgid "DOWNLOADING"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_ERROR"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
