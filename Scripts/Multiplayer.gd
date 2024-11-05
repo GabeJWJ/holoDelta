@@ -136,11 +136,13 @@ func _downloaded_db(_result):
 	Database._connect()
 	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
 		$CanvasLayer/Popup.visible = false
+		$CanvasLayer/Update/Notification.visible = false
 
 func _downloaded_iteration(_result):
 	downloadedIteration = true
 	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
 		$CanvasLayer/Popup.visible = false
+		$CanvasLayer/Update/Notification.visible = false
 
 func _downloaded_local(_result, lang):
 	downloadedLocal[lang] = true
@@ -148,6 +150,7 @@ func _downloaded_local(_result, lang):
 		Settings._connect_local()
 	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
 		$CanvasLayer/Popup.visible = false
+		$CanvasLayer/Update/Notification.visible = false
 
 func _download_progress(_assigned_files, _current_files, total_bytes, current_bytes):
 	$CanvasLayer/Popup/ProgressBar.max_value = total_bytes
