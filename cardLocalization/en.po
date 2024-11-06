@@ -2563,3 +2563,36 @@ msgstr "Would you like to go to school with me...?"
 msgid "hSD03-004_COLLAB_EFFECT"
 msgstr "You may reveal one card from the top of your deck. If that card is a Debut or Spot holomem, send the top card of your Cheer Deck to this holomem. Then put that card on the bottom of your deck."
 
+msgid "hSD03-005_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-005_ART_0_NAME"
+msgstr "Give me a tight hug ❤️"
+
+msgid "hSD03-005_ART_1_NAME"
+msgstr "ehehe prank"
+
+msgid "hSD03-006_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-006_ART_0_NAME"
+msgstr "Nekokaburi"
+
+msgid "hSD03-006_ART_1_NAME"
+msgstr "shaa"
+
+msgid "hSD03-006_ART_1_EFFECT"
+msgstr "You may Archive 1 Blue Cheer from this holomem for the following effect: deal 10 special damage to your opponent's Center holomem and one of their Back holomems."
+
+msgid "hSD03-012_NAME"
+msgstr "Dorobo Construction"
+
+msgid "hSD03-012_EFFECT"
+msgstr "This card can only be played if you have 6 or fewer cards in your hand, excluding this card.\n\nLook at the top four cards of your Deck. Reveal any number of them that are holomems named Nekomata Okayu, Takane Lui, Ookami Mio, Shirakami Fubuki, La+ Darknesss, or Inugami Korone and put them into your hand. Then put the remaining cards on the bottom of your Deck in any order."
+
+msgid "hSD03-014_NAME"
+msgstr "Onigirya"
+
+msgid "hSD03-014_EFFECT"
+msgstr "The holomem with this Fan attached has +10 HP.\n\nThis Fan may only be attached to your Nekomata Okayu, and you may attach any number of this Fan to one holomem."
+

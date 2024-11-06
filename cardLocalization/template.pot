@@ -2563,3 +2563,36 @@ msgstr ""
 msgid "hSD03-004_COLLAB_EFFECT"
 msgstr ""
 
+msgid "hSD03-005_NAME"
+msgstr ""
+
+msgid "hSD03-005_ART_0_NAME"
+msgstr ""
+
+msgid "hSD03-005_ART_1_NAME"
+msgstr ""
+
+msgid "hSD03-006_NAME"
+msgstr ""
+
+msgid "hSD03-006_ART_0_NAME"
+msgstr ""
+
+msgid "hSD03-006_ART_1_NAME"
+msgstr ""
+
+msgid "hSD03-006_ART_1_EFFECT"
+msgstr ""
+
+msgid "hSD03-012_NAME"
+msgstr ""
+
+msgid "hSD03-012_EFFECT"
+msgstr ""
+
+msgid "hSD03-014_NAME"
+msgstr ""
+
+msgid "hSD03-014_EFFECT"
+msgstr ""
+
