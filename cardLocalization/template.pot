@@ -2596,3 +2596,96 @@ msgstr ""
 msgid "hSD03-014_EFFECT"
 msgstr ""
 
+msgid "Isaki Riona"
+msgstr ""
+
+msgid "Koganei Niko"
+msgstr ""
+
+msgid "Mizumiya Su"
+msgstr ""
+
+msgid "Rindo Chihaya"
+msgstr ""
+
+msgid "Kikirara Vivi"
+msgstr ""
+
+msgid "hSD03-009_NAME"
+msgstr ""
+
+msgid "hSD03-009_ART_0_NAME"
+msgstr ""
+
+msgid "hSD03-009_ART_1_NAME"
+msgstr ""
+
+msgid "hSD03-009_ART_1_EFFECT"
+msgstr ""
+
+msgid "hSD03-010_NAME"
+msgstr ""
+
+msgid "hSD03-010_ART_0_NAME"
+msgstr ""
+
+msgid "hSD03-010_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD03-010_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD03-011_NAME"
+msgstr ""
+
+msgid "hSD03-011_ART_0_NAME"
+msgstr ""
+
+msgid "hSD03-011_ART_1_NAME"
+msgstr ""
+
+msgid "hSD03-011_ART_1_EFFECT"
+msgstr ""
+
+msgid "hSD03-013_NAME"
+msgstr ""
+
+msgid "hSD03-013_EFFECT"
+msgstr ""
+
+msgid "hSD04-002_NAME"
+msgstr ""
+
+msgid "hSD04-002_ART_0_NAME"
+msgstr ""
+
+msgid "hSD04-003_NAME"
+msgstr ""
+
+msgid "hSD04-003_ART_0_NAME"
+msgstr ""
+
+msgid "hSD04-003_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD04-003_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD04-004_NAME"
+msgstr ""
+
+msgid "hSD04-004_ART_0_NAME"
+msgstr ""
+
+msgid "hSD04-004_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD04-004_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD04-014_NAME"
+msgstr ""
+
+msgid "hSD04-014_EFFECT"
+msgstr ""
+

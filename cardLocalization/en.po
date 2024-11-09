@@ -2596,3 +2596,96 @@ msgstr "Onigirya"
 msgid "hSD03-014_EFFECT"
 msgstr "The holomem with this Fan attached has +10 HP.\n\nThis Fan may only be attached to your Nekomata Okayu, and you may attach any number of this Fan to one holomem."
 
+msgid "Isaki Riona"
+msgstr "Isaki Riona"
+
+msgid "Koganei Niko"
+msgstr "Koganei Niko"
+
+msgid "Mizumiya Su"
+msgstr "Mizumiya Su"
+
+msgid "Rindo Chihaya"
+msgstr "Rindo Chihaya"
+
+msgid "Kikirara Vivi"
+msgstr "Kikirara Vivi"
+
+msgid "hSD03-009_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-009_ART_0_NAME"
+msgstr "MOGMOG"
+
+msgid "hSD03-009_ART_1_NAME"
+msgstr "Okayu~"
+
+msgid "hSD03-009_ART_1_EFFECT"
+msgstr "You may Archive 2 Blue Cheers from this holomem for the following effect: deal 30 special damage to your opponent's Center holomem and one of their Back holomems."
+
+msgid "hSD03-010_NAME"
+msgstr "Inugami Korone"
+
+msgid "hSD03-010_ART_0_NAME"
+msgstr "Orayo〜"
+
+msgid "hSD03-010_COLLAB_NAME"
+msgstr "Dorobo Construction Intern"
+
+msgid "hSD03-010_COLLAB_EFFECT"
+msgstr "If your Center holomem is Nekomata Okayu, reveal 1 Fan or Mascot from your Deck and put it into your hand. Then shuffle your Deck."
+
+msgid "hSD03-011_NAME"
+msgstr "La+ Darknesss"
+
+msgid "hSD03-011_ART_0_NAME"
+msgstr "Dorobo Construction Agricultural Minister"
+
+msgid "hSD03-011_ART_1_NAME"
+msgstr "I'll definitely let you eat it"
+
+msgid "hSD03-011_ART_1_EFFECT"
+msgstr "If you have 2 or fewer cards in your hand, draw from your Deck until you have 3 cards in your hand."
+
+msgid "hSD03-013_NAME"
+msgstr "Okanyan"
+
+msgid "hSD03-013_EFFECT"
+msgstr "Whenever the holomem with this Mascot attached takes damage while in the Center or Collab position, it takes -10 damage.\n\nIf this Mascot is attached to Nekomata Okayu, it gains the following effect: when the holomem with this Mascot attached Archives Cheer as part of their Ability or Arts, you may Archive this Mascot instead of one Cheer.\n\nYou may only attach 1 Mascot to a holomem."
+
+msgid "hSD04-002_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hSD04-002_ART_0_NAME"
+msgstr "Underworld School Nurse"
+
+msgid "hSD04-003_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hSD04-003_ART_0_NAME"
+msgstr "My cute students~"
+
+msgid "hSD04-003_COLLAB_NAME"
+msgstr "Good Evening~"
+
+msgid "hSD04-003_COLLAB_EFFECT"
+msgstr "If your Oshi holomem is Purple, draw 1 card from your Deck."
+
+msgid "hSD04-004_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hSD04-004_ART_0_NAME"
+msgstr "Please eat a lot❤️"
+
+msgid "hSD04-004_COLLAB_NAME"
+msgstr "Hellish Portion Rice"
+
+msgid "hSD04-004_COLLAB_EFFECT"
+msgstr "You may Archive 1 card from your hand for the following effect: reveal an Event with #Food from your Deck and put it into your hand. Then shuffle your Deck."
+
+msgid "hSD04-014_NAME"
+msgstr "Chocolat"
+
+msgid "hSD04-014_EFFECT"
+msgstr "The holomem with this Mascot attached has +20 HP.\n\nIf this is attached to Yuzuki Choco, it gains the following effect: when the holomem that this Mascot is attached to Blooms, restore 20 HP to that holomem.\n\nYou may only attach 1 Mascot to a holomem."
+
