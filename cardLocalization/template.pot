@@ -2689,3 +2689,81 @@ msgstr ""
 msgid "hSD04-014_EFFECT"
 msgstr ""
 
+msgid "hSD04-009_NAME"
+msgstr ""
+
+msgid "hSD04-009_ART_0_NAME"
+msgstr ""
+
+msgid "hSD04-009_ART_1_NAME"
+msgstr ""
+
+msgid "hSD04-009_ART_1_EFFECT"
+msgstr ""
+
+msgid "hSD04-010_NAME"
+msgstr ""
+
+msgid "hSD04-010_ART_0_NAME"
+msgstr ""
+
+msgid "hSD04-010_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD04-010_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD04-011_NAME"
+msgstr ""
+
+msgid "hSD04-011_ART_0_NAME"
+msgstr ""
+
+msgid "hSD04-011_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD04-011_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD04-012_NAME"
+msgstr ""
+
+msgid "hSD04-012_EFFECT"
+msgstr ""
+
+msgid "hSD04-013_NAME"
+msgstr ""
+
+msgid "hSD04-013_EFFECT"
+msgstr ""
+
+msgid "hBD24-008_NAME"
+msgstr ""
+
+msgid "hBD24-008_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-008_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-008_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-008_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-009_NAME"
+msgstr ""
+
+msgid "hBD24-009_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-009_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-009_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-009_SPSKILL_EFFECT"
+msgstr ""
+

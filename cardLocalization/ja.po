@@ -2689,3 +2689,81 @@ msgstr "しょこら"
 msgid "hSD04-014_EFFECT"
 msgstr "このマスコットが付いているホロメンのHP+20。\n\n◆〈癒月ちょこ〉に付いていたら能力追加このマスコットが付いているホロメンがBloomした時、このホロメンのHP20回復。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
 
+msgid "hSD04-009_NAME"
+msgstr "癒月ちょこ"
+
+msgid "hSD04-009_ART_0_NAME"
+msgstr "33... 22... 11.."
+
+msgid "hSD04-009_ART_1_NAME"
+msgstr "あくとっ"
+
+msgid "hSD04-009_ART_1_EFFECT"
+msgstr "このターンに自分が使っていたイベント1枚につき、このアーツ+40。"
+
+msgid "hSD04-010_NAME"
+msgstr "大空スバル"
+
+msgid "hSD04-010_ART_0_NAME"
+msgstr "地獄くじ引き、引かせるぞっ"
+
+msgid "hSD04-010_COLLAB_NAME"
+msgstr "ちょこーーッ!!"
+
+msgid "hSD04-010_COLLAB_EFFECT"
+msgstr "自分のセンターホロメンが〈癒月ちょこ〉の時、自分のアーカイブのエール1枚を自分のホロメンに送れる。"
+
+msgid "hSD04-011_NAME"
+msgstr "姫森ルーナ"
+
+msgid "hSD04-011_ART_0_NAME"
+msgstr "んな~~~~"
+
+msgid "hSD04-011_COLLAB_NAME"
+msgstr "ちょこてんて~"
+
+msgid "hSD04-011_COLLAB_EFFECT"
+msgstr "自分のホロパワーを見る。その中から1枚を公開し、手札に加える。そして自分の手札1枚をホロパワーにする。"
+
+msgid "hSD04-012_NAME"
+msgstr "スバちょこルーナ"
+
+msgid "hSD04-012_EFFECT"
+msgstr "このカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、〈大空スバル〉と〈癒月ちょこ〉と〈姫森ルーナ〉を好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hSD04-013_NAME"
+msgstr "ちょこのオムライス"
+
+msgid "hSD04-013_EFFECT"
+msgstr "自分のホロメン1人を選ぶ。選んだホロメンのHP20回復。自分のステージに#料理を持つホロメンがいる時、さらに、このターンの間、選んだホロメンのアーツ+20。"
+
+msgid "hBD24-008_NAME"
+msgstr "ベスティア・ゼータ"
+
+msgid "hBD24-008_SKILL_NAME"
+msgstr "オワイトエンハンス"
+
+msgid "hBD24-008_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の白ホロメン1人のアーツ+20。"
+
+msgid "hBD24-008_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-008_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、白ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-009_NAME"
+msgstr "セシリア・イマーグリーン"
+
+msgid "hBD24-009_SKILL_NAME"
+msgstr "グリーンエンハンス"
+
+msgid "hBD24-009_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-009_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-009_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、緑ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+

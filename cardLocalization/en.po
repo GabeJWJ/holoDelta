@@ -2689,3 +2689,81 @@ msgstr "Chocolat"
 msgid "hSD04-014_EFFECT"
 msgstr "The holomem with this Mascot attached has +20 HP.\n\nIf this is attached to Yuzuki Choco, it gains the following effect: when the holomem that this Mascot is attached to Blooms, restore 20 HP to that holomem.\n\nYou may only attach 1 Mascot to a holomem."
 
+msgid "hSD04-009_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hSD04-009_ART_0_NAME"
+msgstr "33... 22... 11.."
+
+msgid "hSD04-009_ART_1_NAME"
+msgstr "Go!"
+
+msgid "hSD04-009_ART_1_EFFECT"
+msgstr "For each Event card you've played during this turn, this Art gains +40 power."
+
+msgid "hSD04-010_NAME"
+msgstr "Oozora Subaru"
+
+msgid "hSD04-010_ART_0_NAME"
+msgstr "I'll make you draw the hell lotto!"
+
+msgid "hSD04-010_COLLAB_NAME"
+msgstr "Chocooo"
+
+msgid "hSD04-010_COLLAB_EFFECT"
+msgstr "If your Center holomem is Yuzuki Choco, you may send one Cheer from your Archive to any of your holomems."
+
+msgid "hSD04-011_NAME"
+msgstr "Himemori Luna"
+
+msgid "hSD04-011_ART_0_NAME"
+msgstr "Nnaaaaaaaaa"
+
+msgid "hSD04-011_COLLAB_NAME"
+msgstr "Choco-tentei~"
+
+msgid "hSD04-011_COLLAB_EFFECT"
+msgstr "Look at your holo power cards, reveal one, and put it into your hand. Then put a card from your hand into your holo power."
+
+msgid "hSD04-012_NAME"
+msgstr "SubaChocoLuna"
+
+msgid "hSD04-012_EFFECT"
+msgstr "This card can only be played if you have 6 or fewer cards in your hand, excluding this card.\n\nLook at the top four cards of your Deck. Reveal any number of them that are holomems named Oozora Subaru, Yuzuki Choco, or Himemori Luna and put them into your hand. Then put the remaining cards on the bottom of your Deck in any order."
+
+msgid "hSD04-013_NAME"
+msgstr "Choco's Omurice"
+
+msgid "hSD04-013_EFFECT"
+msgstr "Choose one of your holomems. That holomem recovers 20 HP. If there is a holomem with #Cooking on your Stage, the chosen holomem's Arts gain +20 power until the end of this turn."
+
+msgid "hBD24-008_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBD24-008_SKILL_NAME"
+msgstr "White Enhance"
+
+msgid "hBD24-008_SKILL_EFFECT"
+msgstr "(Once per turn) One of your White holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-008_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-008_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 White holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-009_NAME"
+msgstr "Cecilia Immergreen"
+
+msgid "hBD24-009_SKILL_NAME"
+msgstr "Green Enhance"
+
+msgid "hBD24-009_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Green holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-009_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-009_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Green holomem from your deck and put it into your hand. Then shuffle your deck."
+
