@@ -11,6 +11,16 @@ Quick start:
 7. Both players click “Connect with Steam.” It will say you’re playing Spacewar. This is normal.
 8. One player clicks “Host”, and then the other player clicks “Join” and then selects the steam name of the friend they’re trying to play with. The “Join Game” action through the steam menu is untested and likely doesn’t work.
 
+**IF YOU GOT THE ERROR TELLING YOU TO LOOK AT MANUALDB.TXT**
+Hello. git lfs is a nightmare, and randomly decides to not work for some users. Congratulations! You are one of them.
+
+All of the cardLocalization files should have been downloaded, it's just the db file that requires some work.
+
+Get it from the following link and place it in your AppData holoDelta folder next to your decks folder.
+
+https://www.dropbox.com/scl/fi/tftw8zbwofn71aprp93ai/cardData.db?rlkey=gn1j0h7vdwz2zgswgt6h7rp1d&st=pey53nr2&dl=1
+**END OF MANUALDB.TXT**
+
 Quick notes:
 
 1. While some important things are handled automatically (limited cards, oshi skills, collabing, proper blooming), the game is by and large a manual simulator. You can find (our best translation of) the rules at https://docs.google.com/spreadsheets/d/1IdaueY-Jw8JXjYLOhA9hUd2w0VRBao9Z1URJwmCWJ64/edit?gid=408156797#gid=408156797.
