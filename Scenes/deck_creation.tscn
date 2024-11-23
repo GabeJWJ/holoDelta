@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://w54g66g0fow1"]
+[gd_scene load_steps=11 format=3 uid="uid://w54g66g0fow1"]
 
 [ext_resource type="Script" path="res://Scripts/deck_creation.gd" id="1_vhmc0"]
 [ext_resource type="Texture2D" uid="uid://cx76tmf8royup" path="res://CyberAssets/Game Side Menu/Side Menu.png" id="2_dcm3l"]
@@ -9,9 +9,15 @@
 [ext_resource type="Texture2D" uid="uid://ngxbbonnmuab" path="res://CyberAssets/DeckBuilder/Deck_Builder_BG.png" id="6_t38qv"]
 [ext_resource type="Texture2D" uid="uid://bnsmsduvikadg" path="res://holoBack.png" id="6_to43o"]
 [ext_resource type="Texture2D" uid="uid://bcans1dkc8eyo" path="res://cheerBack.png" id="7_kh04n"]
+[ext_resource type="AudioStream" uid="uid://dx0hyqv3whb28" path="res://ChikuTaku The Game VGM Menu Select Watson Amelia WUNDER RiKU ✨ チクタク オリジナル曲.mp3" id="10_ncvki"]
 
 [node name="DeckCreation" type="Node2D"]
 script = ExtResource("1_vhmc0")
+
+[node name="DeckBuilderBg" type="Sprite2D" parent="."]
+position = Vector2(587, 347)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("6_t38qv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -54,6 +60,8 @@ offset_right = 160.0
 offset_bottom = 67.0
 text = "NAME"
 flat = false
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="ColorSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Oshi"]
 layout_mode = 0
@@ -63,6 +71,8 @@ offset_right = 256.0
 offset_bottom = 67.0
 text = "COLOR"
 flat = false
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/Oshi"]
 layout_mode = 0
@@ -71,6 +81,8 @@ offset_top = 54.0
 offset_right = 370.0
 offset_bottom = 67.0
 text = "FILTER_CLEAR"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/Oshi"]
 layout_mode = 0
@@ -106,6 +118,8 @@ offset_right = 177.0
 offset_bottom = 67.0
 text = "NAME"
 flat = false
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="ColorSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Holomem"]
 layout_mode = 0
@@ -115,6 +129,8 @@ offset_right = 368.0
 offset_bottom = 67.0
 text = "COLOR"
 flat = false
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="LevelSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/Holomem"]
 layout_mode = 0
@@ -124,6 +140,8 @@ offset_right = 101.0
 offset_bottom = 102.0
 text = "LEVEL"
 flat = false
+text_overrun_behavior = 3
+clip_text = true
 item_count = 5
 popup/item_0/text = "LEVEL_ANY"
 popup/item_0/id = 0
@@ -144,6 +162,8 @@ offset_right = 254.0
 offset_bottom = 103.0
 text = "TAG_PLURAL"
 flat = false
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="BuzzSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/Holomem"]
 layout_mode = 1
@@ -163,6 +183,8 @@ offset_top = 90.0
 offset_right = 369.0
 offset_bottom = 103.0
 text = "FILTER_CLEAR"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/Holomem"]
 layout_mode = 0
@@ -196,6 +218,8 @@ offset_right = 153.0
 offset_bottom = 66.0
 text = "SUPPORT_TYPE"
 flat = false
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="LimitedSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/Support"]
 layout_mode = 1
@@ -207,6 +231,8 @@ offset_top = 51.0
 offset_right = 245.16
 offset_bottom = 58.732
 text = "SUPPORT_LIMITED"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/Support"]
 layout_mode = 0
@@ -215,6 +241,8 @@ offset_top = 53.0
 offset_right = 370.0
 offset_bottom = 66.0
 text = "FILTER_CLEAR"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/Support"]
 layout_mode = 0
@@ -429,6 +457,8 @@ offset_bottom = 664.0
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 20
 text = "LOAD"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="SaveDeck" type="Button" parent="CanvasLayer"]
 offset_left = 798.0
@@ -438,6 +468,8 @@ offset_bottom = 661.0
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 20
 text = "DECK_SAVE"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="DeckName" type="LineEdit" parent="CanvasLayer"]
 offset_left = 507.0
@@ -460,6 +492,8 @@ offset_bottom = 701.0
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 10
 text = "MENU"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="Clear" type="Button" parent="CanvasLayer"]
 offset_left = 314.0
@@ -469,19 +503,23 @@ offset_bottom = 701.0
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 10
 text = "DECK_CLEAR"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="Problems" type="ScrollContainer" parent="CanvasLayer"]
 offset_left = 503.0
 offset_top = 673.0
-offset_right = 882.0
+offset_right = 881.0
 offset_bottom = 715.0
 theme = ExtResource("3_da1xd")
+horizontal_scroll_mode = 0
 
 [node name="ProblemList" type="Label" parent="CanvasLayer/Problems"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
 auto_translate = false
+autowrap_mode = 3
 
 [node name="SavePrompt" type="ColorRect" parent="CanvasLayer"]
 visible = false
@@ -573,10 +611,11 @@ offset_bottom = 396.0
 theme_override_font_sizes/font_size = 40
 text = "NO"
 
-[node name="DeckBuilderBg" type="Sprite2D" parent="."]
-position = Vector2(587, 347)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("6_t38qv")
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_ncvki")
+volume_db = -18.0
+autoplay = true
+bus = &"BGM"
 
 [connection signal="pressed" from="CanvasLayer/PossibleCards/Oshi/ClearFilters" to="." method="_on_oshi_clear_filters_pressed"]
 [connection signal="text_changed" from="CanvasLayer/PossibleCards/Oshi/Search" to="." method="_on_oshi_search"]

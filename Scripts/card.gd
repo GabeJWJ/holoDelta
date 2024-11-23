@@ -34,6 +34,7 @@ var attached = []
 @export var level:int
 @export var hp:int
 @export var damage:int = 0
+@export var offered_damage:int
 @export var extra_hp:int
 @export var status:Array
 @export var baton_pass_cost:int
@@ -123,6 +124,7 @@ func setup_info(number,art_code,back=null):
 			buzz = bool(data2.buzz)
 			hp = data2.hp
 			damage = 0
+			offered_damage = 0
 			extra_hp = 0
 			baton_pass_cost = data2.batonPassCost
 			status = []
@@ -593,6 +595,24 @@ func updateBack(newBack):
 func _on_card_button_pressed():
 	emit_signal("card_clicked",cardID)
 
+@rpc("any_peer","call_local","reliable")
+func showNotice():
+	var tween = get_tree().create_tween()
+	tween.tween_property($Notice,"modulate",Color(1,1,1,1),0.1)
+	tween.tween_interval(0.2)
+	tween.tween_property($Notice,"modulate",Color(1,1,1,0),0.1)
+
+func hitAndBack(hitPos):
+	var differencePos = hitPos - position
+	var tween = get_tree().create_tween()
+	tween.tween_property(self,"position",position + (differencePos * -0.2),0.05)
+	tween.tween_interval(0.01)
+	tween.tween_property(self,"position",position + (0.8 * differencePos), 0.1)
+	tween.tween_interval(0.05)
+	tween.tween_property(self,"position",position, 0.15)
+	tween.tween_callback(set_z_index.bind(z_index))
+	z_index = 5
+
 
 func _on_card_button_mouse_entered():
 	emit_signal("card_mouse_over",cardID)
@@ -605,3 +625,33 @@ func _on_card_button_mouse_exited():
 func _on_card_button_gui_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == 2:
 		emit_signal("card_right_clicked",cardID)
+
+
+@rpc("any_peer","call_remote","reliable")
+func offer_damage(newDamage):
+	offered_damage += newDamage
+	$PotentialDamage.text = str(offered_damage)
+	$PotentialDamage.visible = true
+
+func _on_accept_mouse_entered():
+	$PotentialDamage/Accept.modulate.a = 1
+
+func _on_accept_mouse_exited():
+	$PotentialDamage/Accept.modulate.a = 0.5
+
+func _on_reject_mouse_entered():
+	$PotentialDamage/Reject.modulate.a = 1
+
+func _on_reject_mouse_exited():
+	$PotentialDamage/Reject.modulate.a = 0.5
+
+
+func _on_accept_pressed():
+	damage += offered_damage
+	update_damage()
+	offered_damage = 0
+	$PotentialDamage.visible = false
+
+func _on_reject_pressed():
+	offered_damage = 0
+	$PotentialDamage.visible = false

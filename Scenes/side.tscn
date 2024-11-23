@@ -144,6 +144,7 @@ stream_2/weight = 1.0
 script = ExtResource("1_vy6dv")
 
 [node name="gradient" type="Sprite2D" parent="."]
+z_index = -2
 position = Vector2(-1758, -532)
 texture = ExtResource("2_0kggm")
 centered = false
@@ -283,7 +284,7 @@ offset_bottom = 91.86
 auto_translate = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/line_spacing = 20
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 28
 text = "Draw X cards
 X="
 
@@ -361,20 +362,28 @@ text = "CHOICE_SECOND"
 
 [node name="End Turn" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 1124.0
-offset_top = 15.0
-offset_right = 1268.0
-offset_bottom = 40.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -208.0
+offset_top = 16.0
+offset_right = -14.0
+offset_bottom = 41.0
+grow_horizontal = 0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
 text = "END_TURN"
 
 [node name="Ready" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 1153.0
-offset_top = 71.0
-offset_right = 1267.0
-offset_bottom = 104.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -230.0
+offset_top = 100.0
+offset_right = -8.0
+offset_bottom = 133.0
+grow_horizontal = 0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
 disabled = true
@@ -496,7 +505,7 @@ offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 28
 text = "OPPONENT"
 
 [node name="MulliganWarning" type="ColorRect" parent="CanvasLayer/OpponentLabel"]

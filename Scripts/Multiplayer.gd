@@ -39,6 +39,13 @@ var downloadedIteration = false
 var downloadedLocal = {}
 var int_iteration
 
+# Stolen from https://forum.godotengine.org/t/how-do-you-get-all-nodes-of-a-certain-class/9143/2
+func findByClass(node: Node, className : String, result : Array) -> void:
+	if node.is_class(className) :
+		result.push_back(node)
+	for child in node.get_children():
+		findByClass(child, className, result)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
@@ -69,11 +76,20 @@ func _ready():
 	$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed = Settings.settings.AllowUnrevealed
 	$CanvasLayer/Options/OptionBackground/AllowProxies.button_pressed = Settings.settings.AllowProxies
 	$CanvasLayer/Options/OptionBackground/SFXSlider.value = Settings.settings.SFXVolume
+	$CanvasLayer/Sidebar/OptionsWindow/SFXSlider.value = Settings.settings.SFXVolume
 	AudioServer.set_bus_volume_db(Settings.sfx_bus_index, Settings.settings.SFXVolume)
 	if Settings.settings.SFXVolume <= -29:
 		AudioServer.set_bus_mute(Settings.sfx_bus_index, true)
 	else:
 		AudioServer.set_bus_mute(Settings.sfx_bus_index, false)
+	$CanvasLayer/Options/OptionBackground/BGMSlider.value = Settings.settings.BGMVolume
+	$CanvasLayer/Sidebar/OptionsWindow/BGMSlider.value = Settings.settings.BGMVolume
+	AudioServer.set_bus_volume_db(Settings.bgm_bus_index, Settings.settings.BGMVolume)
+	if Settings.settings.BGMVolume < -39:
+		AudioServer.set_bus_mute(Settings.bgm_bus_index, true)
+	else:
+		AudioServer.set_bus_mute(Settings.bgm_bus_index, false)
+	
 	if Settings.settings.has("Playmat") and Settings.settings.Playmat.size() > 0:
 		playmat = Image.new()
 		playmat.load_webp_from_buffer(Settings.settings.Playmat)
@@ -86,9 +102,9 @@ func _ready():
 	$CanvasLayer/LanguageSelect.text = Settings.get_language()
 	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"English":
+		"en", "es":
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		"日本語":
+		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 	
 	var int_iteration_exists = FileAccess.file_exists("user://cardData.db") and DirAccess.dir_exists_absolute("user://cardLocalization") \
@@ -101,6 +117,8 @@ func _ready():
 		$HTTPManager.job(downloadLocalLink + "_iteration.txt").on_failure(_iter_failed).on_success(_iter_succeeded).download("user://cardLocalization/temp_iteration.txt")
 	else:
 		_download_everything()
+	
+	fix_font_size()
 
 func _iter_succeeded(_result):
 	if int_iteration != int(FileAccess.get_file_as_string("user://cardLocalization/temp_iteration.txt")):
@@ -109,8 +127,8 @@ func _iter_succeeded(_result):
 		DirAccess.remove_absolute("user://cardLocalization/temp_iteration.txt")
 	else:
 		$CanvasLayer/Popup.visible = false
-		Database._connect()
-		Settings._connect_local()
+	Database._connect()
+	Settings._connect_local()
 
 func _iter_failed(_result):
 	print(_result)
@@ -129,6 +147,7 @@ func _download_everything():
 
 func _download_failed(_result):
 	$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_ERROR")
+	print(_result)
 	_download_everything()
 
 func _downloaded_db(_result):
@@ -193,6 +212,8 @@ func _on_host_pressed():
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
 	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
+	
+	fix_font_size()
 
 func _on_steam_host_pressed():
 	peer.create_lobby(SteamMultiplayerPeer.LOBBY_TYPE_PUBLIC,20)
@@ -220,6 +241,8 @@ func _on_steam_host_pressed():
 	$CanvasLayer/MainMenu.visible = true
 	$CanvasLayer/JoinOptions.visible = true
 	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
+	
+	fix_font_size()
 
 func _on_public_private_chosen(chosen_index):
 	$CanvasLayer/SteamHost/MenuButton.text = $CanvasLayer/SteamHost/MenuButton.get_popup().get_item_text(chosen_index)
@@ -453,22 +476,35 @@ func _all_ready():
 	_enable_steps.rpc()
 
 func _please_add_join_option():
+	_add_join_option.rpc_id(1,Steam.getPersonaName(),JSON.stringify(deckInfo))
+
+@rpc("any_peer","call_remote","reliable")
+func _get_playmat_and_dice():
 	var playmat_buffer
 	if playmat:
 		playmat_buffer = playmat.save_webp_to_buffer(true,0.6)
 	var dice_buffer
 	if dice:
 		dice_buffer = dice.save_webp_to_buffer(true,0.4)
-	_add_join_option.rpc_id(1,Steam.getPersonaName(),JSON.stringify(deckInfo),playmat_buffer,dice_buffer)
+	_apply_playmat_and_dice.rpc_id(1, playmat_buffer, dice_buffer)
 
 @rpc("any_peer","call_remote","reliable")
-func _add_join_option(steam_name, deck_json, playmat_buffer, dice_buffer):
+func _add_join_option(steam_name, deck_json):
 	var opponent_id = multiplayer.get_remote_sender_id()
 	var newJoinButton = Button.new()
 	newJoinButton.name = str(multiplayer.get_remote_sender_id())
 	newJoinButton.text = steam_name
-	newJoinButton.pressed.connect(_start.bind(opponent_id, deck_json, playmat_buffer, dice_buffer))
+	newJoinButton.set_meta("deck", deck_json)
+	newJoinButton.disabled = true
 	$CanvasLayer/JoinOptions/ScrollContainer/VBoxContainer.add_child(newJoinButton)
+	_get_playmat_and_dice.rpc_id(opponent_id)
+
+@rpc("any_peer","call_remote","reliable")
+func _apply_playmat_and_dice(playmat_buffer, dice_buffer):
+	var opponent_id = multiplayer.get_remote_sender_id()
+	var joinButton = $CanvasLayer/JoinOptions/ScrollContainer/VBoxContainer.get_node(str(opponent_id))
+	joinButton.pressed.connect(_start.bind(opponent_id, joinButton.get_meta("deck"), playmat_buffer, dice_buffer))
+	joinButton.disabled = false
 
 func _please_start():
 	var playmat_buffer
@@ -514,6 +550,8 @@ func _join_steam_lobby(lobby_id):
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
 	$CanvasLayer/JoinWait.visible = true
+	
+	fix_font_size()
 
 func _on_line_edit_text_submitted(new_text):
 	ip_prompt.visible = false
@@ -540,6 +578,8 @@ func _on_line_edit_text_submitted(new_text):
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/MainMenu.visible = true
+	
+	fix_font_size()
 
 func connect_info(side_id):
 	connect_info_all.rpc(side_id)
@@ -692,10 +732,11 @@ func _on_language_selected(index_selected):
 	$CanvasLayer/LanguageSelect.text = Settings.languages[index_selected][1]
 	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"en":
+		"en","es":
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
+	fix_font_size()
 
 
 func _on_info_button_pressed():
@@ -776,6 +817,14 @@ func _on_sfx_slider_value_changed(value):
 		AudioServer.set_bus_mute(Settings.sfx_bus_index, true)
 	else:
 		AudioServer.set_bus_mute(Settings.sfx_bus_index, false)
+
+func _on_bgm_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(Settings.bgm_bus_index, value)
+	Settings.update_settings("BGMVolume", value)
+	if value < -39:
+		AudioServer.set_bus_mute(Settings.bgm_bus_index, true)
+	else:
+		AudioServer.set_bus_mute(Settings.bgm_bus_index, false)
 
 
 func _on_playmat_dice_custom_pressed():
@@ -880,3 +929,12 @@ func _unhandled_key_input(event):
 			elif event.is_action_pressed("Last Step"):
 				var newStep = _last_step()
 				_select_step.rpc(newStep)
+
+func fix_font_size():
+	var all_labels = []
+	findByClass(self, "Button", all_labels)
+	for label in all_labels:
+		if label.auto_translate:
+			if !label.has_meta("fontSize"):
+				label.set_meta("fontSize", label.get_theme_font_size("font_size"))
+			FixFontTool.apply_text_with_corrected_max_scale(label.size, label, tr(label.text), 0.8, false, Vector2(), label.get_meta("fontSize"))

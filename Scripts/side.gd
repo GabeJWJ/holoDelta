@@ -69,6 +69,7 @@ var used_baton_pass = false
 var used_oshi_skill = false
 var used_sp_oshi_skill = false
 var can_undo_shuffle_hand = null
+
 signal ended_turn
 signal made_turn_choice(choice)
 signal rps(choice)
@@ -724,7 +725,7 @@ func sync_zones(list_of_zones):
 func please_sync_zones():
 	var list_of_inside_ids = {}
 	for zone in zones:
-		list_of_inside_ids[zone[0].name] = [zone[1], all_cards[zone[1]].get_card_name()]
+		list_of_inside_ids[zone[0].name] = [zone[1], all_cards[zone[1]].name]
 	sync_zones.rpc(list_of_inside_ids)
 
 func showZoneSelection(zones_list,show_cancel=true):
@@ -844,6 +845,8 @@ func _on_card_clicked(card_id):
 	currentCard = card_id
 	
 	var actualCard = all_cards[currentCard]
+	if not actualCard in hand:
+		actualCard.showNotice.rpc()
 	
 	if !is_multiplayer_authority():
 		if actualCard.attached.size() > 0:
@@ -877,7 +880,7 @@ func _on_card_clicked(card_id):
 								popup.add_item(tr("CARD_HOLOMEM_BLOOM_FAST"),105)
 					elif currentZone:
 						if is_turn:
-							if currentZone == centerZone or currentZone == collabZone and !(first_turn and player1):
+							if !actualCard.rested and currentZone in [centerZone, collabZone] and !(first_turn and player1):
 								for art in actualCard.holomem_arts:
 									popup.add_item(Settings.trans("%s_ART_%s_NAME" % [actualCard.cardNumber, art[0]]), 80+art[0])
 								popup.add_separator()
@@ -976,6 +979,10 @@ func _on_card_clicked(card_id):
 				popup.add_item(tr("CARD_REVEALED_HAND"),21)
 				if actualCard.cardType == "Support" and actualCard.supportType in ["Tool","Mascot","Fan"] and all_occupied_zones().size() > 0:
 					popup.add_item(tr("CARD_REVEALED_ATTACH"),22)
+				popup.add_separator()
+				popup.add_item(tr("CARD_REVEALED_TOPDECK"),23)
+				popup.add_item(tr("CARD_REVEALED_BOTTOMDECK"),24)
+				popup.add_item(tr("CARD_REVEALED_ARCHIVE"),25)
 	
 	show_popup()
 
@@ -1003,6 +1010,8 @@ func _on_deck_clicked():
 		popup.add_item(tr("DECK_ARCHIVE"),202)
 		popup.add_item(tr("DECK_ARCHIVEX"),203)
 		popup.add_item(tr("DECK_HOLOPOWER"),204)
+		if revealed.size() < 10:
+			popup.add_item(tr("DECK_REVEAL"),205)
 		
 		popup.add_separator()
 		popup.add_item(tr("DECK_LOOKX"),297)
@@ -1220,6 +1229,7 @@ func _on_popup_menu_id_pressed(id):
 			currentCard = -1
 			_move_sfx.rpc()
 		21: #Add Revealed Card to Hand
+			emit_signal("sent_game_message",tr("MESSAGE_REVEALED_HAND").format({cardName = all_cards[currentCard].get_card_name()}))
 			add_to_hand(currentCard)
 			all_cards[currentCard].z_index = 1
 			revealed.erase(currentCard)
@@ -1228,6 +1238,27 @@ func _on_popup_menu_id_pressed(id):
 			var possibleZones = all_occupied_zones()
 			showZoneSelection(possibleZones)
 			currentPrompt = 22
+		23: #Send Revealed Card to Top of Deck
+			emit_signal("sent_game_message",tr("MESSAGE_REVEALED_TOPDECK").format({cardName = all_cards[currentCard].get_card_name()}))
+			add_to_fuda(currentCard, deck)
+			all_cards[currentCard].z_index = 1
+			revealed.erase(currentCard)
+			currentCard = -1
+			_move_sfx.rpc()
+		24: #Send Revealed Card to Bottom of Deck
+			emit_signal("sent_game_message",tr("MESSAGE_REVEALED_BOTTOMDECK").format({cardName = all_cards[currentCard].get_card_name()}))
+			add_to_fuda(currentCard, deck, true)
+			all_cards[currentCard].z_index = 1
+			revealed.erase(currentCard)
+			currentCard = -1
+			_move_sfx.rpc()
+		25: #Send Revealed Card to Archive
+			emit_signal("sent_game_message",tr("MESSAGE_REVEALED_ARCHIVE").format({cardName = all_cards[currentCard].get_card_name()}))
+			add_to_fuda(currentCard, archive)
+			all_cards[currentCard].z_index = 1
+			revealed.erase(currentCard)
+			currentCard = -1
+			_move_sfx.rpc()
 		30: #Reveal and Attach Life
 			var possibleZones = all_occupied_zones()
 			var cheerCard = all_cards[currentCard]
@@ -1368,6 +1399,21 @@ func _on_popup_menu_id_pressed(id):
 		204: #Holopower
 			mill(deck,holopower)
 			can_undo_shuffle_hand = null
+		205: #Reveal Top Card From Deck
+			var actualCard = deck.cardList.pop_front()
+			actualCard.visible = true
+			currentCard = actualCard.cardID
+			emit_signal("sent_game_message",tr("MESSAGE_FUDA_REVEAL").format({fromFuda = tr(deck.name), cardName = actualCard.get_card_name()}))
+			actualCard.z_index = 2
+			remove_from_fuda(currentCard,deck)
+			actualCard.position = Vector2(300,100*revealed.size() - 400)
+			revealed.append(currentCard)
+			for i in range(revealed.size()):
+				if i > 0:
+					move_behind.rpc(revealed[-i-1],revealed[-i])
+			currentCard = -1
+			can_undo_shuffle_hand = null
+			_move_sfx.rpc()
 		250: #Shuffle Hand Into Deck
 			emit_signal("sent_game_message", tr("MESSAGE_DECK_MULLIGAN"))
 			var list_of_ids = []
@@ -1701,11 +1747,17 @@ func _on_line_edit_text_submitted(new_text):
 			var input = new_text.to_int()
 			var actualCard = all_cards[currentCard]
 			var oppSide = get_parent().opponentSide
+			var attacking = oppSide.get_node(NodePath(currentAttacking[1]))
 			if new_text.is_valid_int() and input > 0:
+				var attackPos = attacking.position.rotated(-oppSide.rotation) + oppSide.position - get_parent().yourSide.position if multiplayer.get_unique_id() == 1 \
+					else attacking.position.rotated(-get_parent().yourSide.rotation) - oppSide.position + get_parent().yourSide.position
+				_move_sfx()
+				actualCard.hitAndBack(attackPos)
+				attacking.offer_damage.rpc(input)
 				emit_signal("sent_game_message", tr("MESSAGE_ARTS_DAMAGE").format(
 					{fromZone = find_what_zone(currentCard).name, fromName = actualCard.get_card_name()
 					,artName = Settings.trans("%s_ART_%s_NAME" % [actualCard.cardNumber, currentPrompt-80]), damage = input
-					,toZone = currentAttacking[0], toName = currentAttacking[1]}))
+					,toZone = currentAttacking[0], toName = attacking.get_card_name()}))
 				remove_prompt()
 		
 		201: #Draw X
@@ -1782,7 +1834,7 @@ func _on_zone_clicked(zone_id):
 			_move_sfx.rpc()
 		80,81: #Holomem Arts (called on opponent's side)
 			var yourSide = get_parent().yourSide
-			yourSide.currentAttacking = [actualZoneInfo[0].name, syncedZones[actualZoneInfo[0].name][1]]
+			yourSide.currentAttacking = [actualZoneInfo[0].name, syncedZones[actualZoneInfo[0].name][1], syncedZones[actualZoneInfo[0].name][0]]
 			yourSide.set_prompt(tr("PROMPT_ART_DAMAGE"),20,3)
 			hideZoneSelection()
 		
@@ -1947,7 +1999,7 @@ func _on_fuda_shuffled():
 	_shuffle_sfx.rpc()
 
 func _on_die_result(num):
-	emit_signal("sent_game_message",tr("MESSAGE_DIERESULT").format({result = num}))
+	emit_signal("sent_game_message",tr("MESSAGE_DIERESULT").format({amount = num}))
 	_die_sfx.rpc()
 
 @rpc("any_peer","call_local")

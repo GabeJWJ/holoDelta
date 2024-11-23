@@ -118,9 +118,9 @@ func _clear_showing():
 
 func update_word_wrap():
 	match Settings.settings.Language:
-		"English":
+		"en","es":
 			%CardText.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		"日本語":
+		"ja":
 			%CardText.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 
 func _input(event):

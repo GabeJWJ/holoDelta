@@ -655,6 +655,18 @@ msgid "CARD_REVEALED_ATTACH"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "CARD_REVEALED_TOPDECK"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_ARCHIVE"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "DECK_DRAW"
 msgstr ""
 
@@ -672,6 +684,10 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "DECK_HOLOPOWER"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "DECK_REVEAL"
 msgstr ""
 
 #: Scripts/side.gd
@@ -835,6 +851,22 @@ msgid "MESSAGE_STAGE_UNBLOOM"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "MESSAGE_REVEALED_HAND"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "MESSAGE_REVEALED_TOPDECK"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "MESSAGE_REVEALED_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "MESSAGE_REVEALED_ARCHIVE"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "MESSAGE_OSHISKILL_SP"
 msgstr ""
 
@@ -872,6 +904,10 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "PROMPT_DECK_ARCHIVE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "MESSAGE_FUDA_REVEAL"
 msgstr ""
 
 #: Scripts/side.gd
@@ -920,10 +956,6 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "MESSAGE_ATTACHED_LIFE"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_FUDA_REVEAL"
 msgstr ""
 
 #: Scripts/side.gd

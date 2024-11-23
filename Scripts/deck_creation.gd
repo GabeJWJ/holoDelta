@@ -82,6 +82,13 @@ func choose(n,k):
 func mulligan_odds(draw_count):
 	return choose(50 - total_debut,draw_count)/choose(50,draw_count)
 
+# Stolen from https://forum.godotengine.org/t/how-do-you-get-all-nodes-of-a-certain-class/9143/2
+func findByClass(node: Node, className : String, result : Array) -> void:
+	if node.is_class(className) :
+		result.push_back(node)
+	for child in node.get_children():
+		findByClass(child, className, result)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	tr("LEVEL_ANY") #for POT generation
@@ -175,6 +182,8 @@ func _ready():
 	$CanvasLayer/InfoPanel.update_word_wrap()
 	
 	update_analytics()
+	
+	fix_font_size()
 
 func _on_oshi_name_select(selected_index):
 	var selected_name = oshi_names[selected_index-1]
@@ -422,6 +431,10 @@ func custom_holomem_sort(a,b):
 	elif a.getNamesAsText() < b.getNamesAsText():
 		return true
 	elif a.getNamesAsText() > b.getNamesAsText():
+		return false
+	elif a.level < b.level:
+		return true
+	elif a.level > b.level:
 		return false
 	elif a.cardNumber < b.cardNumber:
 		return true
@@ -931,3 +944,12 @@ func _on_clear_pressed(complete=true):
 	update_analytics()
 	
 	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
+
+func fix_font_size():
+	var all_labels = []
+	findByClass(self, "Button", all_labels)
+	for label in all_labels:
+		if label.auto_translate:
+			if !label.has_meta("fontSize"):
+				label.set_meta("fontSize", label.get_theme_font_size("font_size"))
+			FixFontTool.apply_text_with_corrected_max_scale(label.size, label, tr(label.text), 0.9, false, Vector2(), label.get_meta("fontSize"))

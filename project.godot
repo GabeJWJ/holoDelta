@@ -71,7 +71,7 @@ pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Localization/en.po", "res://Localization/ja.po")
+locale/translations=PackedStringArray("res://Localization/en.po", "res://Localization/ja.po", "res://Localization/es.po")
 locale/translations_pot_files=PackedStringArray("res://Scenes/board.tscn", "res://Scenes/deck_list.tscn", "res://Scenes/sleeve_select.tscn", "res://Scenes/side.tscn", "res://Scenes/better_texture_button.tscn", "res://Scenes/card.tscn", "res://Scenes/die.tscn", "res://Scenes/fuda.tscn", "res://Scenes/info_panel.tscn", "res://Scenes/zone.tscn", "res://Scenes/deck_creation.tscn", "res://Scripts/RemapButton.gd", "res://Scripts/deck_creation.gd", "res://Scripts/side.gd", "res://Scripts/Multiplayer.gd", "res://Scripts/card.gd")
 pseudolocalization/expansion_ratio=0.3
 

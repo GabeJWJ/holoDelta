@@ -1609,13 +1609,13 @@ msgstr "宝鐘マリン"
 msgid "hBP02-028_ART_0_NAME"
 msgstr "宝鐘海賊団船長の宝鐘マリンですぅー!"
 
-msgid "hBP02-060_NAME"
+msgid "hBP02-054_NAME"
 msgstr "森カリオペ"
 
-msgid "hBP02-060_ART_0_NAME"
+msgid "hBP02-054_ART_0_NAME"
 msgstr "グリム・リーバーの第一弟子"
 
-msgid "hBP02-060_ART_0_EFFECT"
+msgid "hBP02-054_ART_0_EFFECT"
 msgstr "自分のアーカイブにホロメンがある時、このアーツ+10."
 
 msgid "hBP02-013_NAME"
@@ -2766,4 +2766,205 @@ msgstr "Birthday Gift ~Green~"
 
 msgid "hBD24-009_SPSKILL_EFFECT"
 msgstr "[ゲームに1回] 自分のデッキから、緑ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hSD04-005_NAME"
+msgstr "癒月ちょこ"
+
+msgid "hSD04-005_ART_0_NAME"
+msgstr "おつかれいと･･････"
+
+msgid "hSD04-005_ART_1_NAME"
+msgstr "あ〜む(チュッ)"
+
+msgid "hSD04-006_NAME"
+msgstr "癒月ちょこ"
+
+msgid "hSD04-006_ART_0_NAME"
+msgstr "禁断のキッス"
+
+msgid "hSD04-006_ART_0_EFFECT"
+msgstr "このアーツで相手のホロメンにダメージを与えた時、与えたダメージ10につき、このホロメンのHP10回復"
+
+msgid "hBP02-007_NAME"
+msgstr "森 カリオペ"
+
+msgid "hBP02-007_SKILL_NAME"
+msgstr "サンプリング"
+
+msgid "hBP02-007_SKILL_EFFECT"
+msgstr "【ターンに1回】 自分の手札2枚をアーカイブすることで、アーカイブの#ENを持つホロメン2枚を手札に戻す。"
+
+msgid "hBP02-007_SPSKILL_NAME"
+msgstr "死神ラップ"
+
+msgid "hBP02-007_SPSKILL_EFFECT"
+msgstr "【ゲームに1回】 自分のセンターホロメンが(森カリオペ)の時に使える。 このターンの間、自分の〈森カリオペ〉1人は、アーツを使った後、同じアーツをもう1回使う。"
+
+msgid "hBP02-044_NAME"
+msgstr "紫咲シオン"
+
+msgid "hBP02-044_ART_0_NAME"
+msgstr "照れくさ"
+
+msgid "hBP02-044_ART_1_NAME"
+msgstr "やだ、もー"
+
+msgid "hBP02-045_NAME"
+msgstr "紫咲シオン"
+
+msgid "hBP02-045_ART_0_NAME"
+msgstr "最高にハッピーです!!"
+
+msgid "hBP02-045_BLOOM_NAME"
+msgstr "久しぶりの全体ライブーっ!!"
+
+msgid "hBP02-045_BLOOM_EFFECT"
+msgstr "自分のデッキの上から3枚を見る。その中から、[青ホロメンか紫ホロ メン]1枚を公開し、手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hBP02-055_NAME"
+msgstr "森 カリオペ"
+
+msgid "hBP02-055_ART_0_NAME"
+msgstr "マイステージ"
+
+msgid "hBP02-055_COLLAB_NAME"
+msgstr "ショータイム"
+
+msgid "hBP02-055_COLLAB_EFFECT"
+msgstr "自分の手札のホロメシ1枚をアーカイブできるこのターンの間、自分のステージの#Mythを持つホロメン1人のアーツ+20。"
+
+msgid "hBP02-056_NAME"
+msgstr "森 カリオペ"
+
+msgid "hBP02-056_ART_0_NAME"
+msgstr "\"Cash-Money\""
+
+msgid "hBP02-057_NAME"
+msgstr "森 カリオペ"
+
+msgid "hBP02-057_ART_0_NAME"
+msgstr "一緒にブチアガろうぜ!"
+
+msgid "hBP02-057_BLOOM_NAME"
+msgstr "みんなで作る最高のfes"
+
+msgid "hBP02-057_BLOOM_EFFECT"
+msgstr "自分の手札の同じタグを持つホロメン2枚をアーカイブできる: 自分のデッキを2枚引く。"
+
+msgid "hBP02-058_NAME"
+msgstr "森 カリオペ"
+
+msgid "hBP02-058_ART_0_NAME"
+msgstr "Dead Beat"
+
+msgid "hBP02-058_ART_0_EFFECT"
+msgstr "このホロメンにツールかマスコットが付いている時、このアーツ+30"
+
+msgid "hBP02-058_BLOOM_NAME"
+msgstr "どうしたの？"
+
+msgid "hBP02-058_BLOOM_EFFECT"
+msgstr "自分のアーカイブの[〈森カリオペの鎌〉か〈Death-sensei)]1枚を手札に戻せる。"
+
+msgid "hBP02-059_NAME"
+msgstr "森 カリオペ"
+
+msgid "hBP02-059_ART_0_NAME"
+msgstr "Featuring Myth"
+
+msgid "hBP02-059_ART_0_EFFECT"
+msgstr "自分のアーカイブに#Mythを持つホロメンが、4枚以上ある時、このアーツ+40。8枚以上ある時、さらに、このアーツ+40。"
+
+msgid "hBP02-059_BLOOM_NAME"
+msgstr "Soul Voice"
+
+msgid "hBP02-059_BLOOM_EFFECT"
+msgstr "自分のデッキから、カード1枚を公開し、アーカイブする。そしてデッキをシャッフルする。"
+
+msgid "hBP02-061_NAME"
+msgstr "一伊那尓栖"
+
+msgid "hBP02-061_ART_0_NAME"
+msgstr "WAH!"
+
+msgid "hBP02-062_NAME"
+msgstr "一伊那尓栖"
+
+msgid "hBP02-062_ART_0_NAME"
+msgstr "君とタコグラム"
+
+msgid "hBP02-063_NAME"
+msgstr "一伊那尓栖"
+
+msgid "hBP02-063_ART_0_NAME"
+msgstr "楽しんでいこう!!!"
+
+msgid "hBP02-063_BLOOM_NAME"
+msgstr "みんな「WAH」の準備はいいかー!"
+
+msgid "hBP02-063_BLOOM_EFFECT"
+msgstr "自分の#Mythを持つホロメン1人のHP20回復。"
+
+msgid "hBP02-064_NAME"
+msgstr "一伊那尓栖"
+
+msgid "hBP02-064_ART_0_NAME"
+msgstr "アルカイックスマイル"
+
+msgid "hBP02-064_ART_0_EFFECT"
+msgstr "自分のアーカイブに#Mythを持つホロメンが、5枚以上ある時、このホロメンのエール1枚を、自分の他のホロメンに付け替えられる。10枚以上ある時、さらに、このアーツ+50。"
+
+msgid "hBP02-065_NAME"
+msgstr "ネリッサ・レイヴンクロフト"
+
+msgid "hBP02-065_ART_0_NAME"
+msgstr "Hiya darlings!"
+
+msgid "hBP02-065_ART_0_EFFECT"
+msgstr "このホロメンに赤エールが付いている時、このアーツ+10。"
+
+msgid "hBP02-066_NAME"
+msgstr "ネリッサ・レイヴンクロフト"
+
+msgid "hBP02-066_ART_0_NAME"
+msgstr "良い響きですね"
+
+msgid "hBP02-066_ART_1_NAME"
+msgstr "アイドルソングというものは"
+
+msgid "hBP02-075_NAME"
+msgstr "アイドルサインペン"
+
+msgid "hBP02-075_EFFECT"
+msgstr "このカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、#絵を持つホロメンを好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hBP02-079_NAME"
+msgstr "爆発の魔法"
+
+msgid "hBP02-079_EFFECT"
+msgstr "相手のセンターホロメンかコラボホロメンに特殊ダメージ20を与える。ただし、ダウンしても相手のライフは減らない。自分の魔法を持つイベントはターンに1回しか使えない。"
+
+msgid "hBP02-083_NAME"
+msgstr "魔法のタンス"
+
+msgid "hBP02-083_EFFECT"
+msgstr "このカードは、自分のホロパワー1枚をアーカイブしなければ使えない。\n\n自分のアーカイブのエール1枚を、自分の〈紫咲シオン〉に送る。自分の魔法を持つイベントはターンに1回しか使えない。"
+
+msgid "hBP02-088_NAME"
+msgstr "森カリオペの鎌"
+
+msgid "hBP02-088_EFFECT"
+msgstr "このツールが付いているホロメンのアーツ+10。\n\n◆1st以上の〈森カリオペ〉に付いていたら能力追加\n\nこのツールをホロメンに手札から付けた時、自分のデッキの上から1枚をアーカイブする。\n\nツールは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hBP02-098_NAME"
+msgstr "Death-sensei"
+
+msgid "hBP02-098_EFFECT"
+msgstr "このマスコットが付いているホロメンのHP+20。\n\n〈森カリオペ〉に付いていたら能力追加このマスコットが付いているホロメンのアーツに必要なエールの色すべてを無にする。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hBP02-102_NAME"
+msgstr "塩っこ"
+
+msgid "hBP02-102_EFFECT"
+msgstr "■このファンが付いているホロメンのアーツ+10。\n\n■このファンが付いているホロメンがダメージを受ける時、このファンをアーカイブする。\n\nこのファンは、自分の〈紫咲シオン〉だけに付けられ、1人につき何枚でも付けられる。"
 

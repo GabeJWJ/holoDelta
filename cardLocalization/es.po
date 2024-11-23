@@ -1,0 +1,3018 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: holodelta\n"
+"X-Crowdin-Project-ID: 724315\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /cards/template.pot\n"
+"X-Crowdin-File-ID: 14\n"
+"Project-Id-Version: holodelta\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Spanish\n"
+"Language: es_ES\n"
+"PO-Revision-Date: 2024-11-23 04:30\n"
+
+msgid "EXTRA_BUZZ"
+msgstr "Cuando este miembro es Derribado, Pierde 2 VIDAS."
+
+msgid "EXTRA_UNLIM"
+msgstr "Puedes poner cualquier número de copias de este miembro en tu Deck."
+
+msgid "Blue"
+msgstr "Azul"
+
+msgid "Green"
+msgstr "Verde"
+
+msgid "Purple"
+msgstr "Morado"
+
+msgid "Red"
+msgstr "Rojo"
+
+msgid "White"
+msgstr "Blanco"
+
+msgid "Yellow"
+msgstr "Amarillo"
+
+msgid "AZKi"
+msgstr ""
+
+msgid "Airani Iofifteen"
+msgstr ""
+
+msgid "Akai Haato"
+msgstr ""
+
+msgid "Aki Rosenthal"
+msgstr ""
+
+msgid "Amane Kanata"
+msgstr ""
+
+msgid "Anya Melfissa"
+msgstr ""
+
+msgid "Aragami Oga"
+msgstr ""
+
+msgid "Arurandeisu"
+msgstr ""
+
+msgid "Astel Leda"
+msgstr ""
+
+msgid "Axel Syrios"
+msgstr ""
+
+msgid "Ayunda Risu"
+msgstr ""
+
+msgid "Banzoin Hakka"
+msgstr ""
+
+msgid "Cecilia Immergreen"
+msgstr ""
+
+msgid "Ceres Fauna"
+msgstr ""
+
+msgid "Crimzon Ruze"
+msgstr ""
+
+msgid "Elizabeth Rose Bloodflame"
+msgstr ""
+
+msgid "Fuwawa Abyssgard"
+msgstr ""
+
+msgid "Gavis Bettel"
+msgstr ""
+
+msgid "Gawr Gura"
+msgstr ""
+
+msgid "Gigi Murin"
+msgstr ""
+
+msgid "Goldbullet"
+msgstr ""
+
+msgid "Hakos Baelz"
+msgstr ""
+
+msgid "Hakui Koyori"
+msgstr ""
+
+msgid "Hanasaki Miyabi"
+msgstr ""
+
+msgid "Himemori Luna"
+msgstr ""
+
+msgid "Hiodoshi Ao"
+msgstr ""
+
+msgid "Hizaki Gamma"
+msgstr ""
+
+msgid "Hoshimachi Suisei"
+msgstr ""
+
+msgid "Houshou Marine"
+msgstr ""
+
+msgid "IRyS"
+msgstr ""
+
+msgid "Ichijou Ririka"
+msgstr ""
+
+msgid "Inugami Korone"
+msgstr ""
+
+msgid "Josuiji Shinri"
+msgstr ""
+
+msgid "Jurard T Rexford"
+msgstr ""
+
+msgid "Juufuutei Raden"
+msgstr ""
+
+msgid "Kaela Kovalskia"
+msgstr ""
+
+msgid "Kagami Kira"
+msgstr ""
+
+msgid "Kageyama Shien"
+msgstr ""
+
+msgid "Kanade Izuru"
+msgstr ""
+
+msgid "Kazama Iroha"
+msgstr ""
+
+msgid "Kiryu Coco"
+msgstr ""
+
+msgid "Kishido Temma"
+msgstr ""
+
+msgid "Kobo Kanaeru"
+msgstr ""
+
+msgid "Koseki Bijou"
+msgstr ""
+
+msgid "Kureiji Ollie"
+msgstr ""
+
+msgid "La+ Darknesss"
+msgstr ""
+
+msgid "Machina X Flayon"
+msgstr ""
+
+msgid "Magni Dezmond"
+msgstr ""
+
+msgid "Mano Aloe"
+msgstr ""
+
+msgid "Minase Rio"
+msgstr ""
+
+msgid "Minato Aqua"
+msgstr ""
+
+msgid "Mococo Abyssgard"
+msgstr ""
+
+msgid "Momosuzu Nene"
+msgstr ""
+
+msgid "Moona Hoshinova"
+msgstr ""
+
+msgid "Mori Calliope"
+msgstr ""
+
+msgid "Murasaki Shion"
+msgstr ""
+
+msgid "Nakiri Ayame"
+msgstr ""
+
+msgid "Nanashi Mumei"
+msgstr ""
+
+msgid "Natsuiro Matsuri"
+msgstr ""
+
+msgid "Nekomata Okayu"
+msgstr ""
+
+msgid "Nerissa Ravencroft"
+msgstr ""
+
+msgid "Ninomae Ina'nis"
+msgstr ""
+
+msgid "Noir Vesper"
+msgstr ""
+
+msgid "Octavio"
+msgstr ""
+
+msgid "Omaru Polka"
+msgstr ""
+
+msgid "Ookami Mio"
+msgstr ""
+
+msgid "Oozora Subaru"
+msgstr ""
+
+msgid "Otonose Kanade"
+msgstr ""
+
+msgid "Ouro Kronii"
+msgstr ""
+
+msgid "Pavolia Reine"
+msgstr ""
+
+msgid "Raora Panthera"
+msgstr ""
+
+msgid "Regis Altare"
+msgstr ""
+
+msgid "Rikka"
+msgstr ""
+
+msgid "Roboco-san"
+msgstr ""
+
+msgid "Sakamata Chloe"
+msgstr ""
+
+msgid "Sakura Miko"
+msgstr ""
+
+msgid "Shiori Novella"
+msgstr ""
+
+msgid "Shirakami Fubuki"
+msgstr ""
+
+msgid "Shiranui Flare"
+msgstr ""
+
+msgid "Shirogane Noel"
+msgstr ""
+
+msgid "Shishiro Botan"
+msgstr ""
+
+msgid "Takanashi Kiara"
+msgstr ""
+
+msgid "Takane Lui"
+msgstr ""
+
+msgid "Todoroki Hajime"
+msgstr ""
+
+msgid "Tokino Sora"
+msgstr ""
+
+msgid "Tokoyami Towa"
+msgstr ""
+
+msgid "Tsukishita Kaoru"
+msgstr ""
+
+msgid "Tsukumo Sana"
+msgstr ""
+
+msgid "Tsunomaki Watame"
+msgstr ""
+
+msgid "Uruha Rushia"
+msgstr ""
+
+msgid "Usada Pekora"
+msgstr ""
+
+msgid "Utsugi Uyu"
+msgstr ""
+
+msgid "Vestia Zeta"
+msgstr ""
+
+msgid "Amelia Watson"
+msgstr ""
+
+msgid "Yakushiji Suzaku"
+msgstr ""
+
+msgid "Yatogami Fuma"
+msgstr ""
+
+msgid "Yozora Mel"
+msgstr ""
+
+msgid "Yukihana Lamy"
+msgstr ""
+
+msgid "Yukoku Roberu"
+msgstr ""
+
+msgid "Yuzuki Choco"
+msgstr ""
+
+msgid "Advent"
+msgstr ""
+
+msgid "Alcohol"
+msgstr ""
+
+msgid "AnimalEars"
+msgstr ""
+
+msgid "Art"
+msgstr ""
+
+msgid "Bird"
+msgstr ""
+
+msgid "Council"
+msgstr ""
+
+msgid "EN"
+msgstr ""
+
+msgid "Gen0"
+msgstr ""
+
+msgid "Gen1"
+msgstr ""
+
+msgid "Gen2"
+msgstr ""
+
+msgid "Gen3"
+msgstr ""
+
+msgid "Gen4"
+msgstr ""
+
+msgid "Gen5"
+msgstr ""
+
+msgid "HalfElf"
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "IDGen1"
+msgstr ""
+
+msgid "IDGen2"
+msgstr ""
+
+msgid "IDGen3"
+msgstr ""
+
+msgid "JP"
+msgstr ""
+
+msgid "Myth"
+msgstr ""
+
+msgid "Promise"
+msgstr ""
+
+msgid "Sea"
+msgstr ""
+
+msgid "SecretSocietyholoX"
+msgstr ""
+
+msgid "Song"
+msgstr ""
+
+msgid "ReGloss"
+msgstr ""
+
+msgid "Gamers"
+msgstr ""
+
+msgid "Cheer"
+msgstr ""
+
+msgid "Holomem"
+msgstr ""
+
+msgid "Oshi"
+msgstr ""
+
+msgid "Support"
+msgstr "Soporte"
+
+msgid "Event"
+msgstr "Evento"
+
+msgid "Fan"
+msgstr ""
+
+msgid "Item"
+msgstr "Objeto"
+
+msgid "Mascot"
+msgstr "Mascota"
+
+msgid "Staff"
+msgstr ""
+
+msgid "Tool"
+msgstr "Herramienta"
+
+msgid "hSD01-003_NAME"
+msgstr "Tokino Sora"
+
+msgid "hSD01-003_ART_0_NAME"
+msgstr "(๑╹ᆺ╹)  nun nun"
+
+msgid "hSD01-004_NAME"
+msgstr "Tokino Sora"
+
+msgid "hSD01-004_ART_0_NAME"
+msgstr "En el Escenario!"
+
+msgid "hSD01-004_COLLAB_NAME"
+msgstr "Bailemos!"
+
+msgid "hSD01-004_COLLAB_EFFECT"
+msgstr "Durante este turno, las Artes de tu Centro ganan +20 de poder."
+
+msgid "hSD01-005_NAME"
+msgstr "Tokino Sora"
+
+msgid "hSD01-005_ART_0_NAME"
+msgstr "nun nun shiyo"
+
+msgid "hSD01-005_ART_1_NAME"
+msgstr "Tu corazón se nubla... ¡luego se aclara!"
+
+msgid "hSD01-006_NAME"
+msgstr "Tokino Sora"
+
+msgid "hSD01-006_ART_0_NAME"
+msgstr "Concierto de ensueño"
+
+msgid "hSD01-006_ART_1_NAME"
+msgstr "Simpatía de SorAZ"
+
+msgid "hSD01-006_ART_1_EFFECT"
+msgstr "Si tienes una AZKi en tu Escenario, este Arte gana +50 de poder."
+
+msgid "hSD01-007_NAME"
+msgstr "IRyS"
+
+msgid "hSD01-007_ART_0_NAME"
+msgstr "La Esperanza Encarnada"
+
+msgid "hSD01-007_COLLAB_NAME"
+msgstr "HOPE"
+
+msgid "hSD01-007_COLLAB_EFFECT"
+msgstr "Mira las cartas en tu holo power, revela una, y ponla en tu mano. Luego pon una carta de tu mano en tu holo power."
+
+msgid "hSD01-008_NAME"
+msgstr "AZKi"
+
+msgid "hSD01-008_ART_0_NAME"
+msgstr "Sigue Esforzandote!"
+
+msgid "hSD01-009_NAME"
+msgstr "AZKi"
+
+msgid "hSD01-009_ART_0_NAME"
+msgstr "Ahora a dónde, ahora a dónde"
+
+msgid "hSD01-009_COLLAB_NAME"
+msgstr "Mapa en Expansión"
+
+msgid "hSD01-009_COLLAB_EFFECT"
+msgstr "Puedes lanzar un dado: si el resultado es 4 o menos, envía el tope de tu Deck de Ovaciones a uno de tus miembros en el Backstage. Luego, si el resultado es 1, puedes mover este miembro de vuelta al Backstage."
+
+msgid "hSD01-010_NAME"
+msgstr "AZKi"
+
+msgid "hSD01-010_ART_0_NAME"
+msgstr "Un viaje sin rumbo junto a ti"
+
+msgid "hSD01-011_NAME"
+msgstr "AZKi"
+
+msgid "hSD01-011_ART_0_NAME"
+msgstr "Gravedad de SorAZ"
+
+msgid "hSD01-011_ART_0_EFFECT"
+msgstr "Si tienes una Tokino Sora en tu Escenario, envía el tope de tu Deck de Ovaciones a uno de tus miembros."
+
+msgid "hSD01-011_ART_1_NAME"
+msgstr "Canción Destinada"
+
+msgid "hSD01-011_ART_1_EFFECT"
+msgstr "Puedes lanzar un dado: si el resultado es impar, este Arte gana +50 de poder. Si el resultado es 1, este Arte gana +50 de poder adicional."
+
+msgid "hSD01-012_NAME"
+msgstr "Airani Iofifteen"
+
+msgid "hSD01-012_ART_0_NAME"
+msgstr "Me divertí dibujando!"
+
+msgid "hSD01-012_COLLAB_NAME"
+msgstr "Dibujando Juntos!"
+
+msgid "hSD01-012_COLLAB_EFFECT"
+msgstr "Envía 1 Ovación Blanca o 1 Ovación Verde desde tu Archivo a tu Centro."
+
+msgid "hSD01-013_NAME"
+msgstr "SorAZ"
+
+msgid "hSD01-013_ART_0_NAME"
+msgstr "Un Futuro Brillante"
+
+msgid "hSD01-013_ART_0_EFFECT"
+msgstr "Puedes lanzar un dado: si el resultado es impar, envía el tope de tu Deck de Ovaciones a este miembro. Si es par, roba 1 carta desde tu Deck."
+
+msgid "hSD01-014_NAME"
+msgstr "Amane Kanata"
+
+msgid "hSD01-014_ART_0_NAME"
+msgstr "Hey"
+
+msgid "EXTRA_SPOT"
+msgstr "Este miembro no puede Florecer."
+
+msgid "hSD01-015_NAME"
+msgstr "Hakui Koyori"
+
+msgid "hSD01-015_ART_0_NAME"
+msgstr "Pure Pure Pure~"
+
+msgid "hSD01-015_COLLAB_NAME"
+msgstr "SoAzKo"
+
+msgid "hSD01-015_COLLAB_EFFECT"
+msgstr "- Si está Colaborando con Tokino Sora, roba 1 carta desde tu Deck.\n"
+"- Si está Colaborando con AZKi, envía el tope de tu Deck de Ovaciones a tu Centro."
+
+msgid "hPR-001_NAME"
+msgstr ""
+
+msgid "hPR-001_ART_0_NAME"
+msgstr ""
+
+msgid "hPR-001_COLLAB_NAME"
+msgstr ""
+
+msgid "hPR-001_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP01-009_NAME"
+msgstr "Amane Kanata"
+
+msgid "hBP01-009_ART_0_NAME"
+msgstr "Konkanata"
+
+msgid "hBP01-009_ART_0_EFFECT"
+msgstr "Este Arte solo puede seleccionar al Centro oponente."
+
+msgid "hBP01-021_NAME"
+msgstr "Tokino Sora"
+
+msgid "hBP01-021_ART_0_NAME"
+msgstr "Todos! Kon-sommé!"
+
+msgid "hBP01-023_NAME"
+msgstr "Tokino Sora"
+
+msgid "hBP01-023_ART_0_NAME"
+msgstr "No parará"
+
+msgid "hBP01-023_ART_0_EFFECT"
+msgstr "Puedes lanzar un dado: si el resultado es impar, repite este Arte seleccionando el mismo miembro. (Este Arte puede repetirse hasta Derribar al Miembro)"
+
+msgid "hBP01-023_COLLAB_NAME"
+msgstr "Estamos Avanzando...!"
+
+msgid "hBP01-023_COLLAB_EFFECT"
+msgstr "Roba 2 cartas desde tu Deck."
+
+msgid "hBP01-033_NAME"
+msgstr "Aki Rosenthal"
+
+msgid "hBP01-033_ART_0_NAME"
+msgstr "Afterparty"
+
+msgid "hBP01-033_COLLAB_NAME"
+msgstr "Ruta Curativa"
+
+msgid "hBP01-033_COLLAB_EFFECT"
+msgstr "Puedes lanzar un dado: si el resultado es impar, restaura 20 HP a uno de tus miembros Verde."
+
+msgid "hBP01-035_NAME"
+msgstr "Aki Rosenthal"
+
+msgid "hBP01-035_ART_0_NAME"
+msgstr "Fantasia Akirose"
+
+msgid "hBP01-035_ART_0_EFFECT"
+msgstr "Si este miembro tiene una Herramienta acoplada, envía la carta del tope de tu Deck de Ovaciones a cualquiera de tus miembros."
+
+msgid "hBP01-035_BLOOM_NAME"
+msgstr "Festival Musical de Bremen"
+
+msgid "hBP01-035_BLOOM_EFFECT"
+msgstr "Puedes acoplar 1 Herramienta desde tu Archivo a cualquiera de tus miembros."
+
+msgid "hBP01-036_NAME"
+msgstr "Aki Rosenthal"
+
+msgid "hBP01-036_ART_0_NAME"
+msgstr "Ganbarose hoy tambien!"
+
+msgid "hBP01-036_COLLAB_NAME"
+msgstr "Rosetai, por favor apoyenme!"
+
+msgid "hBP01-036_COLLAB_EFFECT"
+msgstr "Restaura 20 HP a uno de tus miembros."
+
+msgid "hBP01-037_NAME"
+msgstr "Aki Rosenthal"
+
+msgid "hBP01-037_ART_0_NAME"
+msgstr "Llave Secreta"
+
+msgid "hBP01-037_ART_0_EFFECT"
+msgstr "Si este miembro tiene una Herramienta acoplada, este Arte gana +50 de poder."
+
+msgid "hBP01-037_BLOOM_NAME"
+msgstr "Muñeca Gótica"
+
+msgid "hBP01-037_BLOOM_EFFECT"
+msgstr "Envía el tope de tu Deck de Ovaciones a uno de tus miembros. Después, Si este miembro tiene una Herramienta acoplada, restaura 40 HP a este miembro."
+
+msgid "hBP01-038_NAME"
+msgstr "Usada Pekora"
+
+msgid "hBP01-038_ART_0_NAME"
+msgstr "Konpeko!"
+
+msgid "hBP01-038_ART_0_EFFECT"
+msgstr "Puedes lanzar un dado: si el resultado es par, este Arte gana +20 de poder."
+
+msgid "hBP01-041_NAME"
+msgstr "Usada Pekora"
+
+msgid "hBP01-041_ART_0_NAME"
+msgstr "No te lo pierdas peko!"
+
+msgid "hBP01-041_BLOOM_NAME"
+msgstr "Usada Pekora ha crecido"
+
+msgid "hBP01-041_BLOOM_EFFECT"
+msgstr "Envía el tope de tu Deck de Ovaciones a tu miembro Centro o Collab."
+
+msgid "hBP01-042_NAME"
+msgstr "Usada Pekora"
+
+msgid "hBP01-042_ART_0_NAME"
+msgstr "Chica conejo en una blanca playa"
+
+msgid "hBP01-042_ART_1_NAME"
+msgstr "Ki-t-raaaa"
+
+msgid "hBP01-042_ART_1_EFFECT"
+msgstr "Puedes lanzar un dado: este Arte gana +10 de poder multiplicado por el número lanzado"
+
+msgid "hBP01-043_NAME"
+msgstr "Usada Pekora"
+
+msgid "hBP01-043_ART_0_NAME"
+msgstr "Human Rabbitality Project"
+
+msgid "hBP01-043_ART_0_EFFECT"
+msgstr "Puedes lanzar un dado 3 veces: este Arte gana +10 de poder multiplicado por el total lanzado."
+
+msgid "hBP01-043_BLOOM_NAME"
+msgstr "Vestido de Princesa"
+
+msgid "hBP01-043_BLOOM_EFFECT"
+msgstr "Restaura 50 HP a este miembro."
+
+msgid "hBP01-044_NAME"
+msgstr "AZKi"
+
+msgid "hBP01-044_ART_0_NAME"
+msgstr "Kon-AZKi"
+
+msgid "hBP01-046_NAME"
+msgstr "AZKi"
+
+msgid "hBP01-046_ART_0_NAME"
+msgstr "Vine a un mundo maravilloso!"
+
+msgid "hBP01-046_BLOOM_NAME"
+msgstr "Porque los Pioneers estaban ahí"
+
+msgid "hBP01-046_BLOOM_EFFECT"
+msgstr "Puedes elegir de 1-3 Ovaciones en tu Escenario, Y muévelas entre tus miembros de la forma que quieras."
+
+msgid "hBP01-047_NAME"
+msgstr "AZKi"
+
+msgid "hBP01-047_ART_0_NAME"
+msgstr "Un nuevo mapa"
+
+msgid "hBP01-047_BLOOM_NAME"
+msgstr "La trayectoria de la Vida"
+
+msgid "hBP01-047_BLOOM_EFFECT"
+msgstr "Restaura 40 HP a este miembro. Después, puedes lanzar un dado: si el resultado es impar, puedes mandar de 1-3 Ovaciones Verdes desde tu Archivo a este miembro."
+
+msgid "hBP01-056_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP01-056_ART_0_NAME"
+msgstr "minasan, matTakane?"
+
+msgid "hBP01-057_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP01-057_ART_0_NAME"
+msgstr "El Atractivo de las Alas Oscuras"
+
+msgid "hBP01-057_ART_0_EFFECT"
+msgstr "Inflige 10 de daño especial al miembro Collab oponente."
+
+msgid "hBP01-057_COLLAB_NAME"
+msgstr "Cita"
+
+msgid "hBP01-057_COLLAB_EFFECT"
+msgstr "Inflige 10 de daño especial al miembro Collab oponente."
+
+msgid "hBP01-058_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP01-058_ART_0_NAME"
+msgstr "Kon-luilui"
+
+msgid "hBP01-058_ART_1_NAME"
+msgstr "Otsu-luilui"
+
+msgid "hBP01-059_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP01-059_ART_0_NAME"
+msgstr "Bienvenido a la Fiesta"
+
+msgid "hBP01-059_ART_1_NAME"
+msgstr "Fiesta de Lui"
+
+msgid "hBP01-059_ART_1_EFFECT"
+msgstr "Puedes Archivar una carta de tu mano, si lo haces: revela un miembro 1st Bloom (excepto miembros Buzz) desde tu Deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBP01-060_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP01-060_ART_0_NAME"
+msgstr "Sigueme de cerca!"
+
+msgid "hBP01-060_BLOOM_NAME"
+msgstr "Es gracias a todos!"
+
+msgid "hBP01-060_BLOOM_EFFECT"
+msgstr "Al Florecer desde un miembro Debut, puedes Archivar 1 carta desde tu mano para robar 2 cartas desde tu Deck."
+
+msgid "hBP01-061_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP01-061_ART_0_NAME"
+msgstr "Fiesta de Halcón"
+
+msgid "hBP01-061_ART_0_EFFECT"
+msgstr "Puedes Archivar de 1-5 cartas desde tu mano: inflige 20 de daño especial por cada una de las cartas Archivadas al Centro o Collab oponente."
+
+msgid "hBP01-061_BLOOM_NAME"
+msgstr "Comandante de la Organización"
+
+msgid "hBP01-061_BLOOM_EFFECT"
+msgstr "Puedes poner de 1-2 miembros con #SecretSocietyholoX desde tu Archivo en tu mano."
+
+msgid "hBP01-062_NAME"
+msgstr "Takanashi Kiara"
+
+msgid "hBP01-062_ART_0_NAME"
+msgstr "Kikkeriki~!"
+
+msgid "hBP01-062_ART_0_EFFECT"
+msgstr "Puedes Archivar 1 carta desde tu mano, si lo haces: este Arte gana +20 de poder."
+
+msgid "hBP01-068_NAME"
+msgstr "Omaru Polka"
+
+msgid "hBP01-068_ART_0_NAME"
+msgstr "Polka Oruyo!"
+
+msgid "hBP01-070_NAME"
+msgstr "Omaru Polka"
+
+msgid "hBP01-070_ART_0_NAME"
+msgstr "Codependencia"
+
+msgid "hBP01-070_ART_0_EFFECT"
+msgstr "Este Arte no puede usarse a no ser que haya al menos un Zain acoplado a este miembro. "
+
+msgid "hBP01-070_BLOOM_NAME"
+msgstr "La fiesta comienza!"
+
+msgid "hBP01-070_BLOOM_EFFECT"
+msgstr "Revela 1 Fan desde tu Deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBP01-071_NAME"
+msgstr "Omaru Polka"
+
+msgid "hBP01-071_ART_0_NAME"
+msgstr "Circo de Polka"
+
+msgid "hBP01-071_ART_0_EFFECT"
+msgstr "Por cada Fan acoplado a tus miembros, este Arte gana +20 de poder."
+
+msgid "hBP01-071_BLOOM_NAME"
+msgstr "Ilusión de Polka"
+
+msgid "hBP01-071_BLOOM_EFFECT"
+msgstr "Puedes poner 1 Zain desde tu Archivo en tu mano."
+
+msgid "hBP01-082_NAME"
+msgstr "Kobo Kanaeru"
+
+msgid "hBP01-082_ART_0_NAME"
+msgstr "Bokobokobokobo"
+
+msgid "hBP01-088_NAME"
+msgstr "Moona Hoshinova"
+
+msgid "hBP01-088_ART_0_NAME"
+msgstr "Moon Moon~ Moona Dayo!"
+
+msgid "hBP01-088_ART_0_EFFECT"
+msgstr "Puedes lanzar un dado: si el resultado es par, inflige 20 de daño especial a un miembro en el Backstage oponente. (miembros Derribados por este efecto no reducen VIDA)"
+
+msgid "hBP01-096_NAME"
+msgstr "Usada Pekora"
+
+msgid "hBP01-096_ART_0_NAME"
+msgstr "Pekora ~Tras la puerta~"
+
+msgid "hBP01-096_COLLAB_NAME"
+msgstr "Es \"Aventura\""
+
+msgid "hBP01-096_COLLAB_EFFECT"
+msgstr "Puedes lanzar un dado: si el resultado es par, revela un miembro Buzz desde tu Deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBP01-097_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hBP01-097_ART_0_NAME"
+msgstr "Flare ~Tras la puerta~"
+
+msgid "hBP01-097_COLLAB_NAME"
+msgstr "Es \"Una Historia de Amor y Lazos\""
+
+msgid "hBP01-097_COLLAB_EFFECT"
+msgstr "Cambia tu Centro con un miembro en tu Backstage que no esté Descansando."
+
+msgid "hBP01-098_NAME"
+msgstr "Shirogane Noel"
+
+msgid "hBP01-098_ART_0_NAME"
+msgstr "Noel ~Tras la puerta~"
+
+msgid "hBP01-098_COLLAB_NAME"
+msgstr "Soy \"Yo\""
+
+msgid "hBP01-098_COLLAB_EFFECT"
+msgstr "Envía 1 Ovación desde tu Archiva a cualquiera de tus miembros."
+
+msgid "hBP01-099_NAME"
+msgstr "Houshou Marine"
+
+msgid "hBP01-099_ART_0_NAME"
+msgstr "Marine ~Tras la puerta~"
+
+msgid "hBP01-099_COLLAB_NAME"
+msgstr "Es \"El Castillo Edinburgh\""
+
+msgid "hBP01-099_COLLAB_EFFECT"
+msgstr "Puedes lanzar un dado: si el resultado es impar, cambia el Centro oponente con un miembro en su Backstage."
+
+msgid "hBP01-048_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hBP01-048_ART_0_NAME"
+msgstr "Damas y Caballeros, Kazama Iroha de gozaru"
+
+msgid "hBP01-050_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hBP01-050_ART_0_NAME"
+msgstr "Te daré toda mi energía!"
+
+msgid "hBP01-050_ART_0_EFFECT"
+msgstr "Envía el tope de tu Deck de Ovaciones a uno de tus miembros con #SecretSocietyholoX que no se llame Kazama Iroha."
+
+msgid "hBP01-050_GIFT_NAME"
+msgstr "Guardaespaldas"
+
+msgid "hBP01-050_GIFT_EFFECT"
+msgstr "(Solo posición de Collab) Las Artes de los miembros oponentes solo pueden seleccionar a tu miembro Collab (exceptuando daño especial)."
+
+msgid "hBP01-022_NAME"
+msgstr "Tokino Sora"
+
+msgid "hBP01-022_ART_0_NAME"
+msgstr "Que este día sea el mejor 🎵"
+
+msgid "hBP01-022_BLOOM_NAME"
+msgstr "Listos para divertirse?"
+
+msgid "hBP01-022_BLOOM_EFFECT"
+msgstr "Roba una carta desde tu Deck."
+
+msgid "hBP01-051_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hBP01-051_ART_0_NAME"
+msgstr "Junten sus ovaciones"
+
+msgid "hBP01-051_ART_0_EFFECT"
+msgstr "(Solo posición de Collab) Por cada Ovación acoplada a este miembro, Este Arte gana +20 de poder (hasta un máximo de 5 Ovaciones)."
+
+msgid "hBP01-051_ART_1_NAME"
+msgstr "El Resplandor del Viento"
+
+msgid "hBP01-016_NAME"
+msgstr "Nanashi Mumei"
+
+msgid "hBP01-016_ART_0_NAME"
+msgstr "Hora de Relajarse"
+
+msgid "hBP01-016_COLLAB_NAME"
+msgstr "Lienzo Blanco"
+
+msgid "hBP01-016_COLLAB_EFFECT"
+msgstr "Si tu Centro tiene #Promise, roba 1 carta desde tu Deck."
+
+msgid "hBP01-072_NAME"
+msgstr "Hakos Baelz"
+
+msgid "hBP01-072_ART_0_NAME"
+msgstr "WAZZUP!!"
+
+msgid "hBP01-072_ART_0_EFFECT"
+msgstr "Si este miembro tiene al menos una Ovación Roja, puedes lanzar un dado: si el resultado es impar, inflige 20 de daño especial al Collab oponente."
+
+msgid "hBP01-092_NAME"
+msgstr "Ouro Kronii"
+
+msgid "hBP01-092_ART_0_NAME"
+msgstr "Kronichiwa"
+
+msgid "hBP01-092_ART_0_EFFECT"
+msgstr "Puedes mover 1 Ovación desde este miembro a otro de tus miembros con #Promise."
+
+msgid "hBP01-074_NAME"
+msgstr "Hakos Baelz"
+
+msgid "hBP01-074_ART_0_NAME"
+msgstr "La diversión comienza!"
+
+msgid "hBP01-074_BLOOM_NAME"
+msgstr "La Rata Idol ha llegado!"
+
+msgid "hBP01-074_BLOOM_EFFECT"
+msgstr "Al Florecer desde un miembro Debut, Puedes poner un miembro Debut o 1st Bloom desde tu Archivo en tu mano. Si ese miembro tiene #EN, Inflige 20 de daño especial al Collab oponente."
+
+msgid "hBP01-075_NAME"
+msgstr "Hakos Baelz"
+
+msgid "hBP01-075_ART_0_NAME"
+msgstr "Desorden"
+
+msgid "hBP01-075_COLLAB_NAME"
+msgstr "Remezcla Caótica"
+
+msgid "hBP01-075_COLLAB_EFFECT"
+msgstr "Ambos jugadores envían todas las cartas de su mano al fondo de su Deck en cualquier orden. Luego, por cada carta enviada al Deck, roban una carta desde su Deck."
+
+msgid "hBP01-019_NAME"
+msgstr "Nanashi Mumei"
+
+msgid "hBP01-019_ART_0_NAME"
+msgstr "Gracias por su constante apoyo!"
+
+msgid "hBP01-019_BLOOM_NAME"
+msgstr "Quiero cantar y bailar junto a todas!"
+
+msgid "hBP01-019_BLOOM_EFFECT"
+msgstr "Al Florecer desde un miembro Debut, revela un miembro Debut o 1st Bloom (excepto miembros Buzz) con #Promise desde tu Deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBP01-094_NAME"
+msgstr "Ouro Kronii"
+
+msgid "hBP01-094_ART_0_NAME"
+msgstr "Tengamos un festival inolvidable!"
+
+msgid "hBP01-094_BLOOM_NAME"
+msgstr "Kronichiwa!"
+
+msgid "hBP01-094_BLOOM_EFFECT"
+msgstr "Revela 1 Ovación desde tu Deck de Ovaciones del mismo color de uno tus miembros con #Promise, y envía esa Ovación a uno de tus miembros con #Promise. Luego baraja tu Deck de Ovaciones."
+
+msgid "hBP01-095_NAME"
+msgstr "Ouro Kronii"
+
+msgid "hBP01-095_ART_0_NAME"
+msgstr "Adelantar"
+
+msgid "hBP01-095_ART_0_EFFECT"
+msgstr "Puedes Florecer un miembro Trasero Debut que se haya jugado este turno a un 1st desde tu mano."
+
+msgid "hBP01-095_COLLAB_NAME"
+msgstr "Rebobinar"
+
+msgid "hBP01-095_COLLAB_EFFECT"
+msgstr "Regresa un miembro en el Backstage oponente a miembro Debut (remueve todo el daño de ese miembro, luego deja solo el miembro debut y todas sus Ovaciones acopladas en el Escenario. Todas las otras cartas acopladas regresan a tu mano)."
+
+msgid "hBP01-020_NAME"
+msgstr "Nanashi Mumei"
+
+msgid "hBP01-020_ART_0_NAME"
+msgstr "Todos Juntos"
+
+msgid "hBP01-020_ART_0_EFFECT"
+msgstr "Durante este turno, por cada miembro en tu Backstage, las Artes de tu Centro y Collab ganan +10 de Poder."
+
+msgid "hBP01-020_COLLAB_NAME"
+msgstr "La Promesa de aquel día"
+
+msgid "hBP01-020_COLLAB_EFFECT"
+msgstr "Revela 1 miembro con #Promise desde tu Deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBP01-030_NAME"
+msgstr "IRyS"
+
+msgid "hBP01-030_ART_0_NAME"
+msgstr "Cantaré de lo mejor, mirenme!"
+
+msgid "hBP01-030_BLOOM_NAME"
+msgstr "Llenemos de esperanza el escenario!"
+
+msgid "hBP01-030_BLOOM_EFFECT"
+msgstr "Durante este turno, las Artes de tu Centro y Collab con #Promise ganan +30 de poder."
+
+msgid "hBP01-031_NAME"
+msgstr "IRyS"
+
+msgid "hBP01-031_ART_0_NAME"
+msgstr "El Poder de Promise"
+
+msgid "hBP01-031_ART_0_EFFECT"
+msgstr "Por cada uno de tus miembros con #Promise, Este Arte gana +20 de Poder."
+
+msgid "hBP01-031_COLLAB_NAME"
+msgstr "Jardín de la Esperanza<"
+
+msgid "hBP01-031_COLLAB_EFFECT"
+msgstr "Mira las cartas en tu holo power, revela una, y ponla en tu mano. Luego pon el tope de tu Deck en tu holo power."
+
+msgid "hBP01-010_NAME"
+msgstr "Amane Kanata"
+
+msgid "hBP01-010_ART_0_NAME"
+msgstr "Ya me voy~"
+
+msgid "hBP01-010_COLLAB_NAME"
+msgstr "Ángel saliendo"
+
+msgid "hBP01-010_COLLAB_EFFECT"
+msgstr "Durante este turno, las Artes de tu Centro ganan +10 de poder. Si tu Centro tiene #Gen4, sus Artes ganan +20 de poder adicional."
+
+msgid "hBP01-012_NAME"
+msgstr "Amane Kanata"
+
+msgid "hBP01-012_ART_0_NAME"
+msgstr "Por favor den mucho apoyo!"
+
+msgid "hBP01-012_BLOOM_NAME"
+msgstr "Idol Kanataso"
+
+msgid "hBP01-012_BLOOM_EFFECT"
+msgstr "Puedes tirar un dado: si el resultado es 3 o menos, revela 1 Mascota desde tu Deck y acóplala a cualquiera de tus miembros. Luego baraja tu Deck."
+
+msgid "hBP01-013_NAME"
+msgstr "Amane Kanata"
+
+msgid "hBP01-013_ART_0_NAME"
+msgstr "Escenario de Ángel"
+
+msgid "hBP01-013_BLOOM_NAME"
+msgstr "Trabajo de un Ángel"
+
+msgid "hBP01-013_BLOOM_EFFECT"
+msgstr "Inflige 30 de daño especial al Centro oponente. (miembros Derribados con este efecto no reducen VIDA)"
+
+msgid "hBP01-014_NAME"
+msgstr "Amane Kanata"
+
+msgid "hBP01-014_ART_0_NAME"
+msgstr "†Alas Oscuras†"
+
+msgid "hBP01-014_ART_0_EFFECT"
+msgstr "Cuando este Arte Derriba un miembro, si este Arte infligió al menos 50 de daño más que el HP restante de ese miembro, tu oponente pierde 1 VIDA adicional."
+
+msgid "hBP01-014_COLLAB_NAME"
+msgstr "Ángel Caído"
+
+msgid "hBP01-014_COLLAB_EFFECT"
+msgstr "Inflige 50 de daño especial al Centro de tu oponente."
+
+msgid "hBP01-026_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBP01-026_ART_0_NAME"
+msgstr "El escenario es \"mío\""
+
+msgid "hBP01-026_BLOOM_NAME"
+msgstr "Nuevo Destino"
+
+msgid "hBP01-026_BLOOM_EFFECT"
+msgstr "Al Florecer desde un miembro Debut, revela un miembro Debut o 1st Bloom (excepto miembros Buzz) con #IDGen3 desde tu Deck y ponlo en tu mano. Después baraja tu Deck."
+
+msgid "hBP01-027_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBP01-027_ART_0_NAME"
+msgstr "Código de Acceso: ID"
+
+msgid "hBP01-027_ART_0_EFFECT"
+msgstr "Si tu Centro tiene #ID, este Arte gana +50 de poder."
+
+msgid "hBP01-027_GIFT_NAME"
+msgstr "V.7"
+
+msgid "hBP01-027_GIFT_EFFECT"
+msgstr "(Una vez por turno) (Solo en posición de Collab) Cuando uno de tus miembros va a recibir daño de tu oponente, puedes lanzar un dado: si el resultado es impar, no recibe el daño."
+
+msgid "hBP01-054_NAME"
+msgstr "Airani Iofifteen"
+
+msgid "hBP01-054_ART_0_NAME"
+msgstr "Estoy deseando que llegue!"
+
+msgid "hBP01-054_BLOOM_NAME"
+msgstr "Mar de luz verde"
+
+msgid "hBP01-054_BLOOM_EFFECT"
+msgstr "Envía el tope de tu Deck de Ovaciones a uno de tus miembros con #ID que no se llame Airani Iofifteen."
+
+msgid "hBP01-055_NAME"
+msgstr "Airani Iofifteen"
+
+msgid "hBP01-055_ART_0_NAME"
+msgstr "Cielo de Relaciones"
+
+msgid "hBP01-055_ART_0_EFFECT"
+msgstr "Si hay algún miembro con #ID en tu Escenario que no se llame Airani Iofifteen, este Arte gana +50 de poder."
+
+msgid "hBP01-055_COLLAB_NAME"
+msgstr "AREA 15"
+
+msgid "hBP01-055_COLLAB_EFFECT"
+msgstr "Puedes mandar una Ovación desde tu Archivo a cada uno de 1-3 de tus miembros con #ID"
+
+msgid "hBP01-090_NAME"
+msgstr "Moona Hoshinova"
+
+msgid "hBP01-090_ART_0_NAME"
+msgstr "Esperen con ansias!!"
+
+msgid "hBP01-090_BLOOM_NAME"
+msgstr "Lapis Lazuli"
+
+msgid "hBP01-090_BLOOM_EFFECT"
+msgstr "Revela una Ovación Verde o Azul desde tu Deck de Ovaciones y envíala a uno de tus miembros. Luego baraja tu Deck de Ovaciones."
+
+msgid "hBP01-091_NAME"
+msgstr "Moona Hoshinova"
+
+msgid "hBP01-091_ART_0_NAME"
+msgstr "Luna de Medianoche"
+
+msgid "hBP01-091_ART_1_NAME"
+msgstr "Diva de la Noche Lunar"
+
+msgid "hBP01-091_ART_1_EFFECT"
+msgstr "Puedes Archivar una Ovación Verde o Azul desde este miembro, si lo haces: inflige 30 de daño especial a un miembro en el Backstage oponente."
+
+msgid "hBP01-083_NAME"
+msgstr "Kobo Kanaeru"
+
+msgid "hBP01-083_ART_0_NAME"
+msgstr "Olas! a Nadar!"
+
+msgid "hBP01-083_COLLAB_NAME"
+msgstr "Lleva a Kobo al mar!"
+
+msgid "hBP01-083_COLLAB_EFFECT"
+msgstr "Si tu Centro tiene #ID, puedes lanzar un dado: si el resultado es 3 o más, envía el tope de tu Deck de Ovaciones a uno de tus miembros."
+
+msgid "hBP01-086_NAME"
+msgstr "Kobo Kanaeru"
+
+msgid "hBP01-086_ART_0_NAME"
+msgstr "OnAeru"
+
+msgid "hBP01-086_BLOOM_NAME"
+msgstr "Marketing Virtual"
+
+msgid "hBP01-086_BLOOM_EFFECT"
+msgstr "Puedes Archivar una Ovación desde uno de tus miembros con #ID, si lo haces: Inflige 10 de daño especial a todos los miembros en el Backstage oponente. (miembros Derribados con este efecto no reducen VIDA)"
+
+msgid "hBP01-024_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBP01-024_ART_0_NAME"
+msgstr "Misión Iniciada!"
+
+msgid "hBP01-087_NAME"
+msgstr "Kobo Kanaeru"
+
+msgid "hBP01-087_ART_0_NAME"
+msgstr "Mantra de Lluvia"
+
+msgid "hBP01-087_ART_0_EFFECT"
+msgstr "Puedes Archivar una Ovación desde este miembro, si lo haces: inflige 20 de daño especial a todos los miembros en el Backstage oponente. (miembros Derribados con este efecto no reducen VIDA)"
+
+msgid "hBP01-087_ART_1_NAME"
+msgstr "Mantra de Olas"
+
+msgid "hBP01-087_ART_1_EFFECT"
+msgstr "Puedes Archivar 2 Ovaciones desde este miembro, si lo haces: inflige daño especial al Centro de tu oponente equivalente al daño total que poseen actualmente los miembros Traseros de tu oponente."
+
+msgid "hBP01-069_NAME"
+msgstr "Omaru Polka"
+
+msgid "hBP01-069_ART_0_NAME"
+msgstr "Ohapol"
+
+msgid "hBP01-069_ART_1_NAME"
+msgstr "Osopol"
+
+msgid "hBP01-045_NAME"
+msgstr "AZKi"
+
+msgid "hBP01-045_ART_0_NAME"
+msgstr "Contigo en una aldea costera"
+
+msgid "hBP01-045_GIFT_NAME"
+msgstr "Sobreescribir"
+
+msgid "hBP01-045_GIFT_EFFECT"
+msgstr "Si tienes 3 o menos VIDAS, este miembro puede Florecer en una 2nd AZKi de tu mando sin importar el nivel de Florecimiento."
+
+msgid "hBP01-063_NAME"
+msgstr "Takanashi Kiara"
+
+msgid "hBP01-063_ART_0_NAME"
+msgstr "Mofu mofu time"
+
+msgid "hBP01-063_COLLAB_NAME"
+msgstr "Magia Kiwawa"
+
+msgid "hBP01-063_COLLAB_EFFECT"
+msgstr "Si tu Centro tiene #Bird, Puedes Archivar 1 carta desde tu mano, si lo haces: revela 1 Mascota desde tu Deck y ponla en tu mano. Luego baraja tu Deck."
+
+msgid "hBP01-065_NAME"
+msgstr "Takanashi Kiara"
+
+msgid "hBP01-065_ART_0_NAME"
+msgstr "Quiero animar las cosas!"
+
+msgid "hBP01-065_BLOOM_NAME"
+msgstr "Hagamoslo!!!!"
+
+msgid "hBP01-065_BLOOM_EFFECT"
+msgstr "Mira las 3 cartas del tope de tu Deck. Revela un miembro entre ellas y ponlo en tu mano. Después Archiva las cartas restantes."
+
+msgid "hBP01-100_NAME"
+msgstr "Mori Calliope"
+
+msgid "hBP01-100_ART_0_NAME"
+msgstr "Guía de Almas"
+
+msgid "hBP01-100_COLLAB_NAME"
+msgstr "Cosecha de Almas"
+
+msgid "hBP01-100_COLLAB_EFFECT"
+msgstr "Baraja de 1-3 Ovaciones desde tu Archivo a tu Deck de Ovaciones."
+
+msgid "hBP01-066_NAME"
+msgstr "Takanashi Kiara"
+
+msgid "hBP01-066_ART_0_NAME"
+msgstr "Princesa de la Espada Fénix"
+
+msgid "hBP01-066_ART_1_NAME"
+msgstr "Arrodillate."
+
+msgid "hBP01-066_ART_1_EFFECT"
+msgstr "Puedes Archivar 1 miembro apilado bajo esta carta, si lo haces: Inflige 40 de daño especial al Collab oponente."
+
+msgid "hBP01-101_NAME"
+msgstr "Amelia Watson"
+
+msgid "hBP01-101_ART_0_NAME"
+msgstr "Elemental, no es así?"
+
+msgid "hBP01-101_COLLAB_NAME"
+msgstr "Descubrir una pista"
+
+msgid "hBP01-101_COLLAB_EFFECT"
+msgstr "Puedes poner 1 Objeto desde tu Archivo en tu mano."
+
+msgid "hBP01-067_NAME"
+msgstr "Takanashi Kiara"
+
+msgid "hBP01-067_ART_0_NAME"
+msgstr "Guía al color de las llamas"
+
+msgid "hBP01-067_ART_1_NAME"
+msgstr "Fénix Majestuoso"
+
+msgid "hBP01-067_ART_1_EFFECT"
+msgstr "Por cada miembro en tu Archivo, este Arte gana +10 de poder. Después de usar este Arte, baraja 6 miembros desde tu Archivo a tu Deck."
+
+msgid "hBP01-076_NAME"
+msgstr "Hoshimachi Suisei"
+
+msgid "hBP01-076_ART_0_NAME"
+msgstr "Diamante en bruto"
+
+msgid "hBP01-076_ART_0_EFFECT"
+msgstr "Inflige 10 de daño especial a un miembro en el Backstage oponente. (miembros Derribados con este efecto no reducen VIDA)"
+
+msgid "hBP01-077_NAME"
+msgstr "Hoshimachi Suisei"
+
+msgid "hBP01-077_ART_0_NAME"
+msgstr "Traje nuevo"
+
+msgid "hBP01-077_COLLAB_NAME"
+msgstr "Vestuario reluciente"
+
+msgid "hBP01-077_COLLAB_EFFECT"
+msgstr "Si tu miembro Oshi es Hoshimachi Suisei, Puedes Archivar 1 Ovación Azul desde este miembro, si lo haces: roba 2 cartas desde tu Deck."
+
+msgid "hBP01-079_NAME"
+msgstr "Hoshimachi Suisei"
+
+msgid "hBP01-079_ART_0_NAME"
+msgstr "Sui-chan waaaa kyou mo kawaii!!"
+
+msgid "hBP01-079_BLOOM_NAME"
+msgstr "No te pierdas este asombroso show!"
+
+msgid "hBP01-079_BLOOM_EFFECT"
+msgstr "Inflige 20 de daño especial a un miembro en el Backstage oponente. (miembros Derribados con este efecto no reducen VIDA)"
+
+msgid "hBP01-080_NAME"
+msgstr "Hoshimachi Suisei"
+
+msgid "hBP01-080_ART_0_NAME"
+msgstr "Maid de Combate"
+
+msgid "hBP01-080_COLLAB_NAME"
+msgstr "Recuerdos de montañas nevadas"
+
+msgid "hBP01-080_COLLAB_EFFECT"
+msgstr "Puedes lanzar un dado: si el resultado es impar, Derriba un miembro en el Backstage oponente el cual haya recibido al menos 40 de daño. (miembros Derribados por este efecto no reducen VIDA)"
+
+msgid "hBP01-081_NAME"
+msgstr "Hoshimachi Suisei"
+
+msgid "hBP01-081_ART_0_NAME"
+msgstr "Cometa Brillante"
+
+msgid "hBP01-081_ART_0_EFFECT"
+msgstr "Puedes archivar 2 Ovaciones Azules desde este miembro, si lo haces: por cada miembro bajo esta carta, este Arte gana +60 de poder (Este Arte puede seleccionar a los miembros en el Backstage oponente)."
+
+msgid "hBP01-081_COLLAB_NAME"
+msgstr "Luz que recorre el cielo"
+
+msgid "hBP01-081_COLLAB_EFFECT"
+msgstr "Envía el tope de tu Deck de Ovaciones a uno de tus miembros Azul."
+
+msgid "hBP01-011_NAME"
+msgstr "Amane Kanata"
+
+msgid "hBP01-011_ART_0_NAME"
+msgstr "Respuesta Fría Kanataso"
+
+msgid "hBP01-015_NAME"
+msgstr "Nanashi Mumei"
+
+msgid "hBP01-015_ART_0_NAME"
+msgstr "Oh,Hi"
+
+msgid "hBP01-015_ART_0_EFFECT"
+msgstr "Si jugaste una carta soporte este turno, este Arte gana +20 de poder."
+
+msgid "hBP01-017_NAME"
+msgstr "Nanashi Mumei"
+
+msgid "hBP01-017_ART_0_NAME"
+msgstr "Saliendo Juntos"
+
+msgid "hBP01-017_ART_1_NAME"
+msgstr "Descanso para Café"
+
+msgid "hBP01-018_NAME"
+msgstr "Nanashi Mumei"
+
+msgid "hBP01-018_ART_0_NAME"
+msgstr "Piezas de Recuerdos"
+
+msgid "hBP01-018_ART_0_EFFECT"
+msgstr "Puedes revelar el tope de tu Deck. Si esa carta tiene #Promise, este Arte gana +20 de poder. Después pon la carta en tu mano."
+
+msgid "hBP01-025_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBP01-025_ART_0_NAME"
+msgstr "No beban agua termal!"
+
+msgid "hBP01-025_ART_1_NAME"
+msgstr "Un día relajante en las termas"
+
+msgid "hBP01-028_NAME"
+msgstr "IRyS"
+
+msgid "hBP01-028_ART_0_NAME"
+msgstr "HiRyS!"
+
+msgid "hBP01-029_NAME"
+msgstr "IRyS"
+
+msgid "hBP01-029_ART_0_NAME"
+msgstr "Soy una nephilim seiso!"
+
+msgid "hBP01-032_NAME"
+msgstr "Aki Rosenthal"
+
+msgid "hBP01-032_ART_0_NAME"
+msgstr "Alona!"
+
+msgid "hBP01-034_NAME"
+msgstr "Aki Rosenthal"
+
+msgid "hBP01-034_ART_0_NAME"
+msgstr "ara ara"
+
+msgid "hBP01-034_ART_1_NAME"
+msgstr "Mugyu mugyu chat"
+
+msgid "hBP01-039_NAME"
+msgstr "Usada Pekora"
+
+msgid "hBP01-039_ART_0_NAME"
+msgstr "Salto en Gravedad Cero!"
+
+msgid "hBP01-039_COLLAB_NAME"
+msgstr "Idol Galáctica"
+
+msgid "hBP01-039_COLLAB_EFFECT"
+msgstr "Si tu miembro Oshi es Usada Pekora, puedes lanzar un dado: si el resultado es par, envía el tope de tu Deck de Ovaciones a uno de tus miembros."
+
+msgid "hBP01-040_NAME"
+msgstr "Usada Pekora"
+
+msgid "hBP01-040_ART_0_NAME"
+msgstr "Otsupeko"
+
+msgid "hBP01-049_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hBP01-049_ART_0_NAME"
+msgstr "Berenjenas Frescas"
+
+msgid "hBP01-049_ART_1_NAME"
+msgstr "Te gustaría una?"
+
+msgid "hBP01-052_NAME"
+msgstr "Airani Iofifteen"
+
+msgid "hBP01-052_ART_0_NAME"
+msgstr "Selamat Pagi!"
+
+msgid "hBP01-052_ART_0_EFFECT"
+msgstr "Puedes mover 1 Ovación desde cualquiera de tus miembros a un miembro con #ID."
+
+msgid "hBP01-053_NAME"
+msgstr "Airani Iofifteen"
+
+msgid "hBP01-053_ART_0_NAME"
+msgstr "Tu amada alíen"
+
+msgid "hBP01-064_NAME"
+msgstr "Takanashi Kiara"
+
+msgid "hBP01-064_ART_0_NAME"
+msgstr "auf Wiedersehen!"
+
+msgid "hBP01-073_NAME"
+msgstr "Hakos Baelz"
+
+msgid "hBP01-073_ART_0_NAME"
+msgstr "WITNESS ME!!"
+
+msgid "hBP01-078_NAME"
+msgstr "Hoshimachi Suisei"
+
+msgid "hBP01-078_ART_0_NAME"
+msgstr "Foto Callejera"
+
+msgid "hBP01-078_ART_1_NAME"
+msgstr "Un momento de luz filtrándose entre los árboles"
+
+msgid "hBP01-084_NAME"
+msgstr "Kobo Kanaeru"
+
+msgid "hBP01-084_ART_0_NAME"
+msgstr "Volviendose un gato"
+
+msgid "hBP01-085_NAME"
+msgstr "Kobo Kanaeru"
+
+msgid "hBP01-085_ART_0_NAME"
+msgstr "perayaan"
+
+msgid "hBP01-085_ART_1_NAME"
+msgstr "Gotas de Lluvia"
+
+msgid "hBP01-085_ART_1_EFFECT"
+msgstr "Inflige 10 de daño especial a 3 miembros en el Backstage oponente. (miembros Derribados por este efecto no reducen VIDA)"
+
+msgid "hBP01-089_NAME"
+msgstr "Moona Hoshinova"
+
+msgid "hBP01-089_ART_0_NAME"
+msgstr "Otsumoona"
+
+msgid "hBP01-093_NAME"
+msgstr "Ouro Kronii"
+
+msgid "hBP01-093_ART_0_NAME"
+msgstr "Kroyasumi"
+
+msgid "hBP01-093_ART_1_NAME"
+msgstr "Oyasumi Kro-time"
+
+msgid "hBP02-008_NAME"
+msgstr ""
+
+msgid "hBP02-008_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-028_NAME"
+msgstr ""
+
+msgid "hBP02-028_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-054_NAME"
+msgstr ""
+
+msgid "hBP02-054_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-054_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-013_NAME"
+msgstr ""
+
+msgid "hBP02-013_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-013_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-013_GIFT_NAME"
+msgstr ""
+
+msgid "hBP02-013_GIFT_EFFECT"
+msgstr ""
+
+msgid "Bloom Effect"
+msgstr ""
+
+msgid "Collab Effect"
+msgstr ""
+
+msgid "Gift"
+msgstr ""
+
+msgid "hSD01-001_NAME"
+msgstr "Tokino Sora"
+
+msgid "hSD01-002_NAME"
+msgstr "AZKi"
+
+msgid "hSD01-016_NAME"
+msgstr "Harusaki Nodoka"
+
+msgid "hSD01-016_EFFECT"
+msgstr "Roba 3 cartas desde tu Deck."
+
+msgid "hSD01-017_NAME"
+msgstr "Mane-chan"
+
+msgid "hSD01-017_EFFECT"
+msgstr "Esta carta solo puede ser jugada si tienes al menos 1 carta sin contar esta en tu mano.\n\n"
+"Baraja tu mano en tu Deck. Luego roba 5 cartas desde tu Deck."
+
+msgid "hSD01-018_NAME"
+msgstr "PC de Respaldo"
+
+msgid "hSD01-018_EFFECT"
+msgstr "Mira las 5 cartas del tope de tu Deck. Revela un Soporte LIMITADO entre ellas y ponlo en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
+
+msgid "hSD01-019_NAME"
+msgstr "PC Asombroso"
+
+msgid "hSD01-019_EFFECT"
+msgstr "Para jugar esta carta, debes Archivar una de tus Ovaciones en juego.\n"
+"        \n"
+"Revela un miembro 1st Bloom o 2nd Bloom desde tu Deck (excepto miembros Buzz) y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hSD01-020_NAME"
+msgstr "Círculo de Holofans"
+
+msgid "hSD01-020_EFFECT"
+msgstr "Lanza un dado: si el resultado es 3 o más, envía una Ovación desde tu Archivo a uno de tus miembros."
+
+msgid "hSD01-021_NAME"
+msgstr "Primera Gravedad"
+
+msgid "hSD01-021_EFFECT"
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier numero de miembros llamados Tokino Sora o AZKi entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden"
+
+msgid "hY01-001_NAME"
+msgstr "Ovación Blanca"
+
+msgid "hY02-001_NAME"
+msgstr "Ovación Verde"
+
+msgid "hY03-001_NAME"
+msgstr "Ovación Roja"
+
+msgid "hY04-001_NAME"
+msgstr "Ovación Azul"
+
+msgid "hYS01-001_NAME"
+msgstr "Nanashi Mumei"
+
+msgid "hYS01-002_NAME"
+msgstr "Usada Pekora"
+
+msgid "hYS01-003_NAME"
+msgstr "Takanashi Kiara"
+
+msgid "hYS01-004_NAME"
+msgstr "Hoshimachi Suisei"
+
+msgid "hY01-002_NAME"
+msgstr "Ovación Blanca"
+
+msgid "hBP01-003_NAME"
+msgstr "Aki Rosenthal"
+
+msgid "hBP01-004_NAME"
+msgstr "Usada Pekora"
+
+msgid "hBP01-005_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP01-007_NAME"
+msgstr "Hoshimachi Suisei"
+
+msgid "hBP01-008_NAME"
+msgstr "Kobo Kanaeru"
+
+msgid "hBP01-102_NAME"
+msgstr "Micrófono de Idol"
+
+msgid "hBP01-102_EFFECT"
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros con #Song entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
+
+msgid "hBP01-105_NAME"
+msgstr "Penlight"
+
+msgid "hBP01-105_EFFECT"
+msgstr "Para jugar esta carta, debes Archivar un holo power.\n\n"
+"Revela 1 Ovación desde tu Deck de Ovaciones que sea del mismo color de uno de tus miembros, y envía esa Ovación a uno de tus miembros. Luego baraja tu Deck de Ovaciones."
+
+msgid "hBP01-108_NAME"
+msgstr "Asi que, eres el enemigo?"
+
+msgid "hBP01-108_EFFECT"
+msgstr "Cambia el Centro oponente con un miembro en su Backstage."
+
+msgid "hBP01-109_NAME"
+msgstr "La Historia de la Luna y el Conejo"
+
+msgid "hBP01-109_EFFECT"
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros llamados Usada Pekora o Moona Hoshinova entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
+
+msgid "hBP01-110_NAME"
+msgstr "Golpéalos hasta que desaparezcan"
+
+msgid "hBP01-110_EFFECT"
+msgstr "Lanza un dado: si el resultado es 3 o menos, Archiva una Ovación acoplada a un miembro oponente.\n\n"
+"Si tu miembro Oshi es Nanashi Mumei, en su lugar, puedes realizar el siguiente efecto: (Una vez por juego) Archiva 2 Ovaciones acopladas al Centro oponente."
+
+msgid "hBP01-114_NAME"
+msgstr "Hacha de Piedra"
+
+msgid "hBP01-114_EFFECT"
+msgstr "Las Artes del miembro con esta Herramienta acoplada ganan +20 de poder.\n\n"
+"Cuando un miembro con esta Herramienta acoplada usa un Arte, recibe 10 de daño especial.\n\n"
+"Si esta está acoplada a una Aki Rosenthal 1st Bloom o superior, gana el siguiente efecto: (Una vez por turno) cuando es restaurado el HP de este miembro, roba una carta desde tu Deck.\n\n"
+"Solo puedes acoplar una Herramienta a cada miembro."
+
+msgid "hBP01-115_NAME"
+msgstr "Micrófono de Hoshimachi Suisei"
+
+msgid "hBP01-115_EFFECT"
+msgstr "Las Artes del miembro con esta Herramienta acoplada ganan +10 de poder.\n\n"
+"Si esta esta acoplada a una Hoshimachi Suisei 1st Bloom o superior, gana el siguiente efecto: Cuando este miembro Derriba a un miembro oponente, envía el tope de tu Deck de Ovaciones a este miembro.\n\n"
+"Solo puedes acoplar una Herramienta a cada miembro."
+
+msgid "hBP01-118_NAME"
+msgstr "Ankimo"
+
+msgid "hBP01-118_EFFECT"
+msgstr "El miembro con esta Mascota acoplada gana +10 de HP.\n\n"
+"Si está Mascota está acoplada a Tokino Sora, gana el siguiente efecto: cuando este miembro usa un Arte, está Mascota es tratada como una Ovación Blanca\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
+
+msgid "hBP01-119_NAME"
+msgstr "Jobz"
+
+msgid "hBP01-119_EFFECT"
+msgstr "El miembro con esta Mascota acoplada gana +10 de HP.\n\n"
+"Si está Mascota está acoplada a Aquí Rosenthal, gana el siguiente efecto: cuando este miembro usa un Arte, restaura 10 de HP a uno de tus miembros.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
+
+msgid "hBP01-120_NAME"
+msgstr "Ganmo"
+
+msgid "hBP01-120_EFFECT"
+msgstr "Las Artes del miembro con esta Mascota acoplada ganan +10 de poder.\n\n"
+"Si está Mascota está acoplada a Takane Lui, gana el siguiente efecto: cuando este miembro usa un Arte en la posición de Centro, roba una carta desde tu Deck.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
+
+msgid "hBP01-122_NAME"
+msgstr "Rosetai"
+
+msgid "hBP01-122_EFFECT"
+msgstr "Durante el turno oponente, cuando el miembro con este Fan acoplado es Derribado, envía el tope de tu Deck de Ovaciones a una de tus Aki Rosenthal's.\n\n"
+"Este Fan solo puede ser acoplado a Aki Rosenthal, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
+
+msgid "hBP01-123_NAME"
+msgstr "Alianza Nousagi"
+
+msgid "hBP01-123_EFFECT"
+msgstr "Cuando el miembro con este Fan acoplado lanza un dado como parte de su Habilidad o Artes, puedes Archivar este Fan, si lo haces: puedes re-lanzar el dado una vez.\n\n"
+"Este Fan solo puede ser acoplado a Usada Pekora, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
+
+msgid "hBP01-124_NAME"
+msgstr "Pioneer"
+
+msgid "hBP01-124_EFFECT"
+msgstr "Durante el turno oponente, cuando el miembro con este Fan acoplado es Derribado, envía 1 Ovación desde este miembro a otro de tus miembros.\n\n"
+"Este Fan solo puede ser acoplado a  AZKi, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
+
+msgid "hBP01-126_NAME"
+msgstr "Zain"
+
+msgid "hBP01-126_EFFECT"
+msgstr "Cuando el miembro con este Fan acoplado usa un Arte, este Fan es tratado como 1 Ovación Roja.\n\n"
+"Cuando el miembro con este Fan acoplado recibe daño, recibe +10 de daño extra.\n\n"
+"Este Fan solo puede ser acoplado a Omaru Polka, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
+
+msgid "hBP01-104_NAME"
+msgstr "PC Ordinario"
+
+msgid "hBP01-104_EFFECT"
+msgstr "Revela un miembro Debut desde tu Deck y ponlo en tu Escenario. Luego baraja tu Deck."
+
+msgid "hBP01-002_NAME"
+msgstr "Nanashi Mumei"
+
+msgid "hBP01-117_NAME"
+msgstr "Friend"
+
+msgid "hBP01-117_EFFECT"
+msgstr "Las Artes del miembro con esta Mascota acoplada ganan +10 de poder.\n\n"
+"Si esta Mascota esta acoplada a Nanashi Mumei, gana el siguiente efecto: Durante el turno oponente, cuando este miembro va a recibir daño, puedes Archivar esta mascota, si lo haces reduce el daño en 30.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
+
+msgid "hBP01-113_NAME"
+msgstr "Promise"
+
+msgid "hBP01-113_EFFECT"
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros con #Promise entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
+
+msgid "hBP01-116_NAME"
+msgstr "Upao"
+
+msgid "hBP01-116_EFFECT"
+msgstr "Las Artes del miembro con esta Mascota acoplada ganan +10 de poder.\n\n"
+"Si esta Mascota esta acoplada a Amane Kanata, gana el siguiente efecto: (Una vez por turno) Durante el turno oponente, cuando este miembro recibe daño, Inflige 20 de daño especial al Centro oponente.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
+
+msgid "hBP01-001_NAME"
+msgstr "Amane Kanata"
+
+msgid "hBP01-112_NAME"
+msgstr "¡Es hora de una broma!"
+
+msgid "hBP01-112_EFFECT"
+msgstr "Lanza un dado: si el resultado es 4 o más, Inflige 20 de daño especial a un miembro en el Backstage oponente. (miembros Derribados por este efecto no reducen VIDA)"
+
+msgid "hBP01-111_NAME"
+msgstr "hololive ID 3rd Generation"
+
+msgid "hBP01-111_EFFECT"
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros con #IDGen3 entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
+
+msgid "hBP01-107_NAME"
+msgstr "Encore"
+
+msgid "hBP01-107_EFFECT"
+msgstr "Baraja de 1-3 Ovaciones desde tu Archivo a tu Deck de Ovaciones."
+
+msgid "hBP01-106_NAME"
+msgstr "Te lo encargo."
+
+msgid "hBP01-106_EFFECT"
+msgstr "Cambia tu Centro con un miembro en tu Backstage que no esté Descansando."
+
+msgid "hBP01-103_NAME"
+msgstr "PC Gamer"
+
+msgid "hBP01-103_EFFECT"
+msgstr "Para jugar esta carta, debes Archivar un holo power.\n\n"
+"Revela un miembro Debut o 1st Bloom desde tu Deck (excepto miembros Buzz) el cual sea del mismo color de tu miembro Oshi, y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBD24-001_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP01-125_NAME"
+msgstr "KFP"
+
+msgid "hBP01-125_EFFECT"
+msgstr "Cuando le acoplas desde la mano este Fan a uno de tus miembros, puedes Archivar 1 carta desde tu mano, si lo haces: roba 1 cartas desde tu Deck.\n\n"
+"Este Fan solo puede ser acoplado a Takanashi Kiara, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
+
+msgid "hPR-002_NAME"
+msgstr ""
+
+msgid "hPR-002_EFFECT"
+msgstr ""
+
+msgid "hBP01-006_NAME"
+msgstr "Takanashi Kiara"
+
+msgid "hBP01-121_NAME"
+msgstr "Kotori"
+
+msgid "hBP01-121_EFFECT"
+msgstr "Cuando el miembro con esta Mascota acoplada recibe daño en la posición de Centro o Collab, recibe -10 de daño.\n\n"
+"Si esta Mascota está acoplada a Takanashi Kiara, gana el siguiente efecto: Cuando el nivel de Bloom de este miembro aumenta, roba una carta desde tu Deck.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
+
+msgid "hBP02-001_NAME"
+msgstr ""
+
+msgid "hBD24-002_NAME"
+msgstr "Shishiro Botan"
+
+msgid "hBD24-003_NAME"
+msgstr "Inugami Korone"
+
+msgid "hBD24-004_NAME"
+msgstr "Shirakami Fubuki"
+
+msgid "hBD24-005_NAME"
+msgstr "Himemori Luna"
+
+msgid "hBD24-006_NAME"
+msgstr "Kureiji Oliie"
+
+msgid "hBD24-007_NAME"
+msgstr "Gigi Murin"
+
+msgid "hBP02-003_NAME"
+msgstr ""
+
+msgid "hBP02-082_NAME"
+msgstr ""
+
+msgid "hBP02-082_EFFECT"
+msgstr ""
+
+msgid "hY05-001_NAME"
+msgstr "Ovación Morada"
+
+msgid "hSD01-001_SKILL_NAME"
+msgstr "Reemplazo"
+
+msgid "hSD01-001_SKILL_EFFECT"
+msgstr "(Una vez por turno) Mueve 1 Ovación desde uno de tus miembros a otro."
+
+msgid "hSD01-001_SPSKILL_NAME"
+msgstr "Asi que, eres el enemigo?"
+
+msgid "hSD01-001_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Cambia el Centro oponente con un miembro en su Backstage. Durante este turno, si tu Centro es Blanco, sus Artes ganan +50 de poder."
+
+msgid "hSD01-002_SKILL_NAME"
+msgstr "Mapa en la izquierda"
+
+msgid "hSD01-002_SKILL_EFFECT"
+msgstr "(Una vez por turno) Puede ser usada cuando vas a lanzar un dado como parte de la Habilidad o Arte de un miembro: declara un número de ese dado, y trata la siguiente tirada de dado como si el resultado fuese ese número."
+
+msgid "hSD01-002_SPSKILL_NAME"
+msgstr "Micrófono en la derecha"
+
+msgid "hSD01-002_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Envía cualquier número de Ovaciones desde tu Archivo a uno de tus miembros Verde."
+
+msgid "hYS01-001_SKILL_NAME"
+msgstr "Bastón Blanco"
+
+msgid "hYS01-001_SKILL_EFFECT"
+msgstr "(Una vez por turno) Durante este turno, Si tu Collab es Blanco, sus Artes ganan +20 de poder."
+
+msgid "hYS01-001_SPSKILL_NAME"
+msgstr "Guardia Rápida"
+
+msgid "hYS01-001_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Puede ser utilizada en el turno oponente, cuando uno de tus miembros Blanco está a punto de recibir daño: reduce el daño en 20."
+
+msgid "hYS01-002_SKILL_NAME"
+msgstr "Bastón Verde"
+
+msgid "hYS01-002_SKILL_EFFECT"
+msgstr "(Una vez por turno) Durante este turno, Si tu Collab es Verde, sus Artes ganan +20 de poder."
+
+msgid "hYS01-002_SPSKILL_NAME"
+msgstr "Todos!, Demos lo mejor!"
+
+msgid "hYS01-002_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Restaura 20 HP a todos tus miembros Verdes."
+
+msgid "hYS01-003_SKILL_NAME"
+msgstr "Bastón Rojo"
+
+msgid "hYS01-003_SKILL_EFFECT"
+msgstr "(Una vez por turno) Durante este turno, Si tu Collab es Rojo, sus Artes ganan +20 de poder."
+
+msgid "hYS01-003_SPSKILL_NAME"
+msgstr "Vamos! De nuevo!"
+
+msgid "hYS01-003_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Pon 1 miembro Rojo desde tu Archivo a tu mano."
+
+msgid "hYS01-004_SKILL_NAME"
+msgstr "Bastón Azul"
+
+msgid "hYS01-004_SKILL_EFFECT"
+msgstr "(Una vez por turno) Durante este turno, Si tu Collab es Azul, sus Artes ganan +20 de poder."
+
+msgid "hYS01-004_SPSKILL_NAME"
+msgstr "Tiro Trasero"
+
+msgid "hYS01-004_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Puede ser utilizada cuando uno de tus miembros Azul, inflige daño a un miembro en el Backstage oponente: inflige 50 de daño especial a ese miembro en el Backstage."
+
+msgid "hBP01-003_SKILL_NAME"
+msgstr "Poder de Supervivencia"
+
+msgid "hBP01-003_SKILL_EFFECT"
+msgstr "(Una vez por turno) Revela un Hacha de Piedra desde tu Deck y acóplala a uno de tus miembros Verde. Luego baraja tu Deck."
+
+msgid "hBP01-003_SPSKILL_NAME"
+msgstr "Canción de la Tierra"
+
+msgid "hBP01-003_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Si tu Centro es Verde, Restaura todo su HP."
+
+msgid "hBP01-004_SKILL_NAME"
+msgstr "Nousagis~"
+
+msgid "hBP01-004_SKILL_EFFECT"
+msgstr "(Una vez por turno) Puede ser utilizada en el turno oponente. Cuando uno de tus miembros es Derribado: Mueve todas las Ovaciones Verdes desde ese miembro entre tus otros miembros de la forma que prefieras."
+
+msgid "hBP01-004_SPSKILL_NAME"
+msgstr "Conejo Suertudo"
+
+msgid "hBP01-004_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Durante este turno, trata todas las tiradas de dado como si el resultado fuera 6."
+
+msgid "hBP01-005_SKILL_NAME"
+msgstr "Órdenes del Ejecutivo"
+
+msgid "hBP01-005_SKILL_EFFECT"
+msgstr "(Una vez por turno) Puede ser usado cuando usas una Habilidad o Arte de un miembro Rojo la cual Archiva cartas desde tu mano: Puedes Archivar cualquier número de cartas desde tu Holo Power en su lugar."
+
+msgid "hBP01-005_SPSKILL_NAME"
+msgstr "Ojo de halcón"
+
+msgid "hBP01-005_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Durante el siguiente turno de tu oponente sus miembros en la posición de Centro y Collab no pueden moverse, Relevar, o cambiar."
+
+msgid "hBP01-007_SKILL_NAME"
+msgstr "Cometa"
+
+msgid "hBP01-007_SKILL_EFFECT"
+msgstr "(Una vez por turno) Puede ser utilizada cuando uno de tus miembros Azul, o este miembro Oshi, inflige daño a un miembro en el Backstage oponente: inflige 50 de daño especial a ese miembro en el Backstage."
+
+msgid "hBP01-007_SPSKILL_NAME"
+msgstr "Estrella Fugaz"
+
+msgid "hBP01-007_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Puede ser utilizada cuando uno de tus miembros Azul inflige daño al Centro o Collab oponente: inflige una cantidad de daño especial equivalente a un miembro en el Backstage oponente."
+
+msgid "hBP01-008_SKILL_NAME"
+msgstr "Chamanismo de Lluvia"
+
+msgid "hBP01-008_SKILL_EFFECT"
+msgstr "(Una ver por turno) Puede ser usado cuando Archivas una Ovación usando un Arte o Habilidad de uno de tus miembros Azul: inflige 20 de daño especial a un miembro oponente."
+
+msgid "hBP01-008_SPSKILL_NAME"
+msgstr "Rezando por Lluvia"
+
+msgid "hBP01-008_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Envia de 1-5 Ovaciones desde tu Archivo a tus miembros con #ID de la forma que quieras."
+
+msgid "hBP01-002_SKILL_NAME"
+msgstr "Guardián de la civilización"
+
+msgid "hBP01-002_SKILL_EFFECT"
+msgstr "(Una vez por turno) Puede ser utilizada en el turno oponente. Cuando uno de tus miembros con #Promise Está a punto de recibir daño: reduce el daño en 50."
+
+msgid "hBP01-002_SPSKILL_NAME"
+msgstr "Dibujo Asombroso"
+
+msgid "hBP01-002_SPSKILL_EFFECT"
+msgstr "(Una vez por turno) Revela 1 Evento desde tu Deck y añádelo a tu mano. Luego baraja tu Deck."
+
+msgid "hBP01-001_SKILL_NAME"
+msgstr "Aprieta aprieta"
+
+msgid "hBP01-001_SKILL_EFFECT"
+msgstr "(Una vez por turno) Cambia el  HP Restante del Centro oponente a 50."
+
+msgid "hBP01-001_SPSKILL_NAME"
+msgstr "Te aplastaré"
+
+msgid "hBP01-001_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Durante este turno, otorga a uno de tus miembros +50 de poder en sus Artes. Si el miembro es Blanco, dale a sus Artes +50 de poder adicional."
+
+msgid "hBD24-001_SKILL_NAME"
+msgstr "Mejora Verde"
+
+msgid "hBD24-001_SKILL_EFFECT"
+msgstr "(Una vez por turno) Las Artes de uno de tus miembros Verde ganan +20 de poder hasta el final de este turno."
+
+msgid "hBD24-001_SPSKILL_NAME"
+msgstr "Regalo de Cumpleaños ~Verde~"
+
+msgid "hBD24-001_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Revela 1 miembro Verde desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBP01-006_SKILL_NAME"
+msgstr "Cola de Fénix"
+
+msgid "hBP01-006_SKILL_EFFECT"
+msgstr "(Una vez por turno) Coloca un miembro desde tu Archivo en tu mano."
+
+msgid "hBP01-006_SPSKILL_NAME"
+msgstr "Alzar desde las cenizas"
+
+msgid "hBP01-006_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Puede ser utilizada en turno oponente cuando uno de tus miembros Rojo es Derribado: Pierde 1 VIDA menos de lo que harías normalmente. Después elige un miembro que fue Derribado y pon ese miembro, y todos los miembros bajo él, en tu mano."
+
+msgid "hBP02-001_SKILL_NAME"
+msgstr ""
+
+msgid "hBP02-001_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-001_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP02-001_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-002_SKILL_NAME"
+msgstr "Mejora Verde"
+
+msgid "hBD24-002_SKILL_EFFECT"
+msgstr "(Una vez por turno) Las Artes de uno de tus miembros Verde ganan +20 de poder hasta el final de este turno."
+
+msgid "hBD24-002_SPSKILL_NAME"
+msgstr "Regalo de Cumpleaños ~Verde~"
+
+msgid "hBD24-002_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Revela 1 miembro Verde desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBD24-003_SKILL_NAME"
+msgstr "Mejora Amarilla"
+
+msgid "hBD24-003_SKILL_EFFECT"
+msgstr "(Una vez por turno) Las Artes de uno de tus miembros Amarillo ganan +20 de poder hasta el final de este turno."
+
+msgid "hBD24-003_SPSKILL_NAME"
+msgstr "Regalo de Cumpleaños ~Amarillo~"
+
+msgid "hBD24-003_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Revela 1 miembro Amarillo desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBD24-004_SKILL_NAME"
+msgstr "Mejora Blanca"
+
+msgid "hBD24-004_SKILL_EFFECT"
+msgstr "(Una vez por turno) Las Artes de uno de tus miembros Blanco ganan +20 de poder hasta el final de este turno."
+
+msgid "hBD24-004_SPSKILL_NAME"
+msgstr "Regalo de Cumpleaños ~Blanco~"
+
+msgid "hBD24-004_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Revela 1 miembro Blanco desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBD24-005_SKILL_NAME"
+msgstr "Mejora Blanca"
+
+msgid "hBD24-005_SKILL_EFFECT"
+msgstr "(Una vez por turno) Las Artes de uno de tus miembros Blanco ganan +20 de poder hasta el final de este turno."
+
+msgid "hBD24-005_SPSKILL_NAME"
+msgstr "Regalo de Cumpleaños ~Blanco~"
+
+msgid "hBD24-005_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Revela 1 miembro Blanco desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBD24-006_SKILL_NAME"
+msgstr "Mejora Morada"
+
+msgid "hBD24-006_SKILL_EFFECT"
+msgstr "(Una vez por turno) Las Artes de uno de tus miembros Morado ganan +20 de poder hasta el final de este turno."
+
+msgid "hBD24-006_SPSKILL_NAME"
+msgstr "Regalo de Cumpleaños ~Morado~"
+
+msgid "hBD24-006_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Revela 1 miembro Morado desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBD24-007_SKILL_NAME"
+msgstr "Mejora Amarilla"
+
+msgid "hBD24-007_SKILL_EFFECT"
+msgstr "(Una vez por turno) Las Artes de una de tus miembros Amarillo ganan +20 de poder hasta el final de este turno."
+
+msgid "hBD24-007_SPSKILL_NAME"
+msgstr "Regalo de Cumpleaños ~Amarillo~"
+
+msgid "hBD24-007_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Revela 1 miembro Amarillo desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBP02-003_SKILL_NAME"
+msgstr ""
+
+msgid "hBP02-003_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-003_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP02-003_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "Shooter"
+msgstr ""
+
+msgid "Cooking"
+msgstr ""
+
+msgid "ShirakamiCharacter"
+msgstr ""
+
+msgid "Food"
+msgstr ""
+
+msgid "Magic"
+msgstr ""
+
+msgid "hSD02-001_NAME"
+msgstr "Nakiri Ayame"
+
+msgid "hSD02-002_NAME"
+msgstr "Nakiri Ayame"
+
+msgid "hSD02-003_NAME"
+msgstr "Nakiri Ayame"
+
+msgid "hSD02-004_NAME"
+msgstr "Nakiri Ayame"
+
+msgid "hSD02-005_NAME"
+msgstr "Nakiri Ayame"
+
+msgid "hSD02-006_NAME"
+msgstr "Nakiri Ayame"
+
+msgid "hSD02-007_NAME"
+msgstr "Nakiri Ayame"
+
+msgid "hSD02-008_NAME"
+msgstr "Nakiri Ayame"
+
+msgid "hSD02-009_NAME"
+msgstr "Nakiri Ayame"
+
+msgid "hSD02-010_NAME"
+msgstr "Shirakami Fubuki"
+
+msgid "hSD02-011_NAME"
+msgstr "Ookami Mio"
+
+msgid "hSD02-012_NAME"
+msgstr "Irohanihohetto AyaFubuMi"
+
+msgid "hSD02-012_EFFECT"
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros llamados Shirakami Fubuki, Ookami Mio o Nakiri Ayame entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
+
+msgid "hSD02-013_NAME"
+msgstr "Asura & Rakshasa"
+
+msgid "hSD02-013_EFFECT"
+msgstr "Las Artes del miembro con esta Herramienta acoplada ganan +10 de poder.\n\n"
+"Si esta está acoplada a una Nakiri Ayame 1st Bloom o superior, gana el siguiente efecto: Las Artes del miembro con esta Herramienta acoplada ganan +10 de poder adicional.\n\n"
+"Solo puedes acoplar una Herramienta a cada miembro."
+
+msgid "hSD02-014_NAME"
+msgstr "Poyoyo"
+
+msgid "hSD02-014_EFFECT"
+msgstr "El miembro con esta Mascota acoplada gana +20 de HP.\n\n\n"
+"Si está Mascota está acoplada a Nakiri Ayame, gana el siguiente efecto: cuando el miembro con esta Mascota Acoplada Florece, roba 1 carta desde tu Deck.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
+
+msgid "hSD03-001_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-007_NAME"
+msgstr ""
+
+msgid "hSD03-008_NAME"
+msgstr ""
+
+msgid "hSD04-001_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hSD04-007_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hSD04-008_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hBP02-005_NAME"
+msgstr ""
+
+msgid "hBP02-042_NAME"
+msgstr ""
+
+msgid "hBP02-043_NAME"
+msgstr ""
+
+msgid "hBP02-046_NAME"
+msgstr ""
+
+msgid "hBP02-047_NAME"
+msgstr ""
+
+msgid "hBP02-087_NAME"
+msgstr ""
+
+msgid "hBP02-087_EFFECT"
+msgstr ""
+
+msgid "hBP02-092_NAME"
+msgstr ""
+
+msgid "hBP02-092_EFFECT"
+msgstr ""
+
+msgid "hBP02-093_NAME"
+msgstr ""
+
+msgid "hBP02-093_EFFECT"
+msgstr ""
+
+msgid "hBP02-099_NAME"
+msgstr ""
+
+msgid "hBP02-099_EFFECT"
+msgstr ""
+
+msgid "hSD02-002_ART_0_NAME"
+msgstr "Konnakiri~"
+
+msgid "hSD02-003_ART_0_NAME"
+msgstr "Shiranui"
+
+msgid "hSD02-003_COLLAB_NAME"
+msgstr "Karma"
+
+msgid "hSD02-003_COLLAB_EFFECT"
+msgstr "Inflige 10 de daño especial al miembro Collab oponente."
+
+msgid "hSD02-004_ART_0_NAME"
+msgstr "Deliciosos dangos"
+
+msgid "hSD02-004_COLLAB_NAME"
+msgstr "Primer Aniversario de Ayame"
+
+msgid "hSD02-004_COLLAB_EFFECT"
+msgstr "Si este miembro tiene un Poyoyo acoplado, las Artes de tu Centro ganan +20 de poder durante este turno."
+
+msgid "hSD02-005_ART_0_NAME"
+msgstr "Nemui yo~"
+
+msgid "hSD02-005_ART_1_NAME"
+msgstr "Otsunakiri"
+
+msgid "hSD02-006_ART_0_NAME"
+msgstr "Celebremos Juntos"
+
+msgid "hSD02-006_BLOOM_NAME"
+msgstr "Fiesta de Cumpleaños"
+
+msgid "hSD02-006_BLOOM_EFFECT"
+msgstr "Puedes Archivar 1 carta de tu mano, Si lo haces: Inflige 20 de daño especial al Centro o Collab oponente."
+
+msgid "hSD02-007_ART_0_NAME"
+msgstr "No te pierdas mi resplandor!!"
+
+msgid "hSD02-007_BLOOM_NAME"
+msgstr "Docchi docchi🎵"
+
+msgid "hSD02-007_BLOOM_EFFECT"
+msgstr "Al Florecer desde un miembro Debut, Mira las 2 cartas del tope de tu Deck, revela 1 y añádela a tu mano, después Archiva la carta restante."
+
+msgid "hSD02-008_ART_0_NAME"
+msgstr "Cumpleaños lujoso"
+
+msgid "hSD02-008_ART_1_NAME"
+msgstr "Que hay en el regalo?"
+
+msgid "hSD02-008_ART_1_EFFECT"
+msgstr "Puedes Archivar 1 carta de tu mano, Si lo haces: Inflige 50 de daño especial al Centro o Collab oponente."
+
+msgid "hSD02-009_ART_0_NAME"
+msgstr "El \"Aya\" en AyaFubuMi"
+
+msgid "hSD02-009_ART_1_NAME"
+msgstr "Yo~ da yo"
+
+msgid "hSD02-009_ART_1_EFFECT"
+msgstr "Puedes Archivar de 1-3 cartas de tu mano, Si lo haces: Inflige 40 de daño especial por cada carta Archivada por este efecto al Centro oponente."
+
+msgid "hSD02-010_ART_0_NAME"
+msgstr "El \"Fubu\" en AyaFubuMi"
+
+msgid "hSD02-010_COLLAB_NAME"
+msgstr "Por favor vuelve!"
+
+msgid "hSD02-010_COLLAB_EFFECT"
+msgstr "Puedes poner 1 Mascota desde tu Archivo a tu mano."
+
+msgid "hSD02-011_ART_0_NAME"
+msgstr "El \"Mi\" en AyaFubuMi"
+
+msgid "hSD02-011_COLLAB_NAME"
+msgstr "Asociación Onikemono"
+
+msgid "hSD02-011_COLLAB_EFFECT"
+msgstr "Puedes Archivar 1 carta de tu mano, Si lo haces: envía el tope de tu Deck de Ovaciones a uno de tus miembros Debut."
+
+msgid "hSD03-007_ART_0_NAME"
+msgstr "Envió mi propia canción con toda mi fuerza!"
+
+msgid "hSD03-007_BLOOM_NAME"
+msgstr "Ríe mucho más!"
+
+msgid "hSD03-007_BLOOM_EFFECT"
+msgstr "Envía 1 Ovación desde tu Archivo a uno de tus miembros con #Gamers."
+
+msgid "hSD03-008_ART_0_NAME"
+msgstr "La Más Noble Nekomata Okayu"
+
+msgid "hSD03-008_GIFT_NAME"
+msgstr "CEO de Dorobo Construction"
+
+msgid "hSD03-008_GIFT_EFFECT"
+msgstr "(Solo posición de Centro) Las Artes de tu Takane Lui, Ookami Mio, Shirakami Fubuki, La+ Darknesss e Inugami Korone ganan +20 de poder."
+
+msgid "hSD04-007_ART_0_NAME"
+msgstr "Daisuki! Chu♡"
+
+msgid "hSD04-007_ART_0_EFFECT"
+msgstr "Restaura 20 HP a un miembro en tu Backstage."
+
+msgid "hSD04-007_BLOOM_NAME"
+msgstr "Choco~n!"
+
+msgid "hSD04-007_BLOOM_EFFECT"
+msgstr "Puedes poner un Evento NO-LIMITADO desde tu Archivo a tu mano."
+
+msgid "hSD04-008_ART_0_NAME"
+msgstr "Di lo mejor haciendo esto"
+
+msgid "hSD04-008_ART_1_NAME"
+msgstr "Disfruta la comida"
+
+msgid "hSD04-008_ART_1_EFFECT"
+msgstr "Puedes poner un Evento con #Food desde tu Archivo a tu mano: Si lo haces, este Arte gana +20 de poder."
+
+msgid "hBP02-042_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-043_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-043_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-043_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-046_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-046_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-046_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-046_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-047_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-047_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-047_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-047_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hSD02-001_SKILL_NAME"
+msgstr "Micrófono Rojo"
+
+msgid "hSD02-001_SKILL_EFFECT"
+msgstr "(Una vez por turno) Si tu Centro es Rojo, sus Artes ganan +20 de poder hasta el final del turno."
+
+msgid "hSD02-001_SPSKILL_NAME"
+msgstr "Vamos! Otra vez!"
+
+msgid "hSD02-001_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Pon 1 miembro Rojo desde tu Archivo en tu Mano."
+
+msgid "hSD03-001_SKILL_NAME"
+msgstr "Micrófono Azul"
+
+msgid "hSD03-001_SKILL_EFFECT"
+msgstr "(Una vez por turno) Si tu Centro es Azul, sus Artes ganan +20 de poder hasta el final del turno."
+
+msgid "hSD03-001_SPSKILL_NAME"
+msgstr "Tiro Trasero"
+
+msgid "hSD03-001_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Puede ser utilizada cuando uno de tus miembros Azul, inflige daño a un miembro en el Backstage oponente: inflige 50 de daño especial a ese miembro en el Backstage."
+
+msgid "hSD04-001_SKILL_NAME"
+msgstr "Micrófono Morado"
+
+msgid "hSD04-001_SKILL_EFFECT"
+msgstr "(Una vez por turno) Si tu Centro es Morado, sus Artes ganan +20 de poder hasta el final del turno."
+
+msgid "hSD04-001_SPSKILL_NAME"
+msgstr "Cambio de Cartas"
+
+msgid "hSD04-001_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Roba 2 cartas desde tu Deck, luego Archiva 1 carta desde tu mano."
+
+msgid "hBP02-005_SKILL_NAME"
+msgstr ""
+
+msgid "hBP02-005_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-005_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP02-005_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "EXTRA_DUO"
+msgstr "Este miembro es tratado como {firstName} y {secondName} simultáneamente."
+
+msgid "hSD03-002_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-003_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-004_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-002_ART_0_NAME"
+msgstr "Mogu mogu~ Okayu"
+
+msgid "hSD03-003_ART_0_NAME"
+msgstr "Por favor déjame entrar"
+
+msgid "hSD03-003_COLLAB_NAME"
+msgstr "Iré a tu casa...!"
+
+msgid "hSD03-003_COLLAB_EFFECT"
+msgstr "Si tu Centro tiene #Gamers, inflige 10 de daño especial al Centro oponente y a un miembro en su Backstage. (miembros Derribados por este efecto no reducen VIDA)"
+
+msgid "hSD03-004_ART_0_NAME"
+msgstr "Gato Estudiante"
+
+msgid "hSD03-004_COLLAB_NAME"
+msgstr "Te gustaría ir a la escuela conmigo...?"
+
+msgid "hSD03-004_COLLAB_EFFECT"
+msgstr "Puedes revelar el tope de tu Deck. Si esa carta es un miembro Debut o Spot, envía el tope de tu Deck de Ovaciones a este miembro. Luego pon la carta revelada en el fondo de tu Deck."
+
+msgid "hSD03-005_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-005_ART_0_NAME"
+msgstr "Dame un fuerte abrazo❤️"
+
+msgid "hSD03-005_ART_1_NAME"
+msgstr "ehehe es broma"
+
+msgid "hSD03-006_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-006_ART_0_NAME"
+msgstr "Nekokaburi"
+
+msgid "hSD03-006_ART_1_NAME"
+msgstr "shaa"
+
+msgid "hSD03-006_ART_1_EFFECT"
+msgstr "Puedes Archivar 1 Ovación Azul desde este miembro, si lo haces: Inflige 10 de daño especial al Centro oponente y a un miembro en su Backstage."
+
+msgid "hSD03-012_NAME"
+msgstr "Dorobo Construction"
+
+msgid "hSD03-012_EFFECT"
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros llamados Nekomata Okayu, Takane Lui, Ookami Mio, Shirakami Fubuki, La+ Darknesss o Inugami Korone entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
+
+msgid "hSD03-014_NAME"
+msgstr "Onigirya"
+
+msgid "hSD03-014_EFFECT"
+msgstr "El miembro con este Fan acoplado gana +10 de HP.\n\n"
+"Este Fan solo puede ser acoplado a Nekomata Okayu, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
+
+msgid "Isaki Riona"
+msgstr ""
+
+msgid "Koganei Niko"
+msgstr ""
+
+msgid "Mizumiya Su"
+msgstr ""
+
+msgid "Rindo Chihaya"
+msgstr ""
+
+msgid "Kikirara Vivi"
+msgstr ""
+
+msgid "hSD03-009_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hSD03-009_ART_0_NAME"
+msgstr "MOGMOG"
+
+msgid "hSD03-009_ART_1_NAME"
+msgstr "Okayu~"
+
+msgid "hSD03-009_ART_1_EFFECT"
+msgstr "Puedes Archivar 2 Ovaciones Azules desde este miembro, si lo haces: Inflige 30 de daño especial al Centro oponente y a un miembro en su Backstage."
+
+msgid "hSD03-010_NAME"
+msgstr "Inugami Korone"
+
+msgid "hSD03-010_ART_0_NAME"
+msgstr ""
+
+msgid "hSD03-010_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD03-010_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD03-011_NAME"
+msgstr "La+ Darknesss"
+
+msgid "hSD03-011_ART_0_NAME"
+msgstr "Ministra de Agricultura de Dorobo Construction"
+
+msgid "hSD03-011_ART_1_NAME"
+msgstr "Definitivamente te dejaré comerlo"
+
+msgid "hSD03-011_ART_1_EFFECT"
+msgstr "Si tienes 2 o menos cartas en tu mano, roba desde tu Deck hasta tener 3 cartas en tu mano."
+
+msgid "hSD03-013_NAME"
+msgstr "Okanyan"
+
+msgid "hSD03-013_EFFECT"
+msgstr "Cuando el miembro con esta Mascota acoplada recibe daño en la posición de Centro o Collab, recibe -10 de daño.\n\n"
+"Si está Mascota está acoplada a Nekomata Okayu, gana el siguiente efecto: Cuando el miembro con esta Mascota acoplada Archiva una Ovación como parte de una de sus habilidades o un Arte, puedes Archivar esta Mascota en vez de una Ovación Azul.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
+
+msgid "hSD04-002_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hSD04-002_ART_0_NAME"
+msgstr "Enfermera Escolar del Inframundo"
+
+msgid "hSD04-003_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hSD04-003_ART_0_NAME"
+msgstr "Mis lindos estudiantes~"
+
+msgid "hSD04-003_COLLAB_NAME"
+msgstr "Buenas Tardes~"
+
+msgid "hSD04-003_COLLAB_EFFECT"
+msgstr "Si tu miembro Oshi es Morado, roba 1 carta desde tu Deck."
+
+msgid "hSD04-004_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hSD04-004_ART_0_NAME"
+msgstr "Por favor come un montón❤️"
+
+msgid "hSD04-004_COLLAB_NAME"
+msgstr "Porción Infernal de Arroz"
+
+msgid "hSD04-004_COLLAB_EFFECT"
+msgstr "Puedes Archivar 1 carta de tu mano, si lo haces: revela un Evento con #Food desde tu Deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hSD04-014_NAME"
+msgstr "Chocolat"
+
+msgid "hSD04-014_EFFECT"
+msgstr "El miembro con esta Mascota acoplada gana +20 de HP.\n\n"
+"Si está Mascota está acoplada a Yuzuki Choco, gana el siguiente efecto: cuando el miembro con esta Mascota Acoplada Florece, restaura 20 HP a ese miembro.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
+
+msgid "hSD04-009_NAME"
+msgstr ""
+
+msgid "hSD04-009_ART_0_NAME"
+msgstr ""
+
+msgid "hSD04-009_ART_1_NAME"
+msgstr ""
+
+msgid "hSD04-009_ART_1_EFFECT"
+msgstr ""
+
+msgid "hSD04-010_NAME"
+msgstr ""
+
+msgid "hSD04-010_ART_0_NAME"
+msgstr ""
+
+msgid "hSD04-010_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD04-010_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD04-011_NAME"
+msgstr ""
+
+msgid "hSD04-011_ART_0_NAME"
+msgstr ""
+
+msgid "hSD04-011_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD04-011_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD04-012_NAME"
+msgstr ""
+
+msgid "hSD04-012_EFFECT"
+msgstr ""
+
+msgid "hSD04-013_NAME"
+msgstr ""
+
+msgid "hSD04-013_EFFECT"
+msgstr ""
+
+msgid "hBD24-008_NAME"
+msgstr ""
+
+msgid "hBD24-008_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-008_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-008_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-008_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-009_NAME"
+msgstr ""
+
+msgid "hBD24-009_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-009_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-009_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-009_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hSD04-005_NAME"
+msgstr ""
+
+msgid "hSD04-005_ART_0_NAME"
+msgstr ""
+
+msgid "hSD04-005_ART_1_NAME"
+msgstr ""
+
+msgid "hSD04-006_NAME"
+msgstr ""
+
+msgid "hSD04-006_ART_0_NAME"
+msgstr ""
+
+msgid "hSD04-006_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-007_NAME"
+msgstr ""
+
+msgid "hBP02-007_SKILL_NAME"
+msgstr ""
+
+msgid "hBP02-007_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-007_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP02-007_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-044_NAME"
+msgstr ""
+
+msgid "hBP02-044_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-044_ART_1_NAME"
+msgstr ""
+
+msgid "hBP02-045_NAME"
+msgstr ""
+
+msgid "hBP02-045_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-045_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-045_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-055_NAME"
+msgstr ""
+
+msgid "hBP02-055_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-055_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-055_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-056_NAME"
+msgstr ""
+
+msgid "hBP02-056_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-057_NAME"
+msgstr ""
+
+msgid "hBP02-057_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-057_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-057_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-058_NAME"
+msgstr ""
+
+msgid "hBP02-058_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-058_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-058_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-058_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-059_NAME"
+msgstr ""
+
+msgid "hBP02-059_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-059_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-059_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-059_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-061_NAME"
+msgstr ""
+
+msgid "hBP02-061_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-062_NAME"
+msgstr ""
+
+msgid "hBP02-062_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-063_NAME"
+msgstr ""
+
+msgid "hBP02-063_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-063_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-063_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-064_NAME"
+msgstr ""
+
+msgid "hBP02-064_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-064_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-065_NAME"
+msgstr ""
+
+msgid "hBP02-065_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-065_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-066_NAME"
+msgstr ""
+
+msgid "hBP02-066_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-066_ART_1_NAME"
+msgstr ""
+
+msgid "hBP02-075_NAME"
+msgstr ""
+
+msgid "hBP02-075_EFFECT"
+msgstr ""
+
+msgid "hBP02-079_NAME"
+msgstr ""
+
+msgid "hBP02-079_EFFECT"
+msgstr ""
+
+msgid "hBP02-083_NAME"
+msgstr ""
+
+msgid "hBP02-083_EFFECT"
+msgstr ""
+
+msgid "hBP02-088_NAME"
+msgstr ""
+
+msgid "hBP02-088_EFFECT"
+msgstr ""
+
+msgid "hBP02-098_NAME"
+msgstr ""
+
+msgid "hBP02-098_EFFECT"
+msgstr ""
+
+msgid "hBP02-102_NAME"
+msgstr ""
+
+msgid "hBP02-102_EFFECT"
+msgstr ""
+

@@ -634,6 +634,18 @@ msgid "CARD_REVEALED_ATTACH"
 msgstr "Attach"
 
 #: Scripts/side.gd
+msgid "CARD_REVEALED_TOPDECK"
+msgstr "Send to top of deck"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_BOTTOMDECK"
+msgstr "Send to bottom of deck"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_ARCHIVE"
+msgstr "Archive"
+
+#: Scripts/side.gd
 msgid "DECK_DRAW"
 msgstr "Draw"
 
@@ -652,6 +664,10 @@ msgstr "Mill X"
 #: Scripts/side.gd
 msgid "DECK_HOLOPOWER"
 msgstr "Holopower"
+
+#: Scripts/side.gd
+msgid "DECK_REVEAL"
+msgstr "Reveal top card"
 
 #: Scripts/side.gd
 msgid "DECK_LOOKX"
@@ -814,6 +830,22 @@ msgid "MESSAGE_STAGE_UNBLOOM"
 msgstr "{person} unbloomed ({fromZone}) {fromName}, reverting to {toName}"
 
 #: Scripts/side.gd
+msgid "MESSAGE_REVEALED_HAND"
+msgstr "{person} added {cardName} to hand"
+
+#: Scripts/side.gd
+msgid "MESSAGE_REVEALED_TOPDECK"
+msgstr "{person} returned {cardName} to the top of deck"
+
+#: Scripts/side.gd
+msgid "MESSAGE_REVEALED_BOTTOMDECK"
+msgstr "{person} sent {cardName} to the bottom of deck"
+
+#: Scripts/side.gd
+msgid "MESSAGE_REVEALED_ARCHIVE"
+msgstr "{person} archived {cardName}"
+
+#: Scripts/side.gd
 msgid "MESSAGE_OSHISKILL_SP"
 msgstr "{person} used SP Oshi Skill \"{skillName}\""
 
@@ -852,6 +884,10 @@ msgstr "Draw X Cards"
 #: Scripts/side.gd
 msgid "PROMPT_DECK_ARCHIVE"
 msgstr "Mill X Cards"
+
+#: Scripts/side.gd
+msgid "MESSAGE_FUDA_REVEAL"
+msgstr "{person} revealed {cardName} from {fromFuda}"
 
 #: Scripts/side.gd
 msgid "MESSAGE_DECK_MULLIGAN"
@@ -900,10 +936,6 @@ msgstr "{person} added a card to life from {fromFuda}"
 #: Scripts/side.gd
 msgid "MESSAGE_ATTACHED_LIFE"
 msgstr "{person} added {cardName} to life from ({fromZone}) {fromName}"
-
-#: Scripts/side.gd
-msgid "MESSAGE_FUDA_REVEAL"
-msgstr "{person} revealed {cardName} from {fromFuda}"
 
 #: Scripts/side.gd
 msgid "MESSAGE_ARCHIVE_HAND"
@@ -1015,7 +1047,7 @@ msgstr "{person} started looking at the top {amount} cards of deck"
 
 #: Scripts/side.gd
 msgid "MESSAGE_CARD_BACK"
-msgstr "{person} moved {cardName} to back"
+msgstr "{person} moved ({fromZone}) {fromName} to back"
 
 #: Scripts/side.gd
 msgid "MESSAGE_CARD_BATONPASS"

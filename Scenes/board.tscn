@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=22 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" path="res://Scripts/RemapButton.gd" id="14_x8gke"]
 [ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="15_ycoxv"]
 [ext_resource type="Script" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="18_n8kk3"]
+[ext_resource type="AudioStream" uid="uid://dx0hyqv3whb28" path="res://ChikuTaku The Game VGM Menu Select Watson Amelia WUNDER RiKU ✨ チクタク オリジナル曲.mp3" id="19_vg3fm"]
 
 [sub_resource type="Gradient" id="Gradient_8vfua"]
 colors = PackedColorArray(0.691703, 0.82893, 0.968311, 1, 0.989179, 0.909736, 0.929764, 1)
@@ -134,6 +135,34 @@ offset_bottom = 220.242
 auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "SFX"
+
+[node name="BGMSlider" type="HSlider" parent="CanvasLayer/Sidebar/OptionsWindow"]
+offset_left = 25.0
+offset_top = 123.89
+offset_right = 1838.0
+offset_bottom = 257.89
+scale = Vector2(0.12, 0.12)
+theme = ExtResource("5_fdkx6")
+min_value = -40.0
+max_value = 5.0
+scrollable = false
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Sidebar/OptionsWindow/BGMSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = -0.763
+anchor_right = 0.028
+anchor_bottom = -0.763
+offset_left = 1844.67
+offset_top = 109.242
+offset_right = 2171.67
+offset_bottom = 220.242
+auto_translate = false
+theme_override_font_sizes/font_size = 110
+text = "BGM"
 
 [node name="HideCosmetics" type="TextureButton" parent="CanvasLayer/Sidebar/OptionsWindow"]
 offset_left = 26.0
@@ -298,7 +327,7 @@ offset_left = 11.0
 offset_right = 279.0
 offset_bottom = 46.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "CONNECT_DIRECT_PROMPT"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -324,9 +353,10 @@ disabled = true
 text = "CONNECT_DIRECT"
 
 [node name="Title" type="Label" parent="CanvasLayer"]
-offset_left = 358.0
+custom_minimum_size = Vector2(1067, 137)
+offset_left = 115.0
 offset_top = 17.0
-offset_right = 946.0
+offset_right = 1182.0
 offset_bottom = 154.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 100
@@ -334,10 +364,11 @@ text = "TITLE"
 horizontal_alignment = 1
 
 [node name="Subtitle" type="Label" parent="CanvasLayer/Title"]
+custom_minimum_size = Vector2(950, 42)
 layout_mode = 0
-offset_left = -43.0
+offset_left = 47.0
 offset_top = 118.0
-offset_right = 638.0
+offset_right = 997.0
 offset_bottom = 160.0
 theme_override_font_sizes/font_size = 30
 text = "SUBTITLE"
@@ -445,13 +476,15 @@ scale = Vector2(0.00566667, 0.00533333)
 texture = ExtResource("7_kmt2w")
 
 [node name="Exit" type="Button" parent="CanvasLayer"]
-offset_left = 1091.0
+offset_left = 1049.0
 offset_top = 660.0
 offset_right = 1263.0
 offset_bottom = 696.0
 theme = ExtResource("5_fdkx6")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 23
 text = "EXIT"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="Options" type="TextureButton" parent="CanvasLayer"]
 y_sort_enabled = true
@@ -485,6 +518,7 @@ texture_normal = ExtResource("6_1x0cl")
 texture_pressed = ExtResource("7_n8awk")
 
 [node name="Unrevealed" type="Label" parent="CanvasLayer/Options/OptionBackground/CheckUnrevealed"]
+custom_minimum_size = Vector2(1748, 205)
 layout_mode = 0
 offset_left = 468.334
 offset_top = 125.0
@@ -492,6 +526,7 @@ offset_right = 2216.33
 offset_bottom = 330.0
 theme_override_font_sizes/font_size = 120
 text = "OPTION_UNREVEALED"
+autowrap_mode = 3
 
 [node name="AllowProxies" type="TextureButton" parent="CanvasLayer/Options/OptionBackground"]
 layout_mode = 0
@@ -504,6 +539,7 @@ texture_normal = ExtResource("6_1x0cl")
 texture_pressed = ExtResource("7_n8awk")
 
 [node name="Proxies" type="Label" parent="CanvasLayer/Options/OptionBackground/AllowProxies"]
+custom_minimum_size = Vector2(1748, 205)
 layout_mode = 0
 offset_left = 468.334
 offset_top = 125.0
@@ -511,13 +547,14 @@ offset_right = 2216.33
 offset_bottom = 330.0
 theme_override_font_sizes/font_size = 120
 text = "OPTION_PROXY"
+autowrap_mode = 3
 
 [node name="SFXSlider" type="HSlider" parent="CanvasLayer/Options/OptionBackground"]
 layout_mode = 0
-offset_left = 51.6667
-offset_top = 936.333
+offset_left = 51.667
+offset_top = 875.0
 offset_right = 1864.67
-offset_bottom = 1070.33
+offset_bottom = 1009.0
 theme = ExtResource("5_fdkx6")
 min_value = -30.0
 max_value = 10.0
@@ -544,6 +581,34 @@ text = "SFX"
 stream = ExtResource("12_lpjdh")
 bus = &"SFX"
 
+[node name="BGMSlider" type="HSlider" parent="CanvasLayer/Options/OptionBackground"]
+layout_mode = 0
+offset_left = 51.667
+offset_top = 1100.0
+offset_right = 1864.67
+offset_bottom = 1234.0
+theme = ExtResource("5_fdkx6")
+min_value = -40.0
+max_value = 5.0
+scrollable = false
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/BGMSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = -0.763
+anchor_right = 0.028
+anchor_bottom = -0.763
+offset_left = 1844.67
+offset_top = 109.242
+offset_right = 2171.67
+offset_bottom = 220.242
+auto_translate = false
+theme_override_font_sizes/font_size = 110
+text = "BGM"
+
 [node name="Actions" type="Control" parent="CanvasLayer/Options/OptionBackground"]
 anchors_preset = 0
 offset_top = 400.0
@@ -553,9 +618,9 @@ offset_bottom = 440.0
 [node name="Draw" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 layout_mode = 0
 offset_left = 125.0
-offset_top = 905.0
+offset_top = 1000.0
 offset_right = 1125.0
-offset_bottom = 1025.0
+offset_bottom = 1120.0
 auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "D"
@@ -563,19 +628,23 @@ script = ExtResource("14_x8gke")
 action = "Draw"
 
 [node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/Draw"]
+custom_minimum_size = Vector2(1035, 111)
 layout_mode = 0
 offset_left = 1150.0
-offset_right = 1843.0
-offset_bottom = 111.0
-theme_override_font_sizes/font_size = 110
+offset_top = -80.0
+offset_right = 2185.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 90
 text = "ACTION_DRAW"
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Tabs" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 layout_mode = 0
 offset_left = 125.0
-offset_top = 1105.0
+offset_top = 1300.0
 offset_right = 1125.0
-offset_bottom = 1225.0
+offset_bottom = 1420.0
 auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "TAB"
@@ -583,19 +652,23 @@ script = ExtResource("14_x8gke")
 action = "SwapPanels"
 
 [node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/Tabs"]
+custom_minimum_size = Vector2(1035, 111)
 layout_mode = 0
 offset_left = 1150.0
-offset_right = 1995.0
-offset_bottom = 111.0
-theme_override_font_sizes/font_size = 110
+offset_top = -80.0
+offset_right = 2185.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 90
 text = "ACTION_TABS"
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="LockInfo" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 layout_mode = 0
 offset_left = 125.0
-offset_top = 1305.0
+offset_top = 1600.0
 offset_right = 1125.0
-offset_bottom = 1425.0
+offset_bottom = 1720.0
 auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "CTRL"
@@ -603,19 +676,23 @@ script = ExtResource("14_x8gke")
 action = "LockInfo"
 
 [node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/LockInfo"]
+custom_minimum_size = Vector2(1035, 111)
 layout_mode = 0
 offset_left = 1150.0
-offset_right = 2235.0
-offset_bottom = 111.0
-theme_override_font_sizes/font_size = 110
+offset_top = -80.0
+offset_right = 2185.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 90
 text = "ACTION_LOCK"
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="LastStep" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 layout_mode = 0
 offset_left = 125.0
-offset_top = 1505.0
+offset_top = 1900.0
 offset_right = 1125.0
-offset_bottom = 1625.0
+offset_bottom = 2020.0
 auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "["
@@ -623,19 +700,23 @@ script = ExtResource("14_x8gke")
 action = "Last Step"
 
 [node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/LastStep"]
+custom_minimum_size = Vector2(1035, 111)
 layout_mode = 0
 offset_left = 1150.0
-offset_right = 2074.0
-offset_bottom = 111.0
-theme_override_font_sizes/font_size = 110
+offset_top = -80.0
+offset_right = 2185.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 90
 text = "ACTION_LSTEP"
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="NextStep" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 layout_mode = 0
 offset_left = 125.0
-offset_top = 1705.0
+offset_top = 2200.0
 offset_right = 1125.0
-offset_bottom = 1825.0
+offset_bottom = 2320.0
 auto_translate = false
 theme_override_font_sizes/font_size = 110
 text = "]"
@@ -643,28 +724,33 @@ script = ExtResource("14_x8gke")
 action = "Next Step"
 
 [node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/NextStep"]
+custom_minimum_size = Vector2(1035, 111)
 layout_mode = 0
 offset_left = 1150.0
 offset_right = 2092.0
 offset_bottom = 111.0
-theme_override_font_sizes/font_size = 110
+theme_override_font_sizes/font_size = 90
 text = "ACTION_NSTEP"
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="LanguageSelect" type="MenuButton" parent="CanvasLayer"]
-offset_left = 1200.0
+offset_left = 1209.0
 offset_top = 82.0
 offset_right = 1267.0
 offset_bottom = 103.0
 auto_translate = false
 theme = ExtResource("5_fdkx6")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 13
 text = "English"
 flat = false
-item_count = 2
+item_count = 3
 popup/item_0/text = "English"
 popup/item_0/id = 0
 popup/item_1/text = "日本語"
 popup/item_1/id = 1
+popup/item_2/text = "Español"
+popup/item_2/id = 2
 
 [node name="JoinOptions" type="ColorRect" parent="CanvasLayer"]
 visible = false
@@ -719,7 +805,7 @@ vertical_alignment = 1
 [node name="PlaymatDiceCustom" type="Button" parent="CanvasLayer"]
 offset_left = 92.0
 offset_top = 683.0
-offset_right = 218.0
+offset_right = 252.0
 offset_bottom = 704.0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
@@ -775,6 +861,8 @@ offset_right = 1221.0
 offset_bottom = 620.0
 theme_override_font_sizes/font_size = 30
 text = "COSMETICS_CANCEL"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="Playmat" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
 layout_mode = 0
@@ -784,6 +872,8 @@ offset_right = 493.0
 offset_bottom = 590.0
 theme_override_font_sizes/font_size = 30
 text = "COSMETICS_PM"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="LoadDialog" type="FileDialog" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat"]
 title = "Open a File"
@@ -805,6 +895,8 @@ offset_right = 901.0
 offset_bottom = 590.0
 theme_override_font_sizes/font_size = 30
 text = "COSMETICS_D"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="LoadDialog" type="FileDialog" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/Dice"]
 title = "Open a File"
@@ -826,6 +918,8 @@ offset_right = 493.0
 offset_bottom = 650.0
 theme_override_font_sizes/font_size = 25
 text = "COSMETICS_PM_DEFAULT"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="DiceDefault" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
 layout_mode = 0
@@ -835,6 +929,8 @@ offset_right = 901.0
 offset_bottom = 650.0
 theme_override_font_sizes/font_size = 25
 text = "COSMETICS_D_DEFAULT"
+text_overrun_behavior = 3
+clip_text = true
 
 [node name="InfoButton" type="Button" parent="CanvasLayer"]
 offset_left = 20.0
@@ -873,14 +969,16 @@ layout_mode = 0
 offset_left = 4.0
 offset_top = 75.0
 offset_right = 1082.0
-offset_bottom = 373.0
+offset_bottom = 475.0
 auto_translate = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "Special thanks to:
 Ogbajoj, without whose spreadsheet this never would have been made
 Cyber for helping with the graphic design
+AshiNoMegami for the Spanish translation
 HaruTsunX for helping with the sound design
+WunderRiku for the BGM
 MagnaDrake for helping with the Mac release
 よるみ for helping with the Japanese option
 Weiss and Chill for the EN proxies and the visibility he's brought to this project
@@ -891,10 +989,10 @@ autowrap_mode = 3
 
 [node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]
 layout_mode = 0
-offset_left = 138.0
-offset_top = 619.0
-offset_right = 220.0
-offset_bottom = 636.0
+offset_left = 161.0
+offset_top = 618.0
+offset_right = 243.0
+offset_bottom = 635.0
 auto_translate = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Version "
@@ -902,8 +1000,8 @@ text = "Version "
 [node name="DeckLocationButton" type="Button" parent="CanvasLayer/InfoButton/Info"]
 layout_mode = 0
 offset_left = 13.0
-offset_top = 620.0
-offset_right = 120.0
+offset_top = 617.0
+offset_right = 141.0
 offset_bottom = 633.0
 text = "INFO_DLOC"
 
@@ -921,11 +1019,12 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 
 [node name="Close" type="Button" parent="CanvasLayer/InfoButton/Info"]
 layout_mode = 0
-offset_left = 1034.0
-offset_top = 617.0
+offset_left = 1011.0
+offset_top = 615.0
 offset_right = 1075.0
 offset_bottom = 630.0
 text = "INFO_CANCEL"
+clip_text = true
 
 [node name="DeckList" parent="CanvasLayer" instance=ExtResource("10_058xr")]
 visible = false
@@ -1023,11 +1122,18 @@ script = ExtResource("18_n8kk3")
 pause_on_failure = true
 print_debug = true
 
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_vg3fm")
+volume_db = -15.0
+autoplay = true
+bus = &"BGM"
+
 [connection signal="text_submitted" from="CanvasLayer/Sidebar/ChatWindow/ToSend" to="." method="send_message"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/ChatWindow/ToSend/Send" to="." method="send_message_on_click"]
 [connection signal="drag_ended" from="CanvasLayer/Sidebar/OptionsWindow/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="drag_started" from="CanvasLayer/Sidebar/OptionsWindow/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="value_changed" from="CanvasLayer/Sidebar/OptionsWindow/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Sidebar/OptionsWindow/BGMSlider" to="." method="_on_bgm_slider_value_changed"]
 [connection signal="toggled" from="CanvasLayer/Sidebar/OptionsWindow/HideCosmetics" to="." method="_on_hide_cosmetics_toggled"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/CardInfo" to="." method="_on_card_info_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/Chat" to="." method="_on_chat_pressed"]
@@ -1057,6 +1163,7 @@ print_debug = true
 [connection signal="drag_ended" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="drag_started" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="value_changed" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Options/OptionBackground/BGMSlider" to="." method="_on_bgm_slider_value_changed"]
 [connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom" to="." method="_on_playmat_dice_custom_pressed"]
 [connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Exit" to="." method="_on_cosmetics_exit_pressed"]
 [connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat" to="." method="_on_playmat_pressed"]

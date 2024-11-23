@@ -2,10 +2,15 @@ extends Node2D
 @onready var list = $ScrollContainer/VBoxContainer
 @onready var loadButton = $ScrollContainer/VBoxContainer/Load
 @onready var json = JSON.new()
+@export var deletable = false
 
 signal selected(deckInfo)
 signal cancel
 
+
+func ready():
+	if deletable:
+		$ScrollContainer/VBoxContainer/Delete.visible = true
 
 func _clear_decks():
 	for deckButton in list.get_children():

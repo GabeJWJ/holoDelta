@@ -1609,13 +1609,13 @@ msgstr "Houshou Marine"
 msgid "hBP02-028_ART_0_NAME"
 msgstr "Captain of the Houshou Pirates, Houshou Marine here!"
 
-msgid "hBP02-060_NAME"
+msgid "hBP02-054_NAME"
 msgstr "Mori Calliope"
 
-msgid "hBP02-060_ART_0_NAME"
+msgid "hBP02-054_ART_0_NAME"
 msgstr "The Grim Reaper's first apprentice"
 
-msgid "hBP02-060_ART_0_EFFECT"
+msgid "hBP02-054_ART_0_EFFECT"
 msgstr "If there are any holomems in your Archive, this Art gains +10 power."
 
 msgid "hBP02-013_NAME"
@@ -2766,4 +2766,205 @@ msgstr "Birthday Gift ~Green~"
 
 msgid "hBD24-009_SPSKILL_EFFECT"
 msgstr "(Once per game) Reveal 1 Green holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hSD04-005_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hSD04-005_ART_0_NAME"
+msgstr "Otsukareito......"
+
+msgid "hSD04-005_ART_1_NAME"
+msgstr "ohhh (chu)"
+
+msgid "hSD04-006_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hSD04-006_ART_0_NAME"
+msgstr "Forbidden Kiss"
+
+msgid "hSD04-006_ART_0_EFFECT"
+msgstr "When this Art deals damage to one of your opponent's holomems, for each 10 damage dealt this holomem recovers 10 HP."
+
+msgid "hBP02-007_NAME"
+msgstr "Mori Calliope"
+
+msgid "hBP02-007_SKILL_NAME"
+msgstr "Sampling"
+
+msgid "hBP02-007_SKILL_EFFECT"
+msgstr "(Once per turn) Archive 2 cards from your hand, and return 2 holomems with #EN from your Archive to your hand."
+
+msgid "hBP02-007_SPSKILL_NAME"
+msgstr "Shinigami Rap"
+
+msgid "hBP02-007_SPSKILL_EFFECT"
+msgstr "(Once per game) Can be used if your Center holomem is Mori Calliope: during this turn, after using an Art, one of your holomems named Mori Calliope may use the same Art once more."
+
+msgid "hBP02-044_NAME"
+msgstr "Murasaki Shion"
+
+msgid "hBP02-044_ART_0_NAME"
+msgstr "Embarrassing"
+
+msgid "hBP02-044_ART_1_NAME"
+msgstr "yada mo~"
+
+msgid "hBP02-045_NAME"
+msgstr "Murasaki Shion"
+
+msgid "hBP02-045_ART_0_NAME"
+msgstr "I'm so happy!!"
+
+msgid "hBP02-045_BLOOM_NAME"
+msgstr "It's been a while since our last live performance!!"
+
+msgid "hBP02-045_BLOOM_EFFECT"
+msgstr "Look at the top three cards of your Deck. Reveal one that is a Blue or Purple holomem and put it into your hand. Then put the remaining cards on the bottom of your deck in any order."
+
+msgid "hBP02-055_NAME"
+msgstr "Mori Calliope"
+
+msgid "hBP02-055_ART_0_NAME"
+msgstr "My Stage"
+
+msgid "hBP02-055_COLLAB_NAME"
+msgstr "Showtime"
+
+msgid "hBP02-055_COLLAB_EFFECT"
+msgstr "You may Archive 1 holomem from your hand for the following effect: the Arts of one of your holomems with #Myth gain +20 until the end of this turn."
+
+msgid "hBP02-056_NAME"
+msgstr "Mori Calliope"
+
+msgid "hBP02-056_ART_0_NAME"
+msgstr "\"Cash-Money\""
+
+msgid "hBP02-057_NAME"
+msgstr "Mori Calliope"
+
+msgid "hBP02-057_ART_0_NAME"
+msgstr "Let's have fun together!"
+
+msgid "hBP02-057_BLOOM_NAME"
+msgstr "The best fes created by everyone"
+
+msgid "hBP02-057_BLOOM_EFFECT"
+msgstr "You may Archive 2 holomems that share a tag from your hand for the following effect: draw 2 cards from your Deck."
+
+msgid "hBP02-058_NAME"
+msgstr "Mori Calliope"
+
+msgid "hBP02-058_ART_0_NAME"
+msgstr "Dead Beat"
+
+msgid "hBP02-058_ART_0_EFFECT"
+msgstr "If this holomem has a Tool or a Mascot attached, this Art gains +30 power."
+
+msgid "hBP02-058_BLOOM_NAME"
+msgstr "What's up?"
+
+msgid "hBP02-058_BLOOM_EFFECT"
+msgstr "You may return 1 Mori Calliope's Scythe or Death-sensei from your Archive to your hand."
+
+msgid "hBP02-059_NAME"
+msgstr "Mori Calliope"
+
+msgid "hBP02-059_ART_0_NAME"
+msgstr "Featuring Myth"
+
+msgid "hBP02-059_ART_0_EFFECT"
+msgstr "If you have 4 or more holomems with #Myth in your Archive, this Art gains +40 power. If you have 8 or more, this Art gains another +40 power."
+
+msgid "hBP02-059_BLOOM_NAME"
+msgstr "Soul Voice"
+
+msgid "hBP02-059_BLOOM_EFFECT"
+msgstr "Reveal any card from your deck and Archive it. Then shuffle your deck."
+
+msgid "hBP02-061_NAME"
+msgstr "Ninomae Ina'nis"
+
+msgid "hBP02-061_ART_0_NAME"
+msgstr "WAH!"
+
+msgid "hBP02-062_NAME"
+msgstr "Ninomae Ina'nis"
+
+msgid "hBP02-062_ART_0_NAME"
+msgstr "Takogram with you"
+
+msgid "hBP02-063_NAME"
+msgstr "Ninomae Ina'nis"
+
+msgid "hBP02-063_ART_0_NAME"
+msgstr "Let's have fun!!!"
+
+msgid "hBP02-063_BLOOM_NAME"
+msgstr "Are you all ready to WAH?"
+
+msgid "hBP02-063_BLOOM_EFFECT"
+msgstr "Restore 20 HP to one of your holomems with #Myth."
+
+msgid "hBP02-064_NAME"
+msgstr "Ninomae Ina'nis"
+
+msgid "hBP02-064_ART_0_NAME"
+msgstr "Archaic Smile"
+
+msgid "hBP02-064_ART_0_EFFECT"
+msgstr "If there are 5 or more holomems with #Myth in your Archive, you may move 1 Cheer from this holomem to one of your other holomems. If there are 10 or more, this Art gains +50 power."
+
+msgid "hBP02-065_NAME"
+msgstr "Nerissa Ravencroft"
+
+msgid "hBP02-065_ART_0_NAME"
+msgstr "Hiya darlings!"
+
+msgid "hBP02-065_ART_0_EFFECT"
+msgstr "If this holomem has any Red Cheer attached, this Art gains +10 power."
+
+msgid "hBP02-066_NAME"
+msgstr "Nerissa Ravencroft"
+
+msgid "hBP02-066_ART_0_NAME"
+msgstr "That sounds good"
+
+msgid "hBP02-066_ART_1_NAME"
+msgstr "What is an idol song"
+
+msgid "hBP02-075_NAME"
+msgstr "Idol Felt Pen"
+
+msgid "hBP02-075_EFFECT"
+msgstr "This card can only be played if you have 6 or fewer cards in your hand, excluding this card.\n\nLook at the top four cards of your Deck. Reveal any number of them that are holomems with #Art and put them into your hand. Then put the remaining cards on the bottom of your Deck in any order."
+
+msgid "hBP02-079_NAME"
+msgstr "Explosion Magic"
+
+msgid "hBP02-079_EFFECT"
+msgstr "Deal 20 special damage to your opponent's Center or Collab holomem. holomems Downed with this effect do not reduce LIFE.\nYou may only play one Event with #Magic per turn."
+
+msgid "hBP02-083_NAME"
+msgstr "Magic Closet"
+
+msgid "hBP02-083_EFFECT"
+msgstr "To play this card, you must Archive one holo power.\n\nSend one Purple Cheer from your Archive to one of your holomems named Murasaki Shion.\nYou may only play one Event with #Magic per turn."
+
+msgid "hBP02-088_NAME"
+msgstr "Mori Calliope's Scythe"
+
+msgid "hBP02-088_EFFECT"
+msgstr "The Arts of the holomem with this Tool attached gain +10 power.\n\nIf this is attached to a 1st Bloom or later Mori Calliope, it gains the following effect: when you attach this Tool to a holomem from your hand, Archive 1 card from the top of your deck.\n\nYou may only attach 1 Tool to a holomem."
+
+msgid "hBP02-098_NAME"
+msgstr "Death-sensei"
+
+msgid "hBP02-098_EFFECT"
+msgstr "The holomem with this Mascot attached has +20 HP.\n\nIf this is attached to Mori Calliope, it gains the following effect: the Cheer requirements of all Arts of the holomem this is attached to become Colorless.\n\nYou may only attach 1 Mascot to a holomem."
+
+msgid "hBP02-102_NAME"
+msgstr "Shiokko"
+
+msgid "hBP02-102_EFFECT"
+msgstr "The Arts of the holomem with this Fan attached gain +10 power.\n\nWhen the holomem with this Fan attached takes damage, Archive this Fan.\n\nThis Fan may only be attached to your Murasaki Shion, and you may attach any number of this Fan to one holomem."
 

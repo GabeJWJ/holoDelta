@@ -2,18 +2,17 @@ extends Node
 
 var settings = {}
 @onready var json = JSON.new()
-var languages = [["en","English"], ["ja","日本語"]]
+var languages = [["en","English"], ["ja","日本語"], ["es", "Español"]]
 enum bloomCode {OK,Instant,Skip,No}
-var version = "1.1.3"
+var version = "1.1.4"
 
 var cardText = {}
 
 @onready var sfx_bus_index = AudioServer.get_bus_index("SFX")
+@onready var bgm_bus_index = AudioServer.get_bus_index("BGM")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(OS.get_locale_language())
-	
 	if json.parse(FileAccess.get_file_as_string("user://settings.json")) == 0:
 		settings = json.data
 	
@@ -25,6 +24,9 @@ func _ready():
 	
 	if !settings.has("SFXVolume"):
 		settings["SFXVolume"] = 0
+	
+	if !settings.has("BGMVolume"):
+		settings["BGMVolume"] = -5
 	
 	if !settings.has("AllowProxies"):
 		settings["AllowProxies"] = false
@@ -49,9 +51,14 @@ func update_settings(key, value):
 	file_access.close()
 	locale()
 
-func trans(key):
-	var result = cardText[settings.Language].get_message(key)
+func trans(key, overwrite=null):
+	var result = cardText[settings.Language if overwrite == null else overwrite].get_message(key)
 	if result == "":
+		if overwrite == null:
+			if settings.Language not in ["en", "ja"]:
+				return trans(key, "en")
+			elif settings.Language != "ja":
+				return trans(key, "ja")
 		return key
 	else:
 		return result
