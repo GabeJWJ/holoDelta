@@ -1119,6 +1119,7 @@ zoom = Vector2(0.27, 0.27)
 
 [node name="HTTPManager" type="Node" parent="."]
 script = ExtResource("18_n8kk3")
+parallel_connections_count = 10
 pause_on_failure = true
 print_debug = true
 

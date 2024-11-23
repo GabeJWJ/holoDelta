@@ -273,6 +273,10 @@ msgstr "Opponent"
 msgid "MULLIGAN_TEXT"
 msgstr "Viewing opponent's mulligans"
 
+#: Scenes/card.tscn
+msgid "20"
+msgstr ""
+
 #: Scenes/deck_creation.tscn Scripts/deck_creation.gd
 msgid "NAME"
 msgstr "Name"
@@ -1128,6 +1132,10 @@ msgstr "Downloading db..."
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_ERROR"
 msgstr "Download Failed. Trying again..."
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_MANUAL"
+msgstr "Error. Read \"manualdb.txt\" or check the readme on GitHub."
 
 #: Scripts/Multiplayer.gd
 msgid "VERSION_MISMATCH"

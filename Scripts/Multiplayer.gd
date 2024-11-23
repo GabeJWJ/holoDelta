@@ -35,6 +35,7 @@ var firstTurn = true
 const downloadLocalLink = "https://github.com/GabeJWJ/holoDelta/raw/refs/heads/master/cardLocalization/"
 const downloadDBLink = "https://github.com/GabeJWJ/holoDelta/raw/refs/heads/master/cardData.db"
 var downloadedDB = false
+var manualDownloadNeeded = false
 var downloadedIteration = false
 var downloadedLocal = {}
 var int_iteration
@@ -123,10 +124,8 @@ func _ready():
 func _iter_succeeded(_result):
 	if int_iteration != int(FileAccess.get_file_as_string("user://cardLocalization/temp_iteration.txt")):
 		$CanvasLayer/Update/Notification.visible = true
-		$CanvasLayer/Popup.visible = false
-		DirAccess.remove_absolute("user://cardLocalization/temp_iteration.txt")
-	else:
-		$CanvasLayer/Popup.visible = false
+	$CanvasLayer/Popup.visible = false
+	DirAccess.remove_absolute("user://cardLocalization/temp_iteration.txt")
 	Database._connect()
 	Settings._connect_local()
 
@@ -139,7 +138,7 @@ func _download_everything():
 	DirAccess.make_dir_absolute("user://cardLocalization")
 	$CanvasLayer/Popup/Label.text = tr("DOWNLOADING")
 	$CanvasLayer/Popup.visible = true
-	$HTTPManager.job(downloadDBLink).on_failure(_download_failed).on_success(_downloaded_db).download("user://cardData.db")
+	$HTTPManager.job(downloadDBLink).on_failure(_first_db_link_failed).on_success(_downloaded_db).download("user://cardData.db")
 	$HTTPManager.job(downloadLocalLink + "_iteration.txt").on_failure(_download_failed).on_success(_downloaded_iteration).download("user://cardLocalization/_iteration.txt")
 	for lang in Settings.languages:
 		downloadedLocal[lang[0]] = false
@@ -150,26 +149,38 @@ func _download_failed(_result):
 	print(_result)
 	_download_everything()
 
+func _first_db_link_failed(_result):
+	manualDownloadNeeded = true
+	if downloadedIteration and !downloadedLocal.values().has(false):
+		$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_MANUAL")
+
 func _downloaded_db(_result):
 	downloadedDB = true
-	Database._connect()
 	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
+		Database._connect()
+		Settings._connect_local()
 		$CanvasLayer/Popup.visible = false
 		$CanvasLayer/Update/Notification.visible = false
 
 func _downloaded_iteration(_result):
 	downloadedIteration = true
 	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
+		Database._connect()
+		Settings._connect_local()
 		$CanvasLayer/Popup.visible = false
 		$CanvasLayer/Update/Notification.visible = false
+	elif manualDownloadNeeded and !downloadedLocal.values().has(false):
+		$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_MANUAL")
 
 func _downloaded_local(_result, lang):
 	downloadedLocal[lang] = true
-	if !downloadedLocal.values().has(false):
-		Settings._connect_local()
 	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
+		Database._connect()
+		Settings._connect_local()
 		$CanvasLayer/Popup.visible = false
 		$CanvasLayer/Update/Notification.visible = false
+	elif manualDownloadNeeded and downloadedIteration and !downloadedLocal.values().has(false):
+		$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_MANUAL")
 
 func _download_progress(_assigned_files, _current_files, total_bytes, current_bytes):
 	$CanvasLayer/Popup/ProgressBar.max_value = total_bytes

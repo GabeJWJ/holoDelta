@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2024-11-23 04:30\n"
+"PO-Revision-Date: 2024-11-23 20:18\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Cuando este miembro es Derribado, Pierde 2 VIDAS."
@@ -1601,40 +1601,40 @@ msgid "hBP01-093_ART_1_NAME"
 msgstr "Oyasumi Kro-time"
 
 msgid "hBP02-008_NAME"
-msgstr ""
+msgstr "Shirakami Fubuki"
 
 msgid "hBP02-008_ART_0_NAME"
-msgstr ""
+msgstr "Kon kon kitsune!"
 
 msgid "hBP02-028_NAME"
-msgstr ""
+msgstr "Houshou Marine"
 
 msgid "hBP02-028_ART_0_NAME"
-msgstr ""
+msgstr "Capitana de los Piratas Houshou, Houshou Marine desu!"
 
 msgid "hBP02-054_NAME"
-msgstr ""
+msgstr "Mori Calliope"
 
 msgid "hBP02-054_ART_0_NAME"
-msgstr ""
+msgstr "El primer aprendiz de La Parca"
 
 msgid "hBP02-054_ART_0_EFFECT"
-msgstr ""
+msgstr "Si hay al menos 1 miembro en tu Archivo, este Arte gana +10 de poder."
 
 msgid "hBP02-013_NAME"
-msgstr ""
+msgstr "Shirakami Fubuki"
 
 msgid "hBP02-013_ART_0_NAME"
-msgstr ""
+msgstr "Un montón de mascotas"
 
 msgid "hBP02-013_ART_0_EFFECT"
-msgstr ""
+msgstr "Por cada Mascota acoplada a tus miembros, este Arte gana +20 de poder."
 
 msgid "hBP02-013_GIFT_NAME"
-msgstr ""
+msgstr "Todos, Juntos!"
 
 msgid "hBP02-013_GIFT_EFFECT"
-msgstr ""
+msgstr "Este miembro puede tener 2 Mascotas con nombres diferentes acopladas."
 
 msgid "Bloom Effect"
 msgstr ""
@@ -1932,7 +1932,7 @@ msgstr "Cuando el miembro con esta Mascota acoplada recibe daño en la posición
 "Solo puedes acoplar una Mascota a cada miembro."
 
 msgid "hBP02-001_NAME"
-msgstr ""
+msgstr "Shirakami Fubuki"
 
 msgid "hBD24-002_NAME"
 msgstr "Shishiro Botan"
@@ -1953,13 +1953,14 @@ msgid "hBD24-007_NAME"
 msgstr "Gigi Murin"
 
 msgid "hBP02-003_NAME"
-msgstr ""
+msgstr "Houshou Marine"
 
 msgid "hBP02-082_NAME"
-msgstr ""
+msgstr "hololive GAMERS"
 
 msgid "hBP02-082_EFFECT"
-msgstr ""
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros con #Gamers entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
 
 msgid "hY05-001_NAME"
 msgstr "Ovación Morada"
@@ -2145,16 +2146,16 @@ msgid "hBP01-006_SPSKILL_EFFECT"
 msgstr "(Una vez por juego) Puede ser utilizada en turno oponente cuando uno de tus miembros Rojo es Derribado: Pierde 1 VIDA menos de lo que harías normalmente. Después elige un miembro que fue Derribado y pon ese miembro, y todos los miembros bajo él, en tu mano."
 
 msgid "hBP02-001_SKILL_NAME"
-msgstr ""
+msgstr "Creación de Mascota"
 
 msgid "hBP02-001_SKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Revela 1 Mascota desde tu Deck y ponla en tu mano. Luego baraja tu Deck."
 
 msgid "hBP02-001_SPSKILL_NAME"
-msgstr ""
+msgstr "Fubukingdom"
 
 msgid "hBP02-001_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por juego) Puede ser usada cuando uno de tus miembros Blanco Derriba un miembro oponente: puedes lanzar 1 dado por cada 2 Mascotas acopladas a tus miembros: si el resultado contiene 1 o más números impares, tu oponente pierde 1 Vida."
 
 msgid "hBD24-002_SKILL_NAME"
 msgstr "Mejora Verde"
@@ -2229,16 +2230,16 @@ msgid "hBD24-007_SPSKILL_EFFECT"
 msgstr "(Una vez por juego) Revela 1 miembro Amarillo desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
 
 msgid "hBP02-003_SKILL_NAME"
-msgstr ""
+msgstr "ahoy!!"
 
 msgid "hBP02-003_SKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Haz que uno de tus miembros con #Gen3 que haya Florecido este turno, Florezca de nuevo usando un miembro desde tu mano."
 
 msgid "hBP02-003_SPSKILL_NAME"
-msgstr ""
+msgstr "Shukkou!"
 
 msgid "hBP02-003_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por juego) Si tu Centro es Houshou Marine, inflige 50 de daño especial por cada miembro bajo ese miembro al Centro o Collab oponente."
 
 msgid "Shooter"
 msgstr ""
@@ -2330,43 +2331,50 @@ msgid "hSD04-008_NAME"
 msgstr "Yuzuki Choco"
 
 msgid "hBP02-005_NAME"
-msgstr ""
+msgstr "Murasaki Shion"
 
 msgid "hBP02-042_NAME"
-msgstr ""
+msgstr "Murasaki Shion"
 
 msgid "hBP02-043_NAME"
-msgstr ""
+msgstr "Murasaki Shion"
 
 msgid "hBP02-046_NAME"
-msgstr ""
+msgstr "Murasaki Shion"
 
 msgid "hBP02-047_NAME"
-msgstr ""
+msgstr "Murasaki Shion"
 
 msgid "hBP02-087_NAME"
-msgstr ""
+msgstr "Vara Mágica de Murasaki Shion"
 
 msgid "hBP02-087_EFFECT"
-msgstr ""
+msgstr "Las Artes del miembro con esta Herramienta acoplada ganan +10 de poder.\n\n"
+"Si esta está acoplada a una Murasaki Shion 1st Bloom o superior, gana el siguiente efecto: si el miembro con esta Herramienta acoplada es tu Centro, tu Oshi Skill \"Neeeeeee\" se convierte en \"Dos veces por turno\" en vez de \"Una vez por turno\".\n\n"
+"Solo puedes acoplar una Herramienta a cada miembro."
 
 msgid "hBP02-092_NAME"
-msgstr ""
+msgstr "Fubuzilla"
 
 msgid "hBP02-092_EFFECT"
-msgstr ""
+msgstr "El miembro con esta Mascota acoplada gana +20 de HP.\n\n"
+"Si esta Mascota está acoplada a Shirakami Fubuki, gana el siguiente efecto: (Una vez por turno) En tu Main Step, puedes Archivar 2 Ovaciones desde tus miembros, si lo haces: Las Artes del miembro con esta Mascota acoplada gana +50 de poder hasta el final de este turno.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
 
 msgid "hBP02-093_NAME"
-msgstr ""
+msgstr "Miteiru"
 
 msgid "hBP02-093_EFFECT"
-msgstr ""
+msgstr "El miembro con esta Mascota acoplada gana +20 de HP.\n\n"
+"Si esta Mascota está acoplada a Shirakami Fubuki, gana el siguiente efecto: (Solo en Backstage) El miembro con esta Mascota acoplada no recibe ningún daño.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
 
 msgid "hBP02-099_NAME"
-msgstr ""
+msgstr "Sukonbu"
 
 msgid "hBP02-099_EFFECT"
-msgstr ""
+msgstr "El miembro con este Fan acoplado gana +10 HP.\n\n"
+"Este Fan solo puede ser acoplado a Shirakami Fubuki, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
 
 msgid "hSD02-002_ART_0_NAME"
 msgstr "Konnakiri~"
@@ -2489,40 +2497,40 @@ msgid "hSD04-008_ART_1_EFFECT"
 msgstr "Puedes poner un Evento con #Food desde tu Archivo a tu mano: Si lo haces, este Arte gana +20 de poder."
 
 msgid "hBP02-042_ART_0_NAME"
-msgstr ""
+msgstr "Domo"
 
 msgid "hBP02-043_ART_0_NAME"
-msgstr ""
+msgstr "Vamos Juntos"
 
 msgid "hBP02-043_COLLAB_NAME"
-msgstr ""
+msgstr "Te mostraré magia"
 
 msgid "hBP02-043_COLLAB_EFFECT"
-msgstr ""
+msgstr "Puedes lanzar un dado: si el resultado es 4 o más, revela una carta con #Magic desde tu deck y ponla en tu mano. Luego baraja tu Deck."
 
 msgid "hBP02-046_ART_0_NAME"
-msgstr ""
+msgstr "Cambia la Ovación"
 
 msgid "hBP02-046_ART_0_EFFECT"
-msgstr ""
+msgstr "Puedes lanzar un dado: si el resultado es 5 o más, mueve 1 Ovación desde un miembro oponente a otro."
 
 msgid "hBP02-046_BLOOM_NAME"
-msgstr ""
+msgstr "Magia de Reemplazo"
 
 msgid "hBP02-046_BLOOM_EFFECT"
-msgstr ""
+msgstr "Puedes Archivar una carta desde tu mano, si lo haces: pon una carta con #Magic desde tu Archivo a tu mano."
 
 msgid "hBP02-047_ART_0_NAME"
-msgstr ""
+msgstr "Magia Violeta"
 
 msgid "hBP02-047_ART_0_EFFECT"
-msgstr ""
+msgstr "Por cada Ovación acoplada al Centro oponente, inflige 20 de daño especial al Centro y Collab oponentes."
 
 msgid "hBP02-047_BLOOM_NAME"
-msgstr ""
+msgstr "Magia Traviesa"
 
 msgid "hBP02-047_BLOOM_EFFECT"
-msgstr ""
+msgstr "Puedes lanzar un dado: si el resultado es 4 o más, mueve 1 Ovación desde un miembro oponente a otro."
 
 msgid "hSD02-001_SKILL_NAME"
 msgstr "Micrófono Rojo"
@@ -2561,16 +2569,16 @@ msgid "hSD04-001_SPSKILL_EFFECT"
 msgstr "(Una vez por juego) Roba 2 cartas desde tu Deck, luego Archiva 1 carta desde tu mano."
 
 msgid "hBP02-005_SKILL_NAME"
-msgstr ""
+msgstr "Neeeeeee"
 
 msgid "hBP02-005_SKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Puede ser usada cuando lanzaste un dado como parte de la Habilidad o Arte de una de tus Murasaki Shion: re-lanza el dado."
 
 msgid "hBP02-005_SPSKILL_NAME"
-msgstr ""
+msgstr "La Asombrosa Magia de Shion"
 
 msgid "hBP02-005_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por juego) Puede ser usado cuando tu Centro Morado usa un Arte: por cada Ovación acoplada al Centro oponente. Inflige 50 de daño especial al Centro oponente."
 
 msgid "EXTRA_DUO"
 msgstr "Este miembro es tratado como {firstName} y {secondName} simultáneamente."
@@ -2834,185 +2842,195 @@ msgid "hSD04-006_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP02-007_NAME"
-msgstr ""
+msgstr "Mori Calliope"
 
 msgid "hBP02-007_SKILL_NAME"
-msgstr ""
+msgstr "Sampling"
 
 msgid "hBP02-007_SKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Archiva 2 cartas desde tu mano, y recupera 2 miembros con #EN desde tu Archivo a tu mano."
 
 msgid "hBP02-007_SPSKILL_NAME"
-msgstr ""
+msgstr "Shinigami Rap"
 
 msgid "hBP02-007_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por juego) Puede ser usado si tu Centro es Mori Calliope: durante este turno, después de usar un Arte, uno de tus miembros llamado Mori Calliope puede usar el mismo Arte una vez más."
 
 msgid "hBP02-044_NAME"
-msgstr ""
+msgstr "Murasaki Shion"
 
 msgid "hBP02-044_ART_0_NAME"
-msgstr ""
+msgstr "Que vergüenza"
 
 msgid "hBP02-044_ART_1_NAME"
-msgstr ""
+msgstr "yada mo~"
 
 msgid "hBP02-045_NAME"
-msgstr ""
+msgstr "Murasaki Shion"
 
 msgid "hBP02-045_ART_0_NAME"
-msgstr ""
+msgstr "Estoy tan feliz!!"
 
 msgid "hBP02-045_BLOOM_NAME"
-msgstr ""
+msgstr "Hace tiempo que no nos presentamos en vivo!!"
 
 msgid "hBP02-045_BLOOM_EFFECT"
-msgstr ""
+msgstr "Mira las 3 cartas del tope de tu Deck. Revela un miembro Azul o Morado entre ellas y ponlo en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
 
 msgid "hBP02-055_NAME"
-msgstr ""
+msgstr "Mori Calliope"
 
 msgid "hBP02-055_ART_0_NAME"
-msgstr ""
+msgstr "Mi Escenario"
 
 msgid "hBP02-055_COLLAB_NAME"
-msgstr ""
+msgstr "Showtime"
 
 msgid "hBP02-055_COLLAB_EFFECT"
-msgstr ""
+msgstr "Puedes Archivar 1 miembro desde tu mano, si lo haces: las Artes de uno de tus miembros con #Myth ganan +20 de poder hasta el final de este turno."
 
 msgid "hBP02-056_NAME"
-msgstr ""
+msgstr "Mori Calliope"
 
 msgid "hBP02-056_ART_0_NAME"
-msgstr ""
+msgstr "\"Cash-Money\""
 
 msgid "hBP02-057_NAME"
-msgstr ""
+msgstr "Mori Calliope"
 
 msgid "hBP02-057_ART_0_NAME"
-msgstr ""
+msgstr "Divirtámonos juntos!"
 
 msgid "hBP02-057_BLOOM_NAME"
-msgstr ""
+msgstr "El mejor fes creado por todos"
 
 msgid "hBP02-057_BLOOM_EFFECT"
-msgstr ""
+msgstr "Puedes Archivar 2 miembros que compartan un tag desde tu mano, si lo haces: roba 2 cartas desde tu Deck."
 
 msgid "hBP02-058_NAME"
-msgstr ""
+msgstr "Mori Calliope"
 
 msgid "hBP02-058_ART_0_NAME"
-msgstr ""
+msgstr "Dead Beat"
 
 msgid "hBP02-058_ART_0_EFFECT"
-msgstr ""
+msgstr "Si este miembro tiene una Herramienta o una Mascota acoplada, este Arte gana +30 de poder."
 
 msgid "hBP02-058_BLOOM_NAME"
-msgstr ""
+msgstr "Qué hay?"
 
 msgid "hBP02-058_BLOOM_EFFECT"
-msgstr ""
+msgstr "Puedes poner 1 Hoz de Mori Calliope o Death-sensei desde tu Archivo a tu mano."
 
 msgid "hBP02-059_NAME"
-msgstr ""
+msgstr "Mori Calliope"
 
 msgid "hBP02-059_ART_0_NAME"
-msgstr ""
+msgstr "Presentando a Myth"
 
 msgid "hBP02-059_ART_0_EFFECT"
-msgstr ""
+msgstr "Si tienes 4 o más miembros con #Myth en tu Archivo, este Arte gana +40 de poder. Si tienes 8 o más, este Arte gana +40 de poder adicional."
 
 msgid "hBP02-059_BLOOM_NAME"
-msgstr ""
+msgstr "Voz del Alma"
 
 msgid "hBP02-059_BLOOM_EFFECT"
-msgstr ""
+msgstr "Revela cualquier carta desde tu Deck y Archívala. Luego baraja tu Deck."
 
 msgid "hBP02-061_NAME"
-msgstr ""
+msgstr "Ninomae Ina'nis"
 
 msgid "hBP02-061_ART_0_NAME"
-msgstr ""
+msgstr "WAH!"
 
 msgid "hBP02-062_NAME"
-msgstr ""
+msgstr "Ninomae Ina'nis"
 
 msgid "hBP02-062_ART_0_NAME"
-msgstr ""
+msgstr "Takogram contigo"
 
 msgid "hBP02-063_NAME"
-msgstr ""
+msgstr "Ninomae Ina'nis"
 
 msgid "hBP02-063_ART_0_NAME"
-msgstr ""
+msgstr "Divirtámonos!!!"
 
 msgid "hBP02-063_BLOOM_NAME"
-msgstr ""
+msgstr "Listos para gritar WAH?"
 
 msgid "hBP02-063_BLOOM_EFFECT"
-msgstr ""
+msgstr "Restaura 20 de HP a uno de tus miembros con #Myth."
 
 msgid "hBP02-064_NAME"
-msgstr ""
+msgstr "Ninomae Ina'nis"
 
 msgid "hBP02-064_ART_0_NAME"
-msgstr ""
+msgstr "Sonrisa Arcaica"
 
 msgid "hBP02-064_ART_0_EFFECT"
-msgstr ""
+msgstr "Si hay 5 o más miembros con #Myth en tu Archivo, puedes mover 1 Ovación desde este miembro a uno de tus otros miembros. Si hay 10 o más, este Arte gana +50 de poder."
 
 msgid "hBP02-065_NAME"
-msgstr ""
+msgstr "Nerissa Ravencroft"
 
 msgid "hBP02-065_ART_0_NAME"
-msgstr ""
+msgstr "Hiya darlings!"
 
 msgid "hBP02-065_ART_0_EFFECT"
-msgstr ""
+msgstr "Si este miembro tiene al menos 1 Ovación Roja acoplada, este Arte gana +10 de poder."
 
 msgid "hBP02-066_NAME"
-msgstr ""
+msgstr "Nerissa Ravencroft"
 
 msgid "hBP02-066_ART_0_NAME"
-msgstr ""
+msgstr "Eso suena bien"
 
 msgid "hBP02-066_ART_1_NAME"
-msgstr ""
+msgstr "Que es una canción de Idol"
 
 msgid "hBP02-075_NAME"
-msgstr ""
+msgstr "Marcador de Idol"
 
 msgid "hBP02-075_EFFECT"
-msgstr ""
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros con #Art entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
 
 msgid "hBP02-079_NAME"
-msgstr ""
+msgstr "Magia Explosiva"
 
 msgid "hBP02-079_EFFECT"
-msgstr ""
+msgstr "Inflige 20 de daño especial al Centro o Collab oponente. (miembros Derribados con este efecto no reducen VIDA)\n"
+"Solo puedes jugar 1 Evento con #Magic por turno."
 
 msgid "hBP02-083_NAME"
-msgstr ""
+msgstr "Closet Mágico"
 
 msgid "hBP02-083_EFFECT"
-msgstr ""
+msgstr "Para jugar esta carta, debes Archivar un holo power.\n\n"
+"Envía una Ovación Morada desde tu Archivo a uno de tus miembros llamado Murasaki Shion.\n"
+"Solo puedes jugar 1 Evento con #Magic por turno."
 
 msgid "hBP02-088_NAME"
-msgstr ""
+msgstr "Hoz de Mori Calliope"
 
 msgid "hBP02-088_EFFECT"
-msgstr ""
+msgstr "Las Artes del miembro con esta Herramienta acoplada ganan +10 de poder.\n\n"
+"Si esta está acoplada a una Mori Calliope 1st Bloom o superior, gana el siguiente efecto: cuando acoplas esta Herramienta a un miembro desde tu mano, Archiva 1 carta del tope de tu deck.\n\n"
+"Solo puedes acoplar una Herramienta a cada miembro."
 
 msgid "hBP02-098_NAME"
-msgstr ""
+msgstr "Death-sensei"
 
 msgid "hBP02-098_EFFECT"
-msgstr ""
+msgstr "El miembro con esta Mascota acoplada gana +20 de HP.\n\n"
+"Si esta Mascota está acoplada a Mori Calliope, gana el siguiente efecto: los requerimientos de Ovación de todas las Artes de este miembro con esta Mascota acoplada se convierten en \"Cualquier color\".\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
 
 msgid "hBP02-102_NAME"
-msgstr ""
+msgstr "Shiokko"
 
 msgid "hBP02-102_EFFECT"
-msgstr ""
+msgstr "Las Artes del miembro con este Fan acoplada ganan +10 de poder.\n\n"
+"Cuando el miembro con este Fan acolado recibe daño, Archiva este Fan.\n\n"
+"Este Fan solo puede ser acoplado a Murasaki Shion, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
 

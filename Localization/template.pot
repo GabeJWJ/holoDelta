@@ -288,6 +288,10 @@ msgstr ""
 msgid "MULLIGAN_TEXT"
 msgstr ""
 
+#: Scenes/card.tscn
+msgid "20"
+msgstr ""
+
 #: Scenes/deck_creation.tscn
 #: Scripts/deck_creation.gd
 msgid "NAME"
@@ -1140,6 +1144,10 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_ERROR"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_MANUAL"
 msgstr ""
 
 #: Scripts/Multiplayer.gd

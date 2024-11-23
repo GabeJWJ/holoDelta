@@ -2968,3 +2968,57 @@ msgstr "塩っこ"
 msgid "hBP02-102_EFFECT"
 msgstr "■このファンが付いているホロメンのアーツ+10。\n\n■このファンが付いているホロメンがダメージを受ける時、このファンをアーカイブする。\n\nこのファンは、自分の〈紫咲シオン〉だけに付けられ、1人につき何枚でも付けられる。"
 
+msgid "hBD24-010_NAME"
+msgstr "雪花ラミィ"
+
+msgid "hBD24-010_SKILL_NAME"
+msgstr "ブルーエンハンス"
+
+msgid "hBD24-010_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の青ホロメン1人のアーツ+20。"
+
+msgid "hBD24-010_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-010_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、青ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-011_NAME"
+msgstr "ネリッサ・レイヴンクロフト"
+
+msgid "hBD24-011_SKILL_NAME"
+msgstr "パープルエンハンス"
+
+msgid "hBD24-011_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の紫ホロメン1人のアーツ+20。"
+
+msgid "hBD24-011_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-011_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、紫ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP02-067_NAME"
+msgstr "ネリッサ・レイヴンクロフト"
+
+msgid "hBP02-067_ART_0_NAME"
+msgstr "コーヒーよりも紅茶です"
+
+msgid "hBP02-067_BLOOM_NAME"
+msgstr "ネリッサとお茶会"
+
+msgid "hBP02-067_BLOOM_EFFECT"
+msgstr "自分のデッキの上から3枚を見る。その中から、#歌を持つホロメン1枚を公開し、手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hBP02-068_NAME"
+msgstr "ネリッサ・レイヴンクロフト"
+
+msgid "hBP02-068_ART_0_NAME"
+msgstr "歌に宿りし愛情"
+
+msgid "hBP02-068_COLLAB_NAME"
+msgstr "音の魔人"
+
+msgid "hBP02-068_COLLAB_EFFECT"
+msgstr "このターンの間、自分の#歌を持つ[センターホロメンとコラボホロメコメンとコラボホロメン]のアーツ+30。"
+

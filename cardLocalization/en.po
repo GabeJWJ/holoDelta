@@ -2968,3 +2968,57 @@ msgstr "Shiokko"
 msgid "hBP02-102_EFFECT"
 msgstr "The Arts of the holomem with this Fan attached gain +10 power.\n\nWhen the holomem with this Fan attached takes damage, Archive this Fan.\n\nThis Fan may only be attached to your Murasaki Shion, and you may attach any number of this Fan to one holomem."
 
+msgid "hBD24-010_NAME"
+msgstr "Yukihana Lamy"
+
+msgid "hBD24-010_SKILL_NAME"
+msgstr "Blue Enhance"
+
+msgid "hBD24-010_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Blue holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-010_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-010_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Blue holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-011_NAME"
+msgstr "Nerissa Ravencroft"
+
+msgid "hBD24-011_SKILL_NAME"
+msgstr "Purple Enhance"
+
+msgid "hBD24-011_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Purple holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-011_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-011_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Purple holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBP02-067_NAME"
+msgstr "Nerissa Ravencroft"
+
+msgid "hBP02-067_ART_0_NAME"
+msgstr "Tea is better than coffee"
+
+msgid "hBP02-067_BLOOM_NAME"
+msgstr "Tea party with Nerissa"
+
+msgid "hBP02-067_BLOOM_EFFECT"
+msgstr "Look at the top three cards of your Deck. Reveal one that is a holomem with #Song and put it into your hand. Then put the remaining cards on the bottom of your Deck in any order."
+
+msgid "hBP02-068_NAME"
+msgstr "Nerissa Ravencroft"
+
+msgid "hBP02-068_ART_0_NAME"
+msgstr "Love in song"
+
+msgid "hBP02-068_COLLAB_NAME"
+msgstr "Demon of Sound"
+
+msgid "hBP02-068_COLLAB_EFFECT"
+msgstr "The Arts of your Center and Collab holomems with #Song gain +30 power until the end of the turn."
+

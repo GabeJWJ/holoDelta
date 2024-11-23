@@ -4,7 +4,7 @@ var settings = {}
 @onready var json = JSON.new()
 var languages = [["en","English"], ["ja","日本語"], ["es", "Español"]]
 enum bloomCode {OK,Instant,Skip,No}
-var version = "1.1.4"
+var version = "1.1.4.1"
 
 var cardText = {}
 
