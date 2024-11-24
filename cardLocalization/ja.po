@@ -3022,3 +3022,30 @@ msgstr "音の魔人"
 msgid "hBP02-068_COLLAB_EFFECT"
 msgstr "このターンの間、自分の#歌を持つ[センターホロメンとコラボホロメコメンとコラボホロメン]のアーツ+30。"
 
+msgid "hBP02-076_NAME"
+msgstr "カスタムパソコン"
+
+msgid "hBP02-076_EFFECT"
+msgstr "自分の手札のDebutホロメン1枚を公開し、デッキの下に戻す。自分のデッキから、戻したホロメンと同じカード名のBuzz以外の1stホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP02-077_NAME"
+msgstr "レトロパソコン"
+
+msgid "hBP02-077_EFFECT"
+msgstr "このカードは、自分のライフが3以下でなければ使えない。\n\n自分のアーカイブのホロメン1枚を手札に戻す。"
+
+msgid "hBD24-012_NAME"
+msgstr "白銀ノエル"
+
+msgid "hBD24-012_SKILL_NAME"
+msgstr "オワイトエンハンス"
+
+msgid "hBD24-012_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の白ホロメン1人のアーツ+20。"
+
+msgid "hBD24-012_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-012_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、白ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+

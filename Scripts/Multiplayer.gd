@@ -132,7 +132,7 @@ func _iter_succeeded(_result):
 func _iter_failed(_result):
 	print(_result)
 	$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_ITER_AGAIN")
-	$HTTPManager.job(downloadLocalLink + "_iteration.txt").on_failure(_iter_failed).on_success(_iter_succeeded).download("user://cardLocalization/_iteration.txt")
+	$HTTPManager.job(downloadLocalLink + "_iteration.txt").on_failure(_iter_failed).on_success(_iter_succeeded).download("user://cardLocalization/temp_iteration.txt")
 
 func _download_everything():
 	DirAccess.make_dir_absolute("user://cardLocalization")

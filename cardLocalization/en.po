@@ -3022,3 +3022,30 @@ msgstr "Demon of Sound"
 msgid "hBP02-068_COLLAB_EFFECT"
 msgstr "The Arts of your Center and Collab holomems with #Song gain +30 power until the end of the turn."
 
+msgid "hBP02-076_NAME"
+msgstr "Custom PC"
+
+msgid "hBP02-076_EFFECT"
+msgstr "Reveal 1 Debut holomem from your hand and put it on the bottom of your Deck. Reveal a 1st Bloom holomem (excluding Buzz holomem) from your Deck which has the same name as the Debut holomem and put it into your hand. Then shuffle your Deck."
+
+msgid "hBP02-077_NAME"
+msgstr "Retro PC"
+
+msgid "hBP02-077_EFFECT"
+msgstr "This card can only be played if you have 3 or less LIFE.\n\nReturn 1 holomem from your Archive to your hand."
+
+msgid "hBD24-012_NAME"
+msgstr "Shirogane Noel"
+
+msgid "hBD24-012_SKILL_NAME"
+msgstr "White Enhance"
+
+msgid "hBD24-012_SKILL_EFFECT"
+msgstr "(Once per turn) One of your White holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-012_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-012_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 White holomem from your deck and put it into your hand. Then shuffle your deck."
+

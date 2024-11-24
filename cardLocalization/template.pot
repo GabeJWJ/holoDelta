@@ -2968,3 +2968,84 @@ msgstr ""
 msgid "hBP02-102_EFFECT"
 msgstr ""
 
+msgid "hBD24-010_NAME"
+msgstr ""
+
+msgid "hBD24-010_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-010_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-010_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-010_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-011_NAME"
+msgstr ""
+
+msgid "hBD24-011_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-011_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-011_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-011_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-067_NAME"
+msgstr ""
+
+msgid "hBP02-067_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-067_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-067_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-068_NAME"
+msgstr ""
+
+msgid "hBP02-068_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-068_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-068_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-076_NAME"
+msgstr ""
+
+msgid "hBP02-076_EFFECT"
+msgstr ""
+
+msgid "hBP02-077_NAME"
+msgstr ""
+
+msgid "hBP02-077_EFFECT"
+msgstr ""
+
+msgid "hBD24-012_NAME"
+msgstr ""
+
+msgid "hBD24-012_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-012_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-012_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-012_SPSKILL_EFFECT"
+msgstr ""
+
