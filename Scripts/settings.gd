@@ -73,4 +73,4 @@ func get_language():
 
 func _connect_local():
 	for lang in languages:
-		cardText[lang[0]] = load("user://cardLocalization/" + lang[0] + ".po") as Translation
+		cardText[lang[0]] = ResourceLoader.load("user://cardLocalization/" + lang[0] + ".po", "", ResourceLoader.CACHE_MODE_IGNORE) as Translation
