@@ -28,6 +28,7 @@ theme = ExtResource("2_ducyq")
 bbcode_enabled = true
 
 [node name="LockOff" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.686275)
 z_index = 2
 position = Vector2(275, 20)
 scale = Vector2(0.07, 0.07)

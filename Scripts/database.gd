@@ -1,3 +1,7 @@
+#Autoloaded script that contains the database
+#Literally just to avoid making a connection for every single card and fuda
+#Probably didn't break anything, but wasn't good
+
 extends Node
 
 var db : SQLite

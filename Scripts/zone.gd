@@ -1,3 +1,7 @@
+#The zones that holomems can be. Mainly just provides those yellow buttons when selecting a
+#	zone or holomem.
+#I've tried to make it do other things, but I have no idea how much of this ever got used
+
 extends Node2D
 
 @export var zoneID:int
@@ -35,6 +39,7 @@ func _on_zone_button_pressed():
 	emit_signal("zone_clicked",zoneID)
 
 
+#I know these next two aren't used.
 func _on_zone_button_mouse_entered():
 	emit_signal("zone_info_set",zoneID)
 

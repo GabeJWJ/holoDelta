@@ -1,14 +1,41 @@
+#The deckbuilder
+#Most of the magic happens in two TabContainers - PossibleCards and YourStuff
+#PossibleCards has 4 tabs - Oshi, Holomem, Support, and Cheer
+#These each contain a ScrollContainer of a list of cards to add to your deck
+#	and a smattering of Buttons/LineEdits for filters
+#YourStuff has 3 tabs - Deck, Analytics, and Sleeves
+#Deck shows what the deck you're bulding currently looks like
+#Analytics has some stats of the deck
+#Sleeves has 3 SleeveSelects for main deck, cheer deck, and oshi
+
 extends Node2D
+
+#region Variables
 
 const card = preload("res://Scenes/card.tscn")
 const default_sleeve = preload("res://holoBack.png")
 const default_cheer_sleeve = preload("res://cheerBack.png")
 const default_oshi_sleeve = preload("res://cheerBack.png")
-var all_cards = []
+
+var all_cards = [] #Holds all cards, both in the right panel and your deck
+
+#Contains specific types of cards for sorting/filtering purposes
+var oshi_cards : Array
+var holomem_cards : Array
+var support_cards : Array
+
+#A list of cards [card number, art index] that we've already put in the list
+#Added for proxy purposes, so we only see one version
+var cardsFound = []
+
+#The actual deck choices you've made
+var oshiCard #Actually the card object itself... for some reason
 var in_deck_dictionary = {}
 var sleeve = default_sleeve
 var cheer_sleeve = default_cheer_sleeve
 var oshi_sleeve = default_oshi_sleeve
+
+#Variables for analytics
 var total_main = 0
 var total_cheer = 0
 var total_debut = 0
@@ -17,12 +44,10 @@ var total_2nd = 0
 var total_spot = 0
 var total_color = {}
 var total_support = 0
+
 var json = JSON.new()
 
-var oshi_cards
-var holomem_cards
-var support_cards
-
+#Constants filled up at runtime. So the name select isn't giving you options that aren't in the game
 var oshi_colors = []
 var oshi_names = []
 var holomem_colors = []
@@ -30,6 +55,7 @@ var holomem_names = []
 var holomem_tags = []
 var support_types = []
 
+#Filter Buttons/LineEdits
 @onready var oshi_name_select = $CanvasLayer/PossibleCards/Oshi/NameSelect
 @onready var oshi_color_select = $CanvasLayer/PossibleCards/Oshi/ColorSelect
 @onready var oshi_search = $CanvasLayer/PossibleCards/Oshi/Search
@@ -45,13 +71,16 @@ var support_types = []
 @onready var support_limited_select = $CanvasLayer/PossibleCards/Support/LimitedSelect
 @onready var support_search = $CanvasLayer/PossibleCards/Support/Search
 
-@onready var cheer_multiple_label = $CanvasLayer/PossibleCards/Cheer/Multiple
-var cheer_multiple = 1
-
+#Filter dictionaries
 var oshi_filter = {"Color":null,"Name":null,"Search":""}
 var holomem_filter = {"Color":null,"Name":null,"Level":null,"Buzz":null,"Tag":[],"Search":""}
 var support_filter = {"Type":null,"Limited":null,"Search":""}
 
+#The ability to add/remove multiples of cheer at once
+@onready var cheer_multiple_label = $CanvasLayer/PossibleCards/Cheer/Multiple
+var cheer_multiple = 1
+
+#Various containers/objects we'll need
 @onready var oshi_tab = $CanvasLayer/PossibleCards/Oshi/ScrollContainer/ColorRect
 @onready var holomem_tab = $CanvasLayer/PossibleCards/Holomem/ScrollContainer/ColorRect
 @onready var support_tab = $CanvasLayer/PossibleCards/Support/ScrollContainer/ColorRect
@@ -61,18 +90,21 @@ var support_filter = {"Type":null,"Limited":null,"Search":""}
 @onready var main_count = $CanvasLayer/YourStuff/Deck/MainCount
 @onready var cheer_count = $CanvasLayer/YourStuff/Deck/CheerCount
 @onready var analytics = $CanvasLayer/YourStuff/Analytics/ScrollContainer/Stats
-var oshiCard
+@onready var list_of_decks_to_overwrite = $CanvasLayer/SavePrompt/ScrollContainer/VBoxContainer
 
+#A hardcoded order for support types. I should probably make one for tags at some point...
+#Color order is handled by Card.get_color_order
 @onready var support_order = ["Staff","Item","Event","Tool","Mascot","Fan"]
 
-@onready var list = $CanvasLayer/SavePrompt/ScrollContainer/VBoxContainer
-
+#Those aforementioned SleeveSelects
 @onready var mainSleeveSelect = $CanvasLayer/YourStuff/Sleeves/Main
 @onready var cheerSleeveSelect = $CanvasLayer/YourStuff/Sleeves/Cheer
 @onready var oshiSleeveSelect = $CanvasLayer/YourStuff/Sleeves/Oshi
 
-var cardsFound = []
+#endregion
 
+#The next two calculate mulligan probabilities for analytics purposes
+#Assume 50 cards in a deck - number is meaningless otherwise
 func choose(n,k):
 	var result = 1
 	for i in range(k):
@@ -89,13 +121,17 @@ func findByClass(node: Node, className : String, result : Array) -> void:
 	for child in node.get_children():
 		findByClass(child, className, result)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	tr("LEVEL_ANY") #for POT generation
+
+func _ready() -> void:
+	tr("LEVEL_ANY") #for POT generation - Godot's automatic system won't find it in a popupmenu list
+	
+	#We find cards iterating through cardHasArt to more easily get alt arts as separate options
+	#Card.setup_info will automatically change the art to a proxy if it thinks it should but the
+	#	proxy already has an cardHasArt row so we have to make sure we don't double up using
+	#	the cardsFound array
 	
 	var art_data = Database.db.select_rows("cardHasArt","",["cardID","art_index","unrevealed"])
-	
-	art_data.sort_custom(custom_art_row_sort)
+	art_data.sort_custom(custom_art_row_sort) #Really simple sort that every type but cheer overwrites
 	
 	for art_row in art_data:
 		var cardNumber = art_row.cardID
@@ -104,6 +140,8 @@ func _ready():
 			continue
 		cardsFound.append([cardNumber, artCode])
 		var newCardButton = create_card_button(cardNumber,artCode)
+		
+		#We add the constants we've found to the proper arrays and add the Card to the proper tab
 		match newCardButton.cardType:
 			"Oshi":
 				for new_color in newCardButton.oshi_color:
@@ -134,9 +172,14 @@ func _ready():
 		newCardButton.scale = Vector2(0.22,0.22)
 		newCardButton.card_clicked.connect(_on_menu_card_clicked)
 		newCardButton.card_right_clicked.connect(_on_menu_card_right_clicked)
+		
+		#The cards are Node2Ds instead of Controls, so they can't go in a GridContainer
+		#Instead I have to figure out where they should go manually
+		#Very finnicky
 		var index = newCardButton.get_index()
 		newCardButton.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
 	
+	#Sort the cards in the selection menus
 	holomem_cards = holomem_tab.get_children().duplicate()
 	holomem_cards.sort_custom(custom_holomem_sort)
 	oshi_cards = oshi_tab.get_children().duplicate()
@@ -145,6 +188,8 @@ func _ready():
 	support_cards.sort_custom(custom_support_sort)
 	_update_tabs()
 	
+	
+	#Set up filter PopupMenus
 	oshi_name_select.get_popup().add_item(tr("NAME_ANY"))
 	for oshi_name in oshi_names:
 		oshi_name_select.get_popup().add_item(Settings.trans(oshi_name))
@@ -177,152 +222,19 @@ func _ready():
 		support_type_select.get_popup().add_item(Settings.trans(support_type))
 	support_type_select.get_popup().index_pressed.connect(_on_support_type_select)
 	
+	
+	#Last minute initializations
 	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
-	
 	$CanvasLayer/InfoPanel.update_word_wrap()
-	
 	update_analytics()
-	
 	fix_font_size()
 
-func _on_oshi_name_select(selected_index):
-	var selected_name = oshi_names[selected_index-1]
+#region Filter And Sort
+
+func _oshi_filter(oshi_to_check) -> bool:
+	#Determines if a given oshi should be shown, given your selected filters
+	#oshi_to_check : Card
 	
-	if selected_index == 0:
-		oshi_name_select.text = tr("NAME")
-		oshi_filter.Name = null
-	else:
-		oshi_name_select.text = Settings.trans(selected_name)
-		oshi_filter.Name = selected_name
-	_update_tabs()
-
-func _on_oshi_color_select(selected_index):
-	var selected_color = oshi_colors[selected_index-1]
-	
-	if selected_index == 0:
-		oshi_color_select.text = tr("COLOR")
-		oshi_filter.Color = null
-	else:
-		oshi_color_select.text = Settings.trans(selected_color)
-		oshi_filter.Color = selected_color
-	_update_tabs()
-
-func _on_oshi_search(search_text):
-	oshi_filter.Search = search_text
-	_update_tabs()
-
-func _on_oshi_clear_filters_pressed():
-	oshi_filter = {"Color":null,"Name":null,"Search":""}
-	oshi_color_select.text = tr("COLOR")
-	oshi_name_select.text = tr("NAME")
-	oshi_search.text = ""
-	_update_tabs()
-
-
-func _on_holomem_name_select(selected_index):
-	var selected_name = holomem_names[selected_index-1]
-	
-	if selected_index == 0:
-		holomem_name_select.text = tr("NAME")
-		holomem_filter.Name = null
-	else:
-		holomem_name_select.text = Settings.trans(selected_name)
-		holomem_filter.Name = selected_name
-	_update_tabs()
-
-func _on_holomem_color_select(selected_index):
-	var selected_color = holomem_colors[selected_index-1]
-	
-	if selected_index == 0:
-		holomem_color_select.text = tr("COLOR")
-		holomem_filter.Color = null
-	else:
-		holomem_color_select.text = Settings.trans(selected_color)
-		holomem_filter.Color = selected_color
-	_update_tabs()
-
-func _on_holomem_level_select(selected_index):
-	var selected_level = holomem_level_select.get_popup().get_item_text(selected_index)
-	
-	holomem_level_select.text = selected_level
-	match selected_index:
-		1:
-			holomem_filter.Level = 0
-		2:
-			holomem_filter.Level = 1
-		3:
-			holomem_filter.Level = 2
-		4:
-			holomem_filter.Level = -1
-		_:
-			holomem_filter.Level = null
-			holomem_level_select.text = tr("LEVEL")
-	_update_tabs()
-
-func _on_holomem_buzz_select(is_buzz):
-	if is_buzz:
-		holomem_filter.Buzz = true
-	else:
-		holomem_filter.Buzz = null
-	_update_tabs()
-
-func _on_holomem_tag_select(selected_index):
-	var selected_tag = holomem_tags[selected_index]
-	var is_checked = !holomem_tag_select.get_popup().is_item_checked(selected_index)
-	holomem_tag_select.get_popup().set_item_checked(selected_index,is_checked)
-	if is_checked:
-		holomem_filter.Tag.append(selected_tag)
-	else:
-		holomem_filter.Tag.erase(selected_tag)
-	_update_tabs()
-
-func _on_holomem_search(search_text):
-	holomem_filter.Search = search_text
-	_update_tabs()
-
-func _on_holomem_clear_filters_pressed():
-	holomem_filter = {"Color":null,"Name":null,"Level":null,"Buzz":null,"Tag":[],"Search":""}
-	holomem_buzz_select.button_pressed = false
-	holomem_color_select.text = tr("COLOR")
-	holomem_name_select.text = tr("NAME")
-	holomem_level_select.text = tr("LEVEL")
-	for index in range(holomem_tag_select.get_popup().item_count):
-		holomem_tag_select.get_popup().set_item_checked(index,false)
-	holomem_search.text = ""
-	_update_tabs()
-
-
-func _on_support_type_select(selected_index):
-	var selected_type = support_types[selected_index-1]
-	
-	if selected_index == 0:
-		support_type_select.text = tr("SUPPORT_TYPE")
-		support_filter.Type = null
-	else:
-		support_type_select.text = Settings.trans(selected_type)
-		support_filter.Type = selected_type
-	_update_tabs()
-
-func _on_support_limited_select(is_limited):
-	if is_limited:
-		support_filter.Limited = true
-	else:
-		support_filter.Limited = null
-	_update_tabs()
-
-func _on_support_search(search_text):
-	support_filter.Search = search_text
-	_update_tabs()
-
-func _on_support_clear_filters_pressed():
-	support_filter = {"Type":null,"Limited":null,"Search":""}
-	support_limited_select.button_pressed = false
-	support_type_select.text = tr("SUPPORT_TYPE")
-	support_search.text = ""
-	_update_tabs()
-
-
-func _oshi_filter(oshi_to_check):
 	if oshi_filter.Color != null:
 		if !oshi_to_check.is_color(oshi_filter.Color):
 			return false
@@ -335,7 +247,9 @@ func _oshi_filter(oshi_to_check):
 	
 	return true
 
-func _holomem_filter(holomem_to_check):
+func _holomem_filter(holomem_to_check) -> bool:
+	#Determines if a given holomem should be shown, given your selected filters
+	#holomem_to_check : Card
 	
 	if holomem_filter.Color != null:
 		if !holomem_to_check.is_color(holomem_filter.Color):
@@ -358,7 +272,9 @@ func _holomem_filter(holomem_to_check):
 	
 	return true
 
-func _support_filter(support_to_check):
+func _support_filter(support_to_check) -> bool:
+	#Determines if a given support card should be shown, given your selected filters
+	#support_to_check : Card
 	
 	if support_filter.Type != null and support_to_check.supportType != support_filter.Type:
 		return false
@@ -371,22 +287,16 @@ func _support_filter(support_to_check):
 	
 	return true
 
-func _update_tabs():
+func _update_tabs() -> void:
+	#Makes sure the card selection tabs look right
+	
+	#Filter the tabs - we use temp arrays so we can access the filtered cards later
 	var temp_holomem_cards = holomem_cards.filter(_holomem_filter)
 	var temp_oshi_cards = oshi_cards.filter(_oshi_filter)
 	var temp_support_cards = support_cards.filter(_support_filter)
 	
+	#Display/hide oshis
 	var index = 0
-	for holomem_card in holomem_cards:
-		if holomem_card not in temp_holomem_cards:
-			holomem_card.visible = false
-			continue
-		holomem_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
-		holomem_card.visible = true
-		index += 1
-	$CanvasLayer/PossibleCards/Holomem/ScrollContainer.scroll_vertical = 0
-	
-	index = 0
 	for oshi_card in oshi_cards:
 		if oshi_card not in temp_oshi_cards:
 			oshi_card.visible = false
@@ -394,8 +304,20 @@ func _update_tabs():
 		oshi_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
 		oshi_card.visible = true
 		index += 1
-	$CanvasLayer/PossibleCards/Oshi/ScrollContainer.scroll_vertical = 0
+	$CanvasLayer/PossibleCards/Oshi/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 	
+	#Display/hide holomems
+	index = 0
+	for holomem_card in holomem_cards:
+		if holomem_card not in temp_holomem_cards:
+			holomem_card.visible = false
+			continue
+		holomem_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
+		holomem_card.visible = true
+		index += 1
+	$CanvasLayer/PossibleCards/Holomem/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
+	
+	#Display/hide supports
 	index = 0
 	for support_card in support_cards:
 		if support_card not in temp_support_cards:
@@ -404,14 +326,155 @@ func _update_tabs():
 		support_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
 		support_card.visible = true
 		index += 1
-	$CanvasLayer/PossibleCards/Support/ScrollContainer.scroll_vertical = 0
+	$CanvasLayer/PossibleCards/Support/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 	
+	#If I were able to use proper GridContainers, this would be unnecessary.
+	#Unfortunately, Cards are Node2Ds instead of Controls.
+	#So I have to make sure that the tabs are large enough to see all of the cards
 	oshi_tab.custom_minimum_size = Vector2(0, (oshi_tab.get_child_count() / 5)*100 + 120)
 	holomem_tab.custom_minimum_size = Vector2(0, (holomem_tab.get_child_count()/5)*100 + 120)
 	support_tab.custom_minimum_size = Vector2(0, (support_tab.get_child_count()/5)*100 + 120)
 	cheer_tab.custom_minimum_size = Vector2(0, (cheer_tab.get_child_count()/5)*100 + 120)
 
-func custom_art_row_sort(a,b):
+func _on_oshi_name_select(selected_index) -> void:
+	var selected_name = oshi_names[selected_index-1]
+	
+	if selected_index == 0:
+		oshi_name_select.text = tr("NAME")
+		oshi_filter.Name = null
+	else:
+		oshi_name_select.text = Settings.trans(selected_name)
+		oshi_filter.Name = selected_name
+	_update_tabs()
+
+func _on_oshi_color_select(selected_index) -> void:
+	var selected_color = oshi_colors[selected_index-1]
+	
+	if selected_index == 0:
+		oshi_color_select.text = tr("COLOR")
+		oshi_filter.Color = null
+	else:
+		oshi_color_select.text = Settings.trans(selected_color)
+		oshi_filter.Color = selected_color
+	_update_tabs()
+
+func _on_oshi_search(search_text) -> void:
+	oshi_filter.Search = search_text
+	_update_tabs()
+
+func _on_oshi_clear_filters_pressed() -> void:
+	oshi_filter = {"Color":null,"Name":null,"Search":""}
+	oshi_color_select.text = tr("COLOR")
+	oshi_name_select.text = tr("NAME")
+	oshi_search.text = ""
+	_update_tabs()
+
+
+func _on_holomem_name_select(selected_index) -> void:
+	var selected_name = holomem_names[selected_index-1]
+	
+	if selected_index == 0:
+		holomem_name_select.text = tr("NAME")
+		holomem_filter.Name = null
+	else:
+		holomem_name_select.text = Settings.trans(selected_name)
+		holomem_filter.Name = selected_name
+	_update_tabs()
+
+func _on_holomem_color_select(selected_index) -> void:
+	var selected_color = holomem_colors[selected_index-1]
+	
+	if selected_index == 0:
+		holomem_color_select.text = tr("COLOR")
+		holomem_filter.Color = null
+	else:
+		holomem_color_select.text = Settings.trans(selected_color)
+		holomem_filter.Color = selected_color
+	_update_tabs()
+
+func _on_holomem_level_select(selected_index) -> void:
+	var selected_level = holomem_level_select.get_popup().get_item_text(selected_index)
+	
+	holomem_level_select.text = selected_level
+	match selected_index:
+		1:
+			holomem_filter.Level = 0
+		2:
+			holomem_filter.Level = 1
+		3:
+			holomem_filter.Level = 2
+		4:
+			holomem_filter.Level = -1
+		_:
+			holomem_filter.Level = null
+			holomem_level_select.text = tr("LEVEL")
+	_update_tabs()
+
+func _on_holomem_buzz_select(is_buzz) -> void:
+	if is_buzz:
+		holomem_filter.Buzz = true
+	else:
+		holomem_filter.Buzz = null
+	_update_tabs()
+
+func _on_holomem_tag_select(selected_index) -> void:
+	var selected_tag = holomem_tags[selected_index]
+	var is_checked = !holomem_tag_select.get_popup().is_item_checked(selected_index)
+	holomem_tag_select.get_popup().set_item_checked(selected_index,is_checked)
+	if is_checked:
+		holomem_filter.Tag.append(selected_tag)
+	else:
+		holomem_filter.Tag.erase(selected_tag)
+	_update_tabs()
+
+func _on_holomem_search(search_text) -> void:
+	holomem_filter.Search = search_text
+	_update_tabs()
+
+func _on_holomem_clear_filters_pressed() -> void:
+	holomem_filter = {"Color":null,"Name":null,"Level":null,"Buzz":null,"Tag":[],"Search":""}
+	holomem_buzz_select.button_pressed = false
+	holomem_color_select.text = tr("COLOR")
+	holomem_name_select.text = tr("NAME")
+	holomem_level_select.text = tr("LEVEL")
+	for index in range(holomem_tag_select.get_popup().item_count):
+		holomem_tag_select.get_popup().set_item_checked(index,false)
+	holomem_search.text = ""
+	_update_tabs()
+
+
+func _on_support_type_select(selected_index) -> void:
+	var selected_type = support_types[selected_index-1]
+	
+	if selected_index == 0:
+		support_type_select.text = tr("SUPPORT_TYPE")
+		support_filter.Type = null
+	else:
+		support_type_select.text = Settings.trans(selected_type)
+		support_filter.Type = selected_type
+	_update_tabs()
+
+func _on_support_limited_select(is_limited) -> void:
+	if is_limited:
+		support_filter.Limited = true
+	else:
+		support_filter.Limited = null
+	_update_tabs()
+
+func _on_support_search(search_text):
+	support_filter.Search = search_text
+	_update_tabs()
+
+func _on_support_clear_filters_pressed() -> void:
+	support_filter = {"Type":null,"Limited":null,"Search":""}
+	support_limited_select.button_pressed = false
+	support_type_select.text = tr("SUPPORT_TYPE")
+	support_search.text = ""
+	_update_tabs()
+
+func custom_art_row_sort(a,b) -> bool:
+	#The generic sort that just goes card number -> art index
+	
 	if a.cardID < b.cardID:
 		return true
 	elif a.cardID == b.cardID and a.art_index < b.art_index:
@@ -419,7 +482,10 @@ func custom_art_row_sort(a,b):
 	else:
 		return false
 
-func custom_holomem_sort(a,b):
+func custom_holomem_sort(a,b) -> bool:
+	#The holomem sort goes Color -> Name -> Level -> card number -> art index
+	#We need to double up on a lot of conditions to make sure they're sorted consistently
+	
 	if b.holomem_color.size() == 0 and a.holomem_color.size() > 0:
 		return true
 	elif a.holomem_color.size() == 0 and b.holomem_color.size() > 0:
@@ -445,7 +511,10 @@ func custom_holomem_sort(a,b):
 	else:
 		return false
 
-func custom_oshi_sort(a,b):
+func custom_oshi_sort(a,b) -> bool:
+	#The oshi sort goes color -> name -> card number -> art index
+	#We need to double up on a lot of conditions to make sure they're sorted consistently
+	
 	if b.oshi_color.size() == 0 and a.oshi_color.size() > 0:
 		return true
 	elif a.oshi_color.size() == 0 and b.oshi_color.size() > 0:
@@ -467,17 +536,27 @@ func custom_oshi_sort(a,b):
 	else:
 		return false
 
-func custom_support_sort(a,b):
+func custom_support_sort(a,b) -> bool:
+	#The support sort goes type -> card number -> art index
+	#We need to double up on a lot of conditions to make sure they're sorted consistently
+	
 	if support_order.find(a.supportType) < support_order.find(b.supportType):
 		return true
 	elif support_order.find(a.supportType) > support_order.find(b.supportType):
 		return false
 	elif a.cardNumber < b.cardNumber:
 		return true
+	elif a.cardNumber > b.cardNumber:
+		return false
+	elif a.artNum < b.artNum:
+		return true
 	else:
 		return false
 
-func custom_main_sort(a,b):
+func custom_main_sort(a,b) -> bool:
+	#The main deck is sorted Holomem -> Support
+	#Okay, technically Cheer -> Holomem -> Oshi -> Support but that's not legal
+	
 	if a.cardType < b.cardType:
 		return true
 	elif a.cardType > b.cardType:
@@ -488,7 +567,9 @@ func custom_main_sort(a,b):
 		return custom_support_sort(a,b)
 	else:
 		return false
+#endregion
 
+#region Deck Modification
 func load_from_deck_info(deck_info):
 	_on_clear_pressed(false)
 	
@@ -602,6 +683,13 @@ func create_cheer_deck_card(number,art_code,amount = 1):
 		in_deck_dictionary[number] += amount
 	else:
 		in_deck_dictionary[number] = amount
+#endregion
+
+#region Buttons To Modify Deck
+func find_in_deck_with_number(cardNumber,artNum,areaToCheck):
+	for cardButton in areaToCheck.get_children():
+		if cardButton.cardNumber == cardNumber and artNum == cardButton.artNum:
+			return cardButton
 
 func _on_menu_card_clicked(card_id):
 	if $CanvasLayer/DeckList.visible or $CanvasLayer/SavePrompt.visible:
@@ -724,12 +812,9 @@ func _on_deck_card_right_clicked(card_id):
 func _on_cheer_multiple_set(new_multiple):
 	cheer_multiple = new_multiple
 	cheer_multiple_label.text = str(new_multiple) + "x"
+#endregion
 
-func find_in_deck_with_number(cardNumber,artNum,areaToCheck):
-	for cardButton in areaToCheck.get_children():
-		if cardButton.cardNumber == cardNumber and artNum == cardButton.artNum:
-			return cardButton
-
+#region Update Visuals/Cleanup
 func is_deck_legal():
 	$CanvasLayer/Problems/ProblemList.text = ""
 	
@@ -829,8 +914,9 @@ func update_info(card_id):
 
 func clear_info():
 	$CanvasLayer/InfoPanel._clear_showing()
+#endregion
 
-
+#region Bottom Bar Buttons
 func _on_load_deck_pressed():
 	$CanvasLayer/DeckList._all_decks()
 	$CanvasLayer/DeckList.visible = true
@@ -839,7 +925,7 @@ func _hide_deck_list():
 	$CanvasLayer/DeckList.visible = false
 
 func _on_save_deck_pressed():
-	for deckButton in list.get_children():
+	for deckButton in list_of_decks_to_overwrite.get_children():
 		deckButton.queue_free()
 	var path = "user://Decks"
 	var dir = DirAccess.open(path)
@@ -849,7 +935,7 @@ func _on_save_deck_pressed():
 				var deckButton = Button.new()
 				deckButton.text = tr("DECK_OVERWRITE").format({fileName = file_name})
 				deckButton.pressed.connect(_save_deck_to_file.bind(path + "/" + file_name))
-				list.add_child(deckButton)
+				list_of_decks_to_overwrite.add_child(deckButton)
 	else:
 		print("An error occurred when trying to access the path.")
 	$CanvasLayer/SavePrompt.visible = true
@@ -916,7 +1002,6 @@ func _hide_save_prompt():
 func _on_main_menu_pressed():
 	get_tree().change_scene_to_file("res://Scenes/board.tscn")
 
-
 func _on_clear_pressed(complete=true):
 	in_deck_dictionary = {}
 	total_cheer = 0
@@ -944,12 +1029,18 @@ func _on_clear_pressed(complete=true):
 	update_analytics()
 	
 	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
+#endregion
 
-func fix_font_size():
+func fix_font_size() -> void:
+	#Different languages have different text sizes. I've been managing the labels manually (bad)
+	#	but buttons had too much variance for one font size to work.
+	#Check fix_font_tool.gd
+	
 	var all_labels = []
 	findByClass(self, "Button", all_labels)
 	for label in all_labels:
 		if label.auto_translate:
 			if !label.has_meta("fontSize"):
 				label.set_meta("fontSize", label.get_theme_font_size("font_size"))
+			#Scale is 0.9 here but 0.8 on the main menu. This is intentional, and returns the best results
 			FixFontTool.apply_text_with_corrected_max_scale(label.size, label, tr(label.text), 0.9, false, Vector2(), label.get_meta("fontSize"))

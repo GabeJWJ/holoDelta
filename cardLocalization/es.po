@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2024-11-23 20:18\n"
+"PO-Revision-Date: 2024-11-25 20:48\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Cuando este miembro es Derribado, Pierde 2 VIDAS."
@@ -3033,4 +3033,107 @@ msgid "hBP02-102_EFFECT"
 msgstr "Las Artes del miembro con este Fan acoplada ganan +10 de poder.\n\n"
 "Cuando el miembro con este Fan acolado recibe daño, Archiva este Fan.\n\n"
 "Este Fan solo puede ser acoplado a Murasaki Shion, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
+
+msgid "hBD24-010_NAME"
+msgstr "Yukihana Lamy"
+
+msgid "hBD24-010_SKILL_NAME"
+msgstr "Mejora Azul"
+
+msgid "hBD24-010_SKILL_EFFECT"
+msgstr "(Una vez por turno) Las Artes de una de tus miembros Azul ganan +20 de poder hasta el final de este turno."
+
+msgid "hBD24-010_SPSKILL_NAME"
+msgstr "Regalo de Cumpleaños ~Azul~"
+
+msgid "hBD24-010_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Revela 1 miembro Azul desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBD24-011_NAME"
+msgstr "Nerissa Ravencroft"
+
+msgid "hBD24-011_SKILL_NAME"
+msgstr "Mejora Morada"
+
+msgid "hBD24-011_SKILL_EFFECT"
+msgstr "(Una vez por turno) Las Artes de una de tus miembros Morado ganan +20 de poder hasta el final de este turno."
+
+msgid "hBD24-011_SPSKILL_NAME"
+msgstr "Regalo de Cumpleaños ~Morado~"
+
+msgid "hBD24-011_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Revela 1 miembro Morado desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBP02-067_NAME"
+msgstr "Nerissa Ravencroft"
+
+msgid "hBP02-067_ART_0_NAME"
+msgstr "El té es mejor que el café"
+
+msgid "hBP02-067_BLOOM_NAME"
+msgstr "Fiesta de té con Nerissa"
+
+msgid "hBP02-067_BLOOM_EFFECT"
+msgstr "Mira las 3 cartas del tope de tu Deck. Revela un miembro con #Song y ponlo en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
+
+msgid "hBP02-068_NAME"
+msgstr "Nerissa Ravencroft"
+
+msgid "hBP02-068_ART_0_NAME"
+msgstr "Amor en una Canción"
+
+msgid "hBP02-068_COLLAB_NAME"
+msgstr "Demonio del Sonido"
+
+msgid "hBP02-068_COLLAB_EFFECT"
+msgstr "Las Artes de tu Centro y Collab con #Song ganan +30 de poder hasta el final de este turno."
+
+msgid "hBP02-076_NAME"
+msgstr "PC Personalizado"
+
+msgid "hBP02-076_EFFECT"
+msgstr "Revela un miembro Debut desde tu mano y ponlo en el fondo de tu Deck. Revela un miembro 1st Bloom (excluyendo miembros Buzz) desde tu deck el cual tenga el mismo nombre que el miembro Debut que enviaste al fondo y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBP02-077_NAME"
+msgstr "PC Retro"
+
+msgid "hBP02-077_EFFECT"
+msgstr "Esta carta solo puede ser jugada si tienes 3 o menos VIDAS.\n\n"
+"Recupera 1 miembro desde tu Archivo a tu mano."
+
+msgid "hBD24-012_NAME"
+msgstr ""
+
+msgid "hBD24-012_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-012_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-012_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-012_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-014_NAME"
+msgstr ""
+
+msgid "hBP02-014_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-015_NAME"
+msgstr ""
+
+msgid "hBP02-015_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-015_ART_1_NAME"
+msgstr ""
+
+msgid "hBP02-086_NAME"
+msgstr ""
+
+msgid "hBP02-086_EFFECT"
+msgstr ""
 

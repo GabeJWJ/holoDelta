@@ -1,4 +1,11 @@
-#Stolen from https://forum.godotengine.org/t/auto-text-resizing/85532
+#Stolen and adapted from https://forum.godotengine.org/t/auto-text-resizing/85532
+#Different languages have different text sizes. I've been managing the labels manually (bad)
+#	but buttons had too much variance for one font size to work.
+#I have messed around with this to get good results
+#I still have no idea how this works
+#And it barely does
+#If you know better, go ahead
+
 class_name FixFontTool
 
 static func apply_text_with_corrected_max_scale(parent_size: Vector2, label: Button, text: String, scale: float = 1.0, should_correct_shadow: bool = false, shadow_offset: Vector2 = Vector2(), default_font_size = 16):

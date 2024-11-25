@@ -3049,3 +3049,24 @@ msgstr ""
 msgid "hBD24-012_SPSKILL_EFFECT"
 msgstr ""
 
+msgid "hBP02-014_NAME"
+msgstr ""
+
+msgid "hBP02-014_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-015_NAME"
+msgstr ""
+
+msgid "hBP02-015_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-015_ART_1_NAME"
+msgstr ""
+
+msgid "hBP02-086_NAME"
+msgstr ""
+
+msgid "hBP02-086_EFFECT"
+msgstr ""
+

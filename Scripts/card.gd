@@ -1,3 +1,6 @@
+#It's the card. What do you want from me.
+#Pulls double duty as the cards you see in game and the cards in the deckbuilder
+
 extends Node2D
 
 @export var cardID:int
@@ -69,10 +72,10 @@ func setup_info(number,art_code,back=null):
 	if data1.is_empty() or art_data.is_empty():
 		notFound = true
 		match Settings.settings.Language:
-			"English":
-				cardFront = load("res://Sou_Desu_Ne.png")
-			"日本語":
+			"ja":
 				cardFront = load("res://Sou_Desu_Ne_JP.png")
+			_:
+				cardFront = load("res://Sou_Desu_Ne.png")
 		$Front.texture = cardFront
 		return
 	elif art_data[0].unrevealed and !Settings.settings.AllowUnrevealed:

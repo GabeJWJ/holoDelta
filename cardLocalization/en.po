@@ -3049,3 +3049,24 @@ msgstr "Birthday Gift ~White~"
 msgid "hBD24-012_SPSKILL_EFFECT"
 msgstr "(Once per game) Reveal 1 White holomem from your deck and put it into your hand. Then shuffle your deck."
 
+msgid "hBP02-014_NAME"
+msgstr "Shirogane Noel"
+
+msgid "hBP02-014_ART_0_NAME"
+msgstr "Konmuscle!"
+
+msgid "hBP02-015_NAME"
+msgstr "Shirogane Noel"
+
+msgid "hBP02-015_ART_0_NAME"
+msgstr "Ohamuscle!"
+
+msgid "hBP02-015_ART_1_NAME"
+msgstr "Otsumuscle"
+
+msgid "hBP02-086_NAME"
+msgstr "Holo Sparkling Wine"
+
+msgid "hBP02-086_EFFECT"
+msgstr "The Arts of the holomem with this Tool attached gain +20 power.\n\nIf the holomem with this Tool attached does not have #Alcohol, whenever the holomem with this Tool attached is about to take damage, add +10 to that damage.\n\nYou may only attach 1 Tool to a holomem."
+

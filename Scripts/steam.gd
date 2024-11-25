@@ -24,7 +24,6 @@ func initialize_steam():
 	
 	if initialize_response['status'] > 0:
 		return initialize_response
-		#get_tree().quit()
 		
 	is_owned = Steam.isSubscribed()
 	steam_id = Steam.getSteamID()

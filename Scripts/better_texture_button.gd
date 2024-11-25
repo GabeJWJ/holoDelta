@@ -1,3 +1,7 @@
+#The "LookAt" menu can't contain the card objects - that would be a nightmare
+#But just using TextureButtons would require more shenanigans to get the nice
+# "darkening on hover" effect, so I made this
+
 extends Node2D
 
 @export var id:int

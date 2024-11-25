@@ -3049,3 +3049,24 @@ msgstr "Birthday Gift ~White~"
 msgid "hBD24-012_SPSKILL_EFFECT"
 msgstr "[ゲームに1回] 自分のデッキから、白ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
 
+msgid "hBP02-014_NAME"
+msgstr "白銀ノエル"
+
+msgid "hBP02-014_ART_0_NAME"
+msgstr "こんまっする〜！"
+
+msgid "hBP02-015_NAME"
+msgstr "白銀ノエル"
+
+msgid "hBP02-015_ART_0_NAME"
+msgstr "おはまっする〜！"
+
+msgid "hBP02-015_ART_1_NAME"
+msgstr "おつまっする〜"
+
+msgid "hBP02-086_NAME"
+msgstr "ホロスパークリング"
+
+msgid "hBP02-086_EFFECT"
+msgstr "■このツールが付いているホロメンのアーツ+20。\n\n■このツールが付いている #お酒を持たないホロメンが受けるダメージ+10。\n\nツールは、自分のホロメン1人につき1枚だけ付けられる。"
+
