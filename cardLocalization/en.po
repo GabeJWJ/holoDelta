@@ -3070,3 +3070,33 @@ msgstr "Holo Sparkling Wine"
 msgid "hBP02-086_EFFECT"
 msgstr "The Arts of the holomem with this Tool attached gain +20 power.\n\nIf the holomem with this Tool attached does not have #Alcohol, whenever the holomem with this Tool attached is about to take damage, add +10 to that damage.\n\nYou may only attach 1 Tool to a holomem."
 
+msgid "hBP02-016_NAME"
+msgstr "Shirogane Noel"
+
+msgid "hBP02-016_ART_0_NAME"
+msgstr "Burn it into your memory❤️"
+
+msgid "hBP02-016_BLOOM_NAME"
+msgstr "Noe-chan's brave figure......"
+
+msgid "hBP02-016_BLOOM_EFFECT"
+msgstr "When this Blooms from a Debut holomem, reveal a Debut, 1st Bloom, or Spot holomem with #Gen3 from your Deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBP02-017_NAME"
+msgstr "Shirogane Noel"
+
+msgid "hBP02-017_ART_0_NAME"
+msgstr "A fluffy, meatheaded knight"
+
+msgid "hBP02-017_ART_1_NAME"
+msgstr "3rd Generation Power"
+
+msgid "hBP02-017_ART_1_EFFECT"
+msgstr "(Collab position only) For each of your holomems with #Gen3 other than this holomem, this Art gains +20 power. The maximum number of holomems counted for this effect is 4."
+
+msgid "hBP02-100_NAME"
+msgstr "Shirogane Dan'in"
+
+msgid "hBP02-100_EFFECT"
+msgstr "Whenever the holomem with this Fan attached takes damage, it takes -10 damage.\n\nThis Fan may only be attached to your Shirogane Noel, and you may attach any number of this Fan to one holomem."
+

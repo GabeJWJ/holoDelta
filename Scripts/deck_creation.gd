@@ -570,20 +570,27 @@ func custom_main_sort(a,b) -> bool:
 #endregion
 
 #region Deck Modification
-func load_from_deck_info(deck_info):
+func load_from_deck_info(deck_info : Dictionary) -> void:
+	#Takes a deck in dictionary form and creates it in the builder
+	#deck_info : Dictionary - the deck read from typically a json file
+	
+	#Clears everything except the oshi card (if it exists)
+	#The timing of deletion is weird and it may not be done by the time the rest of the code runs
 	_on_clear_pressed(false)
 	
+	#Make an oshi card if none exist or modify the one that does
 	if oshiCard == null:
 		create_oshi(deck_info.oshi[0],deck_info.oshi[1])
 	else:
 		oshiCard.setup_info(deck_info.oshi[0],deck_info.oshi[1])
 	
+	#Create cards in deck
 	for card_info in deck_info.deck:
 		create_main_deck_card(card_info[0],card_info[2],card_info[1])
-	
 	for card_info in deck_info.cheerDeck:
 		create_cheer_deck_card(card_info[0],card_info[2],card_info[1])
 	
+	#Set up sleeves
 	if deck_info.has("sleeve"):
 		var image = Image.new()
 		image.load_webp_from_buffer(deck_info.sleeve)
@@ -603,6 +610,8 @@ func load_from_deck_info(deck_info):
 	else:
 		oshiSleeveSelect.new_sleeve()
 	
+	
+	#Visual stuff
 	update_main_deck_children()
 	update_cheer_deck_children()
 	
@@ -614,7 +623,12 @@ func load_from_deck_info(deck_info):
 	
 	_hide_deck_list()
 
-func add_holomem(card_added, amount=1):
+func add_holomem_or_support(card_added, amount=1) -> void:
+	#Run whenever a holomem (or support) card is added (or removed) from the deck
+	#Just keeps tracks of analytics stats
+	#card_added : Card - said holomem or support card
+	#amount : how many are being added at once (can be negative)
+	
 	if card_added.cardType == "Holomem":
 		match card_added.level:
 			0:
@@ -636,26 +650,32 @@ func add_holomem(card_added, amount=1):
 	
 	update_analytics()
 
-func create_card_button(number,art_code):
+func create_card_button(number : String, art_code : int):
+	#Returns a Card object that will act as a button
+	#The actual button functionality is added by whatever code calls this
+	#For both card selection and your deck
+	
 	var new_id = all_cards.size()
 	var newCard = card.instantiate()
 	newCard.name = "Card" + str(new_id)
 	newCard.setup_info(number,art_code)
 	newCard.cardID = new_id
 	
-	#newCard.card_clicked.connect(_on_card_clicked)
 	newCard.card_mouse_over.connect(update_info)
-	#newCard.card_mouse_left.connect(clear_info)
 	all_cards.append(newCard)
+	
 	return newCard
 
-func create_oshi(number,art_code):
+func create_oshi(number : String, art_code : int) -> void:
+	#Creates the oshi card for your deck
+	
 	oshiCard = create_card_button(number,art_code)
 	oshiCard.position = Vector2(65,500)
 	oshiCard.scale = Vector2(0.38,0.38)
 	$CanvasLayer/YourStuff/Deck.add_child(oshiCard)
 
-func create_main_deck_card(number,art_code,amount = 1):
+func create_main_deck_card(number : String, art_code : int, amount = 1) -> void:
+	
 	var newCardButton = create_card_button(number,art_code)
 	newCardButton.scale = Vector2(0.28,0.28)
 	newCardButton.update_amount(amount)
@@ -664,7 +684,7 @@ func create_main_deck_card(number,art_code,amount = 1):
 	main_deck.add_child(newCardButton)
 	newCardButton.card_clicked.connect(_on_deck_card_clicked)
 	newCardButton.card_right_clicked.connect(_on_deck_card_right_clicked)
-	add_holomem(newCardButton,amount)
+	add_holomem_or_support(newCardButton,amount)
 	if in_deck_dictionary.has(number):
 		in_deck_dictionary[number] += amount
 	else:
@@ -723,7 +743,7 @@ func _on_menu_card_clicked(card_id):
 				in_deck_dictionary[actualCard.cardNumber] += 1
 				#deck_info.deck
 				total_main += 1
-				add_holomem(alreadyHere)
+				add_holomem_or_support(alreadyHere)
 	
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
@@ -755,7 +775,7 @@ func _on_menu_card_right_clicked(card_id):
 			in_deck_dictionary[actualCard.cardNumber] -= 1
 			#deck_info.cheerDeck
 			total_main -= 1
-			add_holomem(alreadyHere,-1)
+			add_holomem_or_support(alreadyHere,-1)
 	
 	if alreadyHere != null and in_deck_dictionary[actualCard.cardNumber] <= 0:
 		in_deck_dictionary.erase(actualCard.cardNumber)
@@ -778,7 +798,7 @@ func _on_deck_card_clicked(card_id):
 	if actualCard.cardType == "Cheer":
 		total_cheer -= 1
 	else:
-		add_holomem(actualCard,-1)
+		add_holomem_or_support(actualCard,-1)
 		total_main -= 1
 	if actualCard.get_amount() <= 0:
 		actualCard.name = "PleaseDelete"
@@ -803,7 +823,7 @@ func _on_deck_card_right_clicked(card_id):
 		total_cheer += 1
 	else:
 		total_main += 1
-		add_holomem(actualCard)
+		add_holomem_or_support(actualCard)
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
 	

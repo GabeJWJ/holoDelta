@@ -3070,3 +3070,33 @@ msgstr ""
 msgid "hBP02-086_EFFECT"
 msgstr ""
 
+msgid "hBP02-016_NAME"
+msgstr ""
+
+msgid "hBP02-016_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-016_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-016_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-017_NAME"
+msgstr ""
+
+msgid "hBP02-017_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-017_ART_1_NAME"
+msgstr ""
+
+msgid "hBP02-017_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP02-100_NAME"
+msgstr ""
+
+msgid "hBP02-100_EFFECT"
+msgstr ""
+

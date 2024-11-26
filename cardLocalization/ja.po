@@ -3070,3 +3070,33 @@ msgstr "ホロスパークリング"
 msgid "hBP02-086_EFFECT"
 msgstr "■このツールが付いているホロメンのアーツ+20。\n\n■このツールが付いている #お酒を持たないホロメンが受けるダメージ+10。\n\nツールは、自分のホロメン1人につき1枚だけ付けられる。"
 
+msgid "hBP02-016_NAME"
+msgstr "白銀ノエル"
+
+msgid "hBP02-016_ART_0_NAME"
+msgstr "目に焼き付けるんだゾ♡"
+
+msgid "hBP02-016_BLOOM_NAME"
+msgstr "ノエちゃんの勇姿・・・・・・"
+
+msgid "hBP02-016_BLOOM_EFFECT"
+msgstr "DebutからBloomした時、自分のデッキから、#3期生を持つ[Debut ホロメンか1stホロメンかSpotホロメン]1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP02-017_NAME"
+msgstr "白銀ノエル"
+
+msgid "hBP02-017_ART_0_NAME"
+msgstr "ゆるふわ脳筋女騎士"
+
+msgid "hBP02-017_ART_1_NAME"
+msgstr "3期生ぱわー"
+
+msgid "hBP02-017_ART_1_EFFECT"
+msgstr "[コラボポジション限定] 自分のステージのこのホロメン以外の#3期生を持つホロメン1人につき、このアーツ+20。ただし、数える人数は4人まで。"
+
+msgid "hBP02-100_NAME"
+msgstr "白銀聖騎士団"
+
+msgid "hBP02-100_EFFECT"
+msgstr "このファンが付いているホロメンが受けるダメージ-10。\n\nこのファンは、自分の〈白銀ノエル〉だけに付けられ、1人につき何枚でも付けられる。"
+

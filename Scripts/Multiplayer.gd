@@ -1,37 +1,42 @@
 extends Node2D
 
-
+#Connectivity Stuff
 var steam = false
 var peer
 var _hosted_lobby_id = 0
 var _joined_lobby_id = 0
+var friendsOnly = 0
+
 @export var player_side: PackedScene
 @onready var json = JSON.new()
 @onready var ip_prompt = $CanvasLayer/IPPrompt
 @onready var chat = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer/Chat
-var friendsOnly = 0
 
 var deckInfo
+
 var playmat
 var dice
-
 var default_playmat = preload("res://playmat.jpg")
 var default_dice = preload("res://diceTexture.png").get_image()
 
 var yourSide
 var opponentSide
+
+#Selecting Opponent Stuff
 var possibleSides = {}
 var chosen = false
 var inGame = false
 
+#Game Start Stuff
 var yourRPS = -1
 var opponentRPS = -1
 var yourMulligan = false
 var opponentMulligan = false
 var yourReady = false
 var opponentReady = false
-
 var firstTurn = true
+
+#Download Stuff
 const downloadLocalLink = "https://github.com/GabeJWJ/holoDelta/raw/refs/heads/master/cardLocalization/"
 const downloadDBLink = "https://github.com/GabeJWJ/holoDelta/raw/refs/heads/master/cardData.db"
 var downloadedDB = false
@@ -50,9 +55,8 @@ func findByClass(node: Node, className : String, result : Array) -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	$CanvasLayer/LanguageSelect.get_popup().index_pressed.connect(_on_language_selected)
-	$CanvasLayer/SteamHost/MenuButton.get_popup().index_pressed.connect(_on_public_private_chosen)
-	$CanvasLayer/InfoButton/Info/VersionText.text += Settings.version
+	
+	#Intialize Decks folder and starter decks
 	if !DirAccess.dir_exists_absolute("user://Decks"):
 		DirAccess.make_dir_absolute("user://Decks")
 		var azki_string = FileAccess.get_file_as_string("res://Decks/starter_azki.json")
@@ -61,21 +65,25 @@ func _ready():
 		if not file_access:
 			print("An error happened while saving data: ", FileAccess.get_open_error())
 			return
-
 		file_access.store_line(azki_string)
 		file_access.close()
+		
 		file_access = FileAccess.open("user://Decks/starter_sora.json", FileAccess.WRITE)
 		if not file_access:
 			print("An error happened while saving data: ", FileAccess.get_open_error())
 			return
-
 		file_access.store_line(sora_string)
 		file_access.close()
-	$CanvasLayer/InfoButton/Info/DeckLocationButton/DeckLocation.text += ProjectSettings.globalize_path("user://Decks")
+	
+	#Connect PopupMenus
+	$CanvasLayer/LanguageSelect.get_popup().index_pressed.connect(_on_language_selected)
+	$CanvasLayer/SteamHost/MenuButton.get_popup().index_pressed.connect(_on_public_private_chosen)
 	
 	
+	#Initialize settings
 	$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed = Settings.settings.AllowUnrevealed
 	$CanvasLayer/Options/OptionBackground/AllowProxies.button_pressed = Settings.settings.AllowProxies
+	
 	$CanvasLayer/Options/OptionBackground/SFXSlider.value = Settings.settings.SFXVolume
 	$CanvasLayer/Sidebar/OptionsWindow/SFXSlider.value = Settings.settings.SFXVolume
 	AudioServer.set_bus_volume_db(Settings.sfx_bus_index, Settings.settings.SFXVolume)
@@ -100,6 +108,7 @@ func _ready():
 		dice = Image.new()
 		dice.load_webp_from_buffer(Settings.settings.Dice)
 		$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(dice)
+	
 	$CanvasLayer/LanguageSelect.text = Settings.get_language()
 	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
@@ -108,6 +117,8 @@ func _ready():
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 	
+	
+	#Download Stuff
 	var int_iteration_exists = FileAccess.file_exists("user://cardData.db") and DirAccess.dir_exists_absolute("user://cardLocalization") \
 	and FileAccess.file_exists("user://cardLocalization/_iteration.txt")
 	
@@ -119,8 +130,12 @@ func _ready():
 	else:
 		_download_everything()
 	
+	#Visual
+	$CanvasLayer/InfoButton/Info/VersionText.text += Settings.version
+	$CanvasLayer/InfoButton/Info/DeckLocationButton/DeckLocation.text += ProjectSettings.globalize_path("user://Decks")
 	fix_font_size()
 
+#region Download DB
 func _iter_succeeded(_result):
 	if int_iteration != int(FileAccess.get_file_as_string("user://cardLocalization/temp_iteration.txt")):
 		$CanvasLayer/Update/Notification.visible = true
@@ -185,7 +200,9 @@ func _downloaded_local(_result, lang):
 func _download_progress(_assigned_files, _current_files, total_bytes, current_bytes):
 	$CanvasLayer/Popup/ProgressBar.max_value = total_bytes
 	$CanvasLayer/Popup/ProgressBar.value = current_bytes
+#endregion
 
+#region Game Connection
 func _on_lobby_created(connect, lobby_id):
 	_hosted_lobby_id = lobby_id
 	
@@ -304,39 +321,6 @@ func _on_lobby_match_list(these_lobbies: Array) -> void:
 	$CanvasLayer/LobbyList.visible = true
 	$CanvasLayer/CancelLobby.visible = true
 
-"""
-func _on_steam_join_pressed():
-	for i in range(0, Steam.getFriendCount()):
-		var steam_id: int = Steam.getFriendByIndex(i, Steam.FRIEND_FLAG_IMMEDIATE)
-		var game_info: Dictionary = Steam.getFriendGamePlayed(steam_id)
-
-		if game_info.is_empty():
-		# This friend is not playing a game
-			continue
-		else:
-		# They are playing a game, check if it's the same game as ours
-			var app_id: int = game_info['id']
-			var lobby = game_info['lobby']
-			if app_id != SteamManager.steam_app_id or lobby is String:
-			# Either not in this game, or not in a lobby
-				continue
-			else:
-				var lobbyButton = Button.new()
-				lobbyButton.text = Steam.getFriendPersonaName(steam_id)
-				print(lobby)
-				print(Steam.getAllLobbyData(lobby))
-				if Steam.getLobbyData(lobby, "version") == Settings.version:
-					lobbyButton.pressed.connect(_join_steam_lobby.bind(lobby))
-				else:
-					lobbyButton.text += " vm" #" (Version mismatch)"
-					lobbyButton.pressed.connect(_join_steam_lobby.bind(lobby))
-					#lobbyButton.disabled = true
-				$CanvasLayer/LobbyList/VBoxContainer.add_child(lobbyButton)
-	
-	$CanvasLayer/LobbyList.visible = true
-	$CanvasLayer/CancelLobby.visible = true
-"""
-
 func _add_player(id=1):
 	var side = player_side.instantiate()
 	side.name = str(id)
@@ -406,85 +390,6 @@ func set_chosen():
 	$CanvasLayer/JoinWait.visible = false
 	yourSide = get_node(str(multiplayer.get_unique_id()))
 	opponentSide = get_node("1")
-
-func _your_rps(choice):
-	if multiplayer.get_unique_id() == 1:
-		yourRPS = choice
-		if opponentRPS != -1:
-			_rps_decide()
-	else:
-		_opponent_rps.rpc(choice)
-
-@rpc("any_peer","call_remote","reliable")
-func _opponent_rps(choice):
-	opponentRPS = choice
-	if yourRPS != -1:
-		_rps_decide()
-
-func _rps_decide():
-	if yourRPS == opponentRPS:
-		yourSide.specialRestart()
-		opponentSide.specialRestart.rpc()
-		yourRPS = -1
-		opponentRPS = -1
-	elif yourRPS - opponentRPS in [-2,1]:
-		#You won
-		yourSide.rps_end()
-		opponentSide.rps_end.rpc()
-		yourSide._show_turn_choice()
-	else:
-		yourSide.rps_end()
-		opponentSide.rps_end.rpc()
-		opponentSide._show_turn_choice.rpc()
-
-@rpc("any_peer","call_remote","reliable")
-func _on_your_choice_made(choice):
-	yourSide.set_player1.rpc(choice)
-	yourSide.set_is_turn.rpc(choice)
-	opponentSide.set_player1.rpc(!choice)
-	opponentSide.set_is_turn.rpc(!choice)
-	yourSide.specialStart2()
-	opponentSide.specialStart2.rpc()
-
-func _on_opponent_choice_made(choice):
-	_on_your_choice_made.rpc(!choice)
-
-func _your_mulligan():
-	if multiplayer.get_unique_id() == 1:
-		yourMulligan = true
-		if opponentMulligan:
-			_all_mulligan()
-	else:
-		_opponent_mulligan.rpc()
-
-@rpc("any_peer","call_remote","reliable")
-func _opponent_mulligan():
-	opponentMulligan = true
-	if yourMulligan:
-		_all_mulligan()
-
-func _all_mulligan():
-	yourSide.specialStart3()
-	opponentSide.specialStart3.rpc()
-
-func _your_ready():
-	if multiplayer.get_unique_id() == 1:
-		yourReady = true
-		if opponentReady:
-			_all_ready()
-	else:
-		_opponent_ready.rpc()
-
-@rpc("any_peer","call_remote","reliable")
-func _opponent_ready():
-	opponentReady = true
-	if yourReady:
-		_all_ready()
-
-func _all_ready():
-	yourSide.specialStart4()
-	opponentSide.specialStart4.rpc()
-	_enable_steps.rpc()
 
 func _please_add_join_option():
 	_add_join_option.rpc_id(1,Steam.getPersonaName(),JSON.stringify(deckInfo))
@@ -601,13 +506,11 @@ func connect_info_all(side_id):
 	side.card_info_set.connect(update_info)
 	side.card_info_clear.connect(clear_info)
 
-
 func update_info(topCard, card):
 	$CanvasLayer/Sidebar/InfoPanel._new_info(topCard, card)
 
 func clear_info():
 	$CanvasLayer/Sidebar/InfoPanel._clear_showing()
-
 
 func _restart(id=null):
 	if get_tree():
@@ -618,7 +521,6 @@ func _on_steam_player_disconnect(id=0):
 		_restart()
 	elif inGame == false and $CanvasLayer/JoinOptions/ScrollContainer/VBoxContainer.has_node(str(id)):
 		$CanvasLayer/JoinOptions/ScrollContainer/VBoxContainer.get_node(str(id)).queue_free()
-
 
 func _on_steam_connect_pressed():
 	$"CanvasLayer/Steam Connect".visible = false
@@ -636,47 +538,12 @@ func _on_steam_connect_pressed():
 		$CanvasLayer/SteamJoin.visible = true
 		$CanvasLayer/SteamHost/MenuButton.visible = true
 
-
 func _on_direct_connect_pressed():
 	$"CanvasLayer/Steam Connect".visible = false
 	$"CanvasLayer/Direct Connect".visible = false
 	$CanvasLayer/Host.visible = true
 	$CanvasLayer/Join.visible = true
 	peer = ENetMultiplayerPeer.new()
-
-@rpc("any_peer","call_remote","reliable")
-func _on_end_turn(fromOpponent = false):
-	if firstTurn:
-		_enable_steps.rpc(true)
-		firstTurn = false
-	if fromOpponent:
-		yourSide.set_is_turn.rpc(true)
-		opponentSide.set_is_turn.rpc(false)
-	else:
-		yourSide.set_is_turn.rpc(false)
-		opponentSide.set_is_turn.rpc(true)
-
-func _on_opponent_end_turn():
-	_on_end_turn.rpc(true)
-
-
-func _on_deck_creation_pressed():
-	get_tree().change_scene_to_file("res://Scenes/deck_creation.tscn")
-
-func _on_deck_select_pressed():
-	$CanvasLayer/DeckList._all_decks()
-	$CanvasLayer/DeckList.visible = true
-
-func _hide_deck_list():
-	$CanvasLayer/DeckList.visible = false
-
-func _on_deck_list_selected(deckJSON):
-	deckInfo = deckJSON
-	$CanvasLayer/DeckSelect.text = deckInfo.deckName
-	$"CanvasLayer/Steam Connect".disabled = false
-	$"CanvasLayer/Direct Connect".disabled = false
-	_hide_deck_list()
-
 
 func _on_cancel_lobby_pressed():
 	$CanvasLayer/LobbyList.visible = false
@@ -726,11 +593,126 @@ func _on_yes_pressed():
 		else:
 			multiplayer.multiplayer_peer.disconnect_peer(1)
 			_restart()
+#endregion
+
+#region Game Logic
+func _your_rps(choice):
+	if multiplayer.get_unique_id() == 1:
+		yourRPS = choice
+		if opponentRPS != -1:
+			_rps_decide()
+	else:
+		_opponent_rps.rpc(choice)
+
+@rpc("any_peer","call_remote","reliable")
+func _opponent_rps(choice):
+	opponentRPS = choice
+	if yourRPS != -1:
+		_rps_decide()
+
+func _rps_decide():
+	if yourRPS == opponentRPS:
+		yourSide.specialRestart()
+		opponentSide.specialRestart.rpc()
+		yourRPS = -1
+		opponentRPS = -1
+	elif yourRPS - opponentRPS in [-2,1]:
+		#You won
+		yourSide.rps_end()
+		opponentSide.rps_end.rpc()
+		yourSide._show_turn_choice()
+	else:
+		yourSide.rps_end()
+		opponentSide.rps_end.rpc()
+		opponentSide._show_turn_choice.rpc()
+
+@rpc("any_peer","call_remote","reliable")
+func _on_your_choice_made(choice):
+	yourSide.set_player1.rpc(choice)
+	yourSide.set_is_turn.rpc(choice)
+	opponentSide.set_player1.rpc(!choice)
+	opponentSide.set_is_turn.rpc(!choice)
+	yourSide.specialStart2()
+	opponentSide.specialStart2.rpc()
+
+func _on_opponent_choice_made(choice):
+	_on_your_choice_made.rpc(!choice)
+
+func _your_mulligan():
+	if multiplayer.get_unique_id() == 1:
+		yourMulligan = true
+		if opponentMulligan:
+			_all_mulligan()
+	else:
+		_opponent_mulligan.rpc()
+
+@rpc("any_peer","call_remote","reliable")
+func _opponent_mulligan():
+	opponentMulligan = true
+	if yourMulligan:
+		_all_mulligan()
+
+func _all_mulligan():
+	yourSide.specialStart3()
+	opponentSide.specialStart3.rpc()
+
+func _your_ready():
+	if multiplayer.get_unique_id() == 1:
+		yourReady = true
+		if opponentReady:
+			_all_ready()
+	else:
+		_opponent_ready.rpc()
+
+@rpc("any_peer","call_remote","reliable")
+func _opponent_ready():
+	opponentReady = true
+	if yourReady:
+		_all_ready()
+
+func _all_ready():
+	yourSide.specialStart4()
+	opponentSide.specialStart4.rpc()
+	_enable_steps.rpc()
+
+@rpc("any_peer","call_remote","reliable")
+func _on_end_turn(fromOpponent = false):
+	if firstTurn:
+		_enable_steps.rpc(true)
+		firstTurn = false
+	if fromOpponent:
+		yourSide.set_is_turn.rpc(true)
+		opponentSide.set_is_turn.rpc(false)
+	else:
+		yourSide.set_is_turn.rpc(false)
+		opponentSide.set_is_turn.rpc(true)
+
+func _on_opponent_end_turn():
+	_on_end_turn.rpc(true)
+
+#endregion
+
+func _on_deck_creation_pressed():
+	get_tree().change_scene_to_file("res://Scenes/deck_creation.tscn")
+
+func _on_deck_select_pressed():
+	$CanvasLayer/DeckList._all_decks()
+	$CanvasLayer/DeckList.visible = true
+
+func _hide_deck_list():
+	$CanvasLayer/DeckList.visible = false
+
+func _on_deck_list_selected(deckJSON):
+	deckInfo = deckJSON
+	$CanvasLayer/DeckSelect.text = deckInfo.deckName
+	$"CanvasLayer/Steam Connect".disabled = false
+	$"CanvasLayer/Direct Connect".disabled = false
+	_hide_deck_list()
 
 
+#region Settings
 func _on_options_pressed():
 	$CanvasLayer/Options/OptionBackground.visible = !$CanvasLayer/Options/OptionBackground.visible
-
 
 func _on_check_unrevealed_pressed():
 	Settings.update_settings("AllowUnrevealed",$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed)
@@ -749,6 +731,64 @@ func _on_language_selected(index_selected):
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 	fix_font_size()
 
+func _on_sfx_slider_drag_ended(value_changed=null):
+	$CanvasLayer/Options/OptionBackground/SFXSlider/Test.play()
+
+func _on_sfx_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(Settings.sfx_bus_index, value)
+	Settings.update_settings("SFXVolume", value)
+	if value <= -29:
+		AudioServer.set_bus_mute(Settings.sfx_bus_index, true)
+	else:
+		AudioServer.set_bus_mute(Settings.sfx_bus_index, false)
+
+func _on_bgm_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(Settings.bgm_bus_index, value)
+	Settings.update_settings("BGMVolume", value)
+	if value < -39:
+		AudioServer.set_bus_mute(Settings.bgm_bus_index, true)
+	else:
+		AudioServer.set_bus_mute(Settings.bgm_bus_index, false)
+
+func _on_playmat_dice_custom_pressed():
+	$CanvasLayer/PlaymatDiceCustom/ColorRect.visible = true
+
+func _on_cosmetics_exit_pressed():
+	$CanvasLayer/PlaymatDiceCustom/ColorRect.visible = false
+
+func _on_playmat_pressed():
+	$CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat/LoadDialog.visible = true
+
+func _on_dice_pressed():
+	$CanvasLayer/PlaymatDiceCustom/ColorRect/Dice/LoadDialog.visible = true
+
+func _on_playmat_load_dialog_file_selected(path):
+	playmat = Image.load_from_file(path)
+	playmat.resize(3485,1480)
+	$CanvasLayer/PlaymatDiceCustom/ColorRect/TextureRect.texture = ImageTexture.create_from_image(playmat)
+	Settings.update_settings("Playmat",Array(playmat.save_webp_to_buffer(true)))
+
+func _on_dice_load_dialog_file_selected(path):
+	dice = Image.load_from_file(path)
+	$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(dice)
+	Settings.update_settings("Dice",Array(dice.save_webp_to_buffer(true)))
+
+func _on_playmat_default_pressed():
+	playmat = null
+	$CanvasLayer/PlaymatDiceCustom/ColorRect/TextureRect.texture = default_playmat
+	Settings.update_settings("Playmat",null)
+
+func _on_dice_default_pressed():
+	dice = null
+	$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(default_dice)
+	Settings.update_settings("Dice",null)
+
+func _on_hide_cosmetics_toggled(toggled_on):
+	if toggled_on:
+		opponentSide._hide_cosmetics()
+	else:
+		opponentSide._redo_cosmetics()
+#endregion
 
 func _on_info_button_pressed():
 	$CanvasLayer/InfoButton/Info.visible = !$CanvasLayer/InfoButton/Info.visible
@@ -756,6 +796,7 @@ func _on_info_button_pressed():
 func _on_deck_location_button_pressed():
 	$CanvasLayer/InfoButton/Info/DeckLocationButton/DeckLocation.visible = !$CanvasLayer/InfoButton/Info/DeckLocationButton/DeckLocation.visible
 
+#region Sidebar
 func _on_card_info_pressed():
 	$CanvasLayer/Sidebar/ChatWindow.visible = false
 	$CanvasLayer/Sidebar/OptionsWindow.visible = false
@@ -783,7 +824,6 @@ func _on_sidebar_options_pressed():
 	$CanvasLayer/Sidebar/Tabs/Chat.button_pressed = false
 	
 	$CanvasLayer/Sidebar/OptionsWindow.visible = true
-
 
 @rpc("any_peer","call_local","reliable")
 func send_message_rpc(message):
@@ -815,70 +855,6 @@ func game_message(message):
 
 func _on_side_gave_game_message(message):
 	game_message.rpc(message)
-
-
-func _on_sfx_slider_drag_ended(value_changed=null):
-	$CanvasLayer/Options/OptionBackground/SFXSlider/Test.play()
-
-
-func _on_sfx_slider_value_changed(value):
-	AudioServer.set_bus_volume_db(Settings.sfx_bus_index, value)
-	Settings.update_settings("SFXVolume", value)
-	if value <= -29:
-		AudioServer.set_bus_mute(Settings.sfx_bus_index, true)
-	else:
-		AudioServer.set_bus_mute(Settings.sfx_bus_index, false)
-
-func _on_bgm_slider_value_changed(value):
-	AudioServer.set_bus_volume_db(Settings.bgm_bus_index, value)
-	Settings.update_settings("BGMVolume", value)
-	if value < -39:
-		AudioServer.set_bus_mute(Settings.bgm_bus_index, true)
-	else:
-		AudioServer.set_bus_mute(Settings.bgm_bus_index, false)
-
-
-func _on_playmat_dice_custom_pressed():
-	$CanvasLayer/PlaymatDiceCustom/ColorRect.visible = true
-
-func _on_cosmetics_exit_pressed():
-	$CanvasLayer/PlaymatDiceCustom/ColorRect.visible = false
-
-func _on_playmat_pressed():
-	$CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat/LoadDialog.visible = true
-
-func _on_dice_pressed():
-	$CanvasLayer/PlaymatDiceCustom/ColorRect/Dice/LoadDialog.visible = true
-
-func _on_playmat_load_dialog_file_selected(path):
-	playmat = Image.load_from_file(path)
-	playmat.resize(3485,1480)
-	$CanvasLayer/PlaymatDiceCustom/ColorRect/TextureRect.texture = ImageTexture.create_from_image(playmat)
-	Settings.update_settings("Playmat",Array(playmat.save_webp_to_buffer(true)))
-
-func _on_dice_load_dialog_file_selected(path):
-	dice = Image.load_from_file(path)
-	$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(dice)
-	Settings.update_settings("Dice",Array(dice.save_webp_to_buffer(true)))
-
-
-func _on_playmat_default_pressed():
-	playmat = null
-	$CanvasLayer/PlaymatDiceCustom/ColorRect/TextureRect.texture = default_playmat
-	Settings.update_settings("Playmat",null)
-
-
-func _on_dice_default_pressed():
-	dice = null
-	$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(default_dice)
-	Settings.update_settings("Dice",null)
-
-
-func _on_hide_cosmetics_toggled(toggled_on):
-	if toggled_on:
-		opponentSide._hide_cosmetics()
-	else:
-		opponentSide._redo_cosmetics()
 
 @rpc("any_peer","call_local","reliable")
 func _select_step(step_id):
@@ -940,12 +916,19 @@ func _unhandled_key_input(event):
 			elif event.is_action_pressed("Last Step"):
 				var newStep = _last_step()
 				_select_step.rpc(newStep)
+#endregion
+
 
 func fix_font_size():
+	#Different languages have different text sizes. I've been managing the labels manually (bad)
+	#	but buttons had too much variance for one font size to work.
+	#Check fix_font_tool.gd
+	
 	var all_labels = []
 	findByClass(self, "Button", all_labels)
 	for label in all_labels:
 		if label.auto_translate:
 			if !label.has_meta("fontSize"):
 				label.set_meta("fontSize", label.get_theme_font_size("font_size"))
+			#Scale is 0.8 here but 0.9 in the deck builder. This is intentional, and returns the best results
 			FixFontTool.apply_text_with_corrected_max_scale(label.size, label, tr(label.text), 0.8, false, Vector2(), label.get_meta("fontSize"))

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2024-11-25 20:48\n"
+"PO-Revision-Date: 2024-11-26 19:39\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Cuando este miembro es Derribado, Pierde 2 VIDAS."
@@ -3117,23 +3117,55 @@ msgid "hBD24-012_SPSKILL_EFFECT"
 msgstr ""
 
 msgid "hBP02-014_NAME"
-msgstr ""
+msgstr "Shirogane Noel"
 
 msgid "hBP02-014_ART_0_NAME"
-msgstr ""
+msgstr "Konmuscle!"
 
 msgid "hBP02-015_NAME"
-msgstr ""
+msgstr "Shirogane Noel"
 
 msgid "hBP02-015_ART_0_NAME"
-msgstr ""
+msgstr "Ohamuscle!"
 
 msgid "hBP02-015_ART_1_NAME"
-msgstr ""
+msgstr "Otsumuscle"
 
 msgid "hBP02-086_NAME"
-msgstr ""
+msgstr "Vino Holo Espumante"
 
 msgid "hBP02-086_EFFECT"
+msgstr "Las Artes del miembro con esta Herramienta acoplada ganan +20 de poder.\n\n"
+"Si el miembro con esta Herramienta acoplada no posee #Alcohol, Cuando el miembro con esta Herramienta acoplada recibe daño, añade +10 de daño a esa instancia de daño.\n\n"
+"Solo puedes acoplar una Herramienta a cada miembro."
+
+msgid "hBP02-016_NAME"
+msgstr ""
+
+msgid "hBP02-016_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-016_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-016_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-017_NAME"
+msgstr ""
+
+msgid "hBP02-017_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-017_ART_1_NAME"
+msgstr ""
+
+msgid "hBP02-017_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP02-100_NAME"
+msgstr ""
+
+msgid "hBP02-100_EFFECT"
 msgstr ""
 
