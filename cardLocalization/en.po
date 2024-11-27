@@ -3100,3 +3100,30 @@ msgstr "Shirogane Dan'in"
 msgid "hBP02-100_EFFECT"
 msgstr "Whenever the holomem with this Fan attached takes damage, it takes -10 damage.\n\nThis Fan may only be attached to your Shirogane Noel, and you may attach any number of this Fan to one holomem."
 
+msgid "hBP02-029_NAME"
+msgstr "Houshou Marine"
+
+msgid "hBP02-029_ART_0_NAME"
+msgstr "It's Captain Marine to you!"
+
+msgid "hBP02-029_COLLAB_NAME"
+msgstr "Drinking at home with Marine"
+
+msgid "hBP02-029_COLLAB_EFFECT"
+msgstr "Deal 20 special damage to your opponent's Collab holomem."
+
+msgid "hBP02-030_NAME"
+msgstr "Houshou Marine"
+
+msgid "hBP02-030_ART_0_NAME"
+msgstr "Senchou, what's going to happen?"
+
+msgid "hBP02-030_ART_1_NAME"
+msgstr "Already so lewd❤️"
+
+msgid "hBP02-095_NAME"
+msgstr "Dokuro-kun"
+
+msgid "hBP02-095_EFFECT"
+msgstr "The Arts of the holomem with this Mascot attached gain +10 power.\n\nIf this is attached to Houshou Marine, it gains the following effect: (Center position only) when the holomem that this Mascot is attached to Blooms, draw 1 card from your Deck.\n\nYou may only attach 1 Mascot to a holomem."
+

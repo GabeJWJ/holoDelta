@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2024-11-26 19:39\n"
+"PO-Revision-Date: 2024-11-27 19:50\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Cuando este miembro es Derribado, Pierde 2 VIDAS."
@@ -3140,32 +3140,60 @@ msgstr "Las Artes del miembro con esta Herramienta acoplada ganan +20 de poder.\
 "Solo puedes acoplar una Herramienta a cada miembro."
 
 msgid "hBP02-016_NAME"
-msgstr ""
+msgstr "Shirogane Noel"
 
 msgid "hBP02-016_ART_0_NAME"
-msgstr ""
+msgstr "Grábatelo en la memoria❤️"
 
 msgid "hBP02-016_BLOOM_NAME"
-msgstr ""
+msgstr "La valiente figura de Noe-chan..."
 
 msgid "hBP02-016_BLOOM_EFFECT"
-msgstr ""
+msgstr "Al Florecer de un miembro Debut, revela un miembro Debut, 1st Bloom, o Spot con #Gen3 desde tu Deck y ponlo en tu mano. Luego baraja tu Deck."
 
 msgid "hBP02-017_NAME"
-msgstr ""
+msgstr "Shirogane Noel"
 
 msgid "hBP02-017_ART_0_NAME"
-msgstr ""
+msgstr "Una caballera esponjosa y cabeza hueca"
 
 msgid "hBP02-017_ART_1_NAME"
-msgstr ""
+msgstr "Poder de la 3era Generación"
 
 msgid "hBP02-017_ART_1_EFFECT"
-msgstr ""
+msgstr "(Solo posición de Collab) Por cada miembro con #Gen3 sin contar esté en tu Escenario, este Arte gana +20 de poder. El número máximo de miembros que cuentan para este efecto es 4."
 
 msgid "hBP02-100_NAME"
-msgstr ""
+msgstr "Shirogane Dan'in"
 
 msgid "hBP02-100_EFFECT"
+msgstr "Cuando el miembro con este Fan acoplado recibe daño, recibe -10 de daño.\n\n"
+"Este Fan solo puede ser acoplado a Shirogane Noel, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
+
+msgid "hBP02-029_NAME"
+msgstr ""
+
+msgid "hBP02-029_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-029_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-029_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-030_NAME"
+msgstr ""
+
+msgid "hBP02-030_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-030_ART_1_NAME"
+msgstr ""
+
+msgid "hBP02-095_NAME"
+msgstr ""
+
+msgid "hBP02-095_EFFECT"
 msgstr ""
 

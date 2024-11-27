@@ -3100,3 +3100,30 @@ msgstr ""
 msgid "hBP02-100_EFFECT"
 msgstr ""
 
+msgid "hBP02-029_NAME"
+msgstr ""
+
+msgid "hBP02-029_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-029_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-029_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-030_NAME"
+msgstr ""
+
+msgid "hBP02-030_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-030_ART_1_NAME"
+msgstr ""
+
+msgid "hBP02-095_NAME"
+msgstr ""
+
+msgid "hBP02-095_EFFECT"
+msgstr ""
+

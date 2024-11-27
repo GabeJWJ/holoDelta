@@ -3100,3 +3100,30 @@ msgstr "白銀聖騎士団"
 msgid "hBP02-100_EFFECT"
 msgstr "このファンが付いているホロメンが受けるダメージ-10。\n\nこのファンは、自分の〈白銀ノエル〉だけに付けられ、1人につき何枚でも付けられる。"
 
+msgid "hBP02-029_NAME"
+msgstr "宝鐘マリン"
+
+msgid "hBP02-029_ART_0_NAME"
+msgstr "マリン“船長”だろぉぉん!?"
+
+msgid "hBP02-029_COLLAB_NAME"
+msgstr "マリンと宅飲み"
+
+msgid "hBP02-029_COLLAB_EFFECT"
+msgstr "相手のコラボホロメンに特殊ダメージ20を与える。"
+
+msgid "hBP02-030_NAME"
+msgstr "宝鐘マリン"
+
+msgid "hBP02-030_ART_0_NAME"
+msgstr "船長、何されちゃうのかな?"
+
+msgid "hBP02-030_ART_1_NAME"
+msgstr "もう、どスケベ♡"
+
+msgid "hBP02-095_NAME"
+msgstr "ドクロくん"
+
+msgid "hBP02-095_EFFECT"
+msgstr "このマスコットが付いているホロメンのアーツ+10。\n\n◆〈宝鐘マリン〉に付いていたら能力追加\n\n[センターポジション限定]このマスコットが付いているホロメンがBloomした時、自分のデッキを1枚引く。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
+
