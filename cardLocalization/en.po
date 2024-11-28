@@ -3127,3 +3127,48 @@ msgstr "Dokuro-kun"
 msgid "hBP02-095_EFFECT"
 msgstr "The Arts of the holomem with this Mascot attached gain +10 power.\n\nIf this is attached to Houshou Marine, it gains the following effect: (Center position only) when the holomem that this Mascot is attached to Blooms, draw 1 card from your Deck.\n\nYou may only attach 1 Mascot to a holomem."
 
+msgid "hBP02-031_NAME"
+msgstr "Houshou Marine"
+
+msgid "hBP02-031_ART_0_NAME"
+msgstr "Let's set sail together!"
+
+msgid "hBP02-031_BLOOM_NAME"
+msgstr "Your voices are Senchou's support!"
+
+msgid "hBP02-031_BLOOM_EFFECT"
+msgstr "Deal 20 special damage to your opponent's Collab holomem."
+
+msgid "hBP02-032_NAME"
+msgstr "Houshou Marine"
+
+msgid "hBP02-032_ART_0_NAME"
+msgstr "Yosoro~"
+
+msgid "hBP02-032_BLOOM_NAME"
+msgstr "Houshou Pirates"
+
+msgid "hBP02-032_BLOOM_EFFECT"
+msgstr "Reveal a card named Houshou Marine from your deck and put it into your hand. Then shuffle your deck. You may only use the Bloom Effect \"Houshou Pirates\" once per turn."
+
+msgid "hBP02-033_NAME"
+msgstr "Houshou Marine"
+
+msgid "hBP02-033_ART_0_NAME"
+msgstr "Kimitachi~? Senchou kawaii?"
+
+msgid "hBP02-033_ART_0_EFFECT"
+msgstr "For each holomem stacked under this one, this Art gains +20 power."
+
+msgid "hBP02-033_BLOOM_NAME"
+msgstr "Gothic Queen"
+
+msgid "hBP02-033_BLOOM_EFFECT"
+msgstr "You may return 1 holomem from your Archive to your hand. Then, if this card has 3 or more holomems stacked under it, deal 50 special damage to your opponent's Center or Collab holomem."
+
+msgid "hBP02-085_NAME"
+msgstr "HOLOLIVE FANTASY"
+
+msgid "hBP02-085_EFFECT"
+msgstr "This card can only be played if you have 6 or fewer cards in your hand, excluding this card.\n\nLook at the top four cards of your Deck. Reveal any number of them that are holomems with #Gen3 and put them into your hand. Then put the remaining cards on the bottom of your Deck in any order."
+

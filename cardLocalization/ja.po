@@ -2195,13 +2195,13 @@ msgid "hBP02-003_SKILL_NAME"
 msgstr "ahoy!!"
 
 msgid "hBP02-003_SKILL_EFFECT"
-msgstr ""
+msgstr "[ターンに1回] 自分のこのターンにBloomした #3期生 を持つホロメン 1人を、自分の手札のホロメンを使ってもう1回Bloomさせる。"
 
 msgid "hBP02-003_SPSKILL_NAME"
 msgstr "出航〜！"
 
 msgid "hBP02-003_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[ゲームに1回] 相手のセンターホロメンかコラボホロメンどちらかに、自分のセンターホロメンの〈宝鐘マリン〉に重なっているホロメン1枚 につき、特殊ダメージ50を与える。"
 
 msgid "Shooter"
 msgstr "シューター"
@@ -3126,4 +3126,49 @@ msgstr "ドクロくん"
 
 msgid "hBP02-095_EFFECT"
 msgstr "このマスコットが付いているホロメンのアーツ+10。\n\n◆〈宝鐘マリン〉に付いていたら能力追加\n\n[センターポジション限定]このマスコットが付いているホロメンがBloomした時、自分のデッキを1枚引く。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hBP02-031_NAME"
+msgstr "宝鐘マリン"
+
+msgid "hBP02-031_ART_0_NAME"
+msgstr "いっしょに出航しましょう! (健全)"
+
+msgid "hBP02-031_BLOOM_NAME"
+msgstr "キミたちの声が船長の支えです!"
+
+msgid "hBP02-031_BLOOM_EFFECT"
+msgstr "相手のコラボホロメンに特殊ダメージ20を与える。"
+
+msgid "hBP02-032_NAME"
+msgstr "宝鐘マリン"
+
+msgid "hBP02-032_ART_0_NAME"
+msgstr "ヨーソロー"
+
+msgid "hBP02-032_BLOOM_NAME"
+msgstr "宝鐘の海賊団"
+
+msgid "hBP02-032_BLOOM_EFFECT"
+msgstr "自分のデッキから、〈宝鐘マリン〉1枚を公開し、手札に加える。そして デッキをシャッフルする。自分のフルームエフェクト「宝鐘の海賊団」はターンに1回しか使えない。"
+
+msgid "hBP02-033_NAME"
+msgstr "宝鐘マリン"
+
+msgid "hBP02-033_ART_0_NAME"
+msgstr "キミたち~? 船長、かわいい?"
+
+msgid "hBP02-033_ART_0_EFFECT"
+msgstr "このホロメンに重なっているホロメン1枚につき、このアーツ+20。"
+
+msgid "hBP02-033_BLOOM_NAME"
+msgstr "ゴシッククィーン"
+
+msgid "hBP02-033_BLOOM_EFFECT"
+msgstr "自分のアーカイブのホロメン1枚を手札に戻せる。その後、このホロメンに重なっているホロメンが3枚以上の時、相手のセンターホロメンかコラボホロメンに特殊ダメージ50を与える。"
+
+msgid "hBP02-085_NAME"
+msgstr "HOLOLIVE FANTASY"
+
+msgid "hBP02-085_EFFECT"
+msgstr "このカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、#3期生を持つホロメンを好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
 
