@@ -288,10 +288,6 @@ msgstr ""
 msgid "MULLIGAN_TEXT"
 msgstr ""
 
-#: Scenes/card.tscn
-msgid "20"
-msgstr ""
-
 #: Scenes/deck_creation.tscn
 #: Scripts/deck_creation.gd
 msgid "NAME"
@@ -635,6 +631,10 @@ msgid "CARD_HAND_HOLOPOWER"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "CARD_HAND_REVEAL"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "CARD_STAGE_ARCHIVE"
 msgstr ""
 
@@ -716,6 +716,10 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "CHEERDECK_REVEAL"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CHEERDECK_LOOKX"
 msgstr ""
 
 #: Scripts/side.gd
@@ -899,6 +903,10 @@ msgid "MESSAGE_HAND_HOLOPOWER"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "MESSAGE_HAND_REVEAL"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "MESSAGE_HAND_SUPPORT_PLAY"
 msgstr ""
 
@@ -1064,6 +1072,10 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "MESSAGE_DECK_LOOKATX"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "MESSAGE_CHEERDECK_LOOKATX"
 msgstr ""
 
 #: Scripts/side.gd

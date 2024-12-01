@@ -273,10 +273,6 @@ msgstr "Opponent"
 msgid "MULLIGAN_TEXT"
 msgstr "Viewing opponent's mulligans"
 
-#: Scenes/card.tscn
-msgid "20"
-msgstr ""
-
 #: Scenes/deck_creation.tscn Scripts/deck_creation.gd
 msgid "NAME"
 msgstr "Name"
@@ -614,6 +610,10 @@ msgid "CARD_HAND_HOLOPOWER"
 msgstr "Holopower"
 
 #: Scripts/side.gd
+msgid "CARD_HAND_REVEAL"
+msgstr "Reveal"
+
+#: Scripts/side.gd
 msgid "CARD_STAGE_ARCHIVE"
 msgstr "Archive"
 
@@ -696,6 +696,10 @@ msgstr "Undo shuffle hand into deck"
 #: Scripts/side.gd
 msgid "CHEERDECK_REVEAL"
 msgstr "Reveal and attach"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_LOOKX"
+msgstr "Look at X"
 
 #: Scripts/side.gd
 msgid "CHEERDECK_SEARCH"
@@ -878,6 +882,10 @@ msgid "MESSAGE_HAND_HOLOPOWER"
 msgstr "{person} put a card in Holopower from hand"
 
 #: Scripts/side.gd
+msgid "MESSAGE_HAND_REVEAL"
+msgstr "{person} revealed {cardName} from hand"
+
+#: Scripts/side.gd
 msgid "MESSAGE_HAND_SUPPORT_PLAY"
 msgstr "{person} played {cardName}"
 
@@ -1048,6 +1056,10 @@ msgstr ""
 #: Scripts/side.gd
 msgid "MESSAGE_DECK_LOOKATX"
 msgstr "{person} started looking at the top {amount} cards of deck"
+
+#: Scripts/side.gd
+msgid "MESSAGE_CHEERDECK_LOOKATX"
+msgstr "{person} started looking at the top {amount} cards of cheer deck"
 
 #: Scripts/side.gd
 msgid "MESSAGE_CARD_BACK"

@@ -365,7 +365,6 @@ func create_card(number,art_code,back):
 	newCard.card_clicked.connect(_on_card_clicked)
 	newCard.card_right_clicked.connect(_on_card_right_clicked)
 	newCard.card_mouse_over.connect(update_info)
-	#newCard.card_mouse_left.connect(clear_info)
 	newCard.move_behind_request.connect(_on_move_behind_request)
 	all_cards.append(newCard)
 	newCard.set_multiplayer_authority(name.to_int())
@@ -430,6 +429,7 @@ func remove_old_card(old_card,leavingField = false):
 		actualCard.unrest()
 		actualCard.attached = []
 		actualCard.onTopOf = []
+		actualCard._on_reject_pressed()
 	for index in range(zones.size()):
 		if zones[index][1] == old_card:
 			zones[index][1] = -1
@@ -838,7 +838,13 @@ func move_behind(card_id1,card_id2):
 	move_child(card_1,card_2.get_index()-1)
 
 
-func _on_card_clicked(card_id):
+func _on_card_clicked(card_id : int) -> void:
+	#Oh boy
+	#This is called whenever you click on a card
+	#card_id is the index in all_cards of the clicked card
+	#If you click your opponent's card, this gets called on your local copy of the opponent's side
+	#The code will go through, determine what options ought be included, and add them to the popup
+	
 	if currentPrompt != -1 or !can_do_things:
 		return
 	
@@ -968,6 +974,7 @@ func _on_card_clicked(card_id):
 				popup.add_item(tr("CARD_HAND_BOTTOMDECK"),111)
 				popup.add_item(tr("CARD_HAND_ARCHIVE"),112)
 				popup.add_item(tr("CARD_HAND_HOLOPOWER"),113)
+				popup.add_item(tr("CARD_HAND_REVEAL"),114)
 			elif find_what_zone(currentCard):
 				popup.add_item(tr("CARD_STAGE_ARCHIVE"),2)
 				if actualCard.attached.size() == 0:
@@ -1041,6 +1048,7 @@ func _on_cheer_deck_clicked():
 		if popup.item_count > 0:
 			popup.add_separator()
 		
+		popup.add_item(tr("CHEERDECK_LOOKX"),397)
 		popup.add_item(tr("CHEERDECK_SEARCH"),398)
 		popup.add_item(tr("CHEERDECK_SHUFFLE"),399)
 		
@@ -1367,6 +1375,17 @@ func _on_popup_menu_id_pressed(id):
 			remove_from_hand(currentCard)
 			currentCard = -1
 			_place_sfx.rpc()
+		114: #Reveal from Hand
+			var actualCard = all_cards[currentCard]
+			emit_signal("sent_game_message", tr("MESSAGE_HAND_REVEAL").format({"cardName" : actualCard.get_card_name()}))
+			actualCard.position = Vector2(300,100*revealed.size() - 400)
+			revealed.append(currentCard)
+			for i in range(revealed.size()):
+				if i > 0:
+					move_behind.rpc(revealed[-i-1],revealed[-i])
+			remove_from_hand(currentCard)
+			currentCard = -1
+			_place_sfx.rpc()
 		120: #Play Support
 			var actualCard = all_cards[currentCard]
 			emit_signal("sent_game_message", tr("MESSAGE_HAND_SUPPORT_PLAY").format({cardName = all_cards[currentCard].get_card_name()}))
@@ -1453,6 +1472,9 @@ func _on_popup_menu_id_pressed(id):
 			cheerDeck.update_size()
 			showZoneSelection(possibleZones,false)
 			currentPrompt = 300
+		397: #Look at X
+			set_prompt(tr("PROMPT_LOOKATX"),3)
+			currentPrompt = 397
 		398: #Search Cheer Deck
 			emit_signal("sent_game_message", tr("MESSAGE_CHEERDECK_SEARCH"))
 			showLookAt(cheerDeck.cardList)
@@ -1783,6 +1805,16 @@ func _on_line_edit_text_submitted(new_text):
 				showLookAt(deck.cardList.slice(0,input))
 				currentPrompt = 297
 				currentFuda = deck
+		
+		397: #Look At X Cheer Deck
+			var input = new_text.to_int()
+			if new_text.is_valid_int() and input > 0 and input <= cheerDeck.cardList.size():
+				emit_signal("sent_game_message",tr("MESSAGE_CHEERDECK_LOOKATX").format({amount = input}))
+				remove_prompt()
+				cheerDeck._update_looking(true,input)
+				showLookAt(cheerDeck.cardList.slice(0,input))
+				currentPrompt = 397
+				currentFuda = cheerDeck
 		
 		501: #Holopower X to Archive
 			var input = new_text.to_int()

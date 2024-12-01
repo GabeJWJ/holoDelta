@@ -124,10 +124,12 @@ text = "100"
 
 [node name="PotentialDamage" type="Label" parent="."]
 visible = false
-offset_left = -81.25
-offset_top = -257.5
-offset_right = 29.75
-offset_bottom = -216.5
+offset_left = -138.75
+offset_top = -271.25
+offset_right = -27.75
+offset_bottom = -230.25
+scale = Vector2(1.3, 1.3)
+auto_translate = false
 theme = ExtResource("8_o7lry")
 theme_override_colors/font_color = Color(0.913725, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
