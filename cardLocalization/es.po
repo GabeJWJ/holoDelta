@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2024-11-27 19:50\n"
+"PO-Revision-Date: 2024-12-01 21:34\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Cuando este miembro es Derribado, Pierde 2 VIDAS."
@@ -3171,29 +3171,179 @@ msgstr "Cuando el miembro con este Fan acoplado recibe daño, recibe -10 de dañ
 "Este Fan solo puede ser acoplado a Shirogane Noel, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
 
 msgid "hBP02-029_NAME"
-msgstr ""
+msgstr "Houshou Marine"
 
 msgid "hBP02-029_ART_0_NAME"
-msgstr ""
+msgstr "Es Capitana Marine para ti!"
 
 msgid "hBP02-029_COLLAB_NAME"
-msgstr ""
+msgstr "Bebiendo en casa con Marine"
 
 msgid "hBP02-029_COLLAB_EFFECT"
-msgstr ""
+msgstr "Inflige 20 de daño especial al Collab oponente."
 
 msgid "hBP02-030_NAME"
-msgstr ""
+msgstr "Houshou Marine"
 
 msgid "hBP02-030_ART_0_NAME"
-msgstr ""
+msgstr "Senchou, Que va a pasar ahora?"
 
 msgid "hBP02-030_ART_1_NAME"
-msgstr ""
+msgstr "Ya es tan lascivo❤️"
 
 msgid "hBP02-095_NAME"
-msgstr ""
+msgstr "Dokuro-kun"
 
 msgid "hBP02-095_EFFECT"
+msgstr "Las Artes del miembro con esta Mascota acoplada ganan +10 de poder.\n\n"
+"Si esta Mascota está acoplada a Houshou Marine, gana el siguiente efecto: (Solo posición de Centro) cuando el miembro con esta Mascota acoplada Florece, Roba 1 carta desde tu Deck.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
+
+msgid "hBP02-031_NAME"
+msgstr "Houshou Marine"
+
+msgid "hBP02-031_ART_0_NAME"
+msgstr "Vamos a zarpar juntos!"
+
+msgid "hBP02-031_BLOOM_NAME"
+msgstr "Sus voces son el apoyo de Senchou!"
+
+msgid "hBP02-031_BLOOM_EFFECT"
+msgstr "Inflige 20 de daño especial al Collab oponente."
+
+msgid "hBP02-032_NAME"
+msgstr "Houshou Marine"
+
+msgid "hBP02-032_ART_0_NAME"
+msgstr "Yosoro~"
+
+msgid "hBP02-032_BLOOM_NAME"
+msgstr "Piratas Houshou"
+
+msgid "hBP02-032_BLOOM_EFFECT"
+msgstr "Revela una carta llamada Houshou Marine desde tu deck y ponla en tu mano. Luego baraja tu deck. Solo puedes usar el Bloom Effect \"Piratas Houshou\" una vez por turno."
+
+msgid "hBP02-033_NAME"
+msgstr "Houshou Marine"
+
+msgid "hBP02-033_ART_0_NAME"
+msgstr "Kimitachi~? Senchou kawaii?"
+
+msgid "hBP02-033_ART_0_EFFECT"
+msgstr "Por cada miembro apilado bajo este, este Arte gana +20 de poder."
+
+msgid "hBP02-033_BLOOM_NAME"
+msgstr "Reina Gótica"
+
+msgid "hBP02-033_BLOOM_EFFECT"
+msgstr "Puedes recuperar 1 miembro desde tu Archivo a tu mano. Luego, si esta carta tiene 3 o más miembros apilados bajo ella, inflige 50 de daño especial al Centro o Collab oponente."
+
+msgid "hBP02-085_NAME"
+msgstr "HOLOLIVE FANTASY"
+
+msgid "hBP02-085_EFFECT"
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros con #Gen3 entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
+
+msgid "hBP02-080_NAME"
+msgstr ""
+
+msgid "hBP02-080_EFFECT"
+msgstr ""
+
+msgid "hBP02-096_NAME"
+msgstr ""
+
+msgid "hBP02-096_EFFECT"
+msgstr ""
+
+msgid "hBD24-016_NAME"
+msgstr ""
+
+msgid "hBD24-016_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-016_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-016_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-016_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-034_NAME"
+msgstr ""
+
+msgid "hBP02-034_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-034_ART_1_NAME"
+msgstr ""
+
+msgid "hBP02-034_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP02-035_NAME"
+msgstr ""
+
+msgid "hBP02-035_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-036_NAME"
+msgstr ""
+
+msgid "hBP02-036_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-036_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-036_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-037_NAME"
+msgstr ""
+
+msgid "hBP02-037_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-038_NAME"
+msgstr ""
+
+msgid "hBP02-038_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-038_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-038_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-041_NAME"
+msgstr ""
+
+msgid "hBP02-041_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-041_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-041_GIFT_NAME"
+msgstr ""
+
+msgid "hBP02-041_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP02-060_NAME"
+msgstr ""
+
+msgid "hBP02-060_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-060_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-060_BLOOM_EFFECT"
 msgstr ""
 

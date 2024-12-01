@@ -3172,3 +3172,105 @@ msgstr "HOLOLIVE FANTASY"
 msgid "hBP02-085_EFFECT"
 msgstr "This card can only be played if you have 6 or fewer cards in your hand, excluding this card.\n\nLook at the top four cards of your Deck. Reveal any number of them that are holomems with #Gen3 and put them into your hand. Then put the remaining cards on the bottom of your Deck in any order."
 
+msgid "hBP02-080_NAME"
+msgstr "Secret Society HoloX"
+
+msgid "hBP02-080_EFFECT"
+msgstr "This card can only be played if you have 6 or fewer cards in your hand, excluding this card.\n\nLook at the top four cards of your Deck. Reveal any number of them that are holomems with #SecretSocietyholoX and put them into your hand. Then put the remaining cards on the bottom of your Deck in any order."
+
+msgid "hBP02-096_NAME"
+msgstr "Inu"
+
+msgid "hBP02-096_EFFECT"
+msgstr "The Arts of the holomem with this Mascot attached gain +10 power.\n\nIf this is attached to Sakamata Chloe, it gains the following effect: when the holomem with this Mascot attached Downs one of your opponent's holomems, send a Cheer from your Archive to one of your holomems with #SecretSocietyholoX.\n\nYou may only attach 1 Mascot to a holomem."
+
+msgid "hBD24-016_NAME"
+msgstr "Sakamata Chloe"
+
+msgid "hBD24-016_SKILL_NAME"
+msgstr "Blue Enhance"
+
+msgid "hBD24-016_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Blue holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-016_SPSKILL_NAME"
+msgstr "Anniversary Gift ~Blue~"
+
+msgid "hBD24-016_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Blue holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBP02-034_NAME"
+msgstr "Nakiri Ayame"
+
+msgid "hBP02-034_ART_0_NAME"
+msgstr "I'm grass"
+
+msgid "hBP02-034_ART_1_NAME"
+msgstr "Organic Shot"
+
+msgid "hBP02-034_ART_1_EFFECT"
+msgstr "If this holomem has a Tool or Mascot attached, deal 30 special damage to your opponent's Center or Collab holomem."
+
+msgid "hBP02-035_NAME"
+msgstr "Sakamata Chloe"
+
+msgid "hBP02-035_ART_0_NAME"
+msgstr "Bakku bakku baku~n"
+
+msgid "hBP02-036_NAME"
+msgstr "Sakamata Chloe"
+
+msgid "hBP02-036_ART_0_NAME"
+msgstr "A reality that seems to be spat out and thrown away!"
+
+msgid "hBP02-036_COLLAB_NAME"
+msgstr "Cleaner (Intern)"
+
+msgid "hBP02-036_COLLAB_EFFECT"
+msgstr "Look at the top three cards of your Deck. Reveal one that is a 2nd Bloom holomem with #SecretSocietyholoX and put it into your hand. Then put the remaining cards on the bottom of your Deck in any order."
+
+msgid "hBP02-037_NAME"
+msgstr "Sakamata Chloe"
+
+msgid "hBP02-037_ART_0_NAME"
+msgstr "Only Two of Us at the Beach"
+
+msgid "hBP02-038_NAME"
+msgstr "Sakamata Chloe"
+
+msgid "hBP02-038_ART_0_NAME"
+msgstr "(This is where I enjoy it)"
+
+msgid "hBP02-038_BLOOM_NAME"
+msgstr "I'll bakku bakku baku~n your heart❤️"
+
+msgid "hBP02-038_BLOOM_EFFECT"
+msgstr "Look at the top 3 cards of your Cheer Deck. Reveal 1 Cheer from among them and send it to any of your holomems. Then put the remaining cards on the bottom of your Deck in any order."
+
+msgid "hBP02-041_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hBP02-041_ART_0_NAME"
+msgstr "Poison Neko"
+
+msgid "hBP02-041_ART_0_EFFECT"
+msgstr "You may archive 1 Blue Cheer from this holomem for the following effect: deal 20 special damage to your opponent's Center holomem and one of their Back holomems."
+
+msgid "hBP02-041_GIFT_NAME"
+msgstr "Poisonous Love"
+
+msgid "hBP02-041_GIFT_EFFECT"
+msgstr "(Center position only) All holomems named Nekomata Okayu on your stage deal +20 damage when they deal special damage to your opponent's Center holomem."
+
+msgid "hBP02-060_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hBP02-060_ART_0_NAME"
+msgstr "Charm that cannot be hidden"
+
+msgid "hBP02-060_BLOOM_NAME"
+msgstr "Seductive Gaze"
+
+msgid "hBP02-060_BLOOM_EFFECT"
+msgstr "You may restore 50 HP to one of your Back holomems. Deal 10 special damage to your opponent's Center holomem for each 10 HP restored by this."
+

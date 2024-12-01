@@ -3172,3 +3172,105 @@ msgstr "HOLOLIVE FANTASY"
 msgid "hBP02-085_EFFECT"
 msgstr "このカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、#3期生を持つホロメンを好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
 
+msgid "hBP02-080_NAME"
+msgstr "秘密結社holoX"
+
+msgid "hBP02-080_EFFECT"
+msgstr "このカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、#秘密結社holoXを持つホロメンを好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hBP02-096_NAME"
+msgstr "イヌ"
+
+msgid "hBP02-096_EFFECT"
+msgstr "このマスコットが付いているホロメンのアーツ+10。\n\n◆〈沙花叉クロヱ〉に付いていたら能力追加 このマスコットが付いているホロメンが相手のホロメンをダウンさせた時、自分のアーカイブのエール1枚を、自分の#秘密結社holoXを持つホロメンに送れる。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hBD24-016_NAME"
+msgstr "沙花叉クロヱ"
+
+msgid "hBD24-016_SKILL_NAME"
+msgstr "ブルーエンハンス"
+
+msgid "hBD24-016_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の青ホロメン1人のアーツ+20。"
+
+msgid "hBD24-016_SPSKILL_NAME"
+msgstr "Anniversary Gift ~Blue~"
+
+msgid "hBD24-016_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、青ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP02-034_NAME"
+msgstr "百鬼あやめ"
+
+msgid "hBP02-034_ART_0_NAME"
+msgstr "余は草"
+
+msgid "hBP02-034_ART_1_NAME"
+msgstr "オーガニックショット"
+
+msgid "hBP02-034_ART_1_EFFECT"
+msgstr "このホロメンにツールかマスコットが付いている時、相手のセンターホロメンかコラボホロメンに特殊ダメージ30を与える。"
+
+msgid "hBP02-035_NAME"
+msgstr "沙花叉クロヱ"
+
+msgid "hBP02-035_ART_0_NAME"
+msgstr "ばっくばっくばく〜ん"
+
+msgid "hBP02-036_NAME"
+msgstr "沙花叉クロヱ"
+
+msgid "hBP02-036_ART_0_NAME"
+msgstr "吐いて捨てるような現実を!"
+
+msgid "hBP02-036_COLLAB_NAME"
+msgstr "掃除屋でインターン"
+
+msgid "hBP02-036_COLLAB_EFFECT"
+msgstr "自分のデッキの上から3枚を見る。その中から、#秘密結社holoxを持つ2ndホロメン1枚を公開し、手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hBP02-037_NAME"
+msgstr "沙花叉クロヱ"
+
+msgid "hBP02-037_ART_0_NAME"
+msgstr "ふたりじめビーチ"
+
+msgid "hBP02-038_NAME"
+msgstr "沙花叉クロヱ"
+
+msgid "hBP02-038_ART_0_NAME"
+msgstr "(ここ喜ぶ所です)"
+
+msgid "hBP02-038_BLOOM_NAME"
+msgstr "君の心をばっくばっぐぱく~んしちゃうぞ♡"
+
+msgid "hBP02-038_BLOOM_EFFECT"
+msgstr "自分のエールデッキの上から3枚を見る。その中から、エール1枚を公開し、自分のホロメンに送る。そして残ったエールを好きな順でエールデッキの下に戻す。"
+
+msgid "hBP02-041_NAME"
+msgstr "猫又おかゆ"
+
+msgid "hBP02-041_ART_0_NAME"
+msgstr "ぽいずん猫"
+
+msgid "hBP02-041_ART_0_EFFECT"
+msgstr "このホロメンの青エール1枚をアーカイブできる:相手のセンターホロメンとバックホロメン1人に特殊ダメージ20を与える。"
+
+msgid "hBP02-041_GIFT_NAME"
+msgstr "毒の愛"
+
+msgid "hBP02-041_GIFT_EFFECT"
+msgstr "[センターポジション限定] 自分のステージの〈猫又おかゆ〉全員が相手のセンターホロメンに与える特殊ダメージ+20。"
+
+msgid "hBP02-060_NAME"
+msgstr "癒月ちょこ"
+
+msgid "hBP02-060_ART_0_NAME"
+msgstr "隠しきれない魅力"
+
+msgid "hBP02-060_BLOOM_NAME"
+msgstr "誘惑の視線"
+
+msgid "hBP02-060_BLOOM_EFFECT"
+msgstr "自分のバックホロメン1人のHP50回復できる:相手のセンターホロメンに、回復したダメージ10につき、特殊ダメージ10を与える。"
+

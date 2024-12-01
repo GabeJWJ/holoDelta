@@ -709,6 +709,7 @@ func sync_archive(list_of_inside_ids):
 	archive.cardList.clear()
 	for inside_id in list_of_inside_ids:
 		archive.cardList.append(all_cards[inside_id])
+	archive.update_size()
 
 func please_sync_archive():
 	var list_of_inside_ids = []

@@ -33,13 +33,12 @@ func update_size() -> void:
 		visible = false
 	else:
 		if archive:
-			update_back.rpc(cardList[0].cardFront)
+			archive_texture_sanity()
 		visible = true
 		scale.y = 0.02 * cardList.size()
 		remaining = cardList.size()
 		update_text()
 
-@rpc("any_peer", "call_local", "reliable")
 func update_back(back : Image) -> void:
 	#Changes the texture of the fuda. Used for cosmetics and showing the top card of archive
 	#back : Image (309x429 with rounded corners) - the texture to set to
@@ -64,30 +63,8 @@ func shuffle() -> void:
 	update_size()
 	emit_signal("shuffled")
 
-@rpc("any_peer", "call_local", "reliable")
-func archive_texture_sanity(cardNum : String, artNum : int) -> void:
-	#Sets the texture of the archive to match the given card
-	#Kind of outdated - will cause some issues with proxies not showing.
-	#cardNum : String (card number) - the unique card number of the top card
-	#artNum : int - the alt art index (art_index in cardData.db/cardHasArt)
-	
-	var art_data = Database.db.select_rows("cardHasArt","cardID LIKE '" + cardNum + "' AND art_index = " + str(artNum), ["*"])
-	var newMaterial = StandardMaterial3D.new()
-	if art_data.is_empty():
-		match Settings.settings.Language:
-			"ja":
-				newMaterial.albedo_texture = load("res://Sou_Desu_Ne_JP.png")
-			_:
-				newMaterial.albedo_texture = load("res://Sou_Desu_Ne.png")
-	elif art_data[0].unrevealed and !Settings.settings.AllowUnrevealed:
-		newMaterial.albedo_texture = load("res://spoilers.png")
-	else:
-		var image = Image.new()
-		image.load_png_from_buffer(art_data[0].art)
-		newMaterial.albedo_texture = ImageTexture.create_from_image(image)
-	
-	$fuda/Plane.set_surface_override_material(0,newMaterial)
-
+func archive_texture_sanity() -> void:
+	update_back(cardList[0].cardFront.get_image())
 
 func _on_static_body_3d_input_event(_camera, event, _position, _normal, _shape_idx) -> void:
 	#Fires when the static body 3d (a bounding rectangle for the fuda) is clicked
