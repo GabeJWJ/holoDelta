@@ -3274,3 +3274,54 @@ msgstr "Seductive Gaze"
 msgid "hBP02-060_BLOOM_EFFECT"
 msgstr "You may restore 50 HP to one of your Back holomems. Deal 10 special damage to your opponent's Center holomem for each 10 HP restored by this."
 
+msgid "hBP02-004_NAME"
+msgstr "Sakamata Chloe"
+
+msgid "hBP02-004_SKILL_NAME"
+msgstr "poepoepoe~"
+
+msgid "hBP02-004_SKILL_EFFECT"
+msgstr "(Once per turn) Can be used if your Center holomem is Sakamata Chloe: look at the top 3 cards of your Deck. You may Archive those cards, or return them to the top of your Deck in any order."
+
+msgid "hBP02-004_SPSKILL_NAME"
+msgstr "Life Reset Button"
+
+msgid "hBP02-004_SPSKILL_EFFECT"
+msgstr "(Once per game) Count the number of cards in your hand, then shuffle all cards in your hand and all holomems in your Archive into your Deck. Then, for each card you returned from your hand to your Deck, draw one card from your Deck."
+
+msgid "hBP02-039_NAME"
+msgstr "Sakamata Chloe"
+
+msgid "hBP02-039_ART_0_NAME"
+msgstr "holoX Slots"
+
+msgid "hBP02-039_ART_0_EFFECT"
+msgstr "You may reveal the top 3 cards of your deck. For each holomem revealed, this Art gains +20 power. Then Archive the revealed cards."
+
+msgid "hBP02-039_GIFT_NAME"
+msgstr "puipuipui~"
+
+msgid "hBP02-039_GIFT_EFFECT"
+msgstr "(Once per turn) When you reveal cards with this holomem's Art \"holoX Slots\", you may put 1 of them that is a Support card into your hand instead of Archiving it."
+
+msgid "hBP02-040_NAME"
+msgstr "Sakamata Chloe"
+
+msgid "hBP02-040_ART_0_NAME"
+msgstr "holoX Slots"
+
+msgid "hBP02-040_ART_0_EFFECT"
+msgstr "You may reveal the top 3 cards of your deck. For each holomem revealed, this Art gains +20 power. Then Archive the revealed cards."
+
+msgid "hBP02-040_GIFT_NAME"
+msgstr "Hot streak~"
+
+msgid "hBP02-040_GIFT_EFFECT"
+msgstr "(Once per turn) When you reveal cards with this holomem's Art \"holoX Slots\", if the three revealed cards are all holomems with the same Bloom level, your opponent loses 1 LIFE."
+
+msgid "hBP02-078_NAME"
+msgstr "Kanata Construction"
+
+msgid "hBP02-078_EFFECT"
+msgstr "This card can only be played if you have 6 or fewer cards in your hand, excluding this card.\n\nLook at the top four cards of your Deck. Reveal any number of them that are holomems named Amane Kanata, AZKi, or Sakamata Chloe and put them into your hand. Then put the remaining cards on the bottom of your Deck in any order."
+

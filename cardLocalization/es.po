@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2024-12-01 21:34\n"
+"PO-Revision-Date: 2024-12-02 16:53\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Cuando este miembro es Derribado, Pierde 2 VIDAS."
@@ -3246,16 +3246,19 @@ msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, 
 "Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros con #Gen3 entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
 
 msgid "hBP02-080_NAME"
-msgstr ""
+msgstr "Secret Society HoloX"
 
 msgid "hBP02-080_EFFECT"
-msgstr ""
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros con #SecretSocietyholoX aentre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
 
 msgid "hBP02-096_NAME"
-msgstr ""
+msgstr "Inu"
 
 msgid "hBP02-096_EFFECT"
-msgstr ""
+msgstr "Las Artes del miembro con esta Mascota acoplada ganan +10 de poder.\n\n"
+"Si esta Mascota está acoplada a Sakamata Chloe, gana el siguiente efecto: Cuando el miembro con esta Mascota acoplada Derriba un miembro Oponente, envía una Ovación desde tu Archivo a uno de tus miembros con #SecretSocietyholoX.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
 
 msgid "hBD24-016_NAME"
 msgstr ""
@@ -3273,77 +3276,128 @@ msgid "hBD24-016_SPSKILL_EFFECT"
 msgstr ""
 
 msgid "hBP02-034_NAME"
-msgstr ""
+msgstr "Nakiri Ayame"
 
 msgid "hBP02-034_ART_0_NAME"
-msgstr ""
+msgstr "Soy pasto"
 
 msgid "hBP02-034_ART_1_NAME"
-msgstr ""
+msgstr "Foto Orgánica"
 
 msgid "hBP02-034_ART_1_EFFECT"
-msgstr ""
+msgstr "Si este miembro tiene una Herramienta o Mascota acoplada, inflige 30 de daño especial al Centro o Collab oponente."
 
 msgid "hBP02-035_NAME"
-msgstr ""
+msgstr "Sakamata Chloe"
 
 msgid "hBP02-035_ART_0_NAME"
-msgstr ""
+msgstr "Bakku bakku baku~n"
 
 msgid "hBP02-036_NAME"
-msgstr ""
+msgstr "Sakamata Chloe"
 
 msgid "hBP02-036_ART_0_NAME"
-msgstr ""
+msgstr "Una realidad que parece ser escupida y desechada!"
 
 msgid "hBP02-036_COLLAB_NAME"
-msgstr ""
+msgstr "Limpiadora (Interna)"
 
 msgid "hBP02-036_COLLAB_EFFECT"
-msgstr ""
+msgstr "Mira las 3 cartas del tope de tu Deck. Revela un miembro 2nd Bloom con #SecretSocietyholoX entre ellas y ponlo en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
 
 msgid "hBP02-037_NAME"
-msgstr ""
+msgstr "Sakamata Chloe"
 
 msgid "hBP02-037_ART_0_NAME"
-msgstr ""
+msgstr "Solo los dos en la playa"
 
 msgid "hBP02-038_NAME"
-msgstr ""
+msgstr "Sakamata Chloe"
 
 msgid "hBP02-038_ART_0_NAME"
-msgstr ""
+msgstr "(Aquí es donde disfruto más)"
 
 msgid "hBP02-038_BLOOM_NAME"
-msgstr ""
+msgstr "Tu corazón hará bakku bakku baku~n❤️"
 
 msgid "hBP02-038_BLOOM_EFFECT"
-msgstr ""
+msgstr "Mira las 3 cartas del tope de tu Deck de Ovaciones. Revela 1 Ovación entre ellas y envíala a uno de tus miembros. Luego pon las cartas restantes en el fondo de tu Deck de Ovaciones en cualquier orden."
 
 msgid "hBP02-041_NAME"
-msgstr ""
+msgstr "Nekomata Okayu"
 
 msgid "hBP02-041_ART_0_NAME"
-msgstr ""
+msgstr "Gata Venenosa"
 
 msgid "hBP02-041_ART_0_EFFECT"
-msgstr ""
+msgstr "Puedes Archivar 1 Ovación Azul desde este miembro, si lo haces: inflige 20 de daño especial al Centro oponente y a uno de los miembros en su Backstage."
 
 msgid "hBP02-041_GIFT_NAME"
-msgstr ""
+msgstr "Amor Venenoso"
 
 msgid "hBP02-041_GIFT_EFFECT"
-msgstr ""
+msgstr "(Solo posición de Centro) Todos los miembros llamados Nekomata Okayu en tu escenario infligen +20 de daño especial al Centro de tu oponente."
 
 msgid "hBP02-060_NAME"
-msgstr ""
+msgstr "Yuzuki Choco"
 
 msgid "hBP02-060_ART_0_NAME"
-msgstr ""
+msgstr "Encanto que no se puede ocultar"
 
 msgid "hBP02-060_BLOOM_NAME"
-msgstr ""
+msgstr "Mirada Seductora"
 
 msgid "hBP02-060_BLOOM_EFFECT"
+msgstr "Puede restaurar 50 HP a uno de tus miembros en el Backstage. Inflige 10 de daño especial al Centro de tu oponente por cada 10 HP restaurado por este efecto."
+
+msgid "hBP02-004_NAME"
+msgstr ""
+
+msgid "hBP02-004_SKILL_NAME"
+msgstr ""
+
+msgid "hBP02-004_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-004_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP02-004_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-039_NAME"
+msgstr ""
+
+msgid "hBP02-039_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-039_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-039_GIFT_NAME"
+msgstr ""
+
+msgid "hBP02-039_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP02-040_NAME"
+msgstr ""
+
+msgid "hBP02-040_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-040_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-040_GIFT_NAME"
+msgstr ""
+
+msgid "hBP02-040_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP02-078_NAME"
+msgstr ""
+
+msgid "hBP02-078_EFFECT"
 msgstr ""
 
