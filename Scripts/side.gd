@@ -623,7 +623,6 @@ func showLookAt(list_of_cards):
 		newButton.id = actualCard.cardID
 		newButton.pressed.connect(_on_list_card_clicked.bind(actualCard.cardID))
 		newButton.mouse_entered.connect(update_info.bind(actualCard.cardID))
-		#newButton.mouse_exited.connect(clear_info)
 		lookAtList.add_child(newButton)
 		newButton.scale = Vector2(0.7,0.7)
 		newButton.position = Vector2(210*i+5,5)
@@ -666,7 +665,7 @@ func removeFromLookAt(card_id):
 func hideLookAt(endOfAction=true):
 	if currentFuda:
 		currentFuda._update_looking(false)
-		if currentFuda in [deck, cheerDeck] and currentPrompt != 297:
+		if currentFuda in [deck, cheerDeck] and currentPrompt not in [297, 397]:
 			currentFuda.shuffle()
 	elif currentPrompt == 297:
 		deck._update_looking(false)
@@ -1094,7 +1093,7 @@ func _on_list_card_clicked(card_id):
 	
 	var actualCard = all_cards[currentCard]
 	var fullFuda = true
-	if currentPrompt in [297]:
+	if currentPrompt in [297, 397]:
 		fullFuda = false
 	
 	#Requires zone target and thus must be broken up by fuda

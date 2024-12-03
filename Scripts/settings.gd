@@ -14,7 +14,7 @@ var settings = {}
 @onready var json = JSON.new()
 var languages = [["en","English"], ["ja","日本語"], ["es", "Español"]] #Contains both the locale code and the user-friendly text for buttons
 enum bloomCode {OK,Instant,Skip,No} #OK - can bloom normally, Instant - can bloom on something played this turn, Skip - can bloom a 2nd on debut, No - can't bloom
-var version = "1.1.4.3"
+var version = "1.1.4.4"
 
 var cardText = {}
 
