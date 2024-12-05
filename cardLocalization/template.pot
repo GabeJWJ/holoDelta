@@ -355,6 +355,9 @@ msgstr ""
 msgid "HoloWitch"
 msgstr ""
 
+msgid "Languages"
+msgstr ""
+
 msgid "Advent"
 msgstr ""
 
@@ -3416,5 +3419,44 @@ msgid "hBP02-074_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP02-074_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-048_NAME"
+msgstr ""
+
+msgid "hBP02-048_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-049_NAME"
+msgstr ""
+
+msgid "hBP02-049_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-049_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-049_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-050_NAME"
+msgstr ""
+
+msgid "hBP02-050_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-050_ART_1_NAME"
+msgstr ""
+
+msgid "hBP02-084_NAME"
+msgstr ""
+
+msgid "hBP02-084_EFFECT"
+msgstr ""
+
+msgid "hBP02-097_NAME"
+msgstr ""
+
+msgid "hBP02-097_EFFECT"
 msgstr ""
 

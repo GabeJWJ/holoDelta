@@ -355,6 +355,9 @@ msgstr "魔法少女クロヱ"
 msgid "HoloWitch"
 msgstr "ホロウィッチ"
 
+msgid "Languages"
+msgstr "語学"
+
 msgid "Advent"
 msgstr "Advent"
 
@@ -3417,4 +3420,43 @@ msgstr "荒波をゆく奔放の牙!"
 
 msgid "hBP02-074_COLLAB_EFFECT"
 msgstr "サイコロを1回振れる:偶数の時、自分のデッキから、ツール1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP02-048_NAME"
+msgstr "クレイジー・オリー"
+
+msgid "hBP02-048_ART_0_NAME"
+msgstr "ゾンばんは!"
+
+msgid "hBP02-049_NAME"
+msgstr "クレイジー・オリー"
+
+msgid "hBP02-049_ART_0_NAME"
+msgstr "おつクレイジー!"
+
+msgid "hBP02-049_COLLAB_NAME"
+msgstr "オリーがいつも見てるよ"
+
+msgid "hBP02-049_COLLAB_EFFECT"
+msgstr "自分のデッキを1枚引いた後、手札1枚をアーカイブする。自分のデッキを1枚"
+
+msgid "hBP02-050_NAME"
+msgstr "クレイジー・オリー"
+
+msgid "hBP02-050_ART_0_NAME"
+msgstr "君を大好きな後輩"
+
+msgid "hBP02-050_ART_1_NAME"
+msgstr "きゃ~! 先輩ごめ~ん!"
+
+msgid "hBP02-084_NAME"
+msgstr "みっころね24"
+
+msgid "hBP02-084_EFFECT"
+msgstr "自分のデッキを2枚引き、サイコロを1回振る: 3か5か6の時、自分のデッキから、Debutホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。2か4の時、自分のデッキを1枚引く。"
+
+msgid "hBP02-097_NAME"
+msgstr "UDIN"
+
+msgid "hBP02-097_EFFECT"
+msgstr "このマスコットが付いているホロメンのアーツ+10。\n\n◆〈クレイジー・オリー〉に付いていたら能力追加このマスコットが付いているホロメンがBloomした時、自分のデッキを1枚引いた後、手札1枚をアーカイブする。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
 

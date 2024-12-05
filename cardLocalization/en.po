@@ -355,6 +355,9 @@ msgstr "Magical Girl Chloe"
 msgid "HoloWitch"
 msgstr "HoloWitch"
 
+msgid "Languages"
+msgstr "Languages"
+
 msgid "Advent"
 msgstr "Advent"
 
@@ -3417,4 +3420,43 @@ msgstr "Unrestrained fangs sailing through rough seas!"
 
 msgid "hBP02-074_COLLAB_EFFECT"
 msgstr "You may roll a dice. If the result is even, reveal a Tool card from your Deck and put it into your hand. Then shuffle your Deck."
+
+msgid "hBP02-048_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-048_ART_0_NAME"
+msgstr "Zombanwa!"
+
+msgid "hBP02-049_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-049_ART_0_NAME"
+msgstr "Otsu-kureiji!"
+
+msgid "hBP02-049_COLLAB_NAME"
+msgstr "Ollie is always watching you"
+
+msgid "hBP02-049_COLLAB_EFFECT"
+msgstr "Draw a card, then Archive 1 card from your hand."
+
+msgid "hBP02-050_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-050_ART_0_NAME"
+msgstr "Kouhai who loves you"
+
+msgid "hBP02-050_ART_1_NAME"
+msgstr "Whoops! Sorry Senpai!"
+
+msgid "hBP02-084_NAME"
+msgstr "Mikkorone24"
+
+msgid "hBP02-084_EFFECT"
+msgstr "Draw 2 cards, then roll a dice. If the result is 3, 5, or 6, reveal a Debut holomem from your deck and put into your hand, then shuffle your deck. If the result is 2 or 4, draw a card."
+
+msgid "hBP02-097_NAME"
+msgstr "UDIN"
+
+msgid "hBP02-097_EFFECT"
+msgstr "The Arts of the holomem with this Mascot attached gain +10 power.\n\nIf this is attached to Kureiji Ollie, it gains the following effect: when the holomem that this Mascot is attached to Blooms, draw 1 card from your Deck then Archive 1 card from your hand.\n\nYou may only attach 1 Mascot to a holomem."
 
