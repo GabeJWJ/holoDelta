@@ -334,6 +334,27 @@ msgstr "Yukoku Roberu"
 msgid "Yuzuki Choco"
 msgstr "Yuzuki Choco"
 
+msgid "Magical Girl Miko"
+msgstr "Magical Girl Miko"
+
+msgid "Magical Girl Kanata"
+msgstr "Magical Girl Kanata"
+
+msgid "Magical Girl Shion"
+msgstr "Magical Girl Shion"
+
+msgid "Magical Girl Marine"
+msgstr "Magical Girl Marine"
+
+msgid "Magical Girl Luna"
+msgstr "Magical Girl Luna"
+
+msgid "Magical Girl Chloe"
+msgstr "Magical Girl Chloe"
+
+msgid "HoloWitch"
+msgstr "HoloWitch"
+
 msgid "Advent"
 msgstr "Advent"
 
@@ -3324,4 +3345,76 @@ msgstr "Kanata Construction"
 
 msgid "hBP02-078_EFFECT"
 msgstr "This card can only be played if you have 6 or fewer cards in your hand, excluding this card.\n\nLook at the top four cards of your Deck. Reveal any number of them that are holomems named Amane Kanata, AZKi, or Sakamata Chloe and put them into your hand. Then put the remaining cards on the bottom of your Deck in any order."
+
+msgid "hBP02-069_NAME"
+msgstr "Magical Girl Miko"
+
+msgid "hBP02-069_ART_0_NAME"
+msgstr "The 'Shrine Maiden' of 'Holo'"
+
+msgid "hBP02-069_COLLAB_NAME"
+msgstr "A prayer to make everyone's wishes come true!"
+
+msgid "hBP02-069_COLLAB_EFFECT"
+msgstr "You may roll a dice. If the result is odd, reveal a Red Cheer or Blue Cheer from your Cheer Deck and send it to one of your Back holomems. Then shuffle your Cheer Deck."
+
+msgid "hBP02-070_NAME"
+msgstr "Magical Girl Kanata"
+
+msgid "hBP02-070_ART_0_NAME"
+msgstr "The 'Angel' of 'Holo'"
+
+msgid "hBP02-070_COLLAB_NAME"
+msgstr "Reach out your hand, and hold on!"
+
+msgid "hBP02-070_COLLAB_EFFECT"
+msgstr "You may roll a dice. If the result is odd, reveal a White Cheer or Green Cheer from your Cheer Deck and send it to one of your Back holomems. Then shuffle your Cheer Deck."
+
+msgid "hBP02-071_NAME"
+msgstr "Magical Girl Luna"
+
+msgid "hBP02-071_ART_0_NAME"
+msgstr "The 'Princess' of 'Holo'"
+
+msgid "hBP02-071_COLLAB_NAME"
+msgstr "Sweet happiness, share it with me!"
+
+msgid "hBP02-071_COLLAB_EFFECT"
+msgstr "You may roll a dice. If the result is odd, reveal a Purple Cheer or Yellow Cheer from your Cheer Deck and send it to one of your Back holomems. Then shuffle your Cheer Deck."
+
+msgid "hBP02-072_NAME"
+msgstr "Magical Girl Shion"
+
+msgid "hBP02-072_ART_0_NAME"
+msgstr "The 'Witch' of 'Holo'"
+
+msgid "hBP02-072_COLLAB_NAME"
+msgstr "Make the sleeping mystery yours!"
+
+msgid "hBP02-072_COLLAB_EFFECT"
+msgstr "You may roll a dice. If the result is even, reveal an Event card from your Deck and put it into your hand. Then shuffle your Deck."
+
+msgid "hBP02-073_NAME"
+msgstr "Magical Girl Marine"
+
+msgid "hBP02-073_ART_0_NAME"
+msgstr "The 'Pirate' of 'Holo'"
+
+msgid "hBP02-073_COLLAB_NAME"
+msgstr "Lock on to sparkling treasure!"
+
+msgid "hBP02-073_COLLAB_EFFECT"
+msgstr "You may roll a dice. If the result is even, reveal a Fan card from your Deck and put it into your hand. Then shuffle your Deck."
+
+msgid "hBP02-074_NAME"
+msgstr "Magical Girl Chloe"
+
+msgid "hBP02-074_ART_0_NAME"
+msgstr "The 'Orca' of 'Holo'"
+
+msgid "hBP02-074_COLLAB_NAME"
+msgstr "Unrestrained fangs sailing through rough seas!"
+
+msgid "hBP02-074_COLLAB_EFFECT"
+msgstr "You may roll a dice. If the result is even, reveal a Tool card from your Deck and put it into your hand. Then shuffle your Deck."
 

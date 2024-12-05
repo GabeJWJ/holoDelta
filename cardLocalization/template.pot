@@ -334,6 +334,27 @@ msgstr ""
 msgid "Yuzuki Choco"
 msgstr ""
 
+msgid "Magical Girl Miko"
+msgstr ""
+
+msgid "Magical Girl Kanata"
+msgstr ""
+
+msgid "Magical Girl Shion"
+msgstr ""
+
+msgid "Magical Girl Marine"
+msgstr ""
+
+msgid "Magical Girl Luna"
+msgstr ""
+
+msgid "Magical Girl Chloe"
+msgstr ""
+
+msgid "HoloWitch"
+msgstr ""
+
 msgid "Advent"
 msgstr ""
 
@@ -3323,5 +3344,77 @@ msgid "hBP02-078_NAME"
 msgstr ""
 
 msgid "hBP02-078_EFFECT"
+msgstr ""
+
+msgid "hBP02-069_NAME"
+msgstr ""
+
+msgid "hBP02-069_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-069_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-069_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-070_NAME"
+msgstr ""
+
+msgid "hBP02-070_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-070_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-070_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-071_NAME"
+msgstr ""
+
+msgid "hBP02-071_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-071_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-071_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-072_NAME"
+msgstr ""
+
+msgid "hBP02-072_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-072_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-072_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-073_NAME"
+msgstr ""
+
+msgid "hBP02-073_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-073_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-073_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-074_NAME"
+msgstr ""
+
+msgid "hBP02-074_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-074_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-074_COLLAB_EFFECT"
 msgstr ""
 

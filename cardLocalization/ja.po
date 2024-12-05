@@ -334,6 +334,27 @@ msgstr "夕刻ロベル"
 msgid "Yuzuki Choco"
 msgstr "癒月ちょこ"
 
+msgid "Magical Girl Miko"
+msgstr "魔法少女みこ"
+
+msgid "Magical Girl Kanata"
+msgstr "魔法少女かなた"
+
+msgid "Magical Girl Shion"
+msgstr "魔法少女シオン"
+
+msgid "Magical Girl Marine"
+msgstr "魔法少女マリン"
+
+msgid "Magical Girl Luna"
+msgstr "魔法少女ルーナ"
+
+msgid "Magical Girl Chloe"
+msgstr "魔法少女クロヱ"
+
+msgid "HoloWitch"
+msgstr "ホロウィッチ"
+
 msgid "Advent"
 msgstr "Advent"
 
@@ -3324,4 +3345,76 @@ msgstr "かなた建設"
 
 msgid "hBP02-078_EFFECT"
 msgstr "このカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、〈天音かなた〉と〈AZKi〉と〈沙花叉クロヱ〉を好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hBP02-069_NAME"
+msgstr "魔法少女みこ"
+
+msgid "hBP02-069_ART_0_NAME"
+msgstr "『巫女』の『ホロ』!"
+
+msgid "hBP02-069_COLLAB_NAME"
+msgstr "みんなの願いを咲かせる祈り!"
+
+msgid "hBP02-069_COLLAB_EFFECT"
+msgstr "サイコロを1回振れる:奇数の時、自分のエールデッキから、[赤エールか青エール]1枚を公開し、自分のバックホロメシに送る。そしてエールデッキをシャッフルする。"
+
+msgid "hBP02-070_NAME"
+msgstr "魔法少女かなた"
+
+msgid "hBP02-070_ART_0_NAME"
+msgstr "『天使』の『ホロ』!"
+
+msgid "hBP02-070_COLLAB_NAME"
+msgstr "この手を差し伸べ、つかんで握る!"
+
+msgid "hBP02-070_COLLAB_EFFECT"
+msgstr "サイコロを1回振れる:奇数の時、自分のエールデッキから、[白エールか緑エール]1枚を公開し、自分のバックホロメンに送る。そしてエールデッキをシャッフルする。"
+
+msgid "hBP02-071_NAME"
+msgstr "魔法少女ルーナ"
+
+msgid "hBP02-071_ART_0_NAME"
+msgstr "『姫』の『ホロ』!"
+
+msgid "hBP02-071_COLLAB_NAME"
+msgstr "甘~い幸せ、おすそわけ!"
+
+msgid "hBP02-071_COLLAB_EFFECT"
+msgstr "サイコロを1回振れる:奇数の時、自分のエールデッキから、[紫エールか黄エール]1枚を公開し、自分のバックホロメンに送る。そしてエールデッキをシャッフルする。"
+
+msgid "hBP02-072_NAME"
+msgstr "魔法少女シオン"
+
+msgid "hBP02-072_ART_0_NAME"
+msgstr "『魔女』の『ホロ』!"
+
+msgid "hBP02-072_COLLAB_NAME"
+msgstr "眠れる神秘を我が物に!"
+
+msgid "hBP02-072_COLLAB_EFFECT"
+msgstr "サイコロを1回振れる:偶数の時、自分のデッキから、イベント1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP02-073_NAME"
+msgstr "魔法少女マリン"
+
+msgid "hBP02-073_ART_0_NAME"
+msgstr "『海賊』の『ホロ』!"
+
+msgid "hBP02-073_COLLAB_NAME"
+msgstr "きらめくお宝、ロックオン!"
+
+msgid "hBP02-073_COLLAB_EFFECT"
+msgstr "サイコロを1回振れる:偶数の時、自分のデッキから、ファン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP02-074_NAME"
+msgstr "魔法少女クロヱ"
+
+msgid "hBP02-074_ART_0_NAME"
+msgstr "『シャチ』の『ホロ』!"
+
+msgid "hBP02-074_COLLAB_NAME"
+msgstr "荒波をゆく奔放の牙!"
+
+msgid "hBP02-074_COLLAB_EFFECT"
+msgstr "サイコロを1回振れる:偶数の時、自分のデッキから、ツール1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
 
