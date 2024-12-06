@@ -3460,3 +3460,66 @@ msgstr "UDIN"
 msgid "hBP02-097_EFFECT"
 msgstr "The Arts of the holomem with this Mascot attached gain +10 power.\n\nIf this is attached to Kureiji Ollie, it gains the following effect: when the holomem that this Mascot is attached to Blooms, draw 1 card from your Deck then Archive 1 card from your hand.\n\nYou may only attach 1 Mascot to a holomem."
 
+msgid "hBP02-006_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-006_SKILL_NAME"
+msgstr "Zombie Tactics"
+
+msgid "hBP02-006_SKILL_EFFECT"
+msgstr "(Once per turn) Make one of your holomems with #IDGen2 Bloom using a holomem from your Archive."
+
+msgid "hBP02-006_SPSKILL_NAME"
+msgstr "Ollie resurrection"
+
+msgid "hBP02-006_SPSKILL_EFFECT"
+msgstr "(Once per game) Draw 4 cards, then Archive 2 cards from your hand. Then, you may Bloom one of your holomems using a holomem from your Archive."
+
+msgid "hBP02-051_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-051_ART_0_NAME"
+msgstr "I'm going to see my oshi and scream at the top of my lungs!!"
+
+msgid "hBP02-051_BLOOM_NAME"
+msgstr "Max simping!!"
+
+msgid "hBP02-051_BLOOM_EFFECT"
+msgstr "You may Bloom one of your Debut holomems with #IDGen2 using a holomem from your Archive. You may only use the Bloom Effect \"Max simping!!\" once per turn."
+
+msgid "hBP02-052_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-052_ART_0_NAME"
+msgstr "In the name of justice, I..."
+
+msgid "hBP02-052_ART_0_EFFECT"
+msgstr "If there are any non-Purple Cheers attached to this holomem, this Art gains +20 Power."
+
+msgid "hBP02-052_BLOOM_NAME"
+msgstr "Path of Sincerity"
+
+msgid "hBP02-052_BLOOM_EFFECT"
+msgstr "Draw a card."
+
+msgid "hBP02-053_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-053_ART_0_NAME"
+msgstr "Calculated Tactics"
+
+msgid "hBP02-053_ART_0_EFFECT"
+msgstr "If there are at least 2 2nd Bloom holomems with #IDGen2 on your Stage, this Art gains +40 power."
+
+msgid "hBP02-053_BLOOM_NAME"
+msgstr "Resurrected Zombie"
+
+msgid "hBP02-053_BLOOM_EFFECT"
+msgstr "You may Archive 2 cards from your hand for the following effect: this holomem's Arts gain +40 power until the end of this turn."
+
+msgid "hBP02-081_NAME"
+msgstr "hololive ID 2nd Generation"
+
+msgid "hBP02-081_EFFECT"
+msgstr "This card can only be played if you have 6 or fewer cards in your hand, excluding this card.\n\nLook at the top four cards of your Deck. Reveal any number of them that are holomems with #IDGen2 and put them into your hand. Then put the remaining cards on the bottom of your Deck in any order."
+

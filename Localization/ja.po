@@ -1162,7 +1162,7 @@ msgstr "バトンタッチ: {costText}"
 
 #: Scripts/card.gd
 msgid "INFO_SUPPORT"
-msgstr "{supportText}({typeText})"
+msgstr "{supportText}({typeText}){tagsText}"
 
 #: Scripts/card.gd
 msgid "INFO_LIMITED"

@@ -3460,3 +3460,66 @@ msgstr "UDIN"
 msgid "hBP02-097_EFFECT"
 msgstr "このマスコットが付いているホロメンのアーツ+10。\n\n◆〈クレイジー・オリー〉に付いていたら能力追加このマスコットが付いているホロメンがBloomした時、自分のデッキを1枚引いた後、手札1枚をアーカイブする。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
 
+msgid "hBP02-006_NAME"
+msgstr "クレイジー・オリー"
+
+msgid "hBP02-006_SKILL_NAME"
+msgstr "ゾンビ戦術"
+
+msgid "hBP02-006_SKILL_EFFECT"
+msgstr "[ターンに1回] 自分の#ID2期生を持つホロメン1人を、自分のアーカイブのホロメンを使ってBloomさせる。"
+
+msgid "hBP02-006_SPSKILL_NAME"
+msgstr "蘇るオリー"
+
+msgid "hBP02-006_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキを4枚引いた後、手札2枚をアーカイブする。その後、自分のホロメン1人を、自分のアーカイブのホロメンを使ってBloomできる。"
+
+msgid "hBP02-051_NAME"
+msgstr "クレイジー・オリー"
+
+msgid "hBP02-051_ART_0_NAME"
+msgstr "推しを見て叫びまくるぞ!!"
+
+msgid "hBP02-051_BLOOM_NAME"
+msgstr "限界化!!"
+
+msgid "hBP02-051_BLOOM_EFFECT"
+msgstr "自分の#ID2期生を持つDebutホロメン1人を、自分のアーカイブのホロメンを使ってBloomできる。自分のブルームエフェクト「限界化!!」はターンに1回しか使えない。"
+
+msgid "hBP02-052_NAME"
+msgstr "クレイジー・オリー"
+
+msgid "hBP02-052_ART_0_NAME"
+msgstr "正義の名の下に、儂は"
+
+msgid "hBP02-052_ART_0_EFFECT"
+msgstr "このホロメンに紫以外のエールが付いている時、このアーツ+20。"
+
+msgid "hBP02-052_BLOOM_NAME"
+msgstr "真実一路"
+
+msgid "hBP02-052_BLOOM_EFFECT"
+msgstr "自分のデッキを1枚引く。"
+
+msgid "hBP02-053_NAME"
+msgstr "クレイジー・オリー"
+
+msgid "hBP02-053_ART_0_NAME"
+msgstr "計算された戦術"
+
+msgid "hBP02-053_ART_0_EFFECT"
+msgstr "自分のステージに#ID2期生を持つ2ndホロメンが2人以上いる時、このアーツ+40。"
+
+msgid "hBP02-053_BLOOM_NAME"
+msgstr "蘇りしゾンビ"
+
+msgid "hBP02-053_BLOOM_EFFECT"
+msgstr "自分の手札2枚をアーカイブできる:このターンの間、このホロメンのアーツ+40。"
+
+msgid "hBP02-081_NAME"
+msgstr "ホロライブインドネシア2期生"
+
+msgid "hBP02-081_EFFECT"
+msgstr "このカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、#ID2期生を持つホロメンを好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+

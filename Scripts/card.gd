@@ -232,7 +232,7 @@ func getTagsAsText():
 	if tags.size() == 0:
 		return ""
 	else:
-		return "#" + " #".join(tags)
+		return "#" + " #".join(tags.map(Settings.trans))
 
 
 func full_desc():

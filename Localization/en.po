@@ -750,6 +750,14 @@ msgid "LIST_ARCHIVE_HOLOMEM_BLOOM"
 msgstr "Bloom"
 
 #: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_BLOOM_FAST"
+msgstr "Instant Bloom"
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_BLOOM_FAST"
+msgstr "Instant Bloom"
+
+#: Scripts/side.gd
 msgid "LIST_CHEERDECK_CHEER_ATTACH"
 msgstr "Attach"
 

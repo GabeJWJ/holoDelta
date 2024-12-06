@@ -674,6 +674,7 @@ func hideLookAt(endOfAction=true):
 		newButton.queue_free()
 	lookAt.visible = false
 	cancel.visible = false
+	$CanvasLayer/OpponentLabel/MulliganWarning.visible = false
 	emit_signal("exited_list")
 	if endOfAction:
 		currentPrompt = -1
@@ -1104,11 +1105,18 @@ func _on_list_card_clicked(card_id):
 					popup.add_item(tr("LIST_DECK_HOLOMEM_PLAY"),600)
 				elif currentFuda == archive:
 					popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_PLAY"),610)
-			if all_bloomable_zones(actualCard)[Settings.bloomCode.OK].size() > 0 and is_turn and !first_turn:
-				if currentFuda == deck:
-					popup.add_item(tr("LIST_DECK_HOLOMEM_BLOOM"),601)
-				elif currentFuda == archive:
-					popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_BLOOM"),611)
+			if is_turn and !first_turn:
+				var bloomable = all_bloomable_zones(actualCard)
+				if bloomable[Settings.bloomCode.OK].size() > 0:
+					if currentFuda == deck:
+						popup.add_item(tr("LIST_DECK_HOLOMEM_BLOOM"),601)
+					elif currentFuda == archive:
+						popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_BLOOM"),611)
+				if bloomable[Settings.bloomCode.Instant].size() > 0:
+					if currentFuda == deck:
+						popup.add_item(tr("LIST_DECK_HOLOMEM_BLOOM_FAST"),604)
+					elif currentFuda == archive:
+						popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_BLOOM_FAST"),614)
 		"Cheer":
 			if all_occupied_zones().size() > 0:
 				if currentFuda == cheerDeck:
@@ -1545,6 +1553,11 @@ func _on_popup_menu_id_pressed(id):
 			removeFromLookAt(currentCard)
 			currentCard = -1
 			_move_sfx.rpc()
+		604: #Instant Bloom From Deck
+			hideLookAt()
+			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.Instant]
+			showZoneSelection(possibleZones)
+			currentPrompt = 604
 		610: #Play From Archive
 			hideLookAt()
 			var possibleZones = all_unoccupied_back_zones()
@@ -1562,6 +1575,11 @@ func _on_popup_menu_id_pressed(id):
 			var possibleZones = all_occupied_zones()
 			showZoneSelection(possibleZones)
 			currentPrompt = 612
+		614: #Instant Bloom From Archive
+			hideLookAt()
+			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.Instant]
+			showZoneSelection(possibleZones)
+			currentPrompt = 614
 		622: #Attach Cheer From Attach
 			var possibleZones = all_occupied_zones(false,currentAttached.cardID)
 			hideLookAt(false)
@@ -1922,7 +1940,7 @@ func _on_zone_clicked(zone_id):
 			hideZoneSelection()
 			can_undo_shuffle_hand = null
 			_place_sfx.rpc()
-		601: #Bloom From Deck
+		601,604: #Bloom From Deck
 			remove_from_fuda(currentCard,deck)
 			var actualCard = all_cards[currentCard]
 			bloom_on_zone(actualCard,actualZoneInfo[0])
@@ -1949,7 +1967,7 @@ func _on_zone_clicked(zone_id):
 			please_sync_archive()
 			hideZoneSelection()
 			_place_sfx.rpc()
-		611: #Bloom From Archive
+		611,614: #Bloom From Archive
 			remove_from_fuda(currentCard,archive)
 			var actualCard = all_cards[currentCard]
 			bloom_on_zone(actualCard,actualZoneInfo[0])
