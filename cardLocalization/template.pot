@@ -3523,3 +3523,123 @@ msgstr ""
 msgid "hBP02-081_EFFECT"
 msgstr ""
 
+msgid "hBD24-013_NAME"
+msgstr ""
+
+msgid "hBD24-013_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-013_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-013_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-013_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-002_NAME"
+msgstr ""
+
+msgid "hBP02-002_SKILL_NAME"
+msgstr ""
+
+msgid "hBP02-002_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-002_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP02-002_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP02-018_NAME"
+msgstr ""
+
+msgid "hBP02-018_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-019_NAME"
+msgstr ""
+
+msgid "hBP02-019_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-019_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP02-019_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP02-020_NAME"
+msgstr ""
+
+msgid "hBP02-020_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-021_NAME"
+msgstr ""
+
+msgid "hBP02-021_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-021_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-021_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-021_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-022_NAME"
+msgstr ""
+
+msgid "hBP02-022_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-022_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-022_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-022_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-023_NAME"
+msgstr ""
+
+msgid "hBP02-023_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-023_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-023_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-023_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-024_NAME"
+msgstr ""
+
+msgid "hBP02-024_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-024_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-094_NAME"
+msgstr ""
+
+msgid "hBP02-094_EFFECT"
+msgstr ""
+
+msgid "hBP02-101_NAME"
+msgstr ""
+
+msgid "hBP02-101_EFFECT"
+msgstr ""
+

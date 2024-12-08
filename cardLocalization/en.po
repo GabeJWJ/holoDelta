@@ -3523,3 +3523,123 @@ msgstr "hololive ID 2nd Generation"
 msgid "hBP02-081_EFFECT"
 msgstr "This card can only be played if you have 6 or fewer cards in your hand, excluding this card.\n\nLook at the top four cards of your Deck. Reveal any number of them that are holomems with #IDGen2 and put them into your hand. Then put the remaining cards on the bottom of your Deck in any order."
 
+msgid "hBD24-013_NAME"
+msgstr "Murasaki Shion"
+
+msgid "hBD24-013_SKILL_NAME"
+msgstr "Purple Enhance"
+
+msgid "hBD24-013_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Purple holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-013_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-013_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Purple holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBP02-002_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-002_SKILL_NAME"
+msgstr "HALU"
+
+msgid "hBP02-002_SKILL_EFFECT"
+msgstr "(Once per turn) Archive a Green Cheer from one of your holomems, then reveal a Cheer from your Cheer Deck and send it to any of your holomems. Then shuffle your Cheer Deck."
+
+msgid "hBP02-002_SPSKILL_NAME"
+msgstr "A Colorful Feast"
+
+msgid "hBP02-002_SPSKILL_EFFECT"
+msgstr "(Once per game) The Arts of all of your holomems with #IDGen2 gain +20 power for each color of Cheer attached to that holomem, until the end of this turn."
+
+msgid "hBP02-018_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-018_ART_0_NAME"
+msgstr "Perhatian!"
+
+msgid "hBP02-019_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-019_ART_0_NAME"
+msgstr "Very Easy!"
+
+msgid "hBP02-019_COLLAB_NAME"
+msgstr "How to get your friends to HALU"
+
+msgid "hBP02-019_COLLAB_EFFECT"
+msgstr "You may send 1 Cheer from your Archive to any of your holomems."
+
+msgid "hBP02-020_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-020_ART_0_NAME"
+msgstr "Royal Halu Sleepover"
+
+msgid "hBP02-021_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-021_ART_0_NAME"
+msgstr "So keep watching! I love you!"
+
+msgid "hBP02-021_ART_0_EFFECT"
+msgstr "You may send 1 Cheer from your Archive to any of your holomems."
+
+msgid "hBP02-021_BLOOM_NAME"
+msgstr "Sing and dance with all your heart"
+
+msgid "hBP02-021_BLOOM_EFFECT"
+msgstr "For each color of Cheer on your Stage, restore 10 HP to one of your holomems."
+
+msgid "hBP02-022_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-022_ART_0_NAME"
+msgstr "Spicy Night"
+
+msgid "hBP02-022_ART_0_EFFECT"
+msgstr "If there are at least two colors of Cheer on your Stage, this Art gains +20 power."
+
+msgid "hBP02-022_BLOOM_NAME"
+msgstr "What Are You Waiting For?"
+
+msgid "hBP02-022_BLOOM_EFFECT"
+msgstr "Reveal a Tatang from your Deck and put it into your hand. Then shuffle your Deck."
+
+msgid "hBP02-023_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-023_ART_0_NAME"
+msgstr "Peafowl Dance"
+
+msgid "hBP02-023_ART_0_EFFECT"
+msgstr "For each color of Cheer on your Stage, this Art gains +20 power."
+
+msgid "hBP02-023_BLOOM_NAME"
+msgstr "Kanjeng"
+
+msgid "hBP02-023_BLOOM_EFFECT"
+msgstr "Reveal a Cheer from your Cheer Deck and send it to one of your holomems. Then shuffle your Cheer Deck."
+
+msgid "hBP02-024_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP02-024_ART_0_NAME"
+msgstr "Uchi uchi, uchi da yo! It's Ookami Mio!"
+
+msgid "hBP02-024_ART_0_EFFECT"
+msgstr "You may move 1 Cheer from any of your holomems to one of your holomems with #JP."
+
+msgid "hBP02-094_NAME"
+msgstr "Tatang"
+
+msgid "hBP02-094_EFFECT"
+msgstr "The Arts of the holomem with this Mascot attached gain +10 power.\n\nIf this is attached to Pavolia Reine, it gains the following effect: the holomem with this Mascot attached has +30 HP.\n\nYou may only attach 1 Mascot to a holomem."
+
+msgid "hBP02-101_NAME"
+msgstr "Miofa"
+
+msgid "hBP02-101_EFFECT"
+msgstr "During your opponent's turn, when the holomem with this Fan attached is Downed, draw a card.\n\nThis Fan may only be attached to your Ookami Mio, and you may attach any number of this Fan to one holomem."
+

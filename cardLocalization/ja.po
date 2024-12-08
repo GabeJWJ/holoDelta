@@ -3523,3 +3523,123 @@ msgstr "ホロライブインドネシア2期生"
 msgid "hBP02-081_EFFECT"
 msgstr "このカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、#ID2期生を持つホロメンを好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
 
+msgid "hBD24-013_NAME"
+msgstr "紫咲シオン"
+
+msgid "hBD24-013_SKILL_NAME"
+msgstr "パープルエンハンス"
+
+msgid "hBD24-013_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の紫ホロメン1人のアーツ+20。"
+
+msgid "hBD24-013_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-013_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、紫ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP02-002_NAME"
+msgstr "パヴォリア・レイネ"
+
+msgid "hBP02-002_SKILL_NAME"
+msgstr "HALU"
+
+msgid "hBP02-002_SKILL_EFFECT"
+msgstr "[ターンに1回] 自分のホロメンのエール1枚をアーカイブすることで、自分のエールデッキから、エール1枚を公開し、自分のホロメンに送る。そしてエールデッキをシャッフルする。"
+
+msgid "hBP02-002_SPSKILL_NAME"
+msgstr "極彩色の宴"
+
+msgid "hBP02-002_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] このターンの間、自分のステージの#ID2期生を持つホ ロメン全員は、そのホロメンのエール1色につき、アーツ+20。"
+
+msgid "hBP02-018_NAME"
+msgstr "パヴォリア・レイネ"
+
+msgid "hBP02-018_ART_0_NAME"
+msgstr "ペルハティアン!"
+
+msgid "hBP02-019_NAME"
+msgstr "パヴォリア・レイネ"
+
+msgid "hBP02-019_ART_0_NAME"
+msgstr "Very Easy!"
+
+msgid "hBP02-019_COLLAB_NAME"
+msgstr "友達をHALUにさせる方法"
+
+msgid "hBP02-019_COLLAB_EFFECT"
+msgstr "自分のアーカイブのエール1枚を自分のホロメンに送れる。"
+
+msgid "hBP02-020_NAME"
+msgstr "パヴォリア・レイネ"
+
+msgid "hBP02-020_ART_0_NAME"
+msgstr "Royal Halu Sleepover"
+
+msgid "hBP02-021_NAME"
+msgstr "パヴォリア・レイネ"
+
+msgid "hBP02-021_ART_0_NAME"
+msgstr "だから見ててね!大好き!"
+
+msgid "hBP02-021_ART_0_EFFECT"
+msgstr "自分のアーカイブのエール1枚を自分のホロメンに送れる。"
+
+msgid "hBP02-021_BLOOM_NAME"
+msgstr "心を込めて歌って、踊ります。"
+
+msgid "hBP02-021_BLOOM_EFFECT"
+msgstr "自分のステージのエール1色につき、自分のホロメン1人のHP10回復。"
+
+msgid "hBP02-022_NAME"
+msgstr "パヴォリア・レイネ"
+
+msgid "hBP02-022_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-022_ART_0_EFFECT"
+msgstr "自分のステージにエールが2色以上ある時、このアーツ+20。"
+
+msgid "hBP02-022_BLOOM_NAME"
+msgstr "何を待っていますか?"
+
+msgid "hBP02-022_BLOOM_EFFECT"
+msgstr "自分のデッキから、〈Tatang〉1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP02-023_NAME"
+msgstr "パヴォリア・レイネ"
+
+msgid "hBP02-023_ART_0_NAME"
+msgstr "孔雀の舞"
+
+msgid "hBP02-023_ART_0_EFFECT"
+msgstr "自分のステージのエール1色につき、このアーツ+20。"
+
+msgid "hBP02-023_BLOOM_NAME"
+msgstr "Kanjeng"
+
+msgid "hBP02-023_BLOOM_EFFECT"
+msgstr "自分のエールデッキから、エール1枚を公開し、自分のホロメンに送る。そしてエールデッキをシャッフルする。"
+
+msgid "hBP02-024_NAME"
+msgstr "大神ミオ"
+
+msgid "hBP02-024_ART_0_NAME"
+msgstr "うちうち、うちだよ〜大神ミオだよ~"
+
+msgid "hBP02-024_ART_0_EFFECT"
+msgstr "自分のステージのエール1枚を、自分の#JPを持つホロメンに付け替えられる。"
+
+msgid "hBP02-094_NAME"
+msgstr "Tatang"
+
+msgid "hBP02-094_EFFECT"
+msgstr "このマスコットが付いているホロメンのアーツ+10。\n\n◆〈パヴォリア・レイネ〉に付いていたら能力追加このマスコットが付いているホロメンのHP+30。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hBP02-101_NAME"
+msgstr "ミオファ"
+
+msgid "hBP02-101_EFFECT"
+msgstr "相手のターンで、このファンが付いているホロメンがダウンした時、自分のデッキを1枚引く。\n\nこのファンは、自分の〈大神ミオ〉だけに付けられ、1人につき何枚でも付けられる。"
+
