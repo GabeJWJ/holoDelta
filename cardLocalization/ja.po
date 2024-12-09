@@ -3643,3 +3643,33 @@ msgstr "ミオファ"
 msgid "hBP02-101_EFFECT"
 msgstr "相手のターンで、このファンが付いているホロメンがダウンした時、自分のデッキを1枚引く。\n\nこのファンは、自分の〈大神ミオ〉だけに付けられ、1人につき何枚でも付けられる。"
 
+msgid "hBP02-025_NAME"
+msgstr "大神ミオ"
+
+msgid "hBP02-025_ART_0_NAME"
+msgstr "おはみぉーん"
+
+msgid "hBP02-025_ART_1_NAME"
+msgstr "おつみぉーん"
+
+msgid "hBP02-026_NAME"
+msgstr "大神ミオ"
+
+msgid "hBP02-026_ART_0_NAME"
+msgstr "今年も見守っててね!"
+
+msgid "hBP02-026_BLOOM_NAME"
+msgstr "アイドルとして成長した姿"
+
+msgid "hBP02-026_BLOOM_EFFECT"
+msgstr "自分のエールデッキから、自分のステージの#ゲーマーズを持つホロメン1人と同色のエール1枚を公開し、自分のホロメンに送る。そしてエールデッキをシャッフルする。"
+
+msgid "hBP02-027_NAME"
+msgstr "大神ミオ"
+
+msgid "hBP02-027_ART_0_NAME"
+msgstr "タロットの導き"
+
+msgid "hBP02-027_ART_0_EFFECT"
+msgstr "自分のデッキの上から1枚をアーカイブできる:アーカイブしたカードが、ホロメンの時、このアーツ+20。サポートカードの時、このアーツ+50"
+

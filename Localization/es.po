@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2024-11-23 20:18\n"
+"PO-Revision-Date: 2024-12-09 18:28\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -84,7 +84,7 @@ msgstr ""
 
 #: Scenes/board.tscn
 msgid "SUBTITLE"
-msgstr ""
+msgstr "Un simulador no oficial de Hololive OCG"
 
 #: Scenes/board.tscn
 msgid "CONNECT_STEAM_PUBLIC"
@@ -108,7 +108,7 @@ msgstr "Elegir Deck"
 
 #: Scenes/board.tscn
 msgid "UPDATE\t_DB"
-msgstr ""
+msgstr "Actualizar DB"
 
 #: Scenes/board.tscn
 msgid "EXIT"
@@ -621,6 +621,10 @@ msgid "CARD_HAND_HOLOPOWER"
 msgstr "Holopower"
 
 #: Scripts/side.gd
+msgid "CARD_HAND_REVEAL"
+msgstr "Revelar"
+
+#: Scripts/side.gd
 msgid "CARD_STAGE_ARCHIVE"
 msgstr "Archivar"
 
@@ -705,6 +709,10 @@ msgid "CHEERDECK_REVEAL"
 msgstr "Revelar y acoplar"
 
 #: Scripts/side.gd
+msgid "CHEERDECK_LOOKX"
+msgstr "Mirar X cartas"
+
+#: Scripts/side.gd
 msgid "CHEERDECK_SEARCH"
 msgstr "Buscar"
 
@@ -751,6 +759,14 @@ msgstr "Florecer"
 #: Scripts/side.gd
 msgid "LIST_ARCHIVE_HOLOMEM_BLOOM"
 msgstr "Florecer"
+
+#: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_BLOOM_FAST"
+msgstr "Florecer Instantáneo"
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_BLOOM_FAST"
+msgstr "Florecer Instantáneo"
 
 #: Scripts/side.gd
 msgid "LIST_CHEERDECK_CHEER_ATTACH"
@@ -882,6 +898,10 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "MESSAGE_HAND_HOLOPOWER"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "MESSAGE_HAND_REVEAL"
 msgstr ""
 
 #: Scripts/side.gd
@@ -1053,6 +1073,10 @@ msgid "MESSAGE_DECK_LOOKATX"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "MESSAGE_CHEERDECK_LOOKATX"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "MESSAGE_CARD_BACK"
 msgstr ""
 
@@ -1118,11 +1142,11 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_ITER"
-msgstr ""
+msgstr "Buscando actualización"
 
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_ITER_AGAIN"
-msgstr ""
+msgstr "Algo fallo. Intentando de nuevo..."
 
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOADING"
@@ -1130,6 +1154,10 @@ msgstr "Descargando db..."
 
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_ERROR"
+msgstr "Descarga Fallida. Intentando de nuevo..."
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_MANUAL"
 msgstr ""
 
 #: Scripts/Multiplayer.gd

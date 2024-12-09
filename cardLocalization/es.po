@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2024-12-02 16:53\n"
+"PO-Revision-Date: 2024-12-09 18:28\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Cuando este miembro es Derribado, Pierde 2 VIDAS."
@@ -334,6 +334,30 @@ msgid "Yukoku Roberu"
 msgstr ""
 
 msgid "Yuzuki Choco"
+msgstr ""
+
+msgid "Magical Girl Miko"
+msgstr ""
+
+msgid "Magical Girl Kanata"
+msgstr ""
+
+msgid "Magical Girl Shion"
+msgstr ""
+
+msgid "Magical Girl Marine"
+msgstr ""
+
+msgid "Magical Girl Luna"
+msgstr ""
+
+msgid "Magical Girl Chloe"
+msgstr ""
+
+msgid "HoloWitch"
+msgstr ""
+
+msgid "Languages"
 msgstr ""
 
 msgid "Advent"
@@ -2316,10 +2340,10 @@ msgid "hSD03-001_NAME"
 msgstr "Nekomata Okayu"
 
 msgid "hSD03-007_NAME"
-msgstr ""
+msgstr "Nekomata Okayu"
 
 msgid "hSD03-008_NAME"
-msgstr ""
+msgstr "Nekomata Okayu"
 
 msgid "hSD04-001_NAME"
 msgstr "Yuzuki Choco"
@@ -2679,13 +2703,13 @@ msgid "hSD03-010_NAME"
 msgstr "Inugami Korone"
 
 msgid "hSD03-010_ART_0_NAME"
-msgstr ""
+msgstr "Orayo〜"
 
 msgid "hSD03-010_COLLAB_NAME"
-msgstr ""
+msgstr "Interna de Dorobo Construction"
 
 msgid "hSD03-010_COLLAB_EFFECT"
-msgstr ""
+msgstr "Si tu Centro es Nekomata Okayu, revela 1 Fan o Mascota desde tu Deck y ponlo en tu mano. Luego baraja tu Deck."
 
 msgid "hSD03-011_NAME"
 msgstr "La+ Darknesss"
@@ -2746,100 +2770,101 @@ msgstr "El miembro con esta Mascota acoplada gana +20 de HP.\n\n"
 "Solo puedes acoplar una Mascota a cada miembro."
 
 msgid "hSD04-009_NAME"
-msgstr ""
+msgstr "Yuzuki Choco"
 
 msgid "hSD04-009_ART_0_NAME"
-msgstr ""
+msgstr "33... 22... 11.."
 
 msgid "hSD04-009_ART_1_NAME"
-msgstr ""
+msgstr "Vamos!"
 
 msgid "hSD04-009_ART_1_EFFECT"
-msgstr ""
+msgstr "Por cada Evento que jugaste este turno, este Arte gana +40 de poder."
 
 msgid "hSD04-010_NAME"
-msgstr ""
+msgstr "Oozora Subaru"
 
 msgid "hSD04-010_ART_0_NAME"
-msgstr ""
+msgstr "Te haré probar la lotería infernal!"
 
 msgid "hSD04-010_COLLAB_NAME"
-msgstr ""
+msgstr "Chocooo"
 
 msgid "hSD04-010_COLLAB_EFFECT"
-msgstr ""
+msgstr "Si tu Centro es Yuzuki Choco, puedes enviar una Ovación desde tu Archivo a uno de tus miembros."
 
 msgid "hSD04-011_NAME"
-msgstr ""
+msgstr "Himemori Luna"
 
 msgid "hSD04-011_ART_0_NAME"
-msgstr ""
+msgstr "Nnaaaaaaaaa"
 
 msgid "hSD04-011_COLLAB_NAME"
-msgstr ""
+msgstr "Choco-tentei~"
 
 msgid "hSD04-011_COLLAB_EFFECT"
-msgstr ""
+msgstr "Mira las cartas en tu holo power, revela una, y ponla en tu mano. Luego pon una carta de tu mano en tu holo power."
 
 msgid "hSD04-012_NAME"
-msgstr ""
+msgstr "SubaChocoLuna"
 
 msgid "hSD04-012_EFFECT"
-msgstr ""
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros llamados Oozora Subaru, Yuzuki Choco o Himemori Luna entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
 
 msgid "hSD04-013_NAME"
-msgstr ""
+msgstr "Omurice de Choco"
 
 msgid "hSD04-013_EFFECT"
-msgstr ""
+msgstr "Elige uno de tus miembros. Restaura 20 HP a ese miembro. Si hay un miembro con #Cooking en tu Escenario, las Artes del miembro elegido ganan +20 de poder hasta el final de este turno."
 
 msgid "hBD24-008_NAME"
-msgstr ""
+msgstr "Vestia Zeta"
 
 msgid "hBD24-008_SKILL_NAME"
-msgstr ""
+msgstr "Mejora Blanca"
 
 msgid "hBD24-008_SKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Las Artes de uno de tus miembros Blanco ganan +20 de poder hasta el final de este turno."
 
 msgid "hBD24-008_SPSKILL_NAME"
-msgstr ""
+msgstr "Regalo de Cumpleaños ~Blanco~"
 
 msgid "hBD24-008_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por juego) Revela 1 miembro Blanco desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
 
 msgid "hBD24-009_NAME"
-msgstr ""
+msgstr "Cecilia Immergreen"
 
 msgid "hBD24-009_SKILL_NAME"
-msgstr ""
+msgstr "Mejora Verde"
 
 msgid "hBD24-009_SKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Las Artes de uno de tus miembros Verde ganan +20 de poder hasta el final de este turno."
 
 msgid "hBD24-009_SPSKILL_NAME"
-msgstr ""
+msgstr "Regalo de Cumpleaños ~Verde~"
 
 msgid "hBD24-009_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por juego) Revela 1 miembro Verde desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
 
 msgid "hSD04-005_NAME"
-msgstr ""
+msgstr "Yuzuki Choco"
 
 msgid "hSD04-005_ART_0_NAME"
-msgstr ""
+msgstr "Otsukareito......"
 
 msgid "hSD04-005_ART_1_NAME"
-msgstr ""
+msgstr "ohhh (chu)"
 
 msgid "hSD04-006_NAME"
-msgstr ""
+msgstr "Yuzuki Choco"
 
 msgid "hSD04-006_ART_0_NAME"
-msgstr ""
+msgstr "Beso Prohibido"
 
 msgid "hSD04-006_ART_0_EFFECT"
-msgstr ""
+msgstr "Cuando este Arte inflige daño a un miembro oponente, por cada 10 de daño infligido por este miembro, este miembro restaura 10 HP a sí mismo."
 
 msgid "hBP02-007_NAME"
 msgstr "Mori Calliope"
@@ -3102,19 +3127,19 @@ msgstr "Esta carta solo puede ser jugada si tienes 3 o menos VIDAS.\n\n"
 "Recupera 1 miembro desde tu Archivo a tu mano."
 
 msgid "hBD24-012_NAME"
-msgstr ""
+msgstr "Shirogane Noel"
 
 msgid "hBD24-012_SKILL_NAME"
-msgstr ""
+msgstr "Mejora Blanca"
 
 msgid "hBD24-012_SKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Las Artes de uno de tus miembros Blanco ganan +20 de poder hasta el final de este turno."
 
 msgid "hBD24-012_SPSKILL_NAME"
-msgstr ""
+msgstr "Regalo de Cumpleaños ~Blanco~"
 
 msgid "hBD24-012_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por juego) Revela 1 miembro Blanco desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
 
 msgid "hBP02-014_NAME"
 msgstr "Shirogane Noel"
@@ -3261,19 +3286,19 @@ msgstr "Las Artes del miembro con esta Mascota acoplada ganan +10 de poder.\n\n"
 "Solo puedes acoplar una Mascota a cada miembro."
 
 msgid "hBD24-016_NAME"
-msgstr ""
+msgstr "Sakamata Chloe"
 
 msgid "hBD24-016_SKILL_NAME"
-msgstr ""
+msgstr "Mejora Azul"
 
 msgid "hBD24-016_SKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Las Artes de uno de tus miembros Azul ganan +20 de poder hasta el final de este turno."
 
 msgid "hBD24-016_SPSKILL_NAME"
-msgstr ""
+msgstr "Regalo de aniversario ~Azul~"
 
 msgid "hBD24-016_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por juego) Revela 1 miembro Azul desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
 
 msgid "hBP02-034_NAME"
 msgstr "Nakiri Ayame"
@@ -3351,53 +3376,385 @@ msgid "hBP02-060_BLOOM_EFFECT"
 msgstr "Puede restaurar 50 HP a uno de tus miembros en el Backstage. Inflige 10 de daño especial al Centro de tu oponente por cada 10 HP restaurado por este efecto."
 
 msgid "hBP02-004_NAME"
-msgstr ""
+msgstr "Sakamata Chloe"
 
 msgid "hBP02-004_SKILL_NAME"
-msgstr ""
+msgstr "poepoepoe~"
 
 msgid "hBP02-004_SKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Puede ser usada si tu Centro es Sakamata Chloe: mira las 3 cartas del tope de tu Deck. Puedes Archivar esas cartas, o regresarlas al tope de tu Deck en cualquier orden."
 
 msgid "hBP02-004_SPSKILL_NAME"
-msgstr ""
+msgstr "Botón de Reinicio de Vida"
 
 msgid "hBP02-004_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por juego) Cuenta el número de cartas en tu mano, luego baraja todas las cartas en tu mano y todos los miembros en tu Archivo en tu Deck. Luego, por cada carta regresada desde tu mano a tu Deck. Roba una carta desde tu Deck."
 
 msgid "hBP02-039_NAME"
-msgstr ""
+msgstr "Sakamata Chloe"
 
 msgid "hBP02-039_ART_0_NAME"
-msgstr ""
+msgstr "Tragamonedas holoX"
 
 msgid "hBP02-039_ART_0_EFFECT"
-msgstr ""
+msgstr "Puedes revelar las 3 cartas del tope de tu Deck. Por cada miembro revelado, este Arte gana +20 de poder. Luego Archiva las cartas reveladas."
 
 msgid "hBP02-039_GIFT_NAME"
-msgstr ""
+msgstr "puipuipui~"
 
 msgid "hBP02-039_GIFT_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Cuando revelas cartas con el Arte \"Tragamonedas holoX\" de este miembro, puedes poner una carta Soporte entre ellas en tu mano en vez de Archivarla."
 
 msgid "hBP02-040_NAME"
-msgstr ""
+msgstr "Sakamata Chloe"
 
 msgid "hBP02-040_ART_0_NAME"
-msgstr ""
+msgstr "Tragamonedas holoX"
 
 msgid "hBP02-040_ART_0_EFFECT"
-msgstr ""
+msgstr "Puedes revelar las 3 cartas del tope de tu Deck. Por cada miembro revelado, este Arte gana +20 de poder. Luego Archiva las cartas reveladas."
 
 msgid "hBP02-040_GIFT_NAME"
-msgstr ""
+msgstr "Buena Racha~"
 
 msgid "hBP02-040_GIFT_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Cuando revelas cartas con el Arte \"Tragamonedas holoX\" de este miembro, si las 3 cartas reveladas fueron miembros con el mismo nivel de Florecimiento, tu oponente pierde 1 VIDA."
 
 msgid "hBP02-078_NAME"
-msgstr ""
+msgstr "Kanata Construction"
 
 msgid "hBP02-078_EFFECT"
+msgstr "LIMITADO: Solo uno puede ser usado por turno.\n\n"
+"Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros llamados Amane Kanata, AZKi o Sakamata Chloe entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
+
+msgid "hBP02-069_NAME"
+msgstr "Magical Girl Miko"
+
+msgid "hBP02-069_ART_0_NAME"
+msgstr "La 'Doncella del Santuario' de 'Holo'"
+
+msgid "hBP02-069_COLLAB_NAME"
+msgstr "Una Oración para cumplir los deseos de todos!"
+
+msgid "hBP02-069_COLLAB_EFFECT"
+msgstr "Puedes lanzar un dado. Si el resultado es impar, Revela una Ovación Roja o Azul desde tu Deck de Ovaciones y envíala a uno de tus miembros en el Backstage. Luego baraja tu Deck de Ovaciones."
+
+msgid "hBP02-070_NAME"
+msgstr "Magical Girl Kanata"
+
+msgid "hBP02-070_ART_0_NAME"
+msgstr "El 'Angel' de 'Holo'"
+
+msgid "hBP02-070_COLLAB_NAME"
+msgstr "Dame tu mano y no te sueltes!"
+
+msgid "hBP02-070_COLLAB_EFFECT"
+msgstr "Puedes lanzar un dado. Si el resultado es impar, Revela una Ovación Blanca o Verde desde tu Deck de Ovaciones y envíala a uno de tus miembros en el Backstage. Luego baraja tu Deck de Ovaciones."
+
+msgid "hBP02-071_NAME"
+msgstr "Magical Girl Luna"
+
+msgid "hBP02-071_ART_0_NAME"
+msgstr "La 'Princesa' de 'Holo'"
+
+msgid "hBP02-071_COLLAB_NAME"
+msgstr "Dulce felicidad, compártela conmigo!"
+
+msgid "hBP02-071_COLLAB_EFFECT"
+msgstr "Puedes lanzar un dado. Si el resultado es impar, Revela una Ovación Morada o Amarilla desde tu Deck de Ovaciones y envíala a uno de tus miembros en el Backstage. Luego baraja tu Deck de Ovaciones."
+
+msgid "hBP02-072_NAME"
+msgstr "Magical Girl Shion"
+
+msgid "hBP02-072_ART_0_NAME"
+msgstr "La 'Bruja' de 'Holo'"
+
+msgid "hBP02-072_COLLAB_NAME"
+msgstr "Haz tuyo el misterio latente!"
+
+msgid "hBP02-072_COLLAB_EFFECT"
+msgstr "Puedes lanzar un dado. Si el resultado es par, revela un Evento desde tu Deck y ponla en tu mano. Luego baraja tu Deck."
+
+msgid "hBP02-073_NAME"
+msgstr "Magical Girl Marine"
+
+msgid "hBP02-073_ART_0_NAME"
+msgstr "La 'Pirata' de 'Holo'"
+
+msgid "hBP02-073_COLLAB_NAME"
+msgstr "Enfócate en el brillante tesoro!"
+
+msgid "hBP02-073_COLLAB_EFFECT"
+msgstr "Puedes lanzar un dado. Si el resultado es par, revela un Fan desde tu Deck y ponla en tu mano. Luego baraja tu Deck."
+
+msgid "hBP02-074_NAME"
+msgstr "Magical Girl Chloe"
+
+msgid "hBP02-074_ART_0_NAME"
+msgstr "La 'Orca' de 'Holo'"
+
+msgid "hBP02-074_COLLAB_NAME"
+msgstr "Colmillos desatados navegando por mares agitados!"
+
+msgid "hBP02-074_COLLAB_EFFECT"
+msgstr "Puedes lanzar un dado. Si el resultado es par, revela una Herramienta desde tu Deck y ponla en tu mano. Luego baraja tu Deck."
+
+msgid "hBP02-048_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-048_ART_0_NAME"
+msgstr "Zombanwa!"
+
+msgid "hBP02-049_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-049_ART_0_NAME"
+msgstr "Otsu-kureiji!"
+
+msgid "hBP02-049_COLLAB_NAME"
+msgstr "Ollie siempre te observa"
+
+msgid "hBP02-049_COLLAB_EFFECT"
+msgstr "Roba una carta, luego Archiva 1 carta desde tu mano."
+
+msgid "hBP02-050_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-050_ART_0_NAME"
+msgstr "Una Kouhai que te ama"
+
+msgid "hBP02-050_ART_1_NAME"
+msgstr "Whoops! Lo siento Senpai!"
+
+msgid "hBP02-084_NAME"
+msgstr "Mikkorone24"
+
+msgid "hBP02-084_EFFECT"
+msgstr "Roba 2 cartas, luego lanza un dado. Si el resultado es 3, 5, o 6, revela un miembro Debut desde tu deck y ponlo en tu mano. Si el resultado es 2 o 4, roba una carta."
+
+msgid "hBP02-097_NAME"
+msgstr "UDIN"
+
+msgid "hBP02-097_EFFECT"
+msgstr "Las Artes del miembro con esta Mascota acoplada ganan +10 de poder.\n\n"
+"Si esta Mascota está acoplada a Kureiji Ollie, gana el siguiente efecto: cuando el miembro con esta Mascota acoplada Florece, roba 1 carta desde tu Deck luego Archiva 1 carta desde tu mano.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
+
+msgid "hBP02-006_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-006_SKILL_NAME"
+msgstr "Tácticas Zombie"
+
+msgid "hBP02-006_SKILL_EFFECT"
+msgstr "(Una vez por turno) Haz que uno de tus miembros con #IDGen2 Florezca usando un miembro desde tu Archivo."
+
+msgid "hBP02-006_SPSKILL_NAME"
+msgstr "Resurrección de Ollie"
+
+msgid "hBP02-006_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Roba 4 cartas, luego Archiva 2 cartas desde tu mano. Luego, puedes Florecer uno de tus miembros usando un miembro desde tu Archivo."
+
+msgid "hBP02-051_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-051_ART_0_NAME"
+msgstr "Voy a ver a mi oshi y gritar con todo mi ser!!"
+
+msgid "hBP02-051_BLOOM_NAME"
+msgstr "Simpeo Máximo!!"
+
+msgid "hBP02-051_BLOOM_EFFECT"
+msgstr "Puedes Florecer uno de tus miembros Debut con #IDGen2 usando un miembro desde tu Archivo. Solo puedes usar el Bloom Effect \"Simpeo Maximo!!\" una vez por turno."
+
+msgid "hBP02-052_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-052_ART_0_NAME"
+msgstr "En nombre de la justicia, Yo..."
+
+msgid "hBP02-052_ART_0_EFFECT"
+msgstr "Si hay al menos una Ovación no-Morada acoplada a este miembro, este Arte gana +20 de poder."
+
+msgid "hBP02-052_BLOOM_NAME"
+msgstr "Camino de la Sinceridad"
+
+msgid "hBP02-052_BLOOM_EFFECT"
+msgstr "Roba una carta."
+
+msgid "hBP02-053_NAME"
+msgstr "Kureiji Ollie"
+
+msgid "hBP02-053_ART_0_NAME"
+msgstr "Tácticas Calculadas"
+
+msgid "hBP02-053_ART_0_EFFECT"
+msgstr "Si hay al menos 2 miembros 2nd Bloom con #IDGen2 en tu Escenario, este Arte gana +40 de poder."
+
+msgid "hBP02-053_BLOOM_NAME"
+msgstr "Zombie Resucitado"
+
+msgid "hBP02-053_BLOOM_EFFECT"
+msgstr "Puedes Archivar 2 cartas desde tu mano, si lo haces: Las Artes de este miembro ganan +40 de poder hasta el final de este turno."
+
+msgid "hBP02-081_NAME"
+msgstr "hololive ID 2nd Generation"
+
+msgid "hBP02-081_EFFECT"
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros con #IDGen2 entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden"
+
+msgid "hBD24-013_NAME"
+msgstr "Murasaki Shion"
+
+msgid "hBD24-013_SKILL_NAME"
+msgstr "Mejora Morada"
+
+msgid "hBD24-013_SKILL_EFFECT"
+msgstr "(Una vez por turno) Las Artes de uno de tus miembros Morado ganan +20 de poder hasta el final de este turno."
+
+msgid "hBD24-013_SPSKILL_NAME"
+msgstr "Regalo de Cumpleaños ~Morado~"
+
+msgid "hBD24-013_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Revela 1 miembro Morado desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBP02-002_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-002_SKILL_NAME"
+msgstr "HALU"
+
+msgid "hBP02-002_SKILL_EFFECT"
+msgstr "(Una vez por turno) Archiva una Ovación Verde desde uno de tus miembros, luego revela una Ovación desde tu Deck de Ovaciones y envíala a cualquiera de tus miembros. Luego baraja tu Beck de Ovaciones."
+
+msgid "hBP02-002_SPSKILL_NAME"
+msgstr "Un Festín Colorido"
+
+msgid "hBP02-002_SPSKILL_EFFECT"
+msgstr "(Una vez por juego) Las Artes de todos tus miembros con #IDGen2 ganan +20 de poder por cada color de Ovación acopladas el respectivo miembro, hasta el final del turno."
+
+msgid "hBP02-018_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-018_ART_0_NAME"
+msgstr "Perhatian!"
+
+msgid "hBP02-019_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-019_ART_0_NAME"
+msgstr "Muy Fácil!"
+
+msgid "hBP02-019_COLLAB_NAME"
+msgstr "Como hacer que tus amigos hagan HALU"
+
+msgid "hBP02-019_COLLAB_EFFECT"
+msgstr "Puedes enviar 1 Ovación desde tu Archivo a cualquiera de tus miembros."
+
+msgid "hBP02-020_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-020_ART_0_NAME"
+msgstr "Pijamada Real Halu"
+
+msgid "hBP02-021_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-021_ART_0_NAME"
+msgstr "Sigan mirando! Los amo!"
+
+msgid "hBP02-021_ART_0_EFFECT"
+msgstr "Puedes enviar 1 Ovación desde tu Archivo a cualquiera de tus miembros."
+
+msgid "hBP02-021_BLOOM_NAME"
+msgstr "Canta y baila con todo tu corazón"
+
+msgid "hBP02-021_BLOOM_EFFECT"
+msgstr "Por cada color de Ovación en tu Escenario, restaura 10 de HP a uno de tus miembros"
+
+msgid "hBP02-022_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-022_ART_0_NAME"
+msgstr "Noche Picante"
+
+msgid "hBP02-022_ART_0_EFFECT"
+msgstr "Si hay al menos dos colores de Ovación en tu Escenario, este Arte gana +20 de poder."
+
+msgid "hBP02-022_BLOOM_NAME"
+msgstr "Qué estás esperando?"
+
+msgid "hBP02-022_BLOOM_EFFECT"
+msgstr "Revela un Tatang desde tu Deck y ponlo en tu mano. Luego baraja tu Deck."
+
+msgid "hBP02-023_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP02-023_ART_0_NAME"
+msgstr "Baile del Pavo Real"
+
+msgid "hBP02-023_ART_0_EFFECT"
+msgstr "Por cada color de Ovación en tu Escenario, este Arte gana +20 de poder."
+
+msgid "hBP02-023_BLOOM_NAME"
+msgstr "Kanjeng"
+
+msgid "hBP02-023_BLOOM_EFFECT"
+msgstr "Revela una Ovación desde tu Deck de Ovaciones y envíala a uno de tus miembros. Luego baraja tu Deck de Ovaciones."
+
+msgid "hBP02-024_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP02-024_ART_0_NAME"
+msgstr "Uchi uchi, uchi da yo! Ookami Mio da yo!"
+
+msgid "hBP02-024_ART_0_EFFECT"
+msgstr "Puedes mover 1 Ovación de cualquiera de tus miembros a uno de tus miembros con #JP."
+
+msgid "hBP02-094_NAME"
+msgstr "Tatang"
+
+msgid "hBP02-094_EFFECT"
+msgstr "Las Artes del miembro con esta Mascota acoplada ganan +10 de poder.\n\n"
+"Si esta Mascota está acoplada a Pavolia Reine, gana el siguiente efecto: el miembro con esta Mascota acoplada tiene +30 HP.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
+
+msgid "hBP02-101_NAME"
+msgstr "Miofa"
+
+msgid "hBP02-101_EFFECT"
+msgstr "Durante el turno oponente, cuando el miembro con este Fan acoplado es Derribado, roba una carta.\n\n"
+"Este Fan solo puede ser acoplado a Ookami Mio, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
+
+msgid "hBP02-025_NAME"
+msgstr ""
+
+msgid "hBP02-025_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-025_ART_1_NAME"
+msgstr ""
+
+msgid "hBP02-026_NAME"
+msgstr ""
+
+msgid "hBP02-026_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-026_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-026_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-027_NAME"
+msgstr ""
+
+msgid "hBP02-027_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-027_ART_0_EFFECT"
 msgstr ""
 

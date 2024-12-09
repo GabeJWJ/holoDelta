@@ -3643,3 +3643,33 @@ msgstr "Miofa"
 msgid "hBP02-101_EFFECT"
 msgstr "During your opponent's turn, when the holomem with this Fan attached is Downed, draw a card.\n\nThis Fan may only be attached to your Ookami Mio, and you may attach any number of this Fan to one holomem."
 
+msgid "hBP02-025_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP02-025_ART_0_NAME"
+msgstr "Ohamioon"
+
+msgid "hBP02-025_ART_1_NAME"
+msgstr "Otsumioon"
+
+msgid "hBP02-026_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP02-026_ART_0_NAME"
+msgstr "Please keep an eye on us this year too!"
+
+msgid "hBP02-026_BLOOM_NAME"
+msgstr "Growing up as an idol"
+
+msgid "hBP02-026_BLOOM_EFFECT"
+msgstr "Reveal 1 Cheer from your Cheer Deck of the same color as one of your holomems with #Gamers, and send that Cheer to any of your holomems. Then shuffle your Cheer Deck."
+
+msgid "hBP02-027_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP02-027_ART_0_NAME"
+msgstr "Tarot Guidance"
+
+msgid "hBP02-027_ART_0_EFFECT"
+msgstr "You may Archive the top card of your Deck. If it's a holomem, this Art gains +20 power. If it's a Support card, this Art gains +50 power."
+
