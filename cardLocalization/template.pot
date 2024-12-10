@@ -3673,3 +3673,27 @@ msgstr ""
 msgid "hBP02-027_ART_0_EFFECT"
 msgstr ""
 
+msgid "hBP02-009_NAME"
+msgstr ""
+
+msgid "hBP02-009_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-009_GIFT_NAME"
+msgstr ""
+
+msgid "hBP02-009_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP02-089_NAME"
+msgstr ""
+
+msgid "hBP02-089_EFFECT"
+msgstr ""
+
+msgid "hBP02-090_NAME"
+msgstr ""
+
+msgid "hBP02-090_EFFECT"
+msgstr ""
+

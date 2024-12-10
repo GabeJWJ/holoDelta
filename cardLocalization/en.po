@@ -3673,3 +3673,27 @@ msgstr "Tarot Guidance"
 msgid "hBP02-027_ART_0_EFFECT"
 msgstr "You may Archive the top card of your Deck. If it's a holomem, this Art gains +20 power. If it's a Support card, this Art gains +50 power."
 
+msgid "hBP02-009_NAME"
+msgstr "Shirakami Fubuki"
+
+msgid "hBP02-009_ART_0_NAME"
+msgstr "Otsu-kon-deshita"
+
+msgid "hBP02-009_GIFT_NAME"
+msgstr "Oha-kon kitsune!"
+
+msgid "hBP02-009_GIFT_EFFECT"
+msgstr "(Collab position only) The Arts of all of your holomems with a Mascot attached gain +10 power."
+
+msgid "hBP02-089_NAME"
+msgstr "Oruyanke"
+
+msgid "hBP02-089_EFFECT"
+msgstr "The holomem with this Mascot attached has +20 HP.\n\nIf this is attached to Shirakami Fubuki, it gains the following effect: when the holomem with this Mascot attached collabs, draw a card.\n\nYou may only attach 1 Mascot to a holomem."
+
+msgid "hBP02-090_NAME"
+msgstr "Nejimakitsune"
+
+msgid "hBP02-090_EFFECT"
+msgstr "The holomem with this Mascot attached has +20 HP.\n\nIf this is attached to Shirakami Fubuki, it gains the following effect: when the holomem with this Fan attached is Downed, move 1 Cheer from that holomem to another of your holomems.\n\nYou may only attach 1 Mascot to a holomem."
+
