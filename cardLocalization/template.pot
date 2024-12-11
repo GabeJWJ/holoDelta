@@ -3697,3 +3697,36 @@ msgstr ""
 msgid "hBP02-090_EFFECT"
 msgstr ""
 
+msgid "hBP02-091_NAME"
+msgstr ""
+
+msgid "hBP02-091_EFFECT"
+msgstr ""
+
+msgid "hBP02-012_NAME"
+msgstr ""
+
+msgid "hBP02-012_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-012_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP02-012_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-012_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP02-011_NAME"
+msgstr ""
+
+msgid "hBP02-011_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-011_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP02-011_BLOOM_EFFECT"
+msgstr ""
+
