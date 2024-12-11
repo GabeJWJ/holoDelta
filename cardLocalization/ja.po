@@ -3739,3 +3739,6 @@ msgstr "キンモクセイの花フブキ"
 msgid "hBP02-010_ART_1_NAME"
 msgstr "Thank You Friends❤️"
 
+msgid "hY03-002_NAME"
+msgstr "赤エール"
+

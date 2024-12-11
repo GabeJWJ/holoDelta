@@ -3739,3 +3739,6 @@ msgstr "Sweet osmanthus flower Fubuki"
 msgid "hBP02-010_ART_1_NAME"
 msgstr "Thank You Friends❤️"
 
+msgid "hY03-002_NAME"
+msgstr "Red Cheer"
+
