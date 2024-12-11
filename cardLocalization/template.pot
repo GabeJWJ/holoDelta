@@ -3730,3 +3730,12 @@ msgstr ""
 msgid "hBP02-011_BLOOM_EFFECT"
 msgstr ""
 
+msgid "hBP02-010_NAME"
+msgstr ""
+
+msgid "hBP02-010_ART_0_NAME"
+msgstr ""
+
+msgid "hBP02-010_ART_1_NAME"
+msgstr ""
+
