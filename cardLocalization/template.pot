@@ -3742,3 +3742,33 @@ msgstr ""
 msgid "hY03-002_NAME"
 msgstr ""
 
+msgid "hBD24-014_NAME"
+msgstr ""
+
+msgid "hBD24-014_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-014_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-014_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-014_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-015_NAME"
+msgstr ""
+
+msgid "hBD24-015_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-015_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-015_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-015_SPSKILL_EFFECT"
+msgstr ""
+

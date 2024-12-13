@@ -3742,3 +3742,33 @@ msgstr "Thank You Friends❤️"
 msgid "hY03-002_NAME"
 msgstr "赤エール"
 
+msgid "hBD24-014_NAME"
+msgstr "こぼ・かなえる"
+
+msgid "hBD24-014_SKILL_NAME"
+msgstr "ブルーエンハンス"
+
+msgid "hBD24-014_SKILL_EFFECT"
+msgstr "[ターンに1回] このターンの間、自分の青ホロメン1人のアーツ+20。"
+
+msgid "hBD24-014_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-014_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、青ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-015_NAME"
+msgstr "百鬼あやめ"
+
+msgid "hBD24-015_SKILL_NAME"
+msgstr "レッドエンハンス"
+
+msgid "hBD24-015_SKILL_EFFECT"
+msgstr "[ターンに1回] このターンの間、自分の赤ホロメン1人のアーツ+20。"
+
+msgid "hBD24-015_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-015_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
