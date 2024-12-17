@@ -3772,3 +3772,12 @@ msgstr "Birthday Gift ~Red~"
 msgid "hBD24-015_SPSKILL_EFFECT"
 msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
 
+msgid "hY02-002_NAME"
+msgstr "緑エール"
+
+msgid "hY04-002_NAME"
+msgstr "青エール"
+
+msgid "hY05-002_NAME"
+msgstr "紫エール"
+

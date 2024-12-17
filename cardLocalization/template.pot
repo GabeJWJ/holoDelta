@@ -3772,3 +3772,12 @@ msgstr ""
 msgid "hBD24-015_SPSKILL_EFFECT"
 msgstr ""
 
+msgid "hY02-002_NAME"
+msgstr ""
+
+msgid "hY04-002_NAME"
+msgstr ""
+
+msgid "hY05-002_NAME"
+msgstr ""
+
