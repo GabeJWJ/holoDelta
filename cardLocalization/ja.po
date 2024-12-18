@@ -3781,3 +3781,6 @@ msgstr "青エール"
 msgid "hY05-002_NAME"
 msgstr "紫エール"
 
+msgid "hY01-003_NAME"
+msgstr "白エール"
+

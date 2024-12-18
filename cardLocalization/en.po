@@ -3781,3 +3781,6 @@ msgstr "Blue Cheer"
 msgid "hY05-002_NAME"
 msgstr "Purple Cheer"
 
+msgid "hY01-003_NAME"
+msgstr "White Cheer"
+
