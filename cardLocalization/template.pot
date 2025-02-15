@@ -3784,3 +3784,441 @@ msgstr ""
 msgid "hY01-003_NAME"
 msgstr ""
 
+msgid "hSD05-001_NAME"
+msgstr ""
+
+msgid "hSD05-001_SKILL_NAME"
+msgstr ""
+
+msgid "hSD05-001_SKILL_EFFECT"
+msgstr ""
+
+msgid "hSD05-001_SPSKILL_NAME"
+msgstr ""
+
+msgid "hSD05-001_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hSD05-002_NAME"
+msgstr ""
+
+msgid "hSD05-002_ART_0_NAME"
+msgstr ""
+
+msgid "hSD05-003_NAME"
+msgstr ""
+
+msgid "hSD05-003_ART_0_NAME"
+msgstr ""
+
+msgid "hSD05-003_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD05-003_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD05-004_NAME"
+msgstr ""
+
+msgid "hSD05-004_ART_0_NAME"
+msgstr ""
+
+msgid "hSD05-005_NAME"
+msgstr ""
+
+msgid "hSD05-005_ART_0_NAME"
+msgstr ""
+
+msgid "hSD05-005_ART_1_NAME"
+msgstr ""
+
+msgid "hSD05-006_NAME"
+msgstr ""
+
+msgid "hSD05-006_ART_0_NAME"
+msgstr ""
+
+msgid "hSD05-006_ART_1_NAME"
+msgstr ""
+
+msgid "hSD05-006_ART_1_EFFECT"
+msgstr ""
+
+msgid "hSD05-007_NAME"
+msgstr ""
+
+msgid "hSD05-007_ART_0_NAME"
+msgstr ""
+
+msgid "hSD05-007_BLOOM_NAME"
+msgstr ""
+
+msgid "hSD05-007_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hSD05-008_NAME"
+msgstr ""
+
+msgid "hSD05-008_ART_0_NAME"
+msgstr ""
+
+msgid "hSD05-008_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD05-009_NAME"
+msgstr ""
+
+msgid "hSD05-009_ART_0_NAME"
+msgstr ""
+
+msgid "hSD05-009_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD05-009_BLOOM_NAME"
+msgstr ""
+
+msgid "hSD05-009_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hSD05-010_NAME"
+msgstr ""
+
+msgid "hSD05-010_ART_0_NAME"
+msgstr ""
+
+msgid "hSD05-010_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD05-011_NAME"
+msgstr ""
+
+msgid "hSD05-011_ART_0_NAME"
+msgstr ""
+
+msgid "hSD05-011_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD05-011_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD05-012_NAME"
+msgstr ""
+
+msgid "hSD05-012_ART_0_NAME"
+msgstr ""
+
+msgid "hSD05-012_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD05-012_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD05-013_NAME"
+msgstr ""
+
+msgid "hSD05-013_ART_0_NAME"
+msgstr ""
+
+msgid "hSD05-013_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD05-013_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD0-014_NAME"
+msgstr ""
+
+msgid "hSD0-014_EFFECT"
+msgstr ""
+
+msgid "hSD06-001_NAME"
+msgstr ""
+
+msgid "hSD06-001_SKILL_NAME"
+msgstr ""
+
+msgid "hSD06-001_SKILL_EFFECT"
+msgstr ""
+
+msgid "hSD06-001_SPSKILL_NAME"
+msgstr ""
+
+msgid "hSD06-001_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hSD06-002_NAME"
+msgstr ""
+
+msgid "hSD06-002_ART_0_NAME"
+msgstr ""
+
+msgid "hSD06-002_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD06-002_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD06-003_NAME"
+msgstr ""
+
+msgid "hSD06-003_ART_0_NAME"
+msgstr ""
+
+msgid "hSD06-003_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD06-004_NAME"
+msgstr ""
+
+msgid "hSD06-004_ART_0_NAME"
+msgstr ""
+
+msgid "hSD06-005_NAME"
+msgstr ""
+
+msgid "hSD06-005_ART_0_NAME"
+msgstr ""
+
+msgid "hSD06-005_BLOOM_NAME"
+msgstr ""
+
+msgid "hSD06-005_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hSD06-006_NAME"
+msgstr ""
+
+msgid "hSD06-006_ART_0_NAME"
+msgstr ""
+
+msgid "hSD06-006_BLOOM_NAME"
+msgstr ""
+
+msgid "hSD06-006_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hSD06-007_NAME"
+msgstr ""
+
+msgid "hSD06-007_ART_0_NAME"
+msgstr ""
+
+msgid "hSD06-007_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD06-007_BLOOM_NAME"
+msgstr ""
+
+msgid "hSD06-007_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hSD06-008_NAME"
+msgstr ""
+
+msgid "hSD06-008_ART_0_NAME"
+msgstr ""
+
+msgid "hSD06-008_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD06-008_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD06-009_NAME"
+msgstr ""
+
+msgid "hSD06-009_ART_0_NAME"
+msgstr ""
+
+msgid "hSD06-009_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD06-010_NAME"
+msgstr ""
+
+msgid "hSD06-010_ART_0_NAME"
+msgstr ""
+
+msgid "hSD06-010_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD06-011_NAME"
+msgstr ""
+
+msgid "hSD06-011_EFFECT"
+msgstr ""
+
+msgid "hSD06-012_NAME"
+msgstr ""
+
+msgid "hSD06-012_EFFECT"
+msgstr ""
+
+msgid "hSD07-001_NAME"
+msgstr ""
+
+msgid "hSD07-001_SKILL_NAME"
+msgstr ""
+
+msgid "hSD07-001_SKILL_EFFECT"
+msgstr ""
+
+msgid "hSD07-001_SPSKILL_NAME"
+msgstr ""
+
+msgid "hSD07-001_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hSD07-002_NAME"
+msgstr ""
+
+msgid "hSD07-002_ART_0_NAME"
+msgstr ""
+
+msgid "hSD07-002_ART_1_NAME"
+msgstr ""
+
+msgid "hSD07-003_NAME"
+msgstr ""
+
+msgid "hSD07-003_ART_0_NAME"
+msgstr ""
+
+msgid "hSD07-003_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD07-003_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD07-004_NAME"
+msgstr ""
+
+msgid "hSD07-004_ART_0_NAME"
+msgstr ""
+
+msgid "hSD07-004_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD07-005_NAME"
+msgstr ""
+
+msgid "hSD07-005_ART_0_NAME"
+msgstr ""
+
+msgid "hSD07-005_ART_1_NAME"
+msgstr ""
+
+msgid "hSD07-006_NAME"
+msgstr ""
+
+msgid "hSD07-006_ART_0_NAME"
+msgstr ""
+
+msgid "hSD07-006_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD07-006_BLOOM_NAME"
+msgstr ""
+
+msgid "hSD07-006_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hSD07-007_NAME"
+msgstr ""
+
+msgid "hSD07-007_ART_0_NAME"
+msgstr ""
+
+msgid "hSD07-007_BLOOM_NAME"
+msgstr ""
+
+msgid "hSD07-007_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hSD07-008_NAME"
+msgstr ""
+
+msgid "hSD07-008_ART_0_NAME"
+msgstr ""
+
+msgid "hSD07-008_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD07-009_NAME"
+msgstr ""
+
+msgid "hSD07-009_ART_0_NAME"
+msgstr ""
+
+msgid "hSD07-009_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD07-009_GIFT_NAME"
+msgstr ""
+
+msgid "hSD07-009_GIFT_EFFECT"
+msgstr ""
+
+msgid "hSD07-010_NAME"
+msgstr ""
+
+msgid "hSD07-010_ART_0_NAME"
+msgstr ""
+
+msgid "hSD07-010_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD07-010_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD07-011_NAME"
+msgstr ""
+
+msgid "hSD07-011_ART_0_NAME"
+msgstr ""
+
+msgid "hSD07-011_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD07-011_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD07-012_NAME"
+msgstr ""
+
+msgid "hSD07-012_ART_0_NAME"
+msgstr ""
+
+msgid "hSD07-012_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD07-012_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD07-013_NAME"
+msgstr ""
+
+msgid "hSD07-013_ART_0_NAME"
+msgstr ""
+
+msgid "hSD07-013_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD07-013_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD07-014_NAME"
+msgstr ""
+
+msgid "hSD07-014_EFFECT"
+msgstr ""
+
+msgid "hSD07-015_NAME"
+msgstr ""
+
+msgid "hSD07-015_EFFECT"
+msgstr ""
+
+msgid "hY06-001_NAME"
+msgstr ""
+

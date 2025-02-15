@@ -3784,3 +3784,441 @@ msgstr "紫エール"
 msgid "hY01-003_NAME"
 msgstr "白エール"
 
+msgid "hSD05-001_NAME"
+msgstr "轟はじめ"
+
+msgid "hSD05-001_SKILL_NAME"
+msgstr "ホワイトマイク"
+
+msgid "hSD05-001_SKILL_EFFECT"
+msgstr "[ターンに1回] このターンの間、自分の白センターホロメンのアーツ+20。"
+
+msgid "hSD05-001_SPSKILL_NAME"
+msgstr "クイックガード"
+
+msgid "hSD05-001_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 相手のターンで、自分の白ホロメンが相手からダメージを受ける時に使える: そのホロメン1人が受けるダメージ-20。"
+
+msgid "hSD05-002_NAME"
+msgstr "轟はじめ"
+
+msgid "hSD05-002_ART_0_NAME"
+msgstr "ぶんぶんぶーん!"
+
+msgid "hSD05-003_NAME"
+msgstr "轟はじめ"
+
+msgid "hSD05-003_ART_0_NAME"
+msgstr "お洒落番長"
+
+msgid "hSD05-003_COLLAB_NAME"
+msgstr "こんちくわ"
+
+msgid "hSD05-003_COLLAB_EFFECT"
+msgstr "このターンの間、自分の#ReGLOSSを持つセンターホロメンのアーツ+10."
+
+msgid "hSD05-004_NAME"
+msgstr "轟はじめ"
+
+msgid "hSD05-004_ART_0_NAME"
+msgstr "ReGLOSSの番長"
+
+msgid "hSD05-005_NAME"
+msgstr "轟はじめ"
+
+msgid "hSD05-005_ART_0_NAME"
+msgstr "夜路紫駆！"
+
+msgid "hSD05-005_ART_1_NAME"
+msgstr "うぃー!"
+
+msgid "hSD05-006_NAME"
+msgstr "轟はじめ"
+
+msgid "hSD05-006_ART_0_NAME"
+msgstr "足取り軽め、轟はじめ"
+
+msgid "hSD05-006_ART_1_NAME"
+msgstr "ありあとりゃあすっ"
+
+msgid "hSD05-006_ART_1_EFFECT"
+msgstr "自分のステージに異なるカード名の#ReGLOSSを持つホロメンが3人以上いる時、このアーツ+20。"
+
+msgid "hSD05-007_NAME"
+msgstr "轟はじめ"
+
+msgid "hSD05-007_ART_0_NAME"
+msgstr "度胸、愛嬌、最強"
+
+msgid "hSD05-007_BLOOM_NAME"
+msgstr "宇宙一の番長を目指すなんでも屋"
+
+msgid "hSD05-007_BLOOM_EFFECT"
+msgstr "自分のデッキを1枚引く。"
+
+msgid "hSD05-008_NAME"
+msgstr "轟はじめ"
+
+msgid "hSD05-008_ART_0_NAME"
+msgstr "……なんか、番長っぽくなってきたかも!"
+
+msgid "hSD05-008_ART_0_EFFECT"
+msgstr "このターンの間、自分のステージの#ReGLOSSを持つDebutホロメン1人のアーツ+40。"
+
+msgid "hSD05-009_NAME"
+msgstr "轟はじめ"
+
+msgid "hSD05-009_ART_0_NAME"
+msgstr "滅紫の雷"
+
+msgid "hSD05-009_ART_0_EFFECT"
+msgstr "自分のステージに〈轟はじめ〉以外の#ReGLOSSを持つホロメンがいる時、このアーツ+30。"
+
+msgid "hSD05-009_BLOOM_NAME"
+msgstr "ダンスでこの世界に彩を!"
+
+msgid "hSD05-009_BLOOM_EFFECT"
+msgstr "自分のデッキから、#ReGLOSSを持つ[Debutホロメンか1stホロメン]1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hSD05-010_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hSD05-010_ART_0_NAME"
+msgstr "ちょいと一席"
+
+msgid "hSD05-010_ART_0_EFFECT"
+msgstr "自分のアーカイブのエール1枚を、自分の#ReGLOSSを持つホロメンに送れる。"
+
+msgid "hSD05-011_NAME"
+msgstr "一条莉々華"
+
+msgid "hSD05-011_ART_0_NAME"
+msgstr "社長の推し事"
+
+msgid "hSD05-011_COLLAB_NAME"
+msgstr "任せておきなさい!"
+
+msgid "hSD05-011_COLLAB_EFFECT"
+msgstr "自分のセンターホロメンが#ReGLOSSを持つ時、自分の手札が5枚以下なら、自分のデッキを1枚引く。"
+
+msgid "hSD05-012_NAME"
+msgstr "火威青"
+
+msgid "hSD05-012_ART_0_NAME"
+msgstr "世界一かわいいよ"
+
+msgid "hSD05-012_COLLAB_NAME"
+msgstr "ドーンッ!"
+
+msgid "hSD05-012_COLLAB_EFFECT"
+msgstr "相手のセンターホロメンかバックホロメン1人に特殊ダメージ10を与える。"
+
+msgid "hSD05-013_NAME"
+msgstr "音乃瀬奏"
+
+msgid "hSD05-013_ART_0_NAME"
+msgstr "ガハw"
+
+msgid "hSD05-013_COLLAB_NAME"
+msgstr "クレッシェンドな日々"
+
+msgid "hSD05-013_COLLAB_EFFECT"
+msgstr "自分のステージのエール1枚を、このホロメン以外の自分のホロメンに付け替えられる。"
+
+msgid "hSD0-014_NAME"
+msgstr "ばんぺん"
+
+msgid "hSD0-014_EFFECT"
+msgstr "このマスコットが付いているホロメンのアーツ+10。\n\n◆〈轟はじめ〉に付いていたら能力追加このマスコットが付いているホロメンのHP+20。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hSD06-001_NAME"
+msgstr "風真いろは"
+
+msgid "hSD06-001_SKILL_NAME"
+msgstr "グリーンマイク"
+
+msgid "hSD06-001_SKILL_EFFECT"
+msgstr "[ターンに1回] このターンの間、自分の緑センターホロメンのアーツ+20."
+
+msgid "hSD06-001_SPSKILL_NAME"
+msgstr "みんな頑張ろー!"
+
+msgid "hSD06-001_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分の緑ホロメン全員のHP20回復。"
+
+msgid "hSD06-002_NAME"
+msgstr "風真いろは"
+
+msgid "hSD06-002_ART_0_NAME"
+msgstr "いえす!ジャキンジャキン!!"
+
+msgid "hSD06-002_COLLAB_NAME"
+msgstr "のっと!ニンニン!!"
+
+msgid "hSD06-002_COLLAB_EFFECT"
+msgstr "自分のホロメン1人のHP10回復。"
+
+msgid "hSD06-003_NAME"
+msgstr "風真いろは"
+
+msgid "hSD06-003_ART_0_NAME"
+msgstr "一刀両断叩き斬る"
+
+msgid "hSD06-003_ART_0_EFFECT"
+msgstr "自分のセンターホロメンのHPが減っている時、このアーツ+10。"
+
+msgid "hSD06-004_NAME"
+msgstr "風真いろは"
+
+msgid "hSD06-004_ART_0_NAME"
+msgstr "照れ屋な用心棒"
+
+msgid "hSD06-005_NAME"
+msgstr "風真いろは"
+
+msgid "hSD06-005_ART_0_NAME"
+msgstr "かざまといっしょ!"
+
+msgid "hSD06-005_BLOOM_NAME"
+msgstr "かざまとおでかけ"
+
+msgid "hSD06-005_BLOOM_EFFECT"
+msgstr "自分のエールデッキの上から1枚を、自分の#秘密結社holoxを持つホロメンに送る。"
+
+msgid "hSD06-006_NAME"
+msgstr "風真いろは"
+
+msgid "hSD06-006_ART_0_NAME"
+msgstr "刀の錆になるでござる!"
+
+msgid "hSD06-006_BLOOM_NAME"
+msgstr "サムライ少女"
+
+msgid "hSD06-006_BLOOM_EFFECT"
+msgstr "自分のデッキから、[〈チャキ丸〉かくぽこべぇ〉]1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hSD06-007_NAME"
+msgstr "風真いろは"
+
+msgid "hSD06-007_ART_0_NAME"
+msgstr "天才では?"
+
+msgid "hSD06-007_ART_0_EFFECT"
+msgstr "自分のステージにエールが5枚以上ある時、このアーツ+50。"
+
+msgid "hSD06-007_BLOOM_NAME"
+msgstr "元気をお届け"
+
+msgid "hSD06-007_BLOOM_EFFECT"
+msgstr "自分の#秘密結社holoxを持つホロメン1人のHP30回復。"
+
+msgid "hSD06-008_NAME"
+msgstr "博衣こより"
+
+msgid "hSD06-008_ART_0_NAME"
+msgstr "どやぁ"
+
+msgid "hSD06-008_COLLAB_NAME"
+msgstr "ずのー!"
+
+msgid "hSD06-008_COLLAB_EFFECT"
+msgstr "自分のセンターホロメンが#秘密結社holoxを持つ時、自分の手札が5枚以下なら、自分のデッキを1枚引く。"
+
+msgid "hSD06-009_NAME"
+msgstr "鷹嶺ルイ"
+
+msgid "hSD06-009_ART_0_NAME"
+msgstr "頼れる女幹部"
+
+msgid "hSD06-009_ART_0_EFFECT"
+msgstr "自分のアーカイブの#秘密結社holoxを持つDebutホロメン1枚を手札に戻せる。"
+
+msgid "hSD06-010_NAME"
+msgstr "ラプラス・ダークネス"
+
+msgid "hSD06-010_ART_0_NAME"
+msgstr "狂気の宴"
+
+msgid "hSD06-010_ART_0_EFFECT"
+msgstr "[コラボポジション限定]このターンの自分のメインステップに自分のSP推しスキルを使っていた時、このアーツ+50。"
+
+msgid "hSD06-011_NAME"
+msgstr "ﾁｬｷ丸"
+
+msgid "hSD06-011_EFFECT"
+msgstr "このツールが付いているホロメンのアーツ+10。\n\n◆1st以上の〈風真いろは〉に付いていたら能力追加[ターンに1回]相手のターンで、このツールが付いているホロメンがダメージを受けた時、相手のセンターホロメンに特殊ダメージ20を与える。ただし、ダウンしても相手のライフは減らない。\n\nツールは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hSD06-012_NAME"
+msgstr "ぽこべぇ"
+
+msgid "hSD06-012_EFFECT"
+msgstr "このマスコットが付いているホロメンのHP+10。\n\n◆〈風真いろは〉に付いていたら能力追加このマスコットが付いているホロメンのHP+20。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hSD07-001_NAME"
+msgstr "不知火フレア"
+
+msgid "hSD07-001_SKILL_NAME"
+msgstr "イエローマイク"
+
+msgid "hSD07-001_SKILL_EFFECT"
+msgstr "[ターンに1回] このターンの間、自分の黄センターホロメンのアーツ+20."
+
+msgid "hSD07-001_SPSKILL_NAME"
+msgstr "後は引き受けた!"
+
+msgid "hSD07-001_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のゼンターホロメンとお休みしていないバックホロメン1人を交代させる。さらに、バックポジションに移動したホロメンのHP30回復。"
+
+msgid "hSD07-002_NAME"
+msgstr "不知火フレア"
+
+msgid "hSD07-002_ART_0_NAME"
+msgstr "こんぬいー!!"
+
+msgid "hSD07-002_ART_1_NAME"
+msgstr "不知火フレアだよ!"
+
+msgid "hSD07-003_NAME"
+msgstr "不知火フレア"
+
+msgid "hSD07-003_ART_0_NAME"
+msgstr "キミといっしょにお出かけ"
+
+msgid "hSD07-003_COLLAB_NAME"
+msgstr "大切な仲間たちと"
+
+msgid "hSD07-003_COLLAB_EFFECT"
+msgstr "自分のステージのホロメンが5人以下の時、自分のデッキから、Debutホロメンの[〈尾丸ポルカ〉か〈さくらみこ〉か〈星街すいせい〉か〈白銀ノエル〉]1枚を公 開できる:公開したホロメンをステージに出す。そしてデッキをシャッフルする。"
+
+msgid "hSD07-004_NAME"
+msgstr "不知火フレア"
+
+msgid "hSD07-004_ART_0_NAME"
+msgstr "ワンダフルライフ"
+
+msgid "hSD07-004_ART_0_EFFECT"
+msgstr "自分の手札の枚数が相手より少ない時、このアーツ+10。"
+
+msgid "hSD07-005_NAME"
+msgstr "不知火フレア"
+
+msgid "hSD07-005_ART_0_NAME"
+msgstr "私からキミへ"
+
+msgid "hSD07-005_ART_1_NAME"
+msgstr "キミとティータイム"
+
+msgid "hSD07-006_NAME"
+msgstr "不知火フレア"
+
+msgid "hSD07-006_ART_0_NAME"
+msgstr "キミを1番好きなのはわたしぃ~♡"
+
+msgid "hSD07-006_ART_0_EFFECT"
+msgstr "自分のライフが3以下の時、このアーツ+30。"
+
+msgid "hSD07-006_BLOOM_NAME"
+msgstr "エルフレンドのさえずり"
+
+msgid "hSD07-006_BLOOM_EFFECT"
+msgstr "自分のデッキから、〈エルフレンド〉1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hSD07-007_NAME"
+msgstr "不知火フレア"
+
+msgid "hSD07-007_ART_0_NAME"
+msgstr "キミに見てほしいな!"
+
+msgid "hSD07-007_BLOOM_NAME"
+msgstr "また一つ成長した私を"
+
+msgid "hSD07-007_BLOOM_EFFECT"
+msgstr "[バックポジション限定] 自分の残りHP70以下のコラボホロメンとこのホロメンを交代できる。"
+
+msgid "hSD07-008_NAME"
+msgstr "不知火フレア"
+
+msgid "hSD07-008_ART_0_NAME"
+msgstr "エルフレパーティー"
+
+msgid "hSD07-008_ART_0_EFFECT"
+msgstr "自分のアーカイブの〈エルフレンド〉1枚をこのホロメンに付けられる。"
+
+msgid "hSD07-009_NAME"
+msgstr "不知火フレア"
+
+msgid "hSD07-009_ART_0_NAME"
+msgstr "情熱ステージ"
+
+msgid "hSD07-009_ART_0_EFFECT"
+msgstr "自分のライフが3以下の時、このアーツ+70。"
+
+msgid "hSD07-009_GIFT_NAME"
+msgstr "疲れ知らず"
+
+msgid "hSD07-009_GIFT_EFFECT"
+msgstr "[センターポジション限定]このホロメンが受けるダメージ-10。"
+
+msgid "hSD07-010_NAME"
+msgstr "白銀ノエル"
+
+msgid "hSD07-010_ART_0_NAME"
+msgstr "いっぱい建築したいです"
+
+msgid "hSD07-010_COLLAB_NAME"
+msgstr "大物の確証"
+
+msgid "hSD07-010_COLLAB_EFFECT"
+msgstr "このターンの間、自分のセンターホロメンのアーツ+10。"
+
+msgid "hSD07-011_NAME"
+msgstr "さくらみこ"
+
+msgid "hSD07-011_ART_0_NAME"
+msgstr "魔王軍は無くなりました"
+
+msgid "hSD07-011_COLLAB_NAME"
+msgstr "バーニン♪バーニン♪"
+
+msgid "hSD07-011_COLLAB_EFFECT"
+msgstr "相手のセンターホロメンに特殊ダメージ10を与える。"
+
+msgid "hSD07-012_NAME"
+msgstr "尾丸ポルカ"
+
+msgid "hSD07-012_ART_0_NAME"
+msgstr "骨を埋める覚悟"
+
+msgid "hSD07-012_COLLAB_NAME"
+msgstr "僕らに水を"
+
+msgid "hSD07-012_COLLAB_EFFECT"
+msgstr "自分のセンターホロメンが〈不知火フレア〉の時、自分の手札の枚数が相手より少なければ、自分のデッキを1枚引く。"
+
+msgid "hSD07-013_NAME"
+msgstr "星街すいせい"
+
+msgid "hSD07-013_ART_0_NAME"
+msgstr "雇ってください!!"
+
+msgid "hSD07-013_COLLAB_NAME"
+msgstr "ご飯が底をつきそう……"
+
+msgid "hSD07-013_COLLAB_EFFECT"
+msgstr "自分のセンターホロメンが〈不知火フレア〉の時、自分のアーカイブのエール1枚を、このホロメン以外の自分のホロメンに送れる。"
+
+msgid "hSD07-014_NAME"
+msgstr "不知火建設"
+
+msgid "hSD07-014_EFFECT"
+msgstr "不知火建設\n\nこのカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、〈不知火フレア〉と〈尾丸ポルカ〉と〈さくらみこ〉と〈星街すいせい〉と〈白銀ノエル〉を好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hSD07-015_NAME"
+msgstr "エルフレンド"
+
+msgid "hSD07-015_EFFECT"
+msgstr "このファンが付いているホロメンのHP+10。\n\nこのファンは、自分の〈不知火フレア〉だけに付けられ、1人につき何枚でも付けられる。"
+
+msgid "hY06-001_NAME"
+msgstr "黄エール"
+

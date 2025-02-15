@@ -3784,3 +3784,441 @@ msgstr "Purple Cheer"
 msgid "hY01-003_NAME"
 msgstr "White Cheer"
 
+msgid "hSD05-001_NAME"
+msgstr "Todoroki Hajime"
+
+msgid "hSD05-001_SKILL_NAME"
+msgstr "White Mic"
+
+msgid "hSD05-001_SKILL_EFFECT"
+msgstr "(Once per turn) If your Center holomem is White, their Arts gain +20 power until the end of this turn."
+
+msgid "hSD05-001_SPSKILL_NAME"
+msgstr "Quick Guard"
+
+msgid "hSD05-001_SPSKILL_EFFECT"
+msgstr "(Once per game) Can be used during your opponent's turn when one of your White holomems is about to take damage: reduce that damage by 20."
+
+msgid "hSD05-002_NAME"
+msgstr "Todoroki Hajime"
+
+msgid "hSD05-002_ART_0_NAME"
+msgstr "Bunbunbun!"
+
+msgid "hSD05-003_NAME"
+msgstr "Todoroki Hajime"
+
+msgid "hSD05-003_ART_0_NAME"
+msgstr "Fashionable banchou"
+
+msgid "hSD05-003_COLLAB_NAME"
+msgstr "Konchikuwa"
+
+msgid "hSD05-003_COLLAB_EFFECT"
+msgstr "If your Center holomem has #ReGLOSS, their Arts gain +10 power until the end of this turn."
+
+msgid "hSD05-004_NAME"
+msgstr "Todoroki Hajime"
+
+msgid "hSD05-004_ART_0_NAME"
+msgstr "ReGLOSS's Banchou!"
+
+msgid "hSD05-005_NAME"
+msgstr "Todoroki Hajime"
+
+msgid "hSD05-005_ART_0_NAME"
+msgstr "Ice to mitchu"
+
+msgid "hSD05-005_ART_1_NAME"
+msgstr "Yah!"
+
+msgid "hSD05-006_NAME"
+msgstr "Todoroki Hajime"
+
+msgid "hSD05-006_ART_0_NAME"
+msgstr "Light on her feet, Todoroki Hajime"
+
+msgid "hSD05-006_ART_1_NAME"
+msgstr "Tank yoo!"
+
+msgid "hSD05-006_ART_1_EFFECT"
+msgstr "If there are at least 3 holomems with #ReGLOSS on your Stage with different names, this Art gains +20 power."
+
+msgid "hSD05-007_NAME"
+msgstr "Todoroki Hajime"
+
+msgid "hSD05-007_ART_0_NAME"
+msgstr "Courage, charm, the strongest"
+
+msgid "hSD05-007_BLOOM_NAME"
+msgstr "A jane-of-all-trades seeking to be the #1 badass in the universe"
+
+msgid "hSD05-007_BLOOM_EFFECT"
+msgstr "Draw 1 card from your Deck."
+
+msgid "hSD05-008_NAME"
+msgstr "Todoroki Hajime"
+
+msgid "hSD05-008_ART_0_NAME"
+msgstr "I think I'm starting to look like a Bancho!"
+
+msgid "hSD05-008_ART_0_EFFECT"
+msgstr "The Arts of one of your Debut holomems with #ReGLOSS gain +40 until the end of this turn."
+
+msgid "hSD05-009_NAME"
+msgstr "Todoroki Hajime"
+
+msgid "hSD05-009_ART_0_NAME"
+msgstr "Purple Lightning"
+
+msgid "hSD05-009_ART_0_EFFECT"
+msgstr "If there is a holomem with #ReGLOSS on your Stage not named Todoroki Hajime, this Art gains +30 power."
+
+msgid "hSD05-009_BLOOM_NAME"
+msgstr "Add color to the world with dance!"
+
+msgid "hSD05-009_BLOOM_EFFECT"
+msgstr "Reveal a Debut or 1st Bloom holomem with #ReGLOSS from your Deck and put it into your hand. Then shuffle your deck."
+
+msgid "hSD05-010_NAME"
+msgstr "Juufuutei Raden"
+
+msgid "hSD05-010_ART_0_NAME"
+msgstr "Take a seat"
+
+msgid "hSD05-010_ART_0_EFFECT"
+msgstr "You may send 1 Cheer from your Archive to any of your holomems with #ReGLOSS."
+
+msgid "hSD05-011_NAME"
+msgstr "Ichijou Ririka"
+
+msgid "hSD05-011_ART_0_NAME"
+msgstr "President's Oshi Work"
+
+msgid "hSD05-011_COLLAB_NAME"
+msgstr "Leave it to me!"
+
+msgid "hSD05-011_COLLAB_EFFECT"
+msgstr "If your Center holomem has #ReGLOSS and you have 5 or fewer cards in your hand, draw 1 card from your Deck."
+
+msgid "hSD05-012_NAME"
+msgstr "Hiodoshi Ao"
+
+msgid "hSD05-012_ART_0_NAME"
+msgstr "You're the cutest in the world"
+
+msgid "hSD05-012_COLLAB_NAME"
+msgstr "Ta-da!"
+
+msgid "hSD05-012_COLLAB_EFFECT"
+msgstr "Deal 10 special damage to your opponent's Center holomem or one of their Back holomems."
+
+msgid "hSD05-013_NAME"
+msgstr "Otonose Kanade"
+
+msgid "hSD05-013_ART_0_NAME"
+msgstr "HAHA"
+
+msgid "hSD05-013_COLLAB_NAME"
+msgstr "Crescendo Days"
+
+msgid "hSD05-013_COLLAB_EFFECT"
+msgstr "You may move 1 Cheer on your Stage to one of your holomems other than this holomem."
+
+msgid "hSD0-014_NAME"
+msgstr "Banpen"
+
+msgid "hSD0-014_EFFECT"
+msgstr "The Arts of the holomem with this Mascot attached gain +10 power.\n\nIf this is attached to Todoroki Hajime, it gains the following effect: the holomem with this Mascot attached has +20 HP.\n\nYou may only attach 1 Mascot to a holomem."
+
+msgid "hSD06-001_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hSD06-001_SKILL_NAME"
+msgstr "Green Mic"
+
+msgid "hSD06-001_SKILL_EFFECT"
+msgstr "(Once per turn) If your Center holomem is Green, their Arts gain +20 power until the end of this turn."
+
+msgid "hSD06-001_SPSKILL_NAME"
+msgstr "Let's do our best everyone!"
+
+msgid "hSD06-001_SPSKILL_EFFECT"
+msgstr "(Once per game) Restore 20 HP to all of your Green holomems."
+
+msgid "hSD06-002_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hSD06-002_ART_0_NAME"
+msgstr "YES! JAKIN-JAKIN!!"
+
+msgid "hSD06-002_COLLAB_NAME"
+msgstr "NOT! NIN-NIN!!"
+
+msgid "hSD06-002_COLLAB_EFFECT"
+msgstr "Restore 10HP to one of your holomems."
+
+msgid "hSD06-003_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hSD06-003_ART_0_NAME"
+msgstr "Take you down in one slash"
+
+msgid "hSD06-003_ART_0_EFFECT"
+msgstr "If your Center holomem is damaged, this Art gains +10 power."
+
+msgid "hSD06-004_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hSD06-004_ART_0_NAME"
+msgstr "Shy bodyguard"
+
+msgid "hSD06-005_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hSD06-005_ART_0_NAME"
+msgstr "Together with Kazama!"
+
+msgid "hSD06-005_BLOOM_NAME"
+msgstr "Going out with Kazama"
+
+msgid "hSD06-005_BLOOM_EFFECT"
+msgstr "Send the top card of your Cheer deck to one of your holomems with #SecretSocietyholoX"
+
+msgid "hSD06-006_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hSD06-006_ART_0_NAME"
+msgstr "It will cause rust on your sword!"
+
+msgid "hSD06-006_BLOOM_NAME"
+msgstr "Samurai Girl"
+
+msgid "hSD06-006_BLOOM_EFFECT"
+msgstr "Reveal 1 Chakimaru or Pokobe from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hSD06-007_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hSD06-007_ART_0_NAME"
+msgstr "Am I a genius?"
+
+msgid "hSD06-007_ART_0_EFFECT"
+msgstr "If there are at least 5 Cheers on your stage, this Art gains +50 power."
+
+msgid "hSD06-007_BLOOM_NAME"
+msgstr "Bringing you energy"
+
+msgid "hSD06-007_BLOOM_EFFECT"
+msgstr "Restore 30 HP to one of your holomems with #SecretSocietyholoX."
+
+msgid "hSD06-008_NAME"
+msgstr "Hakui Koyori"
+
+msgid "hSD06-008_ART_0_NAME"
+msgstr "doya"
+
+msgid "hSD06-008_COLLAB_NAME"
+msgstr "The brains!"
+
+msgid "hSD06-008_COLLAB_EFFECT"
+msgstr "If your Center holomem has #SecretSocietyholoX and you have 5 or fewer cards in your hand, draw 1 card from your Deck."
+
+msgid "hSD06-009_NAME"
+msgstr "Takane Lui"
+
+msgid "hSD06-009_ART_0_NAME"
+msgstr "Reliable Executive"
+
+msgid "hSD06-009_ART_0_EFFECT"
+msgstr "You may return 1 Debut holomem with #SecretSocietyholoX from your Archive to your hand."
+
+msgid "hSD06-010_NAME"
+msgstr "La+ Darknesss"
+
+msgid "hSD06-010_ART_0_NAME"
+msgstr "Party of Madness"
+
+msgid "hSD06-010_ART_0_EFFECT"
+msgstr "[Collab position only] If you have used your SP Oshi Skill during this turn's Main Step, this Art gains +50 power."
+
+msgid "hSD06-011_NAME"
+msgstr "Chakimaru"
+
+msgid "hSD06-011_EFFECT"
+msgstr "The Arts of the holomem with this Tool attached gain +10 power.\n\nIf this is attached to a 1st Bloom or later Kazama Iroha, it gains the following effect: (Once per turn) During your opponent's turn, when the holomem with this Tool attached takes damage, deal 20 special damage to your opponent's Center holomem. Holomems Downed with this effect do not reduce LIFE\n\nYou may only attach 1 Tool to a holomem."
+
+msgid "hSD06-012_NAME"
+msgstr "Pokobe"
+
+msgid "hSD06-012_EFFECT"
+msgstr "The holomem with this Mascot attached has +10 HP.\n\nIf this is attached to Kazama Iroha, it gains the following effect: the holomem with this Mascot attached has an additional +20 HP.\n\nYou may only attach 1 Mascot to a holomem."
+
+msgid "hSD07-001_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hSD07-001_SKILL_NAME"
+msgstr "Yellow Mic"
+
+msgid "hSD07-001_SKILL_EFFECT"
+msgstr "(Once per turn) If your Center holomem is Yellow, their Arts gain +20 power until the end of this turn."
+
+msgid "hSD07-001_SPSKILL_NAME"
+msgstr "I'll take care of the rest!"
+
+msgid "hSD07-001_SPSKILL_EFFECT"
+msgstr "(Once per game) Switch your Center holomem with one of your Back holomems who is not Resting. Then restore 30 HP to the holomem that moved to the Back Position."
+
+msgid "hSD07-002_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hSD07-002_ART_0_NAME"
+msgstr "Konnui!"
+
+msgid "hSD07-002_ART_1_NAME"
+msgstr "It's Shiranui Flare!"
+
+msgid "hSD07-003_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hSD07-003_ART_0_NAME"
+msgstr "Going out with you"
+
+msgid "hSD07-003_COLLAB_NAME"
+msgstr "With my precious friends"
+
+msgid "hSD07-003_COLLAB_EFFECT"
+msgstr "If there are 5 or fewer holomems on your Stage, you may reveal a Debut Omaru Polka, Sakura Miko, Hoshimachi Suisei, or Shirogane Noel from your Deck and put it onto your Stage. Then shuffle your deck."
+
+msgid "hSD07-004_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hSD07-004_ART_0_NAME"
+msgstr "Wonderful Life"
+
+msgid "hSD07-004_ART_0_EFFECT"
+msgstr "If you have fewer cards in hand than your opponent, this Art gains +10 power."
+
+msgid "hSD07-005_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hSD07-005_ART_0_NAME"
+msgstr "From me to you"
+
+msgid "hSD07-005_ART_1_NAME"
+msgstr "Tea time with you"
+
+msgid "hSD07-006_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hSD07-006_ART_0_NAME"
+msgstr "I'm the one who loves you the most ❤️"
+
+msgid "hSD07-006_ART_0_EFFECT"
+msgstr "If you have 3 or less LIFE, this Art gains +30 power."
+
+msgid "hSD07-006_BLOOM_NAME"
+msgstr "The tweeting of Elfriends"
+
+msgid "hSD07-006_BLOOM_EFFECT"
+msgstr "Reveal 1 Elfriend from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hSD07-007_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hSD07-007_ART_0_NAME"
+msgstr "I want you to see it!"
+
+msgid "hSD07-007_BLOOM_NAME"
+msgstr "I've grown a little bit"
+
+msgid "hSD07-007_BLOOM_EFFECT"
+msgstr "[Back position only] If your collab holomem has 70 of less HP remaining, you may Switch this holomem with your Collab holomem."
+
+msgid "hSD07-008_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hSD07-008_ART_0_NAME"
+msgstr "Elfriend Party"
+
+msgid "hSD07-008_ART_0_EFFECT"
+msgstr "You may attach 1 Elfriend from your Archive to this holomem."
+
+msgid "hSD07-009_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hSD07-009_ART_0_NAME"
+msgstr "Passion Stage"
+
+msgid "hSD07-009_ART_0_EFFECT"
+msgstr "If you have 3 or less LIFE, this Art gains +70 power."
+
+msgid "hSD07-009_GIFT_NAME"
+msgstr "Tireless"
+
+msgid "hSD07-009_GIFT_EFFECT"
+msgstr "[Center position only] Whenever this holomem takes damage, it takes -10 damage."
+
+msgid "hSD07-010_NAME"
+msgstr "Shirogane Noel"
+
+msgid "hSD07-010_ART_0_NAME"
+msgstr "I want to build a lot"
+
+msgid "hSD07-010_COLLAB_NAME"
+msgstr "Confirmation of big things"
+
+msgid "hSD07-010_COLLAB_EFFECT"
+msgstr "Your Center holomem's Arts gain +10 power until the end of this turn."
+
+msgid "hSD07-011_NAME"
+msgstr "Sakura Miko"
+
+msgid "hSD07-011_ART_0_NAME"
+msgstr "The Demon Lord's Army is gone"
+
+msgid "hSD07-011_COLLAB_NAME"
+msgstr "Burning🎵 Burning🎵"
+
+msgid "hSD07-011_COLLAB_EFFECT"
+msgstr "Deal 10 special damage to your opponent's Center holomem."
+
+msgid "hSD07-012_NAME"
+msgstr "Omaru Polka"
+
+msgid "hSD07-012_ART_0_NAME"
+msgstr "Ready to give up my life"
+
+msgid "hSD07-012_COLLAB_NAME"
+msgstr "Give us water"
+
+msgid "hSD07-012_COLLAB_EFFECT"
+msgstr "If your Center holomem is Shiranui Flare and you have fewer cards in hand than your opponent, draw 1 card from your Deck."
+
+msgid "hSD07-013_NAME"
+msgstr "Hoshimachi Suisei"
+
+msgid "hSD07-013_ART_0_NAME"
+msgstr "Please hire me!!"
+
+msgid "hSD07-013_COLLAB_NAME"
+msgstr "I'm running out of rice..."
+
+msgid "hSD07-013_COLLAB_EFFECT"
+msgstr "If your Center holomem is Shiranui Flare, you may send 1 Cheer from your Archive to any of your holomems other than this one."
+
+msgid "hSD07-014_NAME"
+msgstr "Shiranui Constructions"
+
+msgid "hSD07-014_EFFECT"
+msgstr "This card can only be played if you have 6 or fewer cards in your hand, excluding this card.\n\nLook at the top four cards of your Deck. Reveal any number of them that are holomems named Shiranui Flare, Omaru Polka, Sakura Miko, Hoshimachi Suisei, or Shirogane Noel and put them into your hand. Then put the remaining cards on the bottom of your Deck in any order."
+
+msgid "hSD07-015_NAME"
+msgstr "Elfriend"
+
+msgid "hSD07-015_EFFECT"
+msgstr "The holomem with this Fan attached has +10 HP.\n\nThis Fan may only be attached to your Shiranui Flare, and you may attach any number of this Fan to one holomem."
+
+msgid "hY06-001_NAME"
+msgstr "Yellow Cheer"
+
