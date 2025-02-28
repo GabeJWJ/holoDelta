@@ -4918,3 +4918,75 @@ msgstr ""
 msgid "hBP03-113_EFFECT"
 msgstr ""
 
+msgid "hBP03-015_NAME"
+msgstr ""
+
+msgid "hBP03-015_ART_0_NAME"
+msgstr ""
+
+msgid "hBP03-015_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP03-015_GIFT_NAME"
+msgstr ""
+
+msgid "hBP03-015_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP03-024_NAME"
+msgstr ""
+
+msgid "hBP03-024_ART_0_NAME"
+msgstr ""
+
+msgid "hBP03-024_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP03-024_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP03-024_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP03-046_NAME"
+msgstr ""
+
+msgid "hBP03-046_ART_0_NAME"
+msgstr ""
+
+msgid "hBP03-046_ART_1_NAME"
+msgstr ""
+
+msgid "hBP03-047_NAME"
+msgstr ""
+
+msgid "hBP03-047_ART_0_NAME"
+msgstr ""
+
+msgid "hBP03-048_NAME"
+msgstr ""
+
+msgid "hBP03-048_ART_0_NAME"
+msgstr ""
+
+msgid "hBP03-048_ART_1_NAME"
+msgstr ""
+
+msgid "hBP03-048_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP03-079_NAME"
+msgstr ""
+
+msgid "hBP03-079_ART_0_NAME"
+msgstr ""
+
+msgid "hBP03-079_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP03-079_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP03-079_BLOOM_EFFECT"
+msgstr ""
+
