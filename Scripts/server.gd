@@ -1,6 +1,6 @@
 extends Node
 
-const websocketURL = "127.0.0.1:8000"
+const websocketURL = "holodelta.net"
 const serverURL = "http://" + websocketURL + "/"
 
 
