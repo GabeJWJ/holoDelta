@@ -1,6 +1,6 @@
 extends Node
 
-const websocketURL = "holodelta.net"
+const websocketURL = "holodelta.azurewebsites.net"
 const serverURL = "http://" + websocketURL + "/"
 
 
