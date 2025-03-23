@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="16"
+   viewBox="0 0 16 16"
+   width="16"
+   version="1.1"
+   id="svg845"
+   sodipodi:docname="WebSocket.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   inkscape:export-filename="C:\Users\andrea\Desktop\Godot\WebSocket\icon.png"
+   inkscape:export-xdpi="1536"
+   inkscape:export-ydpi="1536">
+  <metadata
+     id="metadata851">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs849" />
+  <sodipodi:namedview
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     id="namedview847"
+     showgrid="false"
+     inkscape:zoom="24.527766"
+     inkscape:cx="4.3286223"
+     inkscape:cy="10.717269"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg845"
+     inkscape:document-rotation="0" />
+  <path
+     d="m 14,11 h 1 v 1 h -1 z"
+     id="path865"
+     style="mix-blend-mode:lighten;fill:#ffffff;fill-opacity:0" />
+  <path
+     d="M 11,1 V 4 H 9 l 3,4 3,-4 H 13 V 1 Z"
+     id="path855"
+     style="fill:#e0e0e0;fill-opacity:0.99607843" />
+  <path
+     d="M 4,1 1,5 H 3 V 8 H 5 V 5 h 2 z"
+     id="path843"
+     style="fill:#e0e0e0;fill-opacity:0.99607843" />
+  <path
+     id="path867"
+     style="fill:#e0e0e0;fill-opacity:0.99607843;fill-rule:nonzero"
+     d="m 10.5,10 v 3.025471 h 2.037109 v 1.003826 H 10.5 v 1 h 3 V 11.990154 H 11.462891 V 11 H 13.5 v -1 z"
+     sodipodi:nodetypes="ccccccccccccc" />
+  <path
+     id="path878"
+     d="m 6.4978436,10 v 5.265006 H 4.5069951 L 4,14.702068 v -1.745595 l 0.9398946,1.143188 H 5.5874033 V 10 Z m -4.9956872,0 v 5.265006 H 3.4930049 L 4,14.702068 V 12.956473 L 3.0601054,14.099661 H 2.4125967 V 10 Z"
+     style="stroke:#e0e0e0;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99607843;paint-order:stroke fill markers;fill:#e0e0e0;fill-opacity:0.99607843" />
+</svg>

@@ -12,9 +12,9 @@ extends Node
 
 var settings = {}
 @onready var json = JSON.new()
-var languages = [["en","English"], ["ja","日本語"], ["es", "Español"]] #Contains both the locale code and the user-friendly text for buttons
+var languages = [["en","English"], ["ja","日本語"], ["ko","한글"], ["es", "Español"], ["fr","Français"]] #Contains both the locale code and the user-friendly text for buttons
 enum bloomCode {OK,Instant,Skip,No} #OK - can bloom normally, Instant - can bloom on something played this turn, Skip - can bloom a 2nd on debut, No - can't bloom
-var version = "1.1.4.4"
+var version = "1.2.0"
 
 var cardText = {}
 
@@ -44,6 +44,9 @@ func _ready() -> void:
 	
 	if !settings.has("AllowProxies"):
 		settings["AllowProxies"] = false
+	
+	if !settings.has("Name"):
+		settings["Name"] = ""
 	
 	#There was a change in 1.1.3 from storing the language as the user-friendly name to
 	#	storing the locale code

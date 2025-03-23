@@ -10,6 +10,8 @@ extends Node2D
 @export var faceDown = false
 @export var trulyHidden = false
 @export var onstage = false
+@export var fake_card = false
+@export var temporary = false
 
 var notFound = false
 
@@ -23,11 +25,13 @@ signal card_right_clicked(card_id)
 signal card_mouse_over(card_id)
 signal card_mouse_left
 signal move_behind_request(id1,id2)
+signal accept_damage(card_id)
 
 var cardFront
 var cardBack
 var fullText = ""
 @export var artNum:int
+@export var inEditor := false
 
 var onTopOf = []
 var attached = []
@@ -39,13 +43,12 @@ var attached = []
 @export var damage:int = 0
 @export var offered_damage:int
 @export var extra_hp:int
-@export var status:Array
 @export var baton_pass_cost:int
 @export var unlimited:bool
 @export var buzz:bool
 @export var holomem_color:Array
 @export var holomem_name:Array
-@export var tags:Array
+@export var tags:Array = []
 @export var bloomed_this_turn: bool
 @export var holomem_arts: Array
 @export var holomem_effects: Array
@@ -67,9 +70,13 @@ var attached = []
 func setup_info(number,art_code,back=null):
 	cardNumber = number
 	artNum = art_code
-	var data1 = Database.db.select_rows("mainCards","cardID LIKE '" + cardNumber + "'", ["*"])
-	var art_data = Database.db.select_rows("cardHasArt","cardID LIKE '" + cardNumber + "' AND art_index = " + str(art_code), ["*"])
-	if data1.is_empty() or art_data.is_empty():
+	
+	if back:
+		cardBack = ImageTexture.create_from_image(back)
+	
+	var card_data = Database.cardData[cardNumber]
+	
+	if card_data.is_empty():
 		notFound = true
 		match Settings.settings.Language:
 			"ja":
@@ -78,72 +85,63 @@ func setup_info(number,art_code,back=null):
 				cardFront = load("res://Sou_Desu_Ne.png")
 		$Front.texture = cardFront
 		return
-	elif art_data[0].unrevealed and !Settings.settings.AllowUnrevealed:
+	elif card_data.cardArt[str(artNum)].ja.unrevealed and !Settings.settings.AllowUnrevealed:
 		notFound = true
 		cardFront = load("res://spoilers.png")
 		$Front.texture = cardFront
 		return
+	cardType = card_data.cardType
+	unlimited = card_data.cardLimit == -1
+	
+	var lang_code = "ja"
+	for lang in card_data.cardArt[str(artNum)]:
+		if lang == Settings.settings.Language and (Settings.settings.AllowProxies or !bool(card_data.cardArt[str(artNum)][lang].proxy)):
+			lang_code = lang
+	if cardNumber in Database.cardArts and int(artNum) in Database.cardArts[cardNumber] and lang_code in Database.cardArts[cardNumber][int(artNum)]:
+		cardFront = Database.cardArts[cardNumber][int(artNum)][lang_code]
+		$Front.texture = cardFront
 	else:
-		data1 = data1[0]
-		var temp_ad = art_data[0]
-		for ad in art_data:
-			if ad.lang == Settings.settings.Language and (Settings.settings.AllowProxies or !bool(ad.proxy)):
-				temp_ad = ad
-		art_data = temp_ad
-	cardType = data1.cardType
-	unlimited = data1.cardLimit == -1
+		print(cardNumber, " ", artNum, " ", lang_code)
 	
-	var image = Image.new()
-	image.load_png_from_buffer(art_data.art)
-	cardFront = ImageTexture.create_from_image(image)
-	$Front.texture = cardFront
-	
-	if back:
-		cardBack = ImageTexture.create_from_image(back)
+	if card_data.has("tags"):
+		for tag in card_data.tags:
+			tags.append(tag)
 	
 	match cardType:
 		"Oshi":
-			var data2 = Database.db.select_rows("oshiCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
-			life = data2.life
+			life = card_data.life
 			oshi_color = []
-			for row in Database.db.select_rows("oshiHasColor","cardID LIKE '" + cardNumber + "'", ["*"]):
-				oshi_color.append(row.color)
+			for color in card_data.color:
+				oshi_color.append(color)
 			oshi_name = []
-			for row in Database.db.select_rows("oshiHasName","cardID LIKE '" + cardNumber + "'", ["*"]):
-				oshi_name.append(row.name)
+			for name in card_data.name:
+				oshi_name.append(name)
 			oshi_skills = []
-			for row in Database.db.select_rows("cardHasTag","cardID LIKE '" + cardNumber + "'", ["*"]):
-				tags.append(row.tag)
-			for row in Database.db.select_rows("oshiHasSkill","cardID LIKE '" + cardNumber + "'", ["*"]):
-				if bool(row.sp):
-					oshi_skills.append(["%s_SPSKILL_NAME" % cardNumber,row.cost,bool(row.sp)])
+			for skill in card_data.skills:
+				if bool(skill.sp):
+					oshi_skills.append(["%s_SPSKILL_NAME" % cardNumber,skill.cost,bool(skill.sp)])
 				else:
-					oshi_skills.append(["%s_SKILL_NAME" % cardNumber,row.cost,bool(row.sp)])
+					oshi_skills.append(["%s_SKILL_NAME" % cardNumber,skill.cost,bool(skill.sp)])
 				
 		"Holomem":
 			bloomed_this_turn = false
-			var data2 = Database.db.select_rows("holomemCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
-			level = data2.level
-			buzz = bool(data2.buzz)
-			hp = data2.hp
+			level = card_data.level
+			buzz = bool(card_data.buzz)
+			hp = card_data.hp
 			damage = 0
 			offered_damage = 0
 			extra_hp = 0
-			baton_pass_cost = data2.batonPassCost
-			status = []
+			baton_pass_cost = card_data.batonPassCost
 			holomem_color = []
-			for row in Database.db.select_rows("holomemHasColor","cardID LIKE '" + cardNumber + "'", ["*"]):
-				holomem_color.append(row.color)
+			for color in card_data.color:
+				holomem_color.append(color)
 			holomem_name = []
-			for row in Database.db.select_rows("holomemHasName","cardID LIKE '" + cardNumber + "'", ["*"]):
-				holomem_name.append(row.name)
-			tags = []
-			for row in Database.db.select_rows("cardHasTag","cardID LIKE '" + cardNumber + "'", ["*"]):
-				tags.append(row.tag)
+			for name in card_data.name:
+				holomem_name.append(name)
 			holomem_arts = []
-			for row in Database.db.select_rows("holomemHasArt","cardID LIKE '" + cardNumber + "'", ["*"]):
+			for art in card_data.arts:
 				var cost_dict = {"White": 0, "Green": 0, "Red": 0, "Blue": 0, "Purple": 0, "Yellow": 0, "Any" : 0}
-				for chr in row.cost:
+				for chr in art.cost:
 					match chr:
 						"W":
 							cost_dict.White += 1
@@ -159,27 +157,31 @@ func setup_info(number,art_code,back=null):
 							cost_dict.Yellow += 1
 						"N":
 							cost_dict.Any += 1
-				holomem_arts.append([row.artIndex,cost_dict,row.damage,bool(row.hasPlus),bool(row.hasEffect),row.advantage])
-			holomem_arts.sort_custom(func(a,b): return a[0] < b[0])
+				holomem_arts.append([art.artIndex,cost_dict,art.damage,bool(art.hasPlus),bool(art.hasEffect),null if !art.has("advantage") else art.advantage])
+			holomem_arts.sort_custom(func(a,b): return a[0] < b[0]) #Order arts by index
 			holomem_effects = []
-			for row in Database.db.select_rows("holomemHasEffect","cardID LIKE '" + cardNumber + "'", ["*"]):
-				holomem_effects.append(row.effectType)
+			if card_data.has("effect"):
+				holomem_effects.append(card_data.effect)
 		"Support":
-			var data2 = Database.db.select_rows("supportCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
-			limited = bool(data2.limited)
-			supportType = data2.supportType
-			for row in Database.db.select_rows("cardHasTag","cardID LIKE '" + cardNumber + "'", ["*"]):
-				tags.append(row.tag)
+			limited = bool(card_data.limited)
+			supportType = card_data.supportType
 		"Cheer":
-			var data2 = Database.db.select_rows("cheerCards","cardID LIKE '" + cardNumber + "'", ["*"])
-			for row in Database.db.select_rows("cardHasTag","cardID LIKE '" + cardNumber + "'", ["*"]):
-				tags.append(row.tag)
-			if data2.is_empty():
-				cheer_color = tr("COLORLESS")
+			if card_data.has("color"):
+				cheer_color = card_data.color
 			else:
-				cheer_color = data2[0].color
+				cheer_color = "COLORLESS"
 	
 	fullText = full_desc()
+
+func set_ban(num: int):
+	if num < 0:
+		$Ban.visible = false
+	elif num == 0:
+		$Ban.text = "X"
+		$Ban.visible = true
+	else:
+		$Ban.text = str(num)
+		$Ban.visible = true
 
 func getNamesAsText():
 	match cardType:
@@ -510,7 +512,6 @@ func playOnTopOf(other_card):
 	other_card.attached = []
 	other_card.clear_damage()
 	other_card.clear_extra_hp()
-	other_card.status = []
 	
 	var newPos = other_card.position
 	move_to(newPos)
@@ -527,7 +528,6 @@ func playOnTopOf(other_card):
 func bloom(other_card):
 	damage = other_card.damage
 	extra_hp = other_card.extra_hp
-	status.append_array(other_card.status)
 	playOnTopOf(other_card)
 	update_damage()
 	bloomed_this_turn = true
@@ -543,12 +543,10 @@ func unbloom():
 		for attachCard in attached:
 			newCard.attach(attachCard)
 		attached = []
-		newCard.status.append_array(status)
 		newCard.damage = damage
 		newCard.extra_hp = extra_hp
 		newCard.update_damage()
 		newCard.onstage = true
-		status = []
 		clear_damage()
 		clear_extra_hp()
 		unrest()
@@ -564,7 +562,6 @@ func attach(other_card):
 	update_attached()
 
 
-@rpc("any_peer","call_remote","reliable")
 func flipDown():
 	if faceDown:
 		pass
@@ -572,7 +569,6 @@ func flipDown():
 		$Front.texture = cardBack
 		faceDown = true
 
-@rpc("any_peer","call_local","reliable")
 func flipUp():
 	if !faceDown:
 		pass
@@ -581,7 +577,6 @@ func flipUp():
 		faceDown = false
 		trulyHidden = false
 
-@rpc("any_peer","call_local","reliable")
 func trulyHide():
 	if trulyHidden:
 		pass
@@ -598,7 +593,6 @@ func updateBack(newBack):
 func _on_card_button_pressed():
 	emit_signal("card_clicked",cardID)
 
-@rpc("any_peer","call_local","reliable")
 func showNotice():
 	var tween = get_tree().create_tween()
 	tween.tween_property($Notice,"modulate",Color(1,1,1,1),0.1)
@@ -630,7 +624,6 @@ func _on_card_button_gui_input(event):
 		emit_signal("card_right_clicked",cardID)
 
 
-@rpc("any_peer","call_remote","reliable")
 func offer_damage(newDamage):
 	offered_damage += newDamage
 	$PotentialDamage.text = str(offered_damage)
@@ -650,10 +643,7 @@ func _on_reject_mouse_exited():
 
 
 func _on_accept_pressed():
-	damage += offered_damage
-	update_damage()
-	offered_damage = 0
-	$PotentialDamage.visible = false
+	emit_signal("accept_damage",cardID)
 
 func _on_reject_pressed():
 	offered_damage = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://j87r323v31qv"]
+[gd_scene load_steps=31 format=3 uid="uid://j87r323v31qv"]
 
 [ext_resource type="Script" path="res://Scripts/side.gd" id="1_vy6dv"]
 [ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="2_0kggm"]
@@ -25,56 +25,6 @@
 [ext_resource type="AudioStream" uid="uid://bp0x05dxnfc2o" path="res://HaruTsunXAssets/Place Card 2.wav" id="25_30rg1"]
 [ext_resource type="AudioStream" uid="uid://cxg5uowbntxl3" path="res://HaruTsunXAssets/Place Card 3.wav" id="26_u0kxe"]
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ddblg"]
-properties/0/path = NodePath(".:position")
-properties/0/spawn = true
-properties/0/replication_mode = 2
-properties/1/path = NodePath(".:rotation")
-properties/1/spawn = true
-properties/1/replication_mode = 2
-properties/2/path = NodePath(".:visible")
-properties/2/spawn = true
-properties/2/replication_mode = 2
-properties/3/path = NodePath(".:oshi")
-properties/3/spawn = true
-properties/3/replication_mode = 2
-properties/4/path = NodePath(".:deckList")
-properties/4/spawn = true
-properties/4/replication_mode = 2
-properties/5/path = NodePath(".:cheerDeckList")
-properties/5/spawn = true
-properties/5/replication_mode = 2
-properties/6/path = NodePath("SubViewportContainer:visible")
-properties/6/spawn = true
-properties/6/replication_mode = 2
-properties/7/path = NodePath(".:preliminary_phase")
-properties/7/spawn = true
-properties/7/replication_mode = 2
-properties/8/path = NodePath(".:can_do_things")
-properties/8/spawn = true
-properties/8/replication_mode = 2
-properties/9/path = NodePath(".:mainSleeve")
-properties/9/spawn = true
-properties/9/replication_mode = 0
-properties/10/path = NodePath(".:cheerSleeve")
-properties/10/spawn = true
-properties/10/replication_mode = 0
-properties/11/path = NodePath(".:oshiSleeve")
-properties/11/spawn = true
-properties/11/replication_mode = 0
-properties/12/path = NodePath(".:playmatBuffer")
-properties/12/spawn = true
-properties/12/replication_mode = 0
-properties/13/path = NodePath(".:diceBuffer")
-properties/13/spawn = true
-properties/13/replication_mode = 0
-properties/14/path = NodePath(".:forced_mulligan_cards")
-properties/14/spawn = true
-properties/14/replication_mode = 2
-properties/15/path = NodePath(".:step")
-properties/15/spawn = true
-properties/15/replication_mode = 2
-
 [sub_resource type="Theme" id="Theme_y8s1y"]
 HScrollBar/styles/grabber = null
 HScrollBar/styles/scroll = ExtResource("8_f6ll5")
@@ -92,7 +42,6 @@ stream_1/weight = 2.0
 stream_2/stream = ExtResource("13_062vp")
 stream_2/weight = 2.0
 stream_3/stream = ExtResource("14_tcnti")
-stream_3/weight = 1.0
 stream_4/stream = ExtResource("15_vjbsw")
 stream_4/weight = 2.0
 stream_5/stream = ExtResource("16_tpx6e")
@@ -104,13 +53,9 @@ random_pitch = 1.3
 random_volume_offset_db = 0.15
 streams_count = 4
 stream_0/stream = ExtResource("17_2spk2")
-stream_0/weight = 1.0
 stream_1/stream = ExtResource("18_ohtfm")
-stream_1/weight = 1.0
 stream_2/stream = ExtResource("19_a6wvd")
-stream_2/weight = 1.0
 stream_3/stream = ExtResource("20_2u3sr")
-stream_3/weight = 1.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_e0j4a"]
 playback_mode = 1
@@ -118,7 +63,6 @@ random_pitch = 1.3
 random_volume_offset_db = 0.15
 streams_count = 1
 stream_0/stream = ExtResource("22_ptb4f")
-stream_0/weight = 1.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4b5bi"]
 playback_mode = 1
@@ -126,7 +70,6 @@ random_pitch = 1.3
 random_volume_offset_db = 0.15
 streams_count = 1
 stream_0/stream = ExtResource("23_o1mwf")
-stream_0/weight = 1.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1ol4w"]
 playback_mode = 1
@@ -134,11 +77,8 @@ random_pitch = 1.3
 random_volume_offset_db = 0.15
 streams_count = 3
 stream_0/stream = ExtResource("24_q5bqm")
-stream_0/weight = 1.0
 stream_1/stream = ExtResource("25_30rg1")
-stream_1/weight = 1.0
 stream_2/stream = ExtResource("26_u0kxe")
-stream_2/weight = 1.0
 
 [node name="Side" type="Node2D"]
 script = ExtResource("1_vy6dv")
@@ -249,8 +189,15 @@ light_indirect_energy = 4.676
 spot_range = 136.037
 spot_angle = 48.0811
 
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_ddblg")
+[node name="Cards" type="Node2D" parent="."]
+
+[node name="Cheer" type="Node2D" parent="Cards"]
+
+[node name="Attached" type="Node2D" parent="Cards"]
+
+[node name="Main" type="Node2D" parent="Cards"]
+
+[node name="Above" type="Node2D" parent="Cards"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -271,6 +218,7 @@ theme = ExtResource("8_u8usn")
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [node name="Input" type="Label" parent="CanvasLayer/Prompt"]
+auto_translate_mode = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.01
@@ -281,7 +229,6 @@ offset_left = 0.04
 offset_top = -0.14
 offset_right = 246.2
 offset_bottom = 91.86
-auto_translate = false
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/line_spacing = 20
 theme_override_font_sizes/font_size = 28
@@ -289,12 +236,12 @@ text = "Draw X cards
 X="
 
 [node name="LineEdit" type="LineEdit" parent="CanvasLayer/Prompt/Input"]
+auto_translate_mode = 2
 layout_mode = 0
 offset_left = 54.0
 offset_top = 46.0
 offset_right = 241.0
 offset_bottom = 85.0
-auto_translate = false
 theme_override_font_sizes/font_size = 30
 placeholder_text = "7"
 max_length = 2
@@ -391,9 +338,9 @@ text = "START_READY"
 
 [node name="Question" type="ColorRect" parent="CanvasLayer"]
 visible = false
-offset_left = 422.0
+offset_left = 399.0
 offset_top = 130.0
-offset_right = 1225.0
+offset_right = 1246.0
 offset_bottom = 400.0
 theme = ExtResource("8_u8usn")
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
@@ -403,48 +350,44 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -303.0
-offset_top = 47.0
-offset_right = 318.0
+offset_left = -404.5
+offset_top = 24.0
+offset_right = 410.5
 offset_bottom = 157.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 35
 text = "RPS_SELECT"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
-[node name="Rock" type="Button" parent="CanvasLayer/Question"]
+[node name="RPS" type="HBoxContainer" parent="CanvasLayer/Question"]
 layout_mode = 0
-offset_left = 100.0
-offset_top = 175.0
-offset_right = 267.0
-offset_bottom = 218.0
+offset_left = 49.0
+offset_top = 153.0
+offset_right = 810.0
+offset_bottom = 193.0
+alignment = 1
+
+[node name="Rock" type="Button" parent="CanvasLayer/Question/RPS"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RPS_ROCK"
 
-[node name="Paper" type="Button" parent="CanvasLayer/Question"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -71.0
-offset_top = -96.0
-offset_right = 96.0
-offset_bottom = -53.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="Control" type="Control" parent="CanvasLayer/Question/RPS"]
+layout_mode = 2
+
+[node name="Paper" type="Button" parent="CanvasLayer/Question/RPS"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RPS_PAPER"
 
-[node name="Scissors" type="Button" parent="CanvasLayer/Question"]
-layout_mode = 0
-offset_left = 561.0
-offset_top = 174.0
-offset_right = 728.0
-offset_bottom = 217.0
+[node name="Control2" type="Control" parent="CanvasLayer/Question/RPS"]
+layout_mode = 2
+
+[node name="Scissors" type="Button" parent="CanvasLayer/Question/RPS"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RPS_SCISSORS"
 
@@ -459,6 +402,26 @@ theme_override_font_sizes/font_size = 40
 text = "YES"
 
 [node name="No" type="Button" parent="CanvasLayer/Question"]
+visible = false
+layout_mode = 0
+offset_left = 472.0
+offset_top = 148.0
+offset_right = 546.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 40
+text = "NO"
+
+[node name="Lose" type="Button" parent="CanvasLayer/Question"]
+visible = false
+layout_mode = 0
+offset_left = 236.0
+offset_top = 148.0
+offset_right = 310.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 40
+text = "YES"
+
+[node name="KeepPlaying" type="Button" parent="CanvasLayer/Question"]
 visible = false
 layout_mode = 0
 offset_left = 472.0
@@ -483,9 +446,9 @@ visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -28.0
+offset_left = -241.0
 offset_top = 10.0
-offset_right = 469.0
+offset_right = 606.0
 offset_bottom = 58.0
 grow_horizontal = 2
 theme = ExtResource("8_u8usn")
@@ -498,15 +461,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -73.5
+offset_left = -418.5
 offset_top = -21.0
-offset_right = 73.5
+offset_right = 419.5
 offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 28
 text = "OPPONENT"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="MulliganWarning" type="ColorRect" parent="CanvasLayer/OpponentLabel"]
 visible = false
@@ -605,17 +571,19 @@ bus = &"SFX"
 [connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/ARCHIVE" to="." method="_on_fuda_shuffled"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/HOLOPOWER" to="." method="_on_holopower_clicked"]
 [connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/HOLOPOWER" to="." method="_on_fuda_shuffled"]
-[connection signal="die_result" from="SubViewportContainer/SubViewport/Node3D/Die" to="." method="_on_die_result"]
+[connection signal="rolled" from="SubViewportContainer/SubViewport/Node3D/Die" to="." method="_on_die_rolled"]
 [connection signal="text_submitted" from="CanvasLayer/Prompt/Input/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="CanvasLayer/Prompt/Submit" to="." method="_on_submit_pressed"]
 [connection signal="pressed" from="CanvasLayer/Cancel" to="." method="_on_cancel_pressed"]
-[connection signal="pressed" from="CanvasLayer/Go First" to="." method="_made_turn_choice" binds= [true]]
-[connection signal="pressed" from="CanvasLayer/Go Second" to="." method="_made_turn_choice" binds= [false]]
+[connection signal="pressed" from="CanvasLayer/Go First" to="." method="_go_first"]
+[connection signal="pressed" from="CanvasLayer/Go Second" to="." method="_go_second"]
 [connection signal="pressed" from="CanvasLayer/End Turn" to="." method="end_turn"]
 [connection signal="pressed" from="CanvasLayer/Ready" to="." method="_call_ready"]
-[connection signal="pressed" from="CanvasLayer/Question/Rock" to="." method="_rps" binds= [0]]
-[connection signal="pressed" from="CanvasLayer/Question/Paper" to="." method="_rps" binds= [1]]
-[connection signal="pressed" from="CanvasLayer/Question/Scissors" to="." method="_rps" binds= [2]]
+[connection signal="pressed" from="CanvasLayer/Question/RPS/Rock" to="." method="_rps_rock"]
+[connection signal="pressed" from="CanvasLayer/Question/RPS/Paper" to="." method="_rps_paper"]
+[connection signal="pressed" from="CanvasLayer/Question/RPS/Scissors" to="." method="_rps_scissors"]
 [connection signal="pressed" from="CanvasLayer/Question/Yes" to="." method="yes_mulligan"]
 [connection signal="pressed" from="CanvasLayer/Question/No" to="." method="no_mulligan"]
+[connection signal="pressed" from="CanvasLayer/Question/Lose" to="." method="_on_lose_pressed"]
+[connection signal="pressed" from="CanvasLayer/Question/KeepPlaying" to="." method="_on_keep_playing_pressed"]
 [connection signal="pressed" from="CanvasLayer/Question/OK" to="." method="yes_mulligan"]

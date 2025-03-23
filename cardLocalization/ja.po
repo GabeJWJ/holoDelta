@@ -5398,3 +5398,255 @@ msgstr "紫エール"
 msgid "hY06-002_NAME"
 msgstr "黄エール"
 
+msgid "hBD24-017_NAME"
+msgstr "兎田ぺこら"
+
+msgid "hBD24-017_SKILL_NAME"
+msgstr "グリーンエンハンス"
+
+msgid "hBD24-017_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-017_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-017_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、緑ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-018_NAME"
+msgstr "アユンダ・リス"
+
+msgid "hBD24-018_SKILL_NAME"
+msgstr "イエローエンハンス"
+
+msgid "hBD24-018_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の黄ホロメン1人のアーツ+20。"
+
+msgid "hBD24-018_SPSKILL_NAME"
+msgstr "Birthday Gift ~Yellow~"
+
+msgid "hBD24-018_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、黄ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-019_NAME"
+msgstr "尾丸ポルカ"
+
+msgid "hBD24-019_SKILL_NAME"
+msgstr "レッドエンハンス"
+
+msgid "hBD24-019_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の赤ホロメン1人のアーツ+20。"
+
+msgid "hBD24-019_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-019_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-020_NAME"
+msgstr "フワワ・アビスガード"
+
+msgid "hBD24-020_SKILL_NAME"
+msgstr "ブルーエンハンス"
+
+msgid "hBD24-020_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の青ホロメン1人のアーツ+20。"
+
+msgid "hBD24-020_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-020_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、青ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-021_NAME"
+msgstr "モココ・アビスガード"
+
+msgid "hBD24-021_SKILL_NAME"
+msgstr "レッドエンハンス"
+
+msgid "hBD24-021_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の赤ホロメン1人のアーツ+20。"
+
+msgid "hBD24-021_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-021_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-022_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBD24-022_SKILL_NAME"
+msgstr "グリーンエンハンス"
+
+msgid "hBD24-022_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-022_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-022_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、緑ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-023_NAME"
+msgstr "癒月ちょこ"
+
+msgid "hBD24-023_SKILL_NAME"
+msgstr "パープルエンハンス"
+
+msgid "hBD24-023_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の紫ホロメン1人のアーツ+20。"
+
+msgid "hBD24-023_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-023_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、紫ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-024_NAME"
+msgstr "ムーナ・ホシノヴァ"
+
+msgid "hBD24-024_SKILL_NAME"
+msgstr "ブルーエンハンス"
+
+msgid "hBD24-024_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の青ホロメン1人のアーツ+20。"
+
+msgid "hBD24-024_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-024_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、青ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-025_NAME"
+msgstr "アキ・ローゼンタール"
+
+msgid "hBD24-025_SKILL_NAME"
+msgstr "グリーンエンハンス"
+
+msgid "hBD24-025_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-025_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-025_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、緑ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-026_NAME"
+msgstr "猫又おかゆ"
+
+msgid "hBD24-026_SKILL_NAME"
+msgstr "ブルーエンハンス"
+
+msgid "hBD24-026_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の青ホロメン1人のアーツ+20。"
+
+msgid "hBD24-026_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-026_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、青ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-027_NAME"
+msgstr "火威青"
+
+msgid "hBD24-027_SKILL_NAME"
+msgstr "ブルーエンハンス"
+
+msgid "hBD24-027_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の青ホロメン1人のアーツ+20。"
+
+msgid "hBD24-027_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-027_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、青ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-028_NAME"
+msgstr "ハコス・ベールズ"
+
+msgid "hBD24-028_SKILL_NAME"
+msgstr "レッドエンハンス"
+
+msgid "hBD24-028_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の赤ホロメン1人のアーツ+20。"
+
+msgid "hBD24-028_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-028_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-029_NAME"
+msgstr "さくらみこ"
+
+msgid "hBD24-029_SKILL_NAME"
+msgstr "レッドエンハンス"
+
+msgid "hBD24-029_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の赤ホロメン1人のアーツ+20。"
+
+msgid "hBD24-029_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-029_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-030_NAME"
+msgstr "アーニャ・メルフィッサ"
+
+msgid "hBD24-030_SKILL_NAME"
+msgstr "イエローエンハンス"
+
+msgid "hBD24-030_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の黄ホロメン1人のアーツ+20。"
+
+msgid "hBD24-030_SPSKILL_NAME"
+msgstr "Birthday Gift ~Yellow~"
+
+msgid "hBD24-030_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、黄ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-032_NAME"
+msgstr "博衣こより"
+
+msgid "hBD24-032_SKILL_NAME"
+msgstr "オワイトエンハンス"
+
+msgid "hBD24-032_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の白ホロメン1人のアーツ+20。"
+
+msgid "hBD24-032_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-032_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、白ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-033_NAME"
+msgstr "IRyS"
+
+msgid "hBD24-033_SKILL_NAME"
+msgstr "オワイトエンハンス"
+
+msgid "hBD24-033_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の白ホロメン1人のアーツ+20。"
+
+msgid "hBD24-033_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-033_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、白ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hY01-005_NAME"
+msgstr "白エール"
+
+msgid "hY02-004_NAME"
+msgstr "緑エール"
+
+msgid "hY04-004_NAME"
+msgstr "青エール"
+
+msgid "hY06-003_NAME"
+msgstr "黄エール"
+

@@ -7,8 +7,15 @@ extends Node2D
 @onready var loadButton = $ScrollContainer/VBoxContainer/Load
 @onready var json = JSON.new()
 
+var file_access_web : FileAccessWeb
+
 signal selected(deckInfo)
 signal cancel
+
+func _ready() -> void:
+	if OS.has_feature("web"):
+		file_access_web = FileAccessWeb.new()
+		file_access_web.loaded.connect(_on_web_load_dialog_file_selected)
 
 func _clear_decks() -> void:
 	for deckButton in list.get_children():
@@ -41,9 +48,16 @@ func _on_load_dialog_file_selected(path : String) -> void:
 	if json.parse(FileAccess.get_file_as_string(path)) == 0:
 		emit_signal("selected",json.data)
 
+func _on_web_load_dialog_file_selected(file_name: String, type: String, base64_data: String) -> void:
+	if json.parse(Marshalls.base64_to_utf8(base64_data)) == 0:
+		emit_signal("selected",json.data)
+
 
 func _on_load_pressed() -> void:
-	$LoadDialog.visible = true
+	if OS.has_feature("web"):
+		file_access_web.open(".json")
+	else:
+		$LoadDialog.visible = true
 
 
 func _on_cancel_pressed() -> void:

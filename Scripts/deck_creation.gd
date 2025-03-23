@@ -13,11 +13,15 @@ extends Node2D
 #region Variables
 
 const card = preload("res://Scenes/card.tscn")
+const collection = preload("res://Scenes/collection.tscn")
+const collection_type = preload("res://Scripts/collection.gd")
 const default_sleeve = preload("res://holoBack.png")
 const default_cheer_sleeve = preload("res://cheerBack.png")
 const default_oshi_sleeve = preload("res://cheerBack.png")
 
 var all_cards = [] #Holds all cards, both in the right panel and your deck
+var collections = {} #Holds all normal collections in the right panel
+var bd_collections = {} #Holds all the collections of BD oshis
 
 #Contains specific types of cards for sorting/filtering purposes
 var oshi_cards : Array
@@ -47,29 +51,40 @@ var total_support = 0
 
 var json = JSON.new()
 
+#Hardcoded orders for support types and tags
+#Color order is handled by Card.get_color_order
+var support_order = ["Staff","Item","Event","Tool","Mascot","Fan"]
+var tag_order = ["JP", "ID", "EN", "DEV_IS",
+	"Gen0", "Gen1", "Gen2", "Gamers", "Gen3", "Gen4", "Gen5", "SecretSocietyholoX",
+	"IDGen1", "IDGen2", "IDGen3",
+	"Myth", "Council", "Promise", "Advent", "Justice",
+	"ReGloss", "FLOWGLOW",
+	"AnimalEars", "Art", "Baby", "Bird", "Cooking", "Food", "HalfElf", "HoloWitch",
+	"Languages", "Magic", "Sea", "ShirakamiCharacter", "Shooter", "Song", "Alcohol"]
+
 #Constants filled up at runtime. So the name select isn't giving you options that aren't in the game
 var oshi_colors = []
 var oshi_names = []
 var holomem_colors = []
 var holomem_names = []
-var holomem_tags = []
-var support_types = []
+var holomem_tags = tag_order
+var support_types = support_order
 
 #Filter Buttons/LineEdits
-@onready var oshi_name_select = $CanvasLayer/PossibleCards/Oshi/NameSelect
-@onready var oshi_color_select = $CanvasLayer/PossibleCards/Oshi/ColorSelect
-@onready var oshi_search = $CanvasLayer/PossibleCards/Oshi/Search
+@onready var oshi_name_select = $CanvasLayer/PossibleCards/TAB_OSHI/NameSelect
+@onready var oshi_color_select = $CanvasLayer/PossibleCards/TAB_OSHI/ColorSelect
+@onready var oshi_search = $CanvasLayer/PossibleCards/TAB_OSHI/Search
 
-@onready var holomem_name_select = $CanvasLayer/PossibleCards/Holomem/NameSelect
-@onready var holomem_color_select = $CanvasLayer/PossibleCards/Holomem/ColorSelect
-@onready var holomem_level_select = $CanvasLayer/PossibleCards/Holomem/LevelSelect
-@onready var holomem_buzz_select = $CanvasLayer/PossibleCards/Holomem/BuzzSelect
-@onready var holomem_tag_select = $CanvasLayer/PossibleCards/Holomem/TagSelect
-@onready var holomem_search = $CanvasLayer/PossibleCards/Holomem/Search
+@onready var holomem_name_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/NameSelect
+@onready var holomem_color_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/ColorSelect
+@onready var holomem_level_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/LevelSelect
+@onready var holomem_buzz_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/BuzzSelect
+@onready var holomem_tag_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/TagSelect
+@onready var holomem_search = $CanvasLayer/PossibleCards/TAB_HOLOMEM/Search
 
-@onready var support_type_select = $CanvasLayer/PossibleCards/Support/TypeSelect
-@onready var support_limited_select = $CanvasLayer/PossibleCards/Support/LimitedSelect
-@onready var support_search = $CanvasLayer/PossibleCards/Support/Search
+@onready var support_type_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/TypeSelect
+@onready var support_limited_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/LimitedSelect
+@onready var support_search = $CanvasLayer/PossibleCards/TAB_SUPPORT/Search
 
 #Filter dictionaries
 var oshi_filter = {"Color":null,"Name":null,"Search":""}
@@ -77,29 +92,27 @@ var holomem_filter = {"Color":null,"Name":null,"Level":null,"Buzz":null,"Tag":[]
 var support_filter = {"Type":null,"Limited":null,"Search":""}
 
 #The ability to add/remove multiples of cheer at once
-@onready var cheer_multiple_label = $CanvasLayer/PossibleCards/Cheer/Multiple
+@onready var cheer_multiple_label = $CanvasLayer/PossibleCards/TAB_CHEER/Multiple
 var cheer_multiple = 1
 
 #Various containers/objects we'll need
-@onready var oshi_tab = $CanvasLayer/PossibleCards/Oshi/ScrollContainer/ColorRect
-@onready var holomem_tab = $CanvasLayer/PossibleCards/Holomem/ScrollContainer/ColorRect
-@onready var support_tab = $CanvasLayer/PossibleCards/Support/ScrollContainer/ColorRect
-@onready var cheer_tab = $CanvasLayer/PossibleCards/Cheer/ScrollContainer/ColorRect
-@onready var main_deck = $CanvasLayer/YourStuff/Deck/MainDeck/ColorRect
-@onready var cheer_deck = $CanvasLayer/YourStuff/Deck/CheerDeck/ColorRect
-@onready var main_count = $CanvasLayer/YourStuff/Deck/MainCount
-@onready var cheer_count = $CanvasLayer/YourStuff/Deck/CheerCount
-@onready var analytics = $CanvasLayer/YourStuff/Analytics/ScrollContainer/Stats
+@onready var oshi_tab = $CanvasLayer/PossibleCards/TAB_OSHI/ScrollContainer/ColorRect
+@onready var holomem_tab = $CanvasLayer/PossibleCards/TAB_HOLOMEM/ScrollContainer/ColorRect
+@onready var support_tab = $CanvasLayer/PossibleCards/TAB_SUPPORT/ScrollContainer/ColorRect
+@onready var cheer_tab = $CanvasLayer/PossibleCards/TAB_CHEER/ScrollContainer/ColorRect
+@onready var main_deck = $CanvasLayer/YourStuff/TAB_DECK/MainDeck/ColorRect
+@onready var cheer_deck = $CanvasLayer/YourStuff/TAB_DECK/CheerDeck/ColorRect
+@onready var main_count = $CanvasLayer/YourStuff/TAB_DECK/MainCount
+@onready var cheer_count = $CanvasLayer/YourStuff/TAB_DECK/CheerCount
+@onready var analytics = $CanvasLayer/YourStuff/TAB_ANALYTICS/ScrollContainer/Stats
 @onready var list_of_decks_to_overwrite = $CanvasLayer/SavePrompt/ScrollContainer/VBoxContainer
 
-#A hardcoded order for support types. I should probably make one for tags at some point...
-#Color order is handled by Card.get_color_order
-@onready var support_order = ["Staff","Item","Event","Tool","Mascot","Fan"]
-
 #Those aforementioned SleeveSelects
-@onready var mainSleeveSelect = $CanvasLayer/YourStuff/Sleeves/Main
-@onready var cheerSleeveSelect = $CanvasLayer/YourStuff/Sleeves/Cheer
-@onready var oshiSleeveSelect = $CanvasLayer/YourStuff/Sleeves/Oshi
+@onready var mainSleeveSelect = $CanvasLayer/YourStuff/TAB_SLEEVES/Main
+@onready var cheerSleeveSelect = $CanvasLayer/YourStuff/TAB_SLEEVES/Cheer
+@onready var oshiSleeveSelect = $CanvasLayer/YourStuff/TAB_SLEEVES/Oshi
+
+var banlist = Database.current_banlist
 
 #endregion
 
@@ -125,59 +138,34 @@ func findByClass(node: Node, className : String, result : Array) -> void:
 func _ready() -> void:
 	tr("LEVEL_ANY") #for POT generation - Godot's automatic system won't find it in a popupmenu list
 	
-	#We find cards iterating through cardHasArt to more easily get alt arts as separate options
-	#Card.setup_info will automatically change the art to a proxy if it thinks it should but the
-	#	proxy already has an cardHasArt row so we have to make sure we don't double up using
-	#	the cardsFound array
-	
-	var art_data = Database.db.select_rows("cardHasArt","",["cardID","art_index","unrevealed"])
-	art_data.sort_custom(custom_art_row_sort) #Really simple sort that every type but cheer overwrites
-	
-	for art_row in art_data:
-		var cardNumber = art_row.cardID
-		var artCode = art_row.art_index
-		if (bool(art_row.unrevealed) and !Settings.settings.AllowUnrevealed) or [cardNumber, artCode] in cardsFound:
-			continue
-		cardsFound.append([cardNumber, artCode])
-		var newCardButton = create_card_button(cardNumber,artCode)
-		
-		#We add the constants we've found to the proper arrays and add the Card to the proper tab
-		match newCardButton.cardType:
-			"Oshi":
-				for new_color in newCardButton.oshi_color:
-					if new_color not in oshi_colors:
-						oshi_colors.append(new_color)
-				for new_name in newCardButton.oshi_name:
-					if new_name not in oshi_names:
-						oshi_names.append(new_name)
-				oshi_tab.add_child(newCardButton)
-			"Cheer":
-				cheer_tab.add_child(newCardButton)
-			"Holomem":
-				for new_color in newCardButton.holomem_color:
-					if new_color not in holomem_colors:
-						holomem_colors.append(new_color)
-				for new_name in newCardButton.holomem_name:
-					if new_name not in holomem_names:
-						holomem_names.append(new_name)
-				for new_tag in newCardButton.tags:
-					if new_tag not in holomem_tags:
-						holomem_tags.append(new_tag)
-				holomem_tab.add_child(newCardButton)
-			"Support":
-				if newCardButton.supportType not in support_types:
-					support_types.append(newCardButton.supportType)
-				support_tab.add_child(newCardButton)
-		
-		newCardButton.scale = Vector2(0.22,0.22)
-		newCardButton.card_clicked.connect(_on_menu_card_clicked)
-		newCardButton.card_right_clicked.connect(_on_menu_card_right_clicked)
-		
-		#The cards are Node2Ds instead of Controls, so they can't go in a GridContainer
-		#Instead I have to figure out where they should go manually
-		#Very finnicky
-		var index = newCardButton.get_index()
-		newCardButton.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
+	for cardNumber in Database.cardData:
+		if cardNumber in Database.cardArts:
+			var newCardButton
+			for art_code in Database.cardData[cardNumber]["cardArt"]:
+				newCardButton = add_to_collection(cardNumber,int(art_code))
+			
+			#We add the constants we've found to the proper arrays and add the Card to the proper tab
+			match newCardButton.cardType:
+				"Oshi":
+					for new_color in newCardButton.oshi_color:
+						if new_color not in oshi_colors:
+							oshi_colors.append(new_color)
+					for new_name in newCardButton.oshi_name:
+						if new_name not in oshi_names:
+							oshi_names.append(new_name)
+				"Holomem":
+					for new_color in newCardButton.holomem_color:
+						if new_color not in holomem_colors:
+							holomem_colors.append(new_color)
+					for new_name in newCardButton.holomem_name:
+						if new_name not in holomem_names:
+							holomem_names.append(new_name)
+					for new_tag in newCardButton.tags:
+						if new_tag not in holomem_tags:
+							holomem_tags.append(new_tag)
+				"Support":
+					if newCardButton.supportType not in support_types:
+						support_types.append(newCardButton.supportType)
 	
 	#Sort the cards in the selection menus
 	holomem_cards = holomem_tab.get_children().duplicate()
@@ -188,9 +176,9 @@ func _ready() -> void:
 	support_cards.sort_custom(custom_support_sort)
 	_update_tabs()
 	
-	
 	#Set up filter PopupMenus
 	oshi_name_select.get_popup().add_item(tr("NAME_ANY"))
+	oshi_names.sort()
 	for oshi_name in oshi_names:
 		oshi_name_select.get_popup().add_item(Settings.trans(oshi_name))
 	oshi_name_select.get_popup().index_pressed.connect(_on_oshi_name_select)
@@ -201,6 +189,7 @@ func _ready() -> void:
 	oshi_color_select.get_popup().index_pressed.connect(_on_oshi_color_select)
 	
 	holomem_name_select.get_popup().add_item(tr("NAME_ANY"))
+	holomem_names.sort()
 	for holomem_name in holomem_names:
 		holomem_name_select.get_popup().add_item(Settings.trans(holomem_name))
 	holomem_name_select.get_popup().index_pressed.connect(_on_holomem_name_select)
@@ -222,7 +211,6 @@ func _ready() -> void:
 		support_type_select.get_popup().add_item(Settings.trans(support_type))
 	support_type_select.get_popup().index_pressed.connect(_on_support_type_select)
 	
-	
 	#Last minute initializations
 	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 	$CanvasLayer/InfoPanel.update_word_wrap()
@@ -234,6 +222,10 @@ func _ready() -> void:
 func _oshi_filter(oshi_to_check) -> bool:
 	#Determines if a given oshi should be shown, given your selected filters
 	#oshi_to_check : Card
+	
+	if oshi_to_check is collection_type:
+		oshi_to_check.oshi_filter(oshi_filter)
+		return oshi_to_check.cards.size() > 0
 	
 	if oshi_filter.Color != null:
 		if !oshi_to_check.is_color(oshi_filter.Color):
@@ -250,6 +242,9 @@ func _oshi_filter(oshi_to_check) -> bool:
 func _holomem_filter(holomem_to_check) -> bool:
 	#Determines if a given holomem should be shown, given your selected filters
 	#holomem_to_check : Card
+	
+	if holomem_to_check is collection_type:
+		holomem_to_check = holomem_to_check.cards[0]
 	
 	if holomem_filter.Color != null:
 		if !holomem_to_check.is_color(holomem_filter.Color):
@@ -275,6 +270,9 @@ func _holomem_filter(holomem_to_check) -> bool:
 func _support_filter(support_to_check) -> bool:
 	#Determines if a given support card should be shown, given your selected filters
 	#support_to_check : Card
+	
+	if support_to_check is collection_type:
+		support_to_check = support_to_check.cards[0]
 	
 	if support_filter.Type != null and support_to_check.supportType != support_filter.Type:
 		return false
@@ -304,7 +302,7 @@ func _update_tabs() -> void:
 		oshi_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
 		oshi_card.visible = true
 		index += 1
-	$CanvasLayer/PossibleCards/Oshi/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
+	$CanvasLayer/PossibleCards/TAB_OSHI/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 	
 	#Display/hide holomems
 	index = 0
@@ -315,7 +313,7 @@ func _update_tabs() -> void:
 		holomem_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
 		holomem_card.visible = true
 		index += 1
-	$CanvasLayer/PossibleCards/Holomem/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
+	$CanvasLayer/PossibleCards/TAB_HOLOMEM/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 	
 	#Display/hide supports
 	index = 0
@@ -326,7 +324,7 @@ func _update_tabs() -> void:
 		support_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
 		support_card.visible = true
 		index += 1
-	$CanvasLayer/PossibleCards/Support/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
+	$CanvasLayer/PossibleCards/TAB_SUPPORT/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 	
 	#If I were able to use proper GridContainers, this would be unnecessary.
 	#Unfortunately, Cards are Node2Ds instead of Controls.
@@ -485,6 +483,10 @@ func custom_art_row_sort(a,b) -> bool:
 func custom_holomem_sort(a,b) -> bool:
 	#The holomem sort goes Color -> Name -> Level -> card number -> art index
 	#We need to double up on a lot of conditions to make sure they're sorted consistently
+	if a is collection_type:
+		a = a.cards[0]
+	if b is collection_type:
+		b = b.cards[0]
 	
 	if b.holomem_color.size() == 0 and a.holomem_color.size() > 0:
 		return true
@@ -515,6 +517,11 @@ func custom_oshi_sort(a,b) -> bool:
 	#The oshi sort goes color -> name -> card number -> art index
 	#We need to double up on a lot of conditions to make sure they're sorted consistently
 	
+	if a is collection_type:
+		a = a.cards[0]
+	if b is collection_type:
+		b = b.cards[0]
+	
 	if b.oshi_color.size() == 0 and a.oshi_color.size() > 0:
 		return true
 	elif a.oshi_color.size() == 0 and b.oshi_color.size() > 0:
@@ -539,6 +546,11 @@ func custom_oshi_sort(a,b) -> bool:
 func custom_support_sort(a,b) -> bool:
 	#The support sort goes type -> card number -> art index
 	#We need to double up on a lot of conditions to make sure they're sorted consistently
+	
+	if a is collection_type:
+		a = a.cards[0]
+	if b is collection_type:
+		b = b.cards[0]
 	
 	if support_order.find(a.supportType) < support_order.find(b.supportType):
 		return true
@@ -650,7 +662,56 @@ func add_holomem_or_support(card_added, amount=1) -> void:
 	
 	update_analytics()
 
-func create_card_button(number : String, art_code : int):
+func add_to_collection(number : String, art_code : int):
+	var newCollection
+	if number.begins_with("hBD"):
+		var color = Database.cardData[number]["color"][0]
+		if color in bd_collections:
+			newCollection = bd_collections[color]
+		else:
+			newCollection = collection.instantiate()
+			newCollection.card_clicked.connect(_on_menu_card_clicked)
+			newCollection.card_right_clicked.connect(_on_menu_card_right_clicked)
+			newCollection.card_mouse_over.connect(update_info)
+			bd_collections[color] = newCollection
+			oshi_tab.add_child(newCollection)
+	elif number in collections:
+		newCollection = collections[number]
+	else:
+		newCollection = collection.instantiate()
+		newCollection.card_clicked.connect(_on_menu_card_clicked)
+		newCollection.card_right_clicked.connect(_on_menu_card_right_clicked)
+		newCollection.card_mouse_over.connect(update_info)
+		collections[number] = newCollection
+		match Database.cardData[number]["cardType"]:
+			"Oshi":
+				oshi_tab.add_child(newCollection)
+			"Holomem":
+				holomem_tab.add_child(newCollection)
+			"Support":
+				support_tab.add_child(newCollection)
+			"Cheer":
+				cheer_tab.add_child(newCollection)
+	
+	#The cards are Node2Ds instead of Controls, so they can't go in a GridContainer
+	#Instead I have to figure out where they should go manually
+	#Very finnicky
+	var index = newCollection.get_index()
+	newCollection.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
+	newCollection.scale = Vector2(0.22,0.22)
+	
+	var new_id = all_cards.size()
+	newCollection.addCard(number, art_code)
+	var newCard = newCollection.cards[-1]
+	newCard.name = "Card" + str(new_id)
+	newCard.cardID = new_id
+	if number in banlist:
+		newCard.set_ban(banlist[number])
+	all_cards.append(newCard)
+	
+	return newCard
+
+func create_card_button(number : String, art_code : int, inEditor = false):
 	#Returns a Card object that will act as a button
 	#The actual button functionality is added by whatever code calls this
 	#For both card selection and your deck
@@ -658,9 +719,11 @@ func create_card_button(number : String, art_code : int):
 	var new_id = all_cards.size()
 	var newCard = card.instantiate()
 	newCard.name = "Card" + str(new_id)
+	newCard.inEditor = inEditor
 	newCard.setup_info(number,art_code)
 	newCard.cardID = new_id
-	
+	if number in banlist:
+		newCard.set_ban(banlist[number])
 	newCard.card_mouse_over.connect(update_info)
 	all_cards.append(newCard)
 	
@@ -672,7 +735,7 @@ func create_oshi(number : String, art_code : int) -> void:
 	oshiCard = create_card_button(number,art_code)
 	oshiCard.position = Vector2(65,500)
 	oshiCard.scale = Vector2(0.38,0.38)
-	$CanvasLayer/YourStuff/Deck.add_child(oshiCard)
+	$CanvasLayer/YourStuff/TAB_DECK.add_child(oshiCard)
 
 func create_main_deck_card(number : String, art_code : int, amount = 1) -> void:
 	
@@ -765,7 +828,6 @@ func _on_menu_card_right_clicked(card_id):
 			var amount_to_remove = min(cheer_multiple,in_deck_dictionary[actualCard.cardNumber])
 			alreadyHere.update_amount(alreadyHere.get_amount()-amount_to_remove)
 			in_deck_dictionary[actualCard.cardNumber] -= amount_to_remove
-			#deck_info.cheerDeck
 			total_cheer -= amount_to_remove
 	else:
 		alreadyHere = find_in_deck_with_number(actualCard.cardNumber,actualCard.artNum,main_deck)
@@ -773,7 +835,6 @@ func _on_menu_card_right_clicked(card_id):
 			alreadyHere.set_amount_hidden(true)
 			alreadyHere.update_amount(alreadyHere.get_amount()-1)
 			in_deck_dictionary[actualCard.cardNumber] -= 1
-			#deck_info.cheerDeck
 			total_main -= 1
 			add_holomem_or_support(alreadyHere,-1)
 	
@@ -788,7 +849,7 @@ func _on_menu_card_right_clicked(card_id):
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
 
-func _on_deck_card_clicked(card_id):
+func _on_deck_card_right_clicked(card_id):
 	if $CanvasLayer/DeckList.visible or $CanvasLayer/SavePrompt.visible:
 		return
 	
@@ -812,7 +873,7 @@ func _on_deck_card_clicked(card_id):
 	
 	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 
-func _on_deck_card_right_clicked(card_id):
+func _on_deck_card_clicked(card_id):
 	if $CanvasLayer/DeckList.visible or $CanvasLayer/SavePrompt.visible:
 		return
 	
@@ -832,62 +893,72 @@ func _on_deck_card_right_clicked(card_id):
 func _on_cheer_multiple_set(new_multiple):
 	cheer_multiple = new_multiple
 	cheer_multiple_label.text = str(new_multiple) + "x"
+
+#Like RPS, Godot got freaked out that I was binding arguments
+func _one_multiple():
+	_on_cheer_multiple_set(1)
+func _five_multiple():
+	_on_cheer_multiple_set(5)
+func _ten_multiple():
+	_on_cheer_multiple_set(10)
+func _twenty_multiple():
+	_on_cheer_multiple_set(20)
+
 #endregion
 
 #region Update Visuals/Cleanup
 func is_deck_legal():
-	$CanvasLayer/Problems/ProblemList.text = ""
-	
-	var nonsensical = false
+	$CanvasLayer/SaveDeck.tooltip_text = ""
 	
 	if oshiCard == null or oshiCard.name.contains("PleaseDelete"):
-		$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_NOOSHI") + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_NOOSHI") + "\n"
 	elif oshiCard.cardType != "Oshi":
-		$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_FAKEOSHI").format({cardNum = oshiCard.cardNumber}) + "\n"
-		nonsensical = true
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_FAKEOSHI").format({cardNum = oshiCard.cardNumber}) + "\n"
+	elif oshiCard.cardNumber in banlist and banlist[oshiCard.cardNumber] == 0:
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_BANNED").format({cardNum = oshiCard.cardNumber}) + "\n"
 	
 	if total_main < 50:
-		$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_UNDERDECK") + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_UNDERDECK") + "\n"
 	elif total_main > 50:
-		$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_OVERDECK") + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_OVERDECK") + "\n"
 	if total_cheer < 20:
-		$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_UNDERCHEER") + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_UNDERCHEER") + "\n"
 	elif total_cheer > 20:
-		$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_OVERCHEER") + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_OVERCHEER") + "\n"
 	
 	var found_debut = false
-	var too_many_copies = false
 	
 	for cardButton in main_deck.get_children():
 		if cardButton.cardType == "Holomem" and cardButton.level == 0 and !cardButton.name.contains("PleaseDelete"):
 			found_debut = true
 		if cardButton.get_amount() < 0:
-			$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_NEGATIVEAMOUNT").format({cardNum = cardButton.cardNumber}) + "\n"
-			nonsensical = true
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_NEGATIVEAMOUNT").format({cardNum = cardButton.cardNumber}) + "\n"
 		if cardButton.cardType in ["Cheer","Oshi"]:
-			$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_FAKEMAIN").format({cardNum = cardButton.cardNumber}) + "\n"
-			nonsensical = true
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_FAKEMAIN").format({cardNum = cardButton.cardNumber}) + "\n"
+		if cardButton.cardNumber in banlist and banlist[cardButton.cardNumber] == 0:
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_BANNED").format({cardNum = cardButton.cardNumber}) + "\n"
+	
 	if !found_debut:
-		$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_NODEBUTS") + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_NODEBUTS") + "\n"
 	
 	for cardButton in cheer_deck.get_children():
 		if cardButton.get_amount() < 0:
-			$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_NEGATIVEAMOUNT").format({cardNum = cardButton.cardNumber}) + "\n"
-			nonsensical = true
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_NEGATIVEAMOUNT").format({cardNum = cardButton.cardNumber}) + "\n"
 		if cardButton.cardType in ["Holomem","Support"]:
-			$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_FAKECHEER").format({cardNum = cardButton.cardNumber}) + "\n"
-			nonsensical = true
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_FAKECHEER").format({cardNum = cardButton.cardNumber}) + "\n"
+		if cardButton.cardNumber in banlist and banlist[cardButton.cardNumber] == 0:
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_BANNED").format({cardNum = cardButton.cardNumber}) + "\n"
 	
 	for cardNumber in in_deck_dictionary:
-		var data = Database.db.select_rows("mainCards","cardID LIKE '" + cardNumber + "'", ["*"])[0]
-		if data.cardLimit != -1 and in_deck_dictionary[cardNumber] > data.cardLimit:
-			too_many_copies = true
-			$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_OVERAMOUNT").format({cardNum = cardNumber}) + "\n"
+		var cardLimit = Database.cardData[cardNumber]["cardLimit"]
+		if cardLimit != -1 and in_deck_dictionary[cardNumber] > cardLimit:
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_OVERAMOUNT").format({cardNum = cardNumber}) + "\n"
 		if in_deck_dictionary[cardNumber] < 0:
-			$CanvasLayer/Problems/ProblemList.text += tr("DECKERROR_NEGATIVEAMOUNT").format({cardNum = cardNumber}) + "\n"
-			nonsensical = true
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_NEGATIVEAMOUNT").format({cardNum = cardNumber}) + "\n"
+		if cardNumber in banlist and banlist[cardNumber] < in_deck_dictionary[cardNumber]:
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_RESTRICTED").format({cardNum = cardNumber}) + "\n"
 	
-	return total_main == 50 and total_cheer == 20 and oshiCard != null and found_debut and !too_many_copies and !nonsensical
+	return $CanvasLayer/SaveDeck.tooltip_text == ""
 
 func update_main_deck_children():
 	var main_cards = main_deck.get_children().duplicate()
@@ -944,6 +1015,24 @@ func _on_load_deck_pressed():
 func _hide_deck_list():
 	$CanvasLayer/DeckList.visible = false
 
+func _on_banlist_choice_item_selected(index: int) -> void:
+	match index:
+		0:
+			banlist = []
+		1:
+			banlist = Database.current_banlist
+		2:
+			banlist = Database.unreleased
+	
+	for potential_card in all_cards:
+		if is_instance_valid(potential_card):
+			if potential_card.cardNumber in banlist:
+				potential_card.set_ban(banlist[potential_card.cardNumber])
+			else:
+				potential_card.set_ban(-1)
+	
+	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
+
 func _on_save_deck_pressed():
 	for deckButton in list_of_decks_to_overwrite.get_children():
 		deckButton.queue_free()
@@ -959,15 +1048,17 @@ func _on_save_deck_pressed():
 	else:
 		print("An error occurred when trying to access the path.")
 	$CanvasLayer/SavePrompt.visible = true
+	if OS.has_feature("web"):
+		$CanvasLayer/SavePrompt/FileName/Download.visible = true
 
-func _save_deck_to_file(path):
+func _save_deck_to_file(path, download=false):
 	if !path.ends_with(".json"):
 		path += ".json"
 	
 	var deck_info = {}
 	
 	if $CanvasLayer/DeckName.text == "":
-		deck_info.deckName = $CanvasLayer/DeckName.placeholder_text
+		deck_info.deckName = tr($CanvasLayer/DeckName.placeholder_text)
 	else:
 		deck_info.deckName = $CanvasLayer/DeckName.text
 	
@@ -990,21 +1081,26 @@ func _save_deck_to_file(path):
 		deck_info.cheerDeck.append([cB.cardNumber,cB.get_amount(),cB.artNum])
 	
 	var json_string := JSON.stringify(deck_info)
-	# We will need to open/create a new file for this data string
-	var file_access := FileAccess.open(path, FileAccess.WRITE)
-	if not file_access:
-		print("An error happened while saving data: ", FileAccess.get_open_error())
-		return
+	
+	if download:
+		var data = json_string.to_utf8_buffer()
+		JavaScriptBridge.download_buffer(data, path, "application/json")
+	else:
+		# We will need to open/create a new file for this data string
+		var file_access := FileAccess.open(path, FileAccess.WRITE)
+		if not file_access:
+			print("An error happened while saving data: ", FileAccess.get_open_error())
+			return
 
-	file_access.store_line(json_string)
-	file_access.close()
+		file_access.store_line(json_string)
+		file_access.close()
 	
 	_hide_save_prompt()
 
 func _on_save_pressed(confirmed=false):
 	var file_name = $CanvasLayer/SavePrompt/FileName.text
 	if file_name == "":
-		file_name = $CanvasLayer/SavePrompt/FileName.placeholder_text
+		file_name = tr($CanvasLayer/SavePrompt/FileName.placeholder_text)
 	if !file_name.ends_with(".json"):
 		file_name += ".json"
 	if !confirmed and FileAccess.file_exists("user://Decks/" + file_name):
@@ -1013,6 +1109,14 @@ func _on_save_pressed(confirmed=false):
 		$CanvasLayer/SavePrompt/ScrollContainer.scroll_vertical = 0
 	else:
 		_save_deck_to_file("user://Decks/" + file_name)
+
+func _on_download_pressed() -> void:
+	var file_name = $CanvasLayer/SavePrompt/FileName.text
+	if file_name == "":
+		file_name = tr($CanvasLayer/SavePrompt/FileName.placeholder_text)
+	if !file_name.ends_with(".json"):
+		file_name += ".json"
+	_save_deck_to_file(file_name, true)
 
 func _hide_save_prompt():
 	$CanvasLayer/SavePrompt.visible = false
@@ -1064,3 +1168,26 @@ func fix_font_size() -> void:
 				label.set_meta("fontSize", label.get_theme_font_size("font_size"))
 			#Scale is 0.9 here but 0.8 on the main menu. This is intentional, and returns the best results
 			FixFontTool.apply_text_with_corrected_max_scale(label.size, label, tr(label.text), 0.9, false, Vector2(), label.get_meta("fontSize"))
+
+func _not_real():
+	#This is for POT generation
+	tr("DECKERROR_BANNED")
+	tr("DECKERROR_NOALTART")
+	tr("DECKERROR_FAKEOSHI")
+	tr("DECKERROR_FAKECARD")
+	tr("DECKERROR_OSHIBADFORMAT")
+	tr("DECKERROR_NOOSHI")
+	tr("DECKERROR_RESTRICTED")
+	tr("DECKERROR_NEGATIVEAMOUNT")
+	tr("DECKERROR_OVERAMOUNT")
+	tr("DECKERROR_FAKEMAIN")
+	tr("DECKERROR_NODEBUTS")
+	tr("DECKERROR_UNDERDECK")
+	tr("DECKERROR_OVERDECK")
+	tr("DECKERROR_DECKBADFORMAT")
+	tr("DECKERROR_NODECK")
+	tr("DECKERROR_FAKECHEER")
+	tr("DECKERROR_UNDERCHEER")
+	tr("DECKERROR_OVERCHEER")
+	tr("DECKERROR_CHEERBADFORMAT")
+	tr("DECKERROR_NOCHEER")

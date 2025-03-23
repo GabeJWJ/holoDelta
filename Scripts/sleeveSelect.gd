@@ -6,14 +6,21 @@ extends Node2D
 
 @export var default_sleeve: CompressedTexture2D #Set up so you can drag and drop a default from editor
 var current_sleeve: Image
+var file_access_web : FileAccessWeb
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	new_sleeve()
+	if OS.has_feature("web"):
+		file_access_web = FileAccessWeb.new()
+		file_access_web.loaded.connect(_on_web_load_dialog_file_selected)
 
 
 func _on_load_sleeve_pressed() -> void:
-	$LoadSleeve/LoadDialog.visible = true
+	if OS.has_feature("web"):
+		file_access_web.open(".png,.webp")
+	else:
+		$LoadSleeve/LoadDialog.visible = true
 
 
 func _on_default_pressed() -> void:
@@ -22,6 +29,20 @@ func _on_default_pressed() -> void:
 
 func _on_load_dialog_file_selected(path : String) -> void:
 	new_sleeve(Image.load_from_file(path))
+
+func _on_web_load_dialog_file_selected(file_name: String, type: String, base64_data: String) -> void:
+	var data = Marshalls.base64_to_raw(base64_data)
+	var image = Image.new()
+	
+	match type:
+		"image/png":
+			image.load_png_from_buffer(data)
+			new_sleeve(image)
+		"image/webp":
+			image.load_webp_from_buffer(data)
+			new_sleeve(image)
+		_:
+			new_sleeve()
 
 func new_sleeve(image=null) -> void:
 	#Actually sets the sleeve image
@@ -36,4 +57,5 @@ func new_sleeve(image=null) -> void:
 		$Default.disabled = false
 		image.resize(309,429)
 		current_sleeve = image
+	
 	$Preview.texture = ImageTexture.create_from_image(image)

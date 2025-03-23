@@ -1,15 +1,8 @@
 extends Node2D
 
-#Connectivity Stuff
-var steam = false
-var peer
-var _hosted_lobby_id = 0
-var _joined_lobby_id = 0
-var friendsOnly = 0
 
 @export var player_side: PackedScene
 @onready var json = JSON.new()
-@onready var ip_prompt = $CanvasLayer/IPPrompt
 @onready var chat = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer/Chat
 
 var deckInfo
@@ -21,29 +14,52 @@ var default_dice = preload("res://diceTexture.png").get_image()
 
 var yourSide
 var opponentSide
+@export var player_id : String
+@export var player_name : String
 
-#Selecting Opponent Stuff
-var possibleSides = {}
-var chosen = false
+var gameToSpectate
+var spectatedSides = {}
+
 var inGame = false
-
-#Game Start Stuff
-var yourRPS = -1
-var opponentRPS = -1
-var yourMulligan = false
-var opponentMulligan = false
-var yourReady = false
-var opponentReady = false
-var firstTurn = true
+var rps = false
 
 #Download Stuff
-const downloadLocalLink = "https://github.com/GabeJWJ/holoDelta/raw/refs/heads/master/cardLocalization/"
-const downloadDBLink = "https://github.com/GabeJWJ/holoDelta/raw/refs/heads/master/cardData.db"
-var downloadedDB = false
-var manualDownloadNeeded = false
-var downloadedIteration = false
+const downloadLocalLink = Server.serverURL + "cards/"
+var downloadedInfo = false
 var downloadedLocal = {}
-var int_iteration
+
+#Lobby stuff
+@onready var lobby_banlist = $CanvasLayer/LobbyCreateMenu/VBoxContainer/OptionButton
+@onready var lobby_private = $CanvasLayer/LobbyCreateMenu/VBoxContainer/CheckButton
+@onready var lobby_spectators = $CanvasLayer/LobbyCreateMenu/VBoxContainer/CheckButton2
+@onready var lobby_list = $CanvasLayer/LobbyList
+@onready var lobby_list_found = $CanvasLayer/LobbyList/VBoxContainer/ScrollContainer/LobbiesFound
+@onready var lobby_list_searching_text = $CanvasLayer/LobbyList/VBoxContainer/HBoxContainer/SearchingText
+@onready var lobby_list_code = $CanvasLayer/LobbyList/VBoxContainer/HBoxContainer2/LobbyCode
+@onready var lobby_list_code_button = $CanvasLayer/LobbyList/VBoxContainer/HBoxContainer2/JoinByCode
+@onready var game_list = $CanvasLayer/GameList
+@onready var game_list_found = $CanvasLayer/GameList/VBoxContainer/ScrollContainer/GamesFound
+@onready var game_list_searching_text = $CanvasLayer/GameList/VBoxContainer/HBoxContainer/SearchingText
+@onready var game_list_code = $CanvasLayer/GameList/VBoxContainer/HBoxContainer2/GameCode
+@onready var game_list_code_button = $CanvasLayer/GameList/VBoxContainer/HBoxContainer2/SpectateByCode
+@onready var lobby_host_name = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer/HostName
+@onready var lobby_host_options = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer/HostOptions
+@onready var lobby_host_ready = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer/HostOptions/Ready
+@onready var lobby_host_ready_text = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer/Ready
+@onready var lobby_host_deck_select = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer/HostOptions/DeckSelect
+@onready var lobby_chosen_name = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer2/JoinName
+@onready var lobby_chosen_options = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2/JoinOptions
+@onready var lobby_chosen_ready = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2/JoinOptions/Ready
+@onready var lobby_chosen_ready_text = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer2/Ready
+@onready var lobby_chosen_deck_select = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2/JoinOptions/DeckSelect
+@onready var lobby_waiting = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/ScrollContainer/VBoxContainer
+@onready var lobby_code = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/LobbyCode
+@onready var lobby_game_start = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/HBoxContainer/StartGame
+@onready var lobby_deckerror = $CanvasLayer/LobbyScreen/DeckErrors
+@onready var lobby_deckerrorlist = $CanvasLayer/LobbyScreen/DeckErrors/ScrollContainer/Label
+var current_lobby = null
+var lobby_you_are_host = false
+
 
 # Stolen from https://forum.godotengine.org/t/how-do-you-get-all-nodes-of-a-certain-class/9143/2
 func findByClass(node: Node, className : String, result : Array) -> void:
@@ -54,31 +70,26 @@ func findByClass(node: Node, className : String, result : Array) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$WebSocket.host = Server.websocketURL
+	
 	randomize()
 	
 	#Intialize Decks folder and starter decks
 	if !DirAccess.dir_exists_absolute("user://Decks"):
 		DirAccess.make_dir_absolute("user://Decks")
-		var azki_string = FileAccess.get_file_as_string("res://Decks/starter_azki.json")
-		var sora_string = FileAccess.get_file_as_string("res://Decks/starter_sora.json")
-		var file_access := FileAccess.open("user://Decks/starter_azki.json", FileAccess.WRITE)
-		if not file_access:
-			print("An error happened while saving data: ", FileAccess.get_open_error())
-			return
-		file_access.store_line(azki_string)
-		file_access.close()
 		
-		file_access = FileAccess.open("user://Decks/starter_sora.json", FileAccess.WRITE)
-		if not file_access:
-			print("An error happened while saving data: ", FileAccess.get_open_error())
-			return
-		file_access.store_line(sora_string)
-		file_access.close()
+		var dir = DirAccess.open("res://Decks")
+		for file_name in dir.get_files():
+			var deck_string = FileAccess.get_file_as_string("res://Decks/" + file_name)
+			var file_access = FileAccess.open("user://Decks/" + file_name, FileAccess.WRITE)
+			if not file_access:
+				print("An error happened while saving data: ", FileAccess.get_open_error())
+				return
+			file_access.store_line(deck_string)
+			file_access.close()
 	
 	#Connect PopupMenus
 	$CanvasLayer/LanguageSelect.get_popup().index_pressed.connect(_on_language_selected)
-	$CanvasLayer/SteamHost/MenuButton.get_popup().index_pressed.connect(_on_public_private_chosen)
-	
 	
 	#Initialize settings
 	$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed = Settings.settings.AllowUnrevealed
@@ -112,22 +123,13 @@ func _ready():
 	$CanvasLayer/LanguageSelect.text = Settings.get_language()
 	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"en", "es":
+		"en", "es", "fr", "ko":
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 	
-	
-	#Download Stuff
-	var int_iteration_exists = FileAccess.file_exists("user://cardData.db") and DirAccess.dir_exists_absolute("user://cardLocalization") \
-	and FileAccess.file_exists("user://cardLocalization/_iteration.txt")
-	
-	if int_iteration_exists:
-		int_iteration = int(FileAccess.get_file_as_string("user://cardLocalization/_iteration.txt"))
-		$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_ITER")
-		$CanvasLayer/Popup.visible = true
-		$HTTPManager.job(downloadLocalLink + "_iteration.txt").on_failure(_iter_failed).on_success(_iter_succeeded).download("user://cardLocalization/temp_iteration.txt")
-	else:
+	if !Database.setup:
+		#Download Stuff
 		_download_everything()
 	
 	#Visual
@@ -136,25 +138,22 @@ func _ready():
 	fix_font_size()
 
 #region Download DB
-func _iter_succeeded(_result):
-	if int_iteration != int(FileAccess.get_file_as_string("user://cardLocalization/temp_iteration.txt")):
-		$CanvasLayer/Update/Notification.visible = true
-	$CanvasLayer/Popup.visible = false
-	DirAccess.remove_absolute("user://cardLocalization/temp_iteration.txt")
-	Database._connect()
-	Settings._connect_local()
 
-func _iter_failed(_result):
-	print(_result)
-	$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_ITER_AGAIN")
-	$HTTPManager.job(downloadLocalLink + "_iteration.txt").on_failure(_iter_failed).on_success(_iter_succeeded).download("user://cardLocalization/temp_iteration.txt")
+func _setup_art_progress(current:int, max:int):
+	#print($CanvasLayer/Popup/ProgressBar.value, " ", $CanvasLayer/Popup/ProgressBar.max_value)
+	#You can uncomment the above line to see that the value and max_value are being properly set.
+	#It's just not showing
+	#I think because of the way it's getting called, the visual doesn't have a chance to 
+	#	update until after the entire thing's done?
+	$CanvasLayer/Popup/ProgressBar.max_value = max
+	$CanvasLayer/Popup/ProgressBar.value = current
 
 func _download_everything():
-	DirAccess.make_dir_absolute("user://cardLocalization")
-	$CanvasLayer/Popup/Label.text = tr("DOWNLOADING")
+	if !DirAccess.dir_exists_absolute("user://cardLocalization"):
+		DirAccess.make_dir_absolute("user://cardLocalization")
+	$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_CARDS")
 	$CanvasLayer/Popup.visible = true
-	$HTTPManager.job(downloadDBLink).on_failure(_first_db_link_failed).on_success(_downloaded_db).download("user://cardData.db")
-	$HTTPManager.job(downloadLocalLink + "_iteration.txt").on_failure(_download_failed).on_success(_downloaded_iteration).download("user://cardLocalization/_iteration.txt")
+	$HTTPManager.job(Server.serverURL + "cardList").on_failure(_download_failed).on_success(Database.setup_data.bind(_downloaded_card_list, _setup_art_progress)).fetch()
 	for lang in Settings.languages:
 		downloadedLocal[lang[0]] = false
 		$HTTPManager.job(downloadLocalLink + "%s.po" % lang[0]).on_failure(_download_failed).on_success(_downloaded_local.bind(lang[0])).download("user://cardLocalization/%s.po" % lang[0])
@@ -164,347 +163,26 @@ func _download_failed(_result):
 	print(_result)
 	_download_everything()
 
-func _first_db_link_failed(_result):
-	manualDownloadNeeded = true
-	if downloadedIteration and !downloadedLocal.values().has(false):
-		$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_MANUAL")
-
-func _downloaded_db(_result):
-	downloadedDB = true
-	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
-		Database._connect()
-		Settings._connect_local()
-		$CanvasLayer/Popup.visible = false
-		$CanvasLayer/Update/Notification.visible = false
-
-func _downloaded_iteration(_result):
-	downloadedIteration = true
-	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
-		Database._connect()
-		Settings._connect_local()
-		$CanvasLayer/Popup.visible = false
-		$CanvasLayer/Update/Notification.visible = false
-	elif manualDownloadNeeded and !downloadedLocal.values().has(false):
-		$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_MANUAL")
-
 func _downloaded_local(_result, lang):
 	downloadedLocal[lang] = true
-	if downloadedDB and downloadedIteration and !downloadedLocal.values().has(false):
-		Database._connect()
-		Settings._connect_local()
-		$CanvasLayer/Popup.visible = false
-		$CanvasLayer/Update/Notification.visible = false
-	elif manualDownloadNeeded and downloadedIteration and !downloadedLocal.values().has(false):
-		$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_MANUAL")
+	_check_final()
 
-func _download_progress(_assigned_files, _current_files, total_bytes, current_bytes):
-	$CanvasLayer/Popup/ProgressBar.max_value = total_bytes
-	$CanvasLayer/Popup/ProgressBar.value = current_bytes
+func _downloaded_card_list():
+	downloadedInfo = true
+	_check_final()
+
+func _check_final():
+	if downloadedInfo and !downloadedLocal.values().has(false):
+		$Timer2.start()
+
+#Sometimes the game was trying to connect to the downloaded po files before they were really there?
+#This might help that.
+func _do_final():
+	Settings._connect_local()
+	$CanvasLayer/Popup.visible = false
+	Database.setup = true
+
 #endregion
-
-#region Game Connection
-func _on_lobby_created(connect, lobby_id):
-	_hosted_lobby_id = lobby_id
-	
-	Steam.setLobbyData(_hosted_lobby_id,"name", Steam.getPersonaName())
-	Steam.setLobbyData(_hosted_lobby_id,"game","Holocard")
-	Steam.setLobbyData(_hosted_lobby_id, "version", Settings.version)
-	Steam.setLobbyData(_hosted_lobby_id, "steamID", str(SteamManager.steam_id))
-	Steam.setLobbyData(_hosted_lobby_id, "friendsOnly", str(friendsOnly))
-	
-	Steam.setLobbyJoinable(_hosted_lobby_id,true)
-	
-	chosen = true
-
-func _on_host_pressed():
-	peer.create_server(25565,1)
-	multiplayer.multiplayer_peer = peer
-	multiplayer.peer_connected.connect(_add_player)
-	multiplayer.peer_disconnected.connect(_restart)
-	_add_player()
-	call_deferred("add_child",yourSide,true)
-	$CanvasLayer/Host.visible = false
-	$CanvasLayer/Join.visible = false
-	$CanvasLayer/DeckSelect.visible = false
-	$CanvasLayer/DeckList.visible = false
-	$CanvasLayer/Title.visible = false
-	$"CanvasLayer/Deck Creation".visible = false
-	$CanvasLayer/Exit.visible = false
-	$CanvasLayer/Options.visible = false
-	$CanvasLayer/InfoButton.visible = false
-	$CanvasLayer/LanguageSelect.visible = false
-	$CanvasLayer/gradient.visible = false
-	$CanvasLayer/PlaymatDiceCustom.visible = false
-	$CanvasLayer/Update.visible = false
-	
-	$CanvasLayer/Sidebar.visible = true
-	$CanvasLayer/MainMenu.visible = true
-	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
-	
-	fix_font_size()
-
-func _on_steam_host_pressed():
-	peer.create_lobby(SteamMultiplayerPeer.LOBBY_TYPE_PUBLIC,20)
-	multiplayer.multiplayer_peer = peer
-	multiplayer.peer_connected.connect(_add_player)
-	multiplayer.peer_disconnected.connect(_on_steam_player_disconnect)
-	_add_player()
-	call_deferred("add_child",yourSide,true)
-	
-	$CanvasLayer/SteamHost.visible = false
-	$CanvasLayer/SteamJoin.visible = false
-	$CanvasLayer/DeckSelect.visible = false
-	$CanvasLayer/DeckList.visible = false
-	$CanvasLayer/Title.visible = false
-	$"CanvasLayer/Deck Creation".visible = false
-	$CanvasLayer/Exit.visible = false
-	$CanvasLayer/Options.visible = false
-	$CanvasLayer/InfoButton.visible = false
-	$CanvasLayer/LanguageSelect.visible = false
-	$CanvasLayer/gradient.visible = false
-	$CanvasLayer/PlaymatDiceCustom.visible = false
-	$CanvasLayer/Update.visible = false
-	
-	$CanvasLayer/Sidebar.visible = true
-	$CanvasLayer/MainMenu.visible = true
-	$CanvasLayer/JoinOptions.visible = true
-	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
-	
-	fix_font_size()
-
-func _on_public_private_chosen(chosen_index):
-	$CanvasLayer/SteamHost/MenuButton.text = $CanvasLayer/SteamHost/MenuButton.get_popup().get_item_text(chosen_index)
-	friendsOnly = chosen_index
-
-func _on_steam_join_pressed():
-	for lobbyButton in $CanvasLayer/LobbyList/VBoxContainer.get_children():
-		lobbyButton.queue_free()
-	
-	Steam.addRequestLobbyListDistanceFilter(Steam.LOBBY_DISTANCE_FILTER_WORLDWIDE)
-	Steam.addRequestLobbyListStringFilter("game","Holocard",Steam.LOBBY_COMPARISON_EQUAL)
-	Steam.hasFriend(23,Steam.FRIEND_FLAG_IMMEDIATE)
-	Steam.requestLobbyList()
-	$CanvasLayer/SteamHost/MenuButton.visible = false
-
-func _on_lobby_match_list(these_lobbies: Array) -> void:
-	for this_lobby in these_lobbies:
-		# Pull lobby data from Steam, these are specific to our example
-		var lobby_name = Steam.getLobbyData(this_lobby, "name")
-		var lobby_game = Steam.getLobbyData(this_lobby, "game")
-		var lobby_version = Steam.getLobbyData(this_lobby, "version")
-		var lobby_host_id = Steam.getLobbyData(this_lobby, "steamID").to_int()
-		var lobby_friends_only = bool(Steam.getLobbyData(this_lobby, "friendsOnly").to_int())
-		var is_friend = lobby_host_id != 0 and Steam.hasFriend(lobby_host_id,Steam.FRIEND_FLAG_IMMEDIATE)
-
-		# Get the current number of members
-		var lobby_num_members: int = Steam.getNumLobbyMembers(this_lobby)
-		
-		if lobby_game != "Holocard":
-			print("other spacewar lobby found")
-			continue
-
-		# Create a button for the lobby
-		var lobbyButton = Button.new()
-		lobbyButton.text = lobby_name
-		if lobby_version == Settings.version:
-			lobbyButton.pressed.connect(_join_steam_lobby.bind(this_lobby))
-		else:
-			lobbyButton.text += " " + tr("VERSION_MISMATCH")
-			#lobbyButton.pressed.connect(_join_steam_lobby.bind(this_lobby))
-			lobbyButton.disabled = true
-		if is_friend or !lobby_friends_only:
-			$CanvasLayer/LobbyList/VBoxContainer.add_child(lobbyButton)
-		
-		if is_friend:
-			$CanvasLayer/LobbyList/VBoxContainer.move_child(lobbyButton,0)
-	
-	$CanvasLayer/LobbyList.visible = true
-	$CanvasLayer/CancelLobby.visible = true
-
-func _add_player(id=1):
-	var side = player_side.instantiate()
-	side.name = str(id)
-	side.set_multiplayer_authority(id)
-	if id == 1:
-		yourSide = side
-		yourSide.ended_turn.connect(_on_end_turn)
-		yourSide.made_turn_choice.connect(_on_your_choice_made)
-		yourSide.rps.connect(_your_rps)
-		yourSide.mulligan_done.connect(_your_mulligan)
-		yourSide.ready_decided.connect(_your_ready)
-		yourSide.sent_game_message.connect(_on_side_gave_game_message)
-	else:
-		possibleSides[id] = side
-
-@rpc("authority","call_remote","reliable")
-func _connect_turn_buttons(side_id):
-	var side = get_node(str(side_id))
-	side.ended_turn.connect(_on_opponent_end_turn)
-	side.made_turn_choice.connect(_on_opponent_choice_made)
-	side.rps.connect(_your_rps)
-	side.mulligan_done.connect(_your_mulligan)
-	side.ready_decided.connect(_your_ready)
-	side.sent_game_message.connect(_on_side_gave_game_message)
-
-@rpc("any_peer","call_remote","reliable")
-func _start(opponent_id, deck_json, playmat_buffer, dice_buffer):
-	opponentSide = possibleSides[opponent_id]
-	
-	Steam.setLobbyJoinable(_hosted_lobby_id,false)
-	for possible_id in possibleSides:
-		if possible_id != opponent_id and possible_id != 1:
-			possibleSides[possible_id].queue_free()
-			print(possible_id)
-			_close_lobby.rpc_id(possible_id)
-	
-	json.parse(deck_json)
-	opponentSide.oshi = json.data.oshi
-	opponentSide.deckList = json.data.deck
-	opponentSide.cheerDeckList = json.data.cheerDeck
-	if json.data.has("sleeve"):
-		opponentSide.mainSleeve = json.data.sleeve
-	if json.data.has("cheerSleeve"):
-		opponentSide.cheerSleeve = json.data.cheerSleeve
-	if json.data.has("oshiSleeve"):
-		opponentSide.oshiSleeve = json.data.oshiSleeve
-	if playmat_buffer:
-		opponentSide.playmatBuffer = playmat_buffer
-	if dice_buffer:
-		opponentSide.diceBuffer = dice_buffer
-	
-	add_child(opponentSide)
-	set_chosen.rpc_id(opponent_id)
-	_connect_turn_buttons.rpc(opponentSide.name)
-	yourSide.specialStart()
-	opponentSide.call_deferred("_start")
-	call_deferred("connect_info",1)
-	call_deferred("connect_info",opponent_id)
-	
-	$CanvasLayer/JoinOptions.visible = false
-	inGame = true
-
-@rpc("any_peer","call_remote","reliable")
-func set_chosen():
-	chosen = true
-	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
-	$CanvasLayer/JoinWait.visible = false
-	yourSide = get_node(str(multiplayer.get_unique_id()))
-	opponentSide = get_node("1")
-
-func _please_add_join_option():
-	_add_join_option.rpc_id(1,Steam.getPersonaName(),JSON.stringify(deckInfo))
-
-@rpc("any_peer","call_remote","reliable")
-func _get_playmat_and_dice():
-	var playmat_buffer
-	if playmat:
-		playmat_buffer = playmat.save_webp_to_buffer(true,0.6)
-	var dice_buffer
-	if dice:
-		dice_buffer = dice.save_webp_to_buffer(true,0.4)
-	_apply_playmat_and_dice.rpc_id(1, playmat_buffer, dice_buffer)
-
-@rpc("any_peer","call_remote","reliable")
-func _add_join_option(steam_name, deck_json):
-	var opponent_id = multiplayer.get_remote_sender_id()
-	var newJoinButton = Button.new()
-	newJoinButton.name = str(multiplayer.get_remote_sender_id())
-	newJoinButton.text = steam_name
-	newJoinButton.set_meta("deck", deck_json)
-	newJoinButton.disabled = true
-	$CanvasLayer/JoinOptions/ScrollContainer/VBoxContainer.add_child(newJoinButton)
-	_get_playmat_and_dice.rpc_id(opponent_id)
-
-@rpc("any_peer","call_remote","reliable")
-func _apply_playmat_and_dice(playmat_buffer, dice_buffer):
-	var opponent_id = multiplayer.get_remote_sender_id()
-	var joinButton = $CanvasLayer/JoinOptions/ScrollContainer/VBoxContainer.get_node(str(opponent_id))
-	joinButton.pressed.connect(_start.bind(opponent_id, joinButton.get_meta("deck"), playmat_buffer, dice_buffer))
-	joinButton.disabled = false
-
-func _please_start():
-	var playmat_buffer
-	if playmat:
-		playmat_buffer = playmat.save_webp_to_buffer(true)
-	var dice_buffer
-	if dice:
-		dice_buffer = dice.save_webp_to_buffer(true)
-	_start.rpc(multiplayer.get_unique_id(), JSON.stringify(deckInfo), playmat_buffer, dice_buffer)
-
-func _on_join_pressed():
-	peer = ENetMultiplayerPeer.new()
-	ip_prompt.visible = true
-	ip_prompt.get_node("LineEdit").grab_focus()
-	$CanvasLayer/Host.visible = false
-	$CanvasLayer/Join.visible = false
-	$CanvasLayer/CancelIPJoin.visible = true
-
-func _join_steam_lobby(lobby_id):
-	peer.connect_lobby(lobby_id)
-	_joined_lobby_id = lobby_id
-	multiplayer.multiplayer_peer = peer
-	multiplayer.connected_to_server.connect(_please_add_join_option)
-	multiplayer.server_disconnected.connect(_restart)
-	rotation = -3.141
-	$Camera2D.position = Vector2(670,-644)
-	$CanvasLayer/SteamHost.visible = false
-	$CanvasLayer/SteamJoin.visible = false
-	$CanvasLayer/DeckSelect.visible = false
-	$CanvasLayer/DeckList.visible = false
-	$CanvasLayer/LobbyList.visible = false
-	$CanvasLayer/Title.visible = false
-	$"CanvasLayer/Deck Creation".visible = false
-	$CanvasLayer/CancelLobby.visible = false
-	$CanvasLayer/Exit.visible = false
-	$CanvasLayer/Options.visible = false
-	$CanvasLayer/InfoButton.visible = false
-	$CanvasLayer/LanguageSelect.visible = false
-	$CanvasLayer/gradient.visible = false
-	$CanvasLayer/PlaymatDiceCustom.visible = false
-	$CanvasLayer/Update.visible = false
-	
-	$CanvasLayer/Sidebar.visible = true
-	$CanvasLayer/MainMenu.visible = true
-	$CanvasLayer/JoinWait.visible = true
-	
-	fix_font_size()
-
-func _on_line_edit_text_submitted(new_text):
-	ip_prompt.visible = false
-	if new_text == "":
-		new_text = ip_prompt.get_node("LineEdit").placeholder_text
-	peer.create_client(new_text,25565)
-	multiplayer.multiplayer_peer = peer
-	multiplayer.connected_to_server.connect(_please_start)
-	multiplayer.server_disconnected.connect(_restart)
-	rotation = -3.141
-	$Camera2D.position = Vector2(670,-644)
-	$CanvasLayer/DeckSelect.visible = false
-	$CanvasLayer/DeckList.visible = false
-	$CanvasLayer/Title.visible = false
-	$"CanvasLayer/Deck Creation".visible = false
-	$CanvasLayer/CancelIPJoin.visible = false
-	$CanvasLayer/Exit.visible = false
-	$CanvasLayer/Options.visible = false
-	$CanvasLayer/InfoButton.visible = false
-	$CanvasLayer/LanguageSelect.visible = false
-	$CanvasLayer/gradient.visible = false
-	$CanvasLayer/PlaymatDiceCustom.visible = false
-	$CanvasLayer/Update.visible = false
-	
-	$CanvasLayer/Sidebar.visible = true
-	$CanvasLayer/MainMenu.visible = true
-	
-	fix_font_size()
-
-func connect_info(side_id):
-	connect_info_all.rpc(side_id)
-
-@rpc("call_local","reliable")
-func connect_info_all(side_id):
-	var side = get_node(str(side_id))
-	side.card_info_set.connect(update_info)
-	side.card_info_clear.connect(clear_info)
 
 func update_info(topCard, card):
 	$CanvasLayer/Sidebar/InfoPanel._new_info(topCard, card)
@@ -516,50 +194,7 @@ func _restart(id=null):
 	if get_tree():
 		get_tree().reload_current_scene()
 
-func _on_steam_player_disconnect(id=0):
-	if opponentSide and id == opponentSide.name.to_int():
-		_restart()
-	elif inGame == false and $CanvasLayer/JoinOptions/ScrollContainer/VBoxContainer.has_node(str(id)):
-		$CanvasLayer/JoinOptions/ScrollContainer/VBoxContainer.get_node(str(id)).queue_free()
-
-func _on_steam_connect_pressed():
-	$"CanvasLayer/Steam Connect".visible = false
-	$"CanvasLayer/Direct Connect".visible = false
-	peer = SteamMultiplayerPeer.new()
-	peer.lobby_created.connect(_on_lobby_created)
-	Steam.lobby_match_list.connect(_on_lobby_match_list)
-	steam = true
-	var connected = SteamManager.initialize_steam()
-	if connected != null:
-		$CanvasLayer/Popup/Label.text = str(connected)
-		$CanvasLayer/Popup.visible = true
-	else:
-		$CanvasLayer/SteamHost.visible = true
-		$CanvasLayer/SteamJoin.visible = true
-		$CanvasLayer/SteamHost/MenuButton.visible = true
-
-func _on_direct_connect_pressed():
-	$"CanvasLayer/Steam Connect".visible = false
-	$"CanvasLayer/Direct Connect".visible = false
-	$CanvasLayer/Host.visible = true
-	$CanvasLayer/Join.visible = true
-	peer = ENetMultiplayerPeer.new()
-
-func _on_cancel_lobby_pressed():
-	$CanvasLayer/LobbyList.visible = false
-	$CanvasLayer/CancelLobby.visible = false
-	$CanvasLayer/SteamHost/MenuButton.visible = true
-
-func _on_cancel_ip_join_pressed():
-	ip_prompt.visible = false
-	ip_prompt.get_node("LineEdit").release_focus()
-	$CanvasLayer/Host.visible = true
-	$CanvasLayer/Join.visible = true
-	$CanvasLayer/CancelIPJoin.visible = false
-
 func _on_exit_pressed():
-	if steam and chosen:
-		_close_lobby.rpc()
 	get_tree().quit()
 
 func _on_main_menu_pressed():
@@ -568,146 +203,11 @@ func _on_main_menu_pressed():
 func _on_no_pressed():
 	$CanvasLayer/MainMenu/Confirmation.visible = false
 
-@rpc("any_peer","call_remote","reliable")
-func _close_lobby():
-	if _hosted_lobby_id != 0:
-		_restart()
-	if _joined_lobby_id != 0:
-		peer.close()
-		Steam.leaveLobby(_joined_lobby_id)
-
 func _on_yes_pressed():
-	if steam:
-		peer.close()
-		Steam.leaveLobby(_joined_lobby_id)
-		
-		if chosen:
-			_close_lobby.rpc()
-		
-		_restart()
-	else:
-		if multiplayer.is_server():
-			for i in multiplayer.get_peers():
-				multiplayer.multiplayer_peer.disconnect_peer(i)
-			_restart()
-		else:
-			multiplayer.multiplayer_peer.disconnect_peer(1)
-			_restart()
-#endregion
-
-#region Game Logic
-func _your_rps(choice):
-	if multiplayer.get_unique_id() == 1:
-		yourRPS = choice
-		if opponentRPS != -1:
-			_rps_decide()
-	else:
-		_opponent_rps.rpc(choice)
-
-@rpc("any_peer","call_remote","reliable")
-func _opponent_rps(choice):
-	opponentRPS = choice
-	if yourRPS != -1:
-		_rps_decide()
-
-func _rps_decide():
-	if yourRPS == opponentRPS:
-		yourSide.specialRestart()
-		opponentSide.specialRestart.rpc()
-		yourRPS = -1
-		opponentRPS = -1
-	elif yourRPS - opponentRPS in [-2,1]:
-		#You won
-		yourSide.rps_end()
-		opponentSide.rps_end.rpc()
-		yourSide._show_turn_choice()
-	else:
-		yourSide.rps_end()
-		opponentSide.rps_end.rpc()
-		opponentSide._show_turn_choice.rpc()
-
-@rpc("any_peer","call_remote","reliable")
-func _on_your_choice_made(choice):
-	yourSide.set_player1.rpc(choice)
-	yourSide.set_is_turn.rpc(choice)
-	opponentSide.set_player1.rpc(!choice)
-	opponentSide.set_is_turn.rpc(!choice)
-	yourSide.specialStart2()
-	opponentSide.specialStart2.rpc()
-
-func _on_opponent_choice_made(choice):
-	_on_your_choice_made.rpc(!choice)
-
-func _your_mulligan():
-	if multiplayer.get_unique_id() == 1:
-		yourMulligan = true
-		if opponentMulligan:
-			_all_mulligan()
-	else:
-		_opponent_mulligan.rpc()
-
-@rpc("any_peer","call_remote","reliable")
-func _opponent_mulligan():
-	opponentMulligan = true
-	if yourMulligan:
-		_all_mulligan()
-
-func _all_mulligan():
-	yourSide.specialStart3()
-	opponentSide.specialStart3.rpc()
-
-func _your_ready():
-	if multiplayer.get_unique_id() == 1:
-		yourReady = true
-		if opponentReady:
-			_all_ready()
-	else:
-		_opponent_ready.rpc()
-
-@rpc("any_peer","call_remote","reliable")
-func _opponent_ready():
-	opponentReady = true
-	if yourReady:
-		_all_ready()
-
-func _all_ready():
-	yourSide.specialStart4()
-	opponentSide.specialStart4.rpc()
-	_enable_steps.rpc()
-
-@rpc("any_peer","call_remote","reliable")
-func _on_end_turn(fromOpponent = false):
-	if firstTurn:
-		_enable_steps.rpc(true)
-		firstTurn = false
-	if fromOpponent:
-		yourSide.set_is_turn.rpc(true)
-		opponentSide.set_is_turn.rpc(false)
-	else:
-		yourSide.set_is_turn.rpc(false)
-		opponentSide.set_is_turn.rpc(true)
-
-func _on_opponent_end_turn():
-	_on_end_turn.rpc(true)
-
-#endregion
+	_restart()
 
 func _on_deck_creation_pressed():
 	get_tree().change_scene_to_file("res://Scenes/deck_creation.tscn")
-
-func _on_deck_select_pressed():
-	$CanvasLayer/DeckList._all_decks()
-	$CanvasLayer/DeckList.visible = true
-
-func _hide_deck_list():
-	$CanvasLayer/DeckList.visible = false
-
-func _on_deck_list_selected(deckJSON):
-	deckInfo = deckJSON
-	$CanvasLayer/DeckSelect.text = deckInfo.deckName
-	$"CanvasLayer/Steam Connect".disabled = false
-	$"CanvasLayer/Direct Connect".disabled = false
-	_hide_deck_list()
 
 
 #region Settings
@@ -725,7 +225,7 @@ func _on_language_selected(index_selected):
 	$CanvasLayer/LanguageSelect.text = Settings.languages[index_selected][1]
 	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"en","es":
+		"en", "es", "fr", "ko":
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
@@ -825,53 +325,24 @@ func _on_sidebar_options_pressed():
 	
 	$CanvasLayer/Sidebar/OptionsWindow.visible = true
 
-@rpc("any_peer","call_local","reliable")
-func send_message_rpc(message):
-	if multiplayer.get_remote_sender_id() == multiplayer.get_unique_id():
-		chat.text += "\n\n" + tr("YOU") + ": "
-	else:
-		chat.text += "\n\n" + tr("OPPONENT") + ": "
-	chat.text += message
-	$CanvasLayer/Sidebar/ChatWindow/ScrollContainer.scroll_vertical = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer.get_v_scroll_bar().max_value
-	if !$CanvasLayer/Sidebar/ChatWindow.visible:
-		$CanvasLayer/Sidebar/Tabs/Chat/Notification.visible = true
-
-func send_message(message):
-	if message != "":
-		send_message_rpc.rpc(message)
-		$CanvasLayer/Sidebar/ChatWindow/ToSend.text = ""
-
-func send_message_on_click():
-	send_message($CanvasLayer/Sidebar/ChatWindow/ToSend.text)
-
-@rpc("any_peer","call_local","reliable")
-func game_message(message):
-	if multiplayer.get_remote_sender_id() == multiplayer.get_unique_id():
-		chat.text += "\n" +message.format({person = tr("YOU")})
-	else:
-		chat.text += "\n" +message.format({person = tr("OPPONENT")})
-	
-	$CanvasLayer/Sidebar/ChatWindow/ScrollContainer.scroll_vertical = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer.get_v_scroll_bar().max_value
-
-func _on_side_gave_game_message(message):
-	game_message.rpc(message)
-
-@rpc("any_peer","call_local","reliable")
 func _select_step(step_id):
+	send_command("Game","Select Step",{"step":step_id})
+
+func _actually_select_step(step_id):
 	for stepButton in $CanvasLayer/Sidebar/Steps.get_children():
 		if stepButton.name.contains(str(step_id)):
 			stepButton.set_pressed_no_signal(true)
 		else:
 			stepButton.set_pressed_no_signal(false)
-	yourSide.step = step_id
+	if yourSide:
+		yourSide.step = step_id
 
 func _on_step_pressed(toggle_on, step_id):
 	$CanvasLayer/Sidebar/Steps.get_node("Step" + str(step_id)).set_pressed_no_signal(!toggle_on)
-	if !yourSide.is_turn:
+	if !yourSide or !yourSide.is_turn:
 		return
-	_select_step.rpc(step_id)
+	_select_step(step_id)
 
-@rpc("any_peer","call_local","reliable")
 func _enable_steps(allow_performance = false):
 	for stepButton in $CanvasLayer/Sidebar/Steps.get_children():
 		if stepButton.name.contains("5"):
@@ -912,10 +383,10 @@ func _unhandled_key_input(event):
 				if newStep == 7:
 					yourSide.end_turn()
 				else:
-					_select_step.rpc(newStep)
+					_select_step(newStep)
 			elif event.is_action_pressed("Last Step"):
 				var newStep = _last_step()
-				_select_step.rpc(newStep)
+				_select_step(newStep)
 #endregion
 
 
@@ -932,3 +403,788 @@ func fix_font_size():
 				label.set_meta("fontSize", label.get_theme_font_size("font_size"))
 			#Scale is 0.8 here but 0.9 in the deck builder. This is intentional, and returns the best results
 			FixFontTool.apply_text_with_corrected_max_scale(label.size, label, tr(label.text), 0.8, false, Vector2(), label.get_meta("fontSize"))
+
+#region WebSocket
+
+func send_command(supertype:String, command:String, data=null) -> void:
+	if !data:
+		data = {}
+	$WebSocket.send_dict({"supertype":supertype, "command":command, "data":data})
+
+func _on_websocket_connected(url):
+	$CanvasLayer/LobbyButtons/LobbyCreate.disabled = false
+	$CanvasLayer/LobbyButtons/LobbyJoin.disabled = false
+	$CanvasLayer/LobbyButtons/GameSpectate.disabled = false
+
+func _on_websocket_received(raw_data):
+	var needed_string = raw_data.get_string_from_ascii()
+	
+	#When multiple commands come in at once, they're just put next to each other
+	#This code splits those up into a list of sequential commands
+	var commands = needed_string.split("}{")
+	for index in range(commands.size()):
+		var command = commands[index]
+		if index>0:
+			command = "{" + command
+		if index < commands.size()-1:
+			command += "}"
+			
+		json.parse(command)
+		var message = json.data
+		
+		if "supertype" in message and "command" in message:
+			var data = message["data"] if "data" in message else {}
+			match message["supertype"]:
+				"Server":
+					match message["command"]:
+						"Created Lobby":
+							show_lobby(data["host_name"],data["id"],true,{},null,false,false,false)
+						"Found Lobbies":
+							if "lobbies" in data:
+								found_lobbies(data["lobbies"])
+						"Found Games":
+							if "games" in data:
+								found_games(data["games"])
+						"Create Lobby Failed":
+							print("Failed to Create Lobby")
+							hide_lobby_options()
+						"Join Lobby Failed":
+							print("Failed to Join Lobby")
+							lobby_list.visible = false
+						"Player Info":
+							if "id" in data and "name" in data:
+								player_id = data["id"]
+								player_name = data["name"]
+								if Settings.settings["Name"] != "":
+									player_name = Settings.settings["Name"]
+									update_name(player_name)
+								$CanvasLayer/PlayerName.placeholder_text = player_name
+							if "current" in data and "unreleased" in data:
+								for number in data["current"]:
+									Database.current_banlist[number] = int(data["current"][number])
+									Database.unreleased[number] = int(data["current"][number])
+								for number in data["unreleased"]:
+									Database.unreleased[number] = int(data["unreleased"][number])
+						"Spectate":
+							if "game_state" in data:
+								_enable_steps(!data["game_state"]["firstTurn"])
+								_actually_select_step(int(data["game_state"]["step"]))
+								show_spectated_game(data["game_state"]["players"])
+						_:
+							pass
+				"Lobby":
+					lobby_command(message["command"], data)
+				"Game":
+					game_command(message["command"], data)
+				"Your Side":
+					if yourSide:
+						yourSide.side_command(message["command"], data)
+				"Opponent Side":
+					if opponentSide:
+						opponentSide.opponent_side_command(message["command"], data)
+				"Spectate Side":
+					if "player" in data and data["player"] in spectatedSides:
+						spectatedSides[data["player"]].opponent_side_command(message["command"],data)
+				_:
+					pass
+
+#endregion
+
+#region Lobbies
+
+func lobby_command(command:String, data:Dictionary):
+	match command:
+		"Update":
+			if "state" in data:
+				var state = data["state"]
+				update_lobby(data["lobby_id"],state["waiting"],state["chosen"],data["you_are_chosen"],state["host_ready"],state["chosen_ready"],data["reason"])
+		"Join":
+			if "id" in data and "hostName" in data:
+				show_lobby(data["hostName"],data["id"],false,{},null,false,false,false)
+		"Close":
+			clear_lobby_menu()
+			$CanvasLayer/LobbyScreen.visible = false
+			$CanvasLayer/LobbyButtons.visible = !inGame
+		"Deck Legality":
+			if "legal" in data and "reasons" in data:
+				if data["legal"]:
+					if lobby_you_are_host:
+						lobby_host_ready.visible = false
+					else:
+						lobby_chosen_ready.visible = false
+				else:
+					if lobby_you_are_host:
+						lobby_host_deck_select.disabled = false
+						lobby_host_ready.disabled = false
+						lobby_host_ready.text = tr("LOBBY_READY")
+					else:
+						lobby_chosen_deck_select.disabled = false
+						lobby_chosen_ready.disabled = false
+						lobby_chosen_ready.text = tr("LOBBY_READY")
+					for reason in data["reasons"]:
+						lobby_deckerrorlist.text += tr(reason[0]).format({"cardNum":reason[1]})
+					lobby_deckerror.visible = true
+		"Game Start":
+			if "id" in data and "opponent_id" in data and "name" in data and !inGame:
+				show_game(data["id"],data["opponent_id"],data["name"])
+		"Game Start Without You":
+			if "id" in data and !gameToSpectate:
+				$CanvasLayer/Question.visible = true
+				gameToSpectate = data["id"]
+		_:
+			pass
+
+func update_name(new_name:String):
+	Settings.update_settings("Name",new_name)
+	if new_name == "":
+		new_name = $CanvasLayer/PlayerName.placeholder_text
+	send_command("Server","Name Change",{"new_name":new_name})
+
+func create_lobby_options() -> void:
+	$CanvasLayer/LobbyButtons.visible = false
+	$CanvasLayer/LobbyCreateMenu.visible = true
+
+func hide_lobby_options() -> void:
+	$CanvasLayer/LobbyButtons.visible = true
+	$CanvasLayer/LobbyCreateMenu.visible = false
+
+func create_lobby() -> void:
+	$CanvasLayer/LobbyCreateMenu.visible = false
+	var settings = {}
+	if lobby_private.button_pressed:
+		settings["public"] = false
+	if lobby_spectators.button_pressed:
+		settings["spectators"] = true
+	if lobby_banlist.selected == 1:
+		settings["banlist"] = Database.current_banlist
+	elif lobby_banlist.selected == 2:
+		settings["banlist"] = Database.unreleased
+	else:
+		settings["banlist"] = {}
+	send_command("Server","Create Lobby",{"settings":settings})
+
+func find_lobbies() -> void:
+	#Should be updated to allow filtering
+	send_command("Server","Find Lobbies")
+	
+	lobby_list.visible = true
+	lobby_list_searching_text.visible = true
+	lobby_list_code.text = ""
+	lobby_list_code_button.disabled = true
+	for lobby_info in lobby_list_found.get_children():
+		if lobby_info.get_class() == "Button":
+			lobby_info.queue_free()
+
+func found_lobbies(found:Array) -> void:
+	for lobby_info in found:
+		var lobbyButton = Button.new()
+		lobbyButton.auto_translate = false
+		lobbyButton.text = lobby_info["hostName"] + " (%d waiting)" % lobby_info["waiting"] + "\n" + tr("LOBBY_BANLIST") + ": "
+		match int(lobby_info["banlist"]):
+			0:
+				lobbyButton.text += tr("LOBBY_BANLIST_NONE")
+			1:
+				lobbyButton.text += tr("LOBBY_BANLIST_CURRENT")
+			2:
+				lobbyButton.text += tr("LOBBY_BANLIST_UNRELEASED")
+			_:
+				lobbyButton.text += tr("LOBBY_BANLIST_CUSTOM")
+		lobbyButton.pressed.connect(join_lobby.bind(lobby_info["id"]))
+		lobbyButton.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+		lobbyButton.add_theme_font_size_override("font_size", 25)
+		lobby_list_found.add_child(lobbyButton)
+	lobby_list_searching_text.visible = false
+
+func close_lobby_list() -> void:
+	lobby_list.visible = false
+
+func join_lobby(lobby_id:String) -> void:
+	send_command("Server","Join Lobby",{"lobby":lobby_id})
+	lobby_list_code.text = ""
+
+func join_lobby_from_code() -> void:
+	if lobby_list_code.text != "":
+		join_lobby(lobby_list_code.text)
+
+func update_join_from_code_button(current_string:String) -> void:
+	lobby_list_code_button.disabled = (current_string == "")
+
+func find_games() -> void:
+	#Should be updated to allow filtering
+	send_command("Server","Find Games")
+	
+	game_list.visible = true
+	game_list_searching_text.visible = true
+	game_list_code.text = ""
+	game_list_code_button.disabled = true
+	for game_info in game_list_found.get_children():
+		if game_info.get_class() == "Button":
+			game_info.queue_free()
+
+func found_games(found:Array) -> void:
+	for game_info in found:
+		var gameButton = Button.new()
+		gameButton.auto_translate = false
+		gameButton.text = tr("GAME_VS").format({"player1":game_info["players"][0],"player2":game_info["players"][1]})
+		gameButton.pressed.connect(spectate_game.bind(game_info["id"]))
+		gameButton.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+		gameButton.add_theme_font_size_override("font_size", 25)
+		game_list_found.add_child(gameButton)
+	game_list_searching_text.visible = false
+
+func close_game_list() -> void:
+	game_list.visible = false
+
+func spectate_game(game_id:String) -> void:
+	send_command("Server","Spectate",{"game":game_id})
+	game_list_code.text = ""
+
+func spectate_game_from_code() -> void:
+	if game_list_code.text != "":
+		spectate_game(game_list_code.text)
+
+func update_spectate_from_code_button(current_string:String) -> void:
+	game_list_code_button.disabled = (current_string == "")
+
+func show_lobby(host_name:String, lobby_id:String, you_are_host:bool, waiting:Dictionary, chosen, you_are_chosen:bool, host_ready:bool, chosen_ready:bool):
+	if !current_lobby:
+		clear_lobby_menu()
+		
+		lobby_host_name.text = host_name
+		current_lobby = lobby_id
+		if you_are_host:
+			lobby_host_options.visible = true
+			lobby_you_are_host = true
+		
+		update_lobby(lobby_id, waiting, chosen, you_are_chosen, host_ready, chosen_ready, "Initialize")
+		$CanvasLayer/LobbyList.visible=false
+		$CanvasLayer/LobbyScreen.visible=true
+
+func update_lobby(lobby_id:String, waiting:Dictionary, chosen, you_are_chosen:bool, host_ready:bool, chosen_ready:bool, reason:String):
+	if current_lobby == lobby_id:
+		if !you_are_chosen:
+			lobby_chosen_options.visible = false
+		if !chosen:
+			lobby_chosen_name.text = tr("LOBBY_NONE_CHOSEN")
+		
+		for waitButton in lobby_waiting.get_children():
+			if waitButton.get_class() == "Button":
+				waitButton.queue_free()
+		
+		for wait_id in waiting:
+			if wait_id == chosen:
+				lobby_chosen_name.text = waiting[chosen]
+				if you_are_chosen:
+					lobby_chosen_options.visible = true
+			else:
+				var waitButton = Button.new()
+				waitButton.auto_translate = false
+				waitButton.text = waiting[wait_id]
+				if lobby_you_are_host:
+					waitButton.pressed.connect(choose_opponent.bind(wait_id))
+				else:
+					waitButton.disabled = true
+				waitButton.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+				waitButton.add_theme_font_size_override("font_size", 25)
+				lobby_waiting.add_child(waitButton)
+		
+		lobby_host_ready.button_pressed = host_ready
+		lobby_chosen_ready.button_pressed = chosen_ready
+		lobby_host_ready_text.visible = host_ready
+		lobby_chosen_ready_text.visible = chosen_ready
+		
+		lobby_code.text = current_lobby
+		
+		if lobby_you_are_host and host_ready and chosen_ready:
+			lobby_game_start.visible = true
+
+func choose_opponent(player_id):
+	send_command("Lobby","Choose Opponent",{"chosen":player_id})
+
+func _on_deck_select_pressed():
+	$CanvasLayer/DeckList._all_decks()
+	$CanvasLayer/DeckList.visible = true
+
+func _hide_deck_list():
+	$CanvasLayer/DeckList.visible = false
+
+func _on_deck_list_selected(deckJSON):
+	deckInfo = deckJSON
+	if lobby_you_are_host:
+		lobby_host_deck_select.text = deckInfo.deckName
+		lobby_host_ready.disabled = false
+	else:
+		lobby_chosen_deck_select.text = deckInfo.deckName
+		lobby_chosen_ready.disabled = false
+	_hide_deck_list()
+
+func ready_lobby():
+	send_command("Lobby","Ready",{"deck":deckInfo})
+	if lobby_you_are_host:
+		lobby_host_deck_select.disabled = true
+		lobby_host_ready.disabled = true
+		lobby_host_ready.text = tr("LOBBY_WAITING")
+	else:
+		lobby_chosen_deck_select.disabled = true
+		lobby_chosen_ready.disabled = true
+		lobby_chosen_ready.text = tr("LOBBY_WAITING")
+
+func close_deckerror() -> void:
+	lobby_deckerror.visible = false
+	lobby_deckerrorlist.text = ""
+
+func exit_lobby():
+	if current_lobby:
+		if lobby_you_are_host:
+			send_command("Lobby","Close Lobby")
+		else:
+			send_command("Lobby","Leave Lobby")
+		
+		clear_lobby_menu()
+		$CanvasLayer/LobbyScreen.visible = false
+
+func clear_lobby_menu() -> void:
+	for waitButton in lobby_waiting.get_children():
+		waitButton.queue_free()
+	lobby_chosen_name.text = tr("LOBBY_NONE_CHOSEN")
+	lobby_chosen_ready_text.visible = false
+	lobby_chosen_options.visible = false
+	lobby_host_name.text = tr("LOBBY_NONE_CHOSEN")
+	lobby_host_ready_text.visible = false
+	lobby_host_options.visible = false
+	current_lobby = null
+	lobby_you_are_host = false
+	$CanvasLayer/LobbyButtons.visible = false
+
+func start_game():
+	send_command("Lobby","Start Game")
+
+func show_game(game_id:String,opponent_id:String,opponent_name:String) -> void:
+	inGame = true
+	
+	yourSide = player_side.instantiate()
+	yourSide.is_your_side = true
+	yourSide.name = "yourSide"
+	yourSide.player_id = player_id
+	yourSide.player_name = player_name
+	opponentSide = player_side.instantiate()
+	opponentSide.name = "opponentSide"
+	opponentSide.player_id = opponent_id
+	opponentSide.player_name = opponent_name
+	yourSide.card_info_set.connect(update_info)
+	yourSide.card_info_clear.connect(clear_info)
+	opponentSide.card_info_set.connect(update_info)
+	opponentSide.card_info_clear.connect(clear_info)
+	call_deferred("add_child",yourSide)
+	call_deferred("add_child",opponentSide)
+	
+	yourSide.ended_turn.connect(_on_end_turn)
+	yourSide.made_turn_choice.connect(_on_choice_made)
+	yourSide.rps.connect(_on_rps)
+	
+	$CanvasLayer/Sidebar/OptionsWindow/GameCode.text = game_id
+	
+	_hide_main_menu()
+	
+	fix_font_size()
+
+func _hide_main_menu():
+	$CanvasLayer/LobbyScreen.visible = false
+	$CanvasLayer/LobbyButtons.visible = false
+	$CanvasLayer/Title.visible = false
+	$"CanvasLayer/Deck Creation".visible = false
+	$CanvasLayer/Exit.visible = false
+	$CanvasLayer/Options.visible = false
+	$CanvasLayer/InfoButton.visible = false
+	$CanvasLayer/LanguageSelect.visible = false
+	$CanvasLayer/gradient.visible = false
+	$CanvasLayer/PlaymatDiceCustom.visible = false
+	$CanvasLayer/PlayerName.visible = false
+	$CanvasLayer/Question.visible = false
+	$CanvasLayer/LobbyList.visible=false
+	$CanvasLayer/GameList.visible=false
+	
+	$CanvasLayer/Sidebar.visible = true
+	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
+
+func _spectate_yes():
+	$CanvasLayer/Question/No.disabled = true
+	$CanvasLayer/Question/Yes.disabled = true
+	send_command("Server","Spectate",{"game":gameToSpectate})
+
+func _spectate_no():
+	$CanvasLayer/Question.visible = false
+	gameToSpectate = null
+
+func show_spectated_game(player_info:Dictionary) -> void:
+	inGame = true
+	var firstPlayer = true
+	for player in player_info:
+		var newSide = player_side.instantiate()
+		newSide.is_front = firstPlayer
+		newSide.side_info = player_info[player]["side"]
+		newSide.player_id = player
+		newSide.player_name = player_info[player]["name"]
+		newSide.card_info_set.connect(update_info)
+		newSide.card_info_clear.connect(clear_info)
+		spectatedSides[player] = newSide
+		firstPlayer = false
+		call_deferred("add_child",newSide)
+	
+	_hide_main_menu()
+	$CanvasLayer/MainMenu.visible = true
+	$CanvasLayer/Sidebar/ChatWindow/HBoxContainer.visible = false
+	
+	fix_font_size()
+
+#endregion
+
+#region Game Logic
+
+func game_command(command: String, data: Dictionary) -> void:
+	match command:
+		"RPS Restart":
+			yourSide.specialRestart()
+		"RPS Win":
+			yourSide.rps_end()
+			opponentSide.rps_end()
+			yourSide._show_turn_choice()
+		"RPS Loss":
+			yourSide.rps_end()
+			opponentSide.rps_end()
+		"Set Turn 1":
+			if "is_turn" in data:
+				yourSide.set_is_turn(data["is_turn"])
+				yourSide.set_player1(data["is_turn"])
+		
+		"Start Ingame RPS":
+			$CanvasLayer/QuestionRPS/CenterContainer.visible = false
+			$CanvasLayer/QuestionRPS/HBoxContainer.visible = true
+			$CanvasLayer/QuestionRPS/HBoxContainer/Rock.disabled = false
+			$CanvasLayer/QuestionRPS/HBoxContainer/Paper.disabled = false
+			$CanvasLayer/QuestionRPS/HBoxContainer/Scissors.disabled = false
+			$CanvasLayer/QuestionRPS/CenterContainer/Label.text = tr("RPS_WAIT")
+			$CanvasLayer/QuestionRPS.visible = true
+			rps = true
+		"Ingame RPS Restart":
+			$CanvasLayer/QuestionRPS/HBoxContainer/Rock.disabled = false
+			$CanvasLayer/QuestionRPS/HBoxContainer/Paper.disabled = false
+			$CanvasLayer/QuestionRPS/HBoxContainer/Scissors.disabled = false
+		"Ingame RPS Win":
+			$CanvasLayer/QuestionRPS/HBoxContainer.visible = false
+			$CanvasLayer/QuestionRPS/CenterContainer.visible = true
+			$CanvasLayer/QuestionRPS/CenterContainer/Label.text = tr("INGAME_RPS_WON")
+			rps = false
+			$Timer.start()
+		"Ingame RPS Loss":
+			$CanvasLayer/QuestionRPS/HBoxContainer.visible = false
+			$CanvasLayer/QuestionRPS/CenterContainer.visible = true
+			$CanvasLayer/QuestionRPS/CenterContainer/Label.text = tr("INGAME_RPS_LOST")
+			rps = false
+			$Timer.start()
+		
+		"Select Step":
+			if "step" in data:
+				_actually_select_step(int(data["step"]))
+		
+		"Chat":
+			if "sender" in data and "message" in data:
+				if data["sender"] == player_id:
+					chat.text += "\n\n" + tr("YOU") + ": " + data["message"]
+				else:
+					var sender_name = "ERROR"
+					if opponentSide:
+						sender_name = opponentSide.player_name
+					elif data["sender"] in spectatedSides:
+						sender_name = spectatedSides[data["sender"]].player_name
+					chat.text += "\n\n" + sender_name + ": " + data["message"]
+				$CanvasLayer/Sidebar/ChatWindow/ScrollContainer.scroll_vertical = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer.get_v_scroll_bar().max_value
+		"Game Message":
+			if "sender" in data and "message_code" in data and "untranslated" in data and "translated" in data:
+				var format_info = data["untranslated"]
+				for key in data["translated"]:
+					#There are two places the translation could be
+					#My options were to add a THIRD dictionary to the call or this
+					#Tries the cardLocalization one first (that's where most are)
+					#If it's unchanged it's probably not there, so it tries the regular one
+					
+					var new_value = Settings.trans(data["translated"][key])
+					if new_value == data["translated"][key]:
+						new_value = tr(data["translated"][key])
+					format_info[key] = new_value
+				if data["sender"] == player_id:
+					chat.text += "\n" + tr("YOU_" + data["message_code"]).format(format_info)
+				else:
+					if opponentSide:
+						format_info["person"] = opponentSide.player_name
+					elif data["sender"] in spectatedSides:
+						format_info["person"] = spectatedSides[data["sender"]].player_name
+					chat.text += "\n" + tr(data["message_code"]).format(format_info)
+				$CanvasLayer/Sidebar/ChatWindow/ScrollContainer.scroll_vertical = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer.get_v_scroll_bar().max_value
+		"Game Win":
+			if "winner" in data and "reason" in data:
+				if data["winner"] == player_id:
+					$CanvasLayer/Question/Label.text = tr("WIN") + "\n" + tr(data["reason"]).format({"person":opponentSide.player_name})
+					yourSide.can_do_things = false
+					yourSide._on_cancel_pressed()
+					opponentSide._on_cancel_pressed()
+					$CanvasLayer/QuestionRPS.visible = false
+				else:
+					if opponentSide:
+						$CanvasLayer/Question/Label.text = tr("LOSS") + "\n" + tr("YOU_" + data["reason"])
+						yourSide.can_do_things = false
+						yourSide._on_cancel_pressed()
+						opponentSide._on_cancel_pressed()
+						$CanvasLayer/QuestionRPS.visible = false
+					elif data["winner"] in spectatedSides:
+						var winner = spectatedSides[data["winner"]].player_name
+						var loser = "LOSER"
+						for spectatedPlayer in spectatedSides:
+							if spectatedPlayer != data["winner"]:
+								loser = spectatedSides[spectatedPlayer].player_name
+						$CanvasLayer/Question/Label.text = tr("SPECTATE_WIN").format({"person":winner}) + "\n" + tr(data["reason"]).format({"person":loser})
+				$CanvasLayer/Question/MainMenu.visible = true
+				$CanvasLayer/Question/No.visible = false
+				$CanvasLayer/Question/Yes.visible = false
+				$CanvasLayer/Question.position = Vector2(422,194)
+				$CanvasLayer/Question.visible = true
+		_:
+			pass
+
+func _on_rps(choice):
+	send_command("Game","RPS",{"choice":choice})
+
+func _rps_rock():
+	$CanvasLayer/QuestionRPS/HBoxContainer/Rock.disabled = true
+	$CanvasLayer/QuestionRPS/HBoxContainer/Paper.disabled = true
+	$CanvasLayer/QuestionRPS/HBoxContainer/Scissors.disabled = true
+	send_command("Game","Ingame RPS",{"choice":0})
+func _rps_paper():
+	$CanvasLayer/QuestionRPS/HBoxContainer/Rock.disabled = true
+	$CanvasLayer/QuestionRPS/HBoxContainer/Paper.disabled = true
+	$CanvasLayer/QuestionRPS/HBoxContainer/Scissors.disabled = true
+	send_command("Game","Ingame RPS",{"choice":1})
+func _rps_scissors():
+	$CanvasLayer/QuestionRPS/HBoxContainer/Rock.disabled = true
+	$CanvasLayer/QuestionRPS/HBoxContainer/Paper.disabled = true
+	$CanvasLayer/QuestionRPS/HBoxContainer/Scissors.disabled = true
+	send_command("Game","Ingame RPS",{"choice":2})
+func _on_timer_timeout() -> void:
+	if !rps:
+		$CanvasLayer/QuestionRPS.visible = false
+
+func _on_choice_made(choice):
+	send_command("Game","Turn Choice",{"choice":choice})
+
+func _on_end_turn():
+	send_command("Game","End Turn")
+
+func send_message(message):
+	if message != "":
+		send_command("Game","Chat",{"message":message})
+		$CanvasLayer/Sidebar/ChatWindow/HBoxContainer/ToSend.text = ""
+
+func send_message_on_click():
+	send_message($CanvasLayer/Sidebar/ChatWindow/HBoxContainer/ToSend.text)
+
+#endregion
+
+func _not_real():
+	#This is all for POT generation
+	tr("MESSAGE_MULLIGAN")
+	tr("MESSAGE_DRAW")
+	tr("MESSAGE_DRAWX")
+	tr("MESSAGE_MILL")
+	tr("MESSAGE_MILLX")
+	tr("MESSAGE_BLOOM")
+	tr("MESSAGE_STAGE_ARCHIVE")
+	tr("MESSAGE_STAGE_HAND")
+	tr("MESSAGE_STAGE_CENTER")
+	tr("MESSAGE_STAGE_COLLAB")
+	tr("MESSAGE_STAGE_MOVECOLLAB")
+	tr("MESSAGE_STAGE_UNBLOOM")
+	tr("MESSAGE_REVEALED_HAND")
+	tr("MESSAGE_REVEALED_TOPDECK")
+	tr("MESSAGE_REVEALED_BOTTOMDECK")
+	tr("MESSAGE_REVEALED_ARCHIVE")
+	tr("MESSAGE_OSHISKILL_SP")
+	tr("MESSAGE_OSHISKILL")
+	tr("MESSAGE_HAND_TOPDECK")
+	tr("MESSAGE_HAND_BOTTOMDECK")
+	tr("MESSAGE_HAND_ARCHIVE")
+	tr("MESSAGE_HAND_HOLOPOWER")
+	tr("MESSAGE_HAND_REVEAL")
+	tr("MESSAGE_HAND_SUPPORT_PLAY")
+	tr("MESSAGE_FUDA_REVEAL")
+	tr("MESSAGE_HOLOPOWER_REVEAL")
+	tr("MESSAGE_DECK_MULLIGAN")
+	tr("MESSAGE_DECK_UNDOMULLIGAN")
+	tr("MESSAGE_DECK_SEARCH")
+	tr("MESSAGE_DECK_SHUFFLE")
+	tr("MESSAGE_CHEERDECK_SEARCH")
+	tr("MESSAGE_CHEERDECK_SHUFFLE")
+	tr("MESSAGE_HOLOPOWER_SEARCH")
+	tr("MESSAGE_HOLOPOWER_SHUFFLE")
+	tr("MESSAGE_FUDA_LIFE")
+	tr("MESSAGE_ATTACHED_LIFE")
+	tr("MESSAGE_ARCHIVE_HAND")
+	tr("MESSAGE_FUDA_HAND")
+	tr("MESSAGE_HOLOPOWER_HAND")
+	tr("MESSAGE_ATTACHED_HAND")
+	tr("MESSAGE_ARCHIVE_TOPDECK")
+	tr("MESSAGE_DECK_TOPDECK")
+	tr("MESSAGE_FUDA_TOPDECK")
+	tr("MESSAGE_HOLOPOWER_TOPDECK")
+	tr("MESSAGE_ATTACHED_TOPDECK")
+	tr("MESSAGE_ARCHIVE_BOTTOMDECK")
+	tr("MESSAGE_DECK_BOTTOMDECK")
+	tr("MESSAGE_FUDA_BOTTOMDECK")
+	tr("MESSAGE_HOLOPOWER_BOTTOMDECK")
+	tr("MESSAGE_ATTACHED_BOTTOMDECK")
+	tr("MESSAGE_ARCHIVE_TOPCHEERDECK")
+	tr("MESSAGE_CHEERDECK_TOPCHEERDECK")
+	tr("MESSAGE_FUDA_TOPCHEERDECK")
+	tr("MESSAGE_ATTACHED_TOPCHEERDECK")
+	tr("MESSAGE_ARCHIVE_BOTTOMCHEERDECK")
+	tr("MESSAGE_CHEERDECK_BOTTOMCHEERDECK")
+	tr("MESSAGE_FUDA_BOTTOMCHEERDECK")
+	tr("MESSAGE_ATTACHED_BOTTOMCHEERDECK")
+	tr("MESSAGE_FUDA_ARCHIVE")
+	tr("MESSAGE_HOLOPOWER_ARCHIVE")
+	tr("MESSAGE_ATTACHED_ARCHIVE")
+	tr("MESSAGE_ARCHIVE_HOLOPOWER")
+	tr("MESSAGE_FUDA_HOLOPOWER")
+	tr("MESSAGE_ATTACHED_HOLOPOWER")
+	tr("MESSAGE_ARTS_DAMAGE")
+	tr("MESSAGE_DECK_LOOKATX")
+	tr("MESSAGE_CHEERDECK_LOOKATX")
+	tr("MESSAGE_CARD_BACK")
+	tr("MESSAGE_CARD_BATONPASS")
+	tr("MESSAGE_CARD_SWITCH")
+	tr("MESSAGE_SUPPORT_ATTACH")
+	tr("MESSAGE_CHEER_ATTACH")
+	tr("MESSAGE_HOLOMEM_PLAY")
+	tr("MESSAGE_DECK_HOLOMEM_PLAY")
+	tr("MESSAGE_CHEERDECK_CHEER_ATTACH")
+	tr("MESSAGE_ARCHIVE_HOLOMEM_PLAY")
+	tr("MESSAGE_ARCHIVE_CHEER_ATTACH")
+	tr("MESSAGE_ATTACHED_CHEER_ATTACH")
+	tr("MESSAGE_ENDTURN")
+	tr("MESSAGE_DIERESULT")
+	tr("MESSAGE_RPS")
+	tr("YOU_MESSAGE_MULLIGAN")
+	tr("YOU_MESSAGE_DRAW")
+	tr("YOU_MESSAGE_DRAWX")
+	tr("YOU_MESSAGE_MILL")
+	tr("YOU_MESSAGE_MILLX")
+	tr("YOU_MESSAGE_BLOOM")
+	tr("YOU_MESSAGE_STAGE_ARCHIVE")
+	tr("YOU_MESSAGE_STAGE_HAND")
+	tr("YOU_MESSAGE_STAGE_CENTER")
+	tr("YOU_MESSAGE_STAGE_COLLAB")
+	tr("YOU_MESSAGE_STAGE_MOVECOLLAB")
+	tr("YOU_MESSAGE_STAGE_UNBLOOM")
+	tr("YOU_MESSAGE_REVEALED_HAND")
+	tr("YOU_MESSAGE_REVEALED_TOPDECK")
+	tr("YOU_MESSAGE_REVEALED_BOTTOMDECK")
+	tr("YOU_MESSAGE_REVEALED_ARCHIVE")
+	tr("YOU_MESSAGE_OSHISKILL_SP")
+	tr("YOU_MESSAGE_OSHISKILL")
+	tr("YOU_MESSAGE_HAND_TOPDECK")
+	tr("YOU_MESSAGE_HAND_BOTTOMDECK")
+	tr("YOU_MESSAGE_HAND_ARCHIVE")
+	tr("YOU_MESSAGE_HAND_HOLOPOWER")
+	tr("YOU_MESSAGE_HAND_REVEAL")
+	tr("YOU_MESSAGE_HAND_SUPPORT_PLAY")
+	tr("YOU_MESSAGE_FUDA_REVEAL")
+	tr("YOU_MESSAGE_HOLOPOWER_REVEAL")
+	tr("YOU_MESSAGE_DECK_MULLIGAN")
+	tr("YOU_MESSAGE_DECK_UNDOMULLIGAN")
+	tr("YOU_MESSAGE_DECK_SEARCH")
+	tr("YOU_MESSAGE_DECK_SHUFFLE")
+	tr("YOU_MESSAGE_CHEERDECK_SEARCH")
+	tr("YOU_MESSAGE_CHEERDECK_SHUFFLE")
+	tr("YOU_MESSAGE_HOLOPOWER_SEARCH")
+	tr("YOU_MESSAGE_HOLOPOWER_SHUFFLE")
+	tr("YOU_MESSAGE_FUDA_LIFE")
+	tr("YOU_MESSAGE_ATTACHED_LIFE")
+	tr("YOU_MESSAGE_ARCHIVE_HAND")
+	tr("YOU_MESSAGE_FUDA_HAND")
+	tr("YOU_MESSAGE_HOLOPOWER_HAND")
+	tr("YOU_MESSAGE_ATTACHED_HAND")
+	tr("YOU_MESSAGE_ARCHIVE_TOPDECK")
+	tr("YOU_MESSAGE_DECK_TOPDECK")
+	tr("YOU_MESSAGE_FUDA_TOPDECK")
+	tr("YOU_MESSAGE_HOLOPOWER_TOPDECK")
+	tr("YOU_MESSAGE_ATTACHED_TOPDECK")
+	tr("YOU_MESSAGE_ARCHIVE_BOTTOMDECK")
+	tr("YOU_MESSAGE_DECK_BOTTOMDECK")
+	tr("YOU_MESSAGE_FUDA_BOTTOMDECK")
+	tr("YOU_MESSAGE_HOLOPOWER_BOTTOMDECK")
+	tr("YOU_MESSAGE_ATTACHED_BOTTOMDECK")
+	tr("YOU_MESSAGE_ARCHIVE_TOPCHEERDECK")
+	tr("YOU_MESSAGE_CHEERDECK_TOPCHEERDECK")
+	tr("YOU_MESSAGE_FUDA_TOPCHEERDECK")
+	tr("YOU_MESSAGE_ATTACHED_TOPCHEERDECK")
+	tr("YOU_MESSAGE_ARCHIVE_BOTTOMCHEERDECK")
+	tr("YOU_MESSAGE_CHEERDECK_BOTTOMCHEERDECK")
+	tr("YOU_MESSAGE_FUDA_BOTTOMCHEERDECK")
+	tr("YOU_MESSAGE_ATTACHED_BOTTOMCHEERDECK")
+	tr("YOU_MESSAGE_FUDA_ARCHIVE")
+	tr("YOU_MESSAGE_HOLOPOWER_ARCHIVE")
+	tr("YOU_MESSAGE_ATTACHED_ARCHIVE")
+	tr("YOU_MESSAGE_ARCHIVE_HOLOPOWER")
+	tr("YOU_MESSAGE_FUDA_HOLOPOWER")
+	tr("YOU_MESSAGE_ATTACHED_HOLOPOWER")
+	tr("YOU_MESSAGE_ARTS_DAMAGE")
+	tr("YOU_MESSAGE_DECK_LOOKATX")
+	tr("YOU_MESSAGE_CHEERDECK_LOOKATX")
+	tr("YOU_MESSAGE_CARD_BACK")
+	tr("YOU_MESSAGE_CARD_BATONPASS")
+	tr("YOU_MESSAGE_CARD_SWITCH")
+	tr("YOU_MESSAGE_SUPPORT_ATTACH")
+	tr("YOU_MESSAGE_CHEER_ATTACH")
+	tr("YOU_MESSAGE_HOLOMEM_PLAY")
+	tr("YOU_MESSAGE_DECK_HOLOMEM_PLAY")
+	tr("YOU_MESSAGE_CHEERDECK_CHEER_ATTACH")
+	tr("YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY")
+	tr("YOU_MESSAGE_ARCHIVE_CHEER_ATTACH")
+	tr("YOU_MESSAGE_ATTACHED_CHEER_ATTACH")
+	tr("YOU_MESSAGE_ENDTURN")
+	tr("YOU_MESSAGE_DIERESULT")
+	tr("YOU_MESSAGE_RPS")
+	
+	tr("LOSS")
+	tr("WIN")
+	tr("SPECTATE_WIN")
+	tr("FORFEIT")
+	tr("WINCONSENT_FORFEIT")
+	tr("WINCONSENT_DECKOUT")
+	tr("WINCONSENT_LIFE")
+	tr("WINCONSENT_EMPTYSTAGE")
+	tr("WINREASON_MULLIGAN")
+	tr("WINREASON_DECKOUT")
+	tr("WINREASON_LIFE")
+	tr("WINREASON_EMPTYSTAGE")
+	tr("WINREASON_FORFEIT")
+	tr("YOU_WINREASON_MULLIGAN")
+	tr("YOU_WINREASON_DECKOUT")
+	tr("YOU_WINREASON_LIFE")
+	tr("YOU_WINREASON_EMPTYSTAGE")
+	tr("YOU_WINREASON_FORFEIT")
+	
+	tr("INGAME_RPS_WON")
+	tr("INGAME_RPS_LOST")
+	
+	tr("LOBBY_BANLIST")
+	tr("LOBBY_BANLIST_NONE")
+	tr("LOBBY_BANLIST_CURRENT")
+	tr("LOBBY_BANLIST_UNRELEASED")
+	tr("LOBBY_BANLIST_CUSTOM")
+	tr("LOBBY_PUBLIC")
+	tr("LOBBY_PRIVATE")
+	tr("LOBBY_SPECTATE")
+	tr("LOBBY_LOBBYCODE")
+	tr("LOBBY_GAMECODE")
+	tr("LOBBY_ALLOWSPECTATORS")
+	tr("GAME_VS")

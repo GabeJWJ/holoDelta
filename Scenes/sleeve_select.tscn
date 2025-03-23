@@ -20,9 +20,10 @@ theme_override_font_sizes/font_size = 30
 text = "SLEEVE_LOAD"
 
 [node name="LoadDialog" type="FileDialog" parent="LoadSleeve"]
+auto_translate_mode = 2
 title = "Open a File"
 position = Vector2i(300, 300)
-size = Vector2i(392, 159)
+size = Vector2i(392, 175)
 auto_translate = false
 ok_button_text = "Open"
 file_mode = 0

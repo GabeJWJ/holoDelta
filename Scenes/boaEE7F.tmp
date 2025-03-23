@@ -1,0 +1,1053 @@
+[gd_scene load_steps=23 format=3 uid="uid://cs6ginkulskya"]
+
+[ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
+[ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
+[ext_resource type="Texture2D" uid="uid://kwq21hbtxatg" path="res://CyberAssets/Main Menu Assets/HoloDelta BG (Light Mode).svg" id="3_t0eaa"]
+[ext_resource type="PackedScene" uid="uid://chrab4uqxsh2s" path="res://Scenes/info_panel.tscn" id="4_7im2k"]
+[ext_resource type="Texture2D" uid="uid://chv6t7kvxgx0s" path="res://gear.png" id="4_n5n8m"]
+[ext_resource type="Texture2D" uid="uid://biy2phmp4flym" path="res://gearSelected.png" id="5_13mvd"]
+[ext_resource type="Texture2D" uid="uid://cx76tmf8royup" path="res://CyberAssets/Game Side Menu/Side Menu.png" id="5_ct7jt"]
+[ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="5_fdkx6"]
+[ext_resource type="Texture2D" uid="uid://dt60hgar0dc4g" path="res://checkOff.png" id="6_1x0cl"]
+[ext_resource type="Texture2D" uid="uid://1dw81uea60el" path="res://CyberAssets/Game Side Menu/Notification.svg" id="7_kmt2w"]
+[ext_resource type="Texture2D" uid="uid://tqwtibgdslug" path="res://checkOn.png" id="7_n8awk"]
+[ext_resource type="PackedScene" uid="uid://cvqdjg5xohy5a" path="res://Scenes/deck_list.tscn" id="10_058xr"]
+[ext_resource type="Theme" uid="uid://das1sj7oj6yqf" path="res://Themes/step.tres" id="10_dyxng"]
+[ext_resource type="AudioStream" uid="uid://citw8blr274yn" path="res://HaruTsunXAssets/Die Roll 2.wav" id="12_lpjdh"]
+[ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="14_rk7pw"]
+[ext_resource type="Script" path="res://Scripts/RemapButton.gd" id="14_x8gke"]
+[ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="15_ycoxv"]
+[ext_resource type="Script" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="18_n8kk3"]
+[ext_resource type="AudioStream" uid="uid://dx0hyqv3whb28" path="res://ChikuTaku The Game VGM Menu Select Watson Amelia WUNDER RiKU ✨ チクタク オリジナル曲.mp3" id="19_vg3fm"]
+[ext_resource type="Script" path="res://addons/websocket/WebSocket.gd" id="20_v32ia"]
+
+[sub_resource type="Gradient" id="Gradient_8vfua"]
+colors = PackedColorArray(0.691703, 0.82893, 0.968311, 1, 0.989179, 0.909736, 0.929764, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xoxh0"]
+gradient = SubResource("Gradient_8vfua")
+width = 1280
+height = 720
+fill_from = Vector2(0.111111, 0.87478)
+fill_to = Vector2(0.934524, 0.282187)
+
+[node name="Board" type="Node2D"]
+position = Vector2(1020, 1566)
+script = ExtResource("3_0fpdy")
+player_side = ExtResource("1_ima0g")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://Scenes/side.tscn")
+spawn_path = NodePath("..")
+spawn_limit = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="gradient" type="Sprite2D" parent="CanvasLayer"]
+texture = SubResource("GradientTexture2D_xoxh0")
+centered = false
+
+[node name="bg" type="Sprite2D" parent="CanvasLayer/gradient"]
+scale = Vector2(0.667, 0.667)
+texture = ExtResource("3_t0eaa")
+centered = false
+
+[node name="Sidebar" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 370.0
+offset_bottom = 720.0
+theme = ExtResource("5_fdkx6")
+color = Color(0, 0, 0, 0.843137)
+
+[node name="CardTextSideMenu" type="Sprite2D" parent="CanvasLayer/Sidebar"]
+position = Vector2(-10, 0)
+scale = Vector2(1.01172, 0.997)
+texture = ExtResource("5_ct7jt")
+centered = false
+
+[node name="InfoPanel" parent="CanvasLayer/Sidebar" instance=ExtResource("4_7im2k")]
+position = Vector2(75, 0)
+
+[node name="ChatWindow" type="Node2D" parent="CanvasLayer/Sidebar"]
+visible = false
+position = Vector2(70, 0)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Sidebar/ChatWindow"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 293.0
+offset_bottom = 675.0
+theme = ExtResource("5_fdkx6")
+horizontal_scroll_mode = 0
+
+[node name="Chat" type="Label" parent="CanvasLayer/Sidebar/ChatWindow/ScrollContainer"]
+custom_minimum_size = Vector2(280, 670)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+autowrap_mode = 3
+
+[node name="ToSend" type="LineEdit" parent="CanvasLayer/Sidebar/ChatWindow"]
+offset_left = 10.0
+offset_top = 680.0
+offset_right = 227.0
+offset_bottom = 715.0
+theme = ExtResource("5_fdkx6")
+
+[node name="Send" type="Button" parent="CanvasLayer/Sidebar/ChatWindow/ToSend"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 9.0
+offset_right = 272.0
+offset_bottom = 24.0
+text = "SEND_CHAT"
+
+[node name="OptionsWindow" type="Node2D" parent="CanvasLayer/Sidebar"]
+visible = false
+position = Vector2(70, 0)
+
+[node name="SFXSlider" type="HSlider" parent="CanvasLayer/Sidebar/OptionsWindow"]
+offset_left = 25.0
+offset_top = 91.0
+offset_right = 1838.0
+offset_bottom = 225.0
+scale = Vector2(0.12, 0.12)
+theme = ExtResource("5_fdkx6")
+min_value = -30.0
+max_value = 10.0
+scrollable = false
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Sidebar/OptionsWindow/SFXSlider"]
+auto_translate_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = -0.763
+anchor_right = 0.028
+anchor_bottom = -0.763
+offset_left = 1844.67
+offset_top = 109.242
+offset_right = 2171.67
+offset_bottom = 220.242
+theme_override_font_sizes/font_size = 110
+text = "SFX"
+
+[node name="BGMSlider" type="HSlider" parent="CanvasLayer/Sidebar/OptionsWindow"]
+offset_left = 25.0
+offset_top = 123.89
+offset_right = 1838.0
+offset_bottom = 257.89
+scale = Vector2(0.12, 0.12)
+theme = ExtResource("5_fdkx6")
+min_value = -40.0
+max_value = 5.0
+scrollable = false
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Sidebar/OptionsWindow/BGMSlider"]
+auto_translate_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = -0.763
+anchor_right = 0.028
+anchor_bottom = -0.763
+offset_left = 1844.67
+offset_top = 109.242
+offset_right = 2171.67
+offset_bottom = 220.242
+theme_override_font_sizes/font_size = 110
+text = "BGM"
+
+[node name="HideCosmetics" type="TextureButton" parent="CanvasLayer/Sidebar/OptionsWindow"]
+offset_left = 26.0
+offset_top = 17.0
+offset_right = 426.0
+offset_bottom = 417.0
+scale = Vector2(0.12, 0.12)
+toggle_mode = true
+texture_normal = ExtResource("6_1x0cl")
+texture_pressed = ExtResource("7_n8awk")
+
+[node name="Unrevealed" type="Label" parent="CanvasLayer/Sidebar/OptionsWindow/HideCosmetics"]
+layout_mode = 0
+offset_left = 468.334
+offset_top = 125.0
+offset_right = 2216.33
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 120
+text = "OPTION_COSMETICS_HIDE"
+
+[node name="Tabs" type="Node2D" parent="CanvasLayer/Sidebar"]
+
+[node name="CardInfo" type="Button" parent="CanvasLayer/Sidebar/Tabs"]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 55.0
+offset_bottom = 28.0
+theme = ExtResource("5_fdkx6")
+toggle_mode = true
+button_pressed = true
+text = "TAB_INFO"
+
+[node name="Chat" type="Button" parent="CanvasLayer/Sidebar/Tabs"]
+visible = false
+offset_left = 15.0
+offset_top = 45.0
+offset_right = 55.0
+offset_bottom = 58.0
+theme = ExtResource("5_fdkx6")
+toggle_mode = true
+text = "TAB_CHAT"
+
+[node name="Notification" type="Sprite2D" parent="CanvasLayer/Sidebar/Tabs/Chat"]
+visible = false
+position = Vector2(44, -5.00006)
+scale = Vector2(0.004, 0.004)
+texture = ExtResource("7_kmt2w")
+
+[node name="Options" type="Button" parent="CanvasLayer/Sidebar/Tabs"]
+offset_left = 15.0
+offset_top = 185.0
+offset_right = 55.0
+offset_bottom = 198.0
+theme = ExtResource("5_fdkx6")
+toggle_mode = true
+text = "TAB_SETTINGS"
+
+[node name="Steps" type="Node2D" parent="CanvasLayer/Sidebar"]
+
+[node name="Step1" type="Button" parent="CanvasLayer/Sidebar/Steps"]
+offset_left = 10.0
+offset_top = 360.0
+offset_right = 62.0
+offset_bottom = 381.0
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+text = "STEP1"
+
+[node name="Step2" type="Button" parent="CanvasLayer/Sidebar/Steps"]
+offset_left = 10.0
+offset_top = 395.0
+offset_right = 62.0
+offset_bottom = 416.0
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+text = "STEP2"
+
+[node name="Step3" type="Button" parent="CanvasLayer/Sidebar/Steps"]
+offset_left = 10.0
+offset_top = 430.0
+offset_right = 62.0
+offset_bottom = 451.0
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+text = "STEP3"
+
+[node name="Step4" type="Button" parent="CanvasLayer/Sidebar/Steps"]
+offset_left = 10.0
+offset_top = 465.0
+offset_right = 62.0
+offset_bottom = 486.0
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+text = "STEP4"
+
+[node name="Step5" type="Button" parent="CanvasLayer/Sidebar/Steps"]
+offset_left = 10.0
+offset_top = 500.0
+offset_right = 62.0
+offset_bottom = 521.0
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+text = "STEP5"
+
+[node name="Step6" type="Button" parent="CanvasLayer/Sidebar/Steps"]
+offset_left = 10.0
+offset_top = 540.0
+offset_right = 62.0
+offset_bottom = 561.0
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+text = "STEP6"
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+custom_minimum_size = Vector2(1067, 137)
+offset_left = 115.0
+offset_top = 17.0
+offset_right = 1182.0
+offset_bottom = 154.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 100
+text = "TITLE"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CanvasLayer/Title"]
+custom_minimum_size = Vector2(950, 42)
+layout_mode = 0
+offset_left = 47.0
+offset_top = 118.0
+offset_right = 997.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 30
+text = "SUBTITLE"
+horizontal_alignment = 1
+
+[node name="Deck Creation" type="Button" parent="CanvasLayer"]
+offset_left = 22.0
+offset_top = 205.0
+offset_right = 320.0
+offset_bottom = 265.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 25
+text = "DECK_CREATE"
+
+[node name="DeckSelect" type="Button" parent="CanvasLayer"]
+offset_left = 23.0
+offset_top = 295.0
+offset_right = 321.0
+offset_bottom = 355.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 25
+disabled = true
+text = "DECK_SELECT"
+
+[node name="LobbyCreate" type="Button" parent="CanvasLayer"]
+offset_left = 538.0
+offset_top = 296.0
+offset_right = 738.0
+offset_bottom = 321.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
+text = "LOBBY_CREATE"
+
+[node name="Update" type="Button" parent="CanvasLayer"]
+offset_left = 1091.0
+offset_top = 599.0
+offset_right = 1263.0
+offset_bottom = 625.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
+text = "UPDATE	_DB"
+
+[node name="Notification" type="Sprite2D" parent="CanvasLayer/Update"]
+visible = false
+position = Vector2(-6.99998, -6)
+scale = Vector2(0.00566667, 0.00533333)
+texture = ExtResource("7_kmt2w")
+
+[node name="Exit" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1049.0
+offset_top = 660.0
+offset_right = 1263.0
+offset_bottom = 696.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 23
+text = "EXIT"
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="Options" type="TextureButton" parent="CanvasLayer"]
+y_sort_enabled = true
+offset_left = 1211.0
+offset_top = 8.0
+offset_right = 1611.0
+offset_bottom = 408.0
+scale = Vector2(0.15, 0.15)
+theme = ExtResource("5_fdkx6")
+toggle_mode = true
+texture_normal = ExtResource("4_n5n8m")
+texture_pressed = ExtResource("5_13mvd")
+
+[node name="OptionBackground" type="ColorRect" parent="CanvasLayer/Options"]
+visible = false
+layout_mode = 0
+offset_left = -2445.0
+offset_top = -45.0
+offset_right = -60.0
+offset_bottom = 2800.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="CheckUnrevealed" type="TextureButton" parent="CanvasLayer/Options/OptionBackground"]
+layout_mode = 0
+offset_left = 49.9994
+offset_top = 40.0
+offset_right = 449.999
+offset_bottom = 440.0
+toggle_mode = true
+texture_normal = ExtResource("6_1x0cl")
+texture_pressed = ExtResource("7_n8awk")
+
+[node name="Unrevealed" type="Label" parent="CanvasLayer/Options/OptionBackground/CheckUnrevealed"]
+custom_minimum_size = Vector2(1748, 205)
+layout_mode = 0
+offset_left = 468.334
+offset_top = 125.0
+offset_right = 2216.33
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 120
+text = "OPTION_UNREVEALED"
+autowrap_mode = 3
+
+[node name="AllowProxies" type="TextureButton" parent="CanvasLayer/Options/OptionBackground"]
+layout_mode = 0
+offset_left = 56.6661
+offset_top = 418.333
+offset_right = 456.666
+offset_bottom = 818.333
+toggle_mode = true
+texture_normal = ExtResource("6_1x0cl")
+texture_pressed = ExtResource("7_n8awk")
+
+[node name="Proxies" type="Label" parent="CanvasLayer/Options/OptionBackground/AllowProxies"]
+custom_minimum_size = Vector2(1748, 205)
+layout_mode = 0
+offset_left = 468.334
+offset_top = 125.0
+offset_right = 2216.33
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 120
+text = "OPTION_PROXY"
+autowrap_mode = 3
+
+[node name="SFXSlider" type="HSlider" parent="CanvasLayer/Options/OptionBackground"]
+layout_mode = 0
+offset_left = 51.667
+offset_top = 875.0
+offset_right = 1864.67
+offset_bottom = 1009.0
+theme = ExtResource("5_fdkx6")
+min_value = -30.0
+max_value = 10.0
+scrollable = false
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/SFXSlider"]
+auto_translate_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = -0.763
+anchor_right = 0.028
+anchor_bottom = -0.763
+offset_left = 1844.67
+offset_top = 109.242
+offset_right = 2171.67
+offset_bottom = 220.242
+theme_override_font_sizes/font_size = 110
+text = "SFX"
+
+[node name="Test" type="AudioStreamPlayer" parent="CanvasLayer/Options/OptionBackground/SFXSlider"]
+stream = ExtResource("12_lpjdh")
+bus = &"SFX"
+
+[node name="BGMSlider" type="HSlider" parent="CanvasLayer/Options/OptionBackground"]
+layout_mode = 0
+offset_left = 51.667
+offset_top = 1100.0
+offset_right = 1864.67
+offset_bottom = 1234.0
+theme = ExtResource("5_fdkx6")
+min_value = -40.0
+max_value = 5.0
+scrollable = false
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/BGMSlider"]
+auto_translate_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = -0.763
+anchor_right = 0.028
+anchor_bottom = -0.763
+offset_left = 1844.67
+offset_top = 109.242
+offset_right = 2171.67
+offset_bottom = 220.242
+theme_override_font_sizes/font_size = 110
+text = "BGM"
+
+[node name="Actions" type="Control" parent="CanvasLayer/Options/OptionBackground"]
+anchors_preset = 0
+offset_top = 400.0
+offset_right = 40.0
+offset_bottom = 440.0
+
+[node name="Draw" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = 125.0
+offset_top = 1000.0
+offset_right = 1125.0
+offset_bottom = 1120.0
+theme_override_font_sizes/font_size = 110
+text = "D"
+script = ExtResource("14_x8gke")
+action = "Draw"
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/Draw"]
+custom_minimum_size = Vector2(1035, 111)
+layout_mode = 0
+offset_left = 1150.0
+offset_top = -80.0
+offset_right = 2185.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 90
+text = "ACTION_DRAW"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Tabs" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = 125.0
+offset_top = 1300.0
+offset_right = 1125.0
+offset_bottom = 1420.0
+theme_override_font_sizes/font_size = 110
+text = "TAB"
+script = ExtResource("14_x8gke")
+action = "SwapPanels"
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/Tabs"]
+custom_minimum_size = Vector2(1035, 111)
+layout_mode = 0
+offset_left = 1150.0
+offset_top = -80.0
+offset_right = 2185.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 90
+text = "ACTION_TABS"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="LockInfo" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = 125.0
+offset_top = 1600.0
+offset_right = 1125.0
+offset_bottom = 1720.0
+theme_override_font_sizes/font_size = 110
+text = "CTRL"
+script = ExtResource("14_x8gke")
+action = "LockInfo"
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/LockInfo"]
+custom_minimum_size = Vector2(1035, 111)
+layout_mode = 0
+offset_left = 1150.0
+offset_top = -80.0
+offset_right = 2185.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 90
+text = "ACTION_LOCK"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="LastStep" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = 125.0
+offset_top = 1900.0
+offset_right = 1125.0
+offset_bottom = 2020.0
+theme_override_font_sizes/font_size = 110
+text = "["
+script = ExtResource("14_x8gke")
+action = "Last Step"
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/LastStep"]
+custom_minimum_size = Vector2(1035, 111)
+layout_mode = 0
+offset_left = 1150.0
+offset_top = -80.0
+offset_right = 2185.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 90
+text = "ACTION_LSTEP"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="NextStep" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = 125.0
+offset_top = 2200.0
+offset_right = 1125.0
+offset_bottom = 2320.0
+theme_override_font_sizes/font_size = 110
+text = "]"
+script = ExtResource("14_x8gke")
+action = "Next Step"
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/NextStep"]
+custom_minimum_size = Vector2(1035, 111)
+layout_mode = 0
+offset_left = 1150.0
+offset_right = 2092.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 90
+text = "ACTION_NSTEP"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="LanguageSelect" type="MenuButton" parent="CanvasLayer"]
+auto_translate_mode = 2
+offset_left = 1209.0
+offset_top = 82.0
+offset_right = 1267.0
+offset_bottom = 103.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 13
+text = "English"
+flat = false
+item_count = 3
+popup/item_0/text = "English"
+popup/item_1/text = "日本語"
+popup/item_1/id = 1
+popup/item_2/text = "Español"
+popup/item_2/id = 2
+
+[node name="JoinOptions" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/JoinOptions"]
+layout_mode = 0
+offset_top = 132.0
+offset_right = 1280.0
+offset_bottom = 697.0
+theme = ExtResource("5_fdkx6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/JoinOptions/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Label" type="Label" parent="CanvasLayer/JoinOptions"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 1277.0
+offset_bottom = 109.0
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+text = "CONNECT_STEAM_HOSTWAIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JoinWait" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="Label" type="Label" parent="CanvasLayer/JoinWait"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 1277.0
+offset_bottom = 109.0
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+text = "CONNECT_STEAM_JOINWAIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlaymatDiceCustom" type="Button" parent="CanvasLayer"]
+offset_left = 92.0
+offset_top = 683.0
+offset_right = 252.0
+offset_bottom = 704.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
+disabled = true
+text = "COSMETICS"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PlaymatDiceCustom"]
+visible = false
+layout_mode = 0
+offset_left = -91.0
+offset_top = -680.0
+offset_right = 1189.0
+offset_bottom = 35.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 11.0
+offset_right = 3520.0
+offset_bottom = 1491.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("14_rk7pw")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 814.0
+offset_top = 87.0
+offset_right = 854.0
+offset_bottom = 127.0
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 0
+
+[node name="Die" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport" instance=ExtResource("15_ycoxv")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 200, -50, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport"]
+transform = Transform3D(0.598005, -0.466652, 0.651633, -0.125598, 0.748419, 0.651225, -0.79159, -0.47128, 0.388948, 201.31, -48.3055, 1.06256)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.979879, 0.19959, 0, -0.19959, 0.979879, 201.193, -47.9198, 4.06729)
+light_energy = 4.173
+spot_range = 8.92789
+spot_angle = 42.239
+
+[node name="Exit" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 1057.0
+offset_top = 580.0
+offset_right = 1221.0
+offset_bottom = 620.0
+theme_override_font_sizes/font_size = 30
+text = "COSMETICS_CANCEL"
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="Playmat" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 550.0
+offset_right = 493.0
+offset_bottom = 590.0
+theme_override_font_sizes/font_size = 30
+text = "COSMETICS_PM"
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="LoadDialog" type="FileDialog" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat"]
+auto_translate_mode = 2
+title = "Open a File"
+position = Vector2i(300, 300)
+size = Vector2i(392, 175)
+auto_translate = false
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.jpg,*.webp")
+show_hidden_files = true
+use_native_dialog = true
+
+[node name="Dice" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 550.0
+offset_right = 901.0
+offset_bottom = 590.0
+theme_override_font_sizes/font_size = 30
+text = "COSMETICS_D"
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="LoadDialog" type="FileDialog" parent="CanvasLayer/PlaymatDiceCustom/ColorRect/Dice"]
+auto_translate_mode = 2
+title = "Open a File"
+position = Vector2i(300, 300)
+size = Vector2i(392, 175)
+auto_translate = false
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png,*.webp")
+show_hidden_files = true
+use_native_dialog = true
+
+[node name="PlaymatDefault" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 620.0
+offset_right = 493.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 25
+text = "COSMETICS_PM_DEFAULT"
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="DiceDefault" type="Button" parent="CanvasLayer/PlaymatDiceCustom/ColorRect"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 620.0
+offset_right = 901.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 25
+text = "COSMETICS_D_DEFAULT"
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="InfoButton" type="Button" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 683.0
+offset_right = 65.0
+offset_bottom = 704.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 15
+text = "INFO"
+
+[node name="Info" type="ColorRect" parent="CanvasLayer/InfoButton"]
+visible = false
+layout_mode = 0
+offset_left = 83.0
+offset_top = -640.0
+offset_right = 1171.0
+offset_bottom = 4.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="MadeBy" type="Label" parent="CanvasLayer/InfoButton/Info"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 1084.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "By and large by Gabriel JW Johnson"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/InfoButton/Info"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 75.0
+offset_right = 1082.0
+offset_bottom = 475.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Special thanks to:
+Ogbajoj, without whose spreadsheet this never would have been made
+Cyber for helping with the graphic design
+AshiNoMegami for the Spanish translation
+HaruTsunX for helping with the sound design
+WunderRiku for the BGM
+MagnaDrake for helping with the Mac release
+よるみ for helping with the Japanese option
+Weiss and Chill for the EN proxies and the visibility he's brought to this project
+
+And assorted thanks to:
+Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata, dr. AKA, Peeko, Soulscythe, J3Puffin"
+autowrap_mode = 3
+
+[node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = 161.0
+offset_top = 618.0
+offset_right = 243.0
+offset_bottom = 635.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Version "
+
+[node name="DeckLocationButton" type="Button" parent="CanvasLayer/InfoButton/Info"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 617.0
+offset_right = 141.0
+offset_bottom = 633.0
+text = "INFO_DLOC"
+
+[node name="DeckLocation" type="Label" parent="CanvasLayer/InfoButton/Info/DeckLocationButton"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.01
+anchor_bottom = 0.015
+offset_left = -6.0
+offset_top = -29.0
+offset_right = 1622.8
+offset_bottom = -6.465
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="Close" type="Button" parent="CanvasLayer/InfoButton/Info"]
+layout_mode = 0
+offset_left = 1011.0
+offset_top = 615.0
+offset_right = 1075.0
+offset_bottom = 630.0
+text = "INFO_CANCEL"
+clip_text = true
+
+[node name="DeckList" parent="CanvasLayer" instance=ExtResource("10_058xr")]
+visible = false
+
+[node name="MainMenu" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 1171.0
+offset_top = 691.0
+offset_right = 1269.0
+offset_bottom = 707.0
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(0.760664, 0.18676, 0.19329, 1)
+theme_override_font_sizes/font_size = 15
+text = "MENU"
+
+[node name="Confirmation" type="ColorRect" parent="CanvasLayer/MainMenu"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 320.0
+offset_right = 1029.0
+offset_bottom = 550.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="Label" type="Label" parent="CanvasLayer/MainMenu/Confirmation"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -389.0
+offset_right = 389.0
+offset_bottom = 110.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "MENU_PROMPT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Yes" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 148.0
+offset_right = 239.0
+offset_bottom = 190.0
+theme_override_font_sizes/font_size = 25
+text = "YES"
+
+[node name="No" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 148.0
+offset_right = 475.0
+offset_bottom = 190.0
+theme_override_font_sizes/font_size = 25
+text = "NO"
+
+[node name="Popup" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 1278.0
+offset_bottom = 719.0
+color = Color(0.27451, 0.760784, 1, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Popup"]
+auto_translate_mode = 2
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 214.0
+offset_top = -220.5
+offset_right = 1030.0
+offset_bottom = 214.5
+grow_vertical = 2
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "vspvjfspvs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Popup"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 412.0
+offset_right = 884.0
+offset_bottom = 439.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-670, -400)
+zoom = Vector2(0.27, 0.27)
+
+[node name="HTTPManager" type="Node" parent="."]
+script = ExtResource("18_n8kk3")
+parallel_connections_count = 15
+pause_on_failure = true
+print_debug = true
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_vg3fm")
+volume_db = -15.0
+autoplay = true
+bus = &"BGM"
+
+[node name="WebSocket" type="Node" parent="."]
+script = ExtResource("20_v32ia")
+route = "ws"
+use_WSS = false
+autoconnect_mode = 2
+
+[connection signal="text_submitted" from="CanvasLayer/Sidebar/ChatWindow/ToSend" to="." method="send_message"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/ChatWindow/ToSend/Send" to="." method="send_message_on_click"]
+[connection signal="drag_ended" from="CanvasLayer/Sidebar/OptionsWindow/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="drag_started" from="CanvasLayer/Sidebar/OptionsWindow/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="CanvasLayer/Sidebar/OptionsWindow/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Sidebar/OptionsWindow/BGMSlider" to="." method="_on_bgm_slider_value_changed"]
+[connection signal="toggled" from="CanvasLayer/Sidebar/OptionsWindow/HideCosmetics" to="." method="_on_hide_cosmetics_toggled"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/CardInfo" to="." method="_on_card_info_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/Chat" to="." method="_on_chat_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/Options" to="." method="_on_sidebar_options_pressed"]
+[connection signal="pressed" from="CanvasLayer/Deck Creation" to="." method="_on_deck_creation_pressed"]
+[connection signal="pressed" from="CanvasLayer/DeckSelect" to="." method="_on_deck_select_pressed"]
+[connection signal="pressed" from="CanvasLayer/LobbyCreate" to="." method="create_lobby"]
+[connection signal="pressed" from="CanvasLayer/Update" to="." method="_download_everything"]
+[connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options/OptionBackground/CheckUnrevealed" to="." method="_on_check_unrevealed_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options/OptionBackground/AllowProxies" to="." method="_on_allow_proxies_pressed"]
+[connection signal="drag_ended" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="drag_started" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Options/OptionBackground/BGMSlider" to="." method="_on_bgm_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom" to="." method="_on_playmat_dice_custom_pressed"]
+[connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Exit" to="." method="_on_cosmetics_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat" to="." method="_on_playmat_pressed"]
+[connection signal="file_selected" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat/LoadDialog" to="." method="_on_playmat_load_dialog_file_selected"]
+[connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Dice" to="." method="_on_dice_pressed"]
+[connection signal="file_selected" from="CanvasLayer/PlaymatDiceCustom/ColorRect/Dice/LoadDialog" to="." method="_on_dice_load_dialog_file_selected"]
+[connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/PlaymatDefault" to="." method="_on_playmat_default_pressed"]
+[connection signal="pressed" from="CanvasLayer/PlaymatDiceCustom/ColorRect/DiceDefault" to="." method="_on_dice_default_pressed"]
+[connection signal="pressed" from="CanvasLayer/InfoButton" to="." method="_on_info_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/InfoButton/Info/DeckLocationButton" to="." method="_on_deck_location_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/InfoButton/Info/Close" to="." method="_on_info_button_pressed"]
+[connection signal="cancel" from="CanvasLayer/DeckList" to="." method="_hide_deck_list"]
+[connection signal="selected" from="CanvasLayer/DeckList" to="." method="_on_deck_list_selected"]
+[connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/No" to="." method="_on_no_pressed"]
+[connection signal="progress" from="HTTPManager" to="." method="_download_progress"]
+[connection signal="received" from="WebSocket" to="." method="_on_websocket_received"]

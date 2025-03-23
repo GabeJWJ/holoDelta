@@ -20,8 +20,9 @@ func _ready() -> void:
 	
 	#There was a bizarre bug where resizing the window in stretch_mode canvas_items
 	# would mess with Label3Ds contained within a Subviewport
-	#I made a bug report that was marked as fixed, so an engine update may fix without
-	#	the need for this
+	#I made a bug report that was marked as fixed, so an 4.4 will fix this without any shenanigans
+	
+	#This fix stopped working for some reason
 	get_tree().get_root().size_changed.connect(update_text)
 
 func update_size() -> void:
@@ -49,8 +50,14 @@ func update_back(back : Image) -> void:
 
 func update_text() -> void:
 	#Updates the remaining count text
-	
-	count.text = str(remaining)
+	#Also fixes the 'resizing breaks text' issue
+	#If you set the text to a NEW string, it'll reappear
+	#So we switch to an empty string and then immediately back to the correct text
+	count.text = ""
+	count.text = str(cardList.size())
+	var temp_looking = $Looking/Label3D.text
+	$Looking/Label3D.text = ""
+	$Looking/Label3D.text = temp_looking
 
 func shuffle() -> void:
 	#It fucking shuffles. What do you want from me.

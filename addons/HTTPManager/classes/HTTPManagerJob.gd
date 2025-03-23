@@ -369,5 +369,3 @@ func _string_to_header( header:String ):
 	if p.size() < 2:
 		p.append("")
 	return p
-
-

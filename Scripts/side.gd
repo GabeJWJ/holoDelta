@@ -14,11 +14,13 @@ extends Node2D
 @onready var backZone4 = $Zones/Back4
 @onready var backZone5 = $Zones/Back5
 @onready var backZone6 = $Zones/Back6
+@onready var cardLayers = {"Cheer":$Cards/Cheer, "Attached":$Cards/Attached, "Main":$Cards/Main, "Above":$Cards/Above}
 
 @onready var deck = $SubViewportContainer/SubViewport/Node3D/DECK
 @onready var cheerDeck = $SubViewportContainer/SubViewport/Node3D/CHEERDECK
 @onready var archive = $SubViewportContainer/SubViewport/Node3D/ARCHIVE
 @onready var holopower = $SubViewportContainer/SubViewport/Node3D/HOLOPOWER
+@onready var fuda_list = [deck, cheerDeck, archive, holopower]
 @onready var die = $SubViewportContainer/SubViewport/Node3D/Die
 @onready var spMarker = $SPmarker
 
@@ -28,18 +30,17 @@ var currentAttached = null
 var currentPrompt = -1
 var currentAttacking = ["", ""]
 var playing = null
-var revealed = []
 
 @onready var zones = [[centerZone,-1], [collabZone,-1], [backZone1,-1], [backZone2,-1], [backZone3,-1], [backZone4,-1], [backZone5,-1], [backZone6,-1]]
-var syncedZones = {}
 
 const card = preload("res://Scenes/card.tscn")
 const betterButton = preload("res://Scenes/better_texture_button.tscn")
 
-var all_cards = []
+var all_cards = {}
 var oshiCard
 var hand = []
 var life = []
+var revealed = []
 
 @export var oshi:Array
 @export var deckList:Array
@@ -50,14 +51,17 @@ var life = []
 @export var mainSleeve:PackedByteArray
 @export var cheerSleeve:PackedByteArray
 @export var oshiSleeve:PackedByteArray
+var mainBack
+var cheerBack
+var oshiBack
 @export var playmatBuffer:PackedByteArray
 @export var diceBuffer:PackedByteArray
 
 @export var preliminary_phase = true
-var penalty = 0
 var preliminary_holomem_in_center = false
 @export var can_do_things = false
-@export var forced_mulligan_cards = []
+var fake_cards_on_stage = []
+var fuda_opponent_looking_at = null
 
 @export var is_turn = false
 var first_turn = true
@@ -69,6 +73,15 @@ var used_baton_pass = false
 var used_oshi_skill = false
 var used_sp_oshi_skill = false
 var can_undo_shuffle_hand = null
+
+@export var is_your_side = false
+@export var player_id : String
+@export var player_name : String
+
+@export var is_front = false
+@export var side_info = {}
+
+var losing_reason = ""
 
 signal ended_turn
 signal made_turn_choice(choice)
@@ -82,12 +95,6 @@ signal card_info_clear
 signal entered_list
 signal exited_list
 
-signal sent_game_message(message)
-
-
-func _enter_tree():
-	set_multiplayer_authority(name.to_int())
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	tr("DECK")
@@ -96,20 +103,13 @@ func _ready():
 	tr("HOLOPOWER")
 	# for POT generation
 	
-	if name != "1":
-		position = Vector2(0,-1044)
-		rotation = -3.141
-		$SubViewportContainer/SubViewport/Node3D.position += Vector3(1000,0,1000)
-	
-	$SubViewportContainer.set_multiplayer_authority(name.to_int())
-	
-	if name.to_int() != 1:
-		visible = false
-	
-	if is_multiplayer_authority():
+	if is_your_side or is_front:
 		holopower.count.position += Vector3(0.3,0,4.6)
 		holopower.looking.position += Vector3(3,0,0)
 	else:
+		position = Vector2(0,-1044)
+		rotation = -3.141
+		$SubViewportContainer/SubViewport/Node3D.position += Vector3(1000,0,1000)
 		deck.count.rotate_y(3.141)
 		deck.looking.rotate_y(3.141)
 		cheerDeck.count.rotate_y(3.141)
@@ -121,7 +121,7 @@ func _ready():
 		holopower.count.position += Vector3(-3,0,0)
 		holopower.looking.position += Vector3(0,0,4.6)
 	
-	if is_multiplayer_authority():
+	if is_your_side:
 		var deckInfo = get_parent().deckInfo
 		oshi = deckInfo.oshi
 		deckList = deckInfo.deck
@@ -148,49 +148,96 @@ func _ready():
 			image.load_webp_from_buffer(diceBuffer)
 			$SubViewportContainer/SubViewport/Node3D/Die.new_texture(image)
 	
-	
-	
-	var oshiBack
 	if oshiSleeve.is_empty():
 		oshiBack = defaultCheer.get_image()
 	else:
 		var image = Image.new()
 		image.load_webp_from_buffer(oshiSleeve)
 		oshiBack = image
-	oshiCard = create_card(oshi[0],oshi[1],oshiBack)
+	if is_your_side:
+		oshiCard = create_card(oshi[0],oshi[1],oshiBack)
+	elif ("oshi" in side_info and side_info["oshi"]):
+		oshiCard = get_real_card(side_info["oshi"], oshiBack)
+	else:
+		oshiCard = create_fake_card(oshiBack)
 	oshiCard.position = Vector2(430,-223)
 	oshiCard.visible = false
 	oshiCard.z_index = 1
 	
-	var cheerBack
-	if cheerSleeve.is_empty():
-		cheerBack = defaultCheer.get_image()
-	else:
-		var image = Image.new()
-		image.load_webp_from_buffer(cheerSleeve)
-		cheerBack = image
-	for info in cheerDeckList:
-		for i in range(info[1]):
-			var newCard1 = create_card(info[0],info[2],cheerBack)
-			cheerDeck.cardList.append(newCard1)
-			newCard1.visible = false
-	
-	var mainBack
 	if mainSleeve.is_empty():
 		mainBack = defaultMain.get_image()
 	else:
 		var image = Image.new()
 		image.load_webp_from_buffer(mainSleeve)
 		mainBack = image
-	for info in deckList:
-		for i in range(info[1]):
-			var newCard1 = create_card(info[0],info[2],mainBack)
+	if is_your_side:
+		for info in deckList:
+			for i in range(info[1]):
+				var newCard1 = create_card(info[0],info[2],mainBack)
+				deck.cardList.append(newCard1)
+				newCard1.visible = false
+				newCard1.z_index = 1
+	else:
+		var total_main = 50
+		if "deck" in side_info:
+			total_main = int(side_info["deck"])
+		for i in range(total_main):
+			var newCard1 = create_fake_card(mainBack)
 			deck.cardList.append(newCard1)
 			newCard1.visible = false
-			newCard1.z_index = 1
 	
-	deck.cardList.shuffle()
-	cheerDeck.cardList.shuffle()
+	if cheerSleeve.is_empty():
+		cheerBack = defaultCheer.get_image()
+	else:
+		var image = Image.new()
+		image.load_webp_from_buffer(cheerSleeve)
+		cheerBack = image
+	if is_your_side:
+		for info in cheerDeckList:
+			for i in range(info[1]):
+				var newCard1 = create_card(info[0],info[2],cheerBack)
+				cheerDeck.cardList.append(newCard1)
+				newCard1.visible = false
+	else:
+		var total_cheer = 20
+		if "cheerDeck" in side_info:
+			total_cheer = int(side_info["cheerDeck"])
+		for i in range(total_cheer):
+			var newCard1 = create_fake_card(cheerBack)
+			cheerDeck.cardList.append(newCard1)
+			newCard1.visible = false
+	
+	if "holopower" in side_info:
+		for i in range(int(side_info["holopower"])):
+			var newCard1 = create_fake_card(cheerBack)
+			holopower.cardList.append(newCard1)
+			newCard1.visible = false
+	if "archive" in side_info:
+		for card_info in side_info["archive"]:
+			var newCard1 = get_real_card(card_info, cheerBack if card_info.cardType == "Cheer" else mainBack)
+			archive.cardList.append(newCard1)
+			newCard1.visible = false
+	if "life" in side_info:
+		for index in range(int(side_info["life"])):
+			var newLife = create_fake_card(cheerBack)
+			life.append(newLife)
+			if index > 0:
+				move_behind(newLife,life[index-1])
+			newLife.trulyHide()
+			newLife.position = Vector2(-960,-145-(53*(6-int(side_info["life"])+index)))
+			newLife.rest()
+			newLife.visible = true
+	if "hand" in side_info:
+		for index in range(int(side_info["hand"])):
+			add_fake_to_hand()
+	if "zones" in side_info:
+		for zone in side_info["zones"]:
+			move_fake_card_to_zone(side_info["zones"][zone], $Zones.get_node(zone), side_info["zones"][zone]==null)
+	if "revealed" in side_info:
+		for card_to_reveal in side_info["revealed"]:
+			reveal_fake_card(card_to_reveal)
+	if "playing" in side_info and side_info["playing"]:
+		play_fake_card(side_info["playing"])
 	
 	deck.update_size()
 	deck.update_back(mainBack)
@@ -200,43 +247,48 @@ func _ready():
 	holopower.update_size()
 	holopower.update_back(mainBack)
 	
-	deck.set_multiplayer_authority(name.to_int())
-	cheerDeck.set_multiplayer_authority(name.to_int())
-	archive.set_multiplayer_authority(name.to_int())
-	holopower.set_multiplayer_authority(name.to_int())
-	die.set_multiplayer_authority(name.to_int())
+	if side_info == {}:
+		deck.shuffle()
+		cheerDeck.shuffle()
 	
 	move_child($Zones,-1)
+	
+	if is_your_side:
+		$CanvasLayer/Question.visible = true
+		$SubViewportContainer/SubViewport/Node3D/Die.is_your_die = true
 
-func _start():
-	specialStart.rpc()
-
-@rpc("any_peer","call_remote","reliable")
-func specialStart():
-	visible = true
-	$CanvasLayer/Question.visible = true
+#Yes I know I can bind arguments to the signal connection
+#Godot has been randomly removing those connections though
+#So here ;jkHJV LK.SDFACVW, BGJAEQSmnhjmn ,v adeswkm ,mabdfnnv cdxzvcmnvxcdmnxz fcbv 
+#Sorry angy
+func _rps_rock():
+	_rps(0)
+func _rps_paper():
+	_rps(1)
+func _rps_scissors():
+	_rps(2)
+func _go_first():
+	_made_turn_choice(true)
+func _go_second():
+	_made_turn_choice(false)
 
 func _rps(choice):
 	$CanvasLayer/Question/Label.text = tr("RPS_WAIT")
-	$CanvasLayer/Question/Rock.disabled = true
-	$CanvasLayer/Question/Paper.disabled = true
-	$CanvasLayer/Question/Scissors.disabled = true
+	$CanvasLayer/Question/RPS/Rock.disabled = true
+	$CanvasLayer/Question/RPS/Paper.disabled = true
+	$CanvasLayer/Question/RPS/Scissors.disabled = true
 	emit_signal("rps",choice)
 
-@rpc("any_peer","call_remote","reliable")
 func specialRestart():
 	$CanvasLayer/Question/Label.text = tr("RPS_TIED")
-	$CanvasLayer/Question/Rock.disabled = false
-	$CanvasLayer/Question/Paper.disabled = false
-	$CanvasLayer/Question/Scissors.disabled = false
+	$CanvasLayer/Question/RPS/Rock.disabled = false
+	$CanvasLayer/Question/RPS/Paper.disabled = false
+	$CanvasLayer/Question/RPS/Scissors.disabled = false
 
-@rpc("any_peer","call_remote","reliable")
 func rps_end():
 	$CanvasLayer/Question.visible = false
-	$CanvasLayer/Question/Rock.visible = false
-	$CanvasLayer/Question/Paper.visible = false
-	$CanvasLayer/Question/Scissors.visible = false
-	oshiCard.flipDown.rpc()
+	$CanvasLayer/Question/RPS.visible = false
+	oshiCard.flipDown()
 	oshiCard.visible = true
 
 func _made_turn_choice(choice:bool):
@@ -244,71 +296,56 @@ func _made_turn_choice(choice:bool):
 	$"CanvasLayer/Go Second".visible = false
 	emit_signal("made_turn_choice",choice)
 
-@rpc("any_peer","call_remote","reliable")
 func _show_turn_choice():
 	$"CanvasLayer/Go First".visible = true
 	$"CanvasLayer/Go Second".visible = true
 
-@rpc("any_peer","call_remote","reliable")
-func specialStart2():
-	draw(7)
-	
+func _mulligan_decision(forced=false):
+	$CanvasLayer/Question.visible = true
 	$CanvasLayer/Question/Label.text = tr("MULLIGAN_QUESTION")
 	$CanvasLayer/Question/Yes.visible = true
 	$CanvasLayer/Question/No.visible = true
+	$CanvasLayer/Question/OK.visible = false
 	$CanvasLayer/Question.visible = true
-	
-	if !hasLegalHand():
-		$CanvasLayer/Question/No.disabled = true
+	if forced:
+		$CanvasLayer/Question/Yes.visible = false
+		$CanvasLayer/Question/No.visible = false
+		$CanvasLayer/Question/OK.visible = true
+		$CanvasLayer/Question/Label.text = tr("MULLIGAN_FORCED")
 	else:
 		$CanvasLayer/Question/No.disabled = false
 
 func yes_mulligan():
-	emit_signal("sent_game_message",tr("MESSAGE_MULLIGAN"))
-	
-	var list_of_ids = []
-	for hand_card in hand:
-		list_of_ids.append(hand_card.cardID)
-	for hand_id in list_of_ids:
-		add_to_fuda(hand_id,deck)
-		remove_from_hand(hand_id)
-	deck.cardList.shuffle()
-	
-	draw(7-penalty)
-	
-	if hasLegalHand():
-		no_mulligan()
-	elif penalty == 6:
-		$CanvasLayer/Question/Label.text = tr("LOSS")
-		$CanvasLayer/Question/OK.visible = false
-	else:
-		$CanvasLayer/Question/Label.text = tr("MULLIGAN_FORCED")
-		$CanvasLayer/Question/Yes.visible = false
-		$CanvasLayer/Question/No.visible = false
-		$CanvasLayer/Question/OK.visible = true
-		penalty += 1
-		if penalty > 1:
-			forced_mulligan_cards.append(null)
-		for hand_card in hand:
-			forced_mulligan_cards.append(hand_card.cardID)
+	send_command("Yes Mulligan")
+	$CanvasLayer/Question/Yes.visible = false
+	$CanvasLayer/Question/No.visible = false
+	$CanvasLayer/Question/OK.visible = false
+
+func game_loss():
+	$CanvasLayer/Question/Label.text = tr("LOSS")
+	$CanvasLayer/Question/OK.visible = false
 
 func no_mulligan():
+	send_command("No Mulligan")
+	$CanvasLayer/Question/Yes.visible = false
+	$CanvasLayer/Question/No.visible = false
+	$CanvasLayer/Question/OK.visible = false
+
+func wait_mulligan():
 	$CanvasLayer/Question/Label.text = tr('MULLIGAN_WAIT')
 	$CanvasLayer/Question/Yes.visible = false
 	$CanvasLayer/Question/No.visible = false
 	$CanvasLayer/Question/OK.visible = false
-	emit_signal("mulligan_done")
 
-@rpc("any_peer","call_remote","reliable")
-func specialStart3():
-	if get_parent().opponentSide.forced_mulligan_cards.size() > 0:
+func specialStart3(fmc):
+	if fmc.size() > 0:
 		$CanvasLayer/OpponentLabel/MulliganWarning.visible = true
 		var look_at_mulliganed = []
-		for card_id in get_parent().opponentSide.forced_mulligan_cards:
-			if card_id == null:
+		for card_info in fmc:
+			if card_info == null:
 				look_at_mulliganed.append(null)
-				continue
-			look_at_mulliganed.append(get_parent().opponentSide.all_cards[card_id])
+			else:
+				look_at_mulliganed.append(get_parent().opponentSide.get_real_card(card_info, mainBack, true))
 		showLookAt(look_at_mulliganed)
 	
 	$CanvasLayer/Question.visible = false
@@ -316,31 +353,59 @@ func specialStart3():
 	can_do_things = true
 
 func _call_ready():
-	emit_signal("ready_decided")
+	send_command("Ready")
 	$CanvasLayer/Ready.disabled = true
 	$CanvasLayer/Ready.text = tr("READY_WAIT")
 
-@rpc("any_peer","call_remote","reliable")
-func specialStart4():
-	oshiCard.flipUp.rpc()
+func specialStart4(life_info,ist):
+	oshiCard.flipUp()
 	
 	for zoneInfo in zones:
 		if zoneInfo[1] != -1:
-			all_cards[zoneInfo[1]].flipUp.rpc()
+			all_cards[zoneInfo[1]].flipUp()
+	
+	preliminary_phase = false
+	$CanvasLayer/Ready.visible = false
+	$CanvasLayer/OpponentLabel.visible = false
+	$"CanvasLayer/End Turn".visible = is_turn
+	
+	for index in range(len(life_info)):
+		var newLife = all_cards[int(life_info[index])]
+		cheerDeck.cardList.erase(newLife)
+		life.append(newLife)
+		if index > 0:
+			move_behind(newLife,life[index-1])
+		newLife.trulyHide()
+		newLife.position = Vector2(-960,-145-(53*(6-oshiCard.life+index)))
+		newLife.rest()
+		newLife.visible = true
+	
+	cheerDeck.update_size()
+	
+	get_parent()._enable_steps()
+
+func specialStart4_fake(oshi_info, zone_info):
+	oshiCard.queue_free()
+	oshiCard = get_real_card(oshi_info, oshiBack)
+	oshiCard.position = Vector2(430,-223)
+	
+	for fake in fake_cards_on_stage:
+		fake.queue_free()
+	
+	for zone in zone_info:
+		var newCard = get_real_card(zone_info[zone],mainBack)
+		move_card_to_zone(newCard.cardID,$Zones.get_node(zone))
 	
 	preliminary_phase = false
 	$CanvasLayer/Ready.visible = false
 	$CanvasLayer/OpponentLabel.visible = false
 	
-	if is_turn:
-		$"CanvasLayer/End Turn".visible = true
-	
 	for i in range(oshiCard.life):
 		var newLife = cheerDeck.cardList.pop_front()
 		life.append(newLife)
-		if i > 0 and is_multiplayer_authority():
-			move_behind.rpc(newLife.cardID,life[i-1].cardID)
-		newLife.trulyHide.rpc()
+		if i > 0:
+			move_behind(newLife,life[i-1])
+		newLife.trulyHide()
 		newLife.position = Vector2(-960,-145-(53*(6-oshiCard.life+i)))
 		newLife.rest()
 		newLife.visible = true
@@ -357,19 +422,144 @@ func hasLegalHand():
 func create_card(number,art_code,back):
 	var new_id = all_cards.size()
 	var newCard = card.instantiate()
-	add_child(newCard,true)
 	newCard.name = "Card" + str(new_id)
 	newCard.setup_info(number,art_code,back)
+	if newCard.cardType == "Cheer":
+		cardLayers["Cheer"].add_child(newCard,true)
+	else:
+		cardLayers["Main"].add_child(newCard,true)
 	newCard.cardID = new_id
 	newCard.attachedTo = new_id
 	newCard.card_clicked.connect(_on_card_clicked)
 	newCard.card_right_clicked.connect(_on_card_right_clicked)
 	newCard.card_mouse_over.connect(update_info)
-	newCard.move_behind_request.connect(_on_move_behind_request)
-	all_cards.append(newCard)
-	newCard.set_multiplayer_authority(name.to_int())
+	newCard.move_behind_request.connect(move_behind_ids)
+	newCard.accept_damage.connect(_on_accept_damage)
+	all_cards[new_id] = newCard
 	newCard.position = Vector2(1000,1000)
 	return newCard
+
+func create_fake_card(back):
+	var newCard = card.instantiate()
+	cardLayers["Main"].add_child(newCard,true)
+	newCard.name = "Card"
+	newCard.fake_card = true
+	newCard.updateBack(ImageTexture.create_from_image(back))
+	newCard.cardID = -1
+	newCard.attachedTo = -1
+	newCard.position = Vector2(1000,1000)
+	move_child($Zones,-1)
+	return newCard
+
+func get_real_card(card_dict, back, temp=false):
+	var new_id = int(card_dict.cardID)
+	if new_id in all_cards:
+		return all_cards[new_id]
+	else:
+		var new_number = card_dict.cardNumber
+		var new_art = int(card_dict.artIndex)
+		var newCard = card.instantiate()
+		newCard.name = "Card" + str(new_id)
+		newCard.setup_info(new_number,new_art,back)
+		if newCard.cardType == "Cheer":
+			cardLayers["Cheer"].add_child(newCard,true)
+		else:
+			cardLayers["Main"].add_child(newCard,true)
+		newCard.cardID = new_id
+		newCard.temporary = temp
+		newCard.card_clicked.connect(_on_card_clicked)
+		newCard.card_right_clicked.connect(_on_card_right_clicked)
+		newCard.card_mouse_over.connect(update_info)
+		newCard.move_behind_request.connect(move_behind_ids)
+		newCard.attachedTo = int(card_dict.attachedTo)
+		if card_dict.rested:
+			newCard.rest()
+		newCard.faceDown = card_dict.faceDown
+		newCard.trulyHidden = card_dict.trulyHidden
+		newCard.onstage = card_dict.onstage
+		if card_dict.cardType == "Holomem":
+			newCard.damage = int(card_dict.damage)
+			newCard.extra_hp = int(card_dict.extra_hp)
+		all_cards[new_id] = newCard
+		newCard.position = Vector2(1000,1000)
+		move_child($Zones,-1)
+		return newCard
+
+func reveal_card(card_id):
+	var actualCard = all_cards[card_id]
+	actualCard.position = Vector2(300,100*revealed.size() - 400)
+	actualCard.reparent(cardLayers["Above"],true)
+	actualCard.visible = true
+	revealed.append(card_id)
+	for i in range(revealed.size()):
+		if i > 0:
+			move_behind(all_cards[revealed[-i-1]],all_cards[revealed[-i]])
+	_place_sfx()
+
+func reveal_fake_card(card_info):
+	var fake_card = get_real_card(card_info, mainBack)
+	reveal_card(fake_card.cardID)
+
+func play_card(card_id):
+	var actualCard = all_cards[card_id]
+	if actualCard.limited:
+		used_limited = true
+	actualCard.reparent(cardLayers["Above"],true)
+	actualCard.position = Vector2(0,0)
+	playing = card_id
+	_place_sfx()
+
+func play_fake_card(card_info):
+	var fake_card = get_real_card(card_info, mainBack)
+	play_card(fake_card.cardID)
+
+func reveal_cheer(card_id, show_zones=true):
+	var actualCard = all_cards[card_id]
+	actualCard.visible = true
+	actualCard.reparent(cardLayers["Above"],true)
+	actualCard.position = Vector2(-1250,-300)
+	_move_sfx()
+	if show_zones:
+		var possibleZones = all_occupied_zones()
+		showZoneSelection(possibleZones,false)
+		currentCard = card_id
+		currentPrompt = 300
+
+func reveal_fake_cheer(card_info):
+	var fake_card = get_real_card(card_info, cheerBack)
+	reveal_cheer(fake_card.cardID, false)
+
+func reveal_fake_life(card_info):
+	var actualCard = get_real_card(card_info, cheerBack)
+	actualCard.reparent(cardLayers["Above"],true)
+	var oldCard = life.pop_front()
+	actualCard.position = oldCard.position
+	oldCard.queue_free()
+
+func add_to_life(card_id):
+	var actualCard = all_cards[card_id]
+	if life.size() < 6 and actualCard.cardType == "Cheer":
+		life.insert(0, actualCard)
+		actualCard.reparent(cardLayers["Cheer"],true)
+		actualCard.trulyHide()
+		actualCard.position = Vector2(-960,-145-(53*(6-life.size())))
+		actualCard.rest()
+		actualCard.visible = true
+		for i in range(life.size()):
+			if i > 0:
+				move_behind(life[i],life[i-1])
+
+func add_fake_to_life():
+	if life.size() < 6:
+		var actualCard = create_fake_card(cheerBack)
+		life.insert(0, actualCard)
+		actualCard.trulyHide()
+		actualCard.position = Vector2(-960,-145-(53*(6-life.size())))
+		actualCard.rest()
+		actualCard.visible = true
+		for i in range(life.size()):
+			if i > 0:
+				move_behind(life[i],life[i-1])
 
 func update_hand():
 	var max_offset = clamp(125 * (hand.size() - 1),0,1250)
@@ -377,11 +567,10 @@ func update_hand():
 	if hand.size() > 1:
 		each_offset = clamp(2*max_offset/(hand.size()-1),0,250)
 	for i in range(hand.size()):
-		hand[i].flipDown.rpc()
 		hand[i].position = Vector2(-max_offset - 125,750) + (i * Vector2(each_offset,0))
 		hand[i].visible = true
 		if i > 0:
-			move_behind.rpc(hand[-i-1].cardID,hand[-i].cardID)
+			move_behind(hand[-i-1],hand[-i])
 
 func draw(x=1):
 	for i in range(x):
@@ -421,31 +610,64 @@ func set_zone_card(zone, new_card):
 	for index in range(zones.size()):
 		if zones[index][0] == zone:
 			zones[index][1] = new_card
-	please_sync_zones()
 
 func remove_old_card(old_card,leavingField = false):
 	if leavingField:
 		var actualCard = all_cards[old_card]
+		if actualCard.cardType == "Cheer":
+			actualCard.reparent(cardLayers["Cheer"],true)
+		else:
+			actualCard.reparent(cardLayers["Main"],true)
 		actualCard.unrest()
+		for att in actualCard.attached:
+			att.attachedTo = -1
+			remove_old_card(att.cardID,true)
+		for oto in actualCard.onTopOf:
+			oto.attachedTo = -1
+			remove_old_card(oto.cardID,true)
 		actualCard.attached = []
 		actualCard.onTopOf = []
 		actualCard._on_reject_pressed()
+		actualCard.onstage = false
+		actualCard.clear_damage()
+		actualCard.clear_extra_hp()
+		if old_card in revealed:
+			revealed.erase(old_card)
+		if old_card == playing:
+			playing = null
+		actualCard.position = Vector2(1000,1000)
+	
+	var found_holomem_on_stage = false
+	var found_old_on_stage = false
 	for index in range(zones.size()):
 		if zones[index][1] == old_card:
 			zones[index][1] = -1
-	please_sync_zones()
+			found_old_on_stage = true
+		elif zones[index][1] != -1:
+			found_holomem_on_stage = true
+	
+	if found_old_on_stage and !found_holomem_on_stage:
+		_show_loss_consent("EMPTYSTAGE")
 
 func remove_from_hand(old_card, hidden=false):
 	for index in range(hand.size()):
 		if hand[index].cardID == old_card:
 			if !hidden:
-				hand[index].flipUp.rpc() #hand[index].cardNumber
+				hand[index].flipUp()
+			hand[index].reparent(cardLayers["Main"],true)
 			hand.remove_at(index)
 			break
 	update_hand()
 
+func remove_fake_from_hand():
+	var old_card = hand.pop_front()
+	if old_card:
+		old_card.queue_free()
+	update_hand()
+
 func add_to_hand(new_card):
 	var cardToGo = all_cards[new_card]
+	cardToGo.reparent(cardLayers["Above"],true)
 	
 	cardToGo.attached.reverse()
 	cardToGo.onTopOf.reverse()
@@ -454,8 +676,17 @@ func add_to_hand(new_card):
 	for newCard in cardToGo.onTopOf:
 		add_to_hand(newCard.cardID)
 	
-	hand.append(all_cards[new_card])
-	_draw_sfx.rpc()
+	hand.append(cardToGo)
+	_draw_sfx()
+	update_hand()
+
+func add_fake_to_hand():
+	var cardToGo = create_fake_card(mainBack)
+	cardToGo.reparent(cardLayers["Above"],true)
+	cardToGo.flipDown()
+	
+	hand.append(cardToGo)
+	_draw_sfx()
 	update_hand()
 
 func remove_from_card_list(card_id,list_of_cards):
@@ -470,16 +701,37 @@ func remove_from_card_list(card_id,list_of_cards):
 func remove_from_fuda(card_id,fuda):
 	remove_from_card_list(card_id,fuda.cardList)
 	
+	if fuda == deck:
+		can_undo_shuffle_hand = null
+	
+	fuda.update_size()
+
+func remove_fake_from_fuda(fuda, card_info):
+	if fuda == archive and card_info:
+		var cardToGo = get_real_card(card_info, cheerBack if card_info.cardType == "Cheer" else mainBack)
+		remove_from_card_list(cardToGo.cardID, archive.cardList)
+	else:
+		fuda.cardList.pop_front().queue_free()
 	fuda.update_size()
 
 func remove_from_attached(card_id,attached):
-	if all_cards[card_id] in attached.attached:
+	var actualCard = all_cards[card_id]
+	if actualCard.cardType == "Cheer":
+		actualCard.reparent(cardLayers["Cheer"],true)
+	else:
+		actualCard.reparent(cardLayers["Main"],true)
+		
+	if actualCard in attached.attached:
 		remove_from_card_list(card_id,attached.attached)
-		all_cards[card_id].attachedTo = card_id
+		actualCard.attachedTo = card_id
 		attached.update_attached()
-	elif all_cards[card_id] in attached.onTopOf:
+	elif actualCard in attached.onTopOf:
 		remove_from_card_list(card_id,attached.onTopOf)
-	please_sync_attached_stacked(currentAttached)
+
+func remove_fake_from_attached(card_id, attached_id):
+	if card_id in all_cards and attached_id in all_cards:
+		remove_from_attached(card_id, all_cards[attached_id])
+		all_cards[card_id].position = Vector2(1000,1000)
 
 func add_to_card_list(card_id,list_of_cards,bottom=false):
 	var new_position = 0
@@ -498,11 +750,30 @@ func add_to_card_list(card_id,list_of_cards,bottom=false):
 	list_of_cards.insert(new_position,cardToGo)
 	cardToGo.position = Vector2(1000,1000)
 	cardToGo.visible = false
+	_move_sfx()
 
 func add_to_fuda(card_id,fuda,bottom=false):
+	var actualCard = all_cards[card_id]
+	if actualCard.cardType == "Cheer":
+		actualCard.reparent(cardLayers["Cheer"],true)
+	else:
+		actualCard.reparent(cardLayers["Main"],true)
 	add_to_card_list(card_id,fuda.cardList,bottom)
 	
 	fuda.update_size()
+
+func add_fake_to_fuda(fuda, moved_card = null):
+	var cardToGo
+	if fuda == archive and moved_card:
+		cardToGo = get_real_card(moved_card, cheerBack if moved_card.cardType == "Cheer" else mainBack)
+		add_to_fuda(cardToGo.cardID, archive)
+	else:
+		cardToGo = create_fake_card(cheerBack if fuda == cheerDeck else mainBack)
+		fuda.cardList.append(cardToGo)
+		cardToGo.position = Vector2(1000,1000)
+		cardToGo.visible = false
+		_move_sfx()
+		fuda.update_size()
 
 func first_unoccupied_back_zone(card_id = null):
 	var result
@@ -557,11 +828,35 @@ func move_card_to_zone(card_id, zone):
 	
 	if find_what_zone(card_id):
 		remove_old_card(card_id)
-		_move_sfx.rpc()
+		_move_sfx()
 	else:
-		_place_sfx.rpc()
+		_place_sfx()
 	
 	set_zone_card(zone,card_id)
+
+func move_fake_card_to_zone(card_info, zone, facedown=false):
+	var actualCard
+	if facedown:
+		actualCard = create_fake_card(mainBack)
+		actualCard.flipDown()
+		actualCard.move_to(zone.position)
+		actualCard.onstage = true
+		fake_cards_on_stage.append(actualCard)
+		_place_sfx()
+	else:
+		actualCard = get_real_card(card_info, mainBack)
+		
+		actualCard.move_to(zone.position)
+		actualCard.onstage = true
+		var card_id = actualCard.cardID
+		
+		if find_what_zone(card_id):
+			remove_old_card(card_id)
+			_move_sfx()
+		else:
+			_place_sfx()
+		
+		set_zone_card(zone,card_id)
 
 func switch_cards_in_zones(zone_1,zone_2):
 	var card1 = all_cards[find_in_zone(zone_1)]
@@ -572,8 +867,8 @@ func switch_cards_in_zones(zone_1,zone_2):
 		pos2 -= Vector2(50,50)
 	card1.move_to(pos2)
 	card2.move_to(zone_1.position)
-	_move_sfx.rpc()
-	_move_sfx.rpc()
+	_move_sfx()
+	_move_sfx()
 	
 	set_zone_card(zone_1,card2.cardID)
 	set_zone_card(zone_2,card1.cardID)
@@ -583,9 +878,39 @@ func bloom_on_zone(card_to_bloom, zone_to_bloom):
 	card_to_bloom.bloom(bloomee)
 	set_zone_card(zone_to_bloom,card_to_bloom.cardID)
 	remove_from_hand(card_to_bloom.cardID)
-	_place_sfx.rpc()
-	emit_signal("sent_game_message",tr("MESSAGE_BLOOM").format({fromZone = zone_to_bloom.name, fromName = bloomee.get_card_name(), toName = card_to_bloom.get_card_name(), fromLevel = bloomee.level, toLevel = card_to_bloom.level}))
+	_place_sfx()
 
+func bloom_fake_on_zone(fake_card_to_bloom, zone_to_bloom):
+	var card_to_bloom = get_real_card(fake_card_to_bloom, mainBack)
+	var bloomee = all_cards[find_in_zone(zone_to_bloom)]
+	card_to_bloom.bloom(bloomee)
+	set_zone_card(zone_to_bloom,card_to_bloom.cardID)
+	remove_from_hand(card_to_bloom.cardID)
+	_place_sfx()
+
+func unbloom_on_zone(card_to_unbloom):
+	var unbloomee = all_cards[card_to_unbloom]
+	unbloomee.unbloom()
+	_move_sfx()
+
+func unbloom_fake_on_zone(fake_card_to_unbloom):
+	var unbloomee = all_cards[fake_card_to_unbloom]
+	unbloomee.unbloom()
+	_move_sfx()
+
+func attach_card(attachee, attach_to):
+	var actualCard = all_cards[attachee]
+	actualCard.reparent(cardLayers["Attached"],true)
+	actualCard.z_index = 0
+	var attachTo = all_cards[attach_to]
+	attachTo.attach(actualCard)
+	revealed.erase(attachee)
+	_move_sfx()
+
+func attach_fake_card(attachee_info, attach_to_info):
+	var attachee = get_real_card(attachee_info, cheerBack if attachee_info.cardType == "Cheer" else mainBack)
+	var attach_to = get_real_card(attach_to_info, mainBack)
+	attach_card(attachee.cardID, attach_to.cardID)
 
 func show_popup():
 	if popup.item_count > 0:
@@ -622,10 +947,17 @@ func showLookAt(list_of_cards):
 		newButton.set_texture(actualCard.cardFront)
 		newButton.id = actualCard.cardID
 		newButton.pressed.connect(_on_list_card_clicked.bind(actualCard.cardID))
-		newButton.mouse_entered.connect(update_info.bind(actualCard.cardID))
+		if actualCard.temporary:
+			newButton.mouse_entered.connect(get_parent().opponentSide.update_info.bind(actualCard.cardID))
+		else:
+			newButton.mouse_entered.connect(update_info.bind(actualCard.cardID))
 		lookAtList.add_child(newButton)
 		newButton.scale = Vector2(0.7,0.7)
 		newButton.position = Vector2(210*i+5,5)
+	
+	for actualCard in list_of_cards:
+		if actualCard and actualCard.temporary:
+			actualCard.position = Vector2(1000,1000)
 	
 	lookAtList.custom_minimum_size = Vector2(list_of_cards.size()*220 + 10, 0)
 	lookAt.get_h_scroll_bar().custom_minimum_size.y = 30
@@ -638,13 +970,10 @@ func showLookAt(list_of_cards):
 	else:
 		hideLookAt()
 
-@rpc("any_peer","call_remote","reliable")
 func showLookAtIDS(list_of_ids):
-	var json = JSON.new()
 	var list_of_cards = []
-	json.parse(list_of_ids)
-	for id in json.data:
-		list_of_cards.append(all_cards[id])
+	for id in list_of_ids:
+		list_of_cards.append(all_cards[int(id)])
 	showLookAt(list_of_cards)
 
 func removeFromLookAt(card_id):
@@ -675,64 +1004,20 @@ func hideLookAt(endOfAction=true):
 	lookAt.visible = false
 	cancel.visible = false
 	$CanvasLayer/OpponentLabel/MulliganWarning.visible = false
-	emit_signal("exited_list")
+	#emit_signal("exited_list")
+	send_command("Stop Look At")
 	if endOfAction:
 		currentPrompt = -1
 		currentFuda = null
 		currentAttached = null
 
-@rpc("any_peer","call_local","reliable")
 func flipSPdown():
 	spMarker.texture = load("res://SPdown.png")
 
-@rpc("any_peer","call_remote","reliable")
-func sync_attached_stacked(top_card_id,list_of_attached_ids,list_of_stacked_ids):
-	var top_card = all_cards[top_card_id]
-	top_card.attached.clear()
-	top_card.onTopOf.clear()
-	for attached_id in list_of_attached_ids:
-		top_card.attached.append(all_cards[attached_id])
-	for stacked_id in list_of_stacked_ids:
-		top_card.onTopOf.append(all_cards[stacked_id])
-
-func please_sync_attached_stacked(top_card):
-	var list_of_attached_ids = []
-	var list_of_stacked_ids = []
-	for attached_card in top_card.attached:
-		list_of_attached_ids.append(attached_card.cardID)
-	for stacked_card in top_card.onTopOf:
-		list_of_stacked_ids.append(stacked_card.cardID)
-	sync_attached_stacked.rpc(top_card.cardID,list_of_attached_ids,list_of_stacked_ids)
-
-@rpc("any_peer","call_remote","reliable")
-func sync_archive(list_of_inside_ids):
-	archive.cardList.clear()
-	for inside_id in list_of_inside_ids:
-		archive.cardList.append(all_cards[inside_id])
-	archive.update_size()
-
-func please_sync_archive():
-	var list_of_inside_ids = []
-	for archive_card in archive.cardList:
-		list_of_inside_ids.append(archive_card.cardID)
-	sync_archive.rpc(list_of_inside_ids)
-
-@rpc("any_peer","call_remote","reliable")
-func sync_zones(list_of_zones):
-	syncedZones = list_of_zones
-	for zone in zones:
-		zone[1] = list_of_zones[zone[0].name][0]
-
-func please_sync_zones():
-	var list_of_inside_ids = {}
-	for zone in zones:
-		list_of_inside_ids[zone[0].name] = [zone[1], all_cards[zone[1]].name]
-	sync_zones.rpc(list_of_inside_ids)
-
 func showZoneSelection(zones_list,show_cancel=true):
 	for zone in zones_list:
-		var card_in_zone = all_cards[find_in_zone(zone)]
-		if card_in_zone and card_in_zone.rested:
+		var card_in_zone = find_in_zone(zone)
+		if card_in_zone != -1 and all_cards[card_in_zone].rested:
 			zone.rest()
 		zone.showButton()
 	
@@ -752,12 +1037,14 @@ func hideZoneSelection():
 
 func _on_cancel_pressed():
 	var yourSide = get_parent().yourSide
-	yourSide.hideLookAt()
-	yourSide.remove_prompt()
-	yourSide.hideZoneSelection()
+	if yourSide:
+		yourSide.hideLookAt()
+		yourSide.remove_prompt()
+		yourSide.hideZoneSelection()
 	hideLookAt()
 	remove_prompt()
 	hideZoneSelection()
+	$CanvasLayer/Question.visible = false
 
 func _hide_cosmetics():
 	for cardB in all_cards:
@@ -818,25 +1105,27 @@ func _on_archive_mouse_entered():
 	if archive.cardList.size() > 0:
 		update_info(archive.cardList[0].cardID)
 
-@rpc("any_peer","call_remote","reliable")
 func update_info(card_id):
 	var actualCard = all_cards[card_id]
 	var topCard = all_cards[actualCard.attachedTo]
-	if !actualCard.trulyHidden and (is_multiplayer_authority() or !actualCard.faceDown):
+	if !actualCard.trulyHidden and (is_your_side or !actualCard.faceDown):
 		emit_signal("card_info_set",topCard,actualCard)
 
 func clear_info():
 	emit_signal("card_info_clear")
 
-func _on_move_behind_request(card_id1,card_id2):
-	move_behind.rpc(card_id1,card_id2)
+func move_behind(card_1,card_2):
+	var possible_parent = card_1.get_parent()
+	if possible_parent and card_2.get_parent() == possible_parent:
+		#There was a strange bug when adding the layering system
+		#Turns out just setting the id to card_2's index-1 fails spectacularly when
+		#	said index is 0
+		possible_parent.move_child(card_1,max(card_2.get_index()-1,0))
 
-@rpc("any_peer","call_local","reliable")
-func move_behind(card_id1,card_id2):
-	var card_1 = all_cards[card_id1]
-	var card_2 = all_cards[card_id2]
-	move_child(card_1,card_2.get_index()-1)
-
+func move_behind_ids(card_id_1,card_id_2):
+	var card_1 = all_cards[card_id_1]
+	var card_2 = all_cards[card_id_2]
+	move_behind(card_1,card_2)
 
 func _on_card_clicked(card_id : int) -> void:
 	#Oh boy
@@ -845,7 +1134,7 @@ func _on_card_clicked(card_id : int) -> void:
 	#If you click your opponent's card, this gets called on your local copy of the opponent's side
 	#The code will go through, determine what options ought be included, and add them to the popup
 	
-	if currentPrompt != -1 or !can_do_things:
+	if currentPrompt != -1 or (!can_do_things and is_your_side):
 		return
 	
 	reset_popup()
@@ -853,9 +1142,10 @@ func _on_card_clicked(card_id : int) -> void:
 	
 	var actualCard = all_cards[currentCard]
 	if not actualCard in hand:
-		actualCard.showNotice.rpc()
+		actualCard.showNotice()
+		send_command("Click Notification",{"player_id":player_id,"card_id":currentCard})
 	
-	if !is_multiplayer_authority():
+	if !is_your_side:
 		if actualCard.attached.size() > 0:
 			popup.add_item(tr("CARD_HOLOMEM_LOOK_ATTACHED"),50)
 		if actualCard.onTopOf.size() > 0:
@@ -872,52 +1162,51 @@ func _on_card_clicked(card_id : int) -> void:
 	else:
 		match actualCard.cardType:
 			"Holomem":
-				if is_multiplayer_authority():
-					var currentZone = find_what_zone(currentCard)
-					if actualCard in hand and is_turn:
-						if first_unoccupied_back_zone() and actualCard.level < 1 and all_occupied_zones().size() < 6:
-							popup.add_item(tr("CARD_HOLOMEM_PLAY"),100)
-						if !first_turn:
-							var bloomable = all_bloomable_zones(actualCard)
-							if bloomable[Settings.bloomCode.OK].size() > 0:
-								popup.add_item(tr("CARD_HOLOMEM_BLOOM"),101)
-							if bloomable[Settings.bloomCode.Skip].size() > 0:
-								popup.add_item(tr("CARD_HOLOMEM_BLOOM_SKIP"),104)
-							if bloomable[Settings.bloomCode.Instant].size() > 0:
-								popup.add_item(tr("CARD_HOLOMEM_BLOOM_FAST"),105)
-					elif currentZone:
-						if is_turn:
-							if !actualCard.rested and currentZone in [centerZone, collabZone] and !(first_turn and player1):
-								for art in actualCard.holomem_arts:
-									popup.add_item(Settings.trans("%s_ART_%s_NAME" % [actualCard.cardNumber, art[0]]), 80+art[0])
-								popup.add_separator()
-							
-							if actualCard.rested:
-								popup.add_item(tr("CARD_HOLOMEM_UNREST"), 1)
-							else:
-								popup.add_item(tr("CARD_HOLOMEM_REST"), 0)
-							
-							if find_in_zone(centerZone) == -1 and currentZone != collabZone:
-								popup.add_item(tr("CARD_HOLOMEM_MOVE_CENTER"), 4)
-							if currentZone == collabZone and first_unoccupied_back_zone():
-								popup.add_item(tr("CARD_HOLOMEM_MOVE_BACK"), 5)
-							if find_in_zone(collabZone) == -1 and currentZone != centerZone and !actualCard.rested and deck.cardList.size() > 0 and !collabed:
-								popup.add_item(tr("CARD_HOLOMEM_COLLAB"), 6)
-							if currentZone == centerZone and all_occupied_zones(true).size() > 0 and !used_baton_pass:
-								popup.add_item(tr("CARD_HOLOMEM_BATON"), 7)
-							
+				var currentZone = find_what_zone(currentCard)
+				if actualCard in hand and is_turn:
+					if first_unoccupied_back_zone() and actualCard.level < 1 and all_occupied_zones().size() < 6:
+						popup.add_item(tr("CARD_HOLOMEM_PLAY"),100)
+					if !first_turn:
+						var bloomable = all_bloomable_zones(actualCard)
+						if bloomable[Settings.bloomCode.OK].size() > 0:
+							popup.add_item(tr("CARD_HOLOMEM_BLOOM"),101)
+						if bloomable[Settings.bloomCode.Skip].size() > 0:
+							popup.add_item(tr("CARD_HOLOMEM_BLOOM_SKIP"),104)
+						if bloomable[Settings.bloomCode.Instant].size() > 0:
+							popup.add_item(tr("CARD_HOLOMEM_BLOOM_FAST"),105)
+				elif currentZone:
+					if is_turn:
+						if !actualCard.rested and currentZone in [centerZone, collabZone] and !(first_turn and player1):
+							for art in actualCard.holomem_arts:
+								popup.add_item(Settings.trans("%s_ART_%s_NAME" % [actualCard.cardNumber, art[0]]), 80+art[0])
 							popup.add_separator()
 						
-						popup.add_item(tr("CARD_HOLOMEM_DAMAGE"), 10)
-						if actualCard.damage > 0:
-							popup.add_item(tr("CARD_HOLOMEM_HEAL"), 11)
-						popup.add_item(tr("CARD_HOLOMEM_EXTRAHP"), 12)
-						if actualCard.extra_hp > 0:
-							popup.add_item(tr("CARD_HOLOMEM_REMOVEEXTRAHP"), 13)
+						if actualCard.rested:
+							popup.add_item(tr("CARD_HOLOMEM_UNREST"), 1)
+						else:
+							popup.add_item(tr("CARD_HOLOMEM_REST"), 0)
 						
-						if actualCard.onTopOf.size() > 0:
-							popup.add_separator()
-							popup.add_item(tr("CARD_HOLOMEM_UNBLOOM"), 15)
+						if find_in_zone(centerZone) == -1 and currentZone != collabZone:
+							popup.add_item(tr("CARD_HOLOMEM_MOVE_CENTER"), 4)
+						if currentZone == collabZone and first_unoccupied_back_zone():
+							popup.add_item(tr("CARD_HOLOMEM_MOVE_BACK"), 5)
+						if find_in_zone(collabZone) == -1 and currentZone != centerZone and !actualCard.rested and deck.cardList.size() > 0 and !collabed:
+							popup.add_item(tr("CARD_HOLOMEM_COLLAB"), 6)
+						if currentZone == centerZone and all_occupied_zones(true).size() > 0 and !used_baton_pass:
+							popup.add_item(tr("CARD_HOLOMEM_BATON"), 7)
+						
+						popup.add_separator()
+					
+					popup.add_item(tr("CARD_HOLOMEM_DAMAGE"), 10)
+					if actualCard.damage > 0:
+						popup.add_item(tr("CARD_HOLOMEM_HEAL"), 11)
+					popup.add_item(tr("CARD_HOLOMEM_EXTRAHP"), 12)
+					if actualCard.extra_hp > 0:
+						popup.add_item(tr("CARD_HOLOMEM_REMOVEEXTRAHP"), 13)
+					
+					if actualCard.onTopOf.size() > 0:
+						popup.add_separator()
+						popup.add_item(tr("CARD_HOLOMEM_UNBLOOM"), 15)
 			"Support":
 				if actualCard in hand:
 					if is_turn:
@@ -947,9 +1236,9 @@ func _on_card_clicked(card_id : int) -> void:
 					var canPayCost = (skill[1] >= 0 and holopower.cardList.size() >= skill[1]) or (skill[1] == -1 and holopower.cardList.size() > 0)
 					#Will cause problems if an oshi has more than 2 skills
 					if canUseSkill and canPayCost:
-						popup.add_item(Settings.trans(skill[0]) + sp_string + "-" + cost_string,70+i)
+						popup.add_item(Settings.trans(skill[0]) + sp_string + "-" + cost_string,71 if skill[2] else 70)
 					if ((!skill[2] and used_oshi_skill) or (skill[2] and used_sp_oshi_skill)) and canPayCost:
-						popup.add_item(Settings.trans(skill[0]) + sp_string + " (again) -" + cost_string,72+i)
+						popup.add_item(Settings.trans(skill[0]) + sp_string + " (again) -" + cost_string,71 if skill[2] else 70)
 		
 		if popup.item_count > 0 and actualCard.cardType != "Oshi" and playing != currentCard:
 			popup.add_separator()
@@ -981,7 +1270,7 @@ func _on_card_clicked(card_id : int) -> void:
 					popup.add_item(tr("CARD_STAGE_HAND"),3)
 				if find_in_zone(collabZone) == -1 and find_what_zone(currentCard) != centerZone:
 					popup.add_item(tr("CARD_HOLOMEM_MOVE_COLLAB"), 9)
-				if find_what_zone(currentCard) == centerZone and all_occupied_zones(true).size() > 0 :
+				if find_what_zone(currentCard) == centerZone and all_occupied_zones(true).size() > 0:
 					popup.add_item(tr("CARD_HOLOMEM_SWITCH"), 8)
 			elif currentCard in revealed:
 				popup.add_item(tr("CARD_REVEALED_HAND"),21)
@@ -998,12 +1287,12 @@ func _on_card_right_clicked(card_id):
 	if preliminary_phase or currentPrompt != -1:
 		return
 	
-	if is_multiplayer_authority() and find_what_zone(card_id):
+	if is_your_side and can_do_things and find_what_zone(card_id):
 		var actualCard = all_cards[card_id]
 		if actualCard.rested:
-			actualCard.unrest()
+			send_command("Popup Command", {"currentCard":card_id, "command_id":1})
 		else:
-			actualCard.rest()
+			send_command("Popup Command", {"currentCard":card_id, "command_id":0})
 
 func _on_deck_clicked():
 	reset_popup()
@@ -1011,7 +1300,7 @@ func _on_deck_clicked():
 	if preliminary_phase or currentPrompt != -1:
 		return
 	
-	if is_multiplayer_authority():
+	if is_your_side and can_do_things:
 		
 		popup.add_item(tr("DECK_DRAW"),200)
 		popup.add_item(tr("DECK_DRAWX"),201)
@@ -1033,6 +1322,13 @@ func _on_deck_clicked():
 			popup.add_separator()
 			popup.add_item(tr("DECK_MULLIGAN_UNDO"), 251)
 		
+		if !get_parent().rps:
+			popup.add_separator()
+			popup.add_item(tr("DECK_RPS"), 296)
+		
+		popup.add_separator()
+		popup.add_item(tr("FORFEIT"), 999)
+		
 	show_popup()
 
 func _on_cheer_deck_clicked():
@@ -1041,7 +1337,7 @@ func _on_cheer_deck_clicked():
 	if preliminary_phase or currentPrompt != -1:
 		return
 	
-	if is_multiplayer_authority():
+	if is_your_side and can_do_things:
 		if all_occupied_zones().size() > 0:
 			popup.add_item(tr("CHEERDECK_REVEAL"),300)
 		
@@ -1070,7 +1366,7 @@ func _on_holopower_clicked():
 	if preliminary_phase or currentPrompt != -1:
 		return
 	
-	if is_multiplayer_authority():
+	if is_your_side and can_do_things:
 		popup.add_item(tr("HOLOPOWER_ARCHIVE"),500)
 		popup.add_item(tr("HOLOPOWER_ARCHIVEX"),501)
 		
@@ -1086,7 +1382,7 @@ func _on_holopower_clicked():
 	show_popup()
 
 func _on_list_card_clicked(card_id):
-	if preliminary_phase or currentPrompt == -1 or !is_multiplayer_authority():
+	if preliminary_phase or currentPrompt == -1 or !is_your_side:
 		return
 	
 	reset_popup()
@@ -1154,64 +1450,26 @@ func _on_list_card_clicked(card_id):
 
 
 func _on_popup_menu_id_pressed(id):
+	if currentFuda:
+		send_command("Popup From Fuda Command",{"currentCard":currentCard, "command_id":id, "currentFuda":fuda_list.find(currentFuda)})
+	elif currentAttached:
+		send_command("Popup From Attached Command",{"currentCard":currentCard, "command_id":id, "currentAttached":currentAttached.cardID})
+	else:
+		send_command("Popup Command", {"currentCard":currentCard, "command_id":id})
+	
 	match id:
-		0: #Rest
-			all_cards[currentCard].rest()
-			currentCard = -1
-		1: #Unrest
-			all_cards[currentCard].unrest()
-			currentCard = -1
-		2: #Archive
-			var actualCard = all_cards[currentCard]
-			emit_signal("sent_game_message",tr("MESSAGE_STAGE_ARCHIVE").format({fromZone = find_what_zone(currentCard).name, fromName = actualCard.get_card_name()}))
-			actualCard.clear_damage()
-			actualCard.clear_extra_hp()
-			actualCard.unrest()
-			add_to_fuda(currentCard,archive)
-			remove_old_card(currentCard,true)
-			if playing == currentCard:
-				playing = null
-			please_sync_attached_stacked(actualCard)
-			please_sync_archive()
-			currentCard = -1
-			_move_sfx.rpc()
-		3: #Return to Hand
-			var actualCard = all_cards[currentCard]
-			emit_signal("sent_game_message",tr("MESSAGE_STAGE_HAND").format({fromZone = find_what_zone(currentCard).name, fromName = actualCard.get_card_name()}))
-			actualCard.clear_damage()
-			actualCard.clear_extra_hp()
-			actualCard.unrest()
-			add_to_hand(currentCard)
-			remove_old_card(currentCard,true)
-			please_sync_attached_stacked(actualCard)
-			currentCard = -1
-		4: #Move to Center
-			emit_signal("sent_game_message",tr("MESSAGE_STAGE_CENTER").format({fromZone = find_what_zone(currentCard).name, fromName = all_cards[currentCard].get_card_name()}))
-			move_card_to_zone(currentCard,centerZone)
-			currentCard = -1
-			_move_sfx.rpc()
+		
 		5: #Move to Back
 			showZoneSelection(all_unoccupied_back_zones())
 			currentPrompt = 5
-		6: #Collab
-			emit_signal("sent_game_message",tr("MESSAGE_STAGE_COLLAB").format({fromZone = find_what_zone(currentCard).name, fromName = all_cards[currentCard].get_card_name()}))
-			move_card_to_zone(currentCard,collabZone)
-			if deck.cardList.size() > 0:
-				mill(deck,holopower)
-			currentCard = -1
-			collabed = true
-			_move_sfx.rpc()
+		
 		7: #Baton Pass
 			showZoneSelection(all_occupied_zones(true))
 			currentPrompt = 7
 		8: #Switch to Back
 			showZoneSelection(all_occupied_zones(true))
 			currentPrompt = 8
-		9:
-			emit_signal("sent_game_message",tr("MESSAGE_STAGE_MOVECOLLAB").format({fromZone = find_what_zone(currentCard).name, fromName = all_cards[currentCard].get_card_name()}))
-			move_card_to_zone(currentCard,collabZone)
-			currentCard = -1
-			_move_sfx.rpc()
+		
 		10: #Add Damage
 			set_prompt(tr("PROMPT_DAMAGE") + "\nX=",20,3)
 			currentPrompt = 10
@@ -1224,62 +1482,15 @@ func _on_popup_menu_id_pressed(id):
 		13: #Remove Extra HP
 			set_prompt(tr("PROMPT_REMOVEEXTRAHP") + "\nX=",10,2)
 			currentPrompt = 13
-		15: #Unbloom
-			var actualCard = all_cards[currentCard]
-			var newCard = actualCard.onTopOf[0].cardID
-			emit_signal("sent_game_message",tr("MESSAGE_STAGE_UNBLOOM").format({fromZone = find_what_zone(currentCard).name, fromName = actualCard.get_card_name(), toName = all_cards[newCard].get_card_name()}))
-			actualCard.unbloom()
-			for index in range(zones.size()):
-				if zones[index][1] == currentCard:
-					zones[index][1] = newCard
-			add_to_hand(currentCard)
-			please_sync_attached_stacked(actualCard)
-			please_sync_attached_stacked(all_cards[newCard])
-			currentCard = -1
-		20: #Archive Support in Play
-			add_to_fuda(currentCard,archive)
-			if playing == currentCard:
-				all_cards[currentCard].z_index = 1
-			playing = null
-			please_sync_archive()
-			currentCard = -1
-			_move_sfx.rpc()
-		21: #Add Revealed Card to Hand
-			emit_signal("sent_game_message",tr("MESSAGE_REVEALED_HAND").format({cardName = all_cards[currentCard].get_card_name()}))
-			add_to_hand(currentCard)
-			all_cards[currentCard].z_index = 1
-			revealed.erase(currentCard)
-			currentCard = -1
+		
 		22: #Attach Revealed Support
 			var possibleZones = all_occupied_zones()
 			showZoneSelection(possibleZones)
 			currentPrompt = 22
-		23: #Send Revealed Card to Top of Deck
-			emit_signal("sent_game_message",tr("MESSAGE_REVEALED_TOPDECK").format({cardName = all_cards[currentCard].get_card_name()}))
-			add_to_fuda(currentCard, deck)
-			all_cards[currentCard].z_index = 1
-			revealed.erase(currentCard)
-			currentCard = -1
-			_move_sfx.rpc()
-		24: #Send Revealed Card to Bottom of Deck
-			emit_signal("sent_game_message",tr("MESSAGE_REVEALED_BOTTOMDECK").format({cardName = all_cards[currentCard].get_card_name()}))
-			add_to_fuda(currentCard, deck, true)
-			all_cards[currentCard].z_index = 1
-			revealed.erase(currentCard)
-			currentCard = -1
-			_move_sfx.rpc()
-		25: #Send Revealed Card to Archive
-			emit_signal("sent_game_message",tr("MESSAGE_REVEALED_ARCHIVE").format({cardName = all_cards[currentCard].get_card_name()}))
-			add_to_fuda(currentCard, archive)
-			all_cards[currentCard].z_index = 1
-			revealed.erase(currentCard)
-			currentCard = -1
-			_move_sfx.rpc()
 		30: #Reveal and Attach Life
+			if life.size() <= 1:
+				_show_loss_consent("LIFE")
 			var possibleZones = all_occupied_zones()
-			var cheerCard = all_cards[currentCard]
-			remove_from_card_list(currentCard,life)
-			cheerCard.flipUp.rpc() #cheerCard.cardNumber
 			showZoneSelection(possibleZones,false)
 			currentPrompt = 30
 		50: #Look At Attached
@@ -1290,33 +1501,20 @@ func _on_popup_menu_id_pressed(id):
 			currentAttached = all_cards[currentCard]
 			showLookAt(currentAttached.onTopOf)
 			currentPrompt = 52
-		70,71: #Oshi Skill
-			var skill = all_cards[currentCard].oshi_skills[id - 70]
+		70: #Oshi Skill
+			var skill = all_cards[currentCard].oshi_skills[0]
 			if skill[1] >= 0:
-				if skill[2]:
-					used_sp_oshi_skill = true
-					flipSPdown.rpc()
-					emit_signal("sent_game_message", tr("MESSAGE_OSHISKILL_SP").format({skillName = Settings.trans(skill[0])}))
-				else:
-					used_oshi_skill = true
-					emit_signal("sent_game_message", tr("MESSAGE_OSHISKILL").format({skillName = Settings.trans(skill[0])}))
-				mill(holopower,archive,skill[1])
+				used_oshi_skill = true
 				currentCard = -1
-				please_sync_archive()
 			else:
 				set_prompt(tr("PROMPT_OSHICOST") + "\nX=",3)
 				currentPrompt = id
-		72,73: #Oshi Skill but again
-			var skill = all_cards[currentCard].oshi_skills[id - 72]
+		71: #SP Oshi Skill
+			var skill = all_cards[currentCard].oshi_skills[1]
 			if skill[1] >= 0:
-				if skill[2]:
-					flipSPdown.rpc()
-					emit_signal("sent_game_message", tr("MESSAGE_OSHISKILL_SP").format({skillName = Settings.trans(skill[0])}))
-				else:
-					emit_signal("sent_game_message", tr("MESSAGE_OSHISKILL").format({skillName = Settings.trans(skill[0])}))
-				mill(holopower,archive,skill[1])
+				used_sp_oshi_skill = true
+				flipSPdown()
 				currentCard = -1
-				please_sync_archive()
 			else:
 				set_prompt(tr("PROMPT_OSHICOST") + "\nX=",3)
 				currentPrompt = id
@@ -1345,175 +1543,57 @@ func _on_popup_menu_id_pressed(id):
 			showZoneSelection(possibleZones)
 			currentPrompt = 101
 		102: #Play Hidden to Center
-			move_card_to_zone(currentCard,centerZone)
-			remove_from_hand(currentCard,true)
-			#hideZoneSelection()
 			preliminary_holomem_in_center = true
 			$CanvasLayer/Ready.disabled = false
-			_place_sfx.rpc()
 		103: #Play Hidden to Back
 			var possibleZones = all_unoccupied_back_zones()
 			showZoneSelection(possibleZones)
 			currentPrompt = 103
-		110: #Return to top of deck
-			emit_signal("sent_game_message", tr("MESSAGE_HAND_TOPDECK"))
-			add_to_fuda(currentCard,deck)
-			remove_from_hand(currentCard)
-			currentCard = -1
-			can_undo_shuffle_hand = null
-			_place_sfx.rpc()
-		111: #Return to bottom of deck
-			emit_signal("sent_game_message", tr("MESSAGE_HAND_BOTTOMDECK"))
-			add_to_fuda(currentCard,deck,-1)
-			remove_from_hand(currentCard)
-			currentCard = -1
-			can_undo_shuffle_hand = null
-			_place_sfx.rpc()
-		112: #Archive
-			emit_signal("sent_game_message", tr("MESSAGE_HAND_ARCHIVE").format({cardName = all_cards[currentCard].get_card_name()}))
-			add_to_fuda(currentCard,archive)
-			remove_from_hand(currentCard)
-			please_sync_archive()
-			currentCard = -1
-			_place_sfx.rpc()
-		113: #Holopower
-			emit_signal("sent_game_message", tr("MESSAGE_HAND_HOLOPOWER"))
-			add_to_fuda(currentCard,holopower)
-			remove_from_hand(currentCard)
-			currentCard = -1
-			_place_sfx.rpc()
-		114: #Reveal from Hand
-			var actualCard = all_cards[currentCard]
-			emit_signal("sent_game_message", tr("MESSAGE_HAND_REVEAL").format({"cardName" : actualCard.get_card_name()}))
-			actualCard.position = Vector2(300,100*revealed.size() - 400)
-			revealed.append(currentCard)
-			for i in range(revealed.size()):
-				if i > 0:
-					move_behind.rpc(revealed[-i-1],revealed[-i])
-			remove_from_hand(currentCard)
-			currentCard = -1
-			_place_sfx.rpc()
-		120: #Play Support
-			var actualCard = all_cards[currentCard]
-			emit_signal("sent_game_message", tr("MESSAGE_HAND_SUPPORT_PLAY").format({cardName = all_cards[currentCard].get_card_name()}))
-			if actualCard.limited:
-				used_limited = true
-			actualCard.z_index = 2
-			remove_from_hand(currentCard)
-			actualCard.position = Vector2(0,0)
-			playing = currentCard
-			currentCard = -1
-			_place_sfx.rpc()
 			
 		121: #Attach Support
 			var possibleZones = all_occupied_zones()
 			showZoneSelection(possibleZones)
 			currentPrompt = 121
 		
-		200: #Draw
-			draw()
-			can_undo_shuffle_hand = null
 		201: #Draw X
 			set_prompt(tr("PROMPT_DRAW") + "\nX=")
 			currentPrompt = 201
-		202: #Mill
-			mill(deck,archive)
-			please_sync_archive()
-			can_undo_shuffle_hand = null
 		203: #Mill X
 			set_prompt(tr("PROMPT_DECK_ARCHIVE") + "\nX=",3)
 			currentPrompt = 203
-		204: #Holopower
-			mill(deck,holopower)
-			can_undo_shuffle_hand = null
-		205: #Reveal Top Card From Deck
-			var actualCard = deck.cardList.pop_front()
-			actualCard.visible = true
-			currentCard = actualCard.cardID
-			emit_signal("sent_game_message",tr("MESSAGE_FUDA_REVEAL").format({fromFuda = tr(deck.name), cardName = actualCard.get_card_name()}))
-			actualCard.z_index = 2
-			remove_from_fuda(currentCard,deck)
-			actualCard.position = Vector2(300,100*revealed.size() - 400)
-			revealed.append(currentCard)
-			for i in range(revealed.size()):
-				if i > 0:
-					move_behind.rpc(revealed[-i-1],revealed[-i])
-			currentCard = -1
-			can_undo_shuffle_hand = null
-			_move_sfx.rpc()
 		250: #Shuffle Hand Into Deck
-			emit_signal("sent_game_message", tr("MESSAGE_DECK_MULLIGAN"))
-			var list_of_ids = []
-			for hand_card in hand:
-				list_of_ids.append(hand_card.cardID)
-			can_undo_shuffle_hand = list_of_ids
-			for hand_id in list_of_ids:
-				add_to_fuda(hand_id,deck)
-				remove_from_hand(hand_id)
-			deck.shuffle()
-		251: #Unshuffle Hand Into Deck
-			emit_signal("sent_game_message", tr("MESSAGE_DECK_UNDOMULLIGAN"))
-			for hand_id in can_undo_shuffle_hand:
-				add_to_hand(hand_id)
-				remove_from_fuda(hand_id,deck)
+			can_undo_shuffle_hand = hand.duplicate()
 		297: #Look at X
 			set_prompt(tr("PROMPT_LOOKATX"),5)
 			currentPrompt = 297
 		298: #Search Deck
-			emit_signal("sent_game_message", tr("MESSAGE_DECK_SEARCH"))
 			showLookAt(deck.cardList)
 			deck._update_looking(true)
 			currentPrompt = 298
 			currentFuda = deck
-		299: #Shuffle
-			emit_signal("sent_game_message", tr("MESSAGE_DECK_SHUFFLE"))
-			deck.shuffle()
 		
-		300: #Reveal and Attach Cheer
-			var possibleZones = all_occupied_zones()
-			var cheerCard = cheerDeck.cardList.pop_front()
-			cheerCard.visible = true
-			cheerCard.z_index = 2
-			cheerCard.position = Vector2(-1250,-300)
-			currentCard = cheerCard.cardID
-			cheerDeck.update_size()
-			showZoneSelection(possibleZones,false)
-			currentPrompt = 300
 		397: #Look at X
 			set_prompt(tr("PROMPT_LOOKATX"),3)
 			currentPrompt = 397
 		398: #Search Cheer Deck
-			emit_signal("sent_game_message", tr("MESSAGE_CHEERDECK_SEARCH"))
 			showLookAt(cheerDeck.cardList)
 			cheerDeck._update_looking(true)
 			currentPrompt = 398
 			currentFuda = cheerDeck
-		399: #Shuffle
-			emit_signal("sent_game_message", tr("MESSAGE_CHEERDECK_SHUFFLE"))
-			cheerDeck.shuffle()
 		
 		498: #Search Archive
 			showLookAt(archive.cardList)
 			currentPrompt = 498
 			currentFuda = archive
 		
-		500: #Holopower to Archive
-			mill(holopower,archive)
-			please_sync_archive()
 		501: #Holopower X to Archive
 			set_prompt(tr("PROMPT_HOLOPOWER_ARCHIVE") + "\nX=",3)
 			currentPrompt = 501
-		510: #Holopower to top of deck
-			mill(holopower,deck)
 		598: #Search Holopower
-			emit_signal("sent_game_message", tr("MESSAGE_HOLOPOWER_SEARCH"))
 			showLookAt(holopower.cardList)
 			holopower._update_looking(true)
 			currentPrompt = 598
 			currentFuda = holopower
-		599: #Shuffle
-			emit_signal("sent_game_message", tr("MESSAGE_HOLOPOWER_SHUFFLE"))
-			holopower.shuffle()
 		
 		600: #Play From Deck
 			hideLookAt()
@@ -1532,27 +1612,6 @@ func _on_popup_menu_id_pressed(id):
 			var possibleZones = all_occupied_zones()
 			showZoneSelection(possibleZones)
 			currentPrompt = 602
-		603: #To Life
-			var actualCard = all_cards[currentCard]
-			if currentFuda:
-				emit_signal("sent_game_message",tr("MESSAGE_FUDA_LIFE").format({fromFuda = tr(currentFuda.name)}))
-				remove_from_fuda(currentCard,currentFuda)
-				please_sync_archive()
-			elif currentAttached:
-				emit_signal("sent_game_message",tr("MESSAGE_ATTACHED_LIFE").format({cardName = actualCard.get_card_name(), fromZone = find_what_zone(currentAttached.cardID), fromName = currentAttached.get_card_name()}))
-				remove_from_attached(currentCard,currentAttached)
-			
-			life.insert(0, actualCard)
-			actualCard.trulyHide.rpc()
-			actualCard.position = Vector2(-960,-145-(53*(6-life.size())))
-			actualCard.rest()
-			actualCard.visible = true
-			for i in range(life.size()):
-				if i > 0 and is_multiplayer_authority():
-					move_behind.rpc(life[i].cardID,life[i-1].cardID)
-			removeFromLookAt(currentCard)
-			currentCard = -1
-			_move_sfx.rpc()
 		604: #Instant Bloom From Deck
 			hideLookAt()
 			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.Instant]
@@ -1585,152 +1644,9 @@ func _on_popup_menu_id_pressed(id):
 			hideLookAt(false)
 			showZoneSelection(possibleZones)
 			currentPrompt = 622
-		630: #Reveal Card From Deck
-			var actualCard = all_cards[currentCard]
-			emit_signal("sent_game_message",tr("MESSAGE_FUDA_REVEAL").format({fromFuda = tr(currentFuda.name), cardName = actualCard.get_card_name()}))
-			actualCard.z_index = 2
-			remove_from_fuda(currentCard,currentFuda)
-			removeFromLookAt(currentCard)
-			actualCard.position = Vector2(300,100*revealed.size() - 400)
-			revealed.append(currentCard)
-			for i in range(revealed.size()):
-				if i > 0:
-					move_behind.rpc(revealed[-i-1],revealed[-i])
-			please_sync_archive()
-			currentCard = -1
-			can_undo_shuffle_hand = null
-			_move_sfx.rpc()
-		650: #Add to Hand
-			if currentFuda:
-				if currentFuda == archive:
-					emit_signal("sent_game_message",tr("MESSAGE_ARCHIVE_HAND").format({cardName = all_cards[currentCard].get_card_name()}))
-				else:
-					emit_signal("sent_game_message",tr("MESSAGE_FUDA_HAND").format({fromFuda = tr(currentFuda.name)}))
-				remove_from_fuda(currentCard,currentFuda)
-				please_sync_archive()
-			elif currentAttached:
-				emit_signal("sent_game_message",tr("MESSAGE_ATTACHED_HAND").format(
-					{fromZone = find_what_zone(currentAttached.cardID).name, fromName = currentAttached.get_card_name(), cardName = all_cards[currentCard].get_card_name()}))
-				remove_from_attached(currentCard,currentAttached)
-			all_cards[currentCard].unrest()
-			add_to_hand(currentCard)
-			removeFromLookAt(currentCard)
-			currentCard = -1
-			can_undo_shuffle_hand = null
-			
-		651: #Return to top of deck
-			if currentFuda:
-				match currentFuda:
-					archive:
-						emit_signal("sent_game_message",tr("MESSAGE_ARCHIVE_TOPDECK").format({cardName = all_cards[currentCard].get_card_name()}))
-					deck:
-						emit_signal("sent_game_message",tr("MESSAGE_DECK_TOPDECK"))
-					_:
-						emit_signal("sent_game_message",tr("MESSAGE_FUDA_TOPDECK").format({fromFuda = tr(currentFuda.name)}))
-				remove_from_fuda(currentCard,currentFuda)
-				please_sync_archive()
-			elif currentAttached:
-				emit_signal("sent_game_message",tr("MESSAGE_ATTACHED_TOPDECK").format(
-					{fromZone = find_what_zone(currentAttached.cardID).name, fromName = currentAttached.get_card_name(), cardName = all_cards[currentCard].get_card_name()}))
-				remove_from_attached(currentCard,currentAttached)
-			all_cards[currentCard].unrest()
-			add_to_fuda(currentCard,deck)
-			removeFromLookAt(currentCard)
-			currentCard = -1
-			can_undo_shuffle_hand = null
-			_move_sfx.rpc()
-		652: #Return to bottom of deck
-			if currentFuda:
-				match currentFuda:
-					archive:
-						emit_signal("sent_game_message",tr("MESSAGE_ARCHIVE_BOTTOMDECK").format({cardName = all_cards[currentCard].get_card_name()}))
-					deck:
-						emit_signal("sent_game_message",tr("MESSAGE_DECK_BOTTOMDECK"))
-					_:
-						emit_signal("sent_game_message",tr("MESSAGE_FUDA_BOTTOMDECK").format({fromFuda = tr(currentFuda.name)}))
-				remove_from_fuda(currentCard,currentFuda)
-				please_sync_archive()
-			elif currentAttached:
-				emit_signal("sent_game_message",tr("MESSAGE_ATTACHED_BOTTOMDECK").format(
-					{fromZone = find_what_zone(currentAttached.cardID).name, fromName = currentAttached.get_card_name(), cardName = all_cards[currentCard].get_card_name()}))
-				remove_from_attached(currentCard,currentAttached)
-			all_cards[currentCard].unrest()
-			add_to_fuda(currentCard,deck,-1)
-			removeFromLookAt(currentCard)
-			currentCard = -1
-			can_undo_shuffle_hand = null
-			_move_sfx.rpc()
-		653: #Return to top of cheer deck
-			if currentFuda:
-				match currentFuda:
-					archive:
-						emit_signal("sent_game_message",tr("MESSAGE_ARCHIVE_TOPCHEERDECK").format({cardName = all_cards[currentCard].get_card_name()}))
-					cheerDeck:
-						emit_signal("sent_game_message",tr("MESSAGE_CHEERDECK_TOPCHEERDECK"))
-					_:
-						emit_signal("sent_game_message",tr("MESSAGE_FUDA_TOPCHEERDECK").format({fromFuda = tr(currentFuda.name)}))
-				remove_from_fuda(currentCard,currentFuda)
-				please_sync_archive()
-			elif currentAttached:
-				emit_signal("sent_game_message",tr("MESSAGE_ATTACHED_TOPCHEERDECK").format(
-					{fromZone = find_what_zone(currentAttached.cardID).name, fromName = currentAttached.get_card_name(), cardName = all_cards[currentCard].get_card_name()}))
-				remove_from_attached(currentCard,currentAttached)
-			all_cards[currentCard].unrest()
-			add_to_fuda(currentCard,cheerDeck)
-			removeFromLookAt(currentCard)
-			currentCard = -1
-			_move_sfx.rpc()
-		654: #Return to bottom of cheer deck
-			if currentFuda:
-				match currentFuda:
-					archive:
-						emit_signal("sent_game_message",tr("MESSAGE_ARCHIVE_BOTTOMCHEERDECK").format({cardName = all_cards[currentCard].get_card_name()}))
-					cheerDeck:
-						emit_signal("sent_game_message",tr("MESSAGE_CHEERDECK_BOTTOMCHEERDECK"))
-					_:
-						emit_signal("sent_game_message",tr("MESSAGE_FUDA_BOTTOMCHEERDECK").format({fromFuda = tr(currentFuda.name)}))
-				remove_from_fuda(currentCard,currentFuda)
-				please_sync_archive()
-			elif currentAttached:
-				emit_signal("sent_game_message",tr("MESSAGE_ATTACHED_BOTTOMCHEERDECK").format(
-					{fromZone = find_what_zone(currentAttached.cardID).name, fromName = currentAttached.get_card_name(), cardName = all_cards[currentCard].get_card_name()}))
-				remove_from_attached(currentCard,currentAttached)
-			all_cards[currentCard].unrest()
-			add_to_fuda(currentCard,cheerDeck,-1)
-			removeFromLookAt(currentCard)
-			currentCard = -1
-			_move_sfx.rpc()
-		655: #Archive
-			if currentFuda:
-				emit_signal("sent_game_message",tr("MESSAGE_FUDA_ARCHIVE").format({fromFuda = tr(currentFuda.name), cardName = all_cards[currentCard].get_card_name()}))
-				remove_from_fuda(currentCard,currentFuda)
-			elif currentAttached:
-				emit_signal("sent_game_message",tr("MESSAGE_ATTACHED_ARCHIVE").format(
-					{fromZone = find_what_zone(currentAttached.cardID).name, fromName = currentAttached.get_card_name(), cardName = all_cards[currentCard].get_card_name()}))
-				remove_from_attached(currentCard,currentAttached)
-			all_cards[currentCard].unrest()
-			add_to_fuda(currentCard,archive)
-			removeFromLookAt(currentCard)
-			please_sync_archive()
-			currentCard = -1
-			_move_sfx.rpc()
-		656: #Holopower
-			if currentFuda:
-				if currentFuda == archive:
-					emit_signal("sent_game_message",tr("MESSAGE_ARCHIVE_HOLOPOWER").format({cardName = all_cards[currentCard].get_card_name()}))
-				else:
-					emit_signal("sent_game_message",tr("MESSAGE_FUDA_HOLOPOWER").format({fromFuda = tr(currentFuda.name)}))
-				remove_from_fuda(currentCard,currentFuda)
-				please_sync_archive()
-			elif currentAttached:
-				emit_signal("sent_game_message",tr("MESSAGE_ATTACHED_HOLOPOWER").format(
-					{fromZone = find_what_zone(currentAttached.cardID).name, fromName = currentAttached.get_card_name(), cardName = all_cards[currentCard].get_card_name()}))
-				remove_from_attached(currentCard,currentAttached)
-			all_cards[currentCard].unrest()
-			add_to_fuda(currentCard,holopower)
-			removeFromLookAt(currentCard)
-			currentCard = -1
-			_move_sfx.rpc()
+		
+		999: #Forfeit
+			_show_loss_consent("FORFEIT")
 			
 	reset_popup()
 	
@@ -1739,288 +1655,86 @@ func _on_line_edit_text_submitted(new_text):
 	if new_text == "":
 		new_text = prompt.get_node("Input/LineEdit").placeholder_text
 	
-	match currentPrompt:
-		10: #Add Damage
-			var input = new_text.to_int()
-			if new_text.is_valid_int() and input > 0:
+	var input = new_text.to_int()
+	if new_text.is_valid_int() and input > 0:
+		send_command("Prompt Command", {"command_id":currentPrompt, "input":input, "currentCard":currentCard, "currentAttacking":currentAttacking})
+	
+		match currentPrompt:
+			70:
+				used_oshi_skill = true
+				currentCard = -1
+			71:
+				used_sp_oshi_skill = true
+				flipSPdown()
+				currentCard = -1
+			80,81: #Holomem Arts Damage
 				var actualCard = all_cards[currentCard]
-				actualCard.add_damage(input)
-				currentCard = -1
-				remove_prompt()
-		11: #Remove Damage
-			var input = new_text.to_int()
-			if new_text.is_valid_int() and input > 0:
-				var actualCard = all_cards[currentCard]
-				actualCard.add_damage(-1 * input)
-				currentCard = -1
-				remove_prompt()
-		12: #Add Extra HP
-			var input = new_text.to_int()
-			if new_text.is_valid_int() and input > 0:
-				var actualCard = all_cards[currentCard]
-				actualCard.add_extra_hp(input)
-				currentCard = -1
-				remove_prompt()
-		13: #Remove Extra HP
-			var input = new_text.to_int()
-			if new_text.is_valid_int() and input > 0:
-				var actualCard = all_cards[currentCard]
-				actualCard.add_extra_hp(-1 * input)
-				currentCard = -1
-				remove_prompt()
-		70, 71: #Oshi Skill X Cost
-			var input = new_text.to_int()
-			if new_text.is_valid_int() and input > 0 and input <= holopower.cardList.size():
-				var skill = all_cards[currentCard].oshi_skills[70 - currentPrompt]
-				if skill[2]:
-					used_sp_oshi_skill = true
-					flipSPdown.rpc()
-					emit_signal("sent_game_message", tr("MESSAGE_OSHISKILL_SP").format({skillName = Settings.trans(skill[0])}))
-				else:
-					used_oshi_skill = true
-					emit_signal("sent_game_message", tr("MESSAGE_OSHISKILL").format({skillName = Settings.trans(skill[0])}))
-				mill(holopower,archive,input)
-				currentCard = -1
-				please_sync_archive()
-				remove_prompt()
-		80,81: #Holomem Arts Damage
-			var input = new_text.to_int()
-			var actualCard = all_cards[currentCard]
-			var oppSide = get_parent().opponentSide
-			var attacking = oppSide.get_node(NodePath(currentAttacking[1]))
-			if new_text.is_valid_int() and input > 0:
-				var attackPos = attacking.position.rotated(-oppSide.rotation) + oppSide.position - get_parent().yourSide.position if multiplayer.get_unique_id() == 1 \
-					else attacking.position.rotated(-get_parent().yourSide.rotation) - oppSide.position + get_parent().yourSide.position
+				var oppSide = get_parent().opponentSide
+				var attacking = oppSide.all_cards[currentAttacking]
+				var attackPos = attacking.position.rotated(-oppSide.rotation) + oppSide.position - get_parent().yourSide.position
 				_move_sfx()
 				actualCard.hitAndBack(attackPos)
-				attacking.offer_damage.rpc(input)
-				emit_signal("sent_game_message", tr("MESSAGE_ARTS_DAMAGE").format(
-					{fromZone = find_what_zone(currentCard).name, fromName = actualCard.get_card_name()
-					,artName = Settings.trans("%s_ART_%s_NAME" % [actualCard.cardNumber, currentPrompt-80]), damage = input
-					,toZone = currentAttacking[0], toName = attacking.get_card_name()}))
-				remove_prompt()
-		
-		201: #Draw X
-			var input = new_text.to_int()
-			if new_text.is_valid_int() and input > 0 and input <= deck.cardList.size():
-				draw(input)
-				remove_prompt()
-				can_undo_shuffle_hand = null
-		203: #Mill X
-			var input = new_text.to_int()
-			if new_text.is_valid_int() and input > 0 and input <= deck.cardList.size():
-				mill(deck,archive,input)
-				remove_prompt()
-				please_sync_archive()
-				can_undo_shuffle_hand = null
-		297: #Look At X
-			var input = new_text.to_int()
-			if new_text.is_valid_int() and input > 0 and input <= deck.cardList.size():
-				emit_signal("sent_game_message",tr("MESSAGE_DECK_LOOKATX").format({amount = input}))
-				remove_prompt()
-				deck._update_looking(true,input)
-				showLookAt(deck.cardList.slice(0,input))
-				currentPrompt = 297
-				currentFuda = deck
-		
-		397: #Look At X Cheer Deck
-			var input = new_text.to_int()
-			if new_text.is_valid_int() and input > 0 and input <= cheerDeck.cardList.size():
-				emit_signal("sent_game_message",tr("MESSAGE_CHEERDECK_LOOKATX").format({amount = input}))
-				remove_prompt()
-				cheerDeck._update_looking(true,input)
-				showLookAt(cheerDeck.cardList.slice(0,input))
-				currentPrompt = 397
-				currentFuda = cheerDeck
-		
-		501: #Holopower X to Archive
-			var input = new_text.to_int()
-			if new_text.is_valid_int() and input > 0 and input <= holopower.cardList.size():
-				mill(holopower,archive,input)
-				please_sync_archive()
-				remove_prompt()
+	
+	remove_prompt()
 
 func _on_zone_clicked(zone_id):
 	var actualZoneInfo = zones[zone_id]
+	
+	if is_your_side:
+		send_command("Zone Command",{"command_id":currentPrompt, "currentCard":currentCard,"chosenZone":actualZoneInfo[0].name,"currentAttached":currentAttached.cardID if currentAttached else null})
+		
 	match currentPrompt:
-		5: #Move to Back
-			emit_signal("sent_game_message",tr("MESSAGE_CARD_BACK").format({fromZone = find_what_zone(currentCard).name, fromName = all_cards[currentCard].get_card_name()}))
-			move_card_to_zone(currentCard,actualZoneInfo[0])
-			hideZoneSelection()
-		7: #Baton Pass
-			emit_signal("sent_game_message",tr("MESSAGE_CARD_BATONPASS").format(
-				{fromZone = find_what_zone(currentCard).name, fromName = all_cards[currentCard].get_card_name(),
-				 toZone = actualZoneInfo[0].name, toName = all_cards[actualZoneInfo[1]].get_card_name()}))
-			switch_cards_in_zones(centerZone,actualZoneInfo[0])
-			hideZoneSelection()
-			used_baton_pass = true
-		8: #Switch to Back
-			emit_signal("sent_game_message",tr("MESSAGE_CARD_SWITCH").format(
-				{fromZone = find_what_zone(currentCard).name, fromName = all_cards[currentCard].get_card_name(),
-				 toZone = actualZoneInfo[0].name, toName = all_cards[actualZoneInfo[1]].get_card_name()}))
-			switch_cards_in_zones(centerZone,actualZoneInfo[0])
-			hideZoneSelection()
-		22: #Attach Revealed Support
-			var actualCard = all_cards[currentCard]
-			var attachTo = find_in_zone(actualZoneInfo[0])
-			emit_signal("sent_game_message",tr("MESSAGE_SUPPORT_ATTACH").format(
-				{attachName = actualCard.get_card_name(),
-				 toZone = actualZoneInfo[0].name, toName = all_cards[attachTo].get_card_name()}))
-			actualCard.z_index = 0
-			revealed.erase(currentCard)
-			all_cards[attachTo].attach(actualCard)
-			please_sync_attached_stacked(all_cards[attachTo])
-			_move_sfx.rpc()
-			hideZoneSelection()
-		30: #Attach Cheer
-			var actualCard = all_cards[currentCard]
-			var attachTo = find_in_zone(actualZoneInfo[0])
-			emit_signal("sent_game_message",tr("MESSAGE_CHEER_ATTACH").format(
-				{attachName = actualCard.get_card_name(),
-				 toZone = actualZoneInfo[0].name, toName = all_cards[attachTo].get_card_name()}))
-			all_cards[attachTo].attach(actualCard)
-			please_sync_attached_stacked(all_cards[attachTo])
-			hideZoneSelection()
-			_move_sfx.rpc()
 		80,81: #Holomem Arts (called on opponent's side)
 			var yourSide = get_parent().yourSide
-			yourSide.currentAttacking = [actualZoneInfo[0].name, syncedZones[actualZoneInfo[0].name][1], syncedZones[actualZoneInfo[0].name][0]]
+			yourSide.currentAttacking = find_in_zone(actualZoneInfo[0])
 			yourSide.set_prompt(tr("PROMPT_ART_DAMAGE"),20,3)
-			hideZoneSelection()
+	
+	currentAttached = null
+	hideZoneSelection()
+
+func _show_loss_consent(reason):
+	if is_your_side:
+		$CanvasLayer/Question/Label.text = tr("WINCONSENT_" + reason)
+		losing_reason = "WINREASON_" + reason
+		$CanvasLayer/Question/RPS.visible = false
+		$CanvasLayer/Question/OK.visible = false
+		$CanvasLayer/Question/Yes.visible = false
+		$CanvasLayer/Question/No.visible = false
 		
-		100: #Play
-			emit_signal("sent_game_message",tr("MESSAGE_HOLOMEM_PLAY").format({cardName = all_cards[currentCard].get_card_name()}))
-			move_card_to_zone(currentCard,actualZoneInfo[0])
-			remove_from_hand(currentCard)
-			all_cards[currentCard].bloomed_this_turn = true
-			hideZoneSelection()
-			_place_sfx.rpc()
-		101: #Bloom
-			var actualCard = all_cards[currentCard]
-			bloom_on_zone(actualCard,actualZoneInfo[0])
-			remove_from_hand(currentCard)
-			please_sync_attached_stacked(actualCard)
-			hideZoneSelection()
-			_place_sfx.rpc()
-		103: #Play Hidden
-			move_card_to_zone(currentCard,actualZoneInfo[0])
-			remove_from_hand(currentCard,true)
-			hideZoneSelection()
-			_place_sfx.rpc()
-		121: #Attach Support
-			var actualCard = all_cards[currentCard]
-			var attachTo = find_in_zone(actualZoneInfo[0])
-			emit_signal("sent_game_message",tr("MESSAGE_SUPPORT_ATTACH").format(
-				{attachName = actualCard.get_card_name(),
-				 toZone = actualZoneInfo[0].name, toName = all_cards[attachTo].get_card_name()}))
-			actualCard.z_index = 0
-			remove_from_hand(currentCard)
-			all_cards[attachTo].attach(actualCard)
-			please_sync_attached_stacked(all_cards[attachTo])
-			hideZoneSelection()
-			_place_sfx.rpc()
-		
-		300: #Attach Cheer
-			var actualCard = all_cards[currentCard]
-			var attachTo = find_in_zone(actualZoneInfo[0])
-			emit_signal("sent_game_message",tr("MESSAGE_CHEER_ATTACH").format(
-				{attachName = actualCard.get_card_name(),
-				 toZone = actualZoneInfo[0].name, toName = all_cards[attachTo].get_card_name()}))
-			actualCard.z_index = 0
-			all_cards[attachTo].attach(actualCard)
-			please_sync_attached_stacked(all_cards[attachTo])
-			hideZoneSelection()
-			_move_sfx.rpc()
-		
-		600: #Play From Deck
-			emit_signal("sent_game_message",tr("MESSAGE_DECK_HOLOMEM_PLAY").format({cardName = all_cards[currentCard].get_card_name()}))
-			remove_from_fuda(currentCard,deck)
-			move_card_to_zone(currentCard,actualZoneInfo[0])
-			all_cards[currentCard].bloomed_this_turn = true
-			hideZoneSelection()
-			can_undo_shuffle_hand = null
-			_place_sfx.rpc()
-		601,604: #Bloom From Deck
-			remove_from_fuda(currentCard,deck)
-			var actualCard = all_cards[currentCard]
-			bloom_on_zone(actualCard,actualZoneInfo[0])
-			please_sync_attached_stacked(actualCard)
-			hideZoneSelection()
-			can_undo_shuffle_hand = null
-			_place_sfx.rpc()
-		602: #Attach Cheer From Deck
-			remove_from_fuda(currentCard,cheerDeck)
-			var actualCard = all_cards[currentCard]
-			var attachTo = find_in_zone(actualZoneInfo[0])
-			emit_signal("sent_game_message",tr("MESSAGE_CHEERDECK_CHEER_ATTACH").format(
-				{attachName = actualCard.get_card_name(),
-				 toZone = actualZoneInfo[0].name, toName = all_cards[attachTo].get_card_name()}))
-			all_cards[attachTo].attach(actualCard)
-			please_sync_attached_stacked(all_cards[attachTo])
-			hideZoneSelection()
-			_move_sfx.rpc()
-		610: #Play From Archive
-			emit_signal("sent_game_message",tr("MESSAGE_ARCHIVE_HOLOMEM_PLAY").format({cardName = all_cards[currentCard].get_card_name()}))
-			remove_from_fuda(currentCard,archive)
-			move_card_to_zone(currentCard,actualZoneInfo[0])
-			all_cards[currentCard].bloomed_this_turn = true
-			please_sync_archive()
-			hideZoneSelection()
-			_place_sfx.rpc()
-		611,614: #Bloom From Archive
-			remove_from_fuda(currentCard,archive)
-			var actualCard = all_cards[currentCard]
-			bloom_on_zone(actualCard,actualZoneInfo[0])
-			please_sync_attached_stacked(actualCard)
-			please_sync_archive()
-			hideZoneSelection()
-			_place_sfx.rpc()
-		612: #Attach Cheer From Archive
-			remove_from_fuda(currentCard,archive)
-			var actualCard = all_cards[currentCard]
-			var attachTo = find_in_zone(actualZoneInfo[0])
-			emit_signal("sent_game_message",tr("MESSAGE_ARCHIVE_CHEER_ATTACH").format(
-				{attachName = actualCard.get_card_name(),
-				 toZone = actualZoneInfo[0].name, toName = all_cards[attachTo].get_card_name()}))
-			all_cards[attachTo].attach(actualCard)
-			please_sync_attached_stacked(all_cards[attachTo])
-			please_sync_archive()
-			hideZoneSelection()
-			_move_sfx.rpc()
-		622: #Attach Cheer From Attach
-			remove_from_attached(currentCard,currentAttached)
-			var actualCard = all_cards[currentCard]
-			var attachTo = find_in_zone(actualZoneInfo[0])
-			emit_signal("sent_game_message",tr("MESSAGE_ATTACHED_CHEER_ATTACH").format(
-				{attachName = actualCard.get_card_name(),
-				 toZone = actualZoneInfo[0].name, toName = all_cards[attachTo].get_card_name(), 
-				 fromZone = find_what_zone(currentAttached.cardID).name, fromName = currentAttached.get_card_name()}))
-			all_cards[attachTo].attach(actualCard)
-			please_sync_attached_stacked(all_cards[attachTo])
-			hideZoneSelection()
-			currentPrompt = -1
-			currentAttached = null
-			_move_sfx.rpc()
+		$CanvasLayer/Question/Lose.visible = true
+		$CanvasLayer/Question/KeepPlaying.visible = true
+		$CanvasLayer/Question.visible = true
+
+func _on_lose_pressed():
+	get_parent().send_command("Game","Lose",{"reason": losing_reason})
+
+func _on_keep_playing_pressed():
+	losing_reason = ""
+	$CanvasLayer/Question/Lose.visible = false
+	$CanvasLayer/Question/KeepPlaying.visible = false
+	$CanvasLayer/Question.visible = false
+
+func _on_accept_damage(card_id):
+	send_command("Accept Damage",{"card_id":card_id})
 
 func _unhandled_key_input(event):
-	if event.is_action_pressed("Draw") and is_multiplayer_authority() and can_do_things and deck.cardList.size() > 0:
-		draw(1)
+	if event.is_action_pressed("Draw") and is_your_side and can_do_things and deck.cardList.size() > 0:
+		send_command("Popup Command",{"command_id":200})
 
 func _on_submit_pressed():
 	_on_line_edit_text_submitted(prompt.get_node("Input/LineEdit").text)
 
-@rpc("any_peer","call_local","reliable")
 func set_is_turn(value:bool):
-	if is_multiplayer_authority():
+	if is_your_side:
 		is_turn = value
-		if is_turn:
-				get_parent()._select_step.rpc(1)
+		get_parent()._select_step(1)
 		if !preliminary_phase:
 			$"CanvasLayer/End Turn".visible = value
+			if deck.cardList.size() <= 0:
+				_show_loss_consent("DECKOUT")
 
-@rpc("any_peer","call_local","reliable")
 func set_player1(value:bool):
-	if is_multiplayer_authority():
+	if is_your_side:
 		player1 = value
 		if player1:
 			$CanvasLayer/OpponentLabel/Label.text = tr("TURN_SECOND") #"Opponent Going Second"
@@ -2031,7 +1745,6 @@ func set_player1(value:bool):
 
 func end_turn():
 	if is_turn:
-		emit_signal("sent_game_message",tr("MESSAGE_ENDTURN"))
 		step = 1
 		first_turn = false
 		used_limited = false
@@ -2039,37 +1752,274 @@ func end_turn():
 		used_baton_pass = false
 		used_oshi_skill = false
 		can_undo_shuffle_hand = null
-		for actualCard in all_cards:
+		for actualCard in all_cards.values():
 			if actualCard.cardType == "Holomem":
 				actualCard.bloomed_this_turn = false
+		is_turn = false
+		$"CanvasLayer/End Turn".visible = false
 		emit_signal("ended_turn")
+		get_parent()._enable_steps(true)
 
 
 func _on_fuda_shuffled():
-	_shuffle_sfx.rpc()
+	_shuffle_sfx()
 
-func _on_die_result(num):
-	emit_signal("sent_game_message",tr("MESSAGE_DIERESULT").format({amount = num}))
-	_die_sfx.rpc()
+func _on_die_rolled():
+	send_command("Roll Die")
 
-@rpc("any_peer","call_local")
 func _shuffle_sfx():
 	$Audio/Shuffling.play()
 
-@rpc("any_peer","call_local")
 func _die_sfx():
 	$Audio/Rolling.play()
 
-@rpc("any_peer","call_local")
 func _draw_sfx():
 	$Audio/Drawing.play()
 
-@rpc("any_peer","call_local")
 func _place_sfx():
 	$Audio/Placing.play()
 
-@rpc("any_peer","call_local")
 func _move_sfx():
 	$Audio/Moving.play()
 
 
+func send_command(command:String, data=null) -> void:
+	get_parent().send_command("Side",command,data)
+
+func side_command(command: String, data: Dictionary) -> void:
+	match command:
+		"Mulligan":
+			if "forced" in data:
+				_mulligan_decision(data["forced"])
+		"No Mulligan":
+			wait_mulligan()
+		"Mulligan Done":
+			if "forced_mulligan_cards" in data:
+				specialStart3(data["forced_mulligan_cards"])
+		"All Ready":
+			if "life" in data and "is_turn" in data:
+				specialStart4(data["life"],data["is_turn"])
+		"Your Turn":
+			set_is_turn(true)
+			get_parent()._enable_steps(true)
+			
+		"Game Loss":
+			game_loss()
+		
+		"Rest":
+			if "card_id" in data:
+				all_cards[int(data["card_id"])].rest()
+		"Unrest":
+			if "card_id" in data:
+				all_cards[int(data["card_id"])].unrest()
+		"Damage":
+			if "card_id" in data and "amount" in data:
+				all_cards[int(data["card_id"])].add_damage(int(data["amount"]))
+		"Extra HP":
+			if "card_id" in data and "amount" in data:
+				all_cards[int(data["card_id"])].add_extra_hp(int(data["amount"]))
+		"Offered Damage":
+			if "card_id" in data and "amount" in data:
+				all_cards[int(data["card_id"])].offer_damage(int(data["amount"]))
+		"Accepted Damage":
+			if "card_id" in data:
+				all_cards[int(data["card_id"])]._on_reject_pressed()
+		
+		"Add To Hand":
+			if "card_id" in data:
+				add_to_hand(int(data["card_id"]))
+		"Remove From Hand":
+			if "card_id" in data:
+				remove_from_hand(int(data["card_id"]))
+		"Add To Fuda":
+			if "card_id" in data and "to_fuda" in data and "bottom" in data:
+				add_to_fuda(int(data["card_id"]),fuda_list[int(data["to_fuda"])],data["bottom"])
+		"Remove From Fuda":
+			if "card_id" in data and "from_fuda" in data:
+				remove_from_fuda(int(data["card_id"]), fuda_list[int(data["from_fuda"])])
+		"Remove From Attached":
+			if "card_id" in data and "attached_id" in data:
+				remove_from_attached(int(data["card_id"]),all_cards[int(data["attached_id"])])
+		
+		"Move Card To Zone":
+			if "card_id" in data and "zone" in data:
+				move_card_to_zone(int(data["card_id"]), $Zones.get_node(data["zone"]))
+		"Switch Cards In Zones":
+			if "zone_1" in data and "zone_2" in data:
+				switch_cards_in_zones($Zones.get_node(data["zone_1"]), $Zones.get_node(data["zone_2"]))
+		"Card Left Field":
+			if "card_id" in data:
+				remove_old_card(int(data["card_id"]),true)
+		"Attach Card":
+			if "attachee" in data and "attach_to" in data:
+				attach_card(int(data["attachee"]), int(data["attach_to"]))
+		"Bloom":
+			if "card_to_bloom" in data and "zone_to_bloom" in data:
+				bloom_on_zone(all_cards[int(data["card_to_bloom"])], $Zones.get_node(data["zone_to_bloom"]))
+		"Unbloom":
+			if "card_to_unbloom" in data:
+				unbloom_on_zone(int(data["card_to_unbloom"]))
+		"Collab":
+			collabed = true
+		"Baton Pass":
+			used_baton_pass = true
+		"Card Played":
+			if "card_id" in data:
+				all_cards[int(data["card_id"])].bloomed_this_turn = true
+		
+		"Reveal":
+			if "card_id" in data:
+				reveal_card(int(data["card_id"]))
+		"Reveal Cheer":
+			if "card_id" in data:
+				reveal_cheer(int(data["card_id"]))
+		"Reveal Life":
+			if "card_id" in data:
+				life[0].flipUp()
+				life.pop_front()
+		"Play Support":
+			if "card_id" in data:
+				play_card(int(data["card_id"]))
+		"To Life":
+			if "card_id" in data:
+				add_to_life(int(data["card_id"]))
+		
+		"Look At X":
+			if "fuda" in data and "ids" in data:
+				showLookAtIDS(data["ids"])
+				currentFuda = fuda_list[int(data["fuda"])]
+				currentFuda._update_looking(true,data["ids"].size())
+				currentPrompt = 297 if currentFuda == deck else 397
+				
+		"Remove From List":
+			if "card_id" in data:
+				removeFromLookAt(int(data["card_id"]))
+		
+		"Shuffle Fuda":
+			if "fuda" in data:
+				fuda_list[int(data["fuda"])].shuffle()
+		"Roll Die":
+			if "result" in data:
+				#emit_signal("sent_game_message",tr("MESSAGE_DIERESULT").format({amount = num}))
+				die.roll(int(data["result"]))
+				_die_sfx()
+		"Click Notification":
+			if "card_id" in data:
+				all_cards[int(data["card_id"])].showNotice()
+		
+		_:
+			pass
+
+func opponent_side_command(command: String, data: Dictionary) -> void:
+	match command:
+		"Rest":
+			if "card_id" in data:
+				all_cards[int(data["card_id"])].rest()
+		"Unrest":
+			if "card_id" in data:
+				all_cards[int(data["card_id"])].unrest()
+		"Damage":
+			if "card_id" in data and int(data["card_id"]) in all_cards and "amount" in data:
+				all_cards[int(data["card_id"])].add_damage(int(data["amount"]))
+		"Extra HP":
+			if "card_id" in data and int(data["card_id"]) in all_cards and "amount" in data:
+				all_cards[int(data["card_id"])].add_extra_hp(int(data["amount"]))
+		
+		"Add To Hand":
+			add_fake_to_hand()
+		"Remove From Hand":
+			remove_fake_from_hand()
+		"Add To Fuda":
+			if "to_fuda" in data and "moved_card" in data:
+				add_fake_to_fuda(fuda_list[int(data["to_fuda"])],data["moved_card"])
+		"Remove From Fuda":
+			if "from_fuda" in data:
+				remove_fake_from_fuda(fuda_list[int(data["from_fuda"])], data["removed_card"] if "removed_card" in data else null)
+		"Remove From Attached":
+			if "card_id" in data and "attached_id" in data:
+				remove_fake_from_attached(int(data["card_id"]),int(data["attached_id"]))
+		"All Ready":
+			if "oshi" in data and "zones" in data:
+				specialStart4_fake(data["oshi"],data["zones"])
+		
+		
+		"Card Left Field":
+			if "card_id" in data and int(data["card_id"]) in all_cards:
+				remove_old_card(int(data["card_id"]),true)
+		"Move Card To Zone":
+			if "card" in data and "zone" in data and "facedown" in data:
+				move_fake_card_to_zone(data["card"], $Zones.get_node(data["zone"]), data["facedown"])
+		"Switch Cards In Zones":
+			if "zone_1" in data and "zone_2" in data:
+				switch_cards_in_zones($Zones.get_node(data["zone_1"]), $Zones.get_node(data["zone_2"]))
+		"Bloom":
+			if "card" in data and "zone_to_bloom" in data:
+				bloom_fake_on_zone(data["card"], $Zones.get_node(data["zone_to_bloom"]))
+		"Unbloom":
+			if "card_to_unbloom" in data:
+				unbloom_fake_on_zone(int(data["card_to_unbloom"]))
+		"Attach Card":
+			if "attachee_info" in data and "attach_to_info" in data:
+				attach_fake_card(data["attachee_info"], data["attach_to_info"])
+		
+		"Reveal":
+			if "card" in data:
+				reveal_fake_card(data["card"])
+		"Reveal Cheer":
+			if "card" in data:
+				reveal_fake_cheer(data["card"])
+		"Reveal Life":
+			if "card" in data:
+				reveal_fake_life(data["card"])
+		"Play Support":
+			if "card" in data:
+				play_fake_card(data["card"])
+		"To Life":
+			add_fake_to_life()
+		
+		"Look At X":
+			if "fuda" in data and "X" in data:
+				var actualFuda = fuda_list[int(data["fuda"])]
+				actualFuda._update_looking(true,int(data["X"]))
+				fuda_opponent_looking_at = actualFuda
+		"Look At":
+			if "fuda" in data:
+				var actualFuda = fuda_list[int(data["fuda"])]
+				actualFuda._update_looking(true)
+				fuda_opponent_looking_at = actualFuda
+		"Stop Look At":
+			if fuda_opponent_looking_at:
+				fuda_opponent_looking_at._update_looking(false)
+				fuda_opponent_looking_at = null
+		"Used SP Skill":
+			flipSPdown()
+		
+		"Shuffle Fuda":
+			if "fuda" in data:
+				fuda_list[int(data["fuda"])].shuffle()
+		"Roll Die":
+			if "result" in data:
+				#emit_signal("sent_game_message",tr("MESSAGE_DIERESULT").format({amount = num}))
+				die.roll(int(data["result"]))
+				_die_sfx()
+		"Attack":
+			if "attacker" in data and "attacked" in data:
+				var attacker = all_cards[int(data["attacker"])]
+				var yourSide = get_parent().yourSide
+				if !yourSide:
+					#For spectator
+					for side in get_parent().spectatedSides:
+						if side != player_id:
+							yourSide = get_parent().spectatedSides[side]
+				var attacked = yourSide.all_cards[int(data["attacked"])]
+				var attackPos = attacked.position.rotated(-rotation) + position - yourSide.position
+				if !is_your_side and is_front:
+					#For spectator if the player attacking is on their side
+					attackPos = attacked.position.rotated(-yourSide.rotation) + yourSide.position - position
+				_move_sfx()
+				attacker.hitAndBack(attackPos)
+		"Click Notification":
+			if "card_id" in data and int(data["card_id"]) in all_cards:
+				all_cards[int(data["card_id"])].showNotice()
+		_:
+			pass

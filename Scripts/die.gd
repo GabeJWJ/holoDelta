@@ -3,14 +3,15 @@
 extends Node3D
 
 var currentNumber = 5
+@export var is_your_die = false
 
-signal die_result(num)
+signal rolled
 
-func roll() -> void:
+func roll(result: int) -> void:
 	#Rolls the die, including animation
 	#Doesn't return the result, instead emits a signal to side with the result
 	
-	currentNumber = randi_range(1,6) #Result chosen very quickly
+	currentNumber = result
 	
 	#Hard-coded determination of how it should rotate to show the correct value face-up
 	var rotx = 0
@@ -32,16 +33,14 @@ func roll() -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_property(self,"rotation",Vector3(randf_range(-3.141,3.141),randf_range(-3.141,3.141),randf_range(-3.141,3.141)),0.1)
 	tween.tween_property(self,"rotation",Vector3(rotx, randf_range(-3.141,3.141), rotz),0.1)
-	
-	emit_signal("die_result",currentNumber)
 
 func _on_static_body_3d_input_event(_camera, event, _position, _normal, _shape_idx) -> void:
 	#Fires when the static body 3d (a bounding rectangle for the die) is clicked
 	#Only worry about event, which gets immediately cast to an InputEventMouseButton
 	
 	var mouse_click = event as InputEventMouseButton
-	if mouse_click and mouse_click.button_index == 1 and mouse_click.pressed:
-		roll()
+	if mouse_click and mouse_click.button_index == 1 and mouse_click.pressed and is_your_die:
+		emit_signal("rolled")
 
 func new_texture(image):
 	#Set the texture of the die - used for cosmetics

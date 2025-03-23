@@ -5398,3 +5398,255 @@ msgstr "Purple Cheer"
 msgid "hY06-002_NAME"
 msgstr "Yellow Cheer"
 
+msgid "hBD24-017_NAME"
+msgstr "Usada Pekora"
+
+msgid "hBD24-017_SKILL_NAME"
+msgstr "Green Enhance"
+
+msgid "hBD24-017_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Green holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-017_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-017_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Green holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-018_NAME"
+msgstr "Ayunda Risu"
+
+msgid "hBD24-018_SKILL_NAME"
+msgstr "Yellow Enhance"
+
+msgid "hBD24-018_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Yellow holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-018_SPSKILL_NAME"
+msgstr "Birthday Gift ~Yellow~"
+
+msgid "hBD24-018_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Yellow holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-019_NAME"
+msgstr "Omaru Polka"
+
+msgid "hBD24-019_SKILL_NAME"
+msgstr "Red Enhance"
+
+msgid "hBD24-019_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Red holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-019_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-019_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Red holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-020_NAME"
+msgstr "Fuwawa Abyssgard"
+
+msgid "hBD24-020_SKILL_NAME"
+msgstr "Blue Enhance"
+
+msgid "hBD24-020_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Blue holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-020_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-020_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Blue holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-021_NAME"
+msgstr "Mococo Abyssgard"
+
+msgid "hBD24-021_SKILL_NAME"
+msgstr "Red Enhance"
+
+msgid "hBD24-021_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Red holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-021_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-021_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Red holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-022_NAME"
+msgstr "Juufuutei Raden"
+
+msgid "hBD24-022_SKILL_NAME"
+msgstr "Green Enhance"
+
+msgid "hBD24-022_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Green holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-022_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-022_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Green holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-023_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hBD24-023_SKILL_NAME"
+msgstr "Purple Enhance"
+
+msgid "hBD24-023_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Purple holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-023_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-023_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Purple holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-024_NAME"
+msgstr "Moona Hoshinova"
+
+msgid "hBD24-024_SKILL_NAME"
+msgstr "Blue Enhance"
+
+msgid "hBD24-024_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Blue holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-024_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-024_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Blue holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-025_NAME"
+msgstr "Aki Rosenthal"
+
+msgid "hBD24-025_SKILL_NAME"
+msgstr "Green Enhance"
+
+msgid "hBD24-025_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Green holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-025_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-025_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Green holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-026_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hBD24-026_SKILL_NAME"
+msgstr "Blue Enhance"
+
+msgid "hBD24-026_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Blue holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-026_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-026_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Blue holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-027_NAME"
+msgstr "Hiodoshi Ao"
+
+msgid "hBD24-027_SKILL_NAME"
+msgstr "Blue Enhance"
+
+msgid "hBD24-027_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Blue holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-027_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-027_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Blue holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-028_NAME"
+msgstr "Hakos Baelz"
+
+msgid "hBD24-028_SKILL_NAME"
+msgstr "Red Enhance"
+
+msgid "hBD24-028_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Red holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-028_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-028_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Red holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-029_NAME"
+msgstr "Sakura Miko"
+
+msgid "hBD24-029_SKILL_NAME"
+msgstr "Red Enhance"
+
+msgid "hBD24-029_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Red holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-029_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-029_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Red holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-030_NAME"
+msgstr "Anya Melfissa"
+
+msgid "hBD24-030_SKILL_NAME"
+msgstr "Yellow Enhance"
+
+msgid "hBD24-030_SKILL_EFFECT"
+msgstr "(Once per turn) One of your Yellow holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-030_SPSKILL_NAME"
+msgstr "Birthday Gift ~Yellow~"
+
+msgid "hBD24-030_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 Yellow holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-032_NAME"
+msgstr "Hakui Koyori"
+
+msgid "hBD24-032_SKILL_NAME"
+msgstr "White Enhance"
+
+msgid "hBD24-032_SKILL_EFFECT"
+msgstr "(Once per turn) One of your White holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-032_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-032_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 White holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hBD24-033_NAME"
+msgstr "IRyS"
+
+msgid "hBD24-033_SKILL_NAME"
+msgstr "White Enhance"
+
+msgid "hBD24-033_SKILL_EFFECT"
+msgstr "(Once per turn) One of your White holomems' Arts gains +20 power until the end of this turn."
+
+msgid "hBD24-033_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-033_SPSKILL_EFFECT"
+msgstr "(Once per game) Reveal 1 White holomem from your deck and put it into your hand. Then shuffle your deck."
+
+msgid "hY01-005_NAME"
+msgstr "White Cheer"
+
+msgid "hY02-004_NAME"
+msgstr "Green Cheer"
+
+msgid "hY04-004_NAME"
+msgstr "Blue Cheer"
+
+msgid "hY06-003_NAME"
+msgstr "Yellow Cheer"
+

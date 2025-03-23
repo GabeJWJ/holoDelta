@@ -1,0 +1,1796 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: holodelta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: holodelta\n"
+"X-Crowdin-Project-ID: 724315\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: template.pot\n"
+"X-Crowdin-File-ID: 6\n"
+"Language-Team: Korean\n"
+"Language: ko_KR\n"
+"PO-Revision-Date: 2025-03-22 23:45\n"
+
+#: Scenes/board.tscn
+msgid "SEND_CHAT"
+msgstr "전송"
+
+#: Scenes/board.tscn
+msgid "OPTION_COSMETICS_HIDE"
+msgstr "상대의 꾸미기 숨기기"
+
+#: Scenes/board.tscn
+msgid "TAB_INFO"
+msgstr "정보"
+
+#: Scenes/board.tscn
+msgid "TAB_CHAT"
+msgstr "채팅"
+
+#: Scenes/board.tscn
+msgid "TAB_SETTINGS"
+msgstr "설정"
+
+#: Scenes/board.tscn
+msgid "STEP1"
+msgstr "리셋"
+
+#: Scenes/board.tscn
+msgid "STEP2"
+msgstr "드로우"
+
+#: Scenes/board.tscn
+msgid "STEP3"
+msgstr "옐"
+
+#: Scenes/board.tscn
+msgid "STEP4"
+msgstr "메인"
+
+#: Scenes/board.tscn
+msgid "STEP5"
+msgstr "퍼포먼스"
+
+#: Scenes/board.tscn
+msgid "STEP6"
+msgstr "엔드"
+
+#: Scenes/board.tscn
+msgid "TITLE"
+msgstr "홀로델타"
+
+#: Scenes/board.tscn
+msgid "SUBTITLE"
+msgstr "비공식 홀로라이브 OCG 시뮬레이터\n"
+"(임시 한글화)"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_ROCK"
+msgstr "바위"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_PAPER"
+msgstr "보"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_SCISSORS"
+msgstr "가위"
+
+#: Scenes/board.tscn
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "RPS_WAIT"
+msgstr "상대를 기다리는 중..."
+
+#: Scenes/board.tscn
+msgid "DECK_CREATE"
+msgstr "덱 생성/수정"
+
+#: Scenes/board.tscn
+msgid "LOBBY_CREATE"
+msgstr "로비 생성"
+
+#: Scenes/board.tscn
+msgid "LOBBY_JOIN"
+msgstr "로비 참여"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_SPECTATE"
+msgstr "로비 관전"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_PRIVATE"
+msgstr "비공개"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_ALLOWSPECTATORS"
+msgstr "관전자 허용"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST"
+msgstr "금제 목록"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_NONE"
+msgstr "금제 적용 없음"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT"
+msgstr "현재 금제"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_UNRELEASED"
+msgstr "현재 금제 + 미출시 카드"
+
+#: Scenes/board.tscn
+msgid "LOBBY_BACK"
+msgstr "뒤로"
+
+#: Scenes/board.tscn
+msgid "UPDATE\t_DB"
+msgstr "DB 업데이트"
+
+#: Scenes/board.tscn
+msgid "EXIT"
+msgstr "게임 종료"
+
+#: Scenes/board.tscn
+msgid "OPTION_UNREVEALED"
+msgstr "미발매 카드 허용"
+
+#: Scenes/board.tscn
+msgid "OPTION_PROXY"
+msgstr "프록시 허용"
+
+#: Scenes/board.tscn
+msgid "COSMETICS"
+msgstr "꾸미기"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_CANCEL"
+msgstr "닫기"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM"
+msgstr "매트 이미지 불러오기"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D"
+msgstr "주사위 이미지 불러오기"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM_DEFAULT"
+msgstr "매트 초기화"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D_DEFAULT"
+msgstr "주사위 초기화"
+
+#: Scenes/board.tscn
+msgid "INFO"
+msgstr "정보"
+
+#: Scenes/board.tscn
+msgid "INFO_DLOC"
+msgstr "덱 파일 위치"
+
+#: Scenes/board.tscn
+msgid "INFO_CANCEL"
+msgstr "닫기"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_LOBBYCODE"
+msgstr "로비 코드 입력"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SEARCHING"
+msgstr "검색 중..."
+
+#: Scenes/board.tscn
+msgid "LOBBY_REFRESH"
+msgstr "새로고침"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_GAMECODE"
+msgstr "게임 코드 입력"
+
+#: Scenes/board.tscn
+msgid "LOBBY_HOST"
+msgstr "호스트"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_NONE_CHOSEN"
+msgstr "미선택"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_READY"
+msgstr "준비"
+
+#: Scenes/board.tscn
+msgid "DECK_SELECT"
+msgstr "덱 선택"
+
+#: Scenes/board.tscn
+msgid "LOBBY_CHOSEN"
+msgstr "선택된 상대"
+
+#: Scenes/board.tscn
+msgid "LOBBY_STARTGAME"
+msgstr "게임 시작"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "OK"
+msgstr "OK"
+
+#: Scenes/board.tscn
+msgid "LOBBY_GAMESTART_SPECTATE"
+msgstr "이미 시작되었습니다. 관전하시겠습니까?"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+#: Scenes/deck_creation.tscn
+msgid "YES"
+msgstr "예"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+#: Scenes/deck_creation.tscn
+msgid "NO"
+msgstr "아니오"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+msgid "MENU"
+msgstr "메인 메뉴"
+
+#: Scenes/board.tscn
+msgid "MENU_PROMPT"
+msgstr "메인 메뉴로 돌아가시겠습니까?"
+
+#: Scenes/deck_list.tscn
+msgid "DECK_LOAD"
+msgstr "덱 파일 불러오기"
+
+#: Scenes/deck_list.tscn
+msgid "DECK_SELECT_CANCEL"
+msgstr "취소"
+
+#: Scenes/sleeve_select.tscn
+msgid "SLEEVE_LOAD"
+msgstr "불러오기"
+
+#: Scenes/sleeve_select.tscn
+msgid "SLEEVE_DEFAULT"
+msgstr "초기화"
+
+#: Scenes/side.tscn
+msgid "PROMPT_SUBMIT"
+msgstr "확인"
+
+#: Scenes/side.tscn
+msgid "PROMPT_CANCEL"
+msgstr "닫기"
+
+#: Scenes/side.tscn
+msgid "CHOICE_FIRST"
+msgstr "선공"
+
+#: Scenes/side.tscn
+msgid "CHOICE_SECOND"
+msgstr "후공"
+
+#: Scenes/side.tscn
+msgid "END_TURN"
+msgstr "턴 종료"
+
+#: Scenes/side.tscn
+msgid "START_READY"
+msgstr "준비"
+
+#: Scenes/side.tscn
+msgid "RPS_SELECT"
+msgstr "옵션을 선택하세요."
+
+#: Scenes/side.tscn
+msgid "OPPONENT"
+msgstr "상대"
+
+#: Scenes/side.tscn
+msgid "MULLIGAN_TEXT"
+msgstr "상대의 멀리건을 보는 중"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_OSHI"
+msgstr "오시"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "NAME"
+msgstr "이름"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "COLOR"
+msgstr "색"
+
+#: Scenes/deck_creation.tscn
+msgid "FILTER_CLEAR"
+msgstr "필터 초기화"
+
+#: Scenes/deck_creation.tscn
+msgid "SEARCH"
+msgstr "검색"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_HOLOMEM"
+msgstr "홀로멤"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "LEVEL"
+msgstr "레벨"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "LEVEL_ANY"
+msgstr "아무 레벨"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "LEVEL_DEBUT"
+msgstr "Debut"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "LEVEL_1"
+msgstr "1st"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "LEVEL_2"
+msgstr "2nd"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "LEVEL_SPOT"
+msgstr "SPOT"
+
+#: Scenes/deck_creation.tscn
+msgid "TAG_PLURAL"
+msgstr "태그"
+
+#: Scenes/deck_creation.tscn
+msgid "BUZZ"
+msgstr "버즈"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_SUPPORT"
+msgstr "서포트"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "SUPPORT_TYPE"
+msgstr "타입"
+
+#: Scenes/deck_creation.tscn
+msgid "SUPPORT_LIMITED"
+msgstr "리미티드"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_CHEER"
+msgstr "옐"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_DECK"
+msgstr "덱"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_ANALYTICS"
+msgstr "분석"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_SLEEVES"
+msgstr "카드 슬리브"
+
+#: Scenes/deck_creation.tscn
+msgid "MAIN_DECK"
+msgstr "메인 덱"
+
+#: Scenes/deck_creation.tscn
+msgid "CHEER"
+msgstr "옐"
+
+#: Scenes/deck_creation.tscn
+msgid "OSHI"
+msgstr "리더"
+
+#: Scenes/deck_creation.tscn
+msgid "LOAD"
+msgstr "불러오기"
+
+#: Scenes/deck_creation.tscn
+msgid "DECK_SAVE"
+msgstr "저장"
+
+#: Scenes/deck_creation.tscn
+msgid "DEFAULT_DECK_NAME"
+msgstr "새 덱"
+
+#: Scenes/deck_creation.tscn
+msgid "DECK_CLEAR"
+msgstr "덱 비우기"
+
+#: Scenes/deck_creation.tscn
+msgid "DEFAULT_DECK_FILE"
+msgstr "custom_deck"
+
+#: Scenes/deck_creation.tscn
+msgid "DECK_DOWNLOAD"
+msgstr "다운로드"
+
+#: Scenes/deck_creation.tscn
+msgid "DECK_SAVE_CANCEL"
+msgstr "취소"
+
+#: Scripts/RemapButton.gd
+msgid "REMAP_WAIT"
+msgstr "기다리는 중"
+
+#: Scripts/deck_creation.gd
+msgid "NAME_ANY"
+msgstr "아무 이름"
+
+#: Scripts/deck_creation.gd
+msgid "COLOR_ANY"
+msgstr "아무 색"
+
+#: Scripts/deck_creation.gd
+msgid "SUPPORT_TYPE_ANY"
+msgstr "아무 타입"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NOOSHI"
+msgstr "오시 홀로멤이 선택되지 않았습니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_FAKEOSHI"
+msgstr "{cardNum} 카드는 오시 홀로멤이 아닙니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_UNDERDECK"
+msgstr "메인 덱의 카드 수가 모자랍니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_OVERDECK"
+msgstr "메인 덱의 카드 수가 너무 많습니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_UNDERCHEER"
+msgstr "옐 덱의 카드 수가 모자랍니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_OVERCHEER"
+msgstr "옐 덱의 카드 수가 너무 많습니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NEGATIVEAMOUNT"
+msgstr "{cardNum}의 장 수가 잘못되었습니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_FAKEMAIN"
+msgstr "{cardNum} 카드는 메인 덱에 들어가지 않습니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NODEBUTS"
+msgstr "데뷔 홀로멤이 없습니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_FAKECHEER"
+msgstr "{cardNum} 카드는 옐 카드가 아닙니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECK_OVERWRITE"
+msgstr "{fileName}에 덮어쓰기"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_BANNED"
+msgstr "{cardNum} 카드는 금지된 카드입니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NOALTART"
+msgstr "{cardNum} 카드는 페러렐 이미지가 존재하지 않습니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_FAKECARD"
+msgstr "{cardNum} 카드는 데이터베이스에 존재하지 않는 카드입니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_OSHIBADFORMAT"
+msgstr "오시 홀로멤의 형식이 잘못되었습니다. 홀로델타용 덱 파일이 맞는지 확인해 주세요."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_RESTRICTED"
+msgstr "{cardNum} 카드가 제한된 수보다 많습니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_OVERAMOUNT"
+msgstr "{cardNum} 카드가 너무 많습니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_DECKBADFORMAT"
+msgstr "메인 덱의 형식이 잘못되었습니다. 홀로델타용 덱 파일이 맞는지 확인해 주세요."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NODECK"
+msgstr "메인 덱이 비어있습니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_CHEERBADFORMAT"
+msgstr "옐 덱의 형식이 잘못되었습니다. 홀로델타용 덱 파일이 맞는지 확인해 주세요."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NOCHEER"
+msgstr "옐 덱이 비어있습니다."
+
+#: Scripts/side.gd
+msgid "DECK"
+msgstr "덱"
+
+#: Scripts/side.gd
+msgid "CHEERDECK"
+msgstr "옐 덱"
+
+#: Scripts/side.gd
+msgid "ARCHIVE"
+msgstr "아카이브"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER"
+msgstr "홀로파워"
+
+#: Scripts/side.gd
+msgid "RPS_TIED"
+msgstr "비겼습니다. 다시 고르세요."
+
+#: Scripts/side.gd
+msgid "MULLIGAN_QUESTION"
+msgstr "멀리건 하시겠습니까?"
+
+#: Scripts/side.gd
+msgid "MULLIGAN_FORCED"
+msgstr "데뷔 오시멤이 없습니다.\n"
+"데뷔 오시멤이 드로우될 때까지 다시 멀리건합니다."
+
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "LOSS"
+msgstr "패배!"
+
+#: Scripts/side.gd
+msgid "MULLIGAN_WAIT"
+msgstr "상대를 기다리는 중..."
+
+#: Scripts/side.gd
+msgid "READY_WAIT"
+msgstr "기다리는 중"
+
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAW"
+msgstr "{person}: <카드를 드로우했습니다.>"
+
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAWX"
+msgstr "{person}: <카드를 {amount}장 드로우했습니다.>"
+
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILL"
+msgstr "{person}: <카드를 {from}에서 {to}에 보냈습니다.>"
+
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILLX"
+msgstr "{person}: <{amount}장의 카드를 {from}에서 {to}로 보냈습니다.>"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_LOOK_ATTACHED"
+msgstr "붙어있는 카드 보기"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_LOOK_PAST"
+msgstr "이전 Bloom 카드 보기"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_PLAY_CENTERHIDDEN"
+msgstr "센터 포지션으로"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_PLAY_BACKHIDDEN"
+msgstr "백 포지션으로"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_PLAY"
+msgstr "플레이"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_BLOOM"
+msgstr "Bloom"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_BLOOM_SKIP"
+msgstr "건너뛰어 Bloom"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_BLOOM_FAST"
+msgstr "즉시 Bloom"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_UNREST"
+msgstr "휴식 종료"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REST"
+msgstr "휴식"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_CENTER"
+msgstr "센터 포지션으로 이동"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_BACK"
+msgstr "백 포지션으로 이동"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_COLLAB"
+msgstr "콜라보"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_BATON"
+msgstr "배턴 터치"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_DAMAGE"
+msgstr "대미지 추가"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_HEAL"
+msgstr "회복"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_EXTRAHP"
+msgstr "HP 증가"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
+msgstr "증가된 HP 제거"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_UNBLOOM"
+msgstr "Bloom 취소"
+
+#: Scripts/side.gd
+msgid "CARD_SUPPORT_ATTACH"
+msgstr "붙이기"
+
+#: Scripts/side.gd
+msgid "CARD_SUPPORT_PLAY"
+msgstr "플레이"
+
+#: Scripts/side.gd
+msgid "CARD_SUPPORT_ARCHIVE"
+msgstr "아카이브"
+
+#: Scripts/side.gd
+msgid "CARD_CHEER_LIFE_REVEAL"
+msgstr "공개하고 붙이기"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_TOPDECK"
+msgstr "덱의 맨 위로"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_BOTTOMDECK"
+msgstr "덱의 맨 아래로"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_ARCHIVE"
+msgstr "아카이브"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_HOLOPOWER"
+msgstr "홀로파워로 보내기"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_REVEAL"
+msgstr "공개"
+
+#: Scripts/side.gd
+msgid "CARD_STAGE_ARCHIVE"
+msgstr "아카이브"
+
+#: Scripts/side.gd
+msgid "CARD_STAGE_HAND"
+msgstr "패에 추가"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_COLLAB"
+msgstr "콜라보 포지션으로 이동"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_SWITCH"
+msgstr "백 홀로멤과 교대"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_HAND"
+msgstr "패에 추가"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_ATTACH"
+msgstr "붙이기"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_TOPDECK"
+msgstr "덱의 맨 위로"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_BOTTOMDECK"
+msgstr "덱의 맨 아래"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_ARCHIVE"
+msgstr "아카이브"
+
+#: Scripts/side.gd
+msgid "DECK_DRAW"
+msgstr "한 장 드로우"
+
+#: Scripts/side.gd
+msgid "DECK_DRAWX"
+msgstr "X장 드로우"
+
+#: Scripts/side.gd
+msgid "DECK_ARCHIVE"
+msgstr "아카이브"
+
+#: Scripts/side.gd
+msgid "DECK_ARCHIVEX"
+msgstr "X장 아카이브"
+
+#: Scripts/side.gd
+msgid "DECK_HOLOPOWER"
+msgstr "홀로파워로 보내기"
+
+#: Scripts/side.gd
+msgid "DECK_REVEAL"
+msgstr "덱탑 카드 공개"
+
+#: Scripts/side.gd
+msgid "DECK_LOOKX"
+msgstr "위에서 X장 확인"
+
+#: Scripts/side.gd
+msgid "DECK_SEARCH"
+msgstr "카드 찾기"
+
+#: Scripts/side.gd
+msgid "DECK_SHUFFLE"
+msgstr "덱 셔플"
+
+#: Scripts/side.gd
+msgid "DECK_MULLIGAN"
+msgstr "패를 덱에 넣고 셔플"
+
+#: Scripts/side.gd
+msgid "DECK_MULLIGAN_UNDO"
+msgstr "덱에 넣은 패 되돌리기"
+
+#: Scripts/side.gd
+msgid "DECK_RPS"
+msgstr "가위바위보 하기"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_REVEAL"
+msgstr "공개 후 붙이기"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_LOOKX"
+msgstr "위에서 X장 확인"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_SEARCH"
+msgstr "카드 찾기"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_SHUFFLE"
+msgstr "셔플"
+
+#: Scripts/side.gd
+msgid "ARCHIVE_SEARCH"
+msgstr "카드 찾기"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_ARCHIVE"
+msgstr "아카이브"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_ARCHIVEX"
+msgstr "X장 아카이브"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_DECK"
+msgstr "덱의 맨 위로"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_SEARCH"
+msgstr "카드 찾기"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_SHUFFLE"
+msgstr "셔플"
+
+#: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_PLAY"
+msgstr "플레이"
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_PLAY"
+msgstr "플레이"
+
+#: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_BLOOM"
+msgstr "Bloom"
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_BLOOM"
+msgstr "Bloom"
+
+#: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_BLOOM_FAST"
+msgstr "즉시 Bloom"
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_BLOOM_FAST"
+msgstr "즉시 Bloom"
+
+#: Scripts/side.gd
+msgid "LIST_CHEERDECK_CHEER_ATTACH"
+msgstr "붙이기"
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_CHEER_ATTACH"
+msgstr "붙이기"
+
+#: Scripts/side.gd
+msgid "LIST_ATTACHED_CHEER_ATTACH"
+msgstr "다시 붙이기"
+
+#: Scripts/side.gd
+msgid "LIST_CHEER_LIFE"
+msgstr "라이프로 보내기"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_REVEAL"
+msgstr "공개"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_HAND"
+msgstr "패에 추가"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_TOPDECK"
+msgstr "덱의 맨 위로"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_BOTTOMDECK"
+msgstr "덱의 맨 아래로"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_TOPCHEERDECK"
+msgstr "옐 덱의 맨 위로"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_BOTTOMCHEERDECK"
+msgstr "옐 덱의 맨 아래로"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_ARCHIVE"
+msgstr "아카이브"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_HOLOPOWER"
+msgstr "홀로파워로 보내기"
+
+#: Scripts/side.gd
+msgid "PROMPT_DAMAGE"
+msgstr "대미지 X 추가"
+
+#: Scripts/side.gd
+msgid "PROMPT_HEAL"
+msgstr "HP X 회복"
+
+#: Scripts/side.gd
+msgid "PROMPT_EXTRAHP"
+msgstr "HP X 추가"
+
+#: Scripts/side.gd
+msgid "PROMPT_REMOVEEXTRAHP"
+msgstr "HP X 제거"
+
+#: Scripts/side.gd
+msgid "PROMPT_OSHICOST"
+msgstr "X장 아카이브"
+
+#: Scripts/side.gd
+msgid "PROMPT_DRAW"
+msgstr "X장 드로우"
+
+#: Scripts/side.gd
+msgid "PROMPT_DECK_ARCHIVE"
+msgstr "X장 덱 파기"
+
+#: Scripts/side.gd
+msgid "PROMPT_LOOKATX"
+msgstr "X장 확인"
+
+#: Scripts/side.gd
+msgid "PROMPT_HOLOPOWER_ARCHIVE"
+msgstr "X장 아카이브"
+
+#: Scripts/side.gd
+msgid "PROMPT_ART_DAMAGE"
+msgstr "데미지 X 추가"
+
+#: Scripts/side.gd
+msgid "TURN_SECOND"
+msgstr "상대가 후공입니다."
+
+#: Scripts/side.gd
+msgid "TURN_FIRST"
+msgstr "상대가 선공입니다."
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_CARDS"
+msgstr "카드를 설정하는 중입니다. 기다려주세요..."
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_ITER_AGAIN"
+msgstr "오류가 발생했습니다. 다시 시도하세요. "
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOADING"
+msgstr "DB 다운로드 중..."
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_ERROR"
+msgstr "다운로드에 실패했습니다.\n"
+"다시 시도 중..."
+
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CUSTOM"
+msgstr "커스텀 금제"
+
+#: Scripts/Multiplayer.gd
+msgid "GAME_VS"
+msgstr "{player1} 대 {player2}"
+
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_WAITING"
+msgstr "기다리는 중"
+
+#: Scripts/Multiplayer.gd
+msgid "INGAME_RPS_WON"
+msgstr "이겼습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "INGAME_RPS_LOST"
+msgstr "졌습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU"
+msgstr "당신"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MULLIGAN"
+msgstr "{person}: <멀리건 했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_BLOOM"
+msgstr "{person}: <{fromZone}의 {fromName}({fromLevel})을(를) {toName}({toLevel})로 Bloom 했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_ARCHIVE"
+msgstr "{person}: <{fromName}({fromZone})를 아카이브했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_HAND"
+msgstr "{person}: <{fromName}({fromZone})를 패에 넣었습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_CENTER"
+msgstr "{person}: <{fromName}({fromZone})를 센터 포지션으로 보냈습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_COLLAB"
+msgstr "{person}: <{fromName}({fromZone})를 콜라보했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_MOVECOLLAB"
+msgstr "{person}: <{fromName}({fromZone})를 콜라보 포지션으로 이동했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_UNBLOOM"
+msgstr "{person}: <{fromName}({fromZone})를 {toName}({toZone})로 되돌렸습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_HAND"
+msgstr "{person}: <{cardName}을(를) 패에 추가했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_TOPDECK"
+msgstr "{person}: <{cardName}을(를) 덱의 맨 위에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_BOTTOMDECK"
+msgstr "{person}: <{cardName}을(를) 덱의 맨 아래에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_ARCHIVE"
+msgstr "{person}: <{cardName}을(를) 아카이브했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_OSHISKILL_SP"
+msgstr "{person}: <SP 오시 스킬 \"{skillName}\"를 사용했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_OSHISKILL"
+msgstr "{person}: <오시 스킬 \"{skillName}\"를 사용했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_TOPDECK"
+msgstr "{person}: <패를 덱의 맨 위에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_BOTTOMDECK"
+msgstr "{person}: <패를 덱의 맨 아래에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_ARCHIVE"
+msgstr "{person}: <패에서 {cardName}을(를) 아카이브했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_HOLOPOWER"
+msgstr "{person}: <홀로파워 한 장을 패에 넣었습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_REVEAL"
+msgstr "{person}: <패에서 {cardName}을(를) 공개했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_SUPPORT_PLAY"
+msgstr "{person}: <{cardName}을(를) 플레이했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_REVEAL"
+msgstr "{person}: <{fromFuda}에서 {cardName}을(를) 공개했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_REVEAL"
+msgstr "{person}님이 홀로파워에서 {cardName}을(를) 공개했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_MULLIGAN"
+msgstr "{person}: <패를 덱으로 되돌렸습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_UNDOMULLIGAN"
+msgstr "{person}: <덱으로 되돌린 패를 다시 가져왔습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_SEARCH"
+msgstr "{person}: <덱에서 카드를 찾습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_SHUFFLE"
+msgstr "{person}: <덱을 셔플합니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_SEARCH"
+msgstr "{person}: <옐 덱에서 카드를 찾습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_SHUFFLE"
+msgstr "{person}: <옐 덱을 셔플합니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_SEARCH"
+msgstr "{person}: <홀로파워에서 카드를 찾습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_SHUFFLE"
+msgstr "{person}: <홀로파워를 셔플합니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_LIFE"
+msgstr "{person}: <{fromFuda}에서 카드를 라이프에 추가했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_LIFE"
+msgstr "{person}: <{fromName}({fromZone})의 {cardName}을(를) 라이프에 추가했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HAND"
+msgstr "{person}: <아카이브에서 {cardName}을(를) 패에 추가했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_HAND"
+msgstr "{person}: <카드를 {fromFuda}에서 패로 추가했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_HAND"
+msgstr "{person}님이 홀로파워에서 {cardName}을(를) 패에 추가했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_HAND"
+msgstr "{person}: <{cardName}을(를) {fromName}({fromZone})의 패에 추가했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_TOPDECK"
+msgstr "{person}: <아카이브에서 {cardName}을(를) 덱의 맨 위에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_TOPDECK"
+msgstr "{person}: <카드를 덱의 맨 위로 옮겼습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_TOPDECK"
+msgstr "{person}: <{fromFuda}에서 카드를 덱의 맨 위로 옮겼습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_TOPDECK"
+msgstr "{person}님이 홀로파워에서 카드를 덱의 맨 위에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_TOPDECK"
+msgstr "{person}: <{cardName}을(를) {fromName}({fromZone})의 덱의 맨 위로 옮겼습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_BOTTOMDECK"
+msgstr "{person}: <아카이브에서 {cardName}을(를) 덱의 맨 아래에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_BOTTOMDECK"
+msgstr "{person}: <카드를 덱의 맨 아래에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_BOTTOMDECK"
+msgstr "{person}: <{fromFuda}에서 카드를 덱의 맨 아래에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_BOTTOMDECK"
+msgstr "{person}님이 홀로파워에서 카드를 덱의 맨 아래에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_BOTTOMDECK"
+msgstr "{person}: <{fromName}({fromZone})의 {cardName}을(를) 덱의 맨 아래에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_TOPCHEERDECK"
+msgstr "{person}: <아카이브에서 {cardName}을(를) 옐 덱의 맨 위에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_TOPCHEERDECK"
+msgstr "{person}: <카드를 옐 덱의 맨 위에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_TOPCHEERDECK"
+msgstr "{person}: <{fromFuda}에서 카드를 옐 덱의 맨 위에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_TOPCHEERDECK"
+msgstr "{person}: <{fromName}({fromZone})의 {cardName}를 옐 덱의 맨 위에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
+msgstr "{person}: <아카이브에서 {cardName}을(를) 덱의 맨 아래에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
+msgstr "{person}: <카드를 옐 덱의 맨 아래에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_BOTTOMCHEERDECK"
+msgstr "{person}: <{fromFuda}에서 카드를 옐 덱의 맨 아래에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_BOTTOMCHEERDECK"
+msgstr "{person}: <{fromName}({fromZone})의 {cardName}을(를) 옐 덱의 맨 아래에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_ARCHIVE"
+msgstr "{person}: <{fromFuda}에서 {cardName}을(를) 아카이브했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_ARCHIVE"
+msgstr "{person}님이 홀로파워에서 {cardName}을(를) 아카이브했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_ARCHIVE"
+msgstr "{person}: <{fromName}({fromZone})의 {cardName}를 아카이브했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HOLOPOWER"
+msgstr "{person}: <아카이브에서 {cardName}을(를) 홀로파워에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_HOLOPOWER"
+msgstr "{person}: <{fromFuda}에서 카드를 홀로파워에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_HOLOPOWER"
+msgstr "{person}: <{fromName}({fromZone})의 {cardName}을(를) 홀로파워에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARTS_DAMAGE"
+msgstr "<{person}의 {fromName}({fromZone})이(가) \"{artName}\" 아츠를 사용합니다.\n"
+"{toName}({toZone})에게 {damage}의 대미지.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_LOOKATX"
+msgstr "{person}: <덱의 맨 위에서부터 {amount}장을 확인합니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_LOOKATX"
+msgstr "{person}: <옐 덱의 맨 위에서부터 {amount}장을 확인합니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CARD_BACK"
+msgstr "{person}: <{fromName}({fromZone})을(를) 백 포지션으로 이동했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CARD_BATONPASS"
+msgstr "{person}: <{fromName}({fromZone})을(를) {toName}({toZone})와(과) 배턴 터치했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CARD_SWITCH"
+msgstr "{person}: <{fromName}({fromZone})을(를) {toName}({toZone})와(과) 교대했습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_SUPPORT_ATTACH"
+msgstr "{person}: <{attachName}을(를) {toName}({toZone})에게 붙였습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEER_ATTACH"
+msgstr "{person}: <{attachName}을(를) {toName}({toZone})에게 붙였습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOMEM_PLAY"
+msgstr "{person}: <{cardName}을(를) 백 포지션에 놨습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_HOLOMEM_PLAY"
+msgstr "{person}: <덱에서 {cardName}을(를) 백포지션에 놨습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
+msgstr "{person}: <옐 덱에서 {attachName}을 {toName}({toZone})에게 붙였습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
+msgstr "{person}: <{cardName}을(를) 아카이브에서 백 포지션에 놓았습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_CHEER_ATTACH"
+msgstr "{person}: <아카이브에서 {attachName}을(를) {toName}({toZone})에게 붙였습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_CHEER_ATTACH"
+msgstr "{person}: <{fromName}({fromZone})에게 붙어있던 {attachName}을(를) {toName}({toZone})에게 붙였습니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ENDTURN"
+msgstr "{person}: <턴을 종료합니다.>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DIERESULT"
+msgstr "<{person}의 주사위 결과 : {amount}>"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_RPS"
+msgstr "{person}님이 가위바위보에서 이겼습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_MULLIGAN"
+msgstr "당신은 멀리건 했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DRAW"
+msgstr "당신은 카드를 드로우했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DRAWX"
+msgstr "당신은 카드를 {amount}장 드로우했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_MILL"
+msgstr "당신은 카드를 {from}에서 {to}에 보냈습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_MILLX"
+msgstr "당신은 {amount}장의 카드를 {from}에서 {to}로 보냈습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_BLOOM"
+msgstr "당신은 {fromZone}의 {fromName}({fromLevel})을(를) {toName}({toLevel})로 Bloom 했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_ARCHIVE"
+msgstr "당신은 {fromName}({fromZone})를 아카이브했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_HAND"
+msgstr "당신은 {fromName}({fromZone})를 패에 넣었습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_CENTER"
+msgstr "당신은 {fromName}({fromZone})를 센터 포지션으로 보냈습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_COLLAB"
+msgstr "당신은 {fromName}({fromZone})를 콜라보했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_MOVECOLLAB"
+msgstr "당신은 {fromName}({fromZone})를 콜라보 포지션으로 이동했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_UNBLOOM"
+msgstr "당신은 {fromName}({fromZone})를 {toName}({toZone})로 되돌렸습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_HAND"
+msgstr "당신은 {cardName}을(를) 패에 추가했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_TOPDECK"
+msgstr "당신은 {cardName}을(를) 덱의 맨 위에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_BOTTOMDECK"
+msgstr "당신은 {cardName}을(를) 덱의 맨 아래에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_ARCHIVE"
+msgstr "당신은 {cardName}을(를) 아카이브했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_OSHISKILL_SP"
+msgstr "당신은 SP 오시 스킬 \"{skillName}\"를 사용했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_OSHISKILL"
+msgstr "당신은 오시 스킬 \"{skillName}\"를 사용했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_TOPDECK"
+msgstr "당신은 패를 덱의 맨 위에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_BOTTOMDECK"
+msgstr "당신은 패를 덱의 맨 아래에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_ARCHIVE"
+msgstr "당신은 패에서 {cardName}을(를) 아카이브했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_HOLOPOWER"
+msgstr "당신은 홀로파워 한 장을 패에 넣었습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_REVEAL"
+msgstr "당신은 패에서 {cardName}을(를) 공개했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_SUPPORT_PLAY"
+msgstr "당신은 {cardName}을(를) 플레이했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_REVEAL"
+msgstr "당신은 {fromFuda}에서 {cardName}을(를) 공개했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_REVEAL"
+msgstr "당신은 홀로파워에서 {cardName}을(를) 공개했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_MULLIGAN"
+msgstr "당신은 패를 덱으로 되돌렸습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_UNDOMULLIGAN"
+msgstr "당신은 덱으로 되돌린 패를 다시 가져왔습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_SEARCH"
+msgstr "당신은 덱에서 카드를 찾습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_SHUFFLE"
+msgstr "당신은 덱을 셔플합니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_SEARCH"
+msgstr "당신은 옐 덱에서 카드를 찾습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_SHUFFLE"
+msgstr "당신은 옐 덱을 셔플합니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_SEARCH"
+msgstr "당신은 홀로파워에서 카드를 찾습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_SHUFFLE"
+msgstr "당신은 홀로파워를 셔플합니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_LIFE"
+msgstr "당신은 {fromFuda}에서 카드를 라이프에 추가했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_LIFE"
+msgstr "당신은 {fromName}({fromZone})의 {cardName}을(를) 라이프에 추가했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HAND"
+msgstr "당신은 아카이브에서 {cardName}을(를) 패에 추가했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_HAND"
+msgstr "당신은 카드를 {fromFuda}에서 패로 추가했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_HAND"
+msgstr "당신은 홀로파워에서 {cardName}을(를) 패에 추가했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_HAND"
+msgstr "당신은 {cardName}을(를) {fromName}({fromZone})의 패에 추가했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_TOPDECK"
+msgstr "당신은 아카이브에서 {cardName}을(를) 덱의 맨 위에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_TOPDECK"
+msgstr "당신은 카드를 덱의 맨 위로 옮겼습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_TOPDECK"
+msgstr "당신은 {fromFuda}에서 카드를 덱의 맨 위에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_TOPDECK"
+msgstr "당신은 홀로파워에서 카드를 덱의 맨 위에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_TOPDECK"
+msgstr "당신은 {cardName}을(를) {fromName}({fromZone})의 덱의 맨 위에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_BOTTOMDECK"
+msgstr "당신은 아카이브에서 {cardName}을(를) 덱의 맨 아래에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_BOTTOMDECK"
+msgstr "당신은 카드를 덱의 맨 아래에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_BOTTOMDECK"
+msgstr "당신은 {fromFuda}에서 카드를 덱의 맨 아래에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_BOTTOMDECK"
+msgstr "당신은 홀로파워에서 카드를 덱의 맨 아래에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_BOTTOMDECK"
+msgstr "당신은 {fromName}({fromZone})의 {cardName}을(를) 덱의 맨 아래에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_TOPCHEERDECK"
+msgstr "당신은 아카이브에서 {cardName}을(를) 옐 덱의 맨 위에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_TOPCHEERDECK"
+msgstr "당신은 카드를 옐 덱의 맨 위에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_TOPCHEERDECK"
+msgstr "당신은 {fromFuda}에서 카드를 옐 덱의 맨 위에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_TOPCHEERDECK"
+msgstr "당신은 {fromName}({fromZone})의 {cardName}를 옐 덱의 맨 위에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
+msgstr "당신은 아카이브에서 {cardName}을(를) 덱의 맨 아래에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
+msgstr "당신은 카드를 옐 덱의 맨 아래에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_BOTTOMCHEERDECK"
+msgstr "당신은 {fromFuda}에서 카드를 옐 덱의 맨 아래에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_BOTTOMCHEERDECK"
+msgstr "당신은 {fromName}({fromZone})의 {cardName}을(를) 옐 덱의 맨 아래에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_ARCHIVE"
+msgstr "당신은 {fromFuda}에서 {cardName}을(를) 아카이브했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_ARCHIVE"
+msgstr "당신은 홀로파워에서 {cardName}을(를) 아카이브했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_ARCHIVE"
+msgstr "당신은 {fromName}({fromZone})의 {cardName}를 아카이브했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HOLOPOWER"
+msgstr "당신은 아카이브에서 {cardName}을(를) 홀로파워에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_HOLOPOWER"
+msgstr "당신은 {fromFuda}에서 카드를 홀로파워에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_HOLOPOWER"
+msgstr "당신은 {fromName}({fromZone})의 {cardName}을(를) 홀로파워에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARTS_DAMAGE"
+msgstr "당신의 {fromName}({fromZone})이(가) \"\n"
+"{artName}\" 아츠를 사용합니다.\n"
+"{toName}({toZone})에게 {damage}의 대미지"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_LOOKATX"
+msgstr "당신은 덱의 맨 위에서부터 {amount}장을 확인합니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_LOOKATX"
+msgstr "당신은 옐 덱의 맨 위에서부터 {amount}장을 확인합니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CARD_BACK"
+msgstr "당신은 {fromName}({fromZone})을(를) 백 포지션으로 이동했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CARD_BATONPASS"
+msgstr "당신은 {fromName}({fromZone})을(를) {toName}({toZone})와(과) 배턴 터치했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CARD_SWITCH"
+msgstr "당신은 {fromName}({fromZone})을(를) {toName}({toZone})와(과) 교대했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_SUPPORT_ATTACH"
+msgstr "당신은 {attachName}을(를) {toName}({toZone})에게 붙였습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEER_ATTACH"
+msgstr "당신은 {attachName}을(를) {toName}({toZone})에게 붙였습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOMEM_PLAY"
+msgstr "당신은 {cardName}을(를) 백 포지션에 놨습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_HOLOMEM_PLAY"
+msgstr "당신은 덱에서 {cardName}을(를) 백포지션에 놨습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_CHEER_ATTACH"
+msgstr "당신은 옐 덱에서 {attachName}을 {toName}({toZone})에게 붙였습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY"
+msgstr "당신은 {cardName}을(를) 아카이브에서 백 포지션에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_CHEER_ATTACH"
+msgstr "당신은 아카이브에서 {attachName}을(를) {toName}({toZone})에게 붙였습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_CHEER_ATTACH"
+msgstr "당신은 {fromName}({fromZone})에게 붙어있던 {attachName}을(를) {toName}({toZone})에게 붙였습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ENDTURN"
+msgstr "당신은 턴을 종료합니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DIERESULT"
+msgstr "당신의 주사위 결과 : {amount}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_RPS"
+msgstr "당신이 가위바위보에서 이겼습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "WIN"
+msgstr "이겼습니다!"
+
+#: Scripts/Multiplayer.gd
+msgid "SPECTATE_WIN"
+msgstr "{person}의 승리!"
+
+#: Scripts/Multiplayer.gd
+msgid "FORFEIT"
+msgstr "항복"
+
+#: Scripts/Multiplayer.gd
+msgid "WINCONSENT_FORFEIT"
+msgstr "정말로 항복하시겠습니까?"
+
+#: Scripts/Multiplayer.gd
+msgid "WINCONSENT_DECKOUT"
+msgstr "덱이 비어있는 채로 턴이 시작되었습니다.\n"
+"패배 처리하시겠습니까?"
+
+#: Scripts/Multiplayer.gd
+msgid "WINCONSENT_LIFE"
+msgstr "라이프에 카드가 없습니다.\n"
+"패배 처리하시겠습니까?"
+
+#: Scripts/Multiplayer.gd
+msgid "WINCONSENT_EMPTYSTAGE"
+msgstr "스테이지에 홀로멤이 없습니다.\n"
+"패배 처리하시겠습니까?"
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_MULLIGAN"
+msgstr "{person}님의 패가 멀리건에서 0장이 되었습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_DECKOUT"
+msgstr "{person}님의 덱이 소진되었습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_LIFE"
+msgstr "{person}님의 라이프가 소진되었습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_EMPTYSTAGE"
+msgstr "{person}님의 스테이지에 홀로멤이 없습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_FORFEIT"
+msgstr "{person}님이 항복했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_MULLIGAN"
+msgstr "당신의 패가 멀리건에서 0장이 되었습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_DECKOUT"
+msgstr "당신의 덱이 소진되었습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_LIFE"
+msgstr "당신의 라이프가 소진되었습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_EMPTYSTAGE"
+msgstr "당신의 스테이지에 홀로멤이 없습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_FORFEIT"
+msgstr "당신은 항복했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_PUBLIC"
+msgstr "공개"
+
+#: Scripts/card.gd
+msgid "NOBODY"
+msgstr "Nobody?"
+
+#: Scripts/card.gd
+msgid "NAMESEP"
+msgstr "/"
+
+#: Scripts/card.gd
+msgid "COLORLESS"
+msgstr "무색"
+
+#: Scripts/card.gd
+msgid "COLORSEP"
+msgstr "/"
+
+#: Scripts/card.gd
+msgid "NAME_BUZZ"
+msgstr "Buzz"
+
+#: Scripts/card.gd
+msgid "INFO_OSHI"
+msgstr "{colorText} 오시 홀로멤\n"
+"라이프: {life}{tagsText}"
+
+#: Scripts/card.gd
+msgid "INFO_OSHI_SPSKILL"
+msgstr "SP 오시 스킬 [홀로파워 -{costText}]  \"{nameText}\""
+
+#: Scripts/card.gd
+msgid "INFO_OSHI_SKILL"
+msgstr "오시 스킬 [홀로파워 -{costText}]  \"{nameText}\""
+
+#: Scripts/card.gd
+msgid "INFO_SPOT"
+msgstr "SPOT"
+
+#: Scripts/card.gd
+msgid "INFO_DEBUT"
+msgstr "Debut"
+
+#: Scripts/card.gd
+msgid "INFO_1ST"
+msgstr "1st"
+
+#: Scripts/card.gd
+msgid "INFO_2ND"
+msgstr "2nd"
+
+#: Scripts/card.gd
+msgid "INFO_BUZZ"
+msgstr "Buzz "
+
+#: Scripts/card.gd
+msgid "INFO_HOLOMEM_1"
+msgstr "{colorText} {levelText} {buzzText}홀로멤\n"
+"HP: {hpText}\n"
+"태그: {tagsText}"
+
+#: Scripts/card.gd
+msgid "INFO_NOBATONPASSCOST"
+msgstr "Free"
+
+#: Scripts/card.gd
+msgid "INFO_HOLOMEM_2"
+msgstr "배턴 터치: {costText}"
+
+#: Scripts/card.gd
+msgid "INFO_SUPPORT"
+msgstr "{supportText} ({typeText}){tagsText}"
+
+#: Scripts/card.gd
+msgid "INFO_LIMITED"
+msgstr "LIMITED : 턴에 1번 밖에 사용할 수 없다."
+
