@@ -139,7 +139,7 @@ flat = true
 
 [node name="HTTPManager" type="Node" parent="."]
 script = ExtResource("11_viqh1")
-timeout = 30.0
+parallel_connections_count = 20
 print_debug = true
 
 [connection signal="gui_input" from="CardButton" to="." method="_on_card_button_gui_input"]

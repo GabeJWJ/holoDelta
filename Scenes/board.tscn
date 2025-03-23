@@ -1473,7 +1473,6 @@ bus = &"BGM"
 [node name="WebSocket" type="Node" parent="."]
 script = ExtResource("20_v32ia")
 route = "/ws"
-use_WSS = false
 autoconnect_mode = 2
 
 [node name="Timer" type="Timer" parent="."]

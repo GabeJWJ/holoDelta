@@ -440,7 +440,9 @@ func _on_websocket_received(raw_data):
 						"Created Lobby":
 							show_lobby(data["host_name"],data["id"],true,{},null,false,false,false)
 						"Found Lobbies":
+							print("found")
 							if "lobbies" in data:
+								print(data["lobbies"])
 								found_lobbies(data["lobbies"])
 						"Found Games":
 							if "games" in data:
@@ -448,6 +450,7 @@ func _on_websocket_received(raw_data):
 						"Create Lobby Failed":
 							print("Failed to Create Lobby")
 							hide_lobby_options()
+							$CanvasLayer/LobbyButtons.visible = true
 						"Join Lobby Failed":
 							print("Failed to Join Lobby")
 							lobby_list.visible = false
@@ -741,11 +744,19 @@ func exit_lobby():
 			send_command("Lobby","Leave Lobby")
 		
 		clear_lobby_menu()
+		lobby_host_ready.disabled = false
+		lobby_chosen_ready.disabled = false
+		lobby_host_ready.visible = true
+		lobby_chosen_ready.visible = true
+		lobby_host_deck_select.text = tr("DECK_SELECT")
+		lobby_chosen_deck_select.text = tr("DECK_SELECT")
+		deckInfo = null
 		$CanvasLayer/LobbyScreen.visible = false
 
 func clear_lobby_menu() -> void:
 	for waitButton in lobby_waiting.get_children():
-		waitButton.queue_free()
+		if waitButton.get_class() == "Button":
+			waitButton.queue_free()
 	lobby_chosen_name.text = tr("LOBBY_NONE_CHOSEN")
 	lobby_chosen_ready_text.visible = false
 	lobby_chosen_options.visible = false

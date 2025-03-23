@@ -1,7 +1,7 @@
 extends Node
 
 const websocketURL = "holodelta.azurewebsites.net"
-const serverURL = "http://" + websocketURL + "/"
+const serverURL = "https://" + websocketURL + "/"
 
 
 # Called when the node enters the scene tree for the first time.
