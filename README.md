@@ -7,9 +7,9 @@ The code is a mess. I am sure it is needlessly confusing and wildly inconsistent
 
 If you are interested in contributing but are confused by the code, please contact me. I can try to explain over text, or we could get on a discord call.
 
-Notably, for running your own version of the server, the only thing you need to change from the "ServerStuff" folder is adding the po files from "cardLocalization" to the "cards" folder. Then the console command "uvicorn server:app --reload" will launch the server. You will need to change the "websocketURL" in server.gd to wherever your local server is being ran and may need to change "serverURL" to have http instead of https and set "WebSocket" in "board" to not use wss. Unsure.
+Notably, for running your own version of the server, all you need is in the "ServerStuff" folder, with the exception of a "holodelta_web" folder that would contain a web export of the sim. DO NOT EXPORT WITH DEBUG. Then the console command "uvicorn server:app --reload" will launch the server. You will need to change the "websocketURL" in server.gd to wherever your local server is being ran and may need to set "WebSocket" in "board" to not use wss.
 
-In terms of what to contribute, the only thing that is fully of limits is automation. That is something I want to do myself at some point. To that end, the standard is "not implementing anything that depends on the specific text of a card."
+In terms of what to contribute, the only thing that is fully off limits is automation. That is something I want to do myself at some point. To that end, the standard is "not implementing anything that depends on the specific text of a card."
 
 There are some simpler things you can do that might be good entry-level tasks to just get used to Godot and holoDelta in particular.
 
