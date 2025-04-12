@@ -23,11 +23,6 @@ var spectatedSides = {}
 var inGame = false
 var rps = false
 
-#Download Stuff
-const downloadLocalLink = Server.serverURL + "cards/"
-var downloadedInfo = false
-var downloadedLocal = {}
-
 #Lobby stuff
 @onready var lobby_banlist = $CanvasLayer/LobbyCreateMenu/VBoxContainer/OptionButton
 @onready var lobby_private = $CanvasLayer/LobbyCreateMenu/VBoxContainer/CheckButton
@@ -70,6 +65,7 @@ func findByClass(node: Node, className : String, result : Array) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	$WebSocket.host = Server.websocketURL
 	
 	randomize()
@@ -128,9 +124,12 @@ func _ready():
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 	
+	#Setup Info
 	if !Database.setup:
-		#Download Stuff
-		_download_everything()
+		$CanvasLayer/Popup.visible = true
+		$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_CARDS")
+		json.parse(FileAccess.get_file_as_string("res://cardData.json"))
+		Database.setup_data(json.data, Settings._connect_local.bind($Timer2.start), _setup_art_progress)
 	
 	#Visual
 	$CanvasLayer/InfoButton/Info/VersionText.text += Settings.version
@@ -147,33 +146,6 @@ func _setup_art_progress(current:int, max:int):
 	#	update until after the entire thing's done?
 	$CanvasLayer/Popup/ProgressBar.max_value = max
 	$CanvasLayer/Popup/ProgressBar.value = current
-
-func _download_everything():
-	if !DirAccess.dir_exists_absolute("user://cardLocalization"):
-		DirAccess.make_dir_absolute("user://cardLocalization")
-	$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_CARDS")
-	$CanvasLayer/Popup.visible = true
-	$HTTPManager.job(Server.serverURL + "cardList").on_failure(_download_failed).on_success(Database.setup_data.bind(_downloaded_card_list, _setup_art_progress)).fetch()
-	for lang in Settings.languages:
-		downloadedLocal[lang[0]] = false
-		$HTTPManager.job(downloadLocalLink + "%s.po" % lang[0]).on_failure(_download_failed).on_success(_downloaded_local.bind(lang[0])).download("user://cardLocalization/%s.po" % lang[0])
-
-func _download_failed(_result):
-	$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_ERROR")
-	print(_result)
-	_download_everything()
-
-func _downloaded_local(_result, lang):
-	downloadedLocal[lang] = true
-	_check_final()
-
-func _downloaded_card_list():
-	downloadedInfo = true
-	_check_final()
-
-func _check_final():
-	if downloadedInfo and !downloadedLocal.values().has(false):
-		$Timer2.start()
 
 #Sometimes the game was trying to connect to the downloaded po files before they were really there?
 #This might help that.
@@ -440,9 +412,7 @@ func _on_websocket_received(raw_data):
 						"Created Lobby":
 							show_lobby(data["host_name"],data["id"],true,{},null,false,false,false)
 						"Found Lobbies":
-							print("found")
 							if "lobbies" in data:
-								print(data["lobbies"])
 								found_lobbies(data["lobbies"])
 						"Found Games":
 							if "games" in data:
@@ -454,6 +424,9 @@ func _on_websocket_received(raw_data):
 						"Join Lobby Failed":
 							print("Failed to Join Lobby")
 							lobby_list.visible = false
+						"Spectate Game Failed":
+							print("Failed to Spectate Game")
+							game_list.visible = false
 						"Player Info":
 							if "id" in data and "name" in data:
 								player_id = data["id"]
@@ -725,11 +698,11 @@ func ready_lobby():
 	send_command("Lobby","Ready",{"deck":deckInfo})
 	if lobby_you_are_host:
 		lobby_host_deck_select.disabled = true
-		lobby_host_ready.disabled = true
+		#lobby_host_ready.disabled = true
 		lobby_host_ready.text = tr("LOBBY_WAITING")
 	else:
 		lobby_chosen_deck_select.disabled = true
-		lobby_chosen_ready.disabled = true
+		#lobby_chosen_ready.disabled = true
 		lobby_chosen_ready.text = tr("LOBBY_WAITING")
 
 func close_deckerror() -> void:
@@ -744,12 +717,16 @@ func exit_lobby():
 			send_command("Lobby","Leave Lobby")
 		
 		clear_lobby_menu()
-		lobby_host_ready.disabled = false
-		lobby_chosen_ready.disabled = false
+		lobby_host_ready.disabled = true
+		lobby_chosen_ready.disabled = true
 		lobby_host_ready.visible = true
 		lobby_chosen_ready.visible = true
+		lobby_host_ready.text = tr("LOBBY_READY")
+		lobby_chosen_ready.text = tr("LOBBY_READY")
 		lobby_host_deck_select.text = tr("DECK_SELECT")
 		lobby_chosen_deck_select.text = tr("DECK_SELECT")
+		lobby_host_deck_select.disabled = false
+		lobby_chosen_deck_select.disabled = false
 		deckInfo = null
 		$CanvasLayer/LobbyScreen.visible = false
 
@@ -959,6 +936,9 @@ func game_command(command: String, data: Dictionary) -> void:
 				$CanvasLayer/Question/Yes.visible = false
 				$CanvasLayer/Question.position = Vector2(422,194)
 				$CanvasLayer/Question.visible = true
+		"Close":
+			if inGame and !$CanvasLayer/Question.visible:
+				_restart()
 		_:
 			pass
 

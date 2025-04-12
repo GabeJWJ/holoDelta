@@ -41,7 +41,17 @@ func _all_decks() -> void:
 
 
 func _set_selected(deckInfo : Dictionary) -> void:
-	emit_signal("selected",deckInfo)
+	var true_deck = {}
+	if "deck" in deckInfo:
+		true_deck["deck"] = deckInfo["deck"]
+	if "cheerDeck" in deckInfo:
+		true_deck["cheerDeck"] = deckInfo["cheerDeck"]
+	if "oshi" in deckInfo:
+		true_deck["oshi"] = deckInfo["oshi"]
+	if "deckName" in deckInfo:
+		true_deck["deckName"] = deckInfo["deckName"]
+	
+	emit_signal("selected",true_deck)
 
 
 func _on_load_dialog_file_selected(path : String) -> void:

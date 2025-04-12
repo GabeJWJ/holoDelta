@@ -15,7 +15,7 @@ var current_banlist = {}
 var unreleased = {}
 
 func setup_data(result, callback = null, progress = null):
-	cardData = result.fetch()
+	cardData = result
 	totalCards = cardData.keys().size()
 	var current = 0
 	

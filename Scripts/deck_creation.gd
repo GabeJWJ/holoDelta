@@ -299,7 +299,7 @@ func _update_tabs() -> void:
 		if oshi_card not in temp_oshi_cards:
 			oshi_card.visible = false
 			continue
-		oshi_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
+		oshi_card.position = Vector2(42 + 75*(index % 5), 60 + 125*(index / 5))
 		oshi_card.visible = true
 		index += 1
 	$CanvasLayer/PossibleCards/TAB_OSHI/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
@@ -310,7 +310,7 @@ func _update_tabs() -> void:
 		if holomem_card not in temp_holomem_cards:
 			holomem_card.visible = false
 			continue
-		holomem_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
+		holomem_card.position = Vector2(42 + 75*(index % 5), 60 + 125*(index / 5))
 		holomem_card.visible = true
 		index += 1
 	$CanvasLayer/PossibleCards/TAB_HOLOMEM/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
@@ -321,7 +321,7 @@ func _update_tabs() -> void:
 		if support_card not in temp_support_cards:
 			support_card.visible = false
 			continue
-		support_card.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
+		support_card.position = Vector2(42 + 75*(index % 5), 60 + 125*(index / 5))
 		support_card.visible = true
 		index += 1
 	$CanvasLayer/PossibleCards/TAB_SUPPORT/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
@@ -329,9 +329,9 @@ func _update_tabs() -> void:
 	#If I were able to use proper GridContainers, this would be unnecessary.
 	#Unfortunately, Cards are Node2Ds instead of Controls.
 	#So I have to make sure that the tabs are large enough to see all of the cards
-	oshi_tab.custom_minimum_size = Vector2(0, (oshi_tab.get_child_count() / 5)*100 + 120)
-	holomem_tab.custom_minimum_size = Vector2(0, (holomem_tab.get_child_count()/5)*100 + 120)
-	support_tab.custom_minimum_size = Vector2(0, (support_tab.get_child_count()/5)*100 + 120)
+	oshi_tab.custom_minimum_size = Vector2(0, (oshi_tab.get_child_count() / 5)*125 + 130)
+	holomem_tab.custom_minimum_size = Vector2(0, (holomem_tab.get_child_count()/5)*125 + 130)
+	support_tab.custom_minimum_size = Vector2(0, (support_tab.get_child_count()/5)*125 + 130)
 	cheer_tab.custom_minimum_size = Vector2(0, (cheer_tab.get_child_count()/5)*100 + 120)
 
 func _on_oshi_name_select(selected_index) -> void:

@@ -385,6 +385,15 @@ theme_override_font_sizes/font_size = 20
 disabled = true
 text = "LOBBY_CREATE"
 
+[node name="Debug" type="Button" parent="CanvasLayer/LobbyButtons/LobbyCreate"]
+layout_mode = 2
+offset_left = -480.0
+offset_top = -262.0
+offset_right = -251.0
+offset_bottom = -249.0
+theme = ExtResource("5_fdkx6")
+text = "DEBUG"
+
 [node name="Control" type="Control" parent="CanvasLayer/LobbyButtons"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
@@ -1272,7 +1281,7 @@ MagnaDrake for helping with the Mac release
 よるみ for helping with the Japanese option
 
 And assorted thanks to:
-Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata, dr. AKA, Peeko, Soulscythe, J3Puffin, Chocolat, Rumos, FretfulGolem, AgentEmerald, Ilovebluewoman, Tanaka, Lordquendo, cendoru, BlueDragonOracle, Ink, ravenclawike, Stolas"
+Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata, dr. AKA, Peeko, Soulscythe, J3Puffin, Chocolat, Rumos, FretfulGolem, AgentEmerald, Ilovebluewoman, Tanaka, Lordquendo, cendoru, BlueDragonOracle, Ink, ravenclawike, Stolas, Tomoki"
 autowrap_mode = 3
 
 [node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]
@@ -1504,6 +1513,7 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/HBoxContainer/Scissors" to="." method="_rps_scissors"]
 [connection signal="pressed" from="CanvasLayer/Deck Creation" to="." method="_on_deck_creation_pressed"]
 [connection signal="pressed" from="CanvasLayer/LobbyButtons/LobbyCreate" to="." method="create_lobby_options"]
+[connection signal="pressed" from="CanvasLayer/LobbyButtons/LobbyCreate/Debug" to="." method="_restart"]
 [connection signal="pressed" from="CanvasLayer/LobbyButtons/LobbyJoin" to="." method="find_lobbies"]
 [connection signal="pressed" from="CanvasLayer/LobbyButtons/GameSpectate" to="." method="find_games"]
 [connection signal="pressed" from="CanvasLayer/LobbyCreateMenu/VBoxContainer/FinalCreate" to="." method="create_lobby"]

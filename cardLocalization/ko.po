@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-03-22 23:45\n"
+"PO-Revision-Date: 2025-03-24 19:17\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "이 홀로멤이 다운됐을 때, 자신의 라이프 -2."
@@ -88,7 +88,7 @@ msgid "Fuwawa Abyssgard"
 msgstr "후와와 어비스가드"
 
 msgid "FUWAMOCO"
-msgstr ""
+msgstr "FUWAMOCO"
 
 msgid "Gavis Bettel"
 msgstr "가비스 베텔"
@@ -364,7 +364,7 @@ msgid "Languages"
 msgstr "어학"
 
 msgid "Advent"
-msgstr ""
+msgstr "Advent"
 
 msgid "Alcohol"
 msgstr "술"
@@ -382,10 +382,10 @@ msgid "Bird"
 msgstr "새"
 
 msgid "Council"
-msgstr ""
+msgstr "Council"
 
 msgid "EN"
-msgstr ""
+msgstr "EN"
 
 msgid "Gen0"
 msgstr "0기생"
@@ -409,7 +409,7 @@ msgid "HalfElf"
 msgstr "하프엘프"
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "IDGen1"
 msgstr "ID 1기생"
@@ -421,13 +421,13 @@ msgid "IDGen3"
 msgstr "ID 3기생"
 
 msgid "JP"
-msgstr ""
+msgstr "JP"
 
 msgid "Myth"
-msgstr ""
+msgstr "Myth"
 
 msgid "Promise"
-msgstr ""
+msgstr "Promise"
 
 msgid "Sea"
 msgstr "바다"
@@ -983,7 +983,7 @@ msgid "hBP01-022_NAME"
 msgstr "토키노 소라"
 
 msgid "hBP01-022_ART_0_NAME"
-msgstr "최고의 하루로 하자🎵"
+msgstr "최고의 하루로 하자♪"
 
 msgid "hBP01-022_BLOOM_NAME"
 msgstr "즐길 준비는 됐어!?"
@@ -1430,7 +1430,7 @@ msgid "hBP01-079_NAME"
 msgstr "호시마치 스이세이"
 
 msgid "hBP01-079_ART_0_NAME"
-msgstr "스이쨩은— 오늘도 귀여워——!!"
+msgstr "스이쨩은ㅡ 오늘도 귀여워ㅡㅡ!!"
 
 msgid "hBP01-079_BLOOM_NAME"
 msgstr "앗하고 놀라게 해줄테니까 놓치지 마!"
@@ -1544,7 +1544,7 @@ msgid "hBP01-039_COLLAB_NAME"
 msgstr "갤럭시 아이돌"
 
 msgid "hBP01-039_COLLAB_EFFECT"
-msgstr "자신의 오시 홀로멤이 〈우사다 페코라〉일 때, 주시위를 1번 굴릴 수 있다 : 짝수일 때, 자신의 옐 덱의 위에서부터 1장을, 자신의 홀로멤에게 보낸다."
+msgstr "자신의 오시 홀로멤이 〈우사다 페코라〉일 때, 주사위를 1번 굴릴 수 있다 : 짝수일 때, 자신의 옐 덱의 위에서부터 1장을, 자신의 홀로멤에게 보낸다."
 
 msgid "hBP01-040_NAME"
 msgstr "우사다 페코라"
@@ -1634,7 +1634,7 @@ msgid "hBP02-008_NAME"
 msgstr "시라카미 후부키"
 
 msgid "hBP02-008_ART_0_NAME"
-msgstr "콘콘키—츠네!"
+msgstr "콘콘키ㅡ츠네!"
 
 msgid "hBP02-028_NAME"
 msgstr "호쇼 마린"
@@ -2444,7 +2444,7 @@ msgid "hSD02-005_ART_0_NAME"
 msgstr "잘게요~"
 
 msgid "hSD02-005_ART_1_NAME"
-msgstr "오츠나키리—"
+msgstr "오츠나키리ㅡ"
 
 msgid "hSD02-006_ART_0_NAME"
 msgstr "함께 축하"
@@ -2459,7 +2459,7 @@ msgid "hSD02-007_ART_0_NAME"
 msgstr "반짝이는 요를 놓치면 안 돼~~!!"
 
 msgid "hSD02-007_BLOOM_NAME"
-msgstr "어느—쪽 어느 쪽🎵"
+msgstr "어느ㅡ쪽 어느 쪽♪"
 
 msgid "hSD02-007_BLOOM_EFFECT"
 msgstr "Debut에서 Bloom했을 때, 자신의 덱의 위에서부터 2장을 본다. 그 중에서, 1장을 공개하고, 패에 더한다. 그리고 남은 카드를 아카이브한다."
@@ -2477,7 +2477,7 @@ msgid "hSD02-009_ART_0_NAME"
 msgstr "아야후부미의 「아야」 담당"
 
 msgid "hSD02-009_ART_1_NAME"
-msgstr "요—다요"
+msgstr "요ㅡ다요"
 
 msgid "hSD02-009_ART_1_EFFECT"
 msgstr "자신의 패 1~3장을 아카이브할 수 있다 : 상대의 센터 홀로멤에게, 아카이브한 카드 1장당, 특수 대미지 40을 준다."
@@ -2486,7 +2486,7 @@ msgid "hSD02-010_ART_0_NAME"
 msgstr "아야후부미의 「후부」 담당"
 
 msgid "hSD02-010_COLLAB_NAME"
-msgstr "돌아오렴—"
+msgstr "돌아오렴ㅡ"
 
 msgid "hSD02-010_COLLAB_EFFECT"
 msgstr "자신의 아카이브의 마스코트 1장을 패로 되돌릴 수 있다."
@@ -2519,7 +2519,7 @@ msgid "hSD03-008_GIFT_EFFECT"
 msgstr "[센터 포지션 한정] 자신의 스테이지의 [〈타카네 루이〉와 〈오오카미 미오〉와 〈시라카미 후부키〉와 〈라플라스 다크니스〉와 〈이누가미 코로네〉] 전원의 아츠 +20."
 
 msgid "hSD04-007_ART_0_NAME"
-msgstr "너무 좋아! 쪽❤️"
+msgstr "너무 좋아! 쪽♡"
 
 msgid "hSD04-007_ART_0_EFFECT"
 msgstr "자신의 백 홀로멤 1명의 HP 20 회복."
@@ -2660,7 +2660,7 @@ msgid "hSD03-005_NAME"
 msgstr "네코마타 오카유"
 
 msgid "hSD03-005_ART_0_NAME"
-msgstr "꼬~옥하고 안아줘야 해❤️"
+msgstr "꼬~옥하고 안아줘야 해♡"
 
 msgid "hSD03-005_ART_1_NAME"
 msgstr "에헤헤한 장난"
@@ -2672,7 +2672,7 @@ msgid "hSD03-006_ART_0_NAME"
 msgstr "네코카부리"
 
 msgid "hSD03-006_ART_1_NAME"
-msgstr "샤—"
+msgstr "샤ㅡ"
 
 msgid "hSD03-006_ART_1_EFFECT"
 msgstr "이 홀로멤의 청 옐 1장을 아카이브할 수 있다 : 상대의 센터 홀로멤과 백 홀로멤 1명에게 특수 대미지 10을 준다."
@@ -2773,7 +2773,7 @@ msgid "hSD04-004_NAME"
 msgstr "유즈키 초코"
 
 msgid "hSD04-004_ART_0_NAME"
-msgstr "잔뜩 먹어줘❤️"
+msgstr "잔뜩 먹어줘♡"
 
 msgid "hSD04-004_COLLAB_NAME"
 msgstr "지옥 고봉밥"
@@ -2809,7 +2809,7 @@ msgid "hSD04-010_ART_0_NAME"
 msgstr "지옥 복권 뽑기, 뽑게 해줄게"
 
 msgid "hSD04-010_COLLAB_NAME"
-msgstr "쵸코—옷!!"
+msgstr "쵸코ㅡ옷!!"
 
 msgid "hSD04-010_COLLAB_EFFECT"
 msgstr "자신의 센터 홀로멤이 〈유즈키 초코〉일 때, 자신의 아카이브의 옐 1장을 자신의 홀로멤에게 보낼 수 있다."
@@ -2909,7 +2909,7 @@ msgid "hBP02-044_ART_0_NAME"
 msgstr "부끄러워"
 
 msgid "hBP02-044_ART_1_NAME"
-msgstr "싫다, 진짜—"
+msgstr "싫다, 진짜ㅡ"
 
 msgid "hBP02-045_NAME"
 msgstr "무라사키 시온"
@@ -2918,7 +2918,7 @@ msgid "hBP02-045_ART_0_NAME"
 msgstr "최고로 해피해요!!"
 
 msgid "hBP02-045_BLOOM_NAME"
-msgstr "오랜만에 하는 전체 라이브—!!"
+msgstr "오랜만에 하는 전체 라이브ㅡ!!"
 
 msgid "hBP02-045_BLOOM_EFFECT"
 msgstr "자신의 덱의 위에서부터 3장을 본다. 그 중에서, [청색 홀로멤이나 자색 홀로멤] 1장을 공개하고, 패에 더한다. 그리고 남은 카드는 원하는 순서로 덱의 아래로 되돌린다."
@@ -3002,7 +3002,7 @@ msgid "hBP02-063_ART_0_NAME"
 msgstr "즐기며 가자!!!"
 
 msgid "hBP02-063_BLOOM_NAME"
-msgstr "모두 「WAH!」 준비는 됐니—!"
+msgstr "모두 「WAH!」 준비는 됐니!"
 
 msgid "hBP02-063_BLOOM_EFFECT"
 msgstr "자신의 #Myth를 가진 홀로멤 1명의 HP 20 회복."
@@ -3189,7 +3189,7 @@ msgid "hBP02-016_NAME"
 msgstr "시로가네 노엘"
 
 msgid "hBP02-016_ART_0_NAME"
-msgstr "눈에 새겨 넣는 거야❤️"
+msgstr "눈에 새겨 넣는 거야♡"
 
 msgid "hBP02-016_BLOOM_NAME"
 msgstr "노에쨩의 용감한 모습……"
@@ -3207,7 +3207,7 @@ msgid "hBP02-017_ART_1_NAME"
 msgstr "3기생 파워"
 
 msgid "hBP02-017_ART_1_EFFECT"
-msgstr "[콜리보 포지션 한정] 자신의 스테이지에 이 홀로멤 이외의 #3기생을 가진 홀로멤 1명당, 이 아츠 +20. 단, 세는 인수는 4명까지."
+msgstr "[콜라보 포지션 한정] 자신의 스테이지에 이 홀로멤 이외의 #3기생을 가진 홀로멤 1명당, 이 아츠 +20. 단, 세는 인수는 4명까지."
 
 msgid "hBP02-100_NAME"
 msgstr "시로가네 성기사단"
@@ -3235,7 +3235,7 @@ msgid "hBP02-030_ART_0_NAME"
 msgstr "선장, 뭘 당하는 걸려나?"
 
 msgid "hBP02-030_ART_1_NAME"
-msgstr "정말, 변태❤️"
+msgstr "정말, 변태♡"
 
 msgid "hBP02-095_NAME"
 msgstr "도쿠로 군"
@@ -3283,7 +3283,7 @@ msgid "hBP02-033_BLOOM_NAME"
 msgstr "고딕 퀸"
 
 msgid "hBP02-033_BLOOM_EFFECT"
-msgstr "자신의 아카이브의 홀로멤 1장을 패로 되돌릴 수 있다. 그 후, 이 홀로멤에게 겹쳐져 있는 홀로멤이 3장 이상일 때, 상대의 센터 홀로멤이나 콜리보 홀로멤에게 특수 대미지 50을 준다."
+msgstr "자신의 아카이브의 홀로멤 1장을 패로 되돌릴 수 있다. 그 후, 이 홀로멤에게 겹쳐져 있는 홀로멤이 3장 이상일 때, 상대의 센터 홀로멤이나 콜라보 홀로멤에게 특수 대미지 50을 준다."
 
 msgid "hBP02-085_NAME"
 msgstr "HOLOLIVE FANTASY"
@@ -3532,7 +3532,7 @@ msgid "hBP02-049_NAME"
 msgstr "쿠레이지 올리"
 
 msgid "hBP02-049_ART_0_NAME"
-msgstr "오츠크레이지—!"
+msgstr "오츠크레이지ㅡ!"
 
 msgid "hBP02-049_COLLAB_NAME"
 msgstr "올리가 항상 보고 있어"
@@ -3756,10 +3756,10 @@ msgid "hBP02-025_NAME"
 msgstr "오오카미 미오"
 
 msgid "hBP02-025_ART_0_NAME"
-msgstr "오하미온—"
+msgstr "오하미온ㅡ"
 
 msgid "hBP02-025_ART_1_NAME"
-msgstr "오츠미온—"
+msgstr "오츠미온ㅡ"
 
 msgid "hBP02-026_NAME"
 msgstr "오오카미 미오"
@@ -3786,10 +3786,10 @@ msgid "hBP02-009_NAME"
 msgstr "시라카미 후부키"
 
 msgid "hBP02-009_ART_0_NAME"
-msgstr "오츠콘—이었습니다—"
+msgstr "오츠콘ㅡ이었습니다ㅡ"
 
 msgid "hBP02-009_GIFT_NAME"
-msgstr "오하콘키—츠네!"
+msgstr "오하콘키ㅡ츠네!"
 
 msgid "hBP02-009_GIFT_EFFECT"
 msgstr "[콜라보 포지션 한정] 자신의 마스코트가 붙어 있는 홀로멤 전원의 아츠 +10."
@@ -3855,7 +3855,7 @@ msgid "hBP02-010_ART_0_NAME"
 msgstr "금목서의 꽃 후부키"
 
 msgid "hBP02-010_ART_1_NAME"
-msgstr "Thank You Friends❤️"
+msgstr "Thank You Friends♡"
 
 msgid "hY03-002_NAME"
 msgstr "적 옐"
@@ -3948,7 +3948,7 @@ msgid "hSD05-005_ART_0_NAME"
 msgstr "요로시쿠!"
 
 msgid "hSD05-005_ART_1_NAME"
-msgstr "위—!"
+msgstr "위ㅡ!"
 
 msgid "hSD05-006_NAME"
 msgstr "토도로키 하지메"
@@ -4026,7 +4026,7 @@ msgid "hSD05-012_ART_0_NAME"
 msgstr "세계 제일 귀여워"
 
 msgid "hSD05-012_COLLAB_NAME"
-msgstr "돈—!"
+msgstr "돈ㅡ!"
 
 msgid "hSD05-012_COLLAB_EFFECT"
 msgstr "상대의 센터 홀로멤이나 백 홀로멤 1명에게 특수 대미지 10을 준다."
@@ -4035,7 +4035,7 @@ msgid "hSD05-013_NAME"
 msgstr "오토노세 카나데"
 
 msgid "hSD05-013_ART_0_NAME"
-msgstr "가핰ㅋ"
+msgstr "가하ㅋ"
 
 msgid "hSD05-013_COLLAB_NAME"
 msgstr "크레센도한 나날"
@@ -4140,7 +4140,7 @@ msgid "hSD06-008_ART_0_NAME"
 msgstr "도야"
 
 msgid "hSD06-008_COLLAB_NAME"
-msgstr "두뇌—!"
+msgstr "두뇌ㅡ!"
 
 msgid "hSD06-008_COLLAB_EFFECT"
 msgstr "자신의 센터 홀로멤이 #비밀 결사 holoX를 가질 때, 자신의 패가 5장 이하라면, 자신은 덱을 1장 드로우한다."
@@ -4185,7 +4185,7 @@ msgid "hSD07-001_NAME"
 msgstr "시라누이 후레아"
 
 msgid "hSD07-001_SKILL_NAME"
-msgstr "옐로 마이크"
+msgstr "옐로우 마이크"
 
 msgid "hSD07-001_SKILL_EFFECT"
 msgstr "[턴에 1번] 이 턴 동안, 자신의 황색 센터 홀로멤의 아츠 +20."
@@ -4200,7 +4200,7 @@ msgid "hSD07-002_NAME"
 msgstr "시라누이 후레아"
 
 msgid "hSD07-002_ART_0_NAME"
-msgstr "콘누이—!"
+msgstr "콘누이ㅡ!"
 
 msgid "hSD07-002_ART_1_NAME"
 msgstr "시라누이 후레아야!"
@@ -4239,7 +4239,7 @@ msgid "hSD07-006_NAME"
 msgstr "시라누이 후레아"
 
 msgid "hSD07-006_ART_0_NAME"
-msgstr "너를 가장 좋아하는 건 나~❤️"
+msgstr "너를 가장 좋아하는 건 나~♡"
 
 msgid "hSD07-006_ART_0_EFFECT"
 msgstr "자신의 라이프가 3 이하일 때, 이 아츠 +30."
@@ -4305,7 +4305,7 @@ msgid "hSD07-011_ART_0_NAME"
 msgstr "마왕군은 없어졌습니다"
 
 msgid "hSD07-011_COLLAB_NAME"
-msgstr "버닝🎵 버닝🎵"
+msgstr "버닝♪ 버닝♪"
 
 msgid "hSD07-011_COLLAB_EFFECT"
 msgstr "상대의 센터 홀로멤에게 특수 대미지 10을 준다."
@@ -4409,7 +4409,7 @@ msgid "hBP03-005_SPSKILL_NAME"
 msgstr "악마적 소행"
 
 msgid "hBP03-005_SPSKILL_EFFECT"
-msgstr "[게임에 1번] 상대 턴에 내 [토코야미 토와]가 다운했을 때 사용할 수 있다 : 상대의 센터 홀로멤과 콜라보 홀로멤의 옐 2장 씩을 원하는 순서대로 옐 덱 아래로 보낸다."
+msgstr "[게임에 1번] 상대 턴에 내 [토코야미 토와]가 다운됐을 때 사용할 수 있다 : 상대의 센터 홀로멤과 콜라보 홀로멤의 옐 2장 씩을 원하는 순서대로 옐 덱 아래로 보낸다."
 
 msgid "hBP03-007_NAME"
 msgstr "츠노마키 와타메"
@@ -4517,7 +4517,7 @@ msgid "hBP03-016_NAME"
 msgstr "시시로 보탄"
 
 msgid "hBP03-016_ART_0_NAME"
-msgstr "라라이온🎵"
+msgstr "라라이온♪"
 
 msgid "hBP03-017_NAME"
 msgstr "시시로 보탄"
@@ -4637,7 +4637,7 @@ msgid "hBP03-038_ART_0_NAME"
 msgstr "모코코와 도넛 쿠킹"
 
 msgid "hBP03-038_BLOOM_NAME"
-msgstr "놀 시간이다—!"
+msgstr "놀 시간이다ㅡ!"
 
 msgid "hBP03-038_BLOOM_EFFECT"
 msgstr "Debut에서 Bloom했을 때, 자신의 덱에서, 1st 홀로멤인 〈후와와 어비스가드〉 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
@@ -4727,7 +4727,7 @@ msgid "hBP03-051_NAME"
 msgstr "토코야미 토와"
 
 msgid "hBP03-051_ART_0_NAME"
-msgstr "콘얍삐—"
+msgstr "콘얍삐ㅡ"
 
 msgid "hBP03-052_NAME"
 msgstr "토코야미 토와"
@@ -4742,7 +4742,7 @@ msgid "hBP03-053_NAME"
 msgstr "토코야미 토와"
 
 msgid "hBP03-053_ART_0_NAME"
-msgstr "오츠얍삐—"
+msgstr "오츠얍삐ㅡ"
 
 msgid "hBP03-053_ART_1_NAME"
 msgstr "큐링"
@@ -5337,7 +5337,7 @@ msgid "hBP03-059_NAME"
 msgstr "로보코 씨"
 
 msgid "hBP03-059_ART_0_NAME"
-msgstr "웃는 얼굴이 되어—랏"
+msgstr "웃는 얼굴이 되어ㅡ랏"
 
 msgid "hBP03-059_BLOOM_NAME"
 msgstr "PON 하면 그만큼"
@@ -5418,7 +5418,7 @@ msgid "hBP03-066_ART_0_EFFECT"
 msgstr "이 아츠의 대상이 2nd 홀로멤일 경우, 이 홀로멤 밑의 1st 홀로멤 한 장을 아카이브 할 수 있다. 이 아츠의 대미지 +50."
 
 msgid "hBP03-066_GIFT_NAME"
-msgstr "완더풀~❤️"
+msgstr "완더풀~♡"
 
 msgid "hBP03-066_GIFT_EFFECT"
 msgstr "이 홀로멤이 다운됐을 때, 옐 덱 위에서 한 장을 자신의 <이누가미 코로네>에게 보낸다."
@@ -5436,7 +5436,7 @@ msgid "hBP03-081_NAME"
 msgstr "오토노세 카나데"
 
 msgid "hBP03-081_ART_0_NAME"
-msgstr "내일은 월요일~🎵"
+msgstr "내일은 월요일~♪"
 
 msgid "hBP03-082_NAME"
 msgstr "오토노세 카나데"

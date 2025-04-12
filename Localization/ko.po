@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-03-22 23:45\n"
+"PO-Revision-Date: 2025-03-24 19:17\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -307,7 +307,7 @@ msgstr "준비"
 
 #: Scenes/side.tscn
 msgid "RPS_SELECT"
-msgstr "옵션을 선택하세요."
+msgstr "어떤 걸 내시겠습니까?"
 
 #: Scenes/side.tscn
 msgid "OPPONENT"
@@ -420,7 +420,7 @@ msgstr "옐"
 
 #: Scenes/deck_creation.tscn
 msgid "OSHI"
-msgstr "리더"
+msgstr "오시"
 
 #: Scenes/deck_creation.tscn
 msgid "LOAD"
@@ -595,22 +595,22 @@ msgstr "기다리는 중"
 #: Scripts/side.gd
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DRAW"
-msgstr "{person}: <카드를 드로우했습니다.>"
+msgstr "{person}님이 카드를 드로우했습니다"
 
 #: Scripts/side.gd
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DRAWX"
-msgstr "{person}: <카드를 {amount}장 드로우했습니다.>"
+msgstr "{person}님이 카드를 {amount}장 드로우했습니다"
 
 #: Scripts/side.gd
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_MILL"
-msgstr "{person}: <카드를 {from}에서 {to}에 보냈습니다.>"
+msgstr "{person}님이 카드를 {from}에서 {to}에 보냈습니다"
 
 #: Scripts/side.gd
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_MILLX"
-msgstr "{person}: <{amount}장의 카드를 {from}에서 {to}로 보냈습니다.>"
+msgstr "{person}님이 {amount}장의 카드를 {from}에서 {to}로 보냈습니다"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_LOOK_ATTACHED"
@@ -1011,87 +1011,87 @@ msgstr "당신"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_MULLIGAN"
-msgstr "{person}: <멀리건 했습니다.>"
+msgstr "{person}님이 멀리건 했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_BLOOM"
-msgstr "{person}: <{fromZone}의 {fromName}({fromLevel})을(를) {toName}({toLevel})로 Bloom 했습니다.>"
+msgstr "{person}님이 {fromZone}의 {fromName}({fromLevel})을(를) {toName}({toLevel})로 Bloom 했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_STAGE_ARCHIVE"
-msgstr "{person}: <{fromName}({fromZone})를 아카이브했습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})를 아카이브했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_STAGE_HAND"
-msgstr "{person}: <{fromName}({fromZone})를 패에 넣었습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})를 패에 넣었습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_STAGE_CENTER"
-msgstr "{person}: <{fromName}({fromZone})를 센터 포지션으로 보냈습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})를 센터 포지션으로 보냈습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_STAGE_COLLAB"
-msgstr "{person}: <{fromName}({fromZone})를 콜라보했습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})를 콜라보했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_STAGE_MOVECOLLAB"
-msgstr "{person}: <{fromName}({fromZone})를 콜라보 포지션으로 이동했습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})를 콜라보 포지션으로 이동했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_STAGE_UNBLOOM"
-msgstr "{person}: <{fromName}({fromZone})를 {toName}({toZone})로 되돌렸습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})를 {toName}({toZone})로 되돌렸습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_HAND"
-msgstr "{person}: <{cardName}을(를) 패에 추가했습니다.>"
+msgstr "{person}님이 {cardName}을(를) 패에 추가했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_TOPDECK"
-msgstr "{person}: <{cardName}을(를) 덱의 맨 위에 놓았습니다.>"
+msgstr "{person}님이 {cardName}을(를) 덱의 맨 위에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_BOTTOMDECK"
-msgstr "{person}: <{cardName}을(를) 덱의 맨 아래에 놓았습니다.>"
+msgstr "{person}님이 {cardName}을(를) 덱의 맨 아래에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_ARCHIVE"
-msgstr "{person}: <{cardName}을(를) 아카이브했습니다.>"
+msgstr "{person}님이 {cardName}을(를) 아카이브했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_OSHISKILL_SP"
-msgstr "{person}: <SP 오시 스킬 \"{skillName}\"를 사용했습니다.>"
+msgstr "{person}님이 SP 오시 스킬 \"{skillName}\"를 사용했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_OSHISKILL"
-msgstr "{person}: <오시 스킬 \"{skillName}\"를 사용했습니다.>"
+msgstr "{person}님이 오시 스킬 \"{skillName}\"를 사용했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_TOPDECK"
-msgstr "{person}: <패를 덱의 맨 위에 놓았습니다.>"
+msgstr "{person}님이 패를 덱의 맨 위에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_BOTTOMDECK"
-msgstr "{person}: <패를 덱의 맨 아래에 놓았습니다.>"
+msgstr "{person}님이 패를 덱의 맨 아래에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_ARCHIVE"
-msgstr "{person}: <패에서 {cardName}을(를) 아카이브했습니다.>"
+msgstr "{person}님이 패에서 {cardName}을(를) 아카이브했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_HOLOPOWER"
-msgstr "{person}: <홀로파워 한 장을 패에 넣었습니다.>"
+msgstr "{person}님이 홀로파워 한 장을 패에 넣었습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_REVEAL"
-msgstr "{person}: <패에서 {cardName}을(를) 공개했습니다.>"
+msgstr "{person}님이 패에서 {cardName}을(를) 공개했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_SUPPORT_PLAY"
-msgstr "{person}: <{cardName}을(를) 플레이했습니다.>"
+msgstr "{person}님이 {cardName}을(를) 플레이했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_REVEAL"
-msgstr "{person}: <{fromFuda}에서 {cardName}을(를) 공개했습니다.>"
+msgstr "{person}님이 {fromFuda}에서 {cardName}을(를) 공개했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HOLOPOWER_REVEAL"
@@ -1099,51 +1099,51 @@ msgstr "{person}님이 홀로파워에서 {cardName}을(를) 공개했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DECK_MULLIGAN"
-msgstr "{person}: <패를 덱으로 되돌렸습니다.>"
+msgstr "{person}님이 패를 덱으로 되돌렸습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DECK_UNDOMULLIGAN"
-msgstr "{person}: <덱으로 되돌린 패를 다시 가져왔습니다.>"
+msgstr "{person}님이 덱으로 되돌린 패를 다시 가져왔습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DECK_SEARCH"
-msgstr "{person}: <덱에서 카드를 찾습니다.>"
+msgstr "{person}님이 덱에서 카드를 찾습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DECK_SHUFFLE"
-msgstr "{person}: <덱을 셔플합니다.>"
+msgstr "{person}님이 덱을 셔플합니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CHEERDECK_SEARCH"
-msgstr "{person}: <옐 덱에서 카드를 찾습니다.>"
+msgstr "{person}님이 옐 덱에서 카드를 찾습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CHEERDECK_SHUFFLE"
-msgstr "{person}: <옐 덱을 셔플합니다.>"
+msgstr "{person}님이 옐 덱을 셔플합니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HOLOPOWER_SEARCH"
-msgstr "{person}: <홀로파워에서 카드를 찾습니다.>"
+msgstr "{person}님이 홀로파워에서 카드를 찾습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HOLOPOWER_SHUFFLE"
-msgstr "{person}: <홀로파워를 셔플합니다.>"
+msgstr "{person}님이 홀로파워를 셔플합니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_LIFE"
-msgstr "{person}: <{fromFuda}에서 카드를 라이프에 추가했습니다.>"
+msgstr "{person}님이 {fromFuda}에서 카드를 라이프에 추가했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_LIFE"
-msgstr "{person}: <{fromName}({fromZone})의 {cardName}을(를) 라이프에 추가했습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})의 {cardName}을(를) 라이프에 추가했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_HAND"
-msgstr "{person}: <아카이브에서 {cardName}을(를) 패에 추가했습니다.>"
+msgstr "{person}님이 아카이브에서 {cardName}을(를) 패에 추가했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_HAND"
-msgstr "{person}: <카드를 {fromFuda}에서 패로 추가했습니다.>"
+msgstr "{person}님이 카드를 {fromFuda}에서 패로 추가했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HOLOPOWER_HAND"
@@ -1151,19 +1151,19 @@ msgstr "{person}님이 홀로파워에서 {cardName}을(를) 패에 추가했습
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_HAND"
-msgstr "{person}: <{cardName}을(를) {fromName}({fromZone})의 패에 추가했습니다.>"
+msgstr "{person}님이 {cardName}을(를) {fromName}({fromZone})의 패에 추가했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_TOPDECK"
-msgstr "{person}: <아카이브에서 {cardName}을(를) 덱의 맨 위에 놓았습니다.>"
+msgstr "{person}님이 아카이브에서 {cardName}을(를) 덱의 맨 위에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DECK_TOPDECK"
-msgstr "{person}: <카드를 덱의 맨 위로 옮겼습니다.>"
+msgstr "{person}님이 카드를 덱의 맨 위로 옮겼습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_TOPDECK"
-msgstr "{person}: <{fromFuda}에서 카드를 덱의 맨 위로 옮겼습니다.>"
+msgstr "{person}님이 {fromFuda}에서 카드를 덱의 맨 위에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HOLOPOWER_TOPDECK"
@@ -1171,19 +1171,19 @@ msgstr "{person}님이 홀로파워에서 카드를 덱의 맨 위에 놓았습�
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_TOPDECK"
-msgstr "{person}: <{cardName}을(를) {fromName}({fromZone})의 덱의 맨 위로 옮겼습니다.>"
+msgstr "{person}님이 {cardName}을(를) {fromName}({fromZone})의 덱의 맨 위에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_BOTTOMDECK"
-msgstr "{person}: <아카이브에서 {cardName}을(를) 덱의 맨 아래에 놓았습니다.>"
+msgstr "{person}님이 아카이브에서 {cardName}을(를) 덱의 맨 아래에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DECK_BOTTOMDECK"
-msgstr "{person}: <카드를 덱의 맨 아래에 놓았습니다.>"
+msgstr "{person}님이 카드를 덱의 맨 아래에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_BOTTOMDECK"
-msgstr "{person}: <{fromFuda}에서 카드를 덱의 맨 아래에 놓았습니다.>"
+msgstr "{person}님이 {fromFuda}에서 카드를 덱의 맨 아래에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HOLOPOWER_BOTTOMDECK"
@@ -1191,43 +1191,43 @@ msgstr "{person}님이 홀로파워에서 카드를 덱의 맨 아래에 놓았�
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_BOTTOMDECK"
-msgstr "{person}: <{fromName}({fromZone})의 {cardName}을(를) 덱의 맨 아래에 놓았습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})의 {cardName}을(를) 덱의 맨 아래에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_TOPCHEERDECK"
-msgstr "{person}: <아카이브에서 {cardName}을(를) 옐 덱의 맨 위에 놓았습니다.>"
+msgstr "{person}님이 아카이브에서 {cardName}을(를) 옐 덱의 맨 위에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CHEERDECK_TOPCHEERDECK"
-msgstr "{person}: <카드를 옐 덱의 맨 위에 놓았습니다.>"
+msgstr "{person}님이 카드를 옐 덱의 맨 위에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_TOPCHEERDECK"
-msgstr "{person}: <{fromFuda}에서 카드를 옐 덱의 맨 위에 놓았습니다.>"
+msgstr "{person}님이 {fromFuda}에서 카드를 옐 덱의 맨 위에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_TOPCHEERDECK"
-msgstr "{person}: <{fromName}({fromZone})의 {cardName}를 옐 덱의 맨 위에 놓았습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})의 {cardName}를 옐 덱의 맨 위에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
-msgstr "{person}: <아카이브에서 {cardName}을(를) 덱의 맨 아래에 놓았습니다.>"
+msgstr "{person}님이 아카이브에서 {cardName}을(를) 덱의 맨 아래에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
-msgstr "{person}: <카드를 옐 덱의 맨 아래에 놓았습니다.>"
+msgstr "{person}님이 카드를 옐 덱의 맨 아래에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_BOTTOMCHEERDECK"
-msgstr "{person}: <{fromFuda}에서 카드를 옐 덱의 맨 아래에 놓았습니다.>"
+msgstr "{person}님이 {fromFuda}에서 카드를 옐 덱의 맨 아래에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_BOTTOMCHEERDECK"
-msgstr "{person}: <{fromName}({fromZone})의 {cardName}을(를) 옐 덱의 맨 아래에 놓았습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})의 {cardName}을(를) 옐 덱의 맨 아래에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_ARCHIVE"
-msgstr "{person}: <{fromFuda}에서 {cardName}을(를) 아카이브했습니다.>"
+msgstr "{person}님이 {fromFuda}에서 {cardName}을(를) 아카이브했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HOLOPOWER_ARCHIVE"
@@ -1235,84 +1235,85 @@ msgstr "{person}님이 홀로파워에서 {cardName}을(를) 아카이브했습�
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_ARCHIVE"
-msgstr "{person}: <{fromName}({fromZone})의 {cardName}를 아카이브했습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})의 {cardName}를 아카이브했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_HOLOPOWER"
-msgstr "{person}: <아카이브에서 {cardName}을(를) 홀로파워에 놓았습니다.>"
+msgstr "{person}님이 아카이브에서 {cardName}을(를) 홀로파워에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_HOLOPOWER"
-msgstr "{person}: <{fromFuda}에서 카드를 홀로파워에 놓았습니다.>"
+msgstr "{person}님이 {fromFuda}에서 카드를 홀로파워에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_HOLOPOWER"
-msgstr "{person}: <{fromName}({fromZone})의 {cardName}을(를) 홀로파워에 놓았습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})의 {cardName}을(를) 홀로파워에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARTS_DAMAGE"
-msgstr "<{person}의 {fromName}({fromZone})이(가) \"{artName}\" 아츠를 사용합니다.\n"
-"{toName}({toZone})에게 {damage}의 대미지.>"
+msgstr "{person}님의 {fromName}({fromZone})이(가) \"\n"
+"{artName}\" 아츠를 사용합니다.\n"
+"{toName}({toZone})에게 {damage}의 대미지"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DECK_LOOKATX"
-msgstr "{person}: <덱의 맨 위에서부터 {amount}장을 확인합니다.>"
+msgstr "{person}님이 덱의 맨 위에서부터 {amount}장을 확인합니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CHEERDECK_LOOKATX"
-msgstr "{person}: <옐 덱의 맨 위에서부터 {amount}장을 확인합니다.>"
+msgstr "{person}님이 옐 덱의 맨 위에서부터 {amount}장을 확인합니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CARD_BACK"
-msgstr "{person}: <{fromName}({fromZone})을(를) 백 포지션으로 이동했습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})을(를) 백 포지션으로 이동했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CARD_BATONPASS"
-msgstr "{person}: <{fromName}({fromZone})을(를) {toName}({toZone})와(과) 배턴 터치했습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})을(를) {toName}({toZone})와(과) 배턴 터치했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CARD_SWITCH"
-msgstr "{person}: <{fromName}({fromZone})을(를) {toName}({toZone})와(과) 교대했습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})을(를) {toName}({toZone})와(과) 교대했습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_SUPPORT_ATTACH"
-msgstr "{person}: <{attachName}을(를) {toName}({toZone})에게 붙였습니다.>"
+msgstr "{person}님이 {attachName}을(를) {toName}({toZone})에게 붙였습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CHEER_ATTACH"
-msgstr "{person}: <{attachName}을(를) {toName}({toZone})에게 붙였습니다.>"
+msgstr "{person}님이 {attachName}을(를) {toName}({toZone})에게 붙였습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HOLOMEM_PLAY"
-msgstr "{person}: <{cardName}을(를) 백 포지션에 놨습니다.>"
+msgstr "{person}님이 {cardName}을(를) 백 포지션에 놨습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DECK_HOLOMEM_PLAY"
-msgstr "{person}: <덱에서 {cardName}을(를) 백포지션에 놨습니다.>"
+msgstr "{person}님이 덱에서 {cardName}을(를) 백포지션에 놨습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
-msgstr "{person}: <옐 덱에서 {attachName}을 {toName}({toZone})에게 붙였습니다.>"
+msgstr "{person}님이 옐 덱에서 {attachName}을 {toName}({toZone})에게 붙였습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
-msgstr "{person}: <{cardName}을(를) 아카이브에서 백 포지션에 놓았습니다.>"
+msgstr "{person}님이 {cardName}을(를) 아카이브에서 백 포지션에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_CHEER_ATTACH"
-msgstr "{person}: <아카이브에서 {attachName}을(를) {toName}({toZone})에게 붙였습니다.>"
+msgstr "{person}님이 아카이브에서 {attachName}을(를) {toName}({toZone})에게 붙였습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_CHEER_ATTACH"
-msgstr "{person}: <{fromName}({fromZone})에게 붙어있던 {attachName}을(를) {toName}({toZone})에게 붙였습니다.>"
+msgstr "{person}님이 {fromName}({fromZone})에게 붙어있던 {attachName}을(를) {toName}({toZone})에게 붙였습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ENDTURN"
-msgstr "{person}: <턴을 종료합니다.>"
+msgstr "{person}님이 턴을 종료합니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DIERESULT"
-msgstr "<{person}의 주사위 결과 : {amount}>"
+msgstr "{person}님의 주사위 결과 : {amount}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_RPS"
@@ -1770,7 +1771,7 @@ msgstr "2nd"
 
 #: Scripts/card.gd
 msgid "INFO_BUZZ"
-msgstr "Buzz "
+msgstr "Buzz"
 
 #: Scripts/card.gd
 msgid "INFO_HOLOMEM_1"

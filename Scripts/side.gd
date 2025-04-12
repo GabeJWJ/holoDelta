@@ -412,12 +412,6 @@ func specialStart4_fake(oshi_info, zone_info):
 	
 	cheerDeck.update_size()
 
-func hasLegalHand():
-	for actualCard in hand:
-		if actualCard.cardType == "Holomem" and actualCard.level == 0:
-			return true
-	return false
-
 
 func create_card(number,art_code,back):
 	var new_id = all_cards.size()
@@ -572,25 +566,6 @@ func update_hand():
 		if i > 0:
 			move_behind(hand[-i-1],hand[-i])
 
-func draw(x=1):
-	for i in range(x):
-		add_to_hand(deck.cardList.pop_front().cardID)
-	deck.update_size()
-	if x == 1:
-		emit_signal("sent_game_message",tr("MESSAGE_DRAW"))
-	else:
-		emit_signal("sent_game_message",tr("MESSAGE_DRAWX").format({amount = x}))
-
-func mill(fromFuda,toFuda,x=1):
-	for i in range(x):
-		add_to_fuda(fromFuda.cardList.pop_front().cardID,toFuda)
-		_move_sfx.rpc()
-	fromFuda.update_size()
-	if x == 1:
-		emit_signal("sent_game_message", tr("MESSAGE_MILL").format({from = tr(fromFuda.name), to = tr(toFuda.name)}))
-	else:
-		emit_signal("sent_game_message", tr("MESSAGE_MILLX").format({amount = x, from = tr(fromFuda.name), to = tr(toFuda.name)}))
-
 func find_zone_id(zone):
 	for index in range(zones.size()):
 		if zones[index][0] == zone:
@@ -620,10 +595,10 @@ func remove_old_card(old_card,leavingField = false):
 			actualCard.reparent(cardLayers["Main"],true)
 		actualCard.unrest()
 		for att in actualCard.attached:
-			att.attachedTo = -1
+			att.attachedTo = att.cardID
 			remove_old_card(att.cardID,true)
 		for oto in actualCard.onTopOf:
-			oto.attachedTo = -1
+			oto.attachedTo = oto.cardID
 			remove_old_card(oto.cardID,true)
 		actualCard.attached = []
 		actualCard.onTopOf = []
@@ -667,14 +642,11 @@ func remove_fake_from_hand():
 
 func add_to_hand(new_card):
 	var cardToGo = all_cards[new_card]
-	cardToGo.reparent(cardLayers["Above"],true)
 	
-	cardToGo.attached.reverse()
-	cardToGo.onTopOf.reverse()
-	for newCard in cardToGo.attached:
-		add_to_hand(newCard.cardID)
-	for newCard in cardToGo.onTopOf:
-		add_to_hand(newCard.cardID)
+	if cardToGo.onstage:
+		remove_old_card(new_card, true)
+	
+	cardToGo.reparent(cardLayers["Above"],true)
 	
 	hand.append(cardToGo)
 	_draw_sfx()
@@ -875,17 +847,17 @@ func switch_cards_in_zones(zone_1,zone_2):
 
 func bloom_on_zone(card_to_bloom, zone_to_bloom):
 	var bloomee = all_cards[find_in_zone(zone_to_bloom)]
+	card_to_bloom.visible = true
 	card_to_bloom.bloom(bloomee)
 	set_zone_card(zone_to_bloom,card_to_bloom.cardID)
-	remove_from_hand(card_to_bloom.cardID)
 	_place_sfx()
 
 func bloom_fake_on_zone(fake_card_to_bloom, zone_to_bloom):
 	var card_to_bloom = get_real_card(fake_card_to_bloom, mainBack)
+	card_to_bloom.visible = true
 	var bloomee = all_cards[find_in_zone(zone_to_bloom)]
 	card_to_bloom.bloom(bloomee)
 	set_zone_card(zone_to_bloom,card_to_bloom.cardID)
-	remove_from_hand(card_to_bloom.cardID)
 	_place_sfx()
 
 func unbloom_on_zone(card_to_unbloom):
@@ -1783,6 +1755,12 @@ func _move_sfx():
 	$Audio/Moving.play()
 
 
+func _is_card_onstage(card_to_check):
+	var actual_card = all_cards[int(card_to_check)]
+	print(actual_card.get_card_name())
+	return actual_card.onstage or int(card_to_check) in revealed or int(card_to_check) == playing
+
+
 func send_command(command:String, data=null) -> void:
 	get_parent().send_command("Side",command,data)
 
@@ -1848,7 +1826,9 @@ func side_command(command: String, data: Dictionary) -> void:
 			if "zone_1" in data and "zone_2" in data:
 				switch_cards_in_zones($Zones.get_node(data["zone_1"]), $Zones.get_node(data["zone_2"]))
 		"Card Left Field":
-			if "card_id" in data:
+			print(data)
+			if "card_id" in data and _is_card_onstage(data["card_id"]):
+				print("made it")
 				remove_old_card(int(data["card_id"]),true)
 		"Attach Card":
 			if "attachee" in data and "attach_to" in data:
@@ -1944,7 +1924,7 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 		
 		
 		"Card Left Field":
-			if "card_id" in data and int(data["card_id"]) in all_cards:
+			if "card_id" in data and int(data["card_id"]) in all_cards and _is_card_onstage(data["card_id"]):
 				remove_old_card(int(data["card_id"]),true)
 		"Move Card To Zone":
 			if "card" in data and "zone" in data and "facedown" in data:

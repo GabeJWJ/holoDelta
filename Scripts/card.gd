@@ -370,8 +370,10 @@ func has_tag(tag_check):
 
 
 func update_amount(new_amount):
-	if new_amount == 1:
+	if new_amount <= 0:
 		$Amount.visible = false
+	else:
+		$Amount.visible = true
 	$Amount.text = "x" + str(new_amount)
 
 func set_amount_hidden(value : bool):

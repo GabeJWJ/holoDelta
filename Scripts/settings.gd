@@ -14,7 +14,7 @@ var settings = {}
 @onready var json = JSON.new()
 var languages = [["en","English"], ["ja","日本語"], ["ko","한글"], ["es", "Español"], ["fr","Français"]] #Contains both the locale code and the user-friendly text for buttons
 enum bloomCode {OK,Instant,Skip,No} #OK - can bloom normally, Instant - can bloom on something played this turn, Skip - can bloom a 2nd on debut, No - can't bloom
-var version = "1.2.0"
+var version = "1.2.0.3.1"
 
 var cardText = {}
 
@@ -108,10 +108,11 @@ func get_language() -> String :
 	
 	return "???"
 
-func _connect_local() -> void:
+func _connect_local(callback = null) -> void:
 	#Sets up the cardLocalization po files for use with trans()
 	
 	for lang in languages:
-		#Uses ResourceLoader.load instead of load because load retrieves from cache if possible
-		#Thus you would need to restart the sim after updating the db to see new text
-		cardText[lang[0]] = ResourceLoader.load("user://cardLocalization/" + lang[0] + ".po", "", ResourceLoader.CACHE_MODE_IGNORE) as Translation
+		cardText[lang[0]] = load("res://cardLocalization/" + lang[0] + ".po") as Translation
+	
+	if callback:
+		callback.call()
