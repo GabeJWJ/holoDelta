@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-03-24 19:17\n"
+"PO-Revision-Date: 2025-05-13 16:30\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -97,6 +97,17 @@ msgid "LOBBY_CREATE"
 msgstr "로비 생성"
 
 #: Scenes/board.tscn
+msgid "DEBUG"
+msgstr "디버그\n"
+"(새로고침)"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "PLAYERS_ONLINE"
+msgstr "접속 중인 유저 수 ({amount})"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_JOIN"
 msgstr "로비 참여"
 
@@ -121,16 +132,19 @@ msgid "LOBBY_BANLIST"
 msgstr "금제 목록"
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_NONE"
 msgstr "금제 적용 없음"
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CURRENT"
 msgstr "현재 금제"
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr "현재 금제 + 미출시 카드"
@@ -138,10 +152,6 @@ msgstr "현재 금제 + 미출시 카드"
 #: Scenes/board.tscn
 msgid "LOBBY_BACK"
 msgstr "뒤로"
-
-#: Scenes/board.tscn
-msgid "UPDATE\t_DB"
-msgstr "DB 업데이트"
 
 #: Scenes/board.tscn
 msgid "EXIT"
@@ -180,18 +190,6 @@ msgid "COSMETICS_D_DEFAULT"
 msgstr "주사위 초기화"
 
 #: Scenes/board.tscn
-msgid "INFO"
-msgstr "정보"
-
-#: Scenes/board.tscn
-msgid "INFO_DLOC"
-msgstr "덱 파일 위치"
-
-#: Scenes/board.tscn
-msgid "INFO_CANCEL"
-msgstr "닫기"
-
-#: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_LOBBYCODE"
 msgstr "로비 코드 입력"
@@ -224,6 +222,7 @@ msgid "LOBBY_READY"
 msgstr "준비"
 
 #: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "DECK_SELECT"
 msgstr "덱 선택"
 
@@ -241,6 +240,19 @@ msgid "OK"
 msgstr "OK"
 
 #: Scenes/board.tscn
+msgid "INFO"
+msgstr "정보"
+
+#: Scenes/board.tscn
+msgid "INFO_DLOC"
+msgstr "덱 파일 위치"
+
+#: Scenes/board.tscn
+msgid "INFO_CANCEL"
+msgstr "닫기"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_GAMESTART_SPECTATE"
 msgstr "이미 시작되었습니다. 관전하시겠습니까?"
 
@@ -475,6 +487,10 @@ msgid "DECKERROR_FAKEOSHI"
 msgstr "{cardNum} 카드는 오시 홀로멤이 아닙니다."
 
 #: Scripts/deck_creation.gd
+msgid "DECKERROR_BANNED"
+msgstr "{cardNum} 카드는 금지된 카드입니다."
+
+#: Scripts/deck_creation.gd
 msgid "DECKERROR_UNDERDECK"
 msgstr "메인 덱의 카드 수가 모자랍니다."
 
@@ -507,12 +523,16 @@ msgid "DECKERROR_FAKECHEER"
 msgstr "{cardNum} 카드는 옐 카드가 아닙니다."
 
 #: Scripts/deck_creation.gd
-msgid "DECK_OVERWRITE"
-msgstr "{fileName}에 덮어쓰기"
+msgid "DECKERROR_OVERAMOUNT"
+msgstr "{cardNum} 카드가 너무 많습니다."
 
 #: Scripts/deck_creation.gd
-msgid "DECKERROR_BANNED"
-msgstr "{cardNum} 카드는 금지된 카드입니다."
+msgid "DECKERROR_RESTRICTED"
+msgstr "{cardNum} 카드가 제한된 수보다 많습니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECK_OVERWRITE"
+msgstr "{fileName}에 덮어쓰기"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOALTART"
@@ -525,14 +545,6 @@ msgstr "{cardNum} 카드는 데이터베이스에 존재하지 않는 카드입�
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_OSHIBADFORMAT"
 msgstr "오시 홀로멤의 형식이 잘못되었습니다. 홀로델타용 덱 파일이 맞는지 확인해 주세요."
-
-#: Scripts/deck_creation.gd
-msgid "DECKERROR_RESTRICTED"
-msgstr "{cardNum} 카드가 제한된 수보다 많습니다."
-
-#: Scripts/deck_creation.gd
-msgid "DECKERROR_OVERAMOUNT"
-msgstr "{cardNum} 카드가 너무 많습니다."
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_DECKBADFORMAT"
@@ -549,6 +561,12 @@ msgstr "옐 덱의 형식이 잘못되었습니다. 홀로델타용 덱 파일�
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOCHEER"
 msgstr "옐 덱이 비어있습니다."
+
+#: Scripts/deck_creation.gd
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid ""
+msgstr ""
 
 #: Scripts/side.gd
 msgid "DECK"
@@ -591,26 +609,6 @@ msgstr "상대를 기다리는 중..."
 #: Scripts/side.gd
 msgid "READY_WAIT"
 msgstr "기다리는 중"
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_DRAW"
-msgstr "{person}님이 카드를 드로우했습니다"
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_DRAWX"
-msgstr "{person}님이 카드를 {amount}장 드로우했습니다"
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_MILL"
-msgstr "{person}님이 카드를 {from}에서 {to}에 보냈습니다"
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_MILLX"
-msgstr "{person}님이 {amount}장의 카드를 {from}에서 {to}로 보냈습니다"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_LOOK_ATTACHED"
@@ -761,6 +759,10 @@ msgid "CARD_REVEALED_ARCHIVE"
 msgstr "아카이브"
 
 #: Scripts/side.gd
+msgid "CARD_REVEALED_HOLOPOWER"
+msgstr "홀로파워"
+
+#: Scripts/side.gd
 msgid "DECK_DRAW"
 msgstr "한 장 드로우"
 
@@ -809,6 +811,11 @@ msgid "DECK_RPS"
 msgstr "가위바위보 하기"
 
 #: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "FORFEIT"
+msgstr "항복"
+
+#: Scripts/side.gd
 msgid "CHEERDECK_REVEAL"
 msgstr "공개 후 붙이기"
 
@@ -835,6 +842,10 @@ msgstr "아카이브"
 #: Scripts/side.gd
 msgid "HOLOPOWER_ARCHIVEX"
 msgstr "X장 아카이브"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_REVEAL"
+msgstr "홀로파워 공개"
 
 #: Scripts/side.gd
 msgid "HOLOPOWER_DECK"
@@ -973,19 +984,6 @@ msgid "DOWNLOAD_CARDS"
 msgstr "카드를 설정하는 중입니다. 기다려주세요..."
 
 #: Scripts/Multiplayer.gd
-msgid "DOWNLOAD_ITER_AGAIN"
-msgstr "오류가 발생했습니다. 다시 시도하세요. "
-
-#: Scripts/Multiplayer.gd
-msgid "DOWNLOADING"
-msgstr "DB 다운로드 중..."
-
-#: Scripts/Multiplayer.gd
-msgid "DOWNLOAD_ERROR"
-msgstr "다운로드에 실패했습니다.\n"
-"다시 시도 중..."
-
-#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"
 msgstr "커스텀 금제"
 
@@ -1010,8 +1008,32 @@ msgid "YOU"
 msgstr "당신"
 
 #: Scripts/Multiplayer.gd
+msgid "WIN"
+msgstr "이겼습니다!"
+
+#: Scripts/Multiplayer.gd
+msgid "SPECTATE_WIN"
+msgstr "{person}의 승리!"
+
+#: Scripts/Multiplayer.gd
 msgid "MESSAGE_MULLIGAN"
 msgstr "{person}님이 멀리건 했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAW"
+msgstr "{person}님이 카드를 드로우했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAWX"
+msgstr "{person}님이 카드를 {amount}장 드로우했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILL"
+msgstr "{person}님이 카드를 {from}에서 {to}에 보냈습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILLX"
+msgstr "{person}님이 {amount}장의 카드를 {from}에서 {to}로 보냈습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_BLOOM"
@@ -1056,6 +1078,10 @@ msgstr "{person}님이 {cardName}을(를) 덱의 맨 아래에 놓았습니다"
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_ARCHIVE"
 msgstr "{person}님이 {cardName}을(를) 아카이브했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_HOLOPOWER"
+msgstr "{person}님이 {cardName}을(를) 홀로파워에 놓았습니다"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_OSHISKILL_SP"
@@ -1384,6 +1410,10 @@ msgid "YOU_MESSAGE_REVEALED_ARCHIVE"
 msgstr "당신은 {cardName}을(를) 아카이브했습니다"
 
 #: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
+msgstr "당신은 {cardName}을(를) 홀로파워에 놓았습니다"
+
+#: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_OSHISKILL_SP"
 msgstr "당신은 SP 오시 스킬 \"{skillName}\"를 사용했습니다"
 
@@ -1644,18 +1674,6 @@ msgstr "당신의 주사위 결과 : {amount}"
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_RPS"
 msgstr "당신이 가위바위보에서 이겼습니다"
-
-#: Scripts/Multiplayer.gd
-msgid "WIN"
-msgstr "이겼습니다!"
-
-#: Scripts/Multiplayer.gd
-msgid "SPECTATE_WIN"
-msgstr "{person}의 승리!"
-
-#: Scripts/Multiplayer.gd
-msgid "FORFEIT"
-msgstr "항복"
 
 #: Scripts/Multiplayer.gd
 msgid "WINCONSENT_FORFEIT"

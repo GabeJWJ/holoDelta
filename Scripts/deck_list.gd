@@ -12,6 +12,7 @@ var file_access_web : FileAccessWeb
 signal selected(deckInfo)
 signal cancel
 
+# Get called when the scene is instantiated
 func _ready() -> void:
 	if OS.has_feature("web"):
 		file_access_web = FileAccessWeb.new()

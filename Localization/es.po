@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2025-03-22 23:45\n"
+"PO-Revision-Date: 2025-05-13 16:30\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -96,6 +96,16 @@ msgid "LOBBY_CREATE"
 msgstr "Crear Lobby"
 
 #: Scenes/board.tscn
+msgid "DEBUG"
+msgstr "Refrescar"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "PLAYERS_ONLINE"
+msgstr "{amount} jugadores online"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_JOIN"
 msgstr "Unirse a Lobby"
 
@@ -120,16 +130,19 @@ msgid "LOBBY_BANLIST"
 msgstr "Banlist"
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_NONE"
 msgstr "Sin Banlist"
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CURRENT"
 msgstr "Actual"
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr "Actual + Unreleased"
@@ -137,10 +150,6 @@ msgstr "Actual + Unreleased"
 #: Scenes/board.tscn
 msgid "LOBBY_BACK"
 msgstr "Atras"
-
-#: Scenes/board.tscn
-msgid "UPDATE\t_DB"
-msgstr "Actualizar DB"
 
 #: Scenes/board.tscn
 msgid "EXIT"
@@ -179,18 +188,6 @@ msgid "COSMETICS_D_DEFAULT"
 msgstr "Dado a predeterminado"
 
 #: Scenes/board.tscn
-msgid "INFO"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "INFO_DLOC"
-msgstr "Ubicación Deck"
-
-#: Scenes/board.tscn
-msgid "INFO_CANCEL"
-msgstr "Close"
-
-#: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_LOBBYCODE"
 msgstr "Introducir Código de Lobby"
@@ -223,6 +220,7 @@ msgid "LOBBY_READY"
 msgstr "Listo"
 
 #: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "DECK_SELECT"
 msgstr "Elegir Deck"
 
@@ -240,6 +238,19 @@ msgid "OK"
 msgstr "OK"
 
 #: Scenes/board.tscn
+msgid "INFO"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "INFO_DLOC"
+msgstr "Ubicación Deck"
+
+#: Scenes/board.tscn
+msgid "INFO_CANCEL"
+msgstr "Close"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_GAMESTART_SPECTATE"
 msgstr "Juego en curso. Entrar como espectador?"
 
@@ -474,6 +485,10 @@ msgid "DECKERROR_FAKEOSHI"
 msgstr ""
 
 #: Scripts/deck_creation.gd
+msgid "DECKERROR_BANNED"
+msgstr ""
+
+#: Scripts/deck_creation.gd
 msgid "DECKERROR_UNDERDECK"
 msgstr "Main deck tiene muy pocas cartas."
 
@@ -506,12 +521,16 @@ msgid "DECKERROR_FAKECHEER"
 msgstr ""
 
 #: Scripts/deck_creation.gd
-msgid "DECK_OVERWRITE"
-msgstr "Sobreescribir {fileName}"
+msgid "DECKERROR_OVERAMOUNT"
+msgstr "Demasiadas copias de {cardNum}"
 
 #: Scripts/deck_creation.gd
-msgid "DECKERROR_BANNED"
+msgid "DECKERROR_RESTRICTED"
 msgstr ""
+
+#: Scripts/deck_creation.gd
+msgid "DECK_OVERWRITE"
+msgstr "Sobreescribir {fileName}"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOALTART"
@@ -524,14 +543,6 @@ msgstr ""
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_OSHIBADFORMAT"
 msgstr ""
-
-#: Scripts/deck_creation.gd
-msgid "DECKERROR_RESTRICTED"
-msgstr ""
-
-#: Scripts/deck_creation.gd
-msgid "DECKERROR_OVERAMOUNT"
-msgstr "Demasiadas copias de {cardNum}"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_DECKBADFORMAT"
@@ -547,6 +558,12 @@ msgstr "El formato del Deck de Ovaciones es incorrecto. Es con seguridad un arch
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOCHEER"
+msgstr ""
+
+#: Scripts/deck_creation.gd
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid ""
 msgstr ""
 
 #: Scripts/side.gd
@@ -590,26 +607,6 @@ msgstr "Esperando al oponente..."
 #: Scripts/side.gd
 msgid "READY_WAIT"
 msgstr "Esperando"
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_DRAW"
-msgstr ""
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_DRAWX"
-msgstr ""
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_MILL"
-msgstr ""
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_MILLX"
-msgstr ""
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_LOOK_ATTACHED"
@@ -760,6 +757,10 @@ msgid "CARD_REVEALED_ARCHIVE"
 msgstr "Archivar"
 
 #: Scripts/side.gd
+msgid "CARD_REVEALED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "DECK_DRAW"
 msgstr "Robar"
 
@@ -808,6 +809,11 @@ msgid "DECK_RPS"
 msgstr "Jugar PPT"
 
 #: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "FORFEIT"
+msgstr "Rendirse"
+
+#: Scripts/side.gd
 msgid "CHEERDECK_REVEAL"
 msgstr "Revelar y acoplar"
 
@@ -834,6 +840,10 @@ msgstr "Archivar"
 #: Scripts/side.gd
 msgid "HOLOPOWER_ARCHIVEX"
 msgstr "Archivar X"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_REVEAL"
+msgstr "Revelar tope"
 
 #: Scripts/side.gd
 msgid "HOLOPOWER_DECK"
@@ -972,18 +982,6 @@ msgid "DOWNLOAD_CARDS"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
-msgid "DOWNLOAD_ITER_AGAIN"
-msgstr "Algo fallo. Intentando de nuevo..."
-
-#: Scripts/Multiplayer.gd
-msgid "DOWNLOADING"
-msgstr "Descargando db..."
-
-#: Scripts/Multiplayer.gd
-msgid "DOWNLOAD_ERROR"
-msgstr "Descarga Fallida. Intentando de nuevo..."
-
-#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"
 msgstr "Personalizada"
 
@@ -1008,7 +1006,31 @@ msgid "YOU"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
+msgid "WIN"
+msgstr "Has ganado!"
+
+#: Scripts/Multiplayer.gd
+msgid "SPECTATE_WIN"
+msgstr "{person} ha ganado!"
+
+#: Scripts/Multiplayer.gd
 msgid "MESSAGE_MULLIGAN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAW"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAWX"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILLX"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
@@ -1053,6 +1075,10 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_HOLOPOWER"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
@@ -1380,6 +1406,10 @@ msgid "YOU_MESSAGE_REVEALED_ARCHIVE"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_OSHISKILL_SP"
 msgstr ""
 
@@ -1638,18 +1668,6 @@ msgstr ""
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_RPS"
 msgstr ""
-
-#: Scripts/Multiplayer.gd
-msgid "WIN"
-msgstr "Has ganado!"
-
-#: Scripts/Multiplayer.gd
-msgid "SPECTATE_WIN"
-msgstr "{person} ha ganado!"
-
-#: Scripts/Multiplayer.gd
-msgid "FORFEIT"
-msgstr "Rendirse"
 
 #: Scripts/Multiplayer.gd
 msgid "WINCONSENT_FORFEIT"

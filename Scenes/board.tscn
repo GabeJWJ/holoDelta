@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=25 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="14_rk7pw"]
 [ext_resource type="Script" path="res://Scripts/RemapButton.gd" id="14_x8gke"]
 [ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="15_ycoxv"]
+[ext_resource type="Texture2D" uid="uid://3f3xq8idq8m7" path="res://CloseError.png" id="18_b7won"]
 [ext_resource type="Script" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="18_n8kk3"]
 [ext_resource type="AudioStream" uid="uid://dx0hyqv3whb28" path="res://ChikuTaku The Game VGM Menu Select Watson Amelia WUNDER RiKU ✨ チクタク オリジナル曲.mp3" id="19_vg3fm"]
 [ext_resource type="Script" path="res://addons/websocket/WebSocket.gd" id="20_v32ia"]
@@ -30,6 +31,9 @@ width = 1280
 height = 720
 fill_from = Vector2(0.111111, 0.87478)
 fill_to = Vector2(0.934524, 0.282187)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ptrg"]
+bg_color = Color(0.92549, 0, 0.105882, 0.796078)
 
 [node name="Board" type="Node2D"]
 position = Vector2(1020, 1566)
@@ -394,6 +398,24 @@ offset_bottom = -249.0
 theme = ExtResource("5_fdkx6")
 text = "DEBUG"
 
+[node name="ServerCode" type="Label" parent="CanvasLayer/LobbyButtons/LobbyCreate/Debug"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = -6.0
+offset_top = 33.0
+offset_right = 236.0
+offset_bottom = 54.0
+horizontal_alignment = 1
+
+[node name="PlayerCount" type="Label" parent="CanvasLayer/LobbyButtons/LobbyCreate"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = -1.0
+offset_right = 601.0
+offset_bottom = 20.0
+theme_override_font_sizes/font_size = 20
+text = "PLAYERS_ONLINE"
+
 [node name="Control" type="Control" parent="CanvasLayer/LobbyButtons"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
@@ -504,7 +526,7 @@ layout_mode = 0
 offset_left = -2445.0
 offset_top = -45.0
 offset_right = -60.0
-offset_bottom = 2800.0
+offset_bottom = 2813.0
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [node name="CheckUnrevealed" type="TextureButton" parent="CanvasLayer/Options/OptionBackground"]
@@ -1141,13 +1163,20 @@ text = "LOBBY_READY"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="LobbyCode" type="Label" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2"]
+[node name="LobbyCode" type="RichTextLabel" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 30
-horizontal_alignment = 1
+size_flags_horizontal = 4
+size_flags_vertical = 10
+focus_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+fit_content = true
+scroll_active = false
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1463,6 +1492,33 @@ offset_top = 412.0
 offset_right = 884.0
 offset_bottom = 439.0
 
+[node name="Error" type="Panel" parent="CanvasLayer"]
+visible = false
+offset_right = 1280.0
+offset_bottom = 172.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6ptrg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Error"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 14.0
+offset_right = 1190.0
+offset_bottom = 172.0
+focus_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/normal_font_size = 30
+selection_enabled = true
+
+[node name="CloseError" type="TextureButton" parent="CanvasLayer/Error"]
+layout_mode = 0
+offset_left = 1199.0
+offset_top = 8.0
+offset_right = 1266.0
+offset_bottom = 75.0
+texture_normal = ExtResource("18_b7won")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-670, -400)
 zoom = Vector2(0.27, 0.27)
@@ -1563,6 +1619,7 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/Yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/No" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="CanvasLayer/Error/CloseError" to="." method="_on_close_error_pressed"]
 [connection signal="connected" from="WebSocket" to="." method="_on_websocket_connected"]
 [connection signal="received" from="WebSocket" to="." method="_on_websocket_received"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

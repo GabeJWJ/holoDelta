@@ -52,6 +52,9 @@ var rps = false
 @onready var lobby_game_start = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/HBoxContainer/StartGame
 @onready var lobby_deckerror = $CanvasLayer/LobbyScreen/DeckErrors
 @onready var lobby_deckerrorlist = $CanvasLayer/LobbyScreen/DeckErrors/ScrollContainer/Label
+@onready var player_count = $CanvasLayer/LobbyButtons/LobbyCreate/PlayerCount
+@onready var lobby_join_button = $CanvasLayer/LobbyButtons/LobbyJoin
+@onready var spectate_button = $CanvasLayer/LobbyButtons/GameSpectate
 var current_lobby = null
 var lobby_you_are_host = false
 
@@ -202,6 +205,7 @@ func _on_language_selected(index_selected):
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 	fix_font_size()
+	_restart()
 
 func _on_sfx_slider_drag_ended(value_changed=null):
 	$CanvasLayer/Options/OptionBackground/SFXSlider/Test.play()
@@ -440,7 +444,28 @@ func _on_websocket_received(raw_data):
 									Database.current_banlist[number] = int(data["current"][number])
 									Database.unreleased[number] = int(data["current"][number])
 								for number in data["unreleased"]:
-									Database.unreleased[number] = int(data["unreleased"][number])
+									var numbers_found = [number]
+									for i in range(number.length()):
+										if number[i] == "*":
+											var new_numbers_found = []
+											for num in range(10):
+												for old_number in numbers_found:
+													var temp_number = old_number.left(i) + str(num) + old_number.right(number.length()-i-1)
+													new_numbers_found.append(temp_number)
+											numbers_found = new_numbers_found.duplicate()
+									for found in numbers_found:
+										Database.unreleased[found] = int(data["unreleased"][number])
+							if "server_id" in data:
+								$CanvasLayer/LobbyButtons/LobbyCreate/Debug/ServerCode.text = data["server_id"]
+						"Numbers":
+							if "players" in data and "lobbies" in data and "games" in data and !inGame:
+								player_count.text = tr("PLAYERS_ONLINE").format({"amount":int(data["players"])})
+								lobby_join_button.text = tr("LOBBY_JOIN") + " ({amount})".format({"amount":int(data["lobbies"])})
+								spectate_button.text = tr("LOBBY_SPECTATE") + " ({amount})".format({"amount":int(data["games"])})
+						"Error":
+							if "error_text" in data:
+								$CanvasLayer/Error/RichTextLabel.text = data["error_text"]
+								$CanvasLayer/Error.visible = true
 						"Spectate":
 							if "game_state" in data:
 								_enable_steps(!data["game_state"]["firstTurn"])
@@ -506,6 +531,7 @@ func lobby_command(command:String, data:Dictionary):
 		"Game Start Without You":
 			if "id" in data and !gameToSpectate:
 				$CanvasLayer/Question.visible = true
+				$CanvasLayer/Question/Label.text = tr("LOBBY_GAMESTART_SPECTATE")
 				gameToSpectate = data["id"]
 		_:
 			pass
@@ -978,6 +1004,11 @@ func send_message(message):
 func send_message_on_click():
 	send_message($CanvasLayer/Sidebar/ChatWindow/HBoxContainer/ToSend.text)
 
+func _on_close_error_pressed() -> void:
+	$CanvasLayer/Error.visible = false
+	if !inGame:
+		$CanvasLayer/LobbyButtons.visible = true
+
 #endregion
 
 func _not_real():
@@ -998,6 +1029,7 @@ func _not_real():
 	tr("MESSAGE_REVEALED_TOPDECK")
 	tr("MESSAGE_REVEALED_BOTTOMDECK")
 	tr("MESSAGE_REVEALED_ARCHIVE")
+	tr("MESSAGE_REVEALED_HOLOPOWER")
 	tr("MESSAGE_OSHISKILL_SP")
 	tr("MESSAGE_OSHISKILL")
 	tr("MESSAGE_HAND_TOPDECK")
@@ -1079,6 +1111,7 @@ func _not_real():
 	tr("YOU_MESSAGE_REVEALED_TOPDECK")
 	tr("YOU_MESSAGE_REVEALED_BOTTOMDECK")
 	tr("YOU_MESSAGE_REVEALED_ARCHIVE")
+	tr("YOU_MESSAGE_REVEALED_HOLOPOWER")
 	tr("YOU_MESSAGE_OSHISKILL_SP")
 	tr("YOU_MESSAGE_OSHISKILL")
 	tr("YOU_MESSAGE_HAND_TOPDECK")

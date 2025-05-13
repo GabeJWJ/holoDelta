@@ -1,4 +1,3 @@
-import sqlite3 as sql
 import json
 from random import shuffle, sample, randrange
 from string import ascii_lowercase, digits
@@ -8,11 +7,11 @@ from fastapi.staticfiles import StaticFiles
 from enum import IntEnum
 
 random_characters = ascii_lowercase+digits
-with open('cards/banlists/current.json', 'r') as file:
+with open('banlists/current.json', 'r') as file:
     current_banlist = json.load(file)
-with open('cards/banlists/unreleased.json', 'r') as file:
+with open('banlists/unreleased.json', 'r') as file:
     unreleased = json.load(file)
-with open('cards/cardData.json', 'r') as file:
+with open('cardData.json', 'r') as file:
     card_data = json.load(file)
 bloom_levels = {-1:"LEVEL_SPOT",0:"LEVEL_DEBUT",1:"LEVEL_1",2:"LEVEL_2"}
 fudas = ["DECK","CHEERDECK","ARCHIVE","HOLOPOWER"]
@@ -222,12 +221,15 @@ class Player:
         if not self.being_deleted:
             if data is None:
                 data = {}
-            await self.websocket.send_json({"supertype":supertype,"command":command,"data":data})
+            try:
+                await self.websocket.send_json({"supertype":supertype,"command":command,"data":data})
+            except WebSocketDisconnect:
+                await self.remove()
     
     async def remove(self):
         self.being_deleted = True
-        if self.lobby is not None and self.lobby.host == self:
-            await self.lobby.close_lobby()
+        if self.lobby is not None:
+            await self.lobby.remove_player(self.id)
         if self.game is not None and self in self.game.players.values():
             await self.game.close_game()
             #May want to do some shenanigans to allow reconnection
@@ -422,7 +424,7 @@ class Card:
             await self.rest()
         
         self.onTopOf.append(other_card)
-        self.onTopOf += other_card.onTopOf
+        self.onTopOf.extend(other_card.onTopOf)
         other_card.onTopOf = []
         for att in other_card.attached:
             await self.attach(att)
@@ -845,8 +847,8 @@ class Side:
     async def move_card_to_zone(self, card_id, zone, facedown=False):
         self.cards[card_id].onstage = True
         
-        if await self.find_what_zone(card_id):
-            await self.remove_old_card(card_id)
+        #if await self.find_what_zone(card_id):
+            #await self.remove_old_card(card_id)
         
         self.zones[zone] = card_id
 
@@ -866,7 +868,6 @@ class Side:
         bloomee = self.cards[self.zones[zone_to_bloom]]
         await card_to_bloom.bloom(bloomee)
         self.zones[zone_to_bloom] = card_to_bloom.id
-        await self.remove_from_hand(card_to_bloom.id)
 
         await self.tell_player("Bloom",{"card_to_bloom":card_to_bloom.id, "zone_to_bloom":zone_to_bloom})
         await self.tell_others("Bloom", {"card":await card_to_bloom.to_dict(), "zone_to_bloom":zone_to_bloom})
@@ -978,13 +979,13 @@ class Side:
             case 70: #Oshi Skill
                 if currentCard is not None and self.cards[currentCard].skill_cost >= 0:
                     self.used_oshi_skill = True
-                    await self.game._send_message(self.player,"MESSAGE_OSHISKILL",{"skillName":self.cards[currentCard] + "_SKILL_NAME"})
+                    await self.game._send_message(self.player,"MESSAGE_OSHISKILL",{"skillName":self.cards[currentCard].number + "_SKILL_NAME"})
                     await self.mill(Fuda.holopower,Fuda.archive,self.cards[currentCard].skill_cost)
             case 71: #SP Oshi Skill
                 if currentCard is not None and self.cards[currentCard].spskill_cost >= 0:
                     self.used_sp_oshi_skill = True
                     await self.tell_others("Used SP Skill")
-                    await self.game._send_message(self.player,"MESSAGE_OSHISKILL_SP",{"skillName":self.cards[currentCard] + "_SPSKILL_NAME"})
+                    await self.game._send_message(self.player,"MESSAGE_OSHISKILL_SP",{"skillName":self.cards[currentCard].number + "_SPSKILL_NAME"})
                     await self.mill(Fuda.holopower,Fuda.archive,self.cards[currentCard].spskill_cost)
             
             case 102: #Play Hidden to Center
@@ -1267,6 +1268,7 @@ class Side:
 
     async def popup_from_attached_command(self, command_id, data):
         currentCard = data["currentCard"]
+        actualCard = self.cards[currentCard]
 
         try:
             currentAttached = self.cards[data["currentAttached"]]
@@ -1275,7 +1277,6 @@ class Side:
         
         match command_id:
             case 603: #To Life
-                actualCard = self.cards[currentCard]
                 if len(self.life) < 6 and actualCard.cardType == "Cheer":
                     await self.game._send_message(self.player,"MESSAGE_ATTACHED_LIFE",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                     await self.remove_from_attached(currentCard,currentAttached)
@@ -1290,7 +1291,7 @@ class Side:
             case 650: #Add to Hand
                 await self.game._send_message(self.player,"MESSAGE_ATTACHED_HAND",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 await self.remove_from_attached(currentCard,currentAttached)
-                await self.cards[currentCard].unrest()
+                await actualCard.unrest()
                 await self.add_to_hand(currentCard)
                 await self.tell_player("Remove From List",{"card_id":currentCard})
                 self.can_undo_shuffle_hand = None
@@ -1299,7 +1300,7 @@ class Side:
                 await self.game._send_message(self.player,"MESSAGE_ATTACHED_TOPDECK",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 
                 await self.remove_from_attached(currentCard,currentAttached)
-                await self.cards[currentCard].unrest()
+                await actualCard.unrest()
                 await self.add_to_fuda(currentCard,Fuda.deck)
                 await self.tell_player("Remove From List",{"card_id":currentCard})
                 self.can_undo_shuffle_hand = None
@@ -1307,7 +1308,7 @@ class Side:
                 await self.game._send_message(self.player,"MESSAGE_ATTACHED_BOTTOMDECK",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 
                 await self.remove_from_attached(currentCard,currentAttached)
-                await self.cards[currentCard].unrest()
+                await actualCard.unrest()
                 await self.add_to_fuda(currentCard,Fuda.deck,True)
                 await self.tell_player("Remove From List",{"card_id":currentCard})
                 self.can_undo_shuffle_hand = None
@@ -1315,28 +1316,28 @@ class Side:
                 await self.game._send_message(self.player,"MESSAGE_ATTACHED_TOPCHEERDECK",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 
                 await self.remove_from_attached(currentCard,currentAttached)
-                await self.cards[currentCard].unrest()
+                await actualCard.unrest()
                 await self.add_to_fuda(currentCard,Fuda.cheerDeck)
                 await self.tell_player("Remove From List",{"card_id":currentCard})
             case 654: #Return to bottom of cheer deck
                 await self.game._send_message(self.player,"MESSAGE_ATTACHED_BOTTOMCHEERDECK",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 
                 await self.remove_from_attached(currentCard,currentAttached)
-                await self.cards[currentCard].unrest()
+                await actualCard.unrest()
                 await self.add_to_fuda(currentCard,Fuda.cheerDeck,True)
                 await self.tell_player("Remove From List",{"card_id":currentCard})
             case 655: #Archive
                 await self.game._send_message(self.player,"MESSAGE_ATTACHED_ARCHIVE",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 
                 await self.remove_from_attached(currentCard,currentAttached)
-                await self.cards[currentCard].unrest()
+                await actualCard.unrest()
                 await self.add_to_fuda(currentCard,Fuda.archive)
                 await self.tell_player("Remove From List",{"card_id":currentCard})
             case 656: #Holopower
                 await self.game._send_message(self.player,"MESSAGE_ATTACHED_HOLOPOWER",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 
                 await self.remove_from_attached(currentCard,currentAttached)
-                await self.cards[currentCard].unrest()
+                await actualCard.unrest()
                 await self.add_to_fuda(currentCard,Fuda.holopower)
                 await self.tell_player("Remove From List",{"card_id":currentCard})
             case _:
@@ -1371,13 +1372,13 @@ class Side:
             case 70: #Oshi Skill X Cost
                 if currentCard is not None:
                     self.used_oshi_skill = True
-                    await self.game._send_message(self.player,"MESSAGE_OSHISKILL",{"skillName":self.cards[currentCard] + "_SKILL_NAME"})
+                    await self.game._send_message(self.player,"MESSAGE_OSHISKILL",{"skillName":self.cards[currentCard].number + "_SKILL_NAME"})
                     await self.mill(Fuda.holopower,Fuda.archive,input)
             case 71: #SP Oshi Skill X Cost
                 if currentCard is not None:
                     self.used_sp_oshi_skill = True
                     await self.tell_others("Used SP Skill")
-                    await self.game._send_message(self.player,"MESSAGE_OSHISKILL_SP",{"skillName":self.cards[currentCard] + "_SPSKILL_NAME"})
+                    await self.game._send_message(self.player,"MESSAGE_OSHISKILL_SP",{"skillName":self.cards[currentCard].number + "_SPSKILL_NAME"})
                     await self.mill(Fuda.holopower,Fuda.archive,input)
                     
             case 80 | 81: #Holomem Arts Damage
@@ -1495,7 +1496,7 @@ class Side:
                 await self.move_card_to_zone(currentCard,chosenZone)
                 self.cards[currentCard].bloomed_this_turn = True
                 self.can_undo_shuffle_hand = None
-            case 601,604: #Bloom From Deck
+            case 601 | 604: #Bloom From Deck
                 await self.remove_from_fuda(currentCard,Fuda.deck)
                 actualCard = self.cards[currentCard]
                 await self.bloom_on_zone(actualCard,chosenZone)
@@ -1513,7 +1514,7 @@ class Side:
                 await self.remove_from_fuda(currentCard,Fuda.archive)
                 await self.move_card_to_zone(currentCard,chosenZone)
                 self.cards[currentCard].bloomed_this_turn = True
-            case 611,614: #Bloom From Archive
+            case 611 | 614: #Bloom From Archive
                 await self.remove_from_fuda(currentCard,Fuda.archive)
                 actualCard = self.cards[currentCard]
                 await self.bloom_on_zone(actualCard,chosenZone)
@@ -1619,9 +1620,9 @@ class Side:
             result["oshi"] = await self.oshi.to_dict()
         
         for revealed in self.revealed:
-            result["revealed"].append(await revealed.to_dict())
+            result["revealed"].append(await self.cards[revealed].to_dict())
         
-        result["playing"] = None if self.playing is None else await self.playing.to_dict()
+        result["playing"] = None if self.playing is None else await self.cards[self.playing].to_dict()
 
         return result
 
@@ -1786,6 +1787,13 @@ class Game:
         for spectator in self.spectating:
             await spectator.tell("Spectate Side",command,data)
     
+    async def heartbeat(self):
+        try:
+            for player in self.players.values:
+                await player.tell("Heartbeat")
+        except WebSocketDisconnect:
+            await self.close_game()
+    
     async def _send_message(self, sender, message_code, translated=None, untranslated=None):
         if translated is None:
             translated = {}
@@ -1909,10 +1917,12 @@ class Lobby:
                     await self.update_all("Player Chosen")
             case "Ready":
                 if "deck" in data:
-                    is_host = player_id == self.host.id and self.host_deck is None
-                    is_chosen = self.chosen is not None and player_id == self.chosen.id and self.chosen_deck is None
+                    is_host = player_id == self.host.id
+                    have_host_deck = self.host_deck is not None
+                    is_chosen = self.chosen is not None and player_id == self.chosen.id
+                    have_chosen_deck = self.chosen_deck is not None
 
-                    if is_host or is_chosen:
+                    if (is_host and not have_host_deck) or (is_chosen and not have_chosen_deck):
                         deck, deck_legality = check_legal(data["deck"], self.banlist)
                         await players[player_id].tell("Lobby","Deck Legality",deck_legality)
 
@@ -1925,6 +1935,8 @@ class Lobby:
                                 self.chosen_deck = deck
                                 self.chosen_ready = True
                                 await self.update_all("Chosen Readied")
+                    elif is_host or is_chosen:
+                        await players[player_id].tell("Lobby","Deck Legality",{"legal":True,"reasons":[]})
 
             case "Start Game":
                 if player_id == self.host.id and self.chosen is not None and self.host_deck is not None and self.chosen_deck is not None and self.host_ready and self.chosen_ready:
@@ -1953,7 +1965,6 @@ class Lobby:
 
 app = FastAPI()
 app.mount("/game", StaticFiles(directory="Holodelta_web"), name="game")
-app.mount("/cards", StaticFiles(directory="cards"), name="cards")
 
 
 
@@ -2035,9 +2046,14 @@ async def call_command(player_id,command, data):
         case "Spectate":
             if "game" in data and data["game"] in games and player.lobby is None and player.game is None:
                 game_to_spectate = games[data["game"]]
-                game_to_spectate.spectating.append(player)
-                player.game = game_to_spectate
-                await player.tell("Server","Spectate",{"game_state":await game_to_spectate.to_dict()})
+                try:
+                    game_to_spectate.spectating.append(player)
+                    player.game = game_to_spectate
+                    await player.tell("Server","Spectate",{"game_state":await game_to_spectate.to_dict()})
+                except:
+                    await player.tell("Server","Spectate Game Failed")
+            else:
+                await player.tell("Server","Spectate Game Failed")
         
         case "Name Change":
             if "new_name" in data and isinstance(data["new_name"],str):

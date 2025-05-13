@@ -26,6 +26,7 @@ signal card_mouse_over(card_id)
 signal card_mouse_left
 signal move_behind_request(id1,id2)
 signal accept_damage(card_id)
+signal reject_damage(card_id)
 
 var cardFront
 var cardBack
@@ -537,7 +538,7 @@ func bloom(other_card):
 
 func unbloom():
 	if onTopOf.size() == 0:
-		return
+		return null
 	else:
 		var newCard = onTopOf.pop_front()
 		newCard.onTopOf = onTopOf
@@ -552,7 +553,7 @@ func unbloom():
 		clear_damage()
 		clear_extra_hp()
 		unrest()
-		onstage = false
+		return newCard
 
 func attach(other_card):
 	other_card.unrest()
@@ -650,3 +651,4 @@ func _on_accept_pressed():
 func _on_reject_pressed():
 	offered_damage = 0
 	$PotentialDamage.visible = false
+	emit_signal("reject_damage",cardID)

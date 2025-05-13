@@ -94,36 +94,48 @@ msgid "LOBBY_CREATE"
 msgstr "Create Lobby"
 
 #: Scenes/board.tscn
+msgid "DEBUG"
+msgstr "Quick Refresh"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "PLAYERS_ONLINE"
+msgstr "{amount} players online"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_JOIN"
 msgstr "Join Lobby"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_SPECTATE"
+msgstr "Spectate Game"
 
 #: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_PRIVATE"
 msgstr "Private"
 
 #: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_ALLOWSPECTATORS"
+msgstr "Allow Spectators"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST"
 msgstr "Banlist"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_NONE"
 msgstr "No Banlist"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CURRENT"
 msgstr "Current"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr "Current + Unreleased"
 
 #: Scenes/board.tscn
 msgid "LOBBY_BACK"
 msgstr "Back"
-
-#: Scenes/board.tscn
-msgid "UPDATE\t_DB"
-msgstr "Update DB"
 
 #: Scenes/board.tscn
 msgid "EXIT"
@@ -161,18 +173,6 @@ msgstr "Playmat to Default"
 msgid "COSMETICS_D_DEFAULT"
 msgstr "Die to Default"
 
-#: Scenes/board.tscn
-msgid "INFO"
-msgstr "Info"
-
-#: Scenes/board.tscn
-msgid "INFO_DLOC"
-msgstr "Deck Location"
-
-#: Scenes/board.tscn
-msgid "INFO_CANCEL"
-msgstr "Close"
-
 #: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_LOBBYCODE"
 msgstr "Enter Lobby Code"
@@ -184,6 +184,10 @@ msgstr "Searching..."
 #: Scenes/board.tscn
 msgid "LOBBY_REFRESH"
 msgstr "Refresh"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_GAMECODE"
+msgstr "Enter Game Code"
 
 #: Scenes/board.tscn
 msgid "LOBBY_HOST"
@@ -197,7 +201,7 @@ msgstr "No One"
 msgid "LOBBY_READY"
 msgstr "Ready"
 
-#: Scenes/board.tscn
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "DECK_SELECT"
 msgstr "Choose Deck"
 
@@ -209,7 +213,23 @@ msgstr "Chosen"
 msgid "LOBBY_STARTGAME"
 msgstr "Start Game"
 
+#: Scenes/board.tscn Scenes/side.tscn
+msgid "OK"
+msgstr "OK"
+
 #: Scenes/board.tscn
+msgid "INFO"
+msgstr "Info"
+
+#: Scenes/board.tscn
+msgid "INFO_DLOC"
+msgstr "Deck Location"
+
+#: Scenes/board.tscn
+msgid "INFO_CANCEL"
+msgstr "Close"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_GAMESTART_SPECTATE"
 msgstr "Game started. Spectate?"
 
@@ -272,10 +292,6 @@ msgstr "Ready"
 #: Scenes/side.tscn
 msgid "RPS_SELECT"
 msgstr "Select an option."
-
-#: Scenes/side.tscn
-msgid "OK"
-msgstr "OK"
 
 #: Scenes/side.tscn
 msgid "OPPONENT"
@@ -434,6 +450,10 @@ msgid "DECKERROR_FAKEOSHI"
 msgstr "{cardNum} is not an oshi."
 
 #: Scripts/deck_creation.gd
+msgid "DECKERROR_BANNED"
+msgstr "{cardNum} is banned"
+
+#: Scripts/deck_creation.gd
 msgid "DECKERROR_UNDERDECK"
 msgstr "Main deck has too few cards."
 
@@ -466,12 +486,16 @@ msgid "DECKERROR_FAKECHEER"
 msgstr "{cardNum} is not a cheer card."
 
 #: Scripts/deck_creation.gd
-msgid "DECK_OVERWRITE"
-msgstr "Overwrite {fileName}"
+msgid "DECKERROR_OVERAMOUNT"
+msgstr "Too many copies of {cardNum}"
 
 #: Scripts/deck_creation.gd
-msgid "DECKERROR_BANNED"
-msgstr "{cardNum} is banned"
+msgid "DECKERROR_RESTRICTED"
+msgstr "{cardNum} is restricted to fewer copies than you have"
+
+#: Scripts/deck_creation.gd
+msgid "DECK_OVERWRITE"
+msgstr "Overwrite {fileName}"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOALTART"
@@ -486,14 +510,6 @@ msgid "DECKERROR_OSHIBADFORMAT"
 msgstr ""
 "The oshi data is formatted incorrectly. Are you sure this is a holodelta "
 "deck file?"
-
-#: Scripts/deck_creation.gd
-msgid "DECKERROR_RESTRICTED"
-msgstr "{cardNum} is restricted to fewer copies than you have"
-
-#: Scripts/deck_creation.gd
-msgid "DECKERROR_OVERAMOUNT"
-msgstr "Too many copies of {cardNum}"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_DECKBADFORMAT"
@@ -556,22 +572,6 @@ msgstr "Waiting for opponent..."
 #: Scripts/side.gd
 msgid "READY_WAIT"
 msgstr "Waiting"
-
-#: Scripts/side.gd Scripts/Multiplayer.gd
-msgid "MESSAGE_DRAW"
-msgstr "{person} drew a card"
-
-#: Scripts/side.gd Scripts/Multiplayer.gd
-msgid "MESSAGE_DRAWX"
-msgstr "{person} drew {amount} cards"
-
-#: Scripts/side.gd Scripts/Multiplayer.gd
-msgid "MESSAGE_MILL"
-msgstr "{person} sent a card from their {from} to their {to}"
-
-#: Scripts/side.gd Scripts/Multiplayer.gd
-msgid "MESSAGE_MILLX"
-msgstr "{person} sent {amount} cards from their {from} to their {to}"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_LOOK_ATTACHED"
@@ -722,6 +722,10 @@ msgid "CARD_REVEALED_ARCHIVE"
 msgstr "Archive"
 
 #: Scripts/side.gd
+msgid "CARD_REVEALED_HOLOPOWER"
+msgstr "Holopower"
+
+#: Scripts/side.gd
 msgid "DECK_DRAW"
 msgstr "Draw"
 
@@ -769,6 +773,10 @@ msgstr "Undo shuffle hand into deck"
 msgid "DECK_RPS"
 msgstr "Play RPS"
 
+#: Scripts/side.gd Scripts/Multiplayer.gd
+msgid "FORFEIT"
+msgstr "Forfeit"
+
 #: Scripts/side.gd
 msgid "CHEERDECK_REVEAL"
 msgstr "Reveal and attach"
@@ -796,6 +804,10 @@ msgstr "Archive"
 #: Scripts/side.gd
 msgid "HOLOPOWER_ARCHIVEX"
 msgstr "Archive X"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_REVEAL"
+msgstr "Reveal top card"
 
 #: Scripts/side.gd
 msgid "HOLOPOWER_DECK"
@@ -934,20 +946,12 @@ msgid "DOWNLOAD_CARDS"
 msgstr "Setting Up Cards, Please Wait..."
 
 #: Scripts/Multiplayer.gd
-msgid "DOWNLOAD_ITER_AGAIN"
-msgstr "Something went wrong. Trying again..."
-
-#: Scripts/Multiplayer.gd
-msgid "DOWNLOADING"
-msgstr "Downloading db..."
-
-#: Scripts/Multiplayer.gd
-msgid "DOWNLOAD_ERROR"
-msgstr "Download Failed. Trying again..."
-
-#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"
 msgstr "Custom"
+
+#: Scripts/Multiplayer.gd
+msgid "GAME_VS"
+msgstr "{player1} vs {player2}"
 
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_WAITING"
@@ -966,8 +970,32 @@ msgid "YOU"
 msgstr "You"
 
 #: Scripts/Multiplayer.gd
+msgid "WIN"
+msgstr "You win!"
+
+#: Scripts/Multiplayer.gd
+msgid "SPECTATE_WIN"
+msgstr "{person} wins!"
+
+#: Scripts/Multiplayer.gd
 msgid "MESSAGE_MULLIGAN"
 msgstr "{person} mulliganed"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAW"
+msgstr "{person} drew a card"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAWX"
+msgstr "{person} drew {amount} cards"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILL"
+msgstr "{person} sent a card from their {from} to their {to}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILLX"
+msgstr "{person} sent {amount} cards from their {from} to their {to}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_BLOOM"
@@ -1014,6 +1042,10 @@ msgstr "{person} sent {cardName} to the bottom of their deck"
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_ARCHIVE"
 msgstr "{person} archived {cardName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_HOLOPOWER"
+msgstr "{person} put {cardName} in holopower"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_OSHISKILL_SP"
@@ -1354,6 +1386,10 @@ msgid "YOU_MESSAGE_REVEALED_ARCHIVE"
 msgstr "You archived {cardName}"
 
 #: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
+msgstr "You put {cardName} in holopower"
+
+#: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_OSHISKILL_SP"
 msgstr "You used SP Oshi Skill \"{skillName}\""
 
@@ -1622,18 +1658,6 @@ msgid "YOU_MESSAGE_RPS"
 msgstr "You won RPS"
 
 #: Scripts/Multiplayer.gd
-msgid "WIN"
-msgstr "You win!"
-
-#: Scripts/Multiplayer.gd
-msgid "SPECTATE_WIN"
-msgstr "{person} wins!"
-
-#: Scripts/Multiplayer.gd
-msgid "FORFEIT"
-msgstr "Forfeit"
-
-#: Scripts/Multiplayer.gd
 msgid "WINCONSENT_FORFEIT"
 msgstr "Do you really forfeit?"
 
@@ -1698,22 +1722,6 @@ msgstr "You forfeited"
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_PUBLIC"
 msgstr "Public"
-
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_SPECTATE"
-msgstr "Spectate Game"
-
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_GAMECODE"
-msgstr "Enter Game Code"
-
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_ALLOWSPECTATORS"
-msgstr "Allow Spectators"
-
-#: Scripts/Multiplayer.gd
-msgid "GAME_VS"
-msgstr "{player1} vs {player2}"
 
 #: Scripts/card.gd
 msgid "NOBODY"
@@ -1791,6 +1799,18 @@ msgstr "{supportText} ({typeText}){tagsText}"
 #: Scripts/card.gd
 msgid "INFO_LIMITED"
 msgstr "LIMITED: Only one can be used per turn."
+
+#~ msgid "UPDATE\t_DB"
+#~ msgstr "Update DB"
+
+#~ msgid "DOWNLOAD_ITER_AGAIN"
+#~ msgstr "Something went wrong. Trying again..."
+
+#~ msgid "DOWNLOADING"
+#~ msgstr "Downloading db..."
+
+#~ msgid "DOWNLOAD_ERROR"
+#~ msgstr "Download Failed. Trying again..."
 
 #~ msgid "DOWNLOADING_WEB"
 #~ msgstr "Downloading db..."

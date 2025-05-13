@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-03-24 19:17\n"
+"PO-Revision-Date: 2025-05-13 16:30\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "이 홀로멤이 다운됐을 때, 자신의 라이프 -2."
@@ -5821,4 +5821,732 @@ msgstr "청 옐"
 
 msgid "hY06-003_NAME"
 msgstr "황 옐"
+
+msgid "hY03-005_NAME"
+msgstr ""
+
+msgid "hY03-006_NAME"
+msgstr ""
+
+msgid "hY03-007_NAME"
+msgstr ""
+
+msgid "hY03-008_NAME"
+msgstr ""
+
+msgid "hBD24-031_NAME"
+msgstr ""
+
+msgid "hBD24-031_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-031_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-031_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-031_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-034_NAME"
+msgstr ""
+
+msgid "hBD24-034_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-034_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-034_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-034_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-035_NAME"
+msgstr ""
+
+msgid "hBD24-035_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-035_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-035_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-035_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-036_NAME"
+msgstr ""
+
+msgid "hBD24-036_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-036_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-036_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-036_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-037_NAME"
+msgstr ""
+
+msgid "hBD24-037_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-037_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-037_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-037_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-038_NAME"
+msgstr ""
+
+msgid "hBD24-038_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-038_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-038_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-038_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-039_NAME"
+msgstr ""
+
+msgid "hBD24-039_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-039_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-039_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-039_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-040_NAME"
+msgstr ""
+
+msgid "hBD24-040_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-040_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-040_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-040_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-041_NAME"
+msgstr ""
+
+msgid "hBD24-041_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-041_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-041_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-041_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-042_NAME"
+msgstr ""
+
+msgid "hBD24-042_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-042_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-042_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-042_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-006_NAME"
+msgstr "오오조라 스바루"
+
+msgid "hBP04-006_SKILL_NAME"
+msgstr "멘탈! 피지컬! 패션!"
+
+msgid "hBP04-006_SKILL_EFFECT"
+msgstr "[턴에 1번] 상대의 턴에서, 자신의 〈오오조라 스바루〉가 상대에게서 대미지를 받을 때 사용할 수 있다 : 자신의 〈오오조라 스바루〉 전원이 받는 대미지 -30."
+
+msgid "hBP04-006_SPSKILL_NAME"
+msgstr "리액션 예능"
+
+msgid "hBP04-006_SPSKILL_EFFECT"
+msgstr "[게임에 1번] 자신의 라이프가 3 이하일 때 사용할 수 있다 : 이 턴 동안, 자신의 센터 홀로멤인 〈오오조라 스바루〉의 아츠 +100."
+
+msgid "hBP04-050_NAME"
+msgstr "시오리 노벨라"
+
+msgid "hBP04-050_ART_0_NAME"
+msgstr "시오링~! "
+
+msgid "hBP04-051_NAME"
+msgstr "시오리 노벨라"
+
+msgid "hBP04-051_ART_0_NAME"
+msgstr "그거 멋진 이야기라고 생각하지 않아?"
+
+msgid "hBP04-051_ART_1_NAME"
+msgstr "끝없는 지식욕"
+
+msgid "hBP04-052_NAME"
+msgstr "시오리 노벨라"
+
+msgid "hBP04-052_ART_0_NAME"
+msgstr "매력적인 이야기"
+
+msgid "hBP04-052_BLOOM_NAME"
+msgstr "탈옥 계획"
+
+msgid "hBP04-052_BLOOM_EFFECT"
+msgstr "상대의 백 홀로멤 1명에게 특수 대미지 20을 준다. 단, 다운해도 라이프는 줄지 않는다."
+
+msgid "hBP04-053_NAME"
+msgstr "시오리 노벨라"
+
+msgid "hBP04-053_ART_0_NAME"
+msgstr "추억의 책갈피"
+
+msgid "hBP04-053_ART_0_EFFECT"
+msgstr "자신의 홀로 파워의 위에서부터 1장을 공개할 수 있다 : 공개한 카드가 #EN을 가진 홀로멤일 때, 상대의 홀로멤 1명에게 특수 대미지 20을 준다. 그리고 공개한 카드를 뒷면으로 해서 홀로 파워의 아래로 되돌린다."
+
+msgid "hBP04-053_BLOOM_NAME"
+msgstr "금단의 지식"
+
+msgid "hBP04-053_BLOOM_EFFECT"
+msgstr "자신의 옐 덱의 위에서부터 1장을, 자신의 #EN을 가진 홀로멤에게 보낸다."
+
+msgid "hBP04-067_NAME"
+msgstr "오오조라 스바루"
+
+msgid "hBP04-067_ART_0_NAME"
+msgstr "아지마루! 아지마루!"
+
+msgid "hBP04-067_ART_1_NAME"
+msgstr "치와—스! 홀로라이브 2기생 오오조라 스바루임다!! "
+
+msgid "hBP04-068_NAME"
+msgstr "오오조라 스바루"
+
+msgid "hBP04-068_ART_0_NAME"
+msgstr "스바루에게서 너에게! "
+
+msgid "hBP04-068_GIFT_NAME"
+msgstr "오오조라 스바루 모듬 세트"
+
+msgid "hBP04-068_GIFT_EFFECT"
+msgstr "[센터 포지션・콜라보 포지션 한정] 이 홀로멤이 상대의 1st 홀로멤에게서 받는 대미지 -20."
+
+msgid "hBP04-069_NAME"
+msgstr "오오조라 스바루"
+
+msgid "hBP04-069_ART_0_NAME"
+msgstr "좋은 아침 스바루"
+
+msgid "hBP04-069_ART_1_NAME"
+msgstr "졸리거든요"
+
+msgid "hBP04-096_NAME"
+msgstr "Advent"
+
+msgid "hBP04-096_EFFECT"
+msgstr "이 카드는, 자신의 패가 이 카드를 제외하고 6장 이하가 아니라면 사용할 수 없다.\n\n"
+"자신의 덱의 위에서부터 4장을 본다. 그 중에서, #Advent를 가진 홀로멤을 원하는 매수 공개하고, 공개한 홀로멤을 패에 더한다. 그리고 남은 카드는 원하는 순서로 덱의 아래로 되돌린다."
+
+msgid "hBP04-104_NAME"
+msgstr "스바루드 덕"
+
+msgid "hBP04-104_EFFECT"
+msgstr "이 마스코트가 붙어 있는 홀로멤의 HP +20.\n\n"
+"◆〈오오조라 스바루〉에게 붙어 있다면 능력 추가\n"
+"서로의 스테이지의 옐이 합계 10장 이상 있을 때, 이 마스코트가 붙어 있는 홀로멤의 아츠 +20.\n\n"
+"마스코트는, 자신의 홀로멤 1명당 1장만 붙일 수 있다."
+
+msgid "hBP04-070_NAME"
+msgstr "오오조라 스바루"
+
+msgid "hBP04-070_ART_0_NAME"
+msgstr "많이 응원하고, 즐겨줘!"
+
+msgid "hBP04-070_COLLAB_NAME"
+msgstr "전력으로 열심히 할 테니까"
+
+msgid "hBP04-070_COLLAB_EFFECT"
+msgstr "자신의 홀로멤 1명을 고른다. 이 턴 동안, 고른 홀로멤의 옐 1장 당, 고른 홀로멤의 아츠 +10. 단, 세는 매수는 3장까지."
+
+msgid "hBP04-071_NAME"
+msgstr "오오조라 스바루"
+
+msgid "hBP04-071_ART_0_NAME"
+msgstr "슈바! "
+
+msgid "hBP04-071_ART_0_EFFECT"
+msgstr "자신의 옐 덱의 위에서부터 1장을, 이 홀로멤에게 보낸다."
+
+msgid "hBP04-071_ART_1_NAME"
+msgstr "최고로 즐거운 매일"
+
+msgid "hBP04-072_NAME"
+msgstr "오오조라 스바루"
+
+msgid "hBP04-072_ART_0_NAME"
+msgstr "태양 소녀"
+
+msgid "hBP04-072_ART_0_EFFECT"
+msgstr "서로의 스테이지의 옐 1장 당, 이 아츠 +10. 단, 세는 매수는 8장까지."
+
+msgid "hBP04-072_BLOOM_NAME"
+msgstr "선라이트 스테이지"
+
+msgid "hBP04-072_BLOOM_EFFECT"
+msgstr "자신의 아카이브의 황 옐 1장을 자신의 홀로멤에게 보낼 수 있다."
+
+msgid "hBP04-093_NAME"
+msgstr "홀로라이브 2기생"
+
+msgid "hBP04-093_EFFECT"
+msgstr "이 카드는, 자신의 패가 이 카드를 제외하고 6장 이하가 아니라면 사용할 수 없다.\n\n"
+"자신의 덱의 위에서부터 4장을 본다. 그 중에서, #2기생을 가진 홀로멤을 원하는 매수 공개하고, 공개한 홀로멤을 패에 더한다. 그리고 남은 카드는 원하는 순서로 덱의 아래로 되돌린다."
+
+msgid "Justice"
+msgstr ""
+
+msgid "Kaela'sArms"
+msgstr ""
+
+msgid "hBP04-003_NAME"
+msgstr ""
+
+msgid "hBP04-003_SKILL_NAME"
+msgstr ""
+
+msgid "hBP04-003_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-003_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP04-003_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-014_NAME"
+msgstr ""
+
+msgid "hBP04-014_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-014_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-014_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-014_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-015_NAME"
+msgstr ""
+
+msgid "hBP04-015_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-015_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-016_NAME"
+msgstr ""
+
+msgid "hBP04-016_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-016_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-017_NAME"
+msgstr ""
+
+msgid "hBP04-017_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-018_NAME"
+msgstr ""
+
+msgid "hBP04-018_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-018_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-018_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-019_NAME"
+msgstr ""
+
+msgid "hBP04-019_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-019_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-019_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-019_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-026_NAME"
+msgstr ""
+
+msgid "hBP04-026_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-026_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-026_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-026_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-032_NAME"
+msgstr ""
+
+msgid "hBP04-032_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-033_NAME"
+msgstr ""
+
+msgid "hBP04-033_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-033_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-033_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP04-034_NAME"
+msgstr ""
+
+msgid "hBP04-034_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-034_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-035_NAME"
+msgstr ""
+
+msgid "hBP04-035_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-035_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-035_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-035_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-036_NAME"
+msgstr ""
+
+msgid "hBP04-036_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-036_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-036_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-036_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-037_NAME"
+msgstr ""
+
+msgid "hBP04-037_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-037_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-037_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-037_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-039_NAME"
+msgstr ""
+
+msgid "hBP04-039_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-040_NAME"
+msgstr ""
+
+msgid "hBP04-040_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-040_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-041_NAME"
+msgstr ""
+
+msgid "hBP04-041_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-041_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-041_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-042_NAME"
+msgstr ""
+
+msgid "hBP04-042_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-042_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-042_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-042_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP04-049_NAME"
+msgstr ""
+
+msgid "hBP04-049_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-049_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-049_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP04-054_NAME"
+msgstr ""
+
+msgid "hBP04-054_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-060_NAME"
+msgstr ""
+
+msgid "hBP04-060_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-060_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-060_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-060_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-061_NAME"
+msgstr ""
+
+msgid "hBP04-061_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-061_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-061_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-061_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-062_NAME"
+msgstr ""
+
+msgid "hBP04-062_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-062_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-062_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-062_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-079_NAME"
+msgstr ""
+
+msgid "hBP04-079_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-079_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-079_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-080_NAME"
+msgstr ""
+
+msgid "hBP04-080_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-080_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-081_NAME"
+msgstr ""
+
+msgid "hBP04-081_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-081_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-081_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-082_NAME"
+msgstr ""
+
+msgid "hBP04-082_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-082_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-082_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-082_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-083_NAME"
+msgstr ""
+
+msgid "hBP04-083_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-083_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-084_NAME"
+msgstr ""
+
+msgid "hBP04-084_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-084_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-085_NAME"
+msgstr ""
+
+msgid "hBP04-085_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-085_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-085_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-086_NAME"
+msgstr ""
+
+msgid "hBP04-086_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-086_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-086_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP04-087_NAME"
+msgstr ""
+
+msgid "hBP04-087_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-087_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-087_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-088_NAME"
+msgstr ""
+
+msgid "hBP04-088_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-088_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-088_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-089_NAME"
+msgstr ""
+
+msgid "hBP04-089_EFFECT"
+msgstr ""
+
+msgid "hBP04-091_NAME"
+msgstr ""
+
+msgid "hBP04-091_EFFECT"
+msgstr ""
+
+msgid "hBP04-092_NAME"
+msgstr ""
+
+msgid "hBP04-092_EFFECT"
+msgstr ""
+
+msgid "hBP04-098_NAME"
+msgstr ""
+
+msgid "hBP04-098_EFFECT"
+msgstr ""
 

@@ -2222,7 +2222,7 @@ msgid "hBD24-007_SPSKILL_EFFECT"
 msgstr "[ゲームに1回] 自分のデッキから、黄ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
 
 msgid "hBP02-003_SKILL_NAME"
-msgstr "Ahoy!"
+msgstr "ahoy!!"
 
 msgid "hBP02-003_SKILL_EFFECT"
 msgstr "[ターンに1回] 自分のこのターンにBloomした #3期生 を持つホロメン 1人を、自分の手札のホロメンを使ってもう1回Bloomさせる。"
@@ -4661,7 +4661,7 @@ msgid "hBP03-056_ART_0_EFFECT"
 msgstr "相手のセンターホロメンかコラボホロメンに特殊ダメージ30を与える。"
 
 msgid "hBP03-056_ART_1_NAME"
-msgstr ""
+msgstr "私を縛る固定概念を壊せ"
 
 msgid "hBP03-056_ART_1_EFFECT"
 msgstr "相手のセンターホロメンかコラボホロメンどちらかに、自分の#歌を持つバックホロメン1人につき、特殊ダメージ20を与える。ただし、数える人数は4人まで。"
@@ -5649,4 +5649,727 @@ msgstr "青エール"
 
 msgid "hY06-003_NAME"
 msgstr "黄エール"
+
+msgid "hY03-005_NAME"
+msgstr "赤エール"
+
+msgid "hY03-006_NAME"
+msgstr "赤エール"
+
+msgid "hY03-007_NAME"
+msgstr "赤エール"
+
+msgid "hY03-008_NAME"
+msgstr "赤エール"
+
+msgid "hBD24-031_NAME"
+msgstr "オーロ・クロニー"
+
+msgid "hBD24-031_SKILL_NAME"
+msgstr "ブルーエンハンス"
+
+msgid "hBD24-031_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の青ホロメン1人のアーツ+20。"
+
+msgid "hBD24-031_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-031_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、青ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-034_NAME"
+msgstr "星街すいせい"
+
+msgid "hBD24-034_SKILL_NAME"
+msgstr "ブルーエンハンス"
+
+msgid "hBD24-034_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の青ホロメン1人のアーツ+20。"
+
+msgid "hBD24-034_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-034_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、青ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-035_NAME"
+msgstr "桃鈴ねね"
+
+msgid "hBD24-035_SKILL_NAME"
+msgstr "イエローエンハンス"
+
+msgid "hBD24-035_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の黄ホロメン1人のアーツ+20。"
+
+msgid "hBD24-035_SPSKILL_NAME"
+msgstr "Birthday Gift ~Yellow~"
+
+msgid "hBD24-035_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、黄ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-036_NAME"
+msgstr "不知火フレア"
+
+msgid "hBD24-036_SKILL_NAME"
+msgstr "イエローエンハンス"
+
+msgid "hBD24-036_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の黄ホロメン1人のアーツ+20。"
+
+msgid "hBD24-036_SPSKILL_NAME"
+msgstr "Birthday Gift ~Yellow~"
+
+msgid "hBD24-036_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、黄ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-037_NAME"
+msgstr "森 カリオペ"
+
+msgid "hBD24-037_SKILL_NAME"
+msgstr "パープルエンハンス"
+
+msgid "hBD24-037_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の紫ホロメン1人のアーツ+20。"
+
+msgid "hBD24-037_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-037_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、紫ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-038_NAME"
+msgstr "古石ビジュ―"
+
+msgid "hBD24-038_SKILL_NAME"
+msgstr "パープルエンハンス"
+
+msgid "hBD24-038_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の紫ホロメン1人のアーツ+20。"
+
+msgid "hBD24-038_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-038_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、紫ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-039_NAME"
+msgstr "音乃瀬奏"
+
+msgid "hBD24-039_SKILL_NAME"
+msgstr "イエローエンハンス"
+
+msgid "hBD24-039_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の黄ホロメン1人のアーツ+20。"
+
+msgid "hBD24-039_SPSKILL_NAME"
+msgstr "Birthday Gift ~Yellow~"
+
+msgid "hBD24-039_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、黄ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-040_NAME"
+msgstr "天音かなた"
+
+msgid "hBD24-040_SKILL_NAME"
+msgstr "オワイトエンハンス"
+
+msgid "hBD24-040_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の白ホロメン1人のアーツ+20。"
+
+msgid "hBD24-040_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-040_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、白ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-041_NAME"
+msgstr "エリザベス・ローズ・ブラッドフレイム"
+
+msgid "hBD24-041_SKILL_NAME"
+msgstr "レッドエンハンス"
+
+msgid "hBD24-041_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の赤ホロメン1人のアーツ+20。"
+
+msgid "hBD24-041_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-041_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-042_NAME"
+msgstr "シオリ・ノヴェラ"
+
+msgid "hBD24-042_SKILL_NAME"
+msgstr "ブルーエンハンス"
+
+msgid "hBD24-042_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の青ホロメン1人のアーツ+20。"
+
+msgid "hBD24-042_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-042_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、青ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP04-006_NAME"
+msgstr "大空スバル"
+
+msgid "hBP04-006_SKILL_NAME"
+msgstr "メンタル! フィジカル! パッション!"
+
+msgid "hBP04-006_SKILL_EFFECT"
+msgstr "[ターンに1回] 相手のターンで、自分の〈大空スバル〉が相手からダメージを受ける時に使える:自分の〈大空スバル〉全員が受けるダメージ-30。"
+
+msgid "hBP04-006_SPSKILL_NAME"
+msgstr "リアクション芸"
+
+msgid "hBP04-006_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のライフが3以下の時に使える:このターンの間、自分のセンターホロメンの〈大空スバル〉のアーツ+100。"
+
+msgid "hBP04-050_NAME"
+msgstr "シオリ・ノヴェラ"
+
+msgid "hBP04-050_ART_0_NAME"
+msgstr "しおり〜ん!"
+
+msgid "hBP04-051_NAME"
+msgstr "シオリ・ノヴェラ"
+
+msgid "hBP04-051_ART_0_NAME"
+msgstr "それって素敵な物語だと思わない?"
+
+msgid "hBP04-051_ART_1_NAME"
+msgstr "尽きない知識欲"
+
+msgid "hBP04-052_NAME"
+msgstr "シオリ・ノヴェラ"
+
+msgid "hBP04-052_ART_0_NAME"
+msgstr "魅力的な物語"
+
+msgid "hBP04-052_BLOOM_NAME"
+msgstr "脱獄計画"
+
+msgid "hBP04-052_BLOOM_EFFECT"
+msgstr "相手のバックホロメン1人に特殊ダメージ20を与える。ただし、ダウンしても相手のライフは減らない。"
+
+msgid "hBP04-053_NAME"
+msgstr "シオリ・ノヴェラ"
+
+msgid "hBP04-053_ART_0_NAME"
+msgstr "思い出の栞"
+
+msgid "hBP04-053_ART_0_EFFECT"
+msgstr "自分のホロパワーの上から1枚を公開できる: 公開したカードが#ENを持つホロメンの時、相手のホロメン1人に特殊ダメージ20を与える。\nそして公開したカードを裏向きにしてホロパワーの下に戻す。"
+
+msgid "hBP04-053_BLOOM_NAME"
+msgstr "禁断の知識"
+
+msgid "hBP04-053_BLOOM_EFFECT"
+msgstr "自分のエールデッキの上から1枚を、自分の#ENを持つホロメンに送る。"
+
+msgid "hBP04-067_NAME"
+msgstr "大空スバル"
+
+msgid "hBP04-067_ART_0_NAME"
+msgstr "あじまる! あじまる!"
+
+msgid "hBP04-067_ART_1_NAME"
+msgstr "ちわーす! ホロライブ2期生大空スバルっス!!"
+
+msgid "hBP04-068_NAME"
+msgstr "大空スバル"
+
+msgid "hBP04-068_ART_0_NAME"
+msgstr "スバルからきみへ!"
+
+msgid "hBP04-068_GIFT_NAME"
+msgstr "大空スバル盛り合わせセット"
+
+msgid "hBP04-068_GIFT_EFFECT"
+msgstr "[センターポジション・コラボポジション限定] このホロメンが相手の1stホロメンから受けるダメージ-20。"
+
+msgid "hBP04-069_NAME"
+msgstr "大空スバル"
+
+msgid "hBP04-069_ART_0_NAME"
+msgstr "おはようスバル"
+
+msgid "hBP04-069_ART_1_NAME"
+msgstr "眠いんデスケド"
+
+msgid "hBP04-096_NAME"
+msgstr "Advent"
+
+msgid "hBP04-096_EFFECT"
+msgstr "このカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、#Adventを持つホロメンを好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hBP04-104_NAME"
+msgstr "スバルドダック"
+
+msgid "hBP04-104_EFFECT"
+msgstr "このマスコットが付いているホロメンのHP+20。\n\n◆〈大空スバル〉に付いていたら能力追加お互いのステージのエールが合計10枚以上ある間、このマスコットが付いているホロメンのアーツ+20。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hBP04-070_NAME"
+msgstr "大空スバル"
+
+msgid "hBP04-070_ART_0_NAME"
+msgstr "いっぱい応援して、楽しんでね!"
+
+msgid "hBP04-070_COLLAB_NAME"
+msgstr "全力で頑張るから"
+
+msgid "hBP04-070_COLLAB_EFFECT"
+msgstr "自分のホロメン1人を選ぶ。このターンの間、選んだホロメンのエール1枚につき、選んだホロメンのアーツ+10。ただし、数える枚数は3枚まで。"
+
+msgid "hBP04-071_NAME"
+msgstr "大空スバル"
+
+msgid "hBP04-071_ART_0_NAME"
+msgstr "しゅばっ!"
+
+msgid "hBP04-071_ART_0_EFFECT"
+msgstr "自分のエールデッキの上から1枚を、このホロメンに送る。"
+
+msgid "hBP04-071_ART_1_NAME"
+msgstr "最強で楽しい毎日"
+
+msgid "hBP04-072_NAME"
+msgstr "大空スバル"
+
+msgid "hBP04-072_ART_0_NAME"
+msgstr "太陽少女"
+
+msgid "hBP04-072_ART_0_EFFECT"
+msgstr "お互いのステージのエール1枚につき、このアーツ+10。ただし、数える枚数は8枚まで。"
+
+msgid "hBP04-072_BLOOM_NAME"
+msgstr "サンライトステージ"
+
+msgid "hBP04-072_BLOOM_EFFECT"
+msgstr "自分のアーカイブの黄エール1枚を自分のホロメンに送れる。"
+
+msgid "hBP04-093_NAME"
+msgstr "ホロライブ2期生"
+
+msgid "hBP04-093_EFFECT"
+msgstr "このカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、#2期生を持つホロメンを好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "Justice"
+msgstr "Justice"
+
+msgid "Kaela'sArms"
+msgstr "カエラ'sアームズ"
+
+msgid "hBP04-003_NAME"
+msgstr "一条莉々華"
+
+msgid "hBP04-003_SKILL_NAME"
+msgstr "頂上に到達しましょう！"
+
+msgid "hBP04-003_SKILL_EFFECT"
+msgstr "[ターンに1回] 自分のセンターホロメンが#ReGLOSSを持つ時、相手のコラボホロメンに特殊ダメージ50を与える。"
+
+msgid "hBP04-003_SPSKILL_NAME"
+msgstr "かわいい! ポジティブ! ジーニアス!"
+
+msgid "hBP04-003_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 相手のターンで、自分の〈一条莉々華〉がダウンした時に使える:自分のデッキから、[〈一条莉々華〉と〈限界飯〉] 1枚ずつを公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP04-014_NAME"
+msgstr "白上フブキ"
+
+msgid "hBP04-014_ART_0_NAME"
+msgstr "私の大切な人"
+
+msgid "hBP04-014_ART_0_EFFECT"
+msgstr "自分のステージに〈白上フブキ〉以外の#ゲーマーズを持つホロメンがいる時、このアーツ+50。"
+
+msgid "hBP04-014_BLOOM_NAME"
+msgstr "戻っておいで"
+
+msgid "hBP04-014_BLOOM_EFFECT"
+msgstr "自分のアーカイブの #白上'sキャラクターを持つカード1~2枚を手札に戻せる。"
+
+msgid "hBP04-015_NAME"
+msgstr "IRyS"
+
+msgid "hBP04-015_ART_0_NAME"
+msgstr "The Race Queen"
+
+msgid "hBP04-015_ART_0_EFFECT"
+msgstr "自分のステージの#Promiseを持つホロメン1人につき、このアーツ+10。ただし、数える人数は4人まで。"
+
+msgid "hBP04-016_NAME"
+msgstr "ラオーラ・パンテーラ"
+
+msgid "hBP04-016_ART_0_NAME"
+msgstr "チアオーラ"
+
+msgid "hBP04-016_ART_0_EFFECT"
+msgstr "自分のステージのホロメンが5人以下の時、自分のデッキから、#Justiceを持つSpotホロメン1枚を公開し、ステージに出せる。そしてデッキをシャッフルする。"
+
+msgid "hBP04-017_NAME"
+msgstr "ラオーラ・パンテーラ"
+
+msgid "hBP04-017_ART_0_NAME"
+msgstr "正義のピンクパンサー"
+
+msgid "hBP04-018_NAME"
+msgstr "ラオーラ・パンテーラ"
+
+msgid "hBP04-018_ART_0_NAME"
+msgstr "情報収集はお手の物"
+
+msgid "hBP04-018_BLOOM_NAME"
+msgstr "神眼の描き手"
+
+msgid "hBP04-018_BLOOM_EFFECT"
+msgstr "このターンの間、自分のステージの#絵を持つホロメン1人のアーツ+20"
+
+msgid "hBP04-019_NAME"
+msgstr "ラオーラ・パンテーラ"
+
+msgid "hBP04-019_ART_0_NAME"
+msgstr "アートストリーマー"
+
+msgid "hBP04-019_ART_0_EFFECT"
+msgstr "[コラボポジション限定] 自分のセンターホロメンが#絵を持つ時、このアーツ+80。"
+
+msgid "hBP04-019_COLLAB_NAME"
+msgstr "只今、情報収集中"
+
+msgid "hBP04-019_COLLAB_EFFECT"
+msgstr "自分のデッキの上から3枚を見る。その中から、#絵を持つホロメン1枚を公開し、手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hBP04-026_NAME"
+msgstr "大神ミオ"
+
+msgid "hBP04-026_ART_0_NAME"
+msgstr "うちってフブキのものだったの?"
+
+msgid "hBP04-026_ART_0_EFFECT"
+msgstr "自分のステージに〈大神ミオ〉以外の#ゲーマーズを持つホロメンがいる時、このアーツ+50。"
+
+msgid "hBP04-026_BLOOM_NAME"
+msgstr "フブキは特別な存在"
+
+msgid "hBP04-026_BLOOM_EFFECT"
+msgstr "自分の推しホロメンが〈白上フブキ〉の時、自分のエールデッキから、白エール1枚を公開し、自分の〈白上フブキ〉に送る。そしてエールデッキをシャッフルする。"
+
+msgid "hBP04-032_NAME"
+msgstr "一条莉々華"
+
+msgid "hBP04-032_ART_0_NAME"
+msgstr "こんりり"
+
+msgid "hBP04-033_NAME"
+msgstr "一条莉々華"
+
+msgid "hBP04-033_ART_0_NAME"
+msgstr "莉々華スタンバイ"
+
+msgid "hBP04-033_ART_1_NAME"
+msgstr "リミットオーバー"
+
+msgid "hBP04-033_ART_1_EFFECT"
+msgstr "このターンに自分が〈限界飯〉を使っていた時、相手のコラボホロメンに特殊ダメージ20を与える。"
+
+msgid "hBP04-034_NAME"
+msgstr "一条莉々華"
+
+msgid "hBP04-034_ART_0_NAME"
+msgstr "Let's Dance"
+
+msgid "hBP04-034_ART_1_NAME"
+msgstr "Subscribe or Die!"
+
+msgid "hBP04-035_NAME"
+msgstr "一条莉々華"
+
+msgid "hBP04-035_ART_0_NAME"
+msgstr "社長パンチ"
+
+msgid "hBP04-035_ART_0_EFFECT"
+msgstr "相手のコラボホロメンに特殊ダメージ20を与える。"
+
+msgid "hBP04-035_BLOOM_NAME"
+msgstr "限界飯料理人"
+
+msgid "hBP04-035_BLOOM_EFFECT"
+msgstr "自分のアーカイブの〈限界飯〉1枚を手札に戻せる。"
+
+msgid "hBP04-036_NAME"
+msgstr "一条莉々華"
+
+msgid "hBP04-036_ART_0_NAME"
+msgstr "いひひっ"
+
+msgid "hBP04-036_ART_0_EFFECT"
+msgstr "このアーツの対象が相手のコラボホロメンの時、自分のデッキを1枚引く。"
+
+msgid "hBP04-036_BLOOM_NAME"
+msgstr "おいしいもの独り占め"
+
+msgid "hBP04-036_BLOOM_EFFECT"
+msgstr "相手のコラボホロメンに特殊ダメージ20を与える。"
+
+msgid "hBP04-037_NAME"
+msgstr "一条莉々華"
+
+msgid "hBP04-037_ART_0_NAME"
+msgstr "お？ 喧嘩する?"
+
+msgid "hBP04-037_ART_0_EFFECT"
+msgstr "相手のセンターホロメンに特殊ダメージ50を与える。その後、このターンに自分が〈限界飯〉を使っていた時、相手のセンターホロメンかコラボホロメンに特殊ダメージ30を与える。"
+
+msgid "hBP04-037_BLOOM_NAME"
+msgstr "KPG"
+
+msgid "hBP04-037_BLOOM_EFFECT"
+msgstr "サイコロを1回振れる:4以上の時、相手のコラボホロメンがいないなら、相手は、自身のバックホロメン1人をコラボポジションに移動させる (移動はコラボとしては扱わない)。"
+
+msgid "hBP04-039_NAME"
+msgstr "カエラ・コヴァルスキア"
+
+msgid "hBP04-039_ART_0_NAME"
+msgstr "おはエラ"
+
+msgid "hBP04-040_NAME"
+msgstr "カエラ・コヴァルスキア"
+
+msgid "hBP04-040_ART_0_NAME"
+msgstr "When Life is Hard"
+
+msgid "hBP04-040_ART_1_NAME"
+msgstr "DAHLAH"
+
+msgid "hBP04-041_NAME"
+msgstr "カエラ・コヴァルスキア"
+
+msgid "hBP04-041_ART_0_NAME"
+msgstr "サイレント笑い"
+
+msgid "hBP04-041_BLOOM_NAME"
+msgstr "JDON my soul"
+
+msgid "hBP04-041_BLOOM_EFFECT"
+msgstr "自分のアーカイブのツール1枚を手札に戻せる。"
+
+msgid "hBP04-042_NAME"
+msgstr "カエラ・コヴァルスキア"
+
+msgid "hBP04-042_ART_0_NAME"
+msgstr "holoh3ro"
+
+msgid "hBP04-042_ART_0_EFFECT"
+msgstr "自分のステージにこのホロメン以外の#ID3期生を持つホロメンがいる時、自分のデッキを1枚引く。"
+
+msgid "hBP04-042_ART_1_NAME"
+msgstr "お墨付きの一品"
+
+msgid "hBP04-042_ART_1_EFFECT"
+msgstr "自分の#カエラ'sアームズを持つツールが付いているホロメンがいる時、相手のコラボホロメンに特殊ダメージ30を与える。"
+
+msgid "hBP04-049_NAME"
+msgstr "ムーナ・ホシノヴァ"
+
+msgid "hBP04-049_ART_0_NAME"
+msgstr "月と星のステージ"
+
+msgid "hBP04-049_ART_1_NAME"
+msgstr "Shining Moon"
+
+msgid "hBP04-049_ART_1_EFFECT"
+msgstr "相手のバックホロメン1人に特殊ダメージ20を与える。その後、自分のステージにこのホロメンと異なる色のホロメンがいる時、このアーツ+50"
+
+msgid "hBP04-054_NAME"
+msgstr "ラプラス・ダークネス"
+
+msgid "hBP04-054_ART_0_NAME"
+msgstr "貴様ら、刮目せよ!!"
+
+msgid "hBP04-060_NAME"
+msgstr "紫咲シオン"
+
+msgid "hBP04-060_ART_0_NAME"
+msgstr "ゲーム配信中"
+
+msgid "hBP04-060_ART_0_EFFECT"
+msgstr "相手のセンターホロメンとコラボホロメンに、相手のセンターホロメンのエール1枚につき、特殊ダメージ10を与える。"
+
+msgid "hBP04-060_BLOOM_NAME"
+msgstr "エールリバース"
+
+msgid "hBP04-060_BLOOM_EFFECT"
+msgstr "相手のアーカイブのエール1枚を、相手のセンターホロメンに送れる。"
+
+msgid "hBP04-061_NAME"
+msgstr "クレイジー・オリー"
+
+msgid "hBP04-061_ART_0_NAME"
+msgstr "HOLOROの魂"
+
+msgid "hBP04-061_ART_0_EFFECT"
+msgstr "自分のステージのこのホロメン以外の#ID2期生を持つ2ndホロメン1人につき、このアーツ+20。"
+
+msgid "hBP04-061_BLOOM_NAME"
+msgstr "オリーを見てください!"
+
+msgid "hBP04-061_BLOOM_EFFECT"
+msgstr "自分のSP推レスキル「蘇るオリー」でBloomした時、自分の〈クレイジー・オリー〉1人のHPすべて回復。"
+
+msgid "hBP04-062_NAME"
+msgstr "森 カリオペ"
+
+msgid "hBP04-062_ART_0_NAME"
+msgstr "最期の一杯"
+
+msgid "hBP04-062_ART_0_EFFECT"
+msgstr "自分のデッキの上から2枚を見る。その中から、1枚をアーカイブする。そして残ったカードをデッキの上に戻す。"
+
+msgid "hBP04-062_GIFT_NAME"
+msgstr "永遠の休息"
+
+msgid "hBP04-062_GIFT_EFFECT"
+msgstr "[センターポジション・コラボポジション限定]このホロメンに〈森カリオペの鎌〉か〈Death-sensei〉が付いている間、自分の#Mythを持つセンターホロメンのアーツ+30。"
+
+msgid "hBP04-079_NAME"
+msgstr "夏色まつり"
+
+msgid "hBP04-079_ART_0_NAME"
+msgstr "ホロライブの清楚担当"
+
+msgid "hBP04-079_GIFT_NAME"
+msgstr "わっしょ〜い!"
+
+msgid "hBP04-079_GIFT_EFFECT"
+msgstr "相手のターンで、このホロメンがダウンした時、このホロメンのエール1枚を、自分の他のホロメンに付け替えられる。"
+
+msgid "hBP04-080_NAME"
+msgstr "夏色まつり"
+
+msgid "hBP04-080_ART_0_NAME"
+msgstr "夏色応援団"
+
+msgid "hBP04-080_ART_1_NAME"
+msgstr "戦え! 血を血で洗え!"
+
+msgid "hBP04-081_NAME"
+msgstr "夏色まつり"
+
+msgid "hBP04-081_ART_0_NAME"
+msgstr "全力で歌うよッ!!"
+
+msgid "hBP04-081_BLOOM_NAME"
+msgstr "大好きな君に届くように"
+
+msgid "hBP04-081_BLOOM_EFFECT"
+msgstr "自分のエールデッキから、黄エール1枚を公開し、このホロメンに送る。そしてエールデッキをシャッフルする。"
+
+msgid "hBP04-082_NAME"
+msgstr "夏色まつり"
+
+msgid "hBP04-082_ART_0_NAME"
+msgstr "お気に入りみつけた"
+
+msgid "hBP04-082_ART_0_EFFECT"
+msgstr "このホロメンのエール1枚につき、このアーツ+20。"
+
+msgid "hBP04-082_BLOOM_NAME"
+msgstr "レッツ ショッピング"
+
+msgid "hBP04-082_BLOOM_EFFECT"
+msgstr "自分のステージの異なるカード名の#1期生を持つホロメン1人につき、サイコロを1回振れる:4以上が出た回数1回につき、自分のエールデッキの上から1枚をこのホロメンに送る。"
+
+msgid "hBP04-083_NAME"
+msgstr "桃鈴ねね"
+
+msgid "hBP04-083_ART_0_NAME"
+msgstr "こんねね~"
+
+msgid "hBP04-083_ART_0_EFFECT"
+msgstr "自分のステージのホロメンが5人以下の時、自分のデッキから、#5期生を持つDebutホロメン1枚を公開し、ステージに出せる。そしてデッキをシャッフルする。"
+
+msgid "hBP04-084_NAME"
+msgstr "桃鈴ねね"
+
+msgid "hBP04-084_ART_0_NAME"
+msgstr "はぁ〜ん"
+
+msgid "hBP04-084_ART_1_NAME"
+msgstr "またねね"
+
+msgid "hBP04-085_NAME"
+msgstr "桃鈴ねね"
+
+msgid "hBP04-085_ART_0_NAME"
+msgstr "いっぱいがんばるぞい!!!!!!"
+
+msgid "hBP04-085_BLOOM_NAME"
+msgstr "最高の気分!!!!!!!!!!!!!!"
+
+msgid "hBP04-085_BLOOM_EFFECT"
+msgstr "自分のエールデッキから、自分のステージの#5期生を持つホロメン1人と同色のエール1枚を公開し、自分の#5期生を持つホロメンに送る。 そしてエールデッキをシャッフルする。"
+
+msgid "hBP04-086_NAME"
+msgstr "桃鈴ねね"
+
+msgid "hBP04-086_ART_0_NAME"
+msgstr "ハズバンドいっぱい"
+
+msgid "hBP04-086_ART_1_NAME"
+msgstr "ギラギラパワー"
+
+msgid "hBP04-086_ART_1_EFFECT"
+msgstr "自分のアーカイブのエール1枚につき、このアーツ+20。ただし、数える枚数は5枚まで。"
+
+msgid "hBP04-087_NAME"
+msgstr "エリザベス・ローズ・ブラッドフレイム"
+
+msgid "hBP04-087_ART_0_NAME"
+msgstr "ERB"
+
+msgid "hBP04-087_GIFT_NAME"
+msgstr "『緋色の女王』"
+
+msgid "hBP04-087_GIFT_EFFECT"
+msgstr "[コラボポジション限定] 自分のDebutホロメンがセンターポジションで受けるダメージ-20。"
+
+msgid "hBP04-088_NAME"
+msgstr "ジジ・ムリン"
+
+msgid "hBP04-088_ART_0_NAME"
+msgstr "怒らないでよ!"
+
+msgid "hBP04-088_GIFT_NAME"
+msgstr "え?でも面白かったじゃん!"
+
+msgid "hBP04-088_GIFT_EFFECT"
+msgstr "相手のターンで、このホロメンがダウンした時、自分のエールデッキの上から1枚を自分のホロメンに送る。"
+
+msgid "hBP04-089_NAME"
+msgstr "ツートンカラーパソコン"
+
+msgid "hBP04-089_EFFECT"
+msgstr "このカードは、自分のステージに色が1色で異なる色のホロメンが2人以上いなければ使えない。\n\n自分のステージの色が1色で異なる色のホロメン2人を選ぶ。自分のデッキから、Buzz以外のそれぞれ選んだホロメンと同色の1stホロメン1枚ずつを公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP04-091_NAME"
+msgstr "限界飯"
+
+msgid "hBP04-091_EFFECT"
+msgstr "このターンの間、自分の〈一条莉々華〉1人のアーツに必要な-1。 自分の〈限界飯〉はターンに1回しか使えない。"
+
+msgid "hBP04-092_NAME"
+msgstr "ねぽらぼ"
+
+msgid "hBP04-092_EFFECT"
+msgstr "このカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、#5期生を持つホロメンを好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hBP04-098_NAME"
+msgstr "鍛冶ハンマー"
+
+msgid "hBP04-098_EFFECT"
+msgstr "このツールが付いているホロメンのアーツ+10。\n\n#ID3期生 を持つ1st以上のホロメンに付いていたら能力追加このツールが付いているホロメンのアーツ+10。\n\nツールは、自分のホロメン1人につき1枚だけ付けられる。"
 

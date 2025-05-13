@@ -1,4 +1,4 @@
-# LANGUAGE translation for holoDelta - future for the following files:
+# LANGUAGE translation for holoDelta for the following files:
 # res://Scenes/board.tscn
 # res://Scenes/deck_list.tscn
 # res://Scenes/sleeve_select.tscn
@@ -21,7 +21,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: holoDelta - future\n"
+"Project-Id-Version: holoDelta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
@@ -108,6 +108,16 @@ msgid "LOBBY_CREATE"
 msgstr ""
 
 #: Scenes/board.tscn
+msgid "DEBUG"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "PLAYERS_ONLINE"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_JOIN"
 msgstr ""
 
@@ -132,26 +142,25 @@ msgid "LOBBY_BANLIST"
 msgstr ""
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_NONE"
 msgstr ""
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CURRENT"
 msgstr ""
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr ""
 
 #: Scenes/board.tscn
 msgid "LOBBY_BACK"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "UPDATE\t_DB"
 msgstr ""
 
 #: Scenes/board.tscn
@@ -191,18 +200,6 @@ msgid "COSMETICS_D_DEFAULT"
 msgstr ""
 
 #: Scenes/board.tscn
-msgid "INFO"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "INFO_DLOC"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "INFO_CANCEL"
-msgstr ""
-
-#: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_LOBBYCODE"
 msgstr ""
@@ -235,6 +232,7 @@ msgid "LOBBY_READY"
 msgstr ""
 
 #: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "DECK_SELECT"
 msgstr ""
 
@@ -252,6 +250,19 @@ msgid "OK"
 msgstr ""
 
 #: Scenes/board.tscn
+msgid "INFO"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "INFO_DLOC"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "INFO_CANCEL"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_GAMESTART_SPECTATE"
 msgstr ""
 
@@ -486,6 +497,10 @@ msgid "DECKERROR_FAKEOSHI"
 msgstr ""
 
 #: Scripts/deck_creation.gd
+msgid "DECKERROR_BANNED"
+msgstr ""
+
+#: Scripts/deck_creation.gd
 msgid "DECKERROR_UNDERDECK"
 msgstr ""
 
@@ -518,11 +533,15 @@ msgid "DECKERROR_FAKECHEER"
 msgstr ""
 
 #: Scripts/deck_creation.gd
-msgid "DECK_OVERWRITE"
+msgid "DECKERROR_OVERAMOUNT"
 msgstr ""
 
 #: Scripts/deck_creation.gd
-msgid "DECKERROR_BANNED"
+msgid "DECKERROR_RESTRICTED"
+msgstr ""
+
+#: Scripts/deck_creation.gd
+msgid "DECK_OVERWRITE"
 msgstr ""
 
 #: Scripts/deck_creation.gd
@@ -535,14 +554,6 @@ msgstr ""
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_OSHIBADFORMAT"
-msgstr ""
-
-#: Scripts/deck_creation.gd
-msgid "DECKERROR_RESTRICTED"
-msgstr ""
-
-#: Scripts/deck_creation.gd
-msgid "DECKERROR_OVERAMOUNT"
 msgstr ""
 
 #: Scripts/deck_creation.gd
@@ -559,6 +570,12 @@ msgstr ""
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOCHEER"
+msgstr ""
+
+#: Scripts/deck_creation.gd
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid ""
 msgstr ""
 
 #: Scripts/side.gd
@@ -600,26 +617,6 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "READY_WAIT"
-msgstr ""
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_DRAW"
-msgstr ""
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_DRAWX"
-msgstr ""
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_MILL"
-msgstr ""
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_MILLX"
 msgstr ""
 
 #: Scripts/side.gd
@@ -771,6 +768,10 @@ msgid "CARD_REVEALED_ARCHIVE"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "CARD_REVEALED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "DECK_DRAW"
 msgstr ""
 
@@ -819,6 +820,11 @@ msgid "DECK_RPS"
 msgstr ""
 
 #: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "FORFEIT"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "CHEERDECK_REVEAL"
 msgstr ""
 
@@ -844,6 +850,10 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "HOLOPOWER_ARCHIVEX"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_REVEAL"
 msgstr ""
 
 #: Scripts/side.gd
@@ -983,18 +993,6 @@ msgid "DOWNLOAD_CARDS"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
-msgid "DOWNLOAD_ITER_AGAIN"
-msgstr ""
-
-#: Scripts/Multiplayer.gd
-msgid "DOWNLOADING"
-msgstr ""
-
-#: Scripts/Multiplayer.gd
-msgid "DOWNLOAD_ERROR"
-msgstr ""
-
-#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"
 msgstr ""
 
@@ -1019,7 +1017,31 @@ msgid "YOU"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
+msgid "WIN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "SPECTATE_WIN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
 msgid "MESSAGE_MULLIGAN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAW"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAWX"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILLX"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
@@ -1064,6 +1086,10 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_HOLOPOWER"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
@@ -1391,6 +1417,10 @@ msgid "YOU_MESSAGE_REVEALED_ARCHIVE"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_OSHISKILL_SP"
 msgstr ""
 
@@ -1648,18 +1678,6 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_RPS"
-msgstr ""
-
-#: Scripts/Multiplayer.gd
-msgid "WIN"
-msgstr ""
-
-#: Scripts/Multiplayer.gd
-msgid "SPECTATE_WIN"
-msgstr ""
-
-#: Scripts/Multiplayer.gd
-msgid "FORFEIT"
 msgstr ""
 
 #: Scripts/Multiplayer.gd

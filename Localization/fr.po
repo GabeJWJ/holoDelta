@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-03-24 19:17\n"
+"PO-Revision-Date: 2025-05-13 16:30\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -96,6 +96,16 @@ msgid "LOBBY_CREATE"
 msgstr "Créer un Lobby"
 
 #: Scenes/board.tscn
+msgid "DEBUG"
+msgstr "Actualiser"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "PLAYERS_ONLINE"
+msgstr "{amount} joueurs en ligne"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_JOIN"
 msgstr "Rejoindre un Lobby"
 
@@ -120,16 +130,19 @@ msgid "LOBBY_BANLIST"
 msgstr "Banlist"
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_NONE"
 msgstr "Sans Banlist"
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CURRENT"
 msgstr "Actuel"
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr "Actuel + Non sorti"
@@ -137,10 +150,6 @@ msgstr "Actuel + Non sorti"
 #: Scenes/board.tscn
 msgid "LOBBY_BACK"
 msgstr "Retour"
-
-#: Scenes/board.tscn
-msgid "UPDATE\t_DB"
-msgstr "Mettre à jour la BD"
 
 #: Scenes/board.tscn
 msgid "EXIT"
@@ -179,18 +188,6 @@ msgid "COSMETICS_D_DEFAULT"
 msgstr "Dé par défaut"
 
 #: Scenes/board.tscn
-msgid "INFO"
-msgstr "Info"
-
-#: Scenes/board.tscn
-msgid "INFO_DLOC"
-msgstr "Emplacement des decks"
-
-#: Scenes/board.tscn
-msgid "INFO_CANCEL"
-msgstr "Retour"
-
-#: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_LOBBYCODE"
 msgstr "Entrer le code du lobby"
@@ -223,6 +220,7 @@ msgid "LOBBY_READY"
 msgstr "Prêt"
 
 #: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "DECK_SELECT"
 msgstr "Choisir un deck"
 
@@ -240,6 +238,19 @@ msgid "OK"
 msgstr "OK"
 
 #: Scenes/board.tscn
+msgid "INFO"
+msgstr "Info"
+
+#: Scenes/board.tscn
+msgid "INFO_DLOC"
+msgstr "Emplacement des decks"
+
+#: Scenes/board.tscn
+msgid "INFO_CANCEL"
+msgstr "Retour"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_GAMESTART_SPECTATE"
 msgstr "Partie commencée. Regarder ? "
 
@@ -474,6 +485,10 @@ msgid "DECKERROR_FAKEOSHI"
 msgstr "{cardNum} n'est pas une carte Oshi."
 
 #: Scripts/deck_creation.gd
+msgid "DECKERROR_BANNED"
+msgstr "{cardNum} est bannie."
+
+#: Scripts/deck_creation.gd
 msgid "DECKERROR_UNDERDECK"
 msgstr "Le deck principal n'a pas assez de cartes."
 
@@ -506,12 +521,16 @@ msgid "DECKERROR_FAKECHEER"
 msgstr "{cardNum} ne va pas dans le deck de Cheer"
 
 #: Scripts/deck_creation.gd
-msgid "DECK_OVERWRITE"
-msgstr "Écraser {fileName}"
+msgid "DECKERROR_OVERAMOUNT"
+msgstr "Il y a trop copies de la carte {cardNum}"
 
 #: Scripts/deck_creation.gd
-msgid "DECKERROR_BANNED"
-msgstr "{cardNum} est bannie."
+msgid "DECKERROR_RESTRICTED"
+msgstr "{cardNum} est limité à moins de copies que ce que vous avez."
+
+#: Scripts/deck_creation.gd
+msgid "DECK_OVERWRITE"
+msgstr "Écraser {fileName}"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOALTART"
@@ -524,14 +543,6 @@ msgstr "{cardNum} n'est pas une vraie carte, ou du moins, elle n'est pas répert
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_OSHIBADFORMAT"
 msgstr "Les informations de la carte Oshi sont incorrectes. Êtes-vous sûr qu'il s'agit d'un deck Holodelta ?"
-
-#: Scripts/deck_creation.gd
-msgid "DECKERROR_RESTRICTED"
-msgstr "{cardNum} est limité à moins de copies que ce que vous avez."
-
-#: Scripts/deck_creation.gd
-msgid "DECKERROR_OVERAMOUNT"
-msgstr "Il y a trop copies de la carte {cardNum}"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_DECKBADFORMAT"
@@ -548,6 +559,12 @@ msgstr "Les informations du deck de cheers sont incorrectes. Êtes-vous sûr qu'
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOCHEER"
 msgstr "Il n'y a pas de deck de cheers principal."
+
+#: Scripts/deck_creation.gd
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid ""
+msgstr ""
 
 #: Scripts/side.gd
 msgid "DECK"
@@ -590,26 +607,6 @@ msgstr "En attente de l'adversaire..."
 #: Scripts/side.gd
 msgid "READY_WAIT"
 msgstr "En attente ..."
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_DRAW"
-msgstr "{person} a pioché une carte"
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_DRAWX"
-msgstr "{person} a pioché {amount} cartes"
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_MILL"
-msgstr "{person} a envoyé une carte depuis {from} vers {to}"
-
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "MESSAGE_MILLX"
-msgstr "{person} a envoyé {amount} cartes depuis {from} vers {to}"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_LOOK_ATTACHED"
@@ -760,6 +757,10 @@ msgid "CARD_REVEALED_ARCHIVE"
 msgstr "Envoyer dans Archive"
 
 #: Scripts/side.gd
+msgid "CARD_REVEALED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "DECK_DRAW"
 msgstr "Piocher"
 
@@ -808,6 +809,11 @@ msgid "DECK_RPS"
 msgstr "Jouer à PPC"
 
 #: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "FORFEIT"
+msgstr "Abandon"
+
+#: Scripts/side.gd
 msgid "CHEERDECK_REVEAL"
 msgstr "Révéler et attacher"
 
@@ -834,6 +840,10 @@ msgstr "Archiver"
 #: Scripts/side.gd
 msgid "HOLOPOWER_ARCHIVEX"
 msgstr "Archiver X"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_REVEAL"
+msgstr "Révéler la première carte"
 
 #: Scripts/side.gd
 msgid "HOLOPOWER_DECK"
@@ -972,18 +982,6 @@ msgid "DOWNLOAD_CARDS"
 msgstr "Téléchargement des cartes, veuillez patienter..."
 
 #: Scripts/Multiplayer.gd
-msgid "DOWNLOAD_ITER_AGAIN"
-msgstr "Une erreur s'est produite, nouvelle tentative..."
-
-#: Scripts/Multiplayer.gd
-msgid "DOWNLOADING"
-msgstr "Téléchargement de la DB"
-
-#: Scripts/Multiplayer.gd
-msgid "DOWNLOAD_ERROR"
-msgstr "Téléchargement échoué, nouvelle tentative..."
-
-#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"
 msgstr "Banlist personnalisée"
 
@@ -1008,8 +1006,32 @@ msgid "YOU"
 msgstr "Vous"
 
 #: Scripts/Multiplayer.gd
+msgid "WIN"
+msgstr "Vous avez gagné !"
+
+#: Scripts/Multiplayer.gd
+msgid "SPECTATE_WIN"
+msgstr "{person} a gagné ! "
+
+#: Scripts/Multiplayer.gd
 msgid "MESSAGE_MULLIGAN"
 msgstr "{person} a mulligan"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAW"
+msgstr "{person} a pioché une carte"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAWX"
+msgstr "{person} a pioché {amount} cartes"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILL"
+msgstr "{person} a envoyé une carte depuis {from} vers {to}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILLX"
+msgstr "{person} a envoyé {amount} cartes depuis {from} vers {to}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_BLOOM"
@@ -1054,6 +1076,10 @@ msgstr "{person} a déplacé {cardName} sous son deck"
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_ARCHIVE"
 msgstr "{person} a archivé {cardName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_HOLOPOWER"
+msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_OSHISKILL_SP"
@@ -1380,6 +1406,10 @@ msgid "YOU_MESSAGE_REVEALED_ARCHIVE"
 msgstr "Vous avez archivé {cardName}"
 
 #: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_OSHISKILL_SP"
 msgstr "Vous avez utilisé votre SP Oshi Skill \"{skillName}\""
 
@@ -1638,18 +1668,6 @@ msgstr "Vous avez obtenu un {amount} au dé"
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_RPS"
 msgstr "Vous avez gagné le PPC"
-
-#: Scripts/Multiplayer.gd
-msgid "WIN"
-msgstr "Vous avez gagné !"
-
-#: Scripts/Multiplayer.gd
-msgid "SPECTATE_WIN"
-msgstr "{person} a gagné ! "
-
-#: Scripts/Multiplayer.gd
-msgid "FORFEIT"
-msgstr "Abandon"
 
 #: Scripts/Multiplayer.gd
 msgid "WINCONSENT_FORFEIT"

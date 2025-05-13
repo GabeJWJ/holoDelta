@@ -429,6 +429,7 @@ func create_card(number,art_code,back):
 	newCard.card_mouse_over.connect(update_info)
 	newCard.move_behind_request.connect(move_behind_ids)
 	newCard.accept_damage.connect(_on_accept_damage)
+	newCard.reject_damage.connect(_on_reject_damage)
 	all_cards[new_id] = newCard
 	newCard.position = Vector2(1000,1000)
 	return newCard
@@ -610,7 +611,7 @@ func remove_old_card(old_card,leavingField = false):
 			revealed.erase(old_card)
 		if old_card == playing:
 			playing = null
-		actualCard.position = Vector2(1000,1000)
+		actualCard.position = Vector2(1000,2000)
 	
 	var found_holomem_on_stage = false
 	var found_old_on_stage = false
@@ -621,7 +622,7 @@ func remove_old_card(old_card,leavingField = false):
 		elif zones[index][1] != -1:
 			found_holomem_on_stage = true
 	
-	if found_old_on_stage and !found_holomem_on_stage:
+	if found_old_on_stage and leavingField and !found_holomem_on_stage:
 		_show_loss_consent("EMPTYSTAGE")
 
 func remove_from_hand(old_card, hidden=false):
@@ -862,12 +863,16 @@ func bloom_fake_on_zone(fake_card_to_bloom, zone_to_bloom):
 
 func unbloom_on_zone(card_to_unbloom):
 	var unbloomee = all_cards[card_to_unbloom]
-	unbloomee.unbloom()
+	var underCard = unbloomee.unbloom()
+	if underCard:
+		set_zone_card(find_what_zone(unbloomee.cardID),underCard.cardID)
 	_move_sfx()
 
 func unbloom_fake_on_zone(fake_card_to_unbloom):
 	var unbloomee = all_cards[fake_card_to_unbloom]
-	unbloomee.unbloom()
+	var underCard = unbloomee.unbloom()
+	if underCard:
+		set_zone_card(find_what_zone(unbloomee.cardID),underCard.cardID)
 	_move_sfx()
 
 func attach_card(attachee, attach_to):
@@ -1252,6 +1257,7 @@ func _on_card_clicked(card_id : int) -> void:
 				popup.add_item(tr("CARD_REVEALED_TOPDECK"),23)
 				popup.add_item(tr("CARD_REVEALED_BOTTOMDECK"),24)
 				popup.add_item(tr("CARD_REVEALED_ARCHIVE"),25)
+				popup.add_item(tr("CARD_REVEALED_HOLOPOWER"),26)
 	
 	show_popup()
 
@@ -1341,6 +1347,9 @@ func _on_holopower_clicked():
 	if is_your_side and can_do_things:
 		popup.add_item(tr("HOLOPOWER_ARCHIVE"),500)
 		popup.add_item(tr("HOLOPOWER_ARCHIVEX"),501)
+		
+		if revealed.size() < 10:
+			popup.add_item(tr("HOLOPOWER_REVEAL"),505)
 		
 		popup.add_separator()
 		
@@ -1689,6 +1698,9 @@ func _on_keep_playing_pressed():
 func _on_accept_damage(card_id):
 	send_command("Accept Damage",{"card_id":card_id})
 
+func _on_reject_damage(card_id):
+	send_command("Reject Damage",{"card_id":card_id})
+
 func _unhandled_key_input(event):
 	if event.is_action_pressed("Draw") and is_your_side and can_do_things and deck.cardList.size() > 0:
 		send_command("Popup Command",{"command_id":200})
@@ -1757,7 +1769,6 @@ func _move_sfx():
 
 func _is_card_onstage(card_to_check):
 	var actual_card = all_cards[int(card_to_check)]
-	print(actual_card.get_card_name())
 	return actual_card.onstage or int(card_to_check) in revealed or int(card_to_check) == playing
 
 
@@ -1826,9 +1837,7 @@ func side_command(command: String, data: Dictionary) -> void:
 			if "zone_1" in data and "zone_2" in data:
 				switch_cards_in_zones($Zones.get_node(data["zone_1"]), $Zones.get_node(data["zone_2"]))
 		"Card Left Field":
-			print(data)
 			if "card_id" in data and _is_card_onstage(data["card_id"]):
-				print("made it")
 				remove_old_card(int(data["card_id"]),true)
 		"Attach Card":
 			if "attachee" in data and "attach_to" in data:

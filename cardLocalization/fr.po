@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-03-24 19:17\n"
+"PO-Revision-Date: 2025-05-13 16:30\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Quand ce holomem est Inconscient, perdez 2 VIE"
@@ -4670,7 +4670,7 @@ msgid "hBP03-043_ART_1_NAME"
 msgstr "On mange ensemble ?"
 
 msgid "hBP03-043_ART_1_EFFECT"
-msgstr "(En position de Collab uniquement) Si votre Oshi holomem est FUWAMOCO, vous pouvez déplacer l'une des Cheers de cet holomem vers l'un de vos holomems nommé Mococo Abyssgard. Si vous le faites, infligez 50 dégâts spéciaux à l'holomem Central de votre adversaire."
+msgstr "(En position de Central uniquement) Si votre Oshi holomem est FUWAMOCO, vous pouvez déplacer l'une des Cheers de cet holomem vers l'un de vos holomems nommé Mococo Abyssgard. Si vous le faites, infligez 50 dégâts spéciaux à l'holomem Central de votre adversaire."
 
 msgid "hBP03-049_NAME"
 msgstr "Hiodoshi Ao"
@@ -4694,7 +4694,7 @@ msgid "hBP03-050_ART_0_NAME"
 msgstr "Sœurs du chien de garde démoniaque"
 
 msgid "hBP03-050_ART_0_EFFECT"
-msgstr "Révélez 1 Cheer rouge ou bleu de votre Deck de Cheer, et envoyez-la à l'un de vos holomems avec #Advent. Mélangez ensuite votre pile d'encouragements."
+msgstr "Révélez 1 Cheer rouge ou bleu de votre Deck de Cheer, et envoyez-la à l'un de vos holomems avec #Advent. Mélangez ensuite votre Deck de Cheer."
 
 msgid "hBP03-050_ART_1_NAME"
 msgstr "Ensemble, nous sommes FUWAMOCO"
@@ -5066,7 +5066,7 @@ msgid "hBP03-024_BLOOM_NAME"
 msgstr "Kazama protège"
 
 msgid "hBP03-024_BLOOM_EFFECT"
-msgstr "Vous pouvez choisir jusqu'à 1 de vos holomems nommé Kazama Iroha et jusqu'à 1 nommé Hoshimachi Suisei. Envoyez 1 encouragement de votre archive à chaque holomem choisi."
+msgstr "Vous pouvez choisir jusqu'à 1 de vos holomems nommé Kazama Iroha et jusqu'à 1 nommé Hoshimachi Suisei. Envoyez 1 Cheer de votre Archive à chaque holomem choisi."
 
 msgid "hBP03-046_NAME"
 msgstr "Hiodoshi Ao"
@@ -5788,4 +5788,727 @@ msgstr "Cheer Bleue"
 
 msgid "hY06-003_NAME"
 msgstr "Cheer Jaune"
+
+msgid "hY03-005_NAME"
+msgstr ""
+
+msgid "hY03-006_NAME"
+msgstr ""
+
+msgid "hY03-007_NAME"
+msgstr ""
+
+msgid "hY03-008_NAME"
+msgstr ""
+
+msgid "hBD24-031_NAME"
+msgstr ""
+
+msgid "hBD24-031_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-031_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-031_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-031_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-034_NAME"
+msgstr ""
+
+msgid "hBD24-034_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-034_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-034_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-034_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-035_NAME"
+msgstr ""
+
+msgid "hBD24-035_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-035_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-035_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-035_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-036_NAME"
+msgstr ""
+
+msgid "hBD24-036_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-036_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-036_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-036_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-037_NAME"
+msgstr ""
+
+msgid "hBD24-037_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-037_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-037_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-037_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-038_NAME"
+msgstr ""
+
+msgid "hBD24-038_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-038_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-038_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-038_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-039_NAME"
+msgstr ""
+
+msgid "hBD24-039_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-039_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-039_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-039_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-040_NAME"
+msgstr ""
+
+msgid "hBD24-040_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-040_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-040_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-040_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-041_NAME"
+msgstr ""
+
+msgid "hBD24-041_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-041_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-041_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-041_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-042_NAME"
+msgstr ""
+
+msgid "hBD24-042_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-042_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-042_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-042_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-006_NAME"
+msgstr ""
+
+msgid "hBP04-006_SKILL_NAME"
+msgstr ""
+
+msgid "hBP04-006_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-006_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP04-006_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-050_NAME"
+msgstr ""
+
+msgid "hBP04-050_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-051_NAME"
+msgstr ""
+
+msgid "hBP04-051_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-051_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-052_NAME"
+msgstr ""
+
+msgid "hBP04-052_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-052_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-052_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-053_NAME"
+msgstr ""
+
+msgid "hBP04-053_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-053_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-053_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-053_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-067_NAME"
+msgstr ""
+
+msgid "hBP04-067_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-067_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-068_NAME"
+msgstr ""
+
+msgid "hBP04-068_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-068_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-068_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-069_NAME"
+msgstr ""
+
+msgid "hBP04-069_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-069_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-096_NAME"
+msgstr ""
+
+msgid "hBP04-096_EFFECT"
+msgstr ""
+
+msgid "hBP04-104_NAME"
+msgstr ""
+
+msgid "hBP04-104_EFFECT"
+msgstr ""
+
+msgid "hBP04-070_NAME"
+msgstr ""
+
+msgid "hBP04-070_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-070_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-070_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-071_NAME"
+msgstr ""
+
+msgid "hBP04-071_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-071_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-071_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-072_NAME"
+msgstr ""
+
+msgid "hBP04-072_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-072_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-072_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-072_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-093_NAME"
+msgstr ""
+
+msgid "hBP04-093_EFFECT"
+msgstr ""
+
+msgid "Justice"
+msgstr ""
+
+msgid "Kaela'sArms"
+msgstr ""
+
+msgid "hBP04-003_NAME"
+msgstr ""
+
+msgid "hBP04-003_SKILL_NAME"
+msgstr ""
+
+msgid "hBP04-003_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-003_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP04-003_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-014_NAME"
+msgstr ""
+
+msgid "hBP04-014_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-014_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-014_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-014_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-015_NAME"
+msgstr ""
+
+msgid "hBP04-015_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-015_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-016_NAME"
+msgstr ""
+
+msgid "hBP04-016_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-016_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-017_NAME"
+msgstr ""
+
+msgid "hBP04-017_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-018_NAME"
+msgstr ""
+
+msgid "hBP04-018_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-018_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-018_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-019_NAME"
+msgstr ""
+
+msgid "hBP04-019_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-019_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-019_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-019_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-026_NAME"
+msgstr ""
+
+msgid "hBP04-026_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-026_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-026_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-026_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-032_NAME"
+msgstr ""
+
+msgid "hBP04-032_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-033_NAME"
+msgstr ""
+
+msgid "hBP04-033_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-033_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-033_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP04-034_NAME"
+msgstr ""
+
+msgid "hBP04-034_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-034_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-035_NAME"
+msgstr ""
+
+msgid "hBP04-035_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-035_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-035_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-035_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-036_NAME"
+msgstr ""
+
+msgid "hBP04-036_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-036_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-036_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-036_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-037_NAME"
+msgstr ""
+
+msgid "hBP04-037_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-037_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-037_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-037_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-039_NAME"
+msgstr ""
+
+msgid "hBP04-039_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-040_NAME"
+msgstr ""
+
+msgid "hBP04-040_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-040_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-041_NAME"
+msgstr ""
+
+msgid "hBP04-041_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-041_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-041_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-042_NAME"
+msgstr ""
+
+msgid "hBP04-042_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-042_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-042_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-042_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP04-049_NAME"
+msgstr ""
+
+msgid "hBP04-049_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-049_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-049_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP04-054_NAME"
+msgstr ""
+
+msgid "hBP04-054_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-060_NAME"
+msgstr ""
+
+msgid "hBP04-060_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-060_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-060_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-060_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-061_NAME"
+msgstr ""
+
+msgid "hBP04-061_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-061_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-061_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-061_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-062_NAME"
+msgstr ""
+
+msgid "hBP04-062_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-062_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-062_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-062_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-079_NAME"
+msgstr ""
+
+msgid "hBP04-079_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-079_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-079_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-080_NAME"
+msgstr ""
+
+msgid "hBP04-080_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-080_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-081_NAME"
+msgstr ""
+
+msgid "hBP04-081_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-081_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-081_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-082_NAME"
+msgstr ""
+
+msgid "hBP04-082_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-082_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-082_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-082_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-083_NAME"
+msgstr ""
+
+msgid "hBP04-083_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-083_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-084_NAME"
+msgstr ""
+
+msgid "hBP04-084_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-084_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-085_NAME"
+msgstr ""
+
+msgid "hBP04-085_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-085_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-085_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-086_NAME"
+msgstr ""
+
+msgid "hBP04-086_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-086_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-086_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP04-087_NAME"
+msgstr ""
+
+msgid "hBP04-087_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-087_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-087_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-088_NAME"
+msgstr ""
+
+msgid "hBP04-088_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-088_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-088_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-089_NAME"
+msgstr ""
+
+msgid "hBP04-089_EFFECT"
+msgstr ""
+
+msgid "hBP04-091_NAME"
+msgstr ""
+
+msgid "hBP04-091_EFFECT"
+msgstr ""
+
+msgid "hBP04-092_NAME"
+msgstr ""
+
+msgid "hBP04-092_EFFECT"
+msgstr ""
+
+msgid "hBP04-098_NAME"
+msgstr ""
+
+msgid "hBP04-098_EFFECT"
+msgstr ""
 
