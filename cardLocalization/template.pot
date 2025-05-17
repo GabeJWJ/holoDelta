@@ -5962,6 +5962,9 @@ msgstr ""
 msgid "Kaela'sArms"
 msgstr ""
 
+msgid "Mushroom"
+msgstr ""
+
 msgid "hBP04-003_NAME"
 msgstr ""
 
@@ -6371,5 +6374,197 @@ msgid "hBP04-098_NAME"
 msgstr ""
 
 msgid "hBP04-098_EFFECT"
+msgstr ""
+
+msgid "hBP04-004_NAME"
+msgstr ""
+
+msgid "hBP04-004_SKILL_NAME"
+msgstr ""
+
+msgid "hBP04-004_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-004_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP04-004_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-007_NAME"
+msgstr ""
+
+msgid "hBP04-007_SKILL_NAME"
+msgstr ""
+
+msgid "hBP04-007_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-007_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP04-007_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-073_NAME"
+msgstr ""
+
+msgid "hBP04-073_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-074_NAME"
+msgstr ""
+
+msgid "hBP04-074_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-074_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-074_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-075_NAME"
+msgstr ""
+
+msgid "hBP04-075_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-075_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-076_NAME"
+msgstr ""
+
+msgid "hBP04-076_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-076_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-076_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-077_NAME"
+msgstr ""
+
+msgid "hBP04-077_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-077_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-077_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-078_NAME"
+msgstr ""
+
+msgid "hBP04-078_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-078_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-078_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-099_NAME"
+msgstr ""
+
+msgid "hBP04-099_EFFECT"
+msgstr ""
+
+msgid "hBP04-002_NAME"
+msgstr ""
+
+msgid "hBP04-002_SKILL_NAME"
+msgstr ""
+
+msgid "hBP04-002_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-002_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP04-002_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-020_NAME"
+msgstr ""
+
+msgid "hBP04-020_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-020_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-021_NAME"
+msgstr ""
+
+msgid "hBP04-021_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-021_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-021_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-022_NAME"
+msgstr ""
+
+msgid "hBP04-022_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-022_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-023_NAME"
+msgstr ""
+
+msgid "hBP04-023_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-023_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-023_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-024_NAME"
+msgstr ""
+
+msgid "hBP04-024_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-024_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-024_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-024_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-025_NAME"
+msgstr ""
+
+msgid "hBP04-025_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-025_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-025_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-025_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-094_NAME"
+msgstr ""
+
+msgid "hBP04-094_EFFECT"
 msgstr ""
 

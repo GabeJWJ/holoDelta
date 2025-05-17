@@ -5962,6 +5962,9 @@ msgstr "Justice"
 msgid "Kaela'sArms"
 msgstr "カエラ'sアームズ"
 
+msgid "Mushroom"
+msgstr "きのこ"
+
 msgid "hBP04-003_NAME"
 msgstr "一条莉々華"
 
@@ -6372,4 +6375,196 @@ msgstr "鍛冶ハンマー"
 
 msgid "hBP04-098_EFFECT"
 msgstr "このツールが付いているホロメンのアーツ+10。\n\n#ID3期生 を持つ1st以上のホロメンに付いていたら能力追加このツールが付いているホロメンのアーツ+10。\n\nツールは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hBP04-004_NAME"
+msgstr "雪花ラミィ"
+
+msgid "hBP04-004_SKILL_NAME"
+msgstr "愛してる"
+
+msgid "hBP04-004_SKILL_EFFECT"
+msgstr "[ターンに1回] 相手のターンで、自分のホロメンがダウンした時に使える: そのホロメンに付いているファン1枚を手札に戻す。"
+
+msgid "hBP04-004_SPSKILL_NAME"
+msgstr "ぷーん、バリバリバリバリ"
+
+msgid "hBP04-004_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分の〈雪花ラミィ〉1人を選ぶ。このターンの間、選んだホロメンが、相手のホロメン1人に与える特殊ダメージ+100し、選んだホロメンが相手のホロメンをダウンさせた時、自分のデッキを2枚引く。"
+
+msgid "hBP04-007_NAME"
+msgstr "アーニャ・メルフィッサ"
+
+msgid "hBP04-007_SKILL_NAME"
+msgstr "神秘の儀式"
+
+msgid "hBP04-007_SKILL_EFFECT"
+msgstr "[ターンに1回] 自分のデッキから、〈古代武器〉1枚を公開し、自分のホロメンに付ける。そしてデッキをシャッフルする。"
+
+msgid "hBP04-007_SPSKILL_NAME"
+msgstr "人生のこと考えていた方が勝てる"
+
+msgid "hBP04-007_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のアーカイブのエールを、自分の〈古代武器〉が付いているホロメン全員に1枚ずつ送る。"
+
+msgid "hBP04-073_NAME"
+msgstr "アーニャ・メルフィッサ"
+
+msgid "hBP04-073_ART_0_NAME"
+msgstr "おはよー!"
+
+msgid "hBP04-074_NAME"
+msgstr "アーニャ・メルフィッサ"
+
+msgid "hBP04-074_ART_0_NAME"
+msgstr "隣座りますか?"
+
+msgid "hBP04-074_GIFT_NAME"
+msgstr "カフェでの一日"
+
+msgid "hBP04-074_GIFT_EFFECT"
+msgstr "[センターポジション限定] このホロメンと自分のコラボホロメンが受けるダメージ-10。"
+
+msgid "hBP04-075_NAME"
+msgstr "アーニャ・メルフィッサ"
+
+msgid "hBP04-075_ART_0_NAME"
+msgstr "悪魔の招待"
+
+msgid "hBP04-075_ART_1_NAME"
+msgstr "悪魔の囁き"
+
+msgid "hBP04-076_NAME"
+msgstr "アーニャ・メルフィッサ"
+
+msgid "hBP04-076_ART_0_NAME"
+msgstr "応援、よろしくね!"
+
+msgid "hBP04-076_COLLAB_NAME"
+msgstr "私から皆さんへの歌"
+
+msgid "hBP04-076_COLLAB_EFFECT"
+msgstr "自分のアーカイブの〈古代武器〉1枚を自分の〈アーニャ・メルフィッサ〉に付けられる。"
+
+msgid "hBP04-077_NAME"
+msgstr "アーニャ・メルフィッサ"
+
+msgid "hBP04-077_ART_0_NAME"
+msgstr "黄色い薔薇"
+
+msgid "hBP04-077_GIFT_NAME"
+msgstr "ガラス越しの庭園"
+
+msgid "hBP04-077_GIFT_EFFECT"
+msgstr "相手のターンで、このホロメンがダウンした時、このホロメンを含め重なっているホロメンの中から1枚を手札に戻す。"
+
+msgid "hBP04-078_NAME"
+msgstr "アーニャ・メルフィッサ"
+
+msgid "hBP04-078_ART_0_NAME"
+msgstr "ダンジョンアドベンチャー"
+
+msgid "hBP04-078_GIFT_NAME"
+msgstr "宝物みつけた"
+
+msgid "hBP04-078_GIFT_EFFECT"
+msgstr "[センターポジション・コラボポジション限定] 自分の〈古代武器〉が付いているセンターホロメンの〈アーニャ・メルフィッサ〉のアーツに必要な(黄)-1。"
+
+msgid "hBP04-099_NAME"
+msgstr "古代武器"
+
+msgid "hBP04-099_EFFECT"
+msgstr "相手のターンで、このツールが付いているホロメンがダウンした時、自分の手札1枚をアーカイブできる: このツールを手札に戻す。\n\n◆1st以上の〈アーニャ・メルフィッサ〉に付いていたら能力追加自分のステージの〈古代武器〉1枚につき、このツールが付いているホロメンのアーツ+10。\n\n1人につき1枚だけ付ツールは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hBP04-002_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBP04-002_SKILL_NAME"
+msgstr "ReGLOSSの風流人"
+
+msgid "hBP04-002_SKILL_EFFECT"
+msgstr "[ターンに1回] 自分のアーカイブのエール1枚を、自分のを持つホロメンに送る。"
+
+msgid "hBP04-002_SPSKILL_NAME"
+msgstr "余った時間でぐるぐる"
+
+msgid "hBP04-002_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のアーカイブの#きのこを持つイベント1~4枚を手札に戻す。そして手札に戻したカード2枚につき、自分のデッキを1枚引く。"
+
+msgid "hBP04-020_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBP04-020_ART_0_NAME"
+msgstr "儒鳥風亭一門は前座見習い!"
+
+msgid "hBP04-020_ART_1_NAME"
+msgstr "儒鳥風亭らでんでございます!"
+
+msgid "hBP04-021_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBP04-021_ART_0_NAME"
+msgstr "らでんスタンバイ"
+
+msgid "hBP04-021_COLLAB_NAME"
+msgstr "あなたに学びと面白いをお届け"
+
+msgid "hBP04-021_COLLAB_EFFECT"
+msgstr "このターンに自分が#きのこを持つイベントを使っていた時、自分の#ReGLOSSを持つホロメン1人のHP20回復。"
+
+msgid "hBP04-022_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBP04-022_ART_0_NAME"
+msgstr "博識ツッコミ"
+
+msgid "hBP04-022_ART_1_NAME"
+msgstr "まぁそんなとこですな"
+
+msgid "hBP04-023_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBP04-023_ART_0_NAME"
+msgstr "ネタ枠担当"
+
+msgid "hBP04-023_GIFT_NAME"
+msgstr "REGLOSSの賑やかし"
+
+msgid "hBP04-023_GIFT_EFFECT"
+msgstr "相手のターンで、このホロメンがダウンした時、このホロメンのエール1枚を、自分の他の#ReGLOSSを持つホロメンに付け替えられる。"
+
+msgid "hBP04-024_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBP04-024_ART_0_NAME"
+msgstr "喝采反芻"
+
+msgid "hBP04-024_ART_0_EFFECT"
+msgstr "自分のアーカイブのエール1枚をこのホロメンに送れる。"
+
+msgid "hBP04-024_GIFT_NAME"
+msgstr "冷静沈着"
+
+msgid "hBP04-024_GIFT_EFFECT"
+msgstr "[センターポジション限定]相手のメインステップの間、このホロメンのHPは相手の能力で減らず、変動しない。"
+
+msgid "hBP04-025_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBP04-025_ART_0_NAME"
+msgstr "御後がよろしいようで"
+
+msgid "hBP04-025_ART_0_EFFECT"
+msgstr "自分の推しホロメンが〈儒鳥風亭らでん〉の時、このホロメンのエール2枚を、自分のバックホロメン2人に1枚ずつ付け替えられる：このアーツ+30。"
+
+msgid "hBP04-025_COLLAB_NAME"
+msgstr "伝統と革新"
+
+msgid "hBP04-025_COLLAB_EFFECT"
+msgstr "自分のデッキから、#きのこを持つイベント1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP04-094_NAME"
+msgstr "まいたけダンス"
+
+msgid "hBP04-094_EFFECT"
+msgstr "自分の〈儒鳥風亭らでん〉1人を選ぶ。自分のステージのエール1~2 枚を、選んだホロメンに付け替えられる。その後、選んだホロメンにエールが3枚以上付いている時、このターンの間、選んだホロメンのアーツ+10。"
 

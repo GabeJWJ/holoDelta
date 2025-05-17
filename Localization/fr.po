@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-05-13 16:30\n"
+"PO-Revision-Date: 2025-05-14 15:19\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -971,11 +971,11 @@ msgstr "Inflige X dégâts"
 
 #: Scripts/side.gd
 msgid "TURN_SECOND"
-msgstr "Votre adversaire joue en premier"
+msgstr "Votre adversaire joue en deuxième"
 
 #: Scripts/side.gd
 msgid "TURN_FIRST"
-msgstr "Votre adversaire joue en deuxième"
+msgstr "Votre adversaire joue en premier"
 
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_CARDS"

@@ -715,10 +715,11 @@ func add_to_card_list(card_id,list_of_cards,bottom=false):
 	cardToGo.attached.reverse()
 	cardToGo.onTopOf.reverse()
 	for newCard in cardToGo.attached:
-		add_to_card_list(newCard.cardID,list_of_cards,bottom)
+		#add_to_card_list(newCard.cardID,list_of_cards,bottom)
 		newCard.attachedTo = newCard.cardID
 	for newCard in cardToGo.onTopOf:
-		add_to_card_list(newCard.cardID,list_of_cards,bottom)
+		#add_to_card_list(newCard.cardID,list_of_cards,bottom)
+		newCard.attachedTo = newCard.cardID
 	
 	list_of_cards.insert(new_position,cardToGo)
 	cardToGo.position = Vector2(1000,1000)
