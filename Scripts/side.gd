@@ -160,9 +160,8 @@ func _ready():
 		oshiCard = get_real_card(side_info["oshi"], oshiBack)
 	else:
 		oshiCard = create_fake_card(oshiBack)
+		oshiCard.flipDown()
 	oshiCard.position = Vector2(430,-223)
-	oshiCard.visible = false
-	oshiCard.z_index = 1
 	
 	if mainSleeve.is_empty():
 		mainBack = defaultMain.get_image()
@@ -288,7 +287,6 @@ func specialRestart():
 func rps_end():
 	$CanvasLayer/Question.visible = false
 	$CanvasLayer/Question/RPS.visible = false
-	oshiCard.flipDown()
 	oshiCard.visible = true
 
 func _made_turn_choice(choice:bool):
@@ -1135,7 +1133,7 @@ func _on_card_clicked(card_id : int) -> void:
 		if actualCard.cardType == "Holomem" and actualCard in hand and actualCard.level < 1:
 			if !preliminary_holomem_in_center and actualCard.level == 0:
 				popup.add_item(tr("CARD_HOLOMEM_PLAY_CENTERHIDDEN"), 102)
-			if preliminary_holomem_in_center or actualCard.level == -1 and all_occupied_zones().size() < 6:
+			if preliminary_holomem_in_center and all_occupied_zones().size() < 6:
 				popup.add_item(tr("CARD_HOLOMEM_PLAY_BACKHIDDEN"), 103)
 	else:
 		match actualCard.cardType:

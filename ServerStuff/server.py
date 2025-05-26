@@ -5,6 +5,7 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from enum import IntEnum
+from traceback import format_exc
 
 random_characters = ascii_lowercase+digits
 with open('banlists/current.json', 'r') as file:
@@ -15,6 +16,23 @@ with open('cardData.json', 'r') as file:
     card_data = json.load(file)
 bloom_levels = {-1:"LEVEL_SPOT",0:"LEVEL_DEBUT",1:"LEVEL_1",2:"LEVEL_2"}
 fudas = ["DECK","CHEERDECK","ARCHIVE","HOLOPOWER"]
+identifier = ''.join(sample(random_characters, 10))
+
+def matches(fromList, toCheck):
+    if fromList == toCheck:
+        return True
+    else:
+        matched = True
+        for i in range(len(fromList)):
+            if fromList[i] != "*" and (i >= len(toCheck) or fromList[i] != toCheck[i]):
+                matched = False
+        return matched
+
+def find_in_list(listToSearch, toCheck):
+    for possible in listToSearch:
+        if matches(possible,toCheck):
+            return possible
+    return None
 
 def card_info(card_id: str):
     return card_data[card_id] if card_id in card_data else {}
@@ -35,7 +53,7 @@ def check_legal(deck, banlist = None):
             if "cardType" in oshi_card:
                 if oshi_card["cardType"] == "Oshi":
                     if str(oshi_art) in oshi_card["cardArt"]:
-                        if oshi_number in banlist:
+                        if find_in_list(banlist, oshi_number) is not None:
                             result["legal"] = False
                             result["reasons"].append(["DECKERROR_BANNED",oshi_number])
                     else:
@@ -75,11 +93,12 @@ def check_legal(deck, banlist = None):
                         if main_card["cardLimit"] == -1 or main_count <= main_card["cardLimit"]:
                             if main_count > 0:
                                 if str(main_art) in main_card["cardArt"]:
-                                    if main_number in banlist:
-                                        if banlist[main_number] == 0:
+                                    banned_code = find_in_list(banlist, main_number)
+                                    if banned_code is not None:
+                                        if banlist[banned_code] == 0:
                                             result["legal"] = False
                                             result["reasons"].append(["DECKERROR_BANNED",main_number])
-                                        elif banlist[main_number] < main_count:
+                                        elif banlist[banned_code] < main_count:
                                             result["legal"] = False
                                             result["reasons"].append(["DECKERROR_RESTRICTED",main_number])
                                 else:
@@ -135,11 +154,12 @@ def check_legal(deck, banlist = None):
                         if cheer_card["cardLimit"] == -1 or cheer_count <= cheer_card["cardLimit"]:
                             if cheer_count > 0:
                                 if str(cheer_art) in cheer_card["cardArt"]:
-                                    if cheer_number in banlist:
-                                        if banlist[cheer_number] == 0:
+                                    banned_code = find_in_list(banlist, cheer_number)
+                                    if banned_code is not None:
+                                        if banlist[banned_code] == 0:
                                             result["legal"] = False
                                             result["reasons"].append(["DECKERROR_BANNED",cheer_number])
-                                        elif banlist[cheer_number] < cheer_count:
+                                        elif banlist[banned_code] < cheer_count:
                                             result["legal"] = False
                                             result["reasons"].append(["DECKERROR_RESTRICTED",cheer_number])
                                 else:
@@ -968,6 +988,11 @@ class Side:
                     await self.game._send_message(self.player,"MESSAGE_REVEALED_ARCHIVE",{"cardName":self.cards[currentCard].number + "_NAME"})
                     await self.remove_old_card(currentCard,True)
                     await self.add_to_fuda(currentCard, Fuda.archive)
+            case 26: #Send Revealed Card to Holopower
+                if currentCard is not None:
+                    await self.game._send_message(self.player,"MESSAGE_REVEALED_HOLOPOWER",{"cardName":self.cards[currentCard].number + "_NAME"})
+                    await self.remove_old_card(currentCard,True)
+                    await self.add_to_fuda(currentCard, Fuda.holopower)
             case 30: #Reveal and Attach Life
                 if currentCard is not None:
                     cheerCard = self.cards[currentCard]
@@ -1104,6 +1129,15 @@ class Side:
             
             case 500: #Holopower to Archive
                 await self.mill(Fuda.holopower,Fuda.archive)
+            case 505: #Reveal Top Card From Holopower
+                actualCard = self.holopower[0]
+                currentCard = actualCard.id
+                await self.game._send_message(self.player,"MESSAGE_HOLOPOWER_REVEAL",{"cardName":actualCard.number + "_NAME"})
+                await self.remove_from_fuda(currentCard,Fuda.holopower)
+
+                self.revealed.append(currentCard)
+                await self.tell_player("Reveal",{"card_id":currentCard})
+                await self.tell_others("Reveal",{"card":await actualCard.to_dict()})
             case 510: #Holopower to top of deck
                 await self.mill(Fuda.holopower,Fuda.deck)
             case 598: #Search Holopower
@@ -1583,6 +1617,10 @@ class Side:
                         await self.tell_player("Accepted Damage",{"card_id":data["card_id"]})
                         await self.tell_all("Damage",{"card_id":data["card_id"], "amount":actualCard.offered_damage})
                         actualCard.offered_damage = 0
+                case "Reject Damage":
+                    if "card_id" in data:
+                        actualCard = self.cards[data["card_id"]]
+                        actualCard.offered_damage = 0
                 case "Click Notification":
                     if "player_id" in data and "card_id" in data:
                         if data["player_id"] == player_id:
@@ -1658,7 +1696,8 @@ class Game:
             await player.tell("Game","Close")
             player.game = None
         
-        del games[self.id]        
+        del games[self.id]
+        await update_numbers_all()
     
     async def _rps(self, player_id, choice):
         if player_id in self.game_start and self.game_start[player_id]["RPS"] == -1:
@@ -1789,8 +1828,8 @@ class Game:
     
     async def heartbeat(self):
         try:
-            for player in self.players.values:
-                await player.tell("Heartbeat")
+            for player in self.players.values():
+                await player.tell("Server", "Heartbeat")
         except WebSocketDisconnect:
             await self.close_game()
     
@@ -1803,7 +1842,7 @@ class Game:
         for player in self.players.values():
             await player.tell("Game","Game Message",{"sender":sender.id,"message_code":message_code,"translated":translated,"untranslated":untranslated})
         for spectator in self.spectating:
-                        await spectator.tell("Game","Game Message",{"sender":sender.id,"message_code":message_code,"translated":translated,"untranslated":untranslated})
+            await spectator.tell("Game","Game Message",{"sender":sender.id,"message_code":message_code,"translated":translated,"untranslated":untranslated})
     
     async def call_command(self, player_id,command, data):
         match command:
@@ -1890,6 +1929,12 @@ class Lobby:
             await self.update_all("Player Left")
         elif player == self.host:
             await self.close_lobby()
+    
+    async def heartbeat(self):
+        try:
+            await self.host.tell("Server", "Heartbeat")
+        except WebSocketDisconnect:
+            await self.close_lobby()
 
     async def close_lobby(self):
         await self.host.tell("Lobby","Close")
@@ -1902,6 +1947,8 @@ class Lobby:
         self.waiting = []
         self.chosen = None
         del lobbies[self.id]
+
+        await update_numbers_all()
     
     async def update_all(self,reason="Update"):
         current_state = {"waiting":{player.id:player.name for player in self.waiting},"chosen":None if self.chosen is None else self.chosen.id,"host_ready":self.host_ready,"chosen_ready":self.chosen_ready}
@@ -1989,31 +2036,47 @@ async def websocket_endpoint(websocket: WebSocket):
     await manager.connect(websocket)
     try:
         player = Player(websocket)
-        await player.tell("Server","Player Info",{"id":player.id, "name":player.name,"current":current_banlist,"unreleased":unreleased})
+        await player.tell("Server","Player Info",{"id":player.id, "name":player.name,"current":current_banlist,"unreleased":unreleased,"server_id":identifier})
+        await update_numbers_all()
         while True:
             json_data = await websocket.receive_bytes()
             message = json.loads(str(json_data,'ascii'))
-            if "supertype" in message and "command" in message and player.id in players:
-                command = message["command"]
-                data = message["data"]
-                match message["supertype"]:
-                    case "Server":
-                        await call_command(player.id,command, data)
-                    case "Lobby":
-                        if player.lobby is not None:
-                            await player.lobby.call_command(player.id,command, data)
-                    case "Game":
-                        if player.game is not None:
-                            await player.game.call_command(player.id,command, data)
-                    case "Side":
-                        if player.game is not None:
-                            if player.id in player.game.playing:
-                                await player.game.playing[player.id].call_command(player.id,command, data)
-                    case _:
-                        pass
+            try:
+                if "supertype" in message and "command" in message and player.id in players:
+                    command = message["command"]
+                    data = message["data"]
+                    match message["supertype"]:
+                        case "Server":
+                            await call_command(player.id,command, data)
+                        case "Lobby":
+                            if player.lobby is not None:
+                                await player.lobby.call_command(player.id,command, data)
+                        case "Game":
+                            if player.game is not None:
+                                await player.game.call_command(player.id,command, data)
+                        case "Side":
+                            if player.game is not None:
+                                if player.id in player.game.playing:
+                                    await player.game.playing[player.id].call_command(player.id,command, data)
+                        case _:
+                            pass
+            except Exception:
+                error_string = format_exc()
+                await player.tell("Server","Error",{"error_text":error_string})
+                print(error_string)
     except WebSocketDisconnect:
         await manager.websocket_to_player[websocket].remove()
         manager.disconnect(websocket)
+        await update_numbers_all()
+
+async def update_numbers_all():
+    for player in players.values():
+        if player.game is None and player.lobby is None:
+            await player.tell("Server", "Numbers", {"players":len(players.values())-1,"lobbies": len([lob for lob in lobbies.values() if lob.public]),"games": len([g for g in games.values() if g.allow_spectators])})
+    for game in games.values():
+        await game.heartbeat()
+    for lob in lobbies.values():
+        await lob.heartbeat()
 
 async def call_command(player_id,command, data):
     player = players[player_id]
@@ -2023,6 +2086,7 @@ async def call_command(player_id,command, data):
                 settings = data["settings"] if "settings" in data else {}
                 lobby = Lobby(players[player_id], settings)
                 await player.tell("Server","Created Lobby",{"id":lobby.id,"host_name":lobby.host.name})
+                await update_numbers_all()
             else:
                 await player.tell("Server","Create Lobby Failed")
         case "Join Lobby":

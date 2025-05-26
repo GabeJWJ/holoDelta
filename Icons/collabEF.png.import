@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/collabEF.png-3d5bcd893201111a9beb8ac7f67a0218
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

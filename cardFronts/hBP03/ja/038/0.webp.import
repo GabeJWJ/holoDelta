@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/0.webp-ce69a1c5eaf107b31ff8c4f41f8d1381.ctex"
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

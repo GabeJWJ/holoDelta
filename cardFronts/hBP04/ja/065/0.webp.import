@@ -2,30 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kbd5hgci0rwo"
-path.s3tc="res://.godot/imported/side_side.jpg-a131f3d3bfe259ffd7ff897975e426d5.s3tc.ctex"
+uid="uid://cr02eb30vbx8d"
+path="res://.godot/imported/0.webp-072317105ddb2b179b704cd2a65d9b85.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "462e42b171a3e4c5f4741438da677458"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://side_side.jpg"
-dest_files=["res://.godot/imported/side_side.jpg-a131f3d3bfe259ffd7ff897975e426d5.s3tc.ctex"]
+source_file="res://cardFronts/hBP04/ja/065/0.webp"
+dest_files=["res://.godot/imported/0.webp-072317105ddb2b179b704cd2a65d9b85.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -35,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

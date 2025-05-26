@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Notification.png-aae1e2e8e0d93b404ff45a06765c
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

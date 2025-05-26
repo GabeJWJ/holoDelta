@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/tokkou_50_purple.png-37bac2e2a0eb3fb4511489cd
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

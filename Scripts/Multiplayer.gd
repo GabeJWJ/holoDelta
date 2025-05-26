@@ -912,6 +912,7 @@ func game_command(command: String, data: Dictionary) -> void:
 					elif data["sender"] in spectatedSides:
 						sender_name = spectatedSides[data["sender"]].player_name
 					chat.text += "\n\n" + sender_name + ": " + data["message"]
+					$CanvasLayer/Sidebar/Tabs/Chat/Notification.visible = !$CanvasLayer/Sidebar/ChatWindow.visible
 				$CanvasLayer/Sidebar/ChatWindow/ScrollContainer.scroll_vertical = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer.get_v_scroll_bar().max_value
 		"Game Message":
 			if "sender" in data and "message_code" in data and "untranslated" in data and "translated" in data:

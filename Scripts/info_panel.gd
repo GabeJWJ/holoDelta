@@ -175,4 +175,4 @@ func _input(event) -> void:
 			if locked:
 				$LockOff.modulate.a = 1
 			else:
-				$LockOff.modulate.a = 0.5
+				$LockOff.modulate.a = 0.25

@@ -41,6 +41,12 @@ enabled=PackedStringArray("res://addons/FileAccessWeb/plugin.cfg", "res://addons
 
 timers/tooltip_delay_sec=0.0
 
+[importer_defaults]
+
+texture={
+"compress/mode": 1
+}
+
 [input]
 
 Draw={

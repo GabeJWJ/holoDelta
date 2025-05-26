@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://cx76tmf8royup" path="res://CyberAssets/Game Side Menu/Side Menu.png" id="5_ct7jt"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="5_fdkx6"]
 [ext_resource type="Texture2D" uid="uid://dt60hgar0dc4g" path="res://checkOff.png" id="6_1x0cl"]
-[ext_resource type="Texture2D" uid="uid://1dw81uea60el" path="res://CyberAssets/Game Side Menu/Notification.svg" id="7_kmt2w"]
 [ext_resource type="Texture2D" uid="uid://tqwtibgdslug" path="res://checkOn.png" id="7_n8awk"]
+[ext_resource type="Texture2D" uid="uid://dexhtkhame0ay" path="res://CyberAssets/Game Side Menu/Notification.png" id="9_a1xo7"]
 [ext_resource type="PackedScene" uid="uid://cvqdjg5xohy5a" path="res://Scenes/deck_list.tscn" id="10_058xr"]
 [ext_resource type="Theme" uid="uid://das1sj7oj6yqf" path="res://Themes/step.tres" id="10_dyxng"]
 [ext_resource type="AudioStream" uid="uid://citw8blr274yn" path="res://HaruTsunXAssets/Die Roll 2.wav" id="12_lpjdh"]
@@ -224,9 +224,9 @@ text = "TAB_CHAT"
 
 [node name="Notification" type="Sprite2D" parent="CanvasLayer/Sidebar/Tabs/Chat"]
 visible = false
-position = Vector2(44, -5.00006)
+position = Vector2(50, -7)
 scale = Vector2(0.004, 0.004)
-texture = ExtResource("7_kmt2w")
+texture = ExtResource("9_a1xo7")
 
 [node name="Options" type="Button" parent="CanvasLayer/Sidebar/Tabs"]
 offset_left = 15.0

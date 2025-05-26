@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buhwydxxxhdhi"
-path="res://.godot/imported/template.jpg-623be0323ec43b26dd3c8f7cf93f4dd0.ctex"
+uid="uid://haxejo53xaeh"
+path="res://.godot/imported/0.webp-6fb62dff613baf37604fab45c9549eba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://template.jpg"
-dest_files=["res://.godot/imported/template.jpg-623be0323ec43b26dd3c8f7cf93f4dd0.ctex"]
+source_file="res://cardFronts/hBP04/ja/063/0.webp"
+dest_files=["res://.godot/imported/0.webp-6fb62dff613baf37604fab45c9549eba.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

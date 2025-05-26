@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duqcprq7gd1xr"
-path="res://.godot/imported/Card Text Side Menu.svg-44cd3263d46cc44eaf697b2dc4a4d43d.ctex"
+uid="uid://co68sndvwcwtg"
+path="res://.godot/imported/0.webp-cf161ea4beea4989dc8a50980918c924.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CyberAssets/Game Side Menu/Card Text Side Menu.svg"
-dest_files=["res://.godot/imported/Card Text Side Menu.svg-44cd3263d46cc44eaf697b2dc4a4d43d.ctex"]
+source_file="res://cardFronts/hBP04/ja/005/0.webp"
+dest_files=["res://.godot/imported/0.webp-cf161ea4beea4989dc8a50980918c924.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

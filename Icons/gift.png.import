@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/gift.png-db2891a04e3a67b72db7420c55abca26.cte
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

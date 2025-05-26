@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk80ordadp72f"
-path="res://.godot/imported/playmat.svg-67c0c590b27852647e53ec82aad4e65d.ctex"
+uid="uid://2xmjl3wc5vbo"
+path="res://.godot/imported/0.webp-92535971da8e1fd5a97b3dd02aa0723f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CyberAssets/Playmat/playmat.svg"
-dest_files=["res://.godot/imported/playmat.svg-67c0c590b27852647e53ec82aad4e65d.ctex"]
+source_file="res://cardFronts/hBP04/ja/055/0.webp"
+dest_files=["res://.godot/imported/0.webp-92535971da8e1fd5a97b3dd02aa0723f.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

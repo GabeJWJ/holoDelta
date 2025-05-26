@@ -1,10 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://j87r323v31qv"]
+[gd_scene load_steps=30 format=3 uid="uid://j87r323v31qv"]
 
 [ext_resource type="Script" path="res://Scripts/side.gd" id="1_vy6dv"]
 [ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="2_0kggm"]
 [ext_resource type="PackedScene" uid="uid://md0n47hsxcob" path="res://Scenes/zone.tscn" id="2_a11wy"]
 [ext_resource type="PackedScene" uid="uid://hxi6y3mwpmp8" path="res://Scenes/fuda.tscn" id="3_4khac"]
-[ext_resource type="PackedScene" uid="uid://xo7x52x42xjv" path="res://side.glb" id="4_bqq78"]
 [ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="7_3wwxl"]
 [ext_resource type="StyleBox" uid="uid://ilsjg8vo6p8q" path="res://side.tres" id="8_f6ll5"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="8_u8usn"]
@@ -150,10 +149,6 @@ size = Vector2i(2040, 1044)
 render_target_update_mode = 4
 
 [node name="Node3D" type="Node3D" parent="SubViewportContainer/SubViewport"]
-
-[node name="side" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("4_bqq78")]
-transform = Transform3D(1.55, 0, 0, 0, 1, 0, 0, 0, 1.55, 0, 0, 0)
-visible = false
 
 [node name="DECK" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 16.5929, 0, -0.627)
