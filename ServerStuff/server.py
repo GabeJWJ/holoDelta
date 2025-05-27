@@ -4,7 +4,7 @@ from string import ascii_lowercase, digits
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
-from fastapi.middleware.gzip import GZipMiddleware
+#from fastapi.middleware.gzip import GZipMiddleware
 from enum import IntEnum
 from traceback import format_exc
 
@@ -2012,7 +2012,7 @@ class Lobby:
 
 
 app = FastAPI()
-app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=9)
+#app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
 app.mount("/game", StaticFiles(directory="Holodelta_web"), name="game")
 
 
