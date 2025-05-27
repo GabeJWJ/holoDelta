@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2025-05-13 16:30\n"
+"PO-Revision-Date: 2025-05-27 21:07\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -478,7 +478,7 @@ msgstr "Cualquier Tipo"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOOSHI"
-msgstr "No oshi seleccionada."
+msgstr "Oshi no seleccionada."
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_FAKEOSHI"
@@ -1694,7 +1694,7 @@ msgstr "{person} no ha encontrado un debut "
 
 #: Scripts/Multiplayer.gd
 msgid "WINREASON_DECKOUT"
-msgstr "{person} ha robado desde un deck vacío"
+msgstr "{person} no ha podido robar por turno"
 
 #: Scripts/Multiplayer.gd
 msgid "WINREASON_LIFE"

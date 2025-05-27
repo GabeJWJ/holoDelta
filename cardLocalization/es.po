@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2025-05-26 21:51\n"
+"PO-Revision-Date: 2025-05-27 21:07\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Cuando este miembro es Derribado, Pierde 2 VIDAS."
@@ -1010,7 +1010,7 @@ msgid "hBP01-016_ART_0_NAME"
 msgstr "Hora de Relajarse"
 
 msgid "hBP01-016_COLLAB_NAME"
-msgstr "Lienzo Blanco"
+msgstr "Lienzo en Blanco"
 
 msgid "hBP01-016_COLLAB_EFFECT"
 msgstr "Si tu Centro tiene #Promise, roba 1 carta desde tu Deck."
@@ -6807,5 +6807,26 @@ msgid "hBP04-058_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP04-058_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-059_NAME"
+msgstr ""
+
+msgid "hBP04-059_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-059_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-059_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-059_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-103_NAME"
+msgstr ""
+
+msgid "hBP04-103_EFFECT"
 msgstr ""
 

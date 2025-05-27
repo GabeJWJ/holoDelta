@@ -46,6 +46,9 @@ timers/tooltip_delay_sec=0.0
 texture={
 "compress/mode": 1
 }
+wav={
+"compress/mode": 1
+}
 
 [input]
 
