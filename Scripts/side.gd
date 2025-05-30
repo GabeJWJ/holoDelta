@@ -1703,6 +1703,16 @@ func _on_reject_damage(card_id):
 func _unhandled_key_input(event):
 	if event.is_action_pressed("Draw") and is_your_side and can_do_things and deck.cardList.size() > 0:
 		send_command("Popup Command",{"command_id":200})
+	elif event.is_action_pressed("Cheer") and is_your_side and can_do_things and all_occupied_zones().size() > 0:
+		send_command("Popup Command",{"command_id":300})
+	elif event.is_action_pressed("Reset") and is_your_side and can_do_things:
+		for zone in zones:
+			if zone[1] in all_cards and all_cards[zone[1]].rested:
+				send_command("Popup Command", {"currentCard":zone[1], "command_id":1})
+		var collabed_id = find_in_zone(collabZone)
+		if collabed_id != -1:
+			send_command("Zone Command",{"command_id":5, "currentCard":collabed_id,"chosenZone":first_unoccupied_back_zone().name})
+			send_command("Popup Command", {"currentCard":collabed_id, "command_id":0})
 
 func _on_submit_pressed():
 	_on_line_edit_text_submitted(prompt.get_node("Input/LineEdit").text)

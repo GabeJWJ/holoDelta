@@ -8,6 +8,9 @@ extends Node2D
 @onready var json = JSON.new()
 
 var file_access_web : FileAccessWeb
+const deckButtonClass = preload("res://Scenes/deck_info.tscn")
+
+var file_to_delete = null
 
 signal selected(deckInfo)
 signal cancel
@@ -30,10 +33,10 @@ func _all_decks() -> void:
 	if dir:
 		for file_name in dir.get_files():
 			if json.parse(FileAccess.get_file_as_string(path + "/" + file_name)) == 0:
-				var deckButton = Button.new()
-				deckButton.auto_translate = false
-				deckButton.text = json.data.deckName
-				deckButton.pressed.connect(_set_selected.bind(json.data))
+				var deckButton = deckButtonClass.instantiate()
+				deckButton.deck_info = json.data
+				deckButton.pressed.connect(_set_selected)
+				deckButton.delete_pressed.connect(_delete_deck.bind(json.data.deckName, file_name))
 				list.add_child(deckButton)
 		list.move_child(loadButton,-1) #Make sure the load button is on the bottom of the VBoxContainer
 		$ScrollContainer.scroll_vertical = 0 #Reset the bar to the top
@@ -42,34 +45,59 @@ func _all_decks() -> void:
 
 
 func _set_selected(deckInfo : Dictionary) -> void:
-	var true_deck = {}
-	if "deck" in deckInfo:
-		true_deck["deck"] = deckInfo["deck"]
-	if "cheerDeck" in deckInfo:
-		true_deck["cheerDeck"] = deckInfo["cheerDeck"]
-	if "oshi" in deckInfo:
-		true_deck["oshi"] = deckInfo["oshi"]
-	if "deckName" in deckInfo:
-		true_deck["deckName"] = deckInfo["deckName"]
-	
-	emit_signal("selected",true_deck)
+	if !$Question.visible and !$LoadDialog.visible:
+		var true_deck = {}
+		if "deck" in deckInfo:
+			true_deck["deck"] = deckInfo["deck"]
+		if "cheerDeck" in deckInfo:
+			true_deck["cheerDeck"] = deckInfo["cheerDeck"]
+		if "oshi" in deckInfo:
+			true_deck["oshi"] = deckInfo["oshi"]
+		if "deckName" in deckInfo:
+			true_deck["deckName"] = deckInfo["deckName"]
+		
+		emit_signal("selected",true_deck)
 
 
 func _on_load_dialog_file_selected(path : String) -> void:
-	if json.parse(FileAccess.get_file_as_string(path)) == 0:
+	if !$Question.visible and json.parse(FileAccess.get_file_as_string(path)) == 0:
 		emit_signal("selected",json.data)
 
 func _on_web_load_dialog_file_selected(file_name: String, type: String, base64_data: String) -> void:
-	if json.parse(Marshalls.base64_to_utf8(base64_data)) == 0:
+	if !$Question.visible and json.parse(Marshalls.base64_to_utf8(base64_data)) == 0:
 		emit_signal("selected",json.data)
 
 
 func _on_load_pressed() -> void:
-	if OS.has_feature("web"):
-		file_access_web.open(".json")
-	else:
-		$LoadDialog.visible = true
+	if !$Question.visible and !$LoadDialog.visible:
+		if OS.has_feature("web"):
+			file_access_web.open(".json")
+		else:
+			$LoadDialog.visible = true
 
+func _delete_deck(deck_name: String, file_name: String) -> void:
+	if !$Question.visible and !$LoadDialog.visible:
+		file_to_delete = file_name
+		$Question/Label.text = tr("DECK_DELETE_CONFIRM").format({"deckName":deck_name})
+		$Question.visible = true
+
+func _on_yes_pressed() -> void:
+	if file_to_delete:
+		DirAccess.remove_absolute("user://Decks/" + file_to_delete)
+		_all_decks()
+	_on_no_pressed()
+
+func _on_no_pressed() -> void:
+	file_to_delete = null
+	$Question.visible = false
 
 func _on_cancel_pressed() -> void:
-	emit_signal("cancel")
+	if !$Question.visible and !$LoadDialog.visible:
+		emit_signal("cancel")
+
+
+func _on_actual_button_mouse_entered() -> void:
+	%OffBack.visible = false
+
+func _on_actual_button_mouse_exited() -> void:
+	%OffBack.visible = true

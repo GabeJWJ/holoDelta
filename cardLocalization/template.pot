@@ -6739,3 +6739,93 @@ msgstr ""
 msgid "hBP04-103_EFFECT"
 msgstr ""
 
+msgid "hBP04-043_NAME"
+msgstr ""
+
+msgid "hBP04-043_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-043_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-044_NAME"
+msgstr ""
+
+msgid "hBP04-044_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-044_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-044_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-045_NAME"
+msgstr ""
+
+msgid "hBP04-045_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-045_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-046_NAME"
+msgstr ""
+
+msgid "hBP04-046_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-046_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-047_NAME"
+msgstr ""
+
+msgid "hBP04-047_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-047_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-047_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-048_NAME"
+msgstr ""
+
+msgid "hBP04-048_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-048_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-048_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-048_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-090_NAME"
+msgstr ""
+
+msgid "hBP04-090_EFFECT"
+msgstr ""
+
+msgid "hBP04-101_NAME"
+msgstr ""
+
+msgid "hBP04-101_EFFECT"
+msgstr ""
+
+msgid "hBP04-102_NAME"
+msgstr ""
+
+msgid "hBP04-102_EFFECT"
+msgstr ""
+
+msgid "hBP04-106_NAME"
+msgstr ""
+
+msgid "hBP04-106_EFFECT"
+msgstr ""
+

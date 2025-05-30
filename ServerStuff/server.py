@@ -4,7 +4,7 @@ from string import ascii_lowercase, digits
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
-#from fastapi.middleware.gzip import GZipMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from enum import IntEnum
 from traceback import format_exc
 
@@ -228,6 +228,7 @@ class Player:
         players[self.id] = self
         self.name = "Guest " + self.id
         self.websocket = websocket
+        self.packet_number = 0
 
         manager.websocket_to_player[websocket] = self
 
@@ -243,7 +244,8 @@ class Player:
             if data is None:
                 data = {}
             try:
-                await self.websocket.send_json({"supertype":supertype,"command":command,"data":data})
+                await self.websocket.send_json({"supertype":supertype,"command":command,"data":data,"number":self.packet_number})
+                self.packet_number += 1
             except WebSocketDisconnect:
                 await self.remove()
     
@@ -2012,7 +2014,7 @@ class Lobby:
 
 
 app = FastAPI()
-#app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
+app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=9)
 app.mount("/game", StaticFiles(directory="Holodelta_web"), name="game")
 
 

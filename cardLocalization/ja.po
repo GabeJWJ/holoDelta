@@ -6739,3 +6739,93 @@ msgstr "カラス"
 msgid "hBP04-103_EFFECT"
 msgstr "このマスコットが付いているホロメンのアーツ+10。\n\n◆〈ラブラス・ダークネス〉に付いていたら能力追加 [コラボポジション限定] [ターンに1回] 自分のメインステップで、 サイコロを1回振れる: 奇数の時、このマスコットが付いているホロメンをバックポジションに移動する。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
 
+msgid "hBP04-043_NAME"
+msgstr "雪花ラミィ"
+
+msgid "hBP04-043_ART_0_NAME"
+msgstr "こんらみ〜"
+
+msgid "hBP04-043_ART_0_EFFECT"
+msgstr "相手のホロメン1人に特殊ダメージ10を与える。ただし、ダウンしても相手のライフは減らない。"
+
+msgid "hBP04-044_NAME"
+msgstr "雪花ラミィ"
+
+msgid "hBP04-044_ART_0_NAME"
+msgstr "うぅ···"
+
+msgid "hBP04-044_COLLAB_NAME"
+msgstr "Snow flower"
+
+msgid "hBP04-044_COLLAB_EFFECT"
+msgstr "自分の〈雪民〉が付いている〈雪花ラミィ〉がいない時、自分のデッキから、〈雪民〉1枚を公開し、自分の〈雪花ラミィ〉に付ける。そしてデッキをシャッフルする。"
+
+msgid "hBP04-045_NAME"
+msgstr "雪花ラミィ"
+
+msgid "hBP04-045_ART_0_NAME"
+msgstr "おつらみ"
+
+msgid "hBP04-045_ART_1_NAME"
+msgstr "ボスが攻略できな〜い"
+
+msgid "hBP04-046_NAME"
+msgstr "雪花ラミィ"
+
+msgid "hBP04-046_ART_0_NAME"
+msgstr "いっぱい頑張るよ!"
+
+msgid "hBP04-046_ART_0_EFFECT"
+msgstr "自分のファンが付いているホロメンがいる時、相手のホロメン1人に特殊ダメージ10を与える。"
+
+msgid "hBP04-047_NAME"
+msgstr "雪花ラミィ"
+
+msgid "hBP04-047_ART_0_NAME"
+msgstr "雪が煌く花束"
+
+msgid "hBP04-047_COLLAB_NAME"
+msgstr "fleur"
+
+msgid "hBP04-047_COLLAB_EFFECT"
+msgstr "自分の〈雪民〉が付いている〈雪花ラミィ〉がいる時、相手のホロメン1人に特殊ダメージ20を与える。ただし、ダウンしても相手のライフは減らない。"
+
+msgid "hBP04-048_NAME"
+msgstr "雪花ラミィ"
+
+msgid "hBP04-048_ART_0_NAME"
+msgstr "今日も祝福がありますように"
+
+msgid "hBP04-048_ART_0_EFFECT"
+msgstr "このホロメンのエール1枚をアーカイブできる:相手のセンターホロメンかバックホロメン1人に特殊ダメージ30を与える。"
+
+msgid "hBP04-048_BLOOM_NAME"
+msgstr "ユニーリアの令嬢"
+
+msgid "hBP04-048_BLOOM_EFFECT"
+msgstr "自分のエールデッキの上から1枚を、自分の〈雪民〉が付いている〈雪花ラミィ〉に送る。"
+
+msgid "hBP04-090_NAME"
+msgstr "作業用パソコン"
+
+msgid "hBP04-090_EFFECT"
+msgstr "このカードは、自分の手札がこのカードを6枚以下に含まないと使えません。\n\n自分のデッキの上から4枚を見る。その中から、ホロメン1枚と[ツールかマスコットかファン]1枚を除外し、公開したカードの手札に加える。そして残ったカードの好きな順でデッキの下に戻す。"
+
+msgid "hBP04-101_NAME"
+msgstr "だいふく"
+
+msgid "hBP04-101_EFFECT"
+msgstr "このマスコットが付いているホロメンのアーツ+10。\n\n◆〈雪花ラミィ〉に付いていたら能力追加このマスコットが付いているホロメンのHP+20。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hBP04-102_NAME"
+msgstr "やめなー"
+
+msgid "hBP04-102_EFFECT"
+msgstr "このマスコットが付いているホロメンのアーツ+10。\n\n[#5期生を持つ1st以上のホロメンに付いていたら能力追加 [バックポジション限定] このマスコットが付いているホロメンは相手からダメージを受けない。\n\nマスコットは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hBP04-106_NAME"
+msgstr "雪民"
+
+msgid "hBP04-106_EFFECT"
+msgstr "このファンが付いているホロメンが、相手のセンターホロメンに与える特殊ダメージ+10。\n\nこのファンは、自分の〈雪花ラミィ〉だけに付けられ、1人につき何枚でも付けられる。"
+

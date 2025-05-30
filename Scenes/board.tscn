@@ -526,10 +526,11 @@ layout_mode = 0
 offset_left = -2445.0
 offset_top = -45.0
 offset_right = -60.0
-offset_bottom = 2813.0
+offset_bottom = 3027.0
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [node name="CheckUnrevealed" type="TextureButton" parent="CanvasLayer/Options/OptionBackground"]
+visible = false
 layout_mode = 0
 offset_left = 49.9994
 offset_top = 40.0
@@ -552,10 +553,10 @@ autowrap_mode = 3
 
 [node name="AllowProxies" type="TextureButton" parent="CanvasLayer/Options/OptionBackground"]
 layout_mode = 0
-offset_left = 56.6661
-offset_top = 418.333
-offset_right = 456.666
-offset_bottom = 818.333
+offset_left = 68.3328
+offset_top = 56.6663
+offset_right = 468.333
+offset_bottom = 456.666
 toggle_mode = true
 texture_normal = ExtResource("6_1x0cl")
 texture_pressed = ExtResource("7_n8awk")
@@ -573,10 +574,10 @@ autowrap_mode = 3
 
 [node name="SFXSlider" type="HSlider" parent="CanvasLayer/Options/OptionBackground"]
 layout_mode = 0
-offset_left = 51.667
-offset_top = 875.0
-offset_right = 1864.67
-offset_bottom = 1009.0
+offset_left = 63.3337
+offset_top = 513.333
+offset_right = 1876.34
+offset_bottom = 647.333
 theme = ExtResource("5_fdkx6")
 min_value = -30.0
 max_value = 10.0
@@ -605,10 +606,10 @@ bus = &"SFX"
 
 [node name="BGMSlider" type="HSlider" parent="CanvasLayer/Options/OptionBackground"]
 layout_mode = 0
-offset_left = 51.667
-offset_top = 1100.0
-offset_right = 1864.67
-offset_bottom = 1234.0
+offset_left = 63.3337
+offset_top = 738.333
+offset_right = 1876.34
+offset_bottom = 872.333
 theme = ExtResource("5_fdkx6")
 min_value = -40.0
 max_value = 5.0
@@ -633,9 +634,10 @@ text = "BGM"
 
 [node name="Actions" type="Control" parent="CanvasLayer/Options/OptionBackground"]
 anchors_preset = 0
-offset_top = 400.0
-offset_right = 40.0
-offset_bottom = 440.0
+offset_left = 11.6667
+offset_top = 38.3333
+offset_right = 51.6667
+offset_bottom = 78.3333
 
 [node name="Draw" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 auto_translate_mode = 2
@@ -650,6 +652,7 @@ script = ExtResource("14_x8gke")
 action = "Draw"
 
 [node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/Draw"]
+auto_translate_mode = 1
 custom_minimum_size = Vector2(1035, 111)
 layout_mode = 0
 offset_left = 1150.0
@@ -661,19 +664,69 @@ text = "ACTION_DRAW"
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Tabs" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+[node name="Cheer" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 125.0
 offset_top = 1300.0
 offset_right = 1125.0
-offset_bottom = 1420.0
+offset_bottom = 1460.0
+theme_override_font_sizes/font_size = 110
+text = "C"
+script = ExtResource("14_x8gke")
+action = "Cheer"
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/Cheer"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(1035, 111)
+layout_mode = 0
+offset_left = 1150.0
+offset_top = -80.0
+offset_right = 2185.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 90
+text = "ACTION_CHEER"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Reset" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = 125.0
+offset_top = 1600.0
+offset_right = 1125.0
+offset_bottom = 1760.0
+theme_override_font_sizes/font_size = 110
+text = "R"
+script = ExtResource("14_x8gke")
+action = "Reset"
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/Reset"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(1035, 111)
+layout_mode = 0
+offset_left = 1150.0
+offset_right = 2092.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 90
+text = "ACTION_RESET"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Tabs" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = 125.0
+offset_top = 1900.0
+offset_right = 1125.0
+offset_bottom = 2060.0
 theme_override_font_sizes/font_size = 110
 text = "TAB"
 script = ExtResource("14_x8gke")
 action = "SwapPanels"
 
 [node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/Tabs"]
+auto_translate_mode = 1
 custom_minimum_size = Vector2(1035, 111)
 layout_mode = 0
 offset_left = 1150.0
@@ -689,15 +742,16 @@ autowrap_mode = 3
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 125.0
-offset_top = 1600.0
+offset_top = 2200.0
 offset_right = 1125.0
-offset_bottom = 1720.0
+offset_bottom = 2360.0
 theme_override_font_sizes/font_size = 110
 text = "CTRL"
 script = ExtResource("14_x8gke")
 action = "LockInfo"
 
 [node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/LockInfo"]
+auto_translate_mode = 1
 custom_minimum_size = Vector2(1035, 111)
 layout_mode = 0
 offset_left = 1150.0
@@ -713,15 +767,16 @@ autowrap_mode = 3
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 125.0
-offset_top = 1900.0
+offset_top = 2500.0
 offset_right = 1125.0
-offset_bottom = 2020.0
+offset_bottom = 2660.0
 theme_override_font_sizes/font_size = 110
 text = "["
 script = ExtResource("14_x8gke")
 action = "Last Step"
 
 [node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/LastStep"]
+auto_translate_mode = 1
 custom_minimum_size = Vector2(1035, 111)
 layout_mode = 0
 offset_left = 1150.0
@@ -737,15 +792,16 @@ autowrap_mode = 3
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 125.0
-offset_top = 2200.0
+offset_top = 2800.0
 offset_right = 1125.0
-offset_bottom = 2320.0
+offset_bottom = 2960.0
 theme_override_font_sizes/font_size = 110
 text = "]"
 script = ExtResource("14_x8gke")
 action = "Next Step"
 
 [node name="Label" type="Label" parent="CanvasLayer/Options/OptionBackground/Actions/NextStep"]
+auto_translate_mode = 1
 custom_minimum_size = Vector2(1035, 111)
 layout_mode = 0
 offset_left = 1150.0
@@ -755,6 +811,11 @@ theme_override_font_sizes/font_size = 90
 text = "ACTION_NSTEP"
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Options/OptionBackground"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="LanguageSelect" type="MenuButton" parent="CanvasLayer"]
 auto_translate_mode = 2

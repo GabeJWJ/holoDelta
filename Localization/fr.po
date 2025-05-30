@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-05-27 21:07\n"
+"PO-Revision-Date: 2025-05-30 14:58\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -164,6 +164,34 @@ msgid "OPTION_PROXY"
 msgstr "Accepte les cartes proxy"
 
 #: Scenes/board.tscn
+msgid "ACTION_DRAW"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_CHEER"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_RESET"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_TABS"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_LOCK"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_LSTEP"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_NSTEP"
+msgstr ""
+
+#: Scenes/board.tscn
 msgid "COSMETICS"
 msgstr "Cosmétiques"
 
@@ -255,12 +283,14 @@ msgid "LOBBY_GAMESTART_SPECTATE"
 msgstr "Partie commencée. Regarder ? "
 
 #: Scenes/board.tscn
+#: Scenes/deck_list.tscn
 #: Scenes/side.tscn
 #: Scenes/deck_creation.tscn
 msgid "YES"
 msgstr "Oui"
 
 #: Scenes/board.tscn
+#: Scenes/deck_list.tscn
 #: Scenes/side.tscn
 #: Scenes/deck_creation.tscn
 msgid "NO"
@@ -276,12 +306,12 @@ msgid "MENU_PROMPT"
 msgstr "Voulez-vous vraiment retourner au menu principal ?"
 
 #: Scenes/deck_list.tscn
-msgid "DECK_LOAD"
-msgstr "Télécharger un Deck"
-
-#: Scenes/deck_list.tscn
 msgid "DECK_SELECT_CANCEL"
 msgstr "Retour"
+
+#: Scenes/deck_list.tscn
+msgid "DECK_DELETE_CONFIRM"
+msgstr ""
 
 #: Scenes/sleeve_select.tscn
 msgid "SLEEVE_LOAD"

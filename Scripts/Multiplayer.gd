@@ -58,6 +58,7 @@ var rps = false
 var current_lobby = null
 var lobby_you_are_host = false
 
+var packet_number = -1
 
 # Stolen from https://forum.godotengine.org/t/how-do-you-get-all-nodes-of-a-certain-class/9143/2
 func findByClass(node: Node, className : String, result : Array) -> void:
@@ -408,6 +409,16 @@ func _on_websocket_received(raw_data):
 		json.parse(command)
 		var message = json.data
 		
+		if "number" in message:
+			var new_number = int(message["number"])
+			if new_number == packet_number:
+				print("Repeated Packet")
+			elif new_number > packet_number + 1:
+				print("Skipped Packet")
+			elif new_number < packet_number:
+				print("Received Packet Out Of Order")
+			packet_number = new_number
+		
 		if "supertype" in message and "command" in message:
 			var data = message["data"] if "data" in message else {}
 			match message["supertype"]:
@@ -504,6 +515,7 @@ func lobby_command(command:String, data:Dictionary):
 				show_lobby(data["hostName"],data["id"],false,{},null,false,false,false)
 		"Close":
 			clear_lobby_menu()
+			$CanvasLayer/DeckList.visible = false
 			$CanvasLayer/LobbyScreen.visible = false
 			$CanvasLayer/LobbyButtons.visible = !inGame
 		"Deck Legality":

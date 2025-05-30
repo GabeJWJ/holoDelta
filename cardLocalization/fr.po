@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-05-27 21:07\n"
+"PO-Revision-Date: 2025-05-30 14:58\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Quand cet Holomem est Inconscient, perdez 2 VIE"
@@ -6106,7 +6106,7 @@ msgid "Kaela'sArms"
 msgstr "ArmeDeKaela"
 
 msgid "Mushroom"
-msgstr ""
+msgstr "Champignon"
 
 msgid "hBP04-003_NAME"
 msgstr "Ichijou Ririka"
@@ -6614,7 +6614,7 @@ msgid "hBP04-078_GIFT_NAME"
 msgstr "J’ai trouvé un trésor"
 
 msgid "hBP04-078_GIFT_EFFECT"
-msgstr "(En position Centrale ou Collab uniquement) Si votre Holomem Central est nommé Anya Melfissa et a une Arme antique attachée, le coût de Cheer de ces Arts sont réduit de 1 Cheer Jaune."
+msgstr "(En position Centrale ou Collab uniquement) Si votre Holomem Central est nommé Anya Melfissa et a une Arme antique attachée, le coût de Cheer de ses Arts sont réduit de 1 Cheer Jaune."
 
 msgid "hBP04-099_NAME"
 msgstr "Arme antique"
@@ -6757,134 +6757,229 @@ msgid "hBP04-031_GIFT_EFFECT"
 msgstr "S'il y a un Holomem avec #JP ou #ID sur le terrain de votre adversaire, les Arts de cet Holomem gagne +30 dégâts."
 
 msgid "hBP04-063_NAME"
-msgstr ""
+msgstr "Koseki Bijou"
 
 msgid "hBP04-063_ART_0_NAME"
-msgstr ""
+msgstr "Bon Bijou!"
 
 msgid "hBP04-063_GIFT_NAME"
-msgstr ""
+msgstr "Kira kira Koseki!"
 
 msgid "hBP04-063_GIFT_EFFECT"
-msgstr ""
+msgstr "Si ce Holomem est mis inconscient pendant le tour de l'adversaire, piochez une carte."
 
 msgid "hBP04-064_NAME"
-msgstr ""
+msgstr "Koseki Bijou"
 
 msgid "hBP04-064_ART_0_NAME"
-msgstr ""
+msgstr "Gemme Scintillante"
 
 msgid "hBP04-065_NAME"
-msgstr ""
+msgstr "Koseki Bijou"
 
 msgid "hBP04-065_ART_0_NAME"
-msgstr ""
+msgstr "Minerai et Mineur"
 
 msgid "hBP04-065_ART_0_EFFECT"
-msgstr ""
+msgstr "Si il y a au moins un Cheer Rouge dans votre archive, Cet Art gagne +20 de dégâts."
 
 msgid "hBP04-065_BLOOM_NAME"
-msgstr ""
+msgstr "Eclat inégalé"
 
 msgid "hBP04-065_BLOOM_EFFECT"
-msgstr ""
+msgstr "Vous pouvez archiver deux cheer rouge pour l'effet suivant : Piochez deux cartes."
 
 msgid "hBP04-066_NAME"
-msgstr ""
+msgstr "Koseki Bijou"
 
 msgid "hBP04-066_ART_0_NAME"
-msgstr ""
+msgstr "J'espère que vous sentirez mon éclat !"
 
 msgid "hBP04-066_ART_0_EFFECT"
-msgstr ""
+msgstr "Pour chaque Cheers dans l'Archive de votre adversaire, cet art gagne +10 dégâts."
 
 msgid "hBP04-066_BLOOM_NAME"
-msgstr ""
+msgstr "Gemme des émotions"
 
 msgid "hBP04-066_BLOOM_EFFECT"
-msgstr ""
+msgstr "Vous pouvez archiver toutes les cartes de votre main pour l'effet suivant : piochez autant de cartes que vous avez archivé. Vous ne pouvez utiliser l'effet \"Gemme des émotions\" qu'une fois par tour."
 
 msgid "hBP04-005_NAME"
-msgstr ""
+msgstr "La+ Darknesss"
 
 msgid "hBP04-005_SKILL_NAME"
-msgstr ""
+msgstr "Tâche du chef"
 
 msgid "hBP04-005_SKILL_EFFECT"
-msgstr ""
+msgstr "(Une fois par tour) Durant ce tour, a chaque fois que vous lancez un dé 3 fois pour une habilité ou un Art,\n"
+"traitez tous les jets de dés comme si le résultat était 5."
 
 msgid "hBP04-005_SPSKILL_NAME"
-msgstr ""
+msgstr "Nous sommes la société secrète HoloX !"
 
 msgid "hBP04-005_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Une fois par partie) Les Arts de l'un de vos Holomem avec #SecretSocietyholoX peut être utilisé sans avoir\n"
+"le nombre requis de Cheers jusqu'a la fin de ce tour."
 
 msgid "hBP04-055_NAME"
-msgstr ""
+msgstr "La+ Darknesss"
 
 msgid "hBP04-055_ART_0_NAME"
-msgstr ""
+msgstr "Nous sommes ceux qui dominent la planète Eden"
 
 msgid "hBP04-055_ART_0_EFFECT"
-msgstr ""
+msgstr "Cet Art gagne +10 dégâts pour chaque Holomem de votre adversaire qui est épuisé ."
 
 msgid "hBP04-055_COLLAB_NAME"
-msgstr ""
+msgstr "Agenouille-toi devant moi !"
 
 msgid "hBP04-055_COLLAB_EFFECT"
-msgstr ""
+msgstr "Vous pouvez lancer une fois, si le résultat est de 3 ou plus épuisez l'un des Holomems en arrière de votre adversaire."
 
 msgid "hBP04-056_NAME"
-msgstr ""
+msgstr "La+ Darknesss"
 
 msgid "hBP04-056_ART_0_NAME"
-msgstr ""
+msgstr "J'adore les fraises !"
 
 msgid "hBP04-056_ART_1_NAME"
-msgstr ""
+msgstr "Comme toujours, Merci les Plusmates"
 
 msgid "hBP04-057_NAME"
-msgstr ""
+msgstr "La+ Darknesss"
 
 msgid "hBP04-057_ART_0_NAME"
-msgstr ""
+msgstr "Je vais vous montrer la meilleure performance !!"
 
 msgid "hBP04-057_BLOOM_NAME"
-msgstr ""
+msgstr "Réunion holoX"
 
 msgid "hBP04-057_BLOOM_EFFECT"
-msgstr ""
+msgstr "Vous pouvez lancer un dé, si le résultat est impair, remettez 1 holomem avec #SociétéSecrèteHoloX depuis votre Archive dans votre main. Si le résultat est pair, remettez 1 holomem avec #SociétéSecrèteHoloX depuis votre Archive au-dessus de votre Deck."
 
 msgid "hBP04-058_NAME"
-msgstr ""
+msgstr "La+ Darknesss"
 
 msgid "hBP04-058_ART_0_NAME"
-msgstr ""
+msgstr "Tu penses pouvoir me vaincre ?"
 
 msgid "hBP04-058_COLLAB_NAME"
-msgstr ""
+msgstr "Aimeriez-vous tenter votre destin ?"
 
 msgid "hBP04-058_COLLAB_EFFECT"
-msgstr ""
+msgstr "Vous pouvez lancer un dé 3 fois, infligez 10 dégâts spéciaux à l'Holomem Central de votre adversaire pour chaque résultat impaire."
 
 msgid "hBP04-059_NAME"
-msgstr ""
+msgstr "La+ Darknesss"
 
 msgid "hBP04-059_ART_0_NAME"
-msgstr ""
+msgstr "La légende la plus tenace"
 
 msgid "hBP04-059_ART_0_EFFECT"
-msgstr ""
+msgstr "Infligez 10 dégâts spéciaux a la l'Holomem Central de votre adversaire pour chaque fois où vous avez lancé un dé pour l'une de vos Compétences pendant ce tour."
 
 msgid "hBP04-059_BLOOM_NAME"
-msgstr ""
+msgstr "Yes My Dark !"
 
 msgid "hBP04-059_BLOOM_EFFECT"
-msgstr ""
+msgstr "Vous pouvez archiver une carte de votre main pour lancer un dé 3 fois, piochez une carte pour chaque\n"
+"résultat impaire, Vous ne pouvez utiliser l'effet Bloom \"Yes My Dark !\" qu'une seule fois par tour."
 
 msgid "hBP04-103_NAME"
-msgstr ""
+msgstr "Corbeau"
 
 msgid "hBP04-103_EFFECT"
+msgstr "Les Arts du Holomem avec cette Mascotte attaché gagnent +10 dégâts. \n\n"
+"Si cette Mascotte est attachée à La+ Darknesss, elle gagne l'effet suivant : (En position de Collab uniquement) (Une fois par tour) Durant la Phase Principale, vous pouvez lancer un dé: si le résultat est impair, déplacez le holomem avec cette Mascotte attachée en arrière.\n\n"
+"Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
+
+msgid "hBP04-043_NAME"
+msgstr ""
+
+msgid "hBP04-043_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-043_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-044_NAME"
+msgstr ""
+
+msgid "hBP04-044_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-044_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-044_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-045_NAME"
+msgstr ""
+
+msgid "hBP04-045_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-045_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-046_NAME"
+msgstr ""
+
+msgid "hBP04-046_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-046_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-047_NAME"
+msgstr ""
+
+msgid "hBP04-047_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-047_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-047_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-048_NAME"
+msgstr ""
+
+msgid "hBP04-048_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-048_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-048_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-048_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-090_NAME"
+msgstr ""
+
+msgid "hBP04-090_EFFECT"
+msgstr ""
+
+msgid "hBP04-101_NAME"
+msgstr ""
+
+msgid "hBP04-101_EFFECT"
+msgstr ""
+
+msgid "hBP04-102_NAME"
+msgstr ""
+
+msgid "hBP04-102_EFFECT"
+msgstr ""
+
+msgid "hBP04-106_NAME"
+msgstr ""
+
+msgid "hBP04-106_EFFECT"
 msgstr ""
 

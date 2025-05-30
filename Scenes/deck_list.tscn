@@ -1,18 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvqdjg5xohy5a"]
+[gd_scene load_steps=8 format=3 uid="uid://cvqdjg5xohy5a"]
 
 [ext_resource type="Script" path="res://Scripts/deck_list.gd" id="1_d6mnf"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="2_kyui4"]
+[ext_resource type="Texture2D" uid="uid://vbmru3hqj3bq" path="res://ocg_logo.png" id="3_h1un7"]
+
+[sub_resource type="Gradient" id="Gradient_de2q4"]
+colors = PackedColorArray(0.792157, 0.8, 1, 1, 0.645679, 0.644307, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_r6pmp"]
+gradient = SubResource("Gradient_de2q4")
+width = 630
+height = 100
+fill = 1
+fill_from = Vector2(0.154762, 0.5)
+fill_to = Vector2(1, 0.47963)
+
+[sub_resource type="Gradient" id="Gradient_vrcbt"]
+colors = PackedColorArray(0.735797, 0.735797, 0.735797, 1, 0.571649, 0.571649, 0.571649, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bte1g"]
+gradient = SubResource("Gradient_vrcbt")
+width = 630
+height = 100
+fill_from = Vector2(0.240741, 0.7)
+fill_to = Vector2(0.895062, 0.0907407)
 
 [node name="DeckList" type="Node2D"]
 script = ExtResource("1_d6mnf")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 400.0
+offset_right = 650.0
 offset_bottom = 720.0
 color = Color(0, 0, 0, 1)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-offset_right = 400.0
+offset_right = 650.0
 offset_bottom = 720.0
 theme = ExtResource("2_kyui4")
 
@@ -20,11 +42,47 @@ theme = ExtResource("2_kyui4")
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
+theme_override_constants/separation = 4
 
-[node name="Load" type="Button" parent="ScrollContainer/VBoxContainer"]
+[node name="Load" type="Control" parent="ScrollContainer/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(630, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "DECK_LOAD"
+
+[node name="OnBack" type="TextureRect" parent="ScrollContainer/VBoxContainer/Load"]
+offset_right = 630.0
+offset_bottom = 100.0
+texture = SubResource("GradientTexture2D_r6pmp")
+
+[node name="OcgLogo" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Load"]
+position = Vector2(68, 51)
+texture = ExtResource("3_h1un7")
+
+[node name="OffBack" type="TextureRect" parent="ScrollContainer/VBoxContainer/Load"]
+unique_name_in_owner = true
+offset_right = 630.0
+offset_bottom = 100.0
+texture = SubResource("GradientTexture2D_bte1g")
+
+[node name="DeckName" type="Label" parent="ScrollContainer/VBoxContainer/Load"]
+auto_translate_mode = 2
+offset_left = 98.0
+offset_top = 4.0
+offset_right = 624.0
+offset_bottom = 98.0
+theme = ExtResource("2_kyui4")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 30
+text = "Load From File"
+horizontal_alignment = 2
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="ActualButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/Load"]
+offset_right = 630.0
+offset_bottom = 100.0
 
 [node name="LoadDialog" type="FileDialog" parent="."]
 auto_translate_mode = 2
@@ -40,13 +98,62 @@ show_hidden_files = true
 use_native_dialog = true
 
 [node name="Cancel" type="Button" parent="."]
-offset_left = 419.0
+offset_left = 666.0
 offset_top = 19.0
-offset_right = 468.0
-offset_bottom = 32.0
+offset_right = 840.0
+offset_bottom = 37.0
 theme = ExtResource("2_kyui4")
 text = "DECK_SELECT_CANCEL"
 
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/Load" to="." method="_on_load_pressed"]
+[node name="Question" type="ColorRect" parent="."]
+visible = false
+offset_left = 230.0
+offset_top = 194.0
+offset_right = 1033.0
+offset_bottom = 464.0
+theme = ExtResource("2_kyui4")
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="Label" type="Label" parent="Question"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -393.5
+offset_top = 28.0
+offset_right = 393.5
+offset_bottom = 138.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+text = "DECK_DELETE_CONFIRM"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="Yes" type="Button" parent="Question"]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 148.0
+offset_right = 310.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 40
+text = "YES"
+
+[node name="No" type="Button" parent="Question"]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 148.0
+offset_right = 546.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 40
+text = "NO"
+
+[connection signal="mouse_entered" from="ScrollContainer/VBoxContainer/Load/ActualButton" to="." method="_on_actual_button_mouse_entered"]
+[connection signal="mouse_exited" from="ScrollContainer/VBoxContainer/Load/ActualButton" to="." method="_on_actual_button_mouse_exited"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Load/ActualButton" to="." method="_on_load_pressed"]
 [connection signal="file_selected" from="LoadDialog" to="." method="_on_load_dialog_file_selected"]
 [connection signal="pressed" from="Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="Question/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Question/No" to="." method="_on_no_pressed"]

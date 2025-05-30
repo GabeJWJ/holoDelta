@@ -2348,7 +2348,7 @@ msgid "hBP02-093_NAME"
 msgstr "Miteiru"
 
 msgid "hBP02-093_EFFECT"
-msgstr "The holomem with this Mascot attached has +20 HP.\n\nIf this is attached to Shirakami Fubuki, it gains the following effect: [Back position only] The holomem with this mascot attached does not take any damage.\n\nYou may only attach 1 Mascot to a holomem."
+msgstr "The holomem with this Mascot attached has +20 HP.\n\nIf this is attached to Shirakami Fubuki, it gains the following effect: [Back position only] The holomem with this mascot attached does not take any damage from your opponent.\n\nYou may only attach 1 Mascot to a holomem."
 
 msgid "hBP02-099_NAME"
 msgstr "Sukonbu"
@@ -6389,7 +6389,7 @@ msgid "hBP04-004_SPSKILL_NAME"
 msgstr "Vrooooom! Baribaribaribari"
 
 msgid "hBP04-004_SPSKILL_EFFECT"
-msgstr "[1/Game] Choose one of your holomem named Yukihana Lamy. Special damage done by that holomem to a single opposing holomem is increased by +100 until the end of this turn. When the chosen holomem downs one of your opponent's holomem during this turn, draw 2 cards."
+msgstr "[1/Game] Choose one of your holomem named Yukihana Lamy. Until the end of this turn, whenever that holomem deals special damage to a single opposing holomem, that damage is increased by +100. When the chosen holomem downs one of your opponent's holomem during this turn, draw 2 cards."
 
 msgid "hBP04-007_NAME"
 msgstr "Anya Melfissa"
@@ -6738,4 +6738,94 @@ msgstr "Crow"
 
 msgid "hBP04-103_EFFECT"
 msgstr "The arts of the holomem with this Mascot attached gain +10 power.\n\nIf this is attached to La+ Darknesss, it gains the following effect: [Collab position only] [Once per turn] During your main step, you may roll a dice. If the result is odd, move the holomem with this Mascot attached to the back position.\n\nYou may only attach 1 Mascot to a holomem."
+
+msgid "hBP04-043_NAME"
+msgstr "Yukihana Lamy"
+
+msgid "hBP04-043_ART_0_NAME"
+msgstr "Kon-Lamy"
+
+msgid "hBP04-043_ART_0_EFFECT"
+msgstr "Deal 10 damage any of your opponent's holomem. holomem downed with this effect do not reduce Life."
+
+msgid "hBP04-044_NAME"
+msgstr "Yukihana Lamy"
+
+msgid "hBP04-044_ART_0_NAME"
+msgstr "uu..."
+
+msgid "hBP04-044_COLLAB_NAME"
+msgstr "Snow flower"
+
+msgid "hBP04-044_COLLAB_EFFECT"
+msgstr "If there are no Yukimin attached to any Yukihana Lamy on your stage, reveal 1 Yukimin from your deck and attach it to any of your Yukihana Lamy. Then shuffle your deck."
+
+msgid "hBP04-045_NAME"
+msgstr "Yukihana Lamy"
+
+msgid "hBP04-045_ART_0_NAME"
+msgstr "Otsu-Lamy"
+
+msgid "hBP04-045_ART_1_NAME"
+msgstr "I can't beat the boss!"
+
+msgid "hBP04-046_NAME"
+msgstr "Yukihana Lamy"
+
+msgid "hBP04-046_ART_0_NAME"
+msgstr "I'll do my best!"
+
+msgid "hBP04-046_ART_0_EFFECT"
+msgstr "If there are any holomem on your stage with a Fan attached, deal 10 special damage to any of your opponent's holomem."
+
+msgid "hBP04-047_NAME"
+msgstr "Yukihana Lamy"
+
+msgid "hBP04-047_ART_0_NAME"
+msgstr "Sparkling Snow Bouquet"
+
+msgid "hBP04-047_COLLAB_NAME"
+msgstr "fleur"
+
+msgid "hBP04-047_COLLAB_EFFECT"
+msgstr "If there is a Yukihana Lamy on your stage with a Yukimin attached, deal 20 special damage to any of your opponent's holomem. holomem downed with this effect do not reduce Life."
+
+msgid "hBP04-048_NAME"
+msgstr "Yukihana Lamy"
+
+msgid "hBP04-048_ART_0_NAME"
+msgstr "May you be blessed today too"
+
+msgid "hBP04-048_ART_0_EFFECT"
+msgstr "You may archive 1 cheer from this holomem for the following effect: deal 30 special damage to your opponent's center holomem or one of their back holomem."
+
+msgid "hBP04-048_BLOOM_NAME"
+msgstr "Daughter of Unylia"
+
+msgid "hBP04-048_BLOOM_EFFECT"
+msgstr "Send the top card of your cheer deck to one of your Yukihana Lamy with a Yukimin attached."
+
+msgid "hBP04-090_NAME"
+msgstr "Work PC"
+
+msgid "hBP04-090_EFFECT"
+msgstr "This card can only be played if you have 6 or fewer cards in your hand, excluding this card.\n\nLook at the top four cards of your deck. Reveal up to one holomem and up to one Tool, Mascot, or Fan from among them and put them into your hand. Then put the remaining cards on the bottom of your deck in any order."
+
+msgid "hBP04-101_NAME"
+msgstr "Daifuku"
+
+msgid "hBP04-101_EFFECT"
+msgstr "The arts of the holomem with this Mascot attached gain +10 power.\n\nIf this is attached to Yukihana Lamy, it gains the following effect: The holomem with this Mascot attached has +20 HP.\n\nYou may only attach 1 Mascot to a holomem."
+
+msgid "hBP04-102_NAME"
+msgstr "Yamena"
+
+msgid "hBP04-102_EFFECT"
+msgstr "The arts of the holomem with this Mascot attached gain +10 power.\n\nIf this is attached to a 1st Bloom or higher holomem with #Gen5, it gains the following effect: [Back position only] The holomem with this mascot attached does not take any damage from your opponent.\n\nYou may only attach 1 Mascot to a holomem."
+
+msgid "hBP04-106_NAME"
+msgstr "Yukimin"
+
+msgid "hBP04-106_EFFECT"
+msgstr "Special damage done by the holomem with this Fan attached to your opponent's center holomem is increased by +10.\n\nThis Fan may only be attached to your Yukihana Lamy, and you may attach any number of this Fan to one holomem."
 
