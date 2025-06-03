@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2025-05-30 14:58\n"
+"PO-Revision-Date: 2025-06-03 16:18\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -165,31 +165,31 @@ msgstr "Permitir Proxies"
 
 #: Scenes/board.tscn
 msgid "ACTION_DRAW"
-msgstr ""
+msgstr "Robar"
 
 #: Scenes/board.tscn
 msgid "ACTION_CHEER"
-msgstr ""
+msgstr "Paso de Ovación"
 
 #: Scenes/board.tscn
 msgid "ACTION_RESET"
-msgstr ""
+msgstr "Paso de reinicio"
 
 #: Scenes/board.tscn
 msgid "ACTION_TABS"
-msgstr ""
+msgstr "Cambiar pestañas"
 
 #: Scenes/board.tscn
 msgid "ACTION_LOCK"
-msgstr ""
+msgstr "Bloquear Panel Info"
 
 #: Scenes/board.tscn
 msgid "ACTION_LSTEP"
-msgstr ""
+msgstr "Paso Final"
 
 #: Scenes/board.tscn
 msgid "ACTION_NSTEP"
-msgstr ""
+msgstr "Siguiente Paso"
 
 #: Scenes/board.tscn
 msgid "COSMETICS"

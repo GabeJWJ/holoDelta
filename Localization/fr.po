@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-05-30 14:58\n"
+"PO-Revision-Date: 2025-06-03 16:18\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -165,31 +165,31 @@ msgstr "Accepte les cartes proxy"
 
 #: Scenes/board.tscn
 msgid "ACTION_DRAW"
-msgstr ""
+msgstr "Piocher"
 
 #: Scenes/board.tscn
 msgid "ACTION_CHEER"
-msgstr ""
+msgstr "Phase de Cheer"
 
 #: Scenes/board.tscn
 msgid "ACTION_RESET"
-msgstr ""
+msgstr "Phase de Réinitialisation"
 
 #: Scenes/board.tscn
 msgid "ACTION_TABS"
-msgstr ""
+msgstr "Changer les inflos"
 
 #: Scenes/board.tscn
 msgid "ACTION_LOCK"
-msgstr ""
+msgstr "Bloqué les infos"
 
 #: Scenes/board.tscn
 msgid "ACTION_LSTEP"
-msgstr ""
+msgstr "Phase Précédente "
 
 #: Scenes/board.tscn
 msgid "ACTION_NSTEP"
-msgstr ""
+msgstr "Prochaine Phase "
 
 #: Scenes/board.tscn
 msgid "COSMETICS"
@@ -311,7 +311,7 @@ msgstr "Retour"
 
 #: Scenes/deck_list.tscn
 msgid "DECK_DELETE_CONFIRM"
-msgstr ""
+msgstr "Supprimer définitivement {deckName} ?"
 
 #: Scenes/sleeve_select.tscn
 msgid "SLEEVE_LOAD"
@@ -1109,7 +1109,7 @@ msgstr "{person} a archivé {cardName}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_HOLOPOWER"
-msgstr ""
+msgstr "{person} a ajouté {cardName} à ces Holopower"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_OSHISKILL_SP"
@@ -1437,7 +1437,7 @@ msgstr "Vous avez archivé {cardName}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
-msgstr ""
+msgstr "Vous avez ajouté {cardName} à vos Holopower"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_OSHISKILL_SP"

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2025-05-27 21:07\n"
+"PO-Revision-Date: 2025-06-03 16:18\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Cuando este miembro es Derribado, Pierde 2 VIDAS."
@@ -3882,439 +3882,447 @@ msgid "hY01-003_NAME"
 msgstr ""
 
 msgid "hSD05-001_NAME"
-msgstr ""
+msgstr "Todoroki Hajime"
 
 msgid "hSD05-001_SKILL_NAME"
-msgstr ""
+msgstr "Micrófono Blanco"
 
 msgid "hSD05-001_SKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Durante este turno, Si tu Centro es Blanco, sus Artes ganan +20 de poder hasta el final de este turno."
 
 msgid "hSD05-001_SPSKILL_NAME"
-msgstr ""
+msgstr "Guardia Rápida"
 
 msgid "hSD05-001_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por juego) Puede ser utilizada en el turno oponente, cuando uno de tus miembros Blanco está a punto de recibir daño: Rojouce el daño en 20."
 
 msgid "hSD05-002_NAME"
-msgstr ""
+msgstr "Todoroki Hajime"
 
 msgid "hSD05-002_ART_0_NAME"
-msgstr ""
+msgstr "Bunbunbun!"
 
 msgid "hSD05-003_NAME"
-msgstr ""
+msgstr "Todoroki Hajime"
 
 msgid "hSD05-003_ART_0_NAME"
-msgstr ""
+msgstr "Fashionable banchou"
 
 msgid "hSD05-003_COLLAB_NAME"
-msgstr ""
+msgstr "Konchikuwa"
 
 msgid "hSD05-003_COLLAB_EFFECT"
-msgstr ""
+msgstr "Si tu Centro tiene #ReGLOSS, sus Artes ganan +10 de Poder hasta el final de este turno."
 
 msgid "hSD05-004_NAME"
-msgstr ""
+msgstr "Todoroki Hajime"
 
 msgid "hSD05-004_ART_0_NAME"
-msgstr ""
+msgstr "ReGLOSS's Banchou!"
 
 msgid "hSD05-005_NAME"
-msgstr ""
+msgstr "Todoroki Hajime"
 
 msgid "hSD05-005_ART_0_NAME"
-msgstr ""
+msgstr "Ice to mitchu"
 
 msgid "hSD05-005_ART_1_NAME"
-msgstr ""
+msgstr "Yah!"
 
 msgid "hSD05-006_NAME"
-msgstr ""
+msgstr "Todoroki Hajime"
 
 msgid "hSD05-006_ART_0_NAME"
-msgstr ""
+msgstr "De pies ligeros, Todoroki Hajime"
 
 msgid "hSD05-006_ART_1_NAME"
-msgstr ""
+msgstr "Tank yoo!"
 
 msgid "hSD05-006_ART_1_EFFECT"
-msgstr ""
+msgstr "Si hay al menos 3 miembros con #ReGLOSS en tu Escenario con nombres diferentes, este Arte gana +20 de Poder."
 
 msgid "hSD05-007_NAME"
-msgstr ""
+msgstr "Todoroki Hajime"
 
 msgid "hSD05-007_ART_0_NAME"
-msgstr ""
+msgstr "Coraje, encanto, la más fuerte"
 
 msgid "hSD05-007_BLOOM_NAME"
-msgstr ""
+msgstr "Una jane-of-all-trades en busca de ser la malota #1 en el  universo"
 
 msgid "hSD05-007_BLOOM_EFFECT"
-msgstr ""
+msgstr "Roba 1 carta desde tu Deck."
 
 msgid "hSD05-008_NAME"
-msgstr ""
+msgstr "Todoroki Hajime"
 
 msgid "hSD05-008_ART_0_NAME"
-msgstr ""
+msgstr "Creo que comienzo a parecer una Bancho!"
 
 msgid "hSD05-008_ART_0_EFFECT"
-msgstr ""
+msgstr "Las Artes de uno de tus miembros Debut con #ReGLOSS ganan +40 de poder hasta el final de este turno."
 
 msgid "hSD05-009_NAME"
-msgstr ""
+msgstr "Todoroki Hajime"
 
 msgid "hSD05-009_ART_0_NAME"
-msgstr ""
+msgstr "Rayo Púrpura"
 
 msgid "hSD05-009_ART_0_EFFECT"
-msgstr ""
+msgstr "Si hay algún miembro con #ReGLOSS en tu Escenario que no se llame Todoroki Hajime, este Arte gana +30 de Poder."
 
 msgid "hSD05-009_BLOOM_NAME"
-msgstr ""
+msgstr "Démosle color al mundo bailando!"
 
 msgid "hSD05-009_BLOOM_EFFECT"
-msgstr ""
+msgstr "Revela un miembro Debut o 1st Bloom con #ReGLOSS desde tu Deck y ponlo en tu mano. Luego baraja tu Deck."
 
 msgid "hSD05-010_NAME"
-msgstr ""
+msgstr "Juufuutei Raden"
 
 msgid "hSD05-010_ART_0_NAME"
-msgstr ""
+msgstr "Tome asiento"
 
 msgid "hSD05-010_ART_0_EFFECT"
-msgstr ""
+msgstr "Puedes enviar 1 Ovación desde tu Archivo a cualquiera de tus miembros con #ReGLOSS."
 
 msgid "hSD05-011_NAME"
-msgstr ""
+msgstr "Ichijou Ririka"
 
 msgid "hSD05-011_ART_0_NAME"
-msgstr ""
+msgstr "Trabajo Oshi de la Presidenta"
 
 msgid "hSD05-011_COLLAB_NAME"
-msgstr ""
+msgstr "Dejámelo a mí!"
 
 msgid "hSD05-011_COLLAB_EFFECT"
-msgstr ""
+msgstr "Si tu Centro tiene #ReGLOSS y tienes 5 o menos cartas en tu mano, roba 1 carta desde tu Deck."
 
 msgid "hSD05-012_NAME"
-msgstr ""
+msgstr "Hiodoshi Ao"
 
 msgid "hSD05-012_ART_0_NAME"
-msgstr ""
+msgstr "Eres la más linda en el mundo"
 
 msgid "hSD05-012_COLLAB_NAME"
-msgstr ""
+msgstr "Ta-da!"
 
 msgid "hSD05-012_COLLAB_EFFECT"
-msgstr ""
+msgstr "Inflige 10 de daño especial al Centro de tu oponente o a uno de sus miembros en el Backstage."
 
 msgid "hSD05-013_NAME"
-msgstr ""
+msgstr "Otonose Kanade"
 
 msgid "hSD05-013_ART_0_NAME"
-msgstr ""
+msgstr "HAHA"
 
 msgid "hSD05-013_COLLAB_NAME"
-msgstr ""
+msgstr "Crescendo Days"
 
 msgid "hSD05-013_COLLAB_EFFECT"
-msgstr ""
+msgstr "Puedes mover 1 Ovación en tu Escenario a uno de tus miembros exceptuando este."
 
 msgid "hSD05-014_NAME"
-msgstr ""
+msgstr "Banpen"
 
 msgid "hSD05-014_EFFECT"
-msgstr ""
+msgstr "Las Artes del miembro con esta Mascota acoplada ganan +10 de poder.\n\n"
+"Si esta Mascota está acoplada a Todoroki Hajime, gana el siguiente efecto: El miembro con esta Mascota acoplada gana +20 de HP.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
 
 msgid "hSD06-001_NAME"
-msgstr ""
+msgstr "Kazama Iroha"
 
 msgid "hSD06-001_SKILL_NAME"
-msgstr ""
+msgstr "Micrófono Verde"
 
 msgid "hSD06-001_SKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Durante este turno, Si tu Centro es Verde, sus Artes ganan +20 de poder hasta el final de este turno."
 
 msgid "hSD06-001_SPSKILL_NAME"
-msgstr ""
+msgstr "Todos!, Demos lo mejor!"
 
 msgid "hSD06-001_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por juego) Restaura 20 HP a todos tus miembros Verdes."
 
 msgid "hSD06-002_NAME"
-msgstr ""
+msgstr "Kazama Iroha"
 
 msgid "hSD06-002_ART_0_NAME"
-msgstr ""
+msgstr "SI! JAKIN-JAKIN!!"
 
 msgid "hSD06-002_COLLAB_NAME"
-msgstr ""
+msgstr "NOT! NIN-NIN!!"
 
 msgid "hSD06-002_COLLAB_EFFECT"
-msgstr ""
+msgstr "Restaura 10 HP a uno de tus miembros."
 
 msgid "hSD06-003_NAME"
-msgstr ""
+msgstr "Kazama Iroha"
 
 msgid "hSD06-003_ART_0_NAME"
-msgstr ""
+msgstr "Te acabaré de un golpe"
 
 msgid "hSD06-003_ART_0_EFFECT"
-msgstr ""
+msgstr "Si tu Centro está dañado, este Arte gana +10 de Poder."
 
 msgid "hSD06-004_NAME"
-msgstr ""
+msgstr "Kazama Iroha"
 
 msgid "hSD06-004_ART_0_NAME"
-msgstr ""
+msgstr "Guardaespaldas Tímida"
 
 msgid "hSD06-005_NAME"
-msgstr ""
+msgstr "Kazama Iroha"
 
 msgid "hSD06-005_ART_0_NAME"
-msgstr ""
+msgstr "Junto con Kazama!"
 
 msgid "hSD06-005_BLOOM_NAME"
-msgstr ""
+msgstr "Saliendo con Kazama"
 
 msgid "hSD06-005_BLOOM_EFFECT"
-msgstr ""
+msgstr "Envía el tope de tu Deck de Ovaciones a uno de tus miembros con #SecretSocietyholoX"
 
 msgid "hSD06-006_NAME"
-msgstr ""
+msgstr "Kazama Iroha"
 
 msgid "hSD06-006_ART_0_NAME"
-msgstr ""
+msgstr "Tu espada se va a oxidar!"
 
 msgid "hSD06-006_BLOOM_NAME"
-msgstr ""
+msgstr "Chica Samurai"
 
 msgid "hSD06-006_BLOOM_EFFECT"
-msgstr ""
+msgstr "Revela 1 Chakimaru o Pokobe desde tu deck y ponlo en tu mano. Luego baraja tu Deck."
 
 msgid "hSD06-007_NAME"
-msgstr ""
+msgstr "Kazama Iroha"
 
 msgid "hSD06-007_ART_0_NAME"
-msgstr ""
+msgstr "Soy una genio?"
 
 msgid "hSD06-007_ART_0_EFFECT"
-msgstr ""
+msgstr "Si hay al menos 5 Ovaciones en tu escenario, este Arte gana +50 de Poder."
 
 msgid "hSD06-007_BLOOM_NAME"
-msgstr ""
+msgstr "Trayéndote energía"
 
 msgid "hSD06-007_BLOOM_EFFECT"
-msgstr ""
+msgstr "Restaura 30 HP a uno de tus miembros con #SecretSocietyholoX."
 
 msgid "hSD06-008_NAME"
-msgstr ""
+msgstr "Hakui Koyori"
 
 msgid "hSD06-008_ART_0_NAME"
-msgstr ""
+msgstr "doya"
 
 msgid "hSD06-008_COLLAB_NAME"
-msgstr ""
+msgstr "El Cerebro!"
 
 msgid "hSD06-008_COLLAB_EFFECT"
-msgstr ""
+msgstr "Si tu Centro tiene #SecretSocietyholoX  y tienes 5 o menos cartas en tu mano, roba 1 carta desde tu Deck."
 
 msgid "hSD06-009_NAME"
-msgstr ""
+msgstr "Takane Lui"
 
 msgid "hSD06-009_ART_0_NAME"
-msgstr ""
+msgstr "Ejecutiva Confiable"
 
 msgid "hSD06-009_ART_0_EFFECT"
-msgstr ""
+msgstr "Puedes poner 1 miembro Debut con #SecretSocietyholoX desde tu Archivo a tu mano."
 
 msgid "hSD06-010_NAME"
-msgstr ""
+msgstr "La+ Darknesss"
 
 msgid "hSD06-010_ART_0_NAME"
-msgstr ""
+msgstr "Fiesta de la Locura"
 
 msgid "hSD06-010_ART_0_EFFECT"
-msgstr ""
+msgstr "[Solo posición de Collab] Si has usado tu SP Oshi Skill durante el Paso Principal de este turno, este Arte gana +50 de Poder."
 
 msgid "hSD06-011_NAME"
-msgstr ""
+msgstr "Chakimaru"
 
 msgid "hSD06-011_EFFECT"
-msgstr ""
+msgstr "Las Artes del miembro con esta Herramienta acoplada ganan +10 de poder.\n\n"
+"Si esta está acoplada a una Kazama Iroha 1st Bloom o superior, gana el siguiente efecto: (Una vez por turno) Durante el turno de tu oponente, cuando el miembro con esta Herramienta acoplada reciba daño, inflige 20 de daño especial al Centro de tu oponente. Miembros Derribados con este efecto no Reducen VIDA\n\n"
+"Solo puedes acoplar una Herramienta a cada miembro."
 
 msgid "hSD06-012_NAME"
-msgstr ""
+msgstr "Pokobe"
 
 msgid "hSD06-012_EFFECT"
-msgstr ""
+msgstr "El miembro con esta Mascota acoplada tiene +10 HP.\n\n"
+"Si esta Mascota está acoplada a Kazama Iroha, gana el siguiente efecto: el miembro con esta Mascota acoplada gana +20 de HP.\n\n"
+"Solo puedes acoplar una Mascota a cada miembro."
 
 msgid "hSD07-001_NAME"
-msgstr ""
+msgstr "Shiranui Flare"
 
 msgid "hSD07-001_SKILL_NAME"
-msgstr ""
+msgstr "Micrófono Amarillo"
 
 msgid "hSD07-001_SKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por turno) Si tu Centro es Amarillo, sus Artes ganan +20 de Poder hasta el final de este turno."
 
 msgid "hSD07-001_SPSKILL_NAME"
-msgstr ""
+msgstr "Me encargaré del resto!"
 
 msgid "hSD07-001_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Una vez por juego) Cambia tu Centro con uno de tus miembros en el Backstage que no esté descansando. Luego restaura 30 HP al miembro que se movió hacia el Backstage."
 
 msgid "hSD07-002_NAME"
-msgstr ""
+msgstr "Shiranui Flare"
 
 msgid "hSD07-002_ART_0_NAME"
-msgstr ""
+msgstr "Konnui!"
 
 msgid "hSD07-002_ART_1_NAME"
-msgstr ""
+msgstr "Es Shiranui Flare!"
 
 msgid "hSD07-003_NAME"
-msgstr ""
+msgstr "Shiranui Flare"
 
 msgid "hSD07-003_ART_0_NAME"
-msgstr ""
+msgstr "Saliendo contigo"
 
 msgid "hSD07-003_COLLAB_NAME"
-msgstr ""
+msgstr "Con mis preciados amigos"
 
 msgid "hSD07-003_COLLAB_EFFECT"
-msgstr ""
+msgstr "Si hay 5 o menos miembros en tu Escenario, puedes revelar un miembro Debut Omaru Polka, Sakura Miko, Hoshimachi Suisei, o Shirogane Noel desde tu Deck y ponlo en tu Escenario, Luego baraja tu Deck."
 
 msgid "hSD07-004_NAME"
-msgstr ""
+msgstr "Shiranui Flare"
 
 msgid "hSD07-004_ART_0_NAME"
-msgstr ""
+msgstr "Vida Maravillosa"
 
 msgid "hSD07-004_ART_0_EFFECT"
-msgstr ""
+msgstr "Si tienes menos cartas en mano que tu oponente, este Arte gana + 10 de Poder."
 
 msgid "hSD07-005_NAME"
-msgstr ""
+msgstr "Shiranui Flare"
 
 msgid "hSD07-005_ART_0_NAME"
-msgstr ""
+msgstr "De mí para ti"
 
 msgid "hSD07-005_ART_1_NAME"
-msgstr ""
+msgstr "Hora del té contigo"
 
 msgid "hSD07-006_NAME"
-msgstr ""
+msgstr "Shiranui Flare"
 
 msgid "hSD07-006_ART_0_NAME"
-msgstr ""
+msgstr "Soy quien más te ama❤️"
 
 msgid "hSD07-006_ART_0_EFFECT"
-msgstr ""
+msgstr "Si tienes 3 o menos VIDAS, este Arte gana +30 de Poder."
 
 msgid "hSD07-006_BLOOM_NAME"
-msgstr ""
+msgstr "El piar de los Elfriends"
 
 msgid "hSD07-006_BLOOM_EFFECT"
-msgstr ""
+msgstr "Revela 1 Elfriend desde tu Deck y ponlo en tu mano. Luego baraja tu Deck."
 
 msgid "hSD07-007_NAME"
-msgstr ""
+msgstr "Shiranui Flare"
 
 msgid "hSD07-007_ART_0_NAME"
-msgstr ""
+msgstr "Quiero que lo veas!"
 
 msgid "hSD07-007_BLOOM_NAME"
-msgstr ""
+msgstr "He crecido un poco!"
 
 msgid "hSD07-007_BLOOM_EFFECT"
-msgstr ""
+msgstr "[Solo en Backstage] Si tu Collab tiene 70 o menos de HP restante, puedes Cambiar este miembro con tu miembro Collab."
 
 msgid "hSD07-008_NAME"
-msgstr ""
+msgstr "Shiranui Flare"
 
 msgid "hSD07-008_ART_0_NAME"
-msgstr ""
+msgstr "Fiesta Elfriend"
 
 msgid "hSD07-008_ART_0_EFFECT"
-msgstr ""
+msgstr "Puedes acoplar 1 Elfriend desde tu Archivo a este miembro."
 
 msgid "hSD07-009_NAME"
-msgstr ""
+msgstr "Shiranui Flare"
 
 msgid "hSD07-009_ART_0_NAME"
-msgstr ""
+msgstr "Escenario de Pasión"
 
 msgid "hSD07-009_ART_0_EFFECT"
-msgstr ""
+msgstr "Si tienes 3 o menos VIDAS, este Arte gana +70 de Poder."
 
 msgid "hSD07-009_GIFT_NAME"
-msgstr ""
+msgstr "Incansable"
 
 msgid "hSD07-009_GIFT_EFFECT"
-msgstr ""
+msgstr "[Solo posición de Centro] Cada vez que este miembro recibe daño, recibe -10 de daño."
 
 msgid "hSD07-010_NAME"
-msgstr ""
+msgstr "Shirogane Noel"
 
 msgid "hSD07-010_ART_0_NAME"
-msgstr ""
+msgstr "Quiero construir mucho"
 
 msgid "hSD07-010_COLLAB_NAME"
-msgstr ""
+msgstr "Confirmación de grandes cosas"
 
 msgid "hSD07-010_COLLAB_EFFECT"
-msgstr ""
+msgstr "Las Artes de tu Centro ganan +10 de Poder hasta el final de este turno."
 
 msgid "hSD07-011_NAME"
 msgstr ""
 
 msgid "hSD07-011_ART_0_NAME"
-msgstr ""
+msgstr "El ejército del Rey Demonio ya no está"
 
 msgid "hSD07-011_COLLAB_NAME"
-msgstr ""
+msgstr "Burning🎵 Burning🎵"
 
 msgid "hSD07-011_COLLAB_EFFECT"
-msgstr ""
+msgstr "Inflige 10 de daño especial al Centro de tu oponente."
 
 msgid "hSD07-012_NAME"
-msgstr ""
+msgstr "Omaru Polka"
 
 msgid "hSD07-012_ART_0_NAME"
-msgstr ""
+msgstr "Lista para dar mi vida"
 
 msgid "hSD07-012_COLLAB_NAME"
-msgstr ""
+msgstr "Danos Agua"
 
 msgid "hSD07-012_COLLAB_EFFECT"
-msgstr ""
+msgstr "Si tu Centro es Shiranui Flare y tienes menos cartas en mano que tu oponente, roba 1 carta desde tu Deck."
 
 msgid "hSD07-013_NAME"
-msgstr ""
+msgstr "Hoshimachi Suisei"
 
 msgid "hSD07-013_ART_0_NAME"
-msgstr ""
+msgstr "Por favor contrátame!!"
 
 msgid "hSD07-013_COLLAB_NAME"
-msgstr ""
+msgstr "Se me esta acabando el arroz..."
 
 msgid "hSD07-013_COLLAB_EFFECT"
-msgstr ""
+msgstr "Si tu Centro es Shiranui Flare, puedes enviar 1 Ovación desde tu Archivo a cualquiera de tus miembros exceptuando este."
 
 msgid "hSD07-014_NAME"
-msgstr ""
+msgstr "Shiranui Constructions"
 
 msgid "hSD07-014_EFFECT"
-msgstr ""
+msgstr "Esta carta solo puede ser jugada si tienes 6 o menos cartas en tu mano, excluyendo esta carta.\n\n"
+"Mira las 4 cartas del tope de tu Deck. Revela cualquier número de miembros llamados Shiranui Flare, Omaru Polka, Sakura Miko, Hoshimachi Suisei, o Shirogane Noel entre ellas y ponlos en tu mano. Luego pon las cartas restantes en el fondo de tu Deck en cualquier orden."
 
 msgid "hSD07-015_NAME"
-msgstr ""
+msgstr "Elfriend"
 
 msgid "hSD07-015_EFFECT"
-msgstr ""
+msgstr "El miembro con este Fan acoplado gana +10 HP.\n\n"
+"Este Fan solo puede ser acoplado a Shiranui Flare, y puedes acoplar cualquier número este Fan a cada uno de tus miembros."
 
 msgid "hY06-001_NAME"
 msgstr ""
@@ -6828,5 +6836,128 @@ msgid "hBP04-103_NAME"
 msgstr ""
 
 msgid "hBP04-103_EFFECT"
+msgstr ""
+
+msgid "hBP04-043_NAME"
+msgstr ""
+
+msgid "hBP04-043_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-043_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-044_NAME"
+msgstr ""
+
+msgid "hBP04-044_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-044_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-044_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-045_NAME"
+msgstr ""
+
+msgid "hBP04-045_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-045_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-046_NAME"
+msgstr ""
+
+msgid "hBP04-046_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-046_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-047_NAME"
+msgstr ""
+
+msgid "hBP04-047_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-047_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-047_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-048_NAME"
+msgstr ""
+
+msgid "hBP04-048_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-048_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-048_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-048_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-090_NAME"
+msgstr ""
+
+msgid "hBP04-090_EFFECT"
+msgstr ""
+
+msgid "hBP04-101_NAME"
+msgstr ""
+
+msgid "hBP04-101_EFFECT"
+msgstr ""
+
+msgid "hBP04-102_NAME"
+msgstr ""
+
+msgid "hBP04-102_EFFECT"
+msgstr ""
+
+msgid "hBP04-106_NAME"
+msgstr ""
+
+msgid "hBP04-106_EFFECT"
+msgstr ""
+
+msgid "hBP04-027_NAME"
+msgstr ""
+
+msgid "hBP04-027_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-027_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-027_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-038_NAME"
+msgstr ""
+
+msgid "hBP04-038_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-038_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-038_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-038_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-095_NAME"
+msgstr ""
+
+msgid "hBP04-095_EFFECT"
 msgstr ""
 

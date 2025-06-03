@@ -6829,3 +6829,36 @@ msgstr "Yukimin"
 msgid "hBP04-106_EFFECT"
 msgstr "Special damage done by the holomem with this Fan attached to your opponent's center holomem is increased by +10.\n\nThis Fan may only be attached to your Yukihana Lamy, and you may attach any number of this Fan to one holomem."
 
+msgid "hBP04-027_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP04-027_ART_0_NAME"
+msgstr "Terima Kasih"
+
+msgid "hBP04-027_BLOOM_NAME"
+msgstr "HOLORO"
+
+msgid "hBP04-027_BLOOM_EFFECT"
+msgstr "Send the top card of your Cheer deck to one of your holomem named Kureiji Ollie or Anya Melfissa."
+
+msgid "hBP04-038_NAME"
+msgstr "Houshou Marine"
+
+msgid "hBP04-038_ART_0_NAME"
+msgstr "Risqué❤️❤️"
+
+msgid "hBP04-038_ART_0_EFFECT"
+msgstr "For each holomem stacked under this one, this art gains +20 power."
+
+msgid "hBP04-038_BLOOM_NAME"
+msgstr "I wonder if they saw that!!❤️❤️"
+
+msgid "hBP04-038_BLOOM_EFFECT"
+msgstr "Deal 10 damage to your opponent's center and collab holomem."
+
+msgid "hBP04-095_NAME"
+msgstr "Mascot Catcher"
+
+msgid "hBP04-095_EFFECT"
+msgstr "Reveal 1 Mascot from your deck and put it into your hand. Then shuffle your deck."
+

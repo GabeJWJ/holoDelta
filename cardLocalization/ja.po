@@ -6829,3 +6829,36 @@ msgstr "雪民"
 msgid "hBP04-106_EFFECT"
 msgstr "このファンが付いているホロメンが、相手のセンターホロメンに与える特殊ダメージ+10。\n\nこのファンは、自分の〈雪花ラミィ〉だけに付けられ、1人につき何枚でも付けられる。"
 
+msgid "hBP04-027_NAME"
+msgstr "パヴォリア・レイネ"
+
+msgid "hBP04-027_ART_0_NAME"
+msgstr "Terima Kasih"
+
+msgid "hBP04-027_BLOOM_NAME"
+msgstr "HOLORO"
+
+msgid "hBP04-027_BLOOM_EFFECT"
+msgstr "自分のエールデッキの上から1枚を、自分の〈クレイジー・オリー〉か〈アーニャ・メルフィッサ〉に送る。"
+
+msgid "hBP04-038_NAME"
+msgstr "宝鐘マリン"
+
+msgid "hBP04-038_ART_0_NAME"
+msgstr "えっち♡♡"
+
+msgid "hBP04-038_ART_0_EFFECT"
+msgstr "このホロメンに重なっているホロメン1枚につき、このアーツ+20。"
+
+msgid "hBP04-038_BLOOM_NAME"
+msgstr "どこ見ちゃってるのかな~!!❤️♡"
+
+msgid "hBP04-038_BLOOM_EFFECT"
+msgstr "相手のセンターホロメンとコラボホロメンに特殊ダメージ10を与える。"
+
+msgid "hBP04-095_NAME"
+msgstr "マスコットキャッチャー"
+
+msgid "hBP04-095_EFFECT"
+msgstr "自分のデッキから、マスコット1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+

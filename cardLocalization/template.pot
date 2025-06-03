@@ -6829,3 +6829,36 @@ msgstr ""
 msgid "hBP04-106_EFFECT"
 msgstr ""
 
+msgid "hBP04-027_NAME"
+msgstr ""
+
+msgid "hBP04-027_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-027_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-027_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-038_NAME"
+msgstr ""
+
+msgid "hBP04-038_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-038_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-038_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-038_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-095_NAME"
+msgstr ""
+
+msgid "hBP04-095_EFFECT"
+msgstr ""
+

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-05-30 14:58\n"
+"PO-Revision-Date: 2025-06-03 16:18\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Quand cet Holomem est Inconscient, perdez 2 VIE"
@@ -4146,7 +4146,7 @@ msgstr "Chakimaru"
 
 msgid "hSD06-011_EFFECT"
 msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
-"Si cet Outil est attaché à une \"Kazama Iroha\" 1st Bloom ou au-dessus, il gagne l'effet suivant : (Une fois par tour) Durant le tour de votre adversaire, lorsque l'Holomeme avec cet Outil attaché subit des dégâts, infligez 20 dégâts spéciaux à l'Holomem Central de votre adversaire. Les Holomems mis Inconscients avec cet effet ne réduisent pas la VIE.\n\n"
+"Si cet Outil est attaché à une \"Kazama Iroha\" 1st Bloom ou au-dessus, il gagne l'effet suivant : (Une fois par tour) Durant le tour de votre adversaire, lorsque l'Holomem avec cet Outil attaché subit des dégâts, infligez 20 dégâts spéciaux à l'Holomem Central de votre adversaire. Les Holomems mis Inconscients avec cet effet ne réduisent pas la VIE.\n\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem. "
 
 msgid "hSD06-012_NAME"
@@ -6787,7 +6787,7 @@ msgid "hBP04-065_BLOOM_NAME"
 msgstr "Eclat inégalé"
 
 msgid "hBP04-065_BLOOM_EFFECT"
-msgstr "Vous pouvez archiver deux cheer rouge pour l'effet suivant : Piochez deux cartes."
+msgstr "Vous pouvez archiver un Cheer Rouge à n'importe lequel de vos Holomem pour l'effet suivant : Piochez 2 cartes."
 
 msgid "hBP04-066_NAME"
 msgstr "Koseki Bijou"
@@ -6894,92 +6894,132 @@ msgstr "Les Arts du Holomem avec cette Mascotte attaché gagnent +10 dégâts. \
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP04-043_NAME"
-msgstr ""
+msgstr "Yukihana Lamy"
 
 msgid "hBP04-043_ART_0_NAME"
-msgstr ""
+msgstr "Kon-Lamy"
 
 msgid "hBP04-043_ART_0_EFFECT"
-msgstr ""
+msgstr "Infligez 10 dégâts spéciaux à l'un des Holomems de votre adversaire. (Les Holomems mis inconscient avec cet effet ne font pas perdre de VIE)."
 
 msgid "hBP04-044_NAME"
-msgstr ""
+msgstr "Yukihana Lamy"
 
 msgid "hBP04-044_ART_0_NAME"
-msgstr ""
+msgstr "uu..."
 
 msgid "hBP04-044_COLLAB_NAME"
-msgstr ""
+msgstr "Snow Flower"
 
 msgid "hBP04-044_COLLAB_EFFECT"
-msgstr ""
+msgstr "Si aucun Yukimin est attaché à une Yukihana Lamy sur votre Scène, révélez un Yukimin de votre Deck et attachez-le à l'une de vos Yukihana Lamy. Puis mélangez votre Deck."
 
 msgid "hBP04-045_NAME"
-msgstr ""
+msgstr "Yukihana Lamy"
 
 msgid "hBP04-045_ART_0_NAME"
-msgstr ""
+msgstr "Otsu-Lamy"
 
 msgid "hBP04-045_ART_1_NAME"
-msgstr ""
+msgstr "Je n’arrive pas à battre le boss !"
 
 msgid "hBP04-046_NAME"
-msgstr ""
+msgstr "Yukihana Lamy"
 
 msgid "hBP04-046_ART_0_NAME"
-msgstr ""
+msgstr "Je vais faire de mon mieux !"
 
 msgid "hBP04-046_ART_0_EFFECT"
-msgstr ""
+msgstr "Si n'importe n'importe lequel de vos Holomems a un Fan attaché, infligez 10 dégâts spéciaux à l'un des Holomems de votre adversaire."
 
 msgid "hBP04-047_NAME"
-msgstr ""
+msgstr "Yukihana Lamy"
 
 msgid "hBP04-047_ART_0_NAME"
-msgstr ""
+msgstr "Bouquet étincelant des neiges"
 
 msgid "hBP04-047_COLLAB_NAME"
-msgstr ""
+msgstr "Fleur"
 
 msgid "hBP04-047_COLLAB_EFFECT"
-msgstr ""
+msgstr "Si une Yukihana Lamy sur votre Scène a un Yukimin attaché, infligez 20 dégâts spéciaux à l'un des Holomems de votre adversaire. (Les Holomems mis inconscient avec cet effet ne font pas perdre de VIE)."
 
 msgid "hBP04-048_NAME"
-msgstr ""
+msgstr "Yukihana Lamy"
 
 msgid "hBP04-048_ART_0_NAME"
-msgstr ""
+msgstr "Que tu sois béni aujourd’hui aussi"
 
 msgid "hBP04-048_ART_0_EFFECT"
-msgstr ""
+msgstr "Envoyez la première carte de votre Deck de Cheer vers  l'une de vos Holomem Yukihana Lamy avec un Yukimin attaché."
 
 msgid "hBP04-048_BLOOM_NAME"
-msgstr ""
+msgstr "Fille d’Unyria"
 
 msgid "hBP04-048_BLOOM_EFFECT"
-msgstr ""
+msgstr "Vous pouvez archiver un Cheer de cet Holomem pour l'effet suivant : infligez 30 dégâts spéciaux à un Holomem Central ou Collab de votre adversaire."
 
 msgid "hBP04-090_NAME"
-msgstr ""
+msgstr "PC de travail"
 
 msgid "hBP04-090_EFFECT"
-msgstr ""
+msgstr "LIMITÉ : Seule une carte ne peut être jouée par tour.\n\n"
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n\n"
+"Regardez les quatre premières cartes de votre Deck. Révélez un Holomem et un Outil, un Mascotte ou un Fan d'entre elles et mettez-les dans votre main.  Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP04-101_NAME"
-msgstr ""
+msgstr "Daifuku"
 
 msgid "hBP04-101_EFFECT"
-msgstr ""
+msgstr "Les Arts du Holomem avec cette Mascotte attaché gagnent +10 dégâts. \n\n"
+"Si cette Mascotte est attachée à Yukihana Lamy, elle gagne l'effet suivant : L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+"Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP04-102_NAME"
-msgstr ""
+msgstr "Yamena"
 
 msgid "hBP04-102_EFFECT"
-msgstr ""
+msgstr "Les Arts du Holomem avec cette Mascotte attaché gagnent +10 dégâts.\n\n"
+"Si cette Mascotte est attachée à un Holomem avec #Gen5, elle gagne l'effet suivant : (En position Arrière uniquement) L'Holomem avec cette Mascotte attachée ne subit aucun dommage de votre adversaire.\n\n"
+"Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP04-106_NAME"
-msgstr ""
+msgstr "Yukimin"
 
 msgid "hBP04-106_EFFECT"
+msgstr "Les dégâts speciaux infliger à l'Holomem Central de votre adversaire par Holomem avec cette Mascotte attaché augmente de +10 dégâts. \n\n"
+"Ce Fan ne peut être attaché qu'à votre Yukihana Lamy, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+
+msgid "hBP04-027_NAME"
+msgstr ""
+
+msgid "hBP04-027_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-027_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-027_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-038_NAME"
+msgstr ""
+
+msgid "hBP04-038_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-038_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-038_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-038_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-095_NAME"
+msgstr ""
+
+msgid "hBP04-095_EFFECT"
 msgstr ""
 

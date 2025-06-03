@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-05-27 21:07\n"
+"PO-Revision-Date: 2025-06-03 16:18\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "이 홀로멤이 다운됐을 때, 자신의 라이프 -2."
@@ -6920,5 +6920,128 @@ msgid "hBP04-103_NAME"
 msgstr ""
 
 msgid "hBP04-103_EFFECT"
+msgstr ""
+
+msgid "hBP04-043_NAME"
+msgstr ""
+
+msgid "hBP04-043_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-043_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-044_NAME"
+msgstr ""
+
+msgid "hBP04-044_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-044_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-044_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-045_NAME"
+msgstr ""
+
+msgid "hBP04-045_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-045_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-046_NAME"
+msgstr ""
+
+msgid "hBP04-046_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-046_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-047_NAME"
+msgstr ""
+
+msgid "hBP04-047_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-047_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-047_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-048_NAME"
+msgstr ""
+
+msgid "hBP04-048_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-048_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-048_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-048_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-090_NAME"
+msgstr ""
+
+msgid "hBP04-090_EFFECT"
+msgstr ""
+
+msgid "hBP04-101_NAME"
+msgstr ""
+
+msgid "hBP04-101_EFFECT"
+msgstr ""
+
+msgid "hBP04-102_NAME"
+msgstr ""
+
+msgid "hBP04-102_EFFECT"
+msgstr ""
+
+msgid "hBP04-106_NAME"
+msgstr ""
+
+msgid "hBP04-106_EFFECT"
+msgstr ""
+
+msgid "hBP04-027_NAME"
+msgstr ""
+
+msgid "hBP04-027_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-027_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-027_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-038_NAME"
+msgstr ""
+
+msgid "hBP04-038_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-038_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-038_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-038_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-095_NAME"
+msgstr ""
+
+msgid "hBP04-095_EFFECT"
 msgstr ""
 
