@@ -675,6 +675,9 @@ func remove_from_fuda(card_id,fuda):
 	if fuda == deck:
 		can_undo_shuffle_hand = null
 	
+	if all_cards[card_id].cardType == "Holomem":
+		all_cards[card_id].bloomed_this_turn = true
+	
 	fuda.update_size()
 
 func remove_fake_from_fuda(fuda, card_info):
@@ -1317,8 +1320,6 @@ func _on_cheer_deck_clicked():
 	if is_your_side and can_do_things:
 		if all_occupied_zones().size() > 0:
 			popup.add_item(tr("CHEERDECK_REVEAL"),300)
-		
-		if popup.item_count > 0:
 			popup.add_separator()
 		
 		popup.add_item(tr("CHEERDECK_LOOKX"),397)
@@ -1328,10 +1329,14 @@ func _on_cheer_deck_clicked():
 	show_popup()
 
 func _on_archive_clicked():
+	reset_popup()
+	
 	if preliminary_phase or currentPrompt != -1:
 		return
 	
-	reset_popup()
+	if is_your_side and can_do_things and hand.size() > 0:
+		popup.add_item(tr("ARCHIVE_HAND_ALL"),410)
+		popup.add_separator()
 	
 	popup.add_item(tr("ARCHIVE_SEARCH"),498)
 		

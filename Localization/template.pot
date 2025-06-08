@@ -871,6 +871,10 @@ msgid "CHEERDECK_SHUFFLE"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "ARCHIVE_HAND_ALL"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "ARCHIVE_SEARCH"
 msgstr ""
 
@@ -1359,6 +1363,10 @@ msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HAND_ALL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr ""
 
@@ -1687,6 +1695,10 @@ msgid "YOU_MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HAND_ALL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr ""
 
@@ -1841,3 +1853,4 @@ msgstr ""
 #: Scripts/card.gd
 msgid "INFO_LIMITED"
 msgstr ""
+

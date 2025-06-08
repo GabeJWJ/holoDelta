@@ -1130,6 +1130,13 @@ class Side:
 
                 shuffle(self.cheer_deck)
             
+            case 410: #Archive Hand
+                await self.game._send_message(self.player,"MESSAGE_ARCHIVE_HAND_ALL")
+
+                for potentialCard in self.hand.copy():
+                    await self.add_to_fuda(potentialCard.id,Fuda.archive)
+                    await self.remove_from_hand(potentialCard.id)
+            
             case 500: #Holopower to Archive
                 await self.mill(Fuda.holopower,Fuda.archive)
             case 505: #Reveal Top Card From Holopower

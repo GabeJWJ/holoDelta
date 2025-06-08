@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: holodelta\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-29 22:05-0400\n"
+"PO-Revision-Date: 2025-06-06 22:22-0400\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Language: en_US\n"
@@ -824,6 +824,10 @@ msgid "CHEERDECK_SHUFFLE"
 msgstr "Shuffle"
 
 #: Scripts/side.gd
+msgid "ARCHIVE_HAND_ALL"
+msgstr "Archive hand"
+
+#: Scripts/side.gd
 msgid "ARCHIVE_SEARCH"
 msgstr "Search"
 
@@ -1325,6 +1329,10 @@ msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr "{person} attached {attachName} to ({toZone}) {toName} from cheer deck"
 
 #: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HAND_ALL"
+msgstr "{person} archived their entire hand"
+
+#: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr "{person} played {cardName} to back from archive"
 
@@ -1661,6 +1669,10 @@ msgstr "You played {cardName} to the back from your deck"
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr "You attached {attachName} to ({toZone}) {toName} from your cheer deck"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HAND_ALL"
+msgstr "You archived your entire hand"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY"

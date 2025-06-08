@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-06-03 16:18\n"
+"PO-Revision-Date: 2025-06-08 17:51\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Quand cet Holomem est Inconscient, perdez 2 VIE"
@@ -6108,6 +6108,9 @@ msgstr "ArmeDeKaela"
 msgid "Mushroom"
 msgstr "Champignon"
 
+msgid "KoyoLabo"
+msgstr ""
+
 msgid "hBP04-003_NAME"
 msgstr "Ichijou Ririka"
 
@@ -6991,35 +6994,131 @@ msgstr "Les dégâts speciaux infliger à l'Holomem Central de votre adversaire 
 "Ce Fan ne peut être attaché qu'à votre Yukihana Lamy, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP04-027_NAME"
-msgstr ""
+msgstr "Pavolia Reine"
 
 msgid "hBP04-027_ART_0_NAME"
-msgstr ""
+msgstr "Terima Kasih"
 
 msgid "hBP04-027_BLOOM_NAME"
-msgstr ""
+msgstr "HOLORO"
 
 msgid "hBP04-027_BLOOM_EFFECT"
-msgstr ""
+msgstr "Envoyez la première carte de votre Deck de Cheer vers l'un de vos Holomems nommé Kureiji Ollie ou Anya Melfissa."
 
 msgid "hBP04-038_NAME"
-msgstr ""
+msgstr "Houshou Marine"
 
 msgid "hBP04-038_ART_0_NAME"
-msgstr ""
+msgstr "Risqué❤️❤️"
 
 msgid "hBP04-038_ART_0_EFFECT"
-msgstr ""
+msgstr "Pour chaque Holomem empilé sous cet Holomem, cet Art gagne +20 dégâts."
 
 msgid "hBP04-038_BLOOM_NAME"
-msgstr ""
+msgstr "Je me demande s'ils ont vu ça !! ❤️❤️"
 
 msgid "hBP04-038_BLOOM_EFFECT"
-msgstr ""
+msgstr "Infligez 10 dégâts spéciaux à un Holomem Central Et Collab de votre adversaire."
 
 msgid "hBP04-095_NAME"
-msgstr ""
+msgstr "Attrape-Mascotte"
 
 msgid "hBP04-095_EFFECT"
+msgstr "Révélez 1 Mascotte de votre Deck et mettez-le dans votre main. Mélangez ensuite votre Deck."
+
+msgid "hBP04-001_NAME"
+msgstr ""
+
+msgid "hBP04-001_SKILL_NAME"
+msgstr ""
+
+msgid "hBP04-001_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-001_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP04-001_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-008_NAME"
+msgstr ""
+
+msgid "hBP04-008_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-009_NAME"
+msgstr ""
+
+msgid "hBP04-009_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-009_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-010_NAME"
+msgstr ""
+
+msgid "hBP04-010_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-010_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-011_NAME"
+msgstr ""
+
+msgid "hBP04-011_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-011_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-012_NAME"
+msgstr ""
+
+msgid "hBP04-012_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-012_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-012_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-012_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-013_NAME"
+msgstr ""
+
+msgid "hBP04-013_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-013_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-013_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-013_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-097_NAME"
+msgstr ""
+
+msgid "hBP04-097_EFFECT"
+msgstr ""
+
+msgid "hBP04-100_NAME"
+msgstr ""
+
+msgid "hBP04-100_EFFECT"
+msgstr ""
+
+msgid "hBP04-105_NAME"
+msgstr ""
+
+msgid "hBP04-105_EFFECT"
 msgstr ""
 

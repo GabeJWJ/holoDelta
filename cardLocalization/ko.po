@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-06-03 16:18\n"
+"PO-Revision-Date: 2025-06-08 17:51\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "이 홀로멤이 다운됐을 때, 자신의 라이프 -2."
@@ -6143,6 +6143,9 @@ msgstr "카엘라‘s 암즈"
 msgid "Mushroom"
 msgstr "버섯"
 
+msgid "KoyoLabo"
+msgstr ""
+
 msgid "hBP04-003_NAME"
 msgstr "이치죠 리리카"
 
@@ -7043,5 +7046,101 @@ msgid "hBP04-095_NAME"
 msgstr ""
 
 msgid "hBP04-095_EFFECT"
+msgstr ""
+
+msgid "hBP04-001_NAME"
+msgstr ""
+
+msgid "hBP04-001_SKILL_NAME"
+msgstr ""
+
+msgid "hBP04-001_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-001_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP04-001_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-008_NAME"
+msgstr ""
+
+msgid "hBP04-008_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-009_NAME"
+msgstr ""
+
+msgid "hBP04-009_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-009_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-010_NAME"
+msgstr ""
+
+msgid "hBP04-010_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-010_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-011_NAME"
+msgstr ""
+
+msgid "hBP04-011_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-011_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-012_NAME"
+msgstr ""
+
+msgid "hBP04-012_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-012_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-012_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-012_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-013_NAME"
+msgstr ""
+
+msgid "hBP04-013_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-013_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-013_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-013_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-097_NAME"
+msgstr ""
+
+msgid "hBP04-097_EFFECT"
+msgstr ""
+
+msgid "hBP04-100_NAME"
+msgstr ""
+
+msgid "hBP04-100_EFFECT"
+msgstr ""
+
+msgid "hBP04-105_NAME"
+msgstr ""
+
+msgid "hBP04-105_EFFECT"
 msgstr ""
 
