@@ -123,7 +123,7 @@ func _ready():
 	$CanvasLayer/LanguageSelect.text = Settings.get_language()
 	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"en", "es", "fr", "ko":
+		"en", "es", "fr", "ko", "vi":
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
@@ -201,7 +201,7 @@ func _on_language_selected(index_selected):
 	$CanvasLayer/LanguageSelect.text = Settings.languages[index_selected][1]
 	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"en", "es", "fr", "ko":
+		"en", "es", "fr", "ko", "vi":
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
