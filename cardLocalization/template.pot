@@ -6961,3 +6961,21 @@ msgstr ""
 msgid "hBP04-105_EFFECT"
 msgstr ""
 
+msgid "hY01-006_NAME"
+msgstr ""
+
+msgid "hY02-005_NAME"
+msgstr ""
+
+msgid "hY03-004_NAME"
+msgstr ""
+
+msgid "hY04-005_NAME"
+msgstr ""
+
+msgid "hY05-004_NAME"
+msgstr ""
+
+msgid "hY06-004_NAME"
+msgstr ""
+

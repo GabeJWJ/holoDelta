@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-06-08 17:51\n"
+"PO-Revision-Date: 2025-06-11 18:03\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Quand cet Holomem est Inconscient, perdez 2 VIE"
@@ -1843,21 +1843,21 @@ msgstr "Rosetai"
 
 msgid "hBP01-122_EFFECT"
 msgstr "Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan est mis inconscient, envoyez la première carte de votre Deck de Cheers à l'une de vos Aki Rosenthal.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Aki Rosenthal, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Aki Rosenthal, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP01-123_NAME"
 msgstr "Alliance des Nousagi"
 
 msgid "hBP01-123_EFFECT"
 msgstr "Lorsque l'Holomem avec ce Fan lance un dé pour l'une de ses Compétences ou l'un de ses Arts, vous pouvez archiver ce Fan pour obtenir l'effet suivant : relancez le dé une fois.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Usada Pekora, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Usada Pekora, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP01-124_NAME"
 msgstr "Pionnier"
 
 msgid "hBP01-124_EFFECT"
-msgstr "Pendant le tour de votre adversaire, lorsque l'holomem avec ce Fan est mis inconscient, envoyez 1 Cheer de cet holomem vers un autre de vos holomems. \n\n"
-"Ce Fan ne peut être attaché qu'à votre AZKi, et vous pouvez attacher n'importe quel nombre de ce Fan à un holomem."
+msgstr "Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan est mis inconscient, envoyez 1 Cheer de cet Holomem vers un autre de vos Holomems. \n\n"
+"Ce Fan ne peut être attaché qu'à vos AZKi, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP01-126_NAME"
 msgstr "Zain"
@@ -1865,7 +1865,7 @@ msgstr "Zain"
 msgid "hBP01-126_EFFECT"
 msgstr "Lorsque l'Holomem avec ce Fan utilise un Art, ce Fan est traité comme 1 Cheer Rouge.\n\n"
 "Lorsque l'Holomem auquel ce Fan est attaché subit des dégâts, il subit +10 dégâts supplémentaires.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Omaru Polka, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Omaru Polka, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP01-104_NAME"
 msgstr "PC ordinaire"
@@ -1942,7 +1942,7 @@ msgstr "KFP"
 
 msgid "hBP01-125_EFFECT"
 msgstr "Lorsque vous attachez ce Fan depuis votre main à un Holomem, vous pouvez archiver 1 carte depuis votre main pour l'effet suivant : piochez 1 carte de votre Deck.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Takanashi Kiara, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Takanashi Kiara, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hPR-002_NAME"
 msgstr "ReGLOSS"
@@ -2405,7 +2405,7 @@ msgstr "Sukonbu"
 
 msgid "hBP02-099_EFFECT"
 msgstr "L'Holomem avec ce Fan attaché gagne +10 PV.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Shirakami Fubuki, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Shirakami Fubuki, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hSD02-002_ART_0_NAME"
 msgstr "Konnakiri~"
@@ -2676,8 +2676,8 @@ msgid "hSD03-014_NAME"
 msgstr "Onigirya"
 
 msgid "hSD03-014_EFFECT"
-msgstr "L'holomem avec ce Fan attachée gagne +10 PV.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Nekomata Okayu, et vous pouvez attacher n'importe quel nombre de ce Fan à un holomem."
+msgstr "L'holomem avec ce Fan attaché gagne +10 PV.\n\n"
+"Ce Fan ne peut être attaché qu'à vos Nekomata Okayu, et vous pouvez attacher n'importe quel nombre de ce Fan à un holomem."
 
 msgid "Isaki Riona"
 msgstr ""
@@ -3064,7 +3064,7 @@ msgstr "Shiokko"
 msgid "hBP02-102_EFFECT"
 msgstr "Les Arts de l'Holomem avec ce Fan attaché gagnent +10 dégâts.\n\n"
 "Lorsque l'Holomem avec ce Fan attaché subit des dégâts, archivez ce Fan.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Murasaki Shion, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Murasaki Shion, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBD24-010_NAME"
 msgstr "Yukihana Lamy"
@@ -3200,7 +3200,7 @@ msgstr "Shirogane Dan'in"
 
 msgid "hBP02-100_EFFECT"
 msgstr "Lorsque l'Holomem avec ce Fan subit des dégâts, il subit -10 points de dégâts.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Shirogane Noel, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Shirogane Noel, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP02-029_NAME"
 msgstr "Houshou Marine"
@@ -3732,7 +3732,7 @@ msgstr "Miofa"
 
 msgid "hBP02-101_EFFECT"
 msgstr "Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan est mis inconscient, piochez une carte.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Ookami Mio, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Ookami Mio, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP02-025_NAME"
 msgstr "Ookami Mio"
@@ -4322,7 +4322,7 @@ msgstr "Elfriend"
 
 msgid "hSD07-015_EFFECT"
 msgstr "L'Holomem avec ce Fan attaché gagne +10 PV.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Shiranui Flare, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Shiranui Flare, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hY06-001_NAME"
 msgstr "Cheer Jaune"
@@ -5001,42 +5001,42 @@ msgstr "Luknight"
 
 msgid "hBP03-105_EFFECT"
 msgstr "Durant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est sur le point de subir des dégâts, vous pouvez archiver ce Fan pour réduire ces dégâts de 30.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Himemori Luna, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Himemori Luna, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-106_NAME"
 msgstr "SSRB"
 
 msgid "hBP03-106_EFFECT"
 msgstr "Lorsque l'Holomem avec ce Fan attaché archive des Cheers pour une Compétence ou Art, vous pouvez archiver ce Fan à la place d'un Cheer.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Shishiro Botan, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Shishiro Botan, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-108_NAME"
 msgstr "Haaton"
 
 msgid "hBP03-108_EFFECT"
 msgstr "Lorsque vous lancez un dé pour une Compétence ou Art de l'Holomem avec ce Fan attaché, vous pouvez archiver ce Fan pour l'effet suivant : relancez tous les dés lancés pour la compétence.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Akai Haato, et vous pouvez attacher n'importe que nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Akai Haato, et vous pouvez attacher n'importe que nombre de ce Fan à un Holomem."
 
 msgid "hBP03-109_NAME"
 msgstr "Ruffians"
 
 msgid "hBP03-109_EFFECT"
 msgstr "Durant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est mis inconscient, vous pouvez envoyer 1 Cheer Bleu de votre Archive à l'un de vos Holomems nommé Fuwawa Abyssgard.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Fuwawa Abyssgard ou Mococo Abyssgard, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Fuwawa Abyssgard ou Mococo Abyssgard, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-112_NAME"
 msgstr "Watamate"
 
 msgid "hBP03-112_EFFECT"
 msgstr "Durant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est mis inconscient, vous pouvez déplacer 1-2 Cheers Jaunes de cet holomem vers un autre de vos Holomems nommé Tsunomaki Watame.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Tsunomaki Watame, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Tsunomaki Watame, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-113_NAME"
 msgstr "Risuners"
 
 msgid "hBP03-113_EFFECT"
 msgstr "(Une fois par tour) Lorsque l'Holomem avec ce Fan attaché reçoit un Cheer, ses Arts gagnent +10 dégâts jusqu'à la fin de ce tour.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Ayunda Risu, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Ayunda Risu, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-015_NAME"
 msgstr "Todoroki Hajime"
@@ -5502,7 +5502,7 @@ msgstr "35P"
 msgid "hBP03-107_EFFECT"
 msgstr "Lorsque l'Holomem avec ce Fan attaché utilise un Art, ce Fan est traîté comme 1 Cheer Rouge.\n\n"
 "Lorsque l'Holomem avec ce Fan attaché est mis inconscient, votre adversaire peut piocher 1 carte de son Deck.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Sakura Miko, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Sakura Miko, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-110_NAME"
 msgstr "Roboser"
@@ -5510,14 +5510,13 @@ msgstr "Roboser"
 msgid "hBP03-110_EFFECT"
 msgstr "Lorsque l'Holomem avec ce Fan attaché utilise un Art, ce Fan est traîté comme 1 Cheer Violet.\n\n"
 "L'Art de l'Holomem avec ce Fan attaché perd -10 dégâts.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Robocosan, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Robocosan, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-111_NAME"
 msgstr "Koronesuki"
 
 msgid "hBP03-111_EFFECT"
-msgstr "Le coût de Relais de l'Holomem avec ce Fan attaché est réduit de 1.\n\n"
-"Ce Fan ne peut être attaché qu'à votre Inugami Korone, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+msgstr "Koronesuki"
 
 msgid "hY01-004_NAME"
 msgstr "Cheer Blanche"
@@ -6124,7 +6123,7 @@ msgid "hBP04-003_SPSKILL_NAME"
 msgstr "Kawaii ! Positive ! Géniale !"
 
 msgid "hBP04-003_SPSKILL_EFFECT"
-msgstr "(Une fois par partie) Peut être utilisé pendant le tour de votre adversaire lorsque votre Ichijou Ririka est mise inconsciente : Révélez 1 Ichijou Ririka et 1 Repas de fortune depuis votre Deck et mettez-les dans votre main. Mélangez ensuite votre Deck. "
+msgstr "(Une fois par partie) Peut être utilisé pendant le tour de votre adversaire lorsque votre Ichijou Ririka est mise inconsciente : Révélez 1 Ichijou Ririka et 1 Repas de fortune depuis votre Deck et mettez-les dans votre main. Puis mélangez votre Deck."
 
 msgid "hBP04-014_NAME"
 msgstr "Shirakami Fubuki"
@@ -6439,7 +6438,7 @@ msgid "hBP04-083_ART_0_NAME"
 msgstr "Kon-Nene"
 
 msgid "hBP04-083_ART_0_EFFECT"
-msgstr "S'il y a 5 ou moins Holomems sur votre Scène, vous pouvez révéler 1 Holomem Debut avec #Gen5 de votre Deck et le mettre sur votre Scène. Mélangez ensuite votre Deck."
+msgstr "S'il y a 5 ou moins Holomems sur votre Scène, vous pouvez révéler 1 Holomem Debut avec #Gen5 de votre Deck et le mettre sur votre Scène. Puis mélangez votre Deck."
 
 msgid "hBP04-084_NAME"
 msgstr "Momosuzu Nene"
@@ -6460,7 +6459,7 @@ msgid "hBP04-085_BLOOM_NAME"
 msgstr "Je me sens bien !!!!!!!!!!!!!!"
 
 msgid "hBP04-085_BLOOM_EFFECT"
-msgstr "Révélez 1 Cheer de votre Deck de Cheers de la même couleur que l'un de vos Holomems avec #Gen5, et envoyez ce Cheer à n'importe lequel de vos Holomems avec #Gen5. Mélangez ensuite votre Deck de Cheers."
+msgstr "Révélez 1 Cheer de votre Deck de Cheers de la même couleur que l'un de vos Holomems avec #Gen5, et envoyez ce Cheer à n'importe lequel de vos Holomems avec #Gen5. Puis mélangez votre Deck de Cheers."
 
 msgid "hBP04-086_NAME"
 msgstr "Momosuzu Nene"
@@ -6991,7 +6990,7 @@ msgstr "Yukimin"
 
 msgid "hBP04-106_EFFECT"
 msgstr "Les dégâts speciaux infliger à l'Holomem Central de votre adversaire par Holomem avec cette Mascotte attaché augmente de +10 dégâts. \n\n"
-"Ce Fan ne peut être attaché qu'à votre Yukihana Lamy, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+"Ce Fan ne peut être attaché qu'à vos Yukihana Lamy, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP04-027_NAME"
 msgstr "Pavolia Reine"
@@ -7024,46 +7023,46 @@ msgid "hBP04-095_NAME"
 msgstr "Attrape-Mascotte"
 
 msgid "hBP04-095_EFFECT"
-msgstr "Révélez 1 Mascotte de votre Deck et mettez-le dans votre main. Mélangez ensuite votre Deck."
+msgstr "Révélez 1 Mascotte de votre Deck et mettez-le dans votre main. Puis mélangez votre Deck."
 
 msgid "hBP04-001_NAME"
-msgstr ""
+msgstr "Hakui Koyori"
 
 msgid "hBP04-001_SKILL_NAME"
-msgstr ""
+msgstr "Experience de Koyori"
 
 msgid "hBP04-001_SKILL_EFFECT"
-msgstr ""
+msgstr "(Une fois par tour) Les Arts d'un de vos Holomems nommé Hakui Koyori avec une carte avec #KoyoLabo attachée gagne +30 dégâts jusqu'à la fin du tour."
 
 msgid "hBP04-001_SPSKILL_NAME"
-msgstr ""
+msgstr "Assistant-Kun, Mwah !"
 
 msgid "hBP04-001_SPSKILL_EFFECT"
-msgstr ""
+msgstr "(Une fois par partie) Utilisable si l'un de vos Holomems nommés Hakui Koyori avec un Assistant-Kun de Koyori attaché est sur le point de subir des dégâts durant le tour de votre adversaire : reduisez les dégâts de 100."
 
 msgid "hBP04-008_NAME"
-msgstr ""
+msgstr "Hakui Koyori"
 
 msgid "hBP04-008_ART_0_NAME"
-msgstr ""
+msgstr "Konkoyo"
 
 msgid "hBP04-009_NAME"
-msgstr ""
+msgstr "Hakui Koyori"
 
 msgid "hBP04-009_ART_0_NAME"
-msgstr ""
+msgstr "Les enfants perdus dans le cycle sans fin de la réincarnation"
 
 msgid "hBP04-009_ART_0_EFFECT"
-msgstr ""
+msgstr "Regardez les trois premières cartes de votre Deck. Révélez 1 Holomem Debut avec #SociétéSecrèteHoloX ou une carte Soutien avec #KoyoLabo parmi elles et mettez-la dans votre main. Ensuite, mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP04-010_NAME"
-msgstr ""
+msgstr "Hakui Koyori"
 
 msgid "hBP04-010_ART_0_NAME"
-msgstr ""
+msgstr "Assistant-kun, tu sembles fatigué ?"
 
 msgid "hBP04-010_ART_1_NAME"
-msgstr ""
+msgstr "Tu veux dormir avec moi ?"
 
 msgid "hBP04-011_NAME"
 msgstr ""
@@ -7075,34 +7074,34 @@ msgid "hBP04-011_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP04-012_NAME"
-msgstr ""
+msgstr "Hakui Koyori"
 
 msgid "hBP04-012_ART_0_NAME"
-msgstr ""
+msgstr "Assistant-Kun et Koyo serons ensemble pour toujours !"
 
 msgid "hBP04-012_ART_0_EFFECT"
-msgstr ""
+msgstr "Si cet Holomem a Assistant-Kun de Koyori attaché, piochez une carte."
 
 msgid "hBP04-012_BLOOM_NAME"
-msgstr ""
+msgstr "Hai! Hai! Hai! Hai!"
 
 msgid "hBP04-012_BLOOM_EFFECT"
-msgstr ""
+msgstr "Révélez une carte Soutien avec #KoyoLabo depuis votre Deck et ajoutez-la à votre main, puis mélangez votre Deck."
 
 msgid "hBP04-013_NAME"
-msgstr ""
+msgstr "Hakui Koyori"
 
 msgid "hBP04-013_ART_0_NAME"
-msgstr ""
+msgstr "La vie de Koyori"
 
 msgid "hBP04-013_ART_0_EFFECT"
-msgstr ""
+msgstr "Si ce Holomem a une carte Soutien avec #KoyoLabo attaché, révélé 1 carte Soutien avec #KoyoLabo depuis votre Deck et ajoutez la à votre main. Puis mélangez votre Deck."
 
 msgid "hBP04-013_GIFT_NAME"
-msgstr ""
+msgstr "N’abandonne jamais !"
 
 msgid "hBP04-013_GIFT_EFFECT"
-msgstr ""
+msgstr "Lorsque cet Holomem met inconscient un Holomem adverse, mettez la première carte de votre Deck dans vos Holopower. Puis regardez vos Holopower, revelez 1 carte et ajoutez la à votre main. Puis mélangez vos Holopower."
 
 msgid "hBP04-097_NAME"
 msgstr ""
@@ -7111,14 +7110,35 @@ msgid "hBP04-097_EFFECT"
 msgstr ""
 
 msgid "hBP04-100_NAME"
-msgstr ""
+msgstr "Kokoro"
 
 msgid "hBP04-100_EFFECT"
-msgstr ""
+msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+"Si cette Mascotte est attachée à Hakui Koyori 1st Bloom ou plus, elle gagne l'effet suivant : lorsque l'Holomem avec cette Mascotte attachée Collab, ces Arts gagnent +10 dégâts jusqu'à la fin du tour.\n\n"
+"Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP04-105_NAME"
-msgstr ""
+msgstr "Assistant-kun de Koyori"
 
 msgid "hBP04-105_EFFECT"
+msgstr "Lorsque vous attachez ce Fan a l'un de vos Holomems depuis votre Main ou Archive, vous pouvez déplacer 1 Cheer de votre Scène vers le holomem auquel ce Fan est attaché.\n\n"
+"Ce Fan ne peut être attaché qu'à vos Hakui Koyori, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
+
+msgid "hY01-006_NAME"
+msgstr ""
+
+msgid "hY02-005_NAME"
+msgstr ""
+
+msgid "hY03-004_NAME"
+msgstr ""
+
+msgid "hY04-005_NAME"
+msgstr ""
+
+msgid "hY05-004_NAME"
+msgstr ""
+
+msgid "hY06-004_NAME"
 msgstr ""
 
