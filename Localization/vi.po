@@ -1,0 +1,1786 @@
+# LANGUAGE translation for holoDelta for the following files:
+# res://Scenes/board.tscn
+# res://Scenes/deck_list.tscn
+# res://Scenes/sleeve_select.tscn
+# res://Scenes/side.tscn
+# res://Scenes/better_texture_button.tscn
+# res://Scenes/card.tscn
+# res://Scenes/die.tscn
+# res://Scenes/fuda.tscn
+# res://Scenes/info_panel.tscn
+# res://Scenes/zone.tscn
+# res://Scenes/deck_creation.tscn
+# res://Scripts/RemapButton.gd
+# res://Scripts/deck_creation.gd
+# res://Scripts/side.gd
+# res://Scripts/Multiplayer.gd
+# res://Scripts/card.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: holoDelta\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+
+#: Scenes/board.tscn
+msgid "SEND_CHAT"
+msgstr "Gửi"
+
+#: Scenes/board.tscn
+msgid "OPTION_COSMETICS_HIDE"
+msgstr "Ẩn Phụ kiện của Đối phương"
+
+#: Scenes/board.tscn
+msgid "TAB_INFO"
+msgstr "Thông tin"
+
+#: Scenes/board.tscn
+msgid "TAB_CHAT"
+msgstr "Trò chuyện"
+
+#: Scenes/board.tscn
+msgid "TAB_SETTINGS"
+msgstr "C.đặt"
+
+#: Scenes/board.tscn
+msgid "STEP1"
+msgstr "Đặt lại"
+
+#: Scenes/board.tscn
+msgid "STEP2"
+msgstr "Rút bài"
+
+#: Scenes/board.tscn
+msgid "STEP3"
+msgstr "Cổ vũ"
+
+#: Scenes/board.tscn
+msgid "STEP4"
+msgstr "Chính"
+
+#: Scenes/board.tscn
+msgid "STEP5"
+msgstr "Kết thúc"
+
+#: Scenes/board.tscn
+msgid "STEP6"
+msgstr "Kết thúc"
+
+#: Scenes/board.tscn
+msgid "TITLE"
+msgstr "holoDelta"
+
+#: Scenes/board.tscn
+msgid "SUBTITLE"
+msgstr ""
+"Phần mềm mô phỏng không chính thức\n"
+"của Trò chơi Thẻ bài Hololive"
+
+#: Scenes/board.tscn Scenes/side.tscn
+msgid "RPS_ROCK"
+msgstr "Búa"
+
+#: Scenes/board.tscn Scenes/side.tscn
+msgid "RPS_PAPER"
+msgstr "Bao"
+
+#: Scenes/board.tscn Scenes/side.tscn
+msgid "RPS_SCISSORS"
+msgstr "Kéo"
+
+#: Scenes/board.tscn Scripts/side.gd Scripts/Multiplayer.gd
+msgid "RPS_WAIT"
+msgstr "Đang chờ đối phương..."
+
+#: Scenes/board.tscn
+msgid "DECK_CREATE"
+msgstr "Tạo/Chỉnh Bộ bài"
+
+#: Scenes/board.tscn
+msgid "LOBBY_CREATE"
+msgstr "Tạo Sảnh chờ"
+
+#: Scenes/board.tscn
+msgid "DEBUG"
+msgstr "Làm lại Nhanh"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "PLAYERS_ONLINE"
+msgstr "{amount} người chơi online"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_JOIN"
+msgstr "Tham gia Sảnh chờ"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_SPECTATE"
+msgstr "Theo dõi Trận đấu"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_PRIVATE"
+msgstr "Riêng tư"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_ALLOWSPECTATORS"
+msgstr "Cho phép Theo dõi"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST"
+msgstr "Danh sách bài cấm"
+
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_NONE"
+msgstr "Không có Danh sách bài cấm"
+
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT"
+msgstr "Hiện tại"
+
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_UNRELEASED"
+msgstr "Hiện tại + Chưa ra mắt"
+
+#: Scenes/board.tscn
+msgid "LOBBY_BACK"
+msgstr "Quay lại"
+
+#: Scenes/board.tscn
+msgid "EXIT"
+msgstr "Thoát Trò chơi"
+
+#: Scenes/board.tscn
+msgid "OPTION_UNREVEALED"
+msgstr "Cho phép Bài Chưa ra mắt"
+
+#: Scenes/board.tscn
+msgid "OPTION_PROXY"
+msgstr "Cho phép Bài Thay thế"
+
+#: Scenes/board.tscn
+msgid "COSMETICS"
+msgstr "Phụ kiện"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_CANCEL"
+msgstr "Đóng"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM"
+msgstr "Nạp Thảm bài từ file"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D"
+msgstr "Nạp Xúc sắc từ file"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM_DEFAULT"
+msgstr "Chuyển về Thảm bài Mặc định"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D_DEFAULT"
+msgstr "Chuyển về Xúc xắc Mặc định"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_LOBBYCODE"
+msgstr "Nhập Mã Sảnh chờ"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SEARCHING"
+msgstr "Đang tìm..."
+
+#: Scenes/board.tscn
+msgid "LOBBY_REFRESH"
+msgstr "Làm mới"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_GAMECODE"
+msgstr "Nhập Mã Ván đấu"
+
+#: Scenes/board.tscn
+msgid "LOBBY_HOST"
+msgstr "Chủ"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_NONE_CHOSEN"
+msgstr "Không có ai"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_READY"
+msgstr "Sẵn sàng"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "DECK_SELECT"
+msgstr "Chọn Bộ bài"
+
+#: Scenes/board.tscn
+msgid "LOBBY_CHOSEN"
+msgstr "Đã chọn"
+
+#: Scenes/board.tscn
+msgid "LOBBY_STARTGAME"
+msgstr "Bắt đầu Ván đấu"
+
+#: Scenes/board.tscn Scenes/side.tscn
+msgid "OK"
+msgstr "OK"
+
+#: Scenes/board.tscn
+msgid "INFO"
+msgstr "Thông tin"
+
+#: Scenes/board.tscn
+msgid "INFO_DLOC"
+msgstr "Vị trí Bộ bài"
+
+#: Scenes/board.tscn
+msgid "INFO_CANCEL"
+msgstr "Đóng"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_GAMESTART_SPECTATE"
+msgstr "Ván đấu đã bắt đầu. Theo dõi không?"
+
+#: Scenes/board.tscn Scenes/side.tscn Scenes/deck_creation.tscn
+msgid "YES"
+msgstr "Có"
+
+#: Scenes/board.tscn Scenes/side.tscn Scenes/deck_creation.tscn
+msgid "NO"
+msgstr "Không"
+
+#: Scenes/board.tscn Scenes/deck_creation.tscn
+msgid "MENU"
+msgstr "Màn hình Chính"
+
+#: Scenes/board.tscn
+msgid "MENU_PROMPT"
+msgstr "Chắc chắn muốn trở về Màn hình Chính chứ?"
+
+#: Scenes/deck_list.tscn
+msgid "DECK_LOAD"
+msgstr "Nạp bộ bài từ File"
+
+#: Scenes/deck_list.tscn
+msgid "DECK_SELECT_CANCEL"
+msgstr "Huỷ"
+
+#: Scenes/sleeve_select.tscn
+msgid "SLEEVE_LOAD"
+msgstr "Nạp từ file"
+
+#: Scenes/sleeve_select.tscn
+msgid "SLEEVE_DEFAULT"
+msgstr "Về Mặc định"
+
+#: Scenes/side.tscn
+msgid "PROMPT_SUBMIT"
+msgstr "Xác nhận"
+
+#: Scenes/side.tscn
+msgid "PROMPT_CANCEL"
+msgstr "Huỷ"
+
+#: Scenes/side.tscn
+msgid "CHOICE_FIRST"
+msgstr "Đi trước"
+
+#: Scenes/side.tscn
+msgid "CHOICE_SECOND"
+msgstr "Đi sau"
+
+#: Scenes/side.tscn
+msgid "END_TURN"
+msgstr "Kết thúc Lượt"
+
+#: Scenes/side.tscn
+msgid "START_READY"
+msgstr "Sẵn sàng"
+
+#: Scenes/side.tscn
+msgid "RPS_SELECT"
+msgstr "Hãy chọn một lựa chọn."
+
+#: Scenes/side.tscn
+msgid "OPPONENT"
+msgstr "Đối phương"
+
+#: Scenes/side.tscn
+msgid "MULLIGAN_TEXT"
+msgstr "Đang xem lá bài đổi của đối phương"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_OSHI"
+msgstr "Oshi"
+
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "NAME"
+msgstr "Tên"
+
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "COLOR"
+msgstr "Màu sắc"
+
+#: Scenes/deck_creation.tscn
+msgid "FILTER_CLEAR"
+msgstr "Xoá Bộ lọc"
+
+#: Scenes/deck_creation.tscn
+msgid "SEARCH"
+msgstr "Tìm kiếm"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_HOLOMEM"
+msgstr "Holomem"
+
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "LEVEL"
+msgstr "Cấp độ"
+
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "LEVEL_ANY"
+msgstr "Cấp độ Bất kỳ"
+
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "LEVEL_DEBUT"
+msgstr "Debut"
+
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "LEVEL_1"
+msgstr "Thứ 1"
+
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "LEVEL_2"
+msgstr "Thứ 2"
+
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "LEVEL_SPOT"
+msgstr "SPOT"
+
+#: Scenes/deck_creation.tscn
+msgid "TAG_PLURAL"
+msgstr "Các tag"
+
+#: Scenes/deck_creation.tscn
+msgid "BUZZ"
+msgstr "Buzz"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_SUPPORT"
+msgstr "Hỗ trợ"
+
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "SUPPORT_TYPE"
+msgstr "Loại"
+
+#: Scenes/deck_creation.tscn
+msgid "SUPPORT_LIMITED"
+msgstr "Giới hạn"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_CHEER"
+msgstr "Cổ vũ"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_DECK"
+msgstr "Bộ bài"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_ANALYTICS"
+msgstr "Phân tích"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_SLEEVES"
+msgstr "Bọc bài"
+
+#: Scenes/deck_creation.tscn
+msgid "MAIN_DECK"
+msgstr "Bộ bài Chính"
+
+#: Scenes/deck_creation.tscn
+msgid "CHEER"
+msgstr "Cổ vũ"
+
+#: Scenes/deck_creation.tscn
+msgid "OSHI"
+msgstr "Oshi"
+
+#: Scenes/deck_creation.tscn
+msgid "LOAD"
+msgstr "Nạp"
+
+#: Scenes/deck_creation.tscn
+msgid "DECK_SAVE"
+msgstr "Lưu"
+
+#: Scenes/deck_creation.tscn
+msgid "DEFAULT_DECK_NAME"
+msgstr "Bộ bài Tuỳ chỉnh"
+
+#: Scenes/deck_creation.tscn
+msgid "DECK_CLEAR"
+msgstr "Dọn bộ bài"
+
+#: Scenes/deck_creation.tscn
+msgid "DEFAULT_DECK_FILE"
+msgstr "bo_bai_tuy_chinh"
+
+#: Scenes/deck_creation.tscn
+msgid "DECK_DOWNLOAD"
+msgstr "Tải về"
+
+#: Scenes/deck_creation.tscn
+msgid "DECK_SAVE_CANCEL"
+msgstr "Huỷ"
+
+#: Scripts/RemapButton.gd
+msgid "REMAP_WAIT"
+msgstr "... Đang chờ ..."
+
+#: Scripts/deck_creation.gd
+msgid "NAME_ANY"
+msgstr "Tên Bất kỳ"
+
+#: Scripts/deck_creation.gd
+msgid "COLOR_ANY"
+msgstr "Màu Bất kỳ"
+
+#: Scripts/deck_creation.gd
+msgid "SUPPORT_TYPE_ANY"
+msgstr "Loại Bất kỳ"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NOOSHI"
+msgstr "Chưa có oshi được chọn."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_FAKEOSHI"
+msgstr "{cardNum} không phải là oshi."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_BANNED"
+msgstr "{cardNum} đã bị cấm"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_UNDERDECK"
+msgstr "Bộ bài chính có quá ít thẻ bài."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_OVERDECK"
+msgstr "Bộ bài chính có quá nhiều thẻ bài."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_UNDERCHEER"
+msgstr "Bộ bài Cổ vũ có quá ít thẻ bài."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_OVERCHEER"
+msgstr "Bộ bài Cổ vũ có quá nhiều thẻ bài."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NEGATIVEAMOUNT"
+msgstr "Có một số lượng âm của {cardNum}"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_FAKEMAIN"
+msgstr "{cardNum} không nằm trong bộ bài chính"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NODEBUTS"
+msgstr "Chưa chọn debut nào."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_FAKECHEER"
+msgstr "{cardNum} không phải là bài cổ vũ."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_OVERAMOUNT"
+msgstr "Có quá nhiều bản sao của {cardNum}"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_RESTRICTED"
+msgstr "{cardNum} chỉ được phép dùng ít bản hơn số bạn đã chọn"
+
+#: Scripts/deck_creation.gd
+msgid "DECK_OVERWRITE"
+msgstr "Ghi đè {filename}"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NOALTART"
+msgstr "{cardNum} không có phiên bản hình minh họa thay thế đó"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_FAKECARD"
+msgstr "{cardNum} không phải là thẻ hợp lệ. Ít nhất thì nó không có trong cơ sở dữ liệu."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_OSHIBADFORMAT"
+msgstr "Định dạng của oshi không đúng. Bạn có chắc đây là file bộ bài của holodelta không?"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_DECKBADFORMAT"
+msgstr "Định dạng của bộ bài không đúng. Bạn có chắc đây là file bộ bài của holodelta không?"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NODECK"
+msgstr "Không có bộ bài chính"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_CHEERBADFORMAT"
+msgstr "Định dạng của bộ bài cổ vũ không đúng. Bạn có chắc đây là file bộ bài của holodelta không?"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NOCHEER"
+msgstr "Không có bộ bài cổ vũ"
+
+#: Scripts/side.gd
+msgid "DECK"
+msgstr "Bộ bài"
+
+#: Scripts/side.gd
+msgid "CHEERDECK"
+msgstr "Bộ bài cổ vũ"
+
+#: Scripts/side.gd
+msgid "ARCHIVE"
+msgstr "Lưu trữ"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER"
+msgstr "Sức mạnh Holo"
+
+#: Scripts/side.gd
+msgid "RPS_TIED"
+msgstr "Hoà. Hãy chọn lại."
+
+#: Scripts/side.gd
+msgid "MULLIGAN_QUESTION"
+msgstr "Đổi lại bài?"
+
+#: Scripts/side.gd
+msgid "MULLIGAN_FORCED"
+msgstr "Không có debut được tìm thấy. Bạn phải đổi lại bài."
+
+#: Scripts/side.gd Scripts/Multiplayer.gd
+msgid "LOSS"
+msgstr "Bạn đã Thua!"
+
+#: Scripts/side.gd
+msgid "MULLIGAN_WAIT"
+msgstr "Đang chờ Đối phương..."
+
+#: Scripts/side.gd
+msgid "READY_WAIT"
+msgstr "Đang chờ"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_LOOK_ATTACHED"
+msgstr "Xem bài chồng"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_LOOK_PAST"
+msgstr "Xem bloom đã xảy ra"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_PLAY_CENTERHIDDEN"
+msgstr "Đánh (Đã ẩn) ra giữa"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_PLAY_BACKHIDDEN"
+msgstr "Đánh (Đã ẩn) về sau"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_PLAY"
+msgstr "Đánh bài"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_BLOOM"
+msgstr "Bloom"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_BLOOM_SKIP"
+msgstr "Bỏ qua Bloom"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_BLOOM_FAST"
+msgstr "Bloom Tức thì"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_UNREST"
+msgstr "Xoay ngang bài"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REST"
+msgstr "Xoay dọc bài"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_CENTER"
+msgstr "Di chuyển ra giữa"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_BACK"
+msgstr "Di chuyển về sau"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_COLLAB"
+msgstr "Collab"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_BATON"
+msgstr "Tiếp sức"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_DAMAGE"
+msgstr "Thêm sát thương"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_HEAL"
+msgstr "Hồi máu"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_EXTRAHP"
+msgstr "Thêm HP bổ sung"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
+msgstr "Bớt HP bổ sung"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_UNBLOOM"
+msgstr "Huỷ bloom"
+
+#: Scripts/side.gd
+msgid "CARD_SUPPORT_ATTACH"
+msgstr "Gán"
+
+#: Scripts/side.gd
+msgid "CARD_SUPPORT_PLAY"
+msgstr "Đánh bài"
+
+#: Scripts/side.gd
+msgid "CARD_SUPPORT_ARCHIVE"
+msgstr "Lưu trữ"
+
+#: Scripts/side.gd
+msgid "CARD_CHEER_LIFE_REVEAL"
+msgstr "Lật bài và gán"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_TOPDECK"
+msgstr "Đặt lên trên cùng bộ bài"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_BOTTOMDECK"
+msgstr "Đặt xuống dưới cùng bộ bài"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_ARCHIVE"
+msgstr "Lưu trữ"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_HOLOPOWER"
+msgstr "Sức mạnh Holo"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_REVEAL"
+msgstr "Lật bài"
+
+#: Scripts/side.gd
+msgid "CARD_STAGE_ARCHIVE"
+msgstr "Lưu trữ"
+
+#: Scripts/side.gd
+msgid "CARD_STAGE_HAND"
+msgstr "Thêm vào tay bài"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_COLLAB"
+msgstr "Di chuyển tới vùng collab"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_SWITCH"
+msgstr "Lật về phía sau"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_HAND"
+msgstr "Thêm vào tay bài"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_ATTACH"
+msgstr "Gán"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_TOPDECK"
+msgstr "Đặt lên trên cùng bộ bài"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_BOTTOMDECK"
+msgstr "Đặt xuống dưới cùng bộ bài"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_ARCHIVE"
+msgstr "Lưu trữ"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_HOLOPOWER"
+msgstr "Sức mạnh Holo"
+
+#: Scripts/side.gd
+msgid "DECK_DRAW"
+msgstr "Rút"
+
+#: Scripts/side.gd
+msgid "DECK_DRAWX"
+msgstr "Rút X lá"
+
+#: Scripts/side.gd
+msgid "DECK_ARCHIVE"
+msgstr "Phá"
+
+#: Scripts/side.gd
+msgid "DECK_ARCHIVEX"
+msgstr "Phá X"
+
+#: Scripts/side.gd
+msgid "DECK_HOLOPOWER"
+msgstr "Sức mạnh Holo"
+
+#: Scripts/side.gd
+msgid "DECK_REVEAL"
+msgstr "Lật ngửa lá bài trên cùng"
+
+#: Scripts/side.gd
+msgid "DECK_LOOKX"
+msgstr "Nhìn về X"
+
+#: Scripts/side.gd
+msgid "DECK_SEARCH"
+msgstr "Tìm kiếm"
+
+#: Scripts/side.gd
+msgid "DECK_SHUFFLE"
+msgstr "Tráo bài"
+
+#: Scripts/side.gd
+msgid "DECK_MULLIGAN"
+msgstr "Tráo tay bài vào bộ bài"
+
+#: Scripts/side.gd
+msgid "DECK_MULLIGAN_UNDO"
+msgstr "Huỷ tráo tay bài vào bộ bài"
+
+#: Scripts/side.gd
+msgid "DECK_RPS"
+msgstr "Chơi Kéo Búa Bao"
+
+#: Scripts/side.gd Scripts/Multiplayer.gd
+msgid "FORFEIT"
+msgstr "Đầu hàng"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_REVEAL"
+msgstr "Tiết lộ và gán bài"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_LOOKX"
+msgstr "Nhìn về X"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_SEARCH"
+msgstr "Tìm kiếm"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_SHUFFLE"
+msgstr "Tráo bài"
+
+#: Scripts/side.gd
+msgid "ARCHIVE_SEARCH"
+msgstr "Tìm kiếm"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_ARCHIVE"
+msgstr "Lưu trữ"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_ARCHIVEX"
+msgstr "Lưu trữ X"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_REVEAL"
+msgstr "Tiết lộ lá bài trên cùng"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_DECK"
+msgstr "Chuyển lên trên cùng bộ bài"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_SEARCH"
+msgstr "Tìm kiếm"
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_SHUFFLE"
+msgstr "Tráo bài"
+
+#: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_PLAY"
+msgstr "Đánh bài"
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_PLAY"
+msgstr "Đánh bài"
+
+#: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_BLOOM"
+msgstr "Bloom"
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_BLOOM"
+msgstr "Bloom"
+
+#: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_BLOOM_FAST"
+msgstr "Bloom Tức Thì"
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_BLOOM_FAST"
+msgstr "Bloom Tức Thì"
+
+#: Scripts/side.gd
+msgid "LIST_CHEERDECK_CHEER_ATTACH"
+msgstr "Gắn"
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_CHEER_ATTACH"
+msgstr "Gắn"
+
+#: Scripts/side.gd
+msgid "LIST_ATTACHED_CHEER_ATTACH"
+msgstr "Gắn lại"
+
+#: Scripts/side.gd
+msgid "LIST_CHEER_LIFE"
+msgstr "Chuyển sang Mạng"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_REVEAL"
+msgstr "Lật bài"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_HAND"
+msgstr "Thêm lên tay"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_TOPDECK"
+msgstr "Đặt lên trên cùng bộ bài"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_BOTTOMDECK"
+msgstr "Đặt xuống dưới cùng bộ bài"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_TOPCHEERDECK"
+msgstr "Đặt lên trên cùng bộ bài cổ vũ"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_BOTTOMCHEERDECK"
+msgstr "Đặt xuống dưới cùng bộ bài cổ vũ"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_ARCHIVE"
+msgstr "Lưu trữ"
+
+#: Scripts/side.gd
+msgid "LIST_CARD_HOLOPOWER"
+msgstr "Sức mạnh Holo"
+
+#: Scripts/side.gd
+msgid "PROMPT_DAMAGE"
+msgstr "Thêm X Sát Thương"
+
+#: Scripts/side.gd
+msgid "PROMPT_HEAL"
+msgstr "Hồi X"
+
+#: Scripts/side.gd
+msgid "PROMPT_EXTRAHP"
+msgstr "Thêm X HP"
+
+#: Scripts/side.gd
+msgid "PROMPT_REMOVEEXTRAHP"
+msgstr "Bớt X HP"
+
+#: Scripts/side.gd
+msgid "PROMPT_OSHICOST"
+msgstr "Lưu Trữ X Lá"
+
+#: Scripts/side.gd
+msgid "PROMPT_DRAW"
+msgstr "Rút X Lá"
+
+#: Scripts/side.gd
+msgid "PROMPT_DECK_ARCHIVE"
+msgstr "Phá X Lá"
+
+#: Scripts/side.gd
+msgid "PROMPT_LOOKATX"
+msgstr "Nhìn vào X:"
+
+#: Scripts/side.gd
+msgid "PROMPT_HOLOPOWER_ARCHIVE"
+msgstr "Lưu Trữ X Lá"
+
+#: Scripts/side.gd
+msgid "PROMPT_ART_DAMAGE"
+msgstr "Gây X Sát Thương"
+
+#: Scripts/side.gd
+msgid "TURN_SECOND"
+msgstr "Đối Thủ Đi Sau"
+
+#: Scripts/side.gd
+msgid "TURN_FIRST"
+msgstr "Đối Thủ Đi Trước"
+
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_CARDS"
+msgstr "Đang Chuẩn Bị Bài, Xin Vui Lòng Chờ..."
+
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CUSTOM"
+msgstr "Tuỳ chỉnh"
+
+#: Scripts/Multiplayer.gd
+msgid "GAME_VS"
+msgstr "{player1} vs {player2}"
+
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_WAITING"
+msgstr "Đang chờ"
+
+#: Scripts/Multiplayer.gd
+msgid "INGAME_RPS_WON"
+msgstr "Bạn đã thắng"
+
+#: Scripts/Multiplayer.gd
+msgid "INGAME_RPS_LOST"
+msgstr "Bạn đã thua"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU"
+msgstr "Bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "WIN"
+msgstr "Bạn thắng!"
+
+#: Scripts/Multiplayer.gd
+msgid "SPECTATE_WIN"
+msgstr "{person} thắng!"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MULLIGAN"
+msgstr "{person} đã rút lại bài"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAW"
+msgstr "{person} đã rút một lá"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAWX"
+msgstr "{person} đã rút {amount} lá"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILL"
+msgstr "{person} đã đặt một lá bài từ {from} tới {to} của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILLX"
+msgstr "{person} đã đặt {amount} lá bài từ {from} tới {to} của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_BLOOM"
+msgstr "{person} đã bloom ({fromZone}) {fromName} vào {toName} ({fromLevel} tới {toLevel})"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_ARCHIVE"
+msgstr "{person} đã lưu trữ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_HAND"
+msgstr "{person} đã lấy ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_CENTER"
+msgstr "{person} đã chuyển ({fromZone}) {fromName} tới hàng chính giữa"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_COLLAB"
+msgstr "{person} đã collab với ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_MOVECOLLAB"
+msgstr "{person} đã chuyển ({fromZone}) {fromName} tới vùng collab"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_UNBLOOM"
+msgstr "{person} đã huỷ bloom ({fromZone}) {fromName}, hoàn lại về {toName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_HAND"
+msgstr "{person} đã thêm {cardName} lên tay"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_TOPDECK"
+msgstr "{person} đã đặt {cardName} về trên cùng bộ bài của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_BOTTOMDECK"
+msgstr "{person} đã đặt {cardName} về dưới cùng bộ bài của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_ARCHIVE"
+msgstr "{person} đã lưu trữ {cardName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_HOLOPOWER"
+msgstr "{person} đã đặt {cardName} dưới dạng sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_OSHISKILL_SP"
+msgstr "{person} đã sử dụng Kỹ Năng Oshi SP \"{skillName}\""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_OSHISKILL"
+msgstr "{person} đã sử dụng Kỹ Năng Oshi \"{skillName}\""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_TOPDECK"
+msgstr "{person} đã đặt một lá về trên cùng bộ bài của họ từ trên tay"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_BOTTOMDECK"
+msgstr "{person} đã đặt một lá về dưới cùng bộ bài của họ từ trên tay"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_ARCHIVE"
+msgstr "{person} đã lưu trữ {cardName} từ tay bài"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_HOLOPOWER"
+msgstr "{person} đã đặt một lá bài dưới dạng sức mạnh Holo từ tay bài"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_REVEAL"
+msgstr "{person} đã tiết lộ {cardName} từ tay bài"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_SUPPORT_PLAY"
+msgstr "{person} đã đánh {cardName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_REVEAL"
+msgstr "{person} đã tiết lộ {cardName} từ {fromFuda} của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_REVEAL"
+msgstr "{person} đã tiết lộ {cardName} từ sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_MULLIGAN"
+msgstr "{person} đã tráo tay bài của họ vào bộ bài"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_UNDOMULLIGAN"
+msgstr "{person} đã lấy lại tay bài từ bộ bài của họ. Ối..."
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_SEARCH"
+msgstr "{person} bắt đầu lục bộ bài của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_SHUFFLE"
+msgstr "{person} đã tráo bộ bài của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_SEARCH"
+msgstr "{person} bắt đầu lục bộ bài cổ vũ của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_SHUFFLE"
+msgstr "{person} đã tráo bộ bài cổ vũ của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_SEARCH"
+msgstr "{person} đã bắt đầu kiếm sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_SHUFFLE"
+msgstr "{person} đã tráo sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_LIFE"
+msgstr "{person} đã them một lá vào mạng từ {fromFuda} của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_LIFE"
+msgstr "{person} đã thêm {cardName} vào mạng từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HAND"
+msgstr "{person} đã thêm {cardName} vào tay bài từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_HAND"
+msgstr "{person} đã them một lá vào tay bài từ {fromFuda} của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_HAND"
+msgstr "{person} đã thêm một lá bài lên tay từ sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_HAND"
+msgstr "{person} đã thêm {cardName} lên tay từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_TOPDECK"
+msgstr "{person} đã đặt {cardName} lên trên cùng bộ bài của họ từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_TOPDECK"
+msgstr "{person} đã đặt một lá lên trên cùng bộ bài"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_TOPDECK"
+msgstr "{person} đã đặt một lá lên trên cùng bộ bài từ {fromFuda} của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_TOPDECK"
+msgstr "{person} đã đặt một lá lên trên cùng bộ bài của họ từ sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_TOPDECK"
+msgstr "{person} đã đặt {cardName} lên trên cùng bộ bài của họ gồm ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_BOTTOMDECK"
+msgstr "{person} đã đặt {cardName} xuống dưới cùng của bộ bài từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_BOTTOMDECK"
+msgstr "{person} đã đặt một lá xuống dưới cùng bộ bài của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_BOTTOMDECK"
+msgstr "{person} đã đặt một lá xuống dưới cùng bộ bài từ {fromFuda} của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_BOTTOMDECK"
+msgstr "{person} đã đặt một lá xuống dưới cùng bộ bài của họ từ sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_BOTTOMDECK"
+msgstr "{person} đã đặt {cardName} xuống dưới cùng bộ bài từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_TOPCHEERDECK"
+msgstr "{person} đã đặt {cardName} lên trên cùng bộ bài của họ từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_TOPCHEERDECK"
+msgstr "{person} đã chuyển một lá bài lên trên cùng bộ bài"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_TOPCHEERDECK"
+msgstr "{person} đã đặt một lá lên trên cùng bộ bài cổ vũ từ {fromFuda} của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_TOPCHEERDECK"
+msgstr "{person} đã đặt {cardName} lên trên cùng bộ bài cổ vũ từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
+msgstr "{person} đã gửi {cardName} xuống dưới cùng bộ bài cổ vũ từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
+msgstr "{person} đã đặt một lá xuống dưới cùng của bộ bài cổ vũ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_BOTTOMCHEERDECK"
+msgstr "{person} đã đặt một lá xuống dưới cùng bộ bài cổ vũ từ {fromFuda} của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_BOTTOMCHEERDECK"
+msgstr "{person} đã gửi {cardName} xuống dưới cùng bộ bài cổ vũ từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_ARCHIVE"
+msgstr "{person} đã lưu trữ {cardName} từ {fromFuda} của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_ARCHIVE"
+msgstr "{person} đã lưu trữ {cardName} từ sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_ARCHIVE"
+msgstr "{person} đã lưu trữ {cardName} từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HOLOPOWER"
+msgstr "{person} đã đặt {cardName} dưới dạng Sức Mạnh Holo từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_HOLOPOWER"
+msgstr "{person} đã đặt một lá bài dưới dạng sức mạnh Holo từ {fromFuda} của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_HOLOPOWER"
+msgstr "{person} đã đặt {cardName} dưới dạng sức mạnh Holo từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARTS_DAMAGE"
+msgstr "{person} đã có ({fromZone}) {fromName} thi triển \"{artName}\", gây {damage} sát thương tới ({toZone}) {toName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_LOOKATX"
+msgstr "{person} đã bắt đầu nhìn vào {amount} lá trên cùng bộ bài của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_LOOKATX"
+msgstr "{person} đã bắt đầu nhìn vào {amount} lá trên cùng bộ bài cổ vũ của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CARD_BACK"
+msgstr "{person} đã chuyển ({fromZone}) {fromName} về hàng sau"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CARD_BATONPASS"
+msgstr "{person} đã tiếp sức, tráo ({fromZone}) {fromName} với ({toZone}) {toName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CARD_SWITCH"
+msgstr "{person} đã tráo ({fromZone}) {fromName} với ({toZone}) {toName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_SUPPORT_ATTACH"
+msgstr "{person} đã gắn {attachName} vào ({toZone}) {toName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEER_ATTACH"
+msgstr "{person} đã gắn {attachName} vào ({toZone}) {toName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOMEM_PLAY"
+msgstr "{person} đã đánh {cardName} xuống hàng sau"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_HOLOMEM_PLAY"
+msgstr "{person} đã đánh {cardName} về hàng sau từ bộ bài của họ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
+msgstr "{person} đã gắn {attachName} vào ({toZone}) {toName} từ bộ bài cổ vũ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
+msgstr "{person} đã đánh {cardName} về hàng sau từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_CHEER_ATTACH"
+msgstr "{person} đã gắn {attachName} vào ({toZone}) {toName} từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_CHEER_ATTACH"
+msgstr "{person} đã gắn {attachName} vào ({toZone}) {toName} từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ENDTURN"
+msgstr "{person} đã kết thúc lượt"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DIERESULT"
+msgstr "{person} đã xúc ra {amount}"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_RPS"
+msgstr "{person} đã thắng Kéo Búa Bao"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_MULLIGAN"
+msgstr "Bạn đã rút lại bài"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DRAW"
+msgstr "Bạn đã rút một lá bài"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DRAWX"
+msgstr "Bạn đã rút {amount} lá bài"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_MILL"
+msgstr "Bạn đã đặt một lá từ {from} đến {to} của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_MILLX"
+msgstr "Bạn đã đặt {amount} lá từ {from} đến {to} của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_BLOOM"
+msgstr "Bạn đã bloom ({fromZone}) {fromName} vào {toName} ({fromLevel} tới {toLevel})"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_ARCHIVE"
+msgstr "Bạn đã lưu trữ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_HAND"
+msgstr "Bạn đã chọn ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_CENTER"
+msgstr "Bạn đã chuyển ({fromZone}) {fromName} về hàng giữa"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_COLLAB"
+msgstr "Bạn đã collab với ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_MOVECOLLAB"
+msgstr "Bạn đã chuyển ({fromZone}) {fromName} tới vùng collab"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_UNBLOOM"
+msgstr "Bạn đã huỷ bloom ({fromZone}) {fromName}, quay về {toName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_HAND"
+msgstr "Bạn đã thêm {cardName} lên tay"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_TOPDECK"
+msgstr "Bạn đã đặt {cardName} về trên cùng bộ bài"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_BOTTOMDECK"
+msgstr "Bạn đã đặt {cardName} xuống dưới cùng bộ bài"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_ARCHIVE"
+msgstr "Bạn đã lưu trữ {cardName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
+msgstr "Bạn đã đặt {cardName} dưới dạng Sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_OSHISKILL_SP"
+msgstr "Bạn đã sử dung Kỹ Năng Oshi SP \"{skillName}\""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_OSHISKILL"
+msgstr "Bạn đã sử dung Kỹ Năng Oshi \"{skillName}\""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_TOPDECK"
+msgstr "Bạn đã đặt mội lá bài về trên cùng bộ bài từ tay"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_BOTTOMDECK"
+msgstr "Bạn đã đặt mội lá bài về dưới cùng bộ bài từ tay"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_ARCHIVE"
+msgstr "Bạn đã lưu trữ {cardName} từ tay bài"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_HOLOPOWER"
+msgstr "Bạn đã đặt một lá bài dưới dạng holopower từ tay"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_REVEAL"
+msgstr "Bạn đã tiết lộ {cardName} từ tay bài"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_SUPPORT_PLAY"
+msgstr "Bạn đã đánh {cardName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_REVEAL"
+msgstr "Bạn đã tiết lộ {cardName} với {fromFuda} của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_REVEAL"
+msgstr "Bạn đã tiết lộ {cardName} từ sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_MULLIGAN"
+msgstr "Bạn đã tráo tay bài của bạn vào bộ bài"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_UNDOMULLIGAN"
+msgstr "Bạn đã lỡ tay lấy lại tay bài từ bộ bài. Oops!"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_SEARCH"
+msgstr "Bạn đã bắt đầu lục bộ bài của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_SHUFFLE"
+msgstr "Bạn đã tráo bộ bài của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_SEARCH"
+msgstr "Bạn đã bắt đầu lục bộ bài cổ vũ của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_SHUFFLE"
+msgstr "Bạn đã tráo bộ bài cổ vũ của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_SEARCH"
+msgstr "Bạn đã bắt đầu lục sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_SHUFFLE"
+msgstr "Bạn đã tráo sức mạnh Holo của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_LIFE"
+msgstr "Bạn đã thêm một lá bài vào mạng từ {fromFuda} của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_LIFE"
+msgstr "Bạn đã thêm {cardName} vào mạng từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HAND"
+msgstr "Bạn đã thêm {cardName} lên tay từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_HAND"
+msgstr "Bạn đã thêm lá bài lên tay từ {fromFuda}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_HAND"
+msgstr "Bạn đã thêm lá bài lên tay từ sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_HAND"
+msgstr "Bạn đã thêm {cardName} lên tay từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_TOPDECK"
+msgstr "Bạn đã đặt {cardName} lên trên cùng bộ bài của bạn từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_TOPDECK"
+msgstr "Bạn đã đặt một lá lên trên cùng bộ bài của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_TOPDECK"
+msgstr "Bạn đã đặt một lá lên trên cùng bộ bài từ {fromFuda} của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_TOPDECK"
+msgstr "Bạn đã đặt một lá lên trên cùng bộ bài từ sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_TOPDECK"
+msgstr "Bạn đã đặt {cardName} lên trên cùng bộ bài của bạn từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_BOTTOMDECK"
+msgstr "Bạn đã đặt {cardName} xuống dưới cùng bộ bài của bạn từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_BOTTOMDECK"
+msgstr "Bạn đã đặt một lá xuống dưới cùng bộ bài của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_BOTTOMDECK"
+msgstr "Bạn đã đặt một lá bài xuống dưới cùng bộ bài của bạn từ {fromFuda} của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_BOTTOMDECK"
+msgstr "Bạn đã đặt một lá bài xuống dưới cùng bộ bài của bạn từ sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_BOTTOMDECK"
+msgstr "Bạn đã đặt {cardName} xuống dưới cùng bộ bài của bạn từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_TOPCHEERDECK"
+msgstr "Bạn đã đặt {cardName} lên trên cùng bộ bài cổ vũ của bạn từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_TOPCHEERDECK"
+msgstr "Bạn đã di chuyển một lá bài lên trên cùng bộ bài cổ vũ của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_TOPCHEERDECK"
+msgstr "Bạn đã đặt một lá bài lên trên cùng bộ bài cổ vũ từ {fromFuda} của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_TOPCHEERDECK"
+msgstr "Bạn đã đặt {cardName} lên trên cùng bộ bài cổ vũ của bạn từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
+msgstr "Bạn đã đặt {cardName} xuống dưới cùng bộ bài cổ vũ của bạn từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
+msgstr "Bạn đã đặt một lá bài xuống dưới cung bộ bài cổ vũ của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_BOTTOMCHEERDECK"
+msgstr "Bạn đã đặt một lá bài xuống dưới cung bộ bài cổ vũ của bạn từ {fromFuda} của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_BOTTOMCHEERDECK"
+msgstr "Bạn đã đặt {cardName} xuống dưới cung bộ bài cổ vũ của bạn từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_ARCHIVE"
+msgstr "Bạn đã lưu trữ {cardName} từ {fromFuda} của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_ARCHIVE"
+msgstr "Bạn đã lưu trữ {cardName} từ sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_ARCHIVE"
+msgstr "Bạn đã lưu trữ {cardName} từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HOLOPOWER"
+msgstr "Bạn đã đặt {cardName} dưới dạng Sức Mạnh Holo từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_HOLOPOWER"
+msgstr "Bạn đã đặt lá bài dưới dạng sức mạnh Holo từ {fromFuda} của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_HOLOPOWER"
+msgstr "Bạn đã đặt {cardName} dưới dạng Sức Mạnh Holo từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARTS_DAMAGE"
+msgstr "Bạn đã lấy ({fromZone}) {fromName} thi triển \"{artName}\", gây {damage} sát thương đến ({toZone}) {toName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_LOOKATX"
+msgstr "Bạn đã bắt đầu nhìn vào {amount} lá bài trên cùng bộ bài của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_LOOKATX"
+msgstr "Bạn đã bắt đầu nhìn vào {amount} lá bài trên cùng bộ bài cổ vũ của bạn"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CARD_BACK"
+msgstr "Bạn đã di chuyển ({fromZone}) {fromName} về hàng sau"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CARD_BATONPASS"
+msgstr "Bạn đã tiếp sức, hoán đổi ({fromZone}) {fromName} với ({toZone}) {toName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CARD_SWITCH"
+msgstr "Bạn đã đổi ({fromZone}) {fromName} với ({toZone}) {toName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_SUPPORT_ATTACH"
+msgstr "Bạn đã gán {attachName} vào ({toZone}) {toName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEER_ATTACH"
+msgstr "Bạn đã gán {attachName} vào ({toZone}) {toName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOMEM_PLAY"
+msgstr "Bạn đã đánh {cardName} ra hàng sau"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_HOLOMEM_PLAY"
+msgstr "Bạn đã đánh {cardName} về hàng sau từ bộ bài"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_CHEER_ATTACH"
+msgstr "Bạn đã gắn {attachName} vào ({toZone}) {toName} từ bộ bài cổ vũ"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY"
+msgstr "Bạn đã đánh {cardName} từ kho lưu trữ trở lại"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_CHEER_ATTACH"
+msgstr "Bạn đã gắn {attachName} vào ({toZone}) {toName} từ kho lưu trữ"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_CHEER_ATTACH"
+msgstr "Bạn đã gắn {attachName} vào ({toZone}) {toName} từ ({fromZone}) {fromName}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ENDTURN"
+msgstr "Bạn đã kết thúc lượt"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DIERESULT"
+msgstr "Bạn đã xúc ra {amount}"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_RPS"
+msgstr "Bạn đã thắng Kéo Búa Bao"
+
+#: Scripts/Multiplayer.gd
+msgid "WINCONSENT_FORFEIT"
+msgstr "Bạn thực sự muốn đầu hang chứ?"
+
+#: Scripts/Multiplayer.gd
+msgid "WINCONSENT_DECKOUT"
+msgstr ""
+"Bạn đã bắt đầu lượt với bộ bài trống.\n"
+"Bạn chấp nhận thua cuộc vì hết bài chứ?"
+
+#: Scripts/Multiplayer.gd
+msgid "WINCONSENT_LIFE"
+msgstr ""
+"Bạn không còn bài nào sống sót.\n"
+"Bạn chấp nhận thua cuộc vì hết mạng chứ?"
+
+#: Scripts/Multiplayer.gd
+msgid "WINCONSENT_EMPTYSTAGE"
+msgstr ""
+"Bạn không có holomem nào trên sân khấu.\n"
+"Bạn chấp nhận thua cuộc vì có sân khấu trống chứ?"
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_MULLIGAN"
+msgstr "{person} đã rút lại bài đến mức còn 0 lá"
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_DECKOUT"
+msgstr "{person} đã rút bài từ bộ bài trống"
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_LIFE"
+msgstr "{person} đã hết mạng"
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_EMPTYSTAGE"
+msgstr "{person} đang có sân khấu trống"
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_FORFEIT"
+msgstr "{person} đã đầu hàng"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_MULLIGAN"
+msgstr "Bạn đã rút lại bài đến mức còn 0 lá"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_DECKOUT"
+msgstr "Bạn đã bốc từ bộ bài trống"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_LIFE"
+msgstr "Bạn đã hết sạch mạng"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_EMPTYSTAGE"
+msgstr "Bạn đang có sân khấu trống"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_FORFEIT"
+msgstr "Bạn đã đầu hàng"
+
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_PUBLIC"
+msgstr "Công khai"
+
+#: Scripts/card.gd
+msgid "NOBODY"
+msgstr "Không có ai?"
+
+#: Scripts/card.gd
+msgid "NAMESEP"
+msgstr "/"
+
+#: Scripts/card.gd
+msgid "COLORLESS"
+msgstr "Vô sắc"
+
+#: Scripts/card.gd
+msgid "COLORSEP"
+msgstr "/"
+
+#: Scripts/card.gd
+msgid "NAME_BUZZ"
+msgstr "buzz!"
+
+#: Scripts/card.gd
+msgid "INFO_OSHI"
+msgstr ""
+"{colorText} Oshi Holomem\n"
+"Mạng: {life}{tagsText}"
+
+#: Scripts/card.gd
+msgid "INFO_OSHI_SPSKILL"
+msgstr "Kỹ Năng Oshi SP Sức Mạnh Holo - {costText}   \"{nameText}\""
+
+#: Scripts/card.gd
+msgid "INFO_OSHI_SKILL"
+msgstr "Kỹ Năng Oshi Sức Mạnh Holo - {costText}   \"{nameText}\""
+
+#: Scripts/card.gd
+msgid "INFO_SPOT"
+msgstr "SPOT"
+
+#: Scripts/card.gd
+msgid "INFO_DEBUT"
+msgstr "Debut"
+
+#: Scripts/card.gd
+msgid "INFO_1ST"
+msgstr "Bloom Thứ 1"
+
+#: Scripts/card.gd
+msgid "INFO_2ND"
+msgstr "Bloom Thứ 2"
+
+#: Scripts/card.gd
+msgid "INFO_BUZZ"
+msgstr "Buzz"
+
+#: Scripts/card.gd
+msgid "INFO_HOLOMEM_1"
+msgstr ""
+"{colorText} {levelText} {buzzText}Holomem\n"
+"HP: {hpText}\n"
+"Nhãn: {tagsText}"
+
+#: Scripts/card.gd
+msgid "INFO_NOBATONPASSCOST"
+msgstr "Miễn phí"
+
+#: Scripts/card.gd
+msgid "INFO_HOLOMEM_2"
+msgstr "Tiếp sức: {costText}"
+
+#: Scripts/card.gd
+msgid "INFO_SUPPORT"
+msgstr "{supportText} ({typeText}){tagsText}"
+
+#: Scripts/card.gd
+msgid "INFO_LIMITED"
+msgstr "GIỚI HẠN: Chỉ được sử dung 1 lá trong lượt chơi."
