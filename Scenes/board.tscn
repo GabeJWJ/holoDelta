@@ -827,7 +827,7 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 13
 text = "English"
 flat = false
-item_count = 5
+item_count = 6
 popup/item_0/text = "English"
 popup/item_1/text = "日本語"
 popup/item_1/id = 1
@@ -837,6 +837,8 @@ popup/item_3/text = "Español"
 popup/item_3/id = 3
 popup/item_4/text = "Français"
 popup/item_4/id = 4
+popup/item_5/text = "Tiếng Việt"
+popup/item_5/id = 5
 
 [node name="PlaymatDiceCustom" type="Button" parent="CanvasLayer"]
 offset_left = 92.0
