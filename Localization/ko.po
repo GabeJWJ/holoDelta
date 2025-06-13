@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-05-30 14:58\n"
+"PO-Revision-Date: 2025-06-11 18:03\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -167,31 +167,31 @@ msgstr "프록시 허용"
 
 #: Scenes/board.tscn
 msgid "ACTION_DRAW"
-msgstr ""
+msgstr "드로우"
 
 #: Scenes/board.tscn
 msgid "ACTION_CHEER"
-msgstr ""
+msgstr "옐 스텝"
 
 #: Scenes/board.tscn
 msgid "ACTION_RESET"
-msgstr ""
+msgstr "리셋 스텝"
 
 #: Scenes/board.tscn
 msgid "ACTION_TABS"
-msgstr ""
+msgstr "탭 전환"
 
 #: Scenes/board.tscn
 msgid "ACTION_LOCK"
-msgstr ""
+msgstr "정보 패널 고정"
 
 #: Scenes/board.tscn
 msgid "ACTION_LSTEP"
-msgstr ""
+msgstr "마지막 스텝"
 
 #: Scenes/board.tscn
 msgid "ACTION_NSTEP"
-msgstr ""
+msgstr "다음 스텝"
 
 #: Scenes/board.tscn
 msgid "COSMETICS"
@@ -313,7 +313,7 @@ msgstr "취소"
 
 #: Scenes/deck_list.tscn
 msgid "DECK_DELETE_CONFIRM"
-msgstr ""
+msgstr "{deckName}을(를) 삭제하시겠습니까?"
 
 #: Scenes/sleeve_select.tscn
 msgid "SLEEVE_LOAD"
@@ -862,6 +862,10 @@ msgid "CHEERDECK_SHUFFLE"
 msgstr "셔플"
 
 #: Scripts/side.gd
+msgid "ARCHIVE_HAND_ALL"
+msgstr "패를 전부 아카이브"
+
+#: Scripts/side.gd
 msgid "ARCHIVE_SEARCH"
 msgstr "카드 찾기"
 
@@ -1352,6 +1356,10 @@ msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr "{person}님이 옐 덱에서 {attachName}을 {toName}({toZone})에게 붙였습니다"
 
 #: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HAND_ALL"
+msgstr "{person}님이 패를 전부 아카이브했습니다."
+
+#: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr "{person}님이 {cardName}을(를) 아카이브에서 백 포지션에 놓았습니다"
 
@@ -1680,6 +1688,10 @@ msgstr "당신은 덱에서 {cardName}을(를) 백포지션에 놨습니다"
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr "당신은 옐 덱에서 {attachName}을 {toName}({toZone})에게 붙였습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HAND_ALL"
+msgstr "당신은 패를 전부 아카이브했습니다."
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY"

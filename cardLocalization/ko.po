@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-06-08 17:51\n"
+"PO-Revision-Date: 2025-06-11 18:03\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "이 홀로멤이 다운됐을 때, 자신의 라이프 -2."
@@ -7142,5 +7142,23 @@ msgid "hBP04-105_NAME"
 msgstr ""
 
 msgid "hBP04-105_EFFECT"
+msgstr ""
+
+msgid "hY01-006_NAME"
+msgstr ""
+
+msgid "hY02-005_NAME"
+msgstr ""
+
+msgid "hY03-004_NAME"
+msgstr ""
+
+msgid "hY04-005_NAME"
+msgstr ""
+
+msgid "hY05-004_NAME"
+msgstr ""
+
+msgid "hY06-004_NAME"
 msgstr ""
 

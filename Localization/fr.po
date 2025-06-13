@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-06-03 16:18\n"
+"PO-Revision-Date: 2025-06-11 18:03\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -860,6 +860,10 @@ msgid "CHEERDECK_SHUFFLE"
 msgstr "Mélanger"
 
 #: Scripts/side.gd
+msgid "ARCHIVE_HAND_ALL"
+msgstr "Archiver votre main"
+
+#: Scripts/side.gd
 msgid "ARCHIVE_SEARCH"
 msgstr "Chercher"
 
@@ -1348,6 +1352,10 @@ msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr "{person} a attaché {attachName} à ({toZone}) {toName} depuis son deck de Cheer"
 
 #: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HAND_ALL"
+msgstr "{personne} a archivé toute sa main"
+
+#: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr "{person} a joué {cardName} dans ses Backstages depuis son archive"
 
@@ -1674,6 +1682,10 @@ msgstr "Vous avez joué {cardName} dans vos Backstages depuis son deck"
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr "Vous avez attaché {attachName} à ({toZone}) {toName} depuis votre deck de Cheer"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HAND_ALL"
+msgstr "Vous avez archivé toute votre main"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY"
