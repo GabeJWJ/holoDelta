@@ -12,6 +12,8 @@ extends Node2D
 
 #region Variables
 
+@export var deckPayload : Dictionary;
+
 const card = preload("res://Scenes/card.tscn")
 const collection = preload("res://Scenes/collection.tscn")
 const collection_type = preload("res://Scripts/collection.gd")
@@ -216,6 +218,13 @@ func _ready() -> void:
 	$CanvasLayer/InfoPanel.update_word_wrap()
 	update_analytics()
 	fix_font_size()
+	
+	# Update: 2025-06-13:
+	# New input bridge for web versions and inital deck
+	# is specified
+	if OS.has_feature("web") and deckPayload != null:
+		load_from_deck_info(deckPayload)
+		pass
 
 #region Filter And Sort
 

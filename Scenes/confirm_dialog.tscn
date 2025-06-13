@@ -18,6 +18,7 @@ offset_right = 427.0
 offset_bottom = 272.0
 
 [node name="DialogTitle" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 25.0
 offset_top = 17.0
 offset_right = 396.0
@@ -53,6 +54,7 @@ text = "YES"
 autowrap_mode = 3
 
 [node name="NoButton" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 287.0
 offset_top = 217.0
 offset_right = 336.0

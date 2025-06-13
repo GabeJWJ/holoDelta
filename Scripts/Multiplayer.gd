@@ -23,6 +23,9 @@ var spectatedSides = {}
 var inGame = false
 var rps = false
 
+# Deck payload - used for web version
+var webDeckPayload = null
+
 #Lobby stuff
 @onready var lobby_banlist = $CanvasLayer/LobbyCreateMenu/VBoxContainer/OptionButton
 @onready var lobby_private = $CanvasLayer/LobbyCreateMenu/VBoxContainer/CheckButton
@@ -143,22 +146,56 @@ func _ready():
 	#Automatic deck import
 	# => This will only run in HTML5 env and when query parameter: imported_deck
 	# exists
-	if OS.has_feature("web") or OS.get_name() == "Web":
+	if (OS.has_feature("web") or OS.get_name() == "Web") and not GameState.deck_processed:
 		# get the DOM window object -> cast as godot object
-		var window = JavaScriptBridge.get_interface("window");
+		var window = JavaScriptBridge.get_interface("window")
+		var console = JavaScriptBridge.get_interface("console")
 		# get the query strings
 		var query_string = window.location.search
-		
+		#console.log(query_string)
 		if (query_string):
+			# parse the query strings
 			var params = WebUtils.parse_query_string(query_string)
-			#print("Query parameters:", params)
-			
+			#console.log(params)
+			#if contains the imported deck => execute needed action
 			if (params.has("imported_deck")):
-				$CanvasLayer/ConfirmDialog.visible = true
-				$CanvasLayer/ConfirmDialog.dialogTitle = "DECK CODE DETECTED.\nCONTINUE TO DECK BUILDER?"
-				$CanvasLayer/ConfirmDialog.dialogContent = "DECK CODE INFO:\n" + params["imported_deck"]
-				#print("Deck:", params["imported_deck"])
+				console.log("Imported deck detected!");
+				console.log("DECK CODE: " + params["imported_deck"])
+				# Change how deck creation scene loads for web version
+				# Since a parameter have to be passed, the way to laod the
+				# scene has to be changed
+				var deck_creation_scene = load("res://Scenes/deck_creation.tscn")
+				var deck_creation_instance = deck_creation_scene.instantiate()
+				#console.log("Deck creation instance initialized")
+				# Convert from base64 string to JSON string, them objecy
+				var json_deck = Marshalls.base64_to_utf8(params["imported_deck"])
+				#console.log("DECODED: " +json_deck)
+				if json_deck != null and json_deck != "":
+					var parsed_json = JSON.parse_string(json_deck)
+					if parsed_json == null:
+						console.log("FAILED TO PARSE JSON. SKIPPED")
+						pass
+					else:
+						deck_creation_instance.deckPayload = parsed_json
+						# Set processed deck as true
+						GameState.deck_processed = true
+						#console.log("PAYLOAD RETRIEVE SUCCESS. ATTEMPT TO SWITCH SCENE")
+						# instead of add_child():
+						get_tree().root.call_deferred("add_child", deck_creation_instance)
+						# if you also need to free the old scene:
+						get_tree().current_scene.call_deferred("queue_free")
+						# Defer setting current_scene AFTER the new one is added
+						call_deferred("_set_current_scene", deck_creation_instance)
+				else:
+					console.log("FAILED TO GET DECODED BASE 64. SKIPPED")
+					pass
+				
+				#$CanvasLayer/ConfirmDialog.visible = true
+				#$CanvasLayer/ConfirmDialog.dialogTitle = "DECK CODE DETECTED.\nCONTINUE TO DECK BUILDER?"
+				#$CanvasLayer/ConfirmDialog.dialogContent = "DECK CODE INFO:\n" + params["imported_deck"]
 
+func _set_current_scene(new_scene):
+	get_tree().current_scene = new_scene
 #region Download DB
 
 func _setup_art_progress(current:int, max:int):
@@ -202,6 +239,7 @@ func _on_yes_pressed():
 	_restart()
 
 func _on_deck_creation_pressed():
+	
 	get_tree().change_scene_to_file("res://Scenes/deck_creation.tscn")
 
 
