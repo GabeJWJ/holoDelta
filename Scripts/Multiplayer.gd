@@ -139,6 +139,25 @@ func _ready():
 	$CanvasLayer/InfoButton/Info/VersionText.text += Settings.version
 	$CanvasLayer/InfoButton/Info/DeckLocationButton/DeckLocation.text += ProjectSettings.globalize_path("user://Decks")
 	fix_font_size()
+	
+	#Automatic deck import
+	# => This will only run in HTML5 env and when query parameter: imported_deck
+	# exists
+	if OS.has_feature("web") or OS.get_name() == "Web":
+		# get the DOM window object -> cast as godot object
+		var window = JavaScriptBridge.get_interface("window");
+		# get the query strings
+		var query_string = window.location.search
+		
+		if (query_string):
+			var params = WebUtils.parse_query_string(query_string)
+			#print("Query parameters:", params)
+			
+			if (params.has("imported_deck")):
+				$CanvasLayer/ConfirmDialog.visible = true
+				$CanvasLayer/ConfirmDialog.dialogTitle = "DECK CODE DETECTED.\nCONTINUE TO DECK BUILDER?"
+				$CanvasLayer/ConfirmDialog.dialogContent = "DECK CODE INFO:\n" + params["imported_deck"]
+				#print("Deck:", params["imported_deck"])
 
 #region Download DB
 

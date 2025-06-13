@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=26 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="15_ycoxv"]
 [ext_resource type="Texture2D" uid="uid://3f3xq8idq8m7" path="res://CloseError.png" id="18_b7won"]
 [ext_resource type="Script" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="18_n8kk3"]
+[ext_resource type="PackedScene" uid="uid://dyqgt6khk244r" path="res://Scenes/confirm_dialog.tscn" id="19_ogfn8"]
 [ext_resource type="AudioStream" uid="uid://dx0hyqv3whb28" path="res://ChikuTaku The Game VGM Menu Select Watson Amelia WUNDER RiKU ✨ チクタク オリジナル曲.mp3" id="19_vg3fm"]
 [ext_resource type="Script" path="res://addons/websocket/WebSocket.gd" id="20_v32ia"]
 
@@ -1581,6 +1582,13 @@ offset_bottom = 75.0
 texture_normal = ExtResource("18_b7won")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="ConfirmDialog" parent="CanvasLayer" instance=ExtResource("19_ogfn8")]
+visible = false
+offset_left = 485.0
+offset_top = 252.0
+offset_right = -452.0
+offset_bottom = -206.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-670, -400)
