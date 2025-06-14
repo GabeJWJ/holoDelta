@@ -62,3 +62,6 @@ offset_bottom = 236.0
 theme = ExtResource("1_yhfgx")
 text = "NO"
 autowrap_mode = 3
+
+[connection signal="pressed" from="Panel/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="Panel/NoButton" to="." method="_on_no_button_pressed"]

@@ -12,8 +12,6 @@ extends Node2D
 
 #region Variables
 
-@export var deckPayload : Dictionary;
-
 const card = preload("res://Scenes/card.tscn")
 const collection = preload("res://Scenes/collection.tscn")
 const collection_type = preload("res://Scripts/collection.gd")
@@ -222,8 +220,13 @@ func _ready() -> void:
 	# Update: 2025-06-13:
 	# New input bridge for web versions and inital deck
 	# is specified
-	if OS.has_feature("web") and deckPayload != null:
-		load_from_deck_info(deckPayload)
+	var deck_payload = GameState.deck_to_import
+	if OS.has_feature("web") and deck_payload != null:
+		load_from_deck_info(deck_payload)
+		# After load, finish the deck process
+		GameState.deck_processed = true
+		# And empty the paylaod
+		GameState.deck_to_import = null
 		pass
 
 #region Filter And Sort

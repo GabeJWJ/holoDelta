@@ -156,46 +156,54 @@ func _ready():
 		if (query_string):
 			# parse the query strings
 			var params = WebUtils.parse_query_string(query_string)
-			#console.log(params)
+			console.log(params)
 			#if contains the imported deck => execute needed action
 			if (params.has("imported_deck")):
 				console.log("Imported deck detected!");
 				console.log("DECK CODE: " + params["imported_deck"])
-				# Change how deck creation scene loads for web version
-				# Since a parameter have to be passed, the way to laod the
-				# scene has to be changed
-				var deck_creation_scene = load("res://Scenes/deck_creation.tscn")
-				var deck_creation_instance = deck_creation_scene.instantiate()
-				#console.log("Deck creation instance initialized")
-				# Convert from base64 string to JSON string, them objecy
-				var json_deck = Marshalls.base64_to_utf8(params["imported_deck"])
-				#console.log("DECODED: " +json_deck)
-				if json_deck != null and json_deck != "":
-					var parsed_json = JSON.parse_string(json_deck)
-					if parsed_json == null:
-						console.log("FAILED TO PARSE JSON. SKIPPED")
-						pass
-					else:
-						deck_creation_instance.deckPayload = parsed_json
-						# Set processed deck as true
-						GameState.deck_processed = true
-						#console.log("PAYLOAD RETRIEVE SUCCESS. ATTEMPT TO SWITCH SCENE")
-						# instead of add_child():
-						get_tree().root.call_deferred("add_child", deck_creation_instance)
-						# if you also need to free the old scene:
-						get_tree().current_scene.call_deferred("queue_free")
-						# Defer setting current_scene AFTER the new one is added
-						call_deferred("_set_current_scene", deck_creation_instance)
-				else:
-					console.log("FAILED TO GET DECODED BASE 64. SKIPPED")
-					pass
 				
-				#$CanvasLayer/ConfirmDialog.visible = true
-				#$CanvasLayer/ConfirmDialog.dialogTitle = "DECK CODE DETECTED.\nCONTINUE TO DECK BUILDER?"
-				#$CanvasLayer/ConfirmDialog.dialogContent = "DECK CODE INFO:\n" + params["imported_deck"]
-
-func _set_current_scene(new_scene):
-	get_tree().current_scene = new_scene
+				var converted_deck = _parse_deck_code(params["imported_deck"], OS.is_debug_build())
+				if converted_deck != null:
+					# Load the deck to game state
+					GameState.deck_to_import = converted_deck
+					$CanvasLayer/ConfirmDialog.set_yes_button_disabled(true)
+					$CanvasLayer/ConfirmDialog.visible = true
+					$CanvasLayer/ConfirmDialog.dialogTitle = "DECK CODE DETECTED.\nCONTINUE TO DECK BUILDER?"
+					$CanvasLayer/ConfirmDialog.dialogContent = """
+						The game has detected that you have imported a valid deck.\n
+						If you want to see it. Please click 'Yes' to proceed to the deck creator screen.
+					"""
+					$CanvasLayer/ConfirmDialog.confirmed.connect(_on_deck_import_confirmed)
+					$CanvasLayer/ConfirmDialog.cancelled.connect(_on_deck_import_cancelled)
+					
+func _on_deck_import_cancelled():
+	# Cancel the deck import process also
+	# means finishing the deck import process
+	GameState.deck_processed = true
+	# empty the deck
+	GameState.deck_to_import = null
+	
+func _on_deck_import_confirmed():
+	# Reuse code to switch to deck creation scene
+	_on_deck_creation_pressed()
+				
+# Variant: Whether Dictionary or null
+# Convert from base64 string to JSON string, then convert to dictionary
+func _parse_deck_code(deck_data: String, allow_log: bool=false) -> Variant:
+	var console = JavaScriptBridge.get_interface("console")
+	var json_deck = Marshalls.base64_to_utf8(deck_data)
+	if (allow_log): console.log("DECODED: " +json_deck)
+	if json_deck != null and json_deck != "":
+		var parsed_json = JSON.parse_string(json_deck)
+		if parsed_json == null:
+			if (allow_log): console.log("FAILED TO PARSE JSON. SKIPPED")
+			return null
+		else:
+			return parsed_json
+	else:
+		if (allow_log): console.log("FAILED TO GET DECODED BASE 64. SKIPPED")
+		return null
+	
 #region Download DB
 
 func _setup_art_progress(current:int, max:int):
@@ -239,7 +247,6 @@ func _on_yes_pressed():
 	_restart()
 
 func _on_deck_creation_pressed():
-	
 	get_tree().change_scene_to_file("res://Scenes/deck_creation.tscn")
 
 
@@ -449,6 +456,11 @@ func _on_websocket_connected(url):
 	$CanvasLayer/LobbyButtons/LobbyCreate.disabled = false
 	$CanvasLayer/LobbyButtons/LobbyJoin.disabled = false
 	$CanvasLayer/LobbyButtons/GameSpectate.disabled = false
+	
+	# NOTE: This section is for the dialog in main menu
+	# solely for the purpose of query param deck check
+	if OS.has_feature("web"):
+		$CanvasLayer/ConfirmDialog.set_yes_button_disabled(false)
 
 func _on_websocket_received(raw_data):
 	var needed_string = raw_data.get_string_from_ascii()
