@@ -21,6 +21,7 @@ config/windows_native_icon="res://icon.ico"
 Database="*res://Scripts/database.gd"
 Settings="*res://Scripts/settings.gd"
 Server="*res://Scripts/server.gd"
+GameState="*res://Scripts/game_state.gd"
 
 [display]
 
