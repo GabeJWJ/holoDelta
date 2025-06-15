@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyqgt6khk244r"]
+
+[ext_resource type="Script" path="res://Scripts/confirm_dialog.gd" id="1_ulpvw"]
+[ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="1_yhfgx"]
+
+[node name="ConfirmDialog" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ulpvw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 427.0
+offset_bottom = 272.0
+
+[node name="DialogTitle" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 17.0
+offset_right = 396.0
+offset_bottom = 54.0
+theme = ExtResource("1_yhfgx")
+theme_type_variation = &"TooltipLabel"
+theme_override_font_sizes/font_size = 15
+text = "TITLE"
+horizontal_alignment = 1
+
+[node name="DialogContent" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 73.0
+offset_right = 400.0
+offset_bottom = 195.0
+theme = ExtResource("1_yhfgx")
+theme_type_variation = &"TooltipLabel"
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "CONTENT"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="YesButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 221.0
+offset_right = 153.0
+offset_bottom = 240.0
+theme = ExtResource("1_yhfgx")
+text = "YES"
+autowrap_mode = 3
+
+[node name="NoButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 217.0
+offset_right = 336.0
+offset_bottom = 236.0
+theme = ExtResource("1_yhfgx")
+text = "NO"
+autowrap_mode = 3
+
+[connection signal="pressed" from="Panel/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="Panel/NoButton" to="." method="_on_no_button_pressed"]

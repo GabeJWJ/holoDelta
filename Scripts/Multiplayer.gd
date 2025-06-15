@@ -139,7 +139,63 @@ func _ready():
 	$CanvasLayer/InfoButton/Info/VersionText.text += Settings.version
 	$CanvasLayer/InfoButton/Info/DeckLocationButton/DeckLocation.text += ProjectSettings.globalize_path("user://Decks")
 	fix_font_size()
-
+	
+	#Automatic deck import
+	# => This will only run in HTML5 env and when query parameter: imported_deck
+	# exists
+	if (OS.has_feature("web") or OS.get_name() == "Web") and not GameState.deck_processed:
+		# get the DOM window object -> cast as godot object
+		var window = JavaScriptBridge.get_interface("window")
+		var console = JavaScriptBridge.get_interface("console")
+		# get the query strings
+		var query_string = window.location.search
+		if (query_string):
+			# parse the query strings
+			var params = WebUtils.parse_query_string(query_string)
+			#if contains the imported deck => execute needed action
+			if (params.has("imported_deck")):
+				var converted_deck = _parse_deck_code(params["imported_deck"], OS.is_debug_build())
+				if converted_deck != null:
+					# Load the deck to game state
+					GameState.deck_to_import = converted_deck
+					$CanvasLayer/ConfirmDialog.set_yes_button_disabled(true)
+					$CanvasLayer/ConfirmDialog.visible = true
+					$CanvasLayer/ConfirmDialog.dialogTitle = "DECK CODE DETECTED.\nCONTINUE TO DECK BUILDER?"
+					$CanvasLayer/ConfirmDialog.dialogContent = """
+						The game has detected that you have imported a valid deck.\n
+						If you want to see it. Please click 'Yes' to proceed to the deck creator screen.
+					"""
+					$CanvasLayer/ConfirmDialog.confirmed.connect(_on_deck_import_confirmed)
+					$CanvasLayer/ConfirmDialog.cancelled.connect(_on_deck_import_cancelled)
+					
+func _on_deck_import_cancelled():
+	# Cancel the deck import process also
+	# means finishing the deck import process
+	GameState.deck_processed = true
+	# empty the deck
+	GameState.deck_to_import = null
+	
+func _on_deck_import_confirmed():
+	# Reuse code to switch to deck creation scene
+	_on_deck_creation_pressed()
+				
+# Variant: Whether Dictionary or null
+# Convert from base64 string to JSON string, then convert to dictionary
+func _parse_deck_code(deck_data: String, allow_log: bool=false) -> Variant:
+	var console = JavaScriptBridge.get_interface("console")
+	var json_deck = Marshalls.base64_to_utf8(deck_data)
+	if (allow_log): console.log("DECODED: " +json_deck)
+	if json_deck != null and json_deck != "":
+		var parsed_json = JSON.parse_string(json_deck)
+		if parsed_json == null:
+			if (allow_log): console.log("FAILED TO PARSE JSON. SKIPPED")
+			return null
+		else:
+			return parsed_json
+	else:
+		if (allow_log): console.log("FAILED TO GET DECODED BASE 64. SKIPPED")
+		return null
+	
 #region Download DB
 
 func _setup_art_progress(current:int, max:int):
@@ -392,6 +448,11 @@ func _on_websocket_connected(url):
 	$CanvasLayer/LobbyButtons/LobbyCreate.disabled = false
 	$CanvasLayer/LobbyButtons/LobbyJoin.disabled = false
 	$CanvasLayer/LobbyButtons/GameSpectate.disabled = false
+	
+	# NOTE: This section is for the dialog in main menu
+	# solely for the purpose of query param deck check
+	if OS.has_feature("web"):
+		$CanvasLayer/ConfirmDialog.set_yes_button_disabled(false)
 
 func _on_websocket_received(raw_data):
 	var needed_string = raw_data.get_string_from_ascii()

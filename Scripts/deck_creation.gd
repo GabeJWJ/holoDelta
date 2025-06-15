@@ -216,6 +216,18 @@ func _ready() -> void:
 	$CanvasLayer/InfoPanel.update_word_wrap()
 	update_analytics()
 	fix_font_size()
+	
+	# Update: 2025-06-13:
+	# New input bridge for web versions and inital deck
+	# is specified
+	var deck_payload = GameState.deck_to_import
+	if OS.has_feature("web") and deck_payload != null:
+		load_from_deck_info(deck_payload)
+		# After load, finish the deck process
+		GameState.deck_processed = true
+		# And empty the paylaod
+		GameState.deck_to_import = null
+		pass
 
 #region Filter And Sort
 
