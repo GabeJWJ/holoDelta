@@ -1334,11 +1334,11 @@ func _on_archive_clicked():
 	if preliminary_phase or currentPrompt != -1:
 		return
 	
-	if is_your_side and can_do_things and hand.size() > 0:
-		popup.add_item(tr("ARCHIVE_HAND_ALL"),410)
-		popup.add_separator()
-	
 	popup.add_item(tr("ARCHIVE_SEARCH"),498)
+	
+	if is_your_side and can_do_things and hand.size() > 0:
+		popup.add_separator()
+		popup.add_item(tr("ARCHIVE_HAND_ALL"),410)
 		
 	show_popup()
 

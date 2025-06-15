@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: holodelta\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-06 22:22-0400\n"
+"PO-Revision-Date: 2025-06-15 17:25-0400\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Language: en_US\n"
@@ -978,6 +978,18 @@ msgstr "Opponent Going First"
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_CARDS"
 msgstr "Setting Up Cards, Please Wait..."
+
+#: Scripts/Multiplayer.gd
+msgid "DECK_AUTOLOAD_CONFIRM"
+msgstr ""
+"DECK CODE DETECTED.\n"
+"CONTINUE TO DECK BUILDER?"
+
+#: Scripts/Multiplayer.gd
+msgid "DECK_AUTOLOAD_CONFIRM_INFO"
+msgstr ""
+"The game has detected that you have imported a valid deck.\n"
+"If you want to see it, click 'Yes' to proceed to the deck creator screen."
 
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"

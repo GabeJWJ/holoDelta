@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi441u0rkm7ft"
-path="res://.godot/imported/1.webp-ef00d0800618ed8907d511a4a542b986.ctex"
+uid="uid://chrmr31kjkhuf"
+path="res://.godot/imported/0.webp-b7a89ad7cd1c81c71fc8c10647cf711a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cardFronts/hBP04/ja/056/1.webp"
-dest_files=["res://.godot/imported/1.webp-ef00d0800618ed8907d511a4a542b986.ctex"]
+source_file="res://cardFronts/hBP04/en/068/0.webp"
+dest_files=["res://.godot/imported/0.webp-b7a89ad7cd1c81c71fc8c10647cf711a.ctex"]
 
 [params]
 

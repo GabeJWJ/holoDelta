@@ -1,506 +1,508 @@
 msgid ""
 msgstr ""
-
-"Project-Id-Version: holoDelta - future\n" "POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: vi\n"
-"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: holodelta\n"
+"X-Crowdin-Project-ID: 724315\n"
+"X-Crowdin-Language: vi\n"
+"X-Crowdin-File: /cards/template.pot\n"
+"X-Crowdin-File-ID: 14\n"
+"Project-Id-Version: holodelta\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.5\n"
+"Language-Team: Vietnamese\n"
+"Language: vi_VN\n"
+"PO-Revision-Date: 2025-06-15 21:53\n"
+
 msgid "EXTRA_BUZZ"
-msgstr ""
+msgstr "Khi holomem này bị hạ gục, nhận 2 Sát Thương Mạng"
 
 msgid "EXTRA_UNLIM"
-msgstr ""
+msgstr "Bạn có thể lấy một số lượng bất kỳ lá holomem này vào bộ bài của bạn."
 
 msgid "Blue"
-msgstr ""
+msgstr "Lam"
 
 msgid "Green"
-msgstr ""
+msgstr "Lục"
 
 msgid "Purple"
-msgstr ""
+msgstr "Tím"
 
 msgid "Red"
-msgstr ""
+msgstr "Đỏ"
 
 msgid "White"
-msgstr ""
+msgstr "Trắng"
 
 msgid "Yellow"
-msgstr ""
+msgstr "Vàng"
 
 msgid "AZKi"
-msgstr ""
+msgstr "AZKi"
 
 msgid "Airani Iofifteen"
-msgstr ""
+msgstr "Airani Iofifteen"
 
 msgid "Akai Haato"
-msgstr ""
+msgstr "Akai Haato"
 
 msgid "Aki Rosenthal"
-msgstr ""
+msgstr "Aki Rosenthal"
 
 msgid "Amane Kanata"
-msgstr ""
+msgstr "Amane Kanata"
 
 msgid "Anya Melfissa"
-msgstr ""
+msgstr "Anya Melfissa"
 
 msgid "Aragami Oga"
-msgstr ""
+msgstr "Aragami Oga"
 
 msgid "Arurandeisu"
-msgstr ""
+msgstr "Arurandeisu"
 
 msgid "Astel Leda"
-msgstr ""
+msgstr "Astel Leda"
 
 msgid "Axel Syrios"
-msgstr ""
+msgstr "Axel Syrios"
 
 msgid "Ayunda Risu"
-msgstr ""
+msgstr "Ayunda Risu"
 
 msgid "Banzoin Hakka"
-msgstr ""
+msgstr "Banzoin Hakka"
 
 msgid "Cecilia Immergreen"
-msgstr ""
+msgstr "Cecilia Immergreen"
 
 msgid "Ceres Fauna"
-msgstr ""
+msgstr "Ceres Fauna"
 
 msgid "Crimzon Ruze"
-msgstr ""
+msgstr "Crimzon Ruze"
 
 msgid "Elizabeth Rose Bloodflame"
-msgstr ""
+msgstr "Elizabeth Rose Bloodflame"
 
 msgid "Fuwawa Abyssgard"
-msgstr ""
+msgstr "Fuwawa Abyssgard"
 
 msgid "FUWAMOCO"
-msgstr ""
+msgstr "FUWAMOCO"
 
 msgid "Gavis Bettel"
-msgstr ""
+msgstr "Gavis Bettel"
 
 msgid "Gawr Gura"
-msgstr ""
+msgstr "Gawr Gura"
 
 msgid "Gigi Murin"
-msgstr ""
+msgstr "Gigi Murin"
 
 msgid "Goldbullet"
-msgstr ""
+msgstr "Goldbullet"
 
 msgid "Hakos Baelz"
-msgstr ""
+msgstr "Hakos Baelz"
 
 msgid "Hakui Koyori"
-msgstr ""
+msgstr "Hakui Koyori"
 
 msgid "Hanasaki Miyabi"
-msgstr ""
+msgstr "Hanasaki Miyabi"
 
 msgid "Himemori Luna"
-msgstr ""
+msgstr "Himemori Luna"
 
 msgid "Hiodoshi Ao"
-msgstr ""
+msgstr "Hiodoshi Ao"
 
 msgid "Hizaki Gamma"
-msgstr ""
+msgstr "Hizaki Gamma"
 
 msgid "Hoshimachi Suisei"
-msgstr ""
+msgstr "Hoshimachi Suisei"
 
 msgid "Houshou Marine"
-msgstr ""
+msgstr "Houshou Marine"
 
 msgid "IRyS"
-msgstr ""
+msgstr "IRyS"
 
 msgid "Ichijou Ririka"
-msgstr ""
+msgstr "Ichijou Ririka"
 
 msgid "Inugami Korone"
-msgstr ""
+msgstr "Inugami Korone"
 
 msgid "Josuiji Shinri"
-msgstr ""
+msgstr "Josuiji Shinri"
 
 msgid "Jurard T Rexford"
-msgstr ""
+msgstr "Jurard T Rexford"
 
 msgid "Juufuutei Raden"
-msgstr ""
+msgstr "Juufuutei Raden"
 
 msgid "Kaela Kovalskia"
-msgstr ""
+msgstr "Kaela Kovalskia"
 
 msgid "Kagami Kira"
-msgstr ""
+msgstr "Kagami Kira"
 
 msgid "Kageyama Shien"
-msgstr ""
+msgstr "Kageyama Shien"
 
 msgid "Kanade Izuru"
-msgstr ""
+msgstr "Kanade Izuru"
 
 msgid "Kazama Iroha"
-msgstr ""
+msgstr "Kazama Iroha"
 
 msgid "Kiryu Coco"
-msgstr ""
+msgstr "Kiryu Coco"
 
 msgid "Kishido Temma"
-msgstr ""
+msgstr "Kishido Temma"
 
 msgid "Kobo Kanaeru"
-msgstr ""
+msgstr "Kobo Kanaeru"
 
 msgid "Koseki Bijou"
-msgstr ""
+msgstr "Koseki Bijou"
 
 msgid "Kureiji Ollie"
-msgstr ""
+msgstr "Kureiji Ollie"
 
 msgid "La+ Darknesss"
-msgstr ""
+msgstr "La+ Darknesss"
 
 msgid "Machina X Flayon"
-msgstr ""
+msgstr "Machina X Flayon"
 
 msgid "Magni Dezmond"
-msgstr ""
+msgstr "Magni Dezmond"
 
 msgid "Mano Aloe"
-msgstr ""
+msgstr "Mano Aloe"
 
 msgid "Minase Rio"
-msgstr ""
+msgstr "Minase Rio"
 
 msgid "Minato Aqua"
-msgstr ""
+msgstr "Minato Aqua"
 
 msgid "Mococo Abyssgard"
-msgstr ""
+msgstr "Mococo Abyssgard"
 
 msgid "Momosuzu Nene"
-msgstr ""
+msgstr "Momosuzu Nene"
 
 msgid "Moona Hoshinova"
-msgstr ""
+msgstr "Moona Hoshinova"
 
 msgid "Mori Calliope"
-msgstr ""
+msgstr "Mori Calliope"
 
 msgid "Murasaki Shion"
-msgstr ""
+msgstr "Murasaki Shion"
 
 msgid "Nakiri Ayame"
-msgstr ""
+msgstr "Nakiri Ayame"
 
 msgid "Nanashi Mumei"
-msgstr ""
+msgstr "Nanashi Mumei"
 
 msgid "Natsuiro Matsuri"
-msgstr ""
+msgstr "Natsuiro Matsuri"
 
 msgid "Nekomata Okayu"
-msgstr ""
+msgstr "Nekomata Okayu"
 
 msgid "Nerissa Ravencroft"
-msgstr ""
+msgstr "Nerissa Ravencroft"
 
 msgid "Ninomae Ina'nis"
-msgstr ""
+msgstr "Ninomae Ina'nis"
 
 msgid "Noir Vesper"
-msgstr ""
+msgstr "Noir Vesper"
 
 msgid "Octavio"
-msgstr ""
+msgstr "Octavio"
 
 msgid "Omaru Polka"
-msgstr ""
+msgstr "Omaru Polka"
 
 msgid "Ookami Mio"
-msgstr ""
+msgstr "Ookami Mio"
 
 msgid "Oozora Subaru"
-msgstr ""
+msgstr "Oozora Subaru"
 
 msgid "Otonose Kanade"
-msgstr ""
+msgstr "Otonose Kanade"
 
 msgid "Ouro Kronii"
-msgstr ""
+msgstr "Ouro Kronii"
 
 msgid "Pavolia Reine"
-msgstr ""
+msgstr "Pavolia Reine"
 
 msgid "Raora Panthera"
-msgstr ""
+msgstr "Raora Panthera"
 
 msgid "Regis Altare"
-msgstr ""
+msgstr "Regis Altare"
 
 msgid "Rikka"
-msgstr ""
+msgstr "Rikka"
 
 msgid "Roboco-san"
-msgstr ""
+msgstr "Roboco-san"
 
 msgid "Sakamata Chloe"
-msgstr ""
+msgstr "Sakamata Chloe"
 
 msgid "Sakura Miko"
-msgstr ""
+msgstr "Sakura Miko"
 
 msgid "Shiori Novella"
-msgstr ""
+msgstr "Shiori Novella"
 
 msgid "Shirakami Fubuki"
-msgstr ""
+msgstr "Shirakami Fubuki"
 
 msgid "Shiranui Flare"
-msgstr ""
+msgstr "Shiranui Flare"
 
 msgid "Shirogane Noel"
-msgstr ""
+msgstr "Shirogane Noel"
 
 msgid "Shishiro Botan"
-msgstr ""
+msgstr "Shishiro Botan"
 
 msgid "Takanashi Kiara"
-msgstr ""
+msgstr "Takanashi Kiara"
 
 msgid "Takane Lui"
-msgstr ""
+msgstr "Takane Lui"
 
 msgid "Todoroki Hajime"
-msgstr ""
+msgstr "Todoroki Hajime"
 
 msgid "Tokino Sora"
-msgstr ""
+msgstr "Tokino Sora"
 
 msgid "Tokoyami Towa"
-msgstr ""
+msgstr "Tokoyami Towa"
 
 msgid "Tsukishita Kaoru"
-msgstr ""
+msgstr "Tsukishita Kaoru"
 
 msgid "Tsukumo Sana"
-msgstr ""
+msgstr "Tsukumo Sana"
 
 msgid "Tsunomaki Watame"
-msgstr ""
+msgstr "Tsunomaki Watame"
 
 msgid "Uruha Rushia"
-msgstr ""
+msgstr "Uruha Rushia"
 
 msgid "Usada Pekora"
-msgstr ""
+msgstr "Usada Pekora"
 
 msgid "Utsugi Uyu"
-msgstr ""
+msgstr "Utsugi Uyu"
 
 msgid "Vestia Zeta"
-msgstr ""
+msgstr "Vestia Zeta"
 
 msgid "Amelia Watson"
-msgstr ""
+msgstr "Amelia Watson"
 
 msgid "Yakushiji Suzaku"
-msgstr ""
+msgstr "Yakushiji Suzaku"
 
 msgid "Yatogami Fuma"
-msgstr ""
+msgstr "Yatogami Fuma"
 
 msgid "Yozora Mel"
-msgstr ""
+msgstr "Yozora Mel"
 
 msgid "Yukihana Lamy"
-msgstr ""
+msgstr "Yukihana Lamy"
 
 msgid "Yukoku Roberu"
-msgstr ""
+msgstr "Yukoku Roberu"
 
 msgid "Yuzuki Choco"
-msgstr ""
+msgstr "Yuzuki Choco"
 
 msgid "Magical Girl Miko"
-msgstr ""
+msgstr "Miko Cô gái Phép thuật"
 
 msgid "Magical Girl Kanata"
-msgstr ""
+msgstr "Kanata Cô gái Phép thuật"
 
 msgid "Magical Girl Shion"
-msgstr ""
+msgstr "Shion Cô gái Phép thuật"
 
 msgid "Magical Girl Marine"
-msgstr ""
+msgstr "Marine Cô gái Phép thuật"
 
 msgid "Magical Girl Luna"
-msgstr ""
+msgstr "Luna Cô gái Phép thuật"
 
 msgid "Magical Girl Chloe"
-msgstr ""
+msgstr "Chloe Cô gái Phép thuật"
 
 msgid "HoloWitch"
-msgstr ""
+msgstr "HoloWitch"
 
 msgid "Languages"
-msgstr ""
+msgstr "Ngôn ngữ"
 
 msgid "Advent"
-msgstr ""
+msgstr "Advent"
 
 msgid "Alcohol"
-msgstr ""
+msgstr "Rượu"
 
 msgid "AnimalEars"
-msgstr ""
+msgstr "Tai Thú"
 
 msgid "Art"
 msgstr ""
 
 msgid "Baby"
-msgstr ""
+msgstr "Em bé"
 
 msgid "Bird"
-msgstr ""
+msgstr "Chim"
 
 msgid "Council"
-msgstr ""
+msgstr "Council"
 
 msgid "EN"
-msgstr ""
+msgstr "EN"
 
 msgid "Gen0"
-msgstr ""
+msgstr "Thế hệ 0"
 
 msgid "Gen1"
-msgstr ""
+msgstr "Thế hệ 1"
 
 msgid "Gen2"
-msgstr ""
+msgstr "Thế hệ 2"
 
 msgid "Gen3"
-msgstr ""
+msgstr "Thế hệ 3"
 
 msgid "Gen4"
-msgstr ""
+msgstr "Thế hệ 4"
 
 msgid "Gen5"
-msgstr ""
+msgstr "Thế hệ 5"
 
 msgid "HalfElf"
-msgstr ""
+msgstr "Bán Elf"
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "IDGen1"
-msgstr ""
+msgstr "ID Thế hệ 1"
 
 msgid "IDGen2"
-msgstr ""
+msgstr "ID Thế hệ 2"
 
 msgid "IDGen3"
-msgstr ""
+msgstr "ID Thế hệ 3"
 
 msgid "JP"
-msgstr ""
+msgstr "JP"
 
 msgid "Myth"
-msgstr ""
+msgstr "Myth"
 
 msgid "Promise"
-msgstr ""
+msgstr "Promise"
 
 msgid "Sea"
-msgstr ""
+msgstr "Biển"
 
 msgid "SecretSocietyholoX"
-msgstr ""
+msgstr "Mật Hội holoX"
 
 msgid "Song"
-msgstr ""
+msgstr "Bài hát"
 
 msgid "ReGloss"
-msgstr ""
+msgstr "ReGloss"
 
 msgid "Gamers"
-msgstr ""
+msgstr "Gamers"
 
 msgid "Cheer"
-msgstr ""
+msgstr "Cổ vũ"
 
 msgid "Holomem"
-msgstr ""
+msgstr "Holomem"
 
 msgid "Oshi"
-msgstr ""
+msgstr "Oshi"
 
 msgid "Support"
-msgstr ""
+msgstr "Hỗ trợ"
 
 msgid "Event"
-msgstr ""
+msgstr "Sự kiện"
 
 msgid "Fan"
-msgstr ""
+msgstr "Fan"
 
 msgid "Item"
-msgstr ""
+msgstr "Vật phẩm"
 
 msgid "Mascot"
-msgstr ""
+msgstr "Linh vật"
 
 msgid "Staff"
-msgstr ""
+msgstr "Nhân viên"
 
 msgid "Tool"
-msgstr ""
+msgstr "Công cụ"
 
 msgid "hSD01-003_NAME"
-msgstr ""
+msgstr "Tokino Sora"
 
 msgid "hSD01-003_ART_0_NAME"
-msgstr ""
+msgstr "(๑╹ᆺ╹)  nun nun"
 
 msgid "hSD01-004_NAME"
-msgstr ""
+msgstr "Tokino Sora"
 
 msgid "hSD01-004_ART_0_NAME"
-msgstr ""
+msgstr "Lên sân khấu!"
 
 msgid "hSD01-004_COLLAB_NAME"
-msgstr ""
+msgstr "Cùng nhảy nào!"
 
 msgid "hSD01-004_COLLAB_EFFECT"
-msgstr ""
+msgstr "holomem ở hàng giữa của bạn sẽ +20 sức "
 
 msgid "hSD01-005_NAME"
-msgstr ""
+msgstr "Tokino Sora"
 
 msgid "hSD01-005_ART_0_NAME"
-msgstr ""
+msgstr "nun nun shiyo"
 
 msgid "hSD01-005_ART_1_NAME"
 msgstr ""
 
 msgid "hSD01-006_NAME"
-msgstr ""
+msgstr "Tokino Sora"
 
 msgid "hSD01-006_ART_0_NAME"
 msgstr ""
@@ -512,7 +514,7 @@ msgid "hSD01-006_ART_1_EFFECT"
 msgstr ""
 
 msgid "hSD01-007_NAME"
-msgstr ""
+msgstr "IRyS"
 
 msgid "hSD01-007_ART_0_NAME"
 msgstr ""
@@ -524,16 +526,16 @@ msgid "hSD01-007_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hSD01-008_NAME"
-msgstr ""
+msgstr "AZKi"
 
 msgid "hSD01-008_ART_0_NAME"
-msgstr ""
+msgstr "Tiếp tục làm việc chăm chỉ nhé!"
 
 msgid "hSD01-009_NAME"
-msgstr ""
+msgstr "AZKi"
 
 msgid "hSD01-009_ART_0_NAME"
-msgstr ""
+msgstr "Ở đâu tiếp theo, ở đâu tiếp theo"
 
 msgid "hSD01-009_COLLAB_NAME"
 msgstr ""
@@ -542,13 +544,13 @@ msgid "hSD01-009_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hSD01-010_NAME"
-msgstr ""
+msgstr "AZKi"
 
 msgid "hSD01-010_ART_0_NAME"
 msgstr ""
 
 msgid "hSD01-011_NAME"
-msgstr ""
+msgstr "AZKi"
 
 msgid "hSD01-011_ART_0_NAME"
 msgstr ""
@@ -557,85 +559,85 @@ msgid "hSD01-011_ART_0_EFFECT"
 msgstr ""
 
 msgid "hSD01-011_ART_1_NAME"
-msgstr ""
+msgstr "Bài Hát Định Mệnh"
 
 msgid "hSD01-011_ART_1_EFFECT"
 msgstr ""
 
 msgid "hSD01-012_NAME"
-msgstr ""
+msgstr "Airani Iofifteen"
 
 msgid "hSD01-012_ART_0_NAME"
 msgstr ""
 
 msgid "hSD01-012_COLLAB_NAME"
-msgstr ""
+msgstr "Nào mình cùng vẽ!"
 
 msgid "hSD01-012_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hSD01-013_NAME"
-msgstr ""
+msgstr "SorAZ"
 
 msgid "hSD01-013_ART_0_NAME"
-msgstr ""
+msgstr "Tương Lai Xán Lạn"
 
 msgid "hSD01-013_ART_0_EFFECT"
 msgstr ""
 
 msgid "hSD01-014_NAME"
-msgstr ""
+msgstr "Amane Kanata"
 
 msgid "hSD01-014_ART_0_NAME"
-msgstr ""
+msgstr "Hey"
 
 msgid "EXTRA_SPOT"
-msgstr ""
+msgstr "Holomem này không thể bloom"
 
 msgid "hSD01-015_NAME"
-msgstr ""
+msgstr "Hakui Koyori"
 
 msgid "hSD01-015_ART_0_NAME"
-msgstr ""
+msgstr "Pure Pure Pure~"
 
 msgid "hSD01-015_COLLAB_NAME"
-msgstr ""
+msgstr "SoAzKo"
 
 msgid "hSD01-015_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hPR-001_NAME"
-msgstr ""
+msgstr "Sakura Miko"
 
 msgid "hPR-001_ART_0_NAME"
-msgstr ""
+msgstr "flower rhapsody"
 
 msgid "hPR-001_COLLAB_NAME"
-msgstr ""
+msgstr "Nếu như mình có thể làm bạn với ai đó"
 
 msgid "hPR-001_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-009_NAME"
-msgstr ""
+msgstr "Amane Kanata"
 
 msgid "hBP01-009_ART_0_NAME"
-msgstr ""
+msgstr "Konkanata"
 
 msgid "hBP01-009_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-021_NAME"
-msgstr ""
+msgstr "Tokino Sora"
 
 msgid "hBP01-021_ART_0_NAME"
-msgstr ""
+msgstr "Mọi người ơi! Kon-sommé!"
 
 msgid "hBP01-023_NAME"
-msgstr ""
+msgstr "Tokino Sora"
 
 msgid "hBP01-023_ART_0_NAME"
-msgstr ""
+msgstr "Còn lâu nó mới dừng"
 
 msgid "hBP01-023_ART_0_EFFECT"
 msgstr ""
@@ -644,10 +646,10 @@ msgid "hBP01-023_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP01-023_COLLAB_EFFECT"
-msgstr ""
+msgstr "Rút 2 lá bài."
 
 msgid "hBP01-033_NAME"
-msgstr ""
+msgstr "Aki Rosenthal"
 
 msgid "hBP01-033_ART_0_NAME"
 msgstr ""
@@ -659,7 +661,7 @@ msgid "hBP01-033_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-035_NAME"
-msgstr ""
+msgstr "Aki Rosenthal"
 
 msgid "hBP01-035_ART_0_NAME"
 msgstr ""
@@ -668,73 +670,73 @@ msgid "hBP01-035_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-035_BLOOM_NAME"
-msgstr ""
+msgstr "Nhạc Hội Bremen"
 
 msgid "hBP01-035_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-036_NAME"
-msgstr ""
+msgstr "Aki Rosenthal"
 
 msgid "hBP01-036_ART_0_NAME"
-msgstr ""
+msgstr "Ganbarose trong hôm nay nào!"
 
 msgid "hBP01-036_COLLAB_NAME"
-msgstr ""
+msgstr "Rosetai, hãy giúp đỡ mình nhé!"
 
 msgid "hBP01-036_COLLAB_EFFECT"
-msgstr ""
+msgstr "Hồi 20 HP cho holomem bất kỳ của bạn"
 
 msgid "hBP01-037_NAME"
-msgstr ""
+msgstr "Aki Rosenthal"
 
 msgid "hBP01-037_ART_0_NAME"
-msgstr ""
+msgstr "Chìa Khóa Bí Mật"
 
 msgid "hBP01-037_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-037_BLOOM_NAME"
-msgstr ""
+msgstr "Búp Bê Gothic"
 
 msgid "hBP01-037_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-038_NAME"
-msgstr ""
+msgstr "Usada Pekora"
 
 msgid "hBP01-038_ART_0_NAME"
-msgstr ""
+msgstr "Konpeko!"
 
 msgid "hBP01-038_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-041_NAME"
-msgstr ""
+msgstr "Usada Pekora"
 
 msgid "hBP01-041_ART_0_NAME"
-msgstr ""
+msgstr "Đừng bỏ lỡ nó peko!"
 
 msgid "hBP01-041_BLOOM_NAME"
-msgstr ""
+msgstr "Usada Pekora đã lớn rồi"
 
 msgid "hBP01-041_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-042_NAME"
-msgstr ""
+msgstr "Usada Pekora"
 
 msgid "hBP01-042_ART_0_NAME"
-msgstr ""
+msgstr "Cô thỏ trên bãi biển cát trắng"
 
 msgid "hBP01-042_ART_1_NAME"
-msgstr ""
+msgstr "Ki-t-raaaa"
 
 msgid "hBP01-042_ART_1_EFFECT"
 msgstr ""
 
 msgid "hBP01-043_NAME"
-msgstr ""
+msgstr "Usada Pekora"
 
 msgid "hBP01-043_ART_0_NAME"
 msgstr ""
@@ -743,49 +745,49 @@ msgid "hBP01-043_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-043_BLOOM_NAME"
-msgstr ""
+msgstr "Váy Công Chúa"
 
 msgid "hBP01-043_BLOOM_EFFECT"
-msgstr ""
+msgstr "Hồi 50 HP cho holomem này"
 
 msgid "hBP01-044_NAME"
-msgstr ""
+msgstr "AZKi"
 
 msgid "hBP01-044_ART_0_NAME"
-msgstr ""
+msgstr "Kon-AZKi"
 
 msgid "hBP01-046_NAME"
-msgstr ""
+msgstr "AZKi"
 
 msgid "hBP01-046_ART_0_NAME"
 msgstr ""
 
 msgid "hBP01-046_BLOOM_NAME"
-msgstr ""
+msgstr "Bởi vì tất cả Đội Tiên phong đều ở đó"
 
 msgid "hBP01-046_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-047_NAME"
-msgstr ""
+msgstr "AZKi"
 
 msgid "hBP01-047_ART_0_NAME"
-msgstr ""
+msgstr "Bản đồ mới"
 
 msgid "hBP01-047_BLOOM_NAME"
-msgstr ""
+msgstr "Hành trình cuộc sống"
 
 msgid "hBP01-047_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-056_NAME"
-msgstr ""
+msgstr "Takane Lui"
 
 msgid "hBP01-056_ART_0_NAME"
 msgstr ""
 
 msgid "hBP01-057_NAME"
-msgstr ""
+msgstr "Takane Lui"
 
 msgid "hBP01-057_ART_0_NAME"
 msgstr ""
@@ -800,40 +802,40 @@ msgid "hBP01-057_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-058_NAME"
-msgstr ""
+msgstr "Takane Lui"
 
 msgid "hBP01-058_ART_0_NAME"
-msgstr ""
+msgstr "Kon-luilui"
 
 msgid "hBP01-058_ART_1_NAME"
-msgstr ""
+msgstr "Otsu-luilui"
 
 msgid "hBP01-059_NAME"
-msgstr ""
+msgstr "Takane Lui"
 
 msgid "hBP01-059_ART_0_NAME"
-msgstr ""
+msgstr "Chào mừng đến với Bữa tiệc"
 
 msgid "hBP01-059_ART_1_NAME"
-msgstr ""
+msgstr "Bữa tiệc của Lui"
 
 msgid "hBP01-059_ART_1_EFFECT"
 msgstr ""
 
 msgid "hBP01-060_NAME"
-msgstr ""
+msgstr "Takane Lui"
 
 msgid "hBP01-060_ART_0_NAME"
-msgstr ""
+msgstr "Hay theo mình thật kỹ!"
 
 msgid "hBP01-060_BLOOM_NAME"
-msgstr ""
+msgstr "Nhờ tất cả mọi người đó!"
 
 msgid "hBP01-060_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-061_NAME"
-msgstr ""
+msgstr "Takane Lui"
 
 msgid "hBP01-061_ART_0_NAME"
 msgstr ""
@@ -842,88 +844,88 @@ msgid "hBP01-061_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-061_BLOOM_NAME"
-msgstr ""
+msgstr "Người Cầm đầu Tổ chức"
 
 msgid "hBP01-061_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-062_NAME"
-msgstr ""
+msgstr "Takanashi Kiara"
 
 msgid "hBP01-062_ART_0_NAME"
-msgstr ""
+msgstr "Kikkeriki~!"
 
 msgid "hBP01-062_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-068_NAME"
-msgstr ""
+msgstr "Omaru Polka"
 
 msgid "hBP01-068_ART_0_NAME"
-msgstr ""
+msgstr "Polka Oruyo!"
 
 msgid "hBP01-070_NAME"
-msgstr ""
+msgstr "Omaru Polka"
 
 msgid "hBP01-070_ART_0_NAME"
-msgstr ""
+msgstr "Tiềm thức Chung"
 
 msgid "hBP01-070_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-070_BLOOM_NAME"
-msgstr ""
+msgstr "Bữa tiệc bắt đầu!"
 
 msgid "hBP01-070_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-071_NAME"
-msgstr ""
+msgstr "Omaru Polka"
 
 msgid "hBP01-071_ART_0_NAME"
-msgstr ""
+msgstr "Rạp xiếc Polka"
 
 msgid "hBP01-071_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-071_BLOOM_NAME"
-msgstr ""
+msgstr "Ảo ảnh Polka"
 
 msgid "hBP01-071_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-082_NAME"
-msgstr ""
+msgstr "Kobo Kanaeru"
 
 msgid "hBP01-082_ART_0_NAME"
-msgstr ""
+msgstr "Bokobokobokobo"
 
 msgid "hBP01-088_NAME"
-msgstr ""
+msgstr "Moona Hoshinova"
 
 msgid "hBP01-088_ART_0_NAME"
-msgstr ""
+msgstr "Moon Moon~ Moona Dayo!"
 
 msgid "hBP01-088_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-096_NAME"
-msgstr ""
+msgstr "Usada Pekora"
 
 msgid "hBP01-096_ART_0_NAME"
-msgstr ""
+msgstr "Pekora ~Bên kia Cánh cửa~"
 
 msgid "hBP01-096_COLLAB_NAME"
-msgstr ""
+msgstr "Đó là \"Chuyến phiêu lưu\""
 
 msgid "hBP01-096_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-097_NAME"
-msgstr ""
+msgstr "Shiranui Flare"
 
 msgid "hBP01-097_ART_0_NAME"
-msgstr ""
+msgstr "Flare ~Bên kia Cánh cửa~"
 
 msgid "hBP01-097_COLLAB_NAME"
 msgstr ""
@@ -932,37 +934,37 @@ msgid "hBP01-097_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-098_NAME"
-msgstr ""
+msgstr "Shirogane Noel"
 
 msgid "hBP01-098_ART_0_NAME"
-msgstr ""
+msgstr "Noel ~Bên kia Cánh cửa~"
 
 msgid "hBP01-098_COLLAB_NAME"
-msgstr ""
+msgstr "Là \"Tôi\""
 
 msgid "hBP01-098_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-099_NAME"
-msgstr ""
+msgstr "Houshou Marine"
 
 msgid "hBP01-099_ART_0_NAME"
-msgstr ""
+msgstr "Marine ~Bên kia Cánh cửa~"
 
 msgid "hBP01-099_COLLAB_NAME"
-msgstr ""
+msgstr "Đó là \"Lâu đài Edinburgh\""
 
 msgid "hBP01-099_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-048_NAME"
-msgstr ""
+msgstr "Kazama Iroha"
 
 msgid "hBP01-048_ART_0_NAME"
 msgstr ""
 
 msgid "hBP01-050_NAME"
-msgstr ""
+msgstr "Kazama Iroha"
 
 msgid "hBP01-050_ART_0_NAME"
 msgstr ""
@@ -971,13 +973,13 @@ msgid "hBP01-050_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-050_GIFT_NAME"
-msgstr ""
+msgstr "Vệ sĩ"
 
 msgid "hBP01-050_GIFT_EFFECT"
 msgstr ""
 
 msgid "hBP01-022_NAME"
-msgstr ""
+msgstr "Tokino Sora"
 
 msgid "hBP01-022_ART_0_NAME"
 msgstr ""
@@ -989,7 +991,7 @@ msgid "hBP01-022_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-051_NAME"
-msgstr ""
+msgstr "Kazama Iroha"
 
 msgid "hBP01-051_ART_0_NAME"
 msgstr ""
@@ -1001,10 +1003,10 @@ msgid "hBP01-051_ART_1_NAME"
 msgstr ""
 
 msgid "hBP01-016_NAME"
-msgstr ""
+msgstr "Nanashi Mumei"
 
 msgid "hBP01-016_ART_0_NAME"
-msgstr ""
+msgstr "Đến giờ Nghỉ rồi"
 
 msgid "hBP01-016_COLLAB_NAME"
 msgstr ""
@@ -1013,37 +1015,37 @@ msgid "hBP01-016_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-072_NAME"
-msgstr ""
+msgstr "Hakos Baelz"
 
 msgid "hBP01-072_ART_0_NAME"
-msgstr ""
+msgstr "WAZZUP!!"
 
 msgid "hBP01-072_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-092_NAME"
-msgstr ""
+msgstr "Ouro Kronii"
 
 msgid "hBP01-092_ART_0_NAME"
-msgstr ""
+msgstr "Kronichiwa"
 
 msgid "hBP01-092_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-074_NAME"
-msgstr ""
+msgstr "Hakos Baelz"
 
 msgid "hBP01-074_ART_0_NAME"
-msgstr ""
+msgstr "Cuộc vui bắt đầu!"
 
 msgid "hBP01-074_BLOOM_NAME"
-msgstr ""
+msgstr "Idol Chuột cuối cùng đã ở đây!"
 
 msgid "hBP01-074_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-075_NAME"
-msgstr ""
+msgstr "Hakos Baelz"
 
 msgid "hBP01-075_ART_0_NAME"
 msgstr ""
@@ -1055,7 +1057,7 @@ msgid "hBP01-075_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-019_NAME"
-msgstr ""
+msgstr "Nanashi Mumei"
 
 msgid "hBP01-019_ART_0_NAME"
 msgstr ""
@@ -1067,19 +1069,19 @@ msgid "hBP01-019_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-094_NAME"
-msgstr ""
+msgstr "Ouro Kronii"
 
 msgid "hBP01-094_ART_0_NAME"
 msgstr ""
 
 msgid "hBP01-094_BLOOM_NAME"
-msgstr ""
+msgstr "Kronichiwa!"
 
 msgid "hBP01-094_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-095_NAME"
-msgstr ""
+msgstr "Ouro Kronii"
 
 msgid "hBP01-095_ART_0_NAME"
 msgstr ""
@@ -1094,7 +1096,7 @@ msgid "hBP01-095_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-020_NAME"
-msgstr ""
+msgstr "Nanashi Mumei"
 
 msgid "hBP01-020_ART_0_NAME"
 msgstr ""
@@ -1109,19 +1111,19 @@ msgid "hBP01-020_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-030_NAME"
-msgstr ""
+msgstr "IRyS"
 
 msgid "hBP01-030_ART_0_NAME"
 msgstr ""
 
 msgid "hBP01-030_BLOOM_NAME"
-msgstr ""
+msgstr "Hãy lấp đầy sân khâu bằng niềm hy vọng!"
 
 msgid "hBP01-030_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-031_NAME"
-msgstr ""
+msgstr "IRyS"
 
 msgid "hBP01-031_ART_0_NAME"
 msgstr ""
@@ -1130,16 +1132,16 @@ msgid "hBP01-031_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-031_COLLAB_NAME"
-msgstr ""
+msgstr "Khu Vườn Hy Vọng"
 
 msgid "hBP01-031_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-010_NAME"
-msgstr ""
+msgstr "Amane Kanata"
 
 msgid "hBP01-010_ART_0_NAME"
-msgstr ""
+msgstr "Tôi đi đây"
 
 msgid "hBP01-010_COLLAB_NAME"
 msgstr ""
@@ -1148,31 +1150,31 @@ msgid "hBP01-010_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-012_NAME"
-msgstr ""
+msgstr "Amane Kanata"
 
 msgid "hBP01-012_ART_0_NAME"
 msgstr ""
 
 msgid "hBP01-012_BLOOM_NAME"
-msgstr ""
+msgstr "Idol Kanataso"
 
 msgid "hBP01-012_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-013_NAME"
-msgstr ""
+msgstr "Amane Kanata"
 
 msgid "hBP01-013_ART_0_NAME"
-msgstr ""
+msgstr "Sân Khấu Thiên Thần"
 
 msgid "hBP01-013_BLOOM_NAME"
-msgstr ""
+msgstr "Công Việc của Thiên Thần"
 
 msgid "hBP01-013_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-014_NAME"
-msgstr ""
+msgstr "Amane Kanata"
 
 msgid "hBP01-014_ART_0_NAME"
 msgstr ""
@@ -1181,43 +1183,43 @@ msgid "hBP01-014_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-014_COLLAB_NAME"
-msgstr ""
+msgstr "Thiên Thần Sa Ngã"
 
 msgid "hBP01-014_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-026_NAME"
-msgstr ""
+msgstr "Vestia Zeta"
 
 msgid "hBP01-026_ART_0_NAME"
 msgstr ""
 
 msgid "hBP01-026_BLOOM_NAME"
-msgstr ""
+msgstr "Định Mệnh Mới"
 
 msgid "hBP01-026_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-027_NAME"
-msgstr ""
+msgstr "Vestia Zeta"
 
 msgid "hBP01-027_ART_0_NAME"
-msgstr ""
+msgstr "Mã Truy Cập: ID"
 
 msgid "hBP01-027_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-027_GIFT_NAME"
-msgstr ""
+msgstr "V.7"
 
 msgid "hBP01-027_GIFT_EFFECT"
 msgstr ""
 
 msgid "hBP01-054_NAME"
-msgstr ""
+msgstr "Airani Iofifteen"
 
 msgid "hBP01-054_ART_0_NAME"
-msgstr ""
+msgstr "Mình rất mong chờ nó!"
 
 msgid "hBP01-054_BLOOM_NAME"
 msgstr ""
@@ -1226,7 +1228,7 @@ msgid "hBP01-054_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-055_NAME"
-msgstr ""
+msgstr "Airani Iofifteen"
 
 msgid "hBP01-055_ART_0_NAME"
 msgstr ""
@@ -1235,28 +1237,28 @@ msgid "hBP01-055_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-055_COLLAB_NAME"
-msgstr ""
+msgstr "KHU VỰC 15"
 
 msgid "hBP01-055_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-090_NAME"
-msgstr ""
+msgstr "Moona Hoshinova"
 
 msgid "hBP01-090_ART_0_NAME"
 msgstr ""
 
 msgid "hBP01-090_BLOOM_NAME"
-msgstr ""
+msgstr "Ngọc Lưu Ly"
 
 msgid "hBP01-090_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-091_NAME"
-msgstr ""
+msgstr "Moona Hoshinova"
 
 msgid "hBP01-091_ART_0_NAME"
-msgstr ""
+msgstr "Vầng Trăng Nửa Đêm"
 
 msgid "hBP01-091_ART_1_NAME"
 msgstr ""
@@ -1265,22 +1267,22 @@ msgid "hBP01-091_ART_1_EFFECT"
 msgstr ""
 
 msgid "hBP01-083_NAME"
-msgstr ""
+msgstr "Kobo Kanaeru"
 
 msgid "hBP01-083_ART_0_NAME"
-msgstr ""
+msgstr "Sóng! Bơi!"
 
 msgid "hBP01-083_COLLAB_NAME"
-msgstr ""
+msgstr "Đem Kobo ra biển đi!"
 
 msgid "hBP01-083_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-086_NAME"
-msgstr ""
+msgstr "Kobo Kanaeru"
 
 msgid "hBP01-086_ART_0_NAME"
-msgstr ""
+msgstr "OnAeru"
 
 msgid "hBP01-086_BLOOM_NAME"
 msgstr ""
@@ -1289,61 +1291,61 @@ msgid "hBP01-086_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-024_NAME"
-msgstr ""
+msgstr "Vestia Zeta"
 
 msgid "hBP01-024_ART_0_NAME"
-msgstr ""
+msgstr "Nhiệm vụ bắt đầu!"
 
 msgid "hBP01-087_NAME"
-msgstr ""
+msgstr "Kobo Kanaeru"
 
 msgid "hBP01-087_ART_0_NAME"
-msgstr ""
+msgstr "Thần Chú Gọi Mưa"
 
 msgid "hBP01-087_ART_0_EFFECT"
 msgstr ""
 
 msgid "hBP01-087_ART_1_NAME"
-msgstr ""
+msgstr "Thần Chú Gọi Sóng"
 
 msgid "hBP01-087_ART_1_EFFECT"
 msgstr ""
 
 msgid "hBP01-069_NAME"
-msgstr ""
+msgstr "Omaru Polka"
 
 msgid "hBP01-069_ART_0_NAME"
-msgstr ""
+msgstr "Ohapol"
 
 msgid "hBP01-069_ART_1_NAME"
-msgstr ""
+msgstr "Osopol"
 
 msgid "hBP01-045_NAME"
-msgstr ""
+msgstr "AZKi"
 
 msgid "hBP01-045_ART_0_NAME"
 msgstr ""
 
 msgid "hBP01-045_GIFT_NAME"
-msgstr ""
+msgstr "Ghi Đè"
 
 msgid "hBP01-045_GIFT_EFFECT"
 msgstr ""
 
 msgid "hBP01-063_NAME"
-msgstr ""
+msgstr "Takanashi Kiara"
 
 msgid "hBP01-063_ART_0_NAME"
-msgstr ""
+msgstr "Đến giờ mofu mofu rồi"
 
 msgid "hBP01-063_COLLAB_NAME"
-msgstr ""
+msgstr "Ma Thuật Kiwawa"
 
 msgid "hBP01-063_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-065_NAME"
-msgstr ""
+msgstr "Takanashi Kiara"
 
 msgid "hBP01-065_ART_0_NAME"
 msgstr ""
@@ -1355,7 +1357,7 @@ msgid "hBP01-065_BLOOM_EFFECT"
 msgstr ""
 
 msgid "hBP01-100_NAME"
-msgstr ""
+msgstr "Mori Calliope"
 
 msgid "hBP01-100_ART_0_NAME"
 msgstr ""
@@ -1367,19 +1369,19 @@ msgid "hBP01-100_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-066_NAME"
-msgstr ""
+msgstr "Takanashi Kiara"
 
 msgid "hBP01-066_ART_0_NAME"
 msgstr ""
 
 msgid "hBP01-066_ART_1_NAME"
-msgstr ""
+msgstr "Quỳ xuống."
 
 msgid "hBP01-066_ART_1_EFFECT"
 msgstr ""
 
 msgid "hBP01-101_NAME"
-msgstr ""
+msgstr "Amelia Watson"
 
 msgid "hBP01-101_ART_0_NAME"
 msgstr ""
@@ -1391,7 +1393,7 @@ msgid "hBP01-101_COLLAB_EFFECT"
 msgstr ""
 
 msgid "hBP01-067_NAME"
-msgstr ""
+msgstr "Takanashi Kiara"
 
 msgid "hBP01-067_ART_0_NAME"
 msgstr ""
@@ -5965,6 +5967,9 @@ msgstr ""
 msgid "Mushroom"
 msgstr ""
 
+msgid "KoyoLabo"
+msgstr ""
+
 msgid "hBP04-003_NAME"
 msgstr ""
 
@@ -6737,5 +6742,242 @@ msgid "hBP04-103_NAME"
 msgstr ""
 
 msgid "hBP04-103_EFFECT"
+msgstr ""
+
+msgid "hBP04-043_NAME"
+msgstr ""
+
+msgid "hBP04-043_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-043_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-044_NAME"
+msgstr ""
+
+msgid "hBP04-044_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-044_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-044_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-045_NAME"
+msgstr ""
+
+msgid "hBP04-045_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-045_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-046_NAME"
+msgstr ""
+
+msgid "hBP04-046_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-046_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-047_NAME"
+msgstr ""
+
+msgid "hBP04-047_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-047_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP04-047_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP04-048_NAME"
+msgstr ""
+
+msgid "hBP04-048_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-048_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-048_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-048_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-090_NAME"
+msgstr ""
+
+msgid "hBP04-090_EFFECT"
+msgstr ""
+
+msgid "hBP04-101_NAME"
+msgstr ""
+
+msgid "hBP04-101_EFFECT"
+msgstr ""
+
+msgid "hBP04-102_NAME"
+msgstr ""
+
+msgid "hBP04-102_EFFECT"
+msgstr ""
+
+msgid "hBP04-106_NAME"
+msgstr ""
+
+msgid "hBP04-106_EFFECT"
+msgstr ""
+
+msgid "hBP04-027_NAME"
+msgstr ""
+
+msgid "hBP04-027_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-027_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-027_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-038_NAME"
+msgstr ""
+
+msgid "hBP04-038_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-038_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-038_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-038_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-095_NAME"
+msgstr ""
+
+msgid "hBP04-095_EFFECT"
+msgstr ""
+
+msgid "hBP04-001_NAME"
+msgstr ""
+
+msgid "hBP04-001_SKILL_NAME"
+msgstr ""
+
+msgid "hBP04-001_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-001_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBP04-001_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hBP04-008_NAME"
+msgstr ""
+
+msgid "hBP04-008_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-009_NAME"
+msgstr ""
+
+msgid "hBP04-009_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-009_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-010_NAME"
+msgstr ""
+
+msgid "hBP04-010_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-010_ART_1_NAME"
+msgstr ""
+
+msgid "hBP04-011_NAME"
+msgstr ""
+
+msgid "hBP04-011_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-011_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-012_NAME"
+msgstr ""
+
+msgid "hBP04-012_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-012_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-012_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP04-012_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP04-013_NAME"
+msgstr ""
+
+msgid "hBP04-013_ART_0_NAME"
+msgstr ""
+
+msgid "hBP04-013_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP04-013_GIFT_NAME"
+msgstr ""
+
+msgid "hBP04-013_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP04-097_NAME"
+msgstr ""
+
+msgid "hBP04-097_EFFECT"
+msgstr ""
+
+msgid "hBP04-100_NAME"
+msgstr ""
+
+msgid "hBP04-100_EFFECT"
+msgstr ""
+
+msgid "hBP04-105_NAME"
+msgstr ""
+
+msgid "hBP04-105_EFFECT"
+msgstr ""
+
+msgid "hY01-006_NAME"
+msgstr ""
+
+msgid "hY02-005_NAME"
+msgstr ""
+
+msgid "hY03-004_NAME"
+msgstr ""
+
+msgid "hY04-005_NAME"
+msgstr ""
+
+msgid "hY05-004_NAME"
+msgstr ""
+
+msgid "hY06-004_NAME"
 msgstr ""
 

@@ -1525,6 +1525,13 @@ offset_bottom = 190.0
 theme_override_font_sizes/font_size = 25
 text = "NO"
 
+[node name="ConfirmDialog" parent="CanvasLayer" instance=ExtResource("19_ogfn8")]
+visible = false
+offset_left = 384.0
+offset_top = 213.0
+offset_right = 384.0
+offset_bottom = 213.0
+
 [node name="Popup" type="ColorRect" parent="CanvasLayer"]
 visible = false
 offset_right = 1278.0
@@ -1582,13 +1589,6 @@ offset_bottom = 75.0
 texture_normal = ExtResource("18_b7won")
 ignore_texture_size = true
 stretch_mode = 0
-
-[node name="ConfirmDialog" parent="CanvasLayer" instance=ExtResource("19_ogfn8")]
-visible = false
-offset_left = 485.0
-offset_top = 252.0
-offset_right = -452.0
-offset_bottom = -206.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-670, -400)

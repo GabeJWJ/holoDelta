@@ -1027,6 +1027,14 @@ msgid "DOWNLOAD_CARDS"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
+msgid "DECK_AUTOLOAD_CONFIRM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "DECK_AUTOLOAD_CONFIRM_INFO"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"
 msgstr ""
 

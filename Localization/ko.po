@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-06-11 18:03\n"
+"PO-Revision-Date: 2025-06-15 21:53\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -1016,6 +1016,14 @@ msgstr "상대가 선공입니다."
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_CARDS"
 msgstr "카드를 설정하는 중입니다. 기다려주세요..."
+
+#: Scripts/Multiplayer.gd
+msgid "DECK_AUTOLOAD_CONFIRM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "DECK_AUTOLOAD_CONFIRM_INFO"
+msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"

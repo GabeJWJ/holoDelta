@@ -160,11 +160,8 @@ func _ready():
 					GameState.deck_to_import = converted_deck
 					$CanvasLayer/ConfirmDialog.set_yes_button_disabled(true)
 					$CanvasLayer/ConfirmDialog.visible = true
-					$CanvasLayer/ConfirmDialog.dialogTitle = "DECK CODE DETECTED.\nCONTINUE TO DECK BUILDER?"
-					$CanvasLayer/ConfirmDialog.dialogContent = """
-						The game has detected that you have imported a valid deck.\n
-						If you want to see it. Please click 'Yes' to proceed to the deck creator screen.
-					"""
+					$CanvasLayer/ConfirmDialog.dialogTitle = tr("DECK_AUTOLOAD_CONFIRM")
+					$CanvasLayer/ConfirmDialog.dialogContent = tr("DECK_AUTOLOAD_CONFIRM_INFO")
 					$CanvasLayer/ConfirmDialog.confirmed.connect(_on_deck_import_confirmed)
 					$CanvasLayer/ConfirmDialog.cancelled.connect(_on_deck_import_cancelled)
 					
@@ -182,18 +179,27 @@ func _on_deck_import_confirmed():
 # Variant: Whether Dictionary or null
 # Convert from base64 string to JSON string, then convert to dictionary
 func _parse_deck_code(deck_data: String, allow_log: bool=false) -> Variant:
+	#Gabe's change: It should use base64url instead, but Godot can't natively decode that
+	#So we'll need to convert it
+	deck_data = deck_data.replace("+","-").replace("/","_")
+	var true_length = ceili(deck_data.length() / 4.0) * 4
+	deck_data = deck_data.rpad(true_length, "=")
+	
 	var console = JavaScriptBridge.get_interface("console")
 	var json_deck = Marshalls.base64_to_utf8(deck_data)
-	if (allow_log): console.log("DECODED: " +json_deck)
+	if allow_log:
+		console.log("DECODED: " +json_deck)
 	if json_deck != null and json_deck != "":
 		var parsed_json = JSON.parse_string(json_deck)
 		if parsed_json == null:
-			if (allow_log): console.log("FAILED TO PARSE JSON. SKIPPED")
+			if allow_log:
+				console.log("FAILED TO PARSE JSON. SKIPPED")
 			return null
 		else:
 			return parsed_json
 	else:
-		if (allow_log): console.log("FAILED TO GET DECODED BASE 64. SKIPPED")
+		if allow_log:
+			console.log("FAILED TO GET DECODED BASE 64. SKIPPED")
 		return null
 	
 #region Download DB

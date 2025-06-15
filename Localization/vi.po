@@ -1,36 +1,18 @@
-# LANGUAGE translation for holoDelta for the following files:
-# res://Scenes/board.tscn
-# res://Scenes/deck_list.tscn
-# res://Scenes/sleeve_select.tscn
-# res://Scenes/side.tscn
-# res://Scenes/better_texture_button.tscn
-# res://Scenes/card.tscn
-# res://Scenes/die.tscn
-# res://Scenes/fuda.tscn
-# res://Scenes/info_panel.tscn
-# res://Scenes/zone.tscn
-# res://Scenes/deck_creation.tscn
-# res://Scripts/RemapButton.gd
-# res://Scripts/deck_creation.gd
-# res://Scripts/side.gd
-# res://Scripts/Multiplayer.gd
-# res://Scripts/card.gd
-#
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: holoDelta\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: vi\n"
+"Project-Id-Version: holodelta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.6\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: holodelta\n"
+"X-Crowdin-Project-ID: 724315\n"
+"X-Crowdin-Language: vi\n"
+"X-Crowdin-File: template.pot\n"
+"X-Crowdin-File-ID: 6\n"
+"Language-Team: Vietnamese\n"
+"Language: vi_VN\n"
+"PO-Revision-Date: 2025-06-15 21:53\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -82,23 +64,27 @@ msgstr "holoDelta"
 
 #: Scenes/board.tscn
 msgid "SUBTITLE"
-msgstr ""
-"Phần mềm mô phỏng không chính thức\n"
+msgstr "Phần mềm mô phỏng không chính thức\n"
 "của Trò chơi Thẻ bài Hololive"
 
-#: Scenes/board.tscn Scenes/side.tscn
+#: Scenes/board.tscn
+#: Scenes/side.tscn
 msgid "RPS_ROCK"
 msgstr "Búa"
 
-#: Scenes/board.tscn Scenes/side.tscn
+#: Scenes/board.tscn
+#: Scenes/side.tscn
 msgid "RPS_PAPER"
 msgstr "Bao"
 
-#: Scenes/board.tscn Scenes/side.tscn
+#: Scenes/board.tscn
+#: Scenes/side.tscn
 msgid "RPS_SCISSORS"
 msgstr "Kéo"
 
-#: Scenes/board.tscn Scripts/side.gd Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
 msgid "RPS_WAIT"
 msgstr "Đang chờ đối phương..."
 
@@ -114,39 +100,51 @@ msgstr "Tạo Sảnh chờ"
 msgid "DEBUG"
 msgstr "Làm lại Nhanh"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "PLAYERS_ONLINE"
 msgstr "{amount} người chơi online"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_JOIN"
 msgstr "Tham gia Sảnh chờ"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_SPECTATE"
 msgstr "Theo dõi Trận đấu"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_PRIVATE"
 msgstr "Riêng tư"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_ALLOWSPECTATORS"
 msgstr "Cho phép Theo dõi"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST"
 msgstr "Danh sách bài cấm"
 
-#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_NONE"
 msgstr "Không có Danh sách bài cấm"
 
-#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CURRENT"
 msgstr "Hiện tại"
 
-#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr "Hiện tại + Chưa ra mắt"
 
@@ -165,6 +163,34 @@ msgstr "Cho phép Bài Chưa ra mắt"
 #: Scenes/board.tscn
 msgid "OPTION_PROXY"
 msgstr "Cho phép Bài Thay thế"
+
+#: Scenes/board.tscn
+msgid "ACTION_DRAW"
+msgstr "Rút bài"
+
+#: Scenes/board.tscn
+msgid "ACTION_CHEER"
+msgstr "Pha Cổ vũ"
+
+#: Scenes/board.tscn
+msgid "ACTION_RESET"
+msgstr "Đặt lại Pha"
+
+#: Scenes/board.tscn
+msgid "ACTION_TABS"
+msgstr "Chuyển Tab"
+
+#: Scenes/board.tscn
+msgid "ACTION_LOCK"
+msgstr "Bảng Thông tin Khoá"
+
+#: Scenes/board.tscn
+msgid "ACTION_LSTEP"
+msgstr "Pha Cuối"
+
+#: Scenes/board.tscn
+msgid "ACTION_NSTEP"
+msgstr "Pha Tiếp Theo"
 
 #: Scenes/board.tscn
 msgid "COSMETICS"
@@ -190,7 +216,8 @@ msgstr "Chuyển về Thảm bài Mặc định"
 msgid "COSMETICS_D_DEFAULT"
 msgstr "Chuyển về Xúc xắc Mặc định"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_LOBBYCODE"
 msgstr "Nhập Mã Sảnh chờ"
 
@@ -202,7 +229,8 @@ msgstr "Đang tìm..."
 msgid "LOBBY_REFRESH"
 msgstr "Làm mới"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_GAMECODE"
 msgstr "Nhập Mã Ván đấu"
 
@@ -210,15 +238,18 @@ msgstr "Nhập Mã Ván đấu"
 msgid "LOBBY_HOST"
 msgstr "Chủ"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_NONE_CHOSEN"
 msgstr "Không có ai"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_READY"
 msgstr "Sẵn sàng"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "DECK_SELECT"
 msgstr "Chọn Bộ bài"
 
@@ -230,7 +261,8 @@ msgstr "Đã chọn"
 msgid "LOBBY_STARTGAME"
 msgstr "Bắt đầu Ván đấu"
 
-#: Scenes/board.tscn Scenes/side.tscn
+#: Scenes/board.tscn
+#: Scenes/side.tscn
 msgid "OK"
 msgstr "OK"
 
@@ -246,19 +278,27 @@ msgstr "Vị trí Bộ bài"
 msgid "INFO_CANCEL"
 msgstr "Đóng"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_GAMESTART_SPECTATE"
 msgstr "Ván đấu đã bắt đầu. Theo dõi không?"
 
-#: Scenes/board.tscn Scenes/side.tscn Scenes/deck_creation.tscn
+#: Scenes/board.tscn
+#: Scenes/deck_list.tscn
+#: Scenes/side.tscn
+#: Scenes/deck_creation.tscn
 msgid "YES"
 msgstr "Có"
 
-#: Scenes/board.tscn Scenes/side.tscn Scenes/deck_creation.tscn
+#: Scenes/board.tscn
+#: Scenes/deck_list.tscn
+#: Scenes/side.tscn
+#: Scenes/deck_creation.tscn
 msgid "NO"
 msgstr "Không"
 
-#: Scenes/board.tscn Scenes/deck_creation.tscn
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 msgid "MENU"
 msgstr "Màn hình Chính"
 
@@ -267,12 +307,12 @@ msgid "MENU_PROMPT"
 msgstr "Chắc chắn muốn trở về Màn hình Chính chứ?"
 
 #: Scenes/deck_list.tscn
-msgid "DECK_LOAD"
-msgstr "Nạp bộ bài từ File"
-
-#: Scenes/deck_list.tscn
 msgid "DECK_SELECT_CANCEL"
 msgstr "Huỷ"
+
+#: Scenes/deck_list.tscn
+msgid "DECK_DELETE_CONFIRM"
+msgstr "Xóa Vĩnh Viễn {deckName}?"
 
 #: Scenes/sleeve_select.tscn
 msgid "SLEEVE_LOAD"
@@ -322,11 +362,13 @@ msgstr "Đang xem lá bài đổi của đối phương"
 msgid "TAB_OSHI"
 msgstr "Oshi"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
 msgid "NAME"
 msgstr "Tên"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
 msgid "COLOR"
 msgstr "Màu sắc"
 
@@ -342,27 +384,33 @@ msgstr "Tìm kiếm"
 msgid "TAB_HOLOMEM"
 msgstr "Holomem"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
 msgid "LEVEL"
 msgstr "Cấp độ"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
 msgid "LEVEL_ANY"
 msgstr "Cấp độ Bất kỳ"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
 msgid "LEVEL_DEBUT"
 msgstr "Debut"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
 msgid "LEVEL_1"
 msgstr "Thứ 1"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
 msgid "LEVEL_2"
 msgstr "Thứ 2"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
 msgid "LEVEL_SPOT"
 msgstr "SPOT"
 
@@ -378,7 +426,8 @@ msgstr "Buzz"
 msgid "TAB_SUPPORT"
 msgstr "Hỗ trợ"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
 msgid "SUPPORT_TYPE"
 msgstr "Loại"
 
@@ -542,6 +591,12 @@ msgstr "Định dạng của bộ bài cổ vũ không đúng. Bạn có chắc 
 msgid "DECKERROR_NOCHEER"
 msgstr "Không có bộ bài cổ vũ"
 
+#: Scripts/deck_creation.gd
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid ""
+msgstr ""
+
 #: Scripts/side.gd
 msgid "DECK"
 msgstr "Bộ bài"
@@ -570,7 +625,8 @@ msgstr "Đổi lại bài?"
 msgid "MULLIGAN_FORCED"
 msgstr "Không có debut được tìm thấy. Bạn phải đổi lại bài."
 
-#: Scripts/side.gd Scripts/Multiplayer.gd
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
 msgid "LOSS"
 msgstr "Bạn đã Thua!"
 
@@ -782,7 +838,8 @@ msgstr "Huỷ tráo tay bài vào bộ bài"
 msgid "DECK_RPS"
 msgstr "Chơi Kéo Búa Bao"
 
-#: Scripts/side.gd Scripts/Multiplayer.gd
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
 msgid "FORFEIT"
 msgstr "Đầu hàng"
 
@@ -801,6 +858,10 @@ msgstr "Tìm kiếm"
 #: Scripts/side.gd
 msgid "CHEERDECK_SHUFFLE"
 msgstr "Tráo bài"
+
+#: Scripts/side.gd
+msgid "ARCHIVE_HAND_ALL"
+msgstr "Lưu trữ tay bài"
 
 #: Scripts/side.gd
 msgid "ARCHIVE_SEARCH"
@@ -953,6 +1014,14 @@ msgstr "Đối Thủ Đi Trước"
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_CARDS"
 msgstr "Đang Chuẩn Bị Bài, Xin Vui Lòng Chờ..."
+
+#: Scripts/Multiplayer.gd
+msgid "DECK_AUTOLOAD_CONFIRM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "DECK_AUTOLOAD_CONFIRM_INFO"
+msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"
@@ -1291,6 +1360,10 @@ msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr "{person} đã gắn {attachName} vào ({toZone}) {toName} từ bộ bài cổ vũ"
 
 #: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HAND_ALL"
+msgstr "{person} đã lưu trữ toàn bộ bài trên tay"
+
+#: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr "{person} đã đánh {cardName} về hàng sau từ kho lưu trữ"
 
@@ -1619,6 +1692,10 @@ msgid "YOU_MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr "Bạn đã gắn {attachName} vào ({toZone}) {toName} từ bộ bài cổ vũ"
 
 #: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HAND_ALL"
+msgstr "Bạn đã lưu trữ toàn bộ bài trên tay"
+
+#: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr "Bạn đã đánh {cardName} từ kho lưu trữ trở lại"
 
@@ -1648,20 +1725,17 @@ msgstr "Bạn thực sự muốn đầu hang chứ?"
 
 #: Scripts/Multiplayer.gd
 msgid "WINCONSENT_DECKOUT"
-msgstr ""
-"Bạn đã bắt đầu lượt với bộ bài trống.\n"
+msgstr "Bạn đã bắt đầu lượt với bộ bài trống.\n"
 "Bạn chấp nhận thua cuộc vì hết bài chứ?"
 
 #: Scripts/Multiplayer.gd
 msgid "WINCONSENT_LIFE"
-msgstr ""
-"Bạn không còn bài nào sống sót.\n"
+msgstr "Bạn không còn bài nào sống sót.\n"
 "Bạn chấp nhận thua cuộc vì hết mạng chứ?"
 
 #: Scripts/Multiplayer.gd
 msgid "WINCONSENT_EMPTYSTAGE"
-msgstr ""
-"Bạn không có holomem nào trên sân khấu.\n"
+msgstr "Bạn không có holomem nào trên sân khấu.\n"
 "Bạn chấp nhận thua cuộc vì có sân khấu trống chứ?"
 
 #: Scripts/Multiplayer.gd
@@ -1730,8 +1804,7 @@ msgstr "buzz!"
 
 #: Scripts/card.gd
 msgid "INFO_OSHI"
-msgstr ""
-"{colorText} Oshi Holomem\n"
+msgstr "{colorText} Oshi Holomem\n"
 "Mạng: {life}{tagsText}"
 
 #: Scripts/card.gd
@@ -1764,8 +1837,7 @@ msgstr "Buzz"
 
 #: Scripts/card.gd
 msgid "INFO_HOLOMEM_1"
-msgstr ""
-"{colorText} {levelText} {buzzText}Holomem\n"
+msgstr "{colorText} {levelText} {buzzText}Holomem\n"
 "HP: {hpText}\n"
 "Nhãn: {tagsText}"
 
@@ -1784,3 +1856,4 @@ msgstr "{supportText} ({typeText}){tagsText}"
 #: Scripts/card.gd
 msgid "INFO_LIMITED"
 msgstr "GIỚI HẠN: Chỉ được sử dung 1 lá trong lượt chơi."
+
