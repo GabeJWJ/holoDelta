@@ -23,9 +23,6 @@ var spectatedSides = {}
 var inGame = false
 var rps = false
 
-# Deck payload - used for web version
-var webDeckPayload = null
-
 #Lobby stuff
 @onready var lobby_banlist = $CanvasLayer/LobbyCreateMenu/VBoxContainer/OptionButton
 @onready var lobby_private = $CanvasLayer/LobbyCreateMenu/VBoxContainer/CheckButton
@@ -152,16 +149,11 @@ func _ready():
 		var console = JavaScriptBridge.get_interface("console")
 		# get the query strings
 		var query_string = window.location.search
-		#console.log(query_string)
 		if (query_string):
 			# parse the query strings
 			var params = WebUtils.parse_query_string(query_string)
-			console.log(params)
 			#if contains the imported deck => execute needed action
 			if (params.has("imported_deck")):
-				console.log("Imported deck detected!");
-				console.log("DECK CODE: " + params["imported_deck"])
-				
 				var converted_deck = _parse_deck_code(params["imported_deck"], OS.is_debug_build())
 				if converted_deck != null:
 					# Load the deck to game state
