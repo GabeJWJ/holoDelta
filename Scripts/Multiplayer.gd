@@ -181,7 +181,7 @@ func _on_deck_import_confirmed():
 func _parse_deck_code(deck_data: String, allow_log: bool=false) -> Variant:
 	#Gabe's change: It should use base64url instead, but Godot can't natively decode that
 	#So we'll need to convert it
-	deck_data = deck_data.replace("+","-").replace("/","_")
+	deck_data = deck_data.replace("-","+").replace("_","/")
 	var true_length = ceili(deck_data.length() / 4.0) * 4
 	deck_data = deck_data.rpad(true_length, "=")
 	
