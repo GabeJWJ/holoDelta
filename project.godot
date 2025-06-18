@@ -13,6 +13,7 @@ config_version=5
 config/name="holoDelta"
 run/main_scene="res://Scenes/board.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/image="res://delta_splash_screen.png"
 config/icon="res://icon.png"
 config/windows_native_icon="res://icon.ico"
 
