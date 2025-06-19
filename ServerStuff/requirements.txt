@@ -3,3 +3,4 @@ uvicorn[standard]
 gunicorn
 sqlalchemy
 databases[sqlite]
+python-dotenv

@@ -3,8 +3,6 @@ from globals.data import get_data
 from random import shuffle, randrange
 from classes.card import Card
 
-
-
 class Side:
     def __init__(self, deck, game, player, opponent):
         self.game = game

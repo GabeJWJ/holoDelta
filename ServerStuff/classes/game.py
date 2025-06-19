@@ -3,7 +3,10 @@ from globals.data import get_data
 from globals.live_data import get_all_games, set_game, remove_game
 from classes.side import Side
 from random import sample
+from models.live_match import LiveMatch
 from utils.game_network_utils import update_numbers_all
+from utils.sql_utils import SessionLocal
+from sqlalchemy.orm.attributes import flag_modified
 
 class Game:
     def __init__(self, player1, player1deck, player2, player2deck, settings = None):
@@ -30,12 +33,44 @@ class Game:
         #Ingame RPS
         self.in_rps = False
         self.rps = {player1.id:-1, player2.id:-1}
+
+        # Database update
+        # write to db
+        # Create a new session
+        db = SessionLocal()
+        match = LiveMatch(
+            match_code=self.id,
+            match_data={
+                "players": [
+                    {"id": player1.id, "name": player1.name, "side": "top" , "hp": 0, "life" : 0},
+                    {"id": player2.id, "name": player2.name, "side": "bottom", "hp": 0, "life" : 0}
+                ],
+                "recently_played_card": None,
+                "current_turn": self.current_turn,
+                "step": self.step,
+                "winner": None,
+            }
+        )
+        db.add(match)
+        db.commit()
+        db.close()
     
     async def close_game(self):
         for player in self.players.values():
             await player.tell("Game","Close")
             player.game = None
 
+        db = SessionLocal()
+        # Find match session by game id
+        item_to_delete = db.query(LiveMatch).filter(LiveMatch.match_code == self.id).first()
+
+        # Delete it
+        if item_to_delete:
+            db.delete(item_to_delete)
+            db.commit()
+        else:
+            print("Match not found")
+        db.close()
         remove_game(self.id)
         await update_numbers_all()
     
@@ -217,6 +252,44 @@ class Game:
                         await spectator.tell("Game","Chat",{"sender":player_id,"message":data["message"]})
             case _:
                 pass
+        # Update DB after call
+        db = SessionLocal()
+
+        # Fetch match
+        match = db.query(LiveMatch).filter(LiveMatch.match_code == self.id).first()
+
+        # Update nested JSON (example: set score)
+        if match:
+            player_ids = list(self.playing.keys())
+
+            for id in player_ids:
+                index = next((i for i, obj in enumerate(match.match_data["players"]) if obj["id"] == id), None)
+                if index is not None:
+                    result = match.match_data["players"][index]
+                    # print("LIFE")
+                    # for card in self.playing[id].life:
+                    #     print(str(card.id) + " " + str(card.number))
+                    # print("HOLOPOWER")
+                    # for card in self.playing[id].holopower:
+                    #     print(str(card.id) + " " + str(card.number))
+
+                    result["life"] = len(self.playing[id].life)
+                    # Somehow, non-holomem cards can still be put in holopower
+                    # so a fallback value is required for this
+                    result["hp"] = sum(getattr(card, "hp", 0) + getattr(card, "extra_hp", 0) for card in self.playing[id].holopower)
+
+                    # replace the whole players object
+                    match.match_data["players"][index] = result
+                else:
+                    print("player not found in match")
+            # since its json, it has to be manually 
+            # marked as modified
+            flag_modified(match, "match_data")
+            db.commit()
+            db.refresh(match)
+
+        db.close()      
+        
     
     async def to_dict(self):
         return {"step":self.step,"firstTurn":self.firstTurn,"players":{player.id: {"name":player.name, "side":await self.playing[player.id].to_dict()} for player in self.players.values()}}
