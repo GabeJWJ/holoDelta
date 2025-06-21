@@ -1260,6 +1260,7 @@ func _on_card_clicked(card_id : int) -> void:
 				popup.add_item(tr("CARD_REVEALED_BOTTOMDECK"),24)
 				popup.add_item(tr("CARD_REVEALED_ARCHIVE"),25)
 				popup.add_item(tr("CARD_REVEALED_HOLOPOWER"),26)
+				popup.add_item(tr("CARD_REVEALED_BOTTOMHOLOPOWER"),27)
 	
 	show_popup()
 

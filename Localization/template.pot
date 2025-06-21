@@ -802,6 +802,10 @@ msgid "CARD_REVEALED_HOLOPOWER"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "CARD_REVEALED_BOTTOMHOLOPOWER"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "DECK_DRAW"
 msgstr ""
 
@@ -871,11 +875,11 @@ msgid "CHEERDECK_SHUFFLE"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "ARCHIVE_HAND_ALL"
+msgid "ARCHIVE_SEARCH"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "ARCHIVE_SEARCH"
+msgid "ARCHIVE_HAND_ALL"
 msgstr ""
 
 #: Scripts/side.gd
@@ -1132,6 +1136,10 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_BOTTOMHOLOPOWER"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
@@ -1464,6 +1472,10 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_BOTTOMHOLOPOWER"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
@@ -1861,4 +1873,3 @@ msgstr ""
 #: Scripts/card.gd
 msgid "INFO_LIMITED"
 msgstr ""
-
