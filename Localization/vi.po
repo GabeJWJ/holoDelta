@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2025-06-15 21:53\n"
+"PO-Revision-Date: 2025-06-21 19:18\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -791,6 +791,10 @@ msgid "CARD_REVEALED_HOLOPOWER"
 msgstr "Sức mạnh Holo"
 
 #: Scripts/side.gd
+msgid "CARD_REVEALED_BOTTOMHOLOPOWER"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "DECK_DRAW"
 msgstr "Rút"
 
@@ -860,12 +864,12 @@ msgid "CHEERDECK_SHUFFLE"
 msgstr "Tráo bài"
 
 #: Scripts/side.gd
-msgid "ARCHIVE_HAND_ALL"
-msgstr "Lưu trữ tay bài"
-
-#: Scripts/side.gd
 msgid "ARCHIVE_SEARCH"
 msgstr "Tìm kiếm"
+
+#: Scripts/side.gd
+msgid "ARCHIVE_HAND_ALL"
+msgstr "Lưu trữ tay bài"
 
 #: Scripts/side.gd
 msgid "HOLOPOWER_ARCHIVE"
@@ -1017,11 +1021,13 @@ msgstr "Đang Chuẩn Bị Bài, Xin Vui Lòng Chờ..."
 
 #: Scripts/Multiplayer.gd
 msgid "DECK_AUTOLOAD_CONFIRM"
-msgstr ""
+msgstr "ĐÃ PHÁT HIỆN MÃ BỘ BÀI.\n"
+"TIẾP TỤC TỚI TRÌNH TẠO BỘ BÀI?"
 
 #: Scripts/Multiplayer.gd
 msgid "DECK_AUTOLOAD_CONFIRM_INFO"
-msgstr ""
+msgstr "Trò chơi đã phát hiện bạn đã nhập bộ bài hợp lệ.\n"
+"Nếu bạn muốn xem, nhấn nút 'Có' để vào màn hình tạo bộ bài."
 
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"
@@ -1122,6 +1128,10 @@ msgstr "{person} đã lưu trữ {cardName}"
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_HOLOPOWER"
 msgstr "{person} đã đặt {cardName} dưới dạng sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_BOTTOMHOLOPOWER"
+msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_OSHISKILL_SP"
@@ -1454,6 +1464,10 @@ msgstr "Bạn đã lưu trữ {cardName}"
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
 msgstr "Bạn đã đặt {cardName} dưới dạng Sức mạnh Holo"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_BOTTOMHOLOPOWER"
+msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_OSHISKILL_SP"

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2025-06-15 21:53\n"
+"PO-Revision-Date: 2025-06-21 19:18\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Khi holomem này bị hạ gục, nhận 2 Sát Thương Mạng"
@@ -373,7 +373,7 @@ msgid "AnimalEars"
 msgstr "Tai Thú"
 
 msgid "Art"
-msgstr ""
+msgstr "Chiêu Thức"
 
 msgid "Baby"
 msgstr "Em bé"
@@ -499,31 +499,31 @@ msgid "hSD01-005_ART_0_NAME"
 msgstr "nun nun shiyo"
 
 msgid "hSD01-005_ART_1_NAME"
-msgstr ""
+msgstr "Trái tim bạn âm u... nhưng rồi sáng sủa!"
 
 msgid "hSD01-006_NAME"
 msgstr "Tokino Sora"
 
 msgid "hSD01-006_ART_0_NAME"
-msgstr ""
+msgstr "Buổi Diễn Mơ Ước"
 
 msgid "hSD01-006_ART_1_NAME"
-msgstr ""
+msgstr "Đồng Điệu SoraAZ"
 
 msgid "hSD01-006_ART_1_EFFECT"
-msgstr ""
+msgstr "Nếu như có bất kỳ holomem nào là AZKi ở trên sàn diễn, chiêu thức này tăng thêm +50 sức mạnh."
 
 msgid "hSD01-007_NAME"
 msgstr "IRyS"
 
 msgid "hSD01-007_ART_0_NAME"
-msgstr ""
+msgstr "Hiện Thân của Hy Vọng"
 
 msgid "hSD01-007_COLLAB_NAME"
-msgstr ""
+msgstr "HOPE"
 
 msgid "hSD01-007_COLLAB_EFFECT"
-msgstr ""
+msgstr "Nhìn vào thẻ Sức Mạnh holo của bạn, tiết lộ một lá, và đặt lên tay bài. Sau đó lấy một lá từ trên tay và đặt xuống thành Sức Mạnh holo."
 
 msgid "hSD01-008_NAME"
 msgstr "AZKi"
@@ -538,7 +538,7 @@ msgid "hSD01-009_ART_0_NAME"
 msgstr "Ở đâu tiếp theo, ở đâu tiếp theo"
 
 msgid "hSD01-009_COLLAB_NAME"
-msgstr ""
+msgstr "Bành Trướng Địa Đồ"
 
 msgid "hSD01-009_COLLAB_EFFECT"
 msgstr ""
@@ -553,10 +553,10 @@ msgid "hSD01-011_NAME"
 msgstr "AZKi"
 
 msgid "hSD01-011_ART_0_NAME"
-msgstr ""
+msgstr "Trọng Lực SoraAZ"
 
 msgid "hSD01-011_ART_0_EFFECT"
-msgstr ""
+msgstr "Nếu như có bất kỳ holomem nào là Tokino Sora ở trên sàn diễn, đặt bài trên cùng của bộ bài cổ vũ tới holomem bất kỳ của bạn."
 
 msgid "hSD01-011_ART_1_NAME"
 msgstr "Bài Hát Định Mệnh"
@@ -673,7 +673,7 @@ msgid "hBP01-035_BLOOM_NAME"
 msgstr "Nhạc Hội Bremen"
 
 msgid "hBP01-035_BLOOM_EFFECT"
-msgstr ""
+msgstr "Bạn có thể gắn 1 Công cụ từ kho lưu trữ của bạn tới holomem bất kỳ của bạn."
 
 msgid "hBP01-036_NAME"
 msgstr "Aki Rosenthal"
@@ -694,7 +694,7 @@ msgid "hBP01-037_ART_0_NAME"
 msgstr "Chìa Khóa Bí Mật"
 
 msgid "hBP01-037_ART_0_EFFECT"
-msgstr ""
+msgstr "Nếu như holomem này được gắn Công cụ, chiêu thức cộng thêm +50 sức mạnh."
 
 msgid "hBP01-037_BLOOM_NAME"
 msgstr "Búp Bê Gothic"
@@ -709,7 +709,7 @@ msgid "hBP01-038_ART_0_NAME"
 msgstr "Konpeko!"
 
 msgid "hBP01-038_ART_0_EFFECT"
-msgstr ""
+msgstr "Bạn có thể gieo xúc sắc: Nếu như kết quả là chẵn, chiêu thức này cộng thêm + 20 sức mạnh."
 
 msgid "hBP01-041_NAME"
 msgstr "Usada Pekora"
@@ -760,7 +760,7 @@ msgid "hBP01-046_NAME"
 msgstr "AZKi"
 
 msgid "hBP01-046_ART_0_NAME"
-msgstr ""
+msgstr "Tôi đã đến một thế giới thật là tuyệt vời!"
 
 msgid "hBP01-046_BLOOM_NAME"
 msgstr "Bởi vì tất cả Đội Tiên phong đều ở đó"
