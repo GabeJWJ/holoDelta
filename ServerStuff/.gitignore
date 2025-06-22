@@ -1,0 +1,8 @@
+# Ignore Python cache files
+**/__pycache__/*
+# Ignore all files in the Holodelta web
+**/Holodelta_web/*
+# Ignore Python bytecode files
+**/*.pyc
+# Ignore environment variable files
+**/.env*
