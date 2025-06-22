@@ -6,17 +6,12 @@ from fastapi.middleware.gzip import GZipMiddleware
 from traceback import format_exc
 from classes.connection_manager import ConnectionManager
 from classes.player import Player
-from models.live_match import LiveMatch
 from utils.card_utils import card_info
 from globals.data import initialize, get_data
 from globals.live_data import get_all_players, get_manager, initialize_manager
 from utils.game_network_utils import update_numbers_all
 from utils.game_utils import call_command
-from utils.sql_utils import SessionLocal, initialize_database
-from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
 
 # Initialize the data source
 initialize()
@@ -30,7 +25,6 @@ fudas = get_data("fudas")
 identifier = get_data("identifier")
 
 initialize_manager(ConnectionManager())
-initialize_database()
 
 app = FastAPI()
 app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=9)
@@ -53,15 +47,10 @@ def check_connection():
     return {"Success"}
 
 
-@app.get("/live-match/{game_id}")
-def get_live_match_data(game_id: str):
-    # Get the match data via game id
-    db = SessionLocal()
-    match = db.query(LiveMatch).filter(LiveMatch.match_code == game_id).first()
-    db.close()
-    if match:
-        return match.match_data
-    return {"error": "Match not found"}
+@app.get("/live-match/:game_id")
+def get_live_match_data():
+    # Basic SQL stuff
+    return
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
