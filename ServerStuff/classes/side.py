@@ -338,9 +338,10 @@ class Side:
 
     async def move_card_to_zone(self, card_id, zone, facedown=False):
         self.cards[card_id].onstage = True
-        
-        #if await self.find_what_zone(card_id):
-            #await self.remove_old_card(card_id)
+
+        for possible_old_zone in self.zones:
+            if self.zones[possible_old_zone] == card_id:
+                self.zones[possible_old_zone] = -1
         
         self.zones[zone] = card_id
 

@@ -532,6 +532,10 @@ stream = SubResource("AudioStreamRandomizer_1ol4w")
 max_polyphony = 20
 bus = &"SFX"
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="zone_clicked" from="Zones/Center" to="." method="_on_zone_clicked"]
 [connection signal="zone_info_clear" from="Zones/Center" to="." method="clear_info"]
 [connection signal="zone_info_set" from="Zones/Center" to="." method="_on_zone_enter"]
@@ -582,3 +586,4 @@ bus = &"SFX"
 [connection signal="pressed" from="CanvasLayer/Question/Lose" to="." method="_on_lose_pressed"]
 [connection signal="pressed" from="CanvasLayer/Question/KeepPlaying" to="." method="_on_keep_playing_pressed"]
 [connection signal="pressed" from="CanvasLayer/Question/OK" to="." method="yes_mulligan"]
+[connection signal="timeout" from="Timer" to="." method="finish_starting_spectate"]

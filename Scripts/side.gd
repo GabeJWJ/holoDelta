@@ -207,15 +207,14 @@ func _ready():
 			newCard1.visible = false
 	
 	if "holopower" in side_info:
+		#print(side_info)
 		for i in range(int(side_info["holopower"])):
 			var newCard1 = create_fake_card(cheerBack)
 			holopower.cardList.append(newCard1)
 			newCard1.visible = false
 	if "archive" in side_info:
 		for card_info in side_info["archive"]:
-			var newCard1 = get_real_card(card_info, cheerBack if card_info.cardType == "Cheer" else mainBack)
-			archive.cardList.append(newCard1)
-			newCard1.visible = false
+			add_fake_to_fuda(archive,card_info)
 	if "life" in side_info:
 		for index in range(int(side_info["life"])):
 			var newLife = create_fake_card(cheerBack)
@@ -230,8 +229,25 @@ func _ready():
 		for index in range(int(side_info["hand"])):
 			add_fake_to_hand()
 	if "zones" in side_info:
+		$Timer.start()
 		for zone in side_info["zones"]:
+			if side_info["zones"][zone]:
+				preliminary_phase = false
+				var temp_new_card = get_real_card(side_info["zones"][zone], mainBack)
+				var temp_on_top_of = []
+				for oto in side_info["zones"][zone]["onTopOf"]:
+					temp_on_top_of.append(get_real_card(oto, mainBack))
+				temp_on_top_of.reverse()
+				for oto_index in range(temp_on_top_of.size()):
+					if oto_index + 1 == temp_on_top_of.size():
+						temp_new_card.playOnTopOf(temp_on_top_of[oto_index])
+					else:
+						temp_on_top_of[oto_index+1].playOnTopOf(temp_on_top_of[oto_index])
+				for att in side_info["zones"][zone]["attached"]:
+					attach_fake_card(att, side_info["zones"][zone])
 			move_fake_card_to_zone(side_info["zones"][zone], $Zones.get_node(zone), side_info["zones"][zone]==null)
+			
+			
 	if "revealed" in side_info:
 		for card_to_reveal in side_info["revealed"]:
 			reveal_fake_card(card_to_reveal)
@@ -255,6 +271,18 @@ func _ready():
 	if is_your_side:
 		$CanvasLayer/Question.visible = true
 		$SubViewportContainer/SubViewport/Node3D/Die.is_your_die = true
+
+func finish_starting_spectate():
+	# Really hacky workaround for a bizzare issue when spectating a game in progress.
+	# Having the timer on 0.5 seconds is noticable, but 0.1 just didn't work.
+	# Didn't have the stomach to try other timings.
+	
+	for zone_info in zones:
+		if zone_info[1] != -1:
+			var temp_card = all_cards[zone_info[1]]
+			
+			temp_card.move_to(Vector2(1000,1000))
+			temp_card.move_to(zone_info[0].position)
 
 #Yes I know I can bind arguments to the signal connection
 #Godot has been randomly removing those connections though
