@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: holodelta\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-06-21 14:47-0400\n"
+"PO-Revision-Date: 2025-07-08 23:54-0400\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Language: en_US\n"
@@ -90,12 +90,12 @@ msgid "DECK_CREATE"
 msgstr "Create/Edit Deck"
 
 #: Scenes/board.tscn
-msgid "LOBBY_CREATE"
-msgstr "Create Lobby"
-
-#: Scenes/board.tscn
 msgid "DEBUG"
 msgstr "Quick Refresh"
+
+#: Scenes/board.tscn
+msgid "LOBBY_CREATE"
+msgstr "Create Lobby"
 
 #: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "PLAYERS_ONLINE"
@@ -141,9 +141,17 @@ msgstr "Back"
 msgid "EXIT"
 msgstr "Exit Game"
 
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "OPTION_EN"
+msgstr "Only EN"
+
 #: Scenes/board.tscn
 msgid "OPTION_UNREVEALED"
 msgstr "Allow Unrevealed Cards"
+
+#: Scenes/board.tscn
+msgid "OPTION_LANGUAGE"
+msgstr "Match Card Language"
 
 #: Scenes/board.tscn
 msgid "OPTION_PROXY"
@@ -155,11 +163,11 @@ msgstr "Draw"
 
 #: Scenes/board.tscn
 msgid "ACTION_CHEER"
-msgstr "Cheer Step"
+msgstr "Cheer Phase"
 
 #: Scenes/board.tscn
 msgid "ACTION_RESET"
-msgstr "Reset Step"
+msgstr "Reset Phase"
 
 #: Scenes/board.tscn
 msgid "ACTION_TABS"
@@ -171,11 +179,11 @@ msgstr "Lock Info Panel"
 
 #: Scenes/board.tscn
 msgid "ACTION_LSTEP"
-msgstr "Last Step"
+msgstr "Last Phase"
 
 #: Scenes/board.tscn
 msgid "ACTION_NSTEP"
-msgstr "Next Step"
+msgstr "Next Phase"
 
 #: Scenes/board.tscn
 msgid "COSMETICS"
@@ -481,7 +489,7 @@ msgstr "{cardNum} is not an oshi."
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_BANNED"
-msgstr "{cardNum} is banned"
+msgstr "{cardNum} is banned."
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_UNDERDECK"
@@ -517,11 +525,11 @@ msgstr "{cardNum} is not a cheer card."
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_OVERAMOUNT"
-msgstr "Too many copies of {cardNum}"
+msgstr "Too many copies of {cardNum}."
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_RESTRICTED"
-msgstr "{cardNum} is restricted to fewer copies than you have"
+msgstr "{cardNum} is restricted to fewer copies than you have."
 
 #: Scripts/deck_creation.gd
 msgid "DECK_OVERWRITE"
@@ -549,7 +557,7 @@ msgstr ""
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NODECK"
-msgstr "There is no main deck"
+msgstr "There is no main deck."
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_CHEERBADFORMAT"
@@ -559,7 +567,11 @@ msgstr ""
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOCHEER"
-msgstr "There is no cheer deck"
+msgstr "There is no cheer deck."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_ONLYEN"
+msgstr "{cardNum} (or the specific art chosen) is not available in English."
 
 #: Scripts/side.gd
 msgid "DECK"
@@ -994,6 +1006,10 @@ msgid "DECK_AUTOLOAD_CONFIRM_INFO"
 msgstr ""
 "The game has detected that you have imported a valid deck.\n"
 "If you want to see it, click 'Yes' to proceed to the deck creator screen."
+
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT_EN"
+msgstr "Current (EN)"
 
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"
@@ -1865,6 +1881,3 @@ msgstr "{supportText} ({typeText}){tagsText}"
 #: Scripts/card.gd
 msgid "INFO_LIMITED"
 msgstr "LIMITED: Only one can be used per turn."
-
-#~ msgid "DECK_LOAD"
-#~ msgstr "Load Deck from File"

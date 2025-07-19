@@ -1,7 +1,7 @@
 from utils.card_utils import card_info, find_in_list
 from globals.data import get_data
 
-def check_legal(deck, banlist = None):
+def check_legal(deck, banlist = None, only_en = False):
     if banlist is None:
         banlist = get_data("current_banlist")
 
@@ -17,7 +17,11 @@ def check_legal(deck, banlist = None):
             if "cardType" in oshi_card:
                 if oshi_card["cardType"] == "Oshi":
                     if str(oshi_art) in oshi_card["cardArt"]:
-                        if find_in_list(banlist, oshi_number) is not None:
+                        if find_in_list(banlist, oshi_number) is None:
+                            if only_en and not check_if_card_is_en(oshi_number, oshi_art):
+                                result["legal"] = False
+                                result["reasons"].append(["DECKERROR_ONLYEN",oshi_number])
+                        else:
                             result["legal"] = False
                             result["reasons"].append(["DECKERROR_BANNED",oshi_number])
                     else:
@@ -58,7 +62,11 @@ def check_legal(deck, banlist = None):
                             if main_count > 0:
                                 if str(main_art) in main_card["cardArt"]:
                                     banned_code = find_in_list(banlist, main_number)
-                                    if banned_code is not None:
+                                    if banned_code is None:
+                                        if only_en and not check_if_card_is_en(main_number, main_art):
+                                            result["legal"] = False
+                                            result["reasons"].append(["DECKERROR_ONLYEN",main_number])
+                                    else:
                                         if banlist[banned_code] == 0:
                                             result["legal"] = False
                                             result["reasons"].append(["DECKERROR_BANNED",main_number])
@@ -119,7 +127,11 @@ def check_legal(deck, banlist = None):
                             if cheer_count > 0:
                                 if str(cheer_art) in cheer_card["cardArt"]:
                                     banned_code = find_in_list(banlist, cheer_number)
-                                    if banned_code is not None:
+                                    if banned_code is None:
+                                        if only_en and not check_if_card_is_en(cheer_number, cheer_art):
+                                            result["legal"] = False
+                                            result["reasons"].append(["DECKERROR_ONLYEN",cheer_number])
+                                    else:
                                         if banlist[banned_code] == 0:
                                             result["legal"] = False
                                             result["reasons"].append(["DECKERROR_BANNED",cheer_number])
@@ -159,3 +171,8 @@ def check_legal(deck, banlist = None):
         real_deck = {"oshi":deck["oshi"],"deck":deck["deck"],"cheerDeck":deck["cheerDeck"]}
     
     return real_deck, result
+
+def check_if_card_is_en(cardNumber, artNum):
+    card_data = get_data("card_data")
+    return cardNumber in card_data and str(artNum) in card_data[cardNumber]["cardArt"] and \
+		"en" in card_data[cardNumber]["cardArt"][str(artNum)] and not card_data[cardNumber]["cardArt"][str(artNum)]["en"]["proxy"]

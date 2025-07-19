@@ -33,6 +33,20 @@ func _all_decks() -> void:
 	if dir:
 		for file_name in dir.get_files():
 			if json.parse(FileAccess.get_file_as_string(path + "/" + file_name)) == 0:
+				if Settings.settings.OnlyEN:
+					var found_not_en = false
+					if !check_if_card_is_en(json.data.oshi[0],json.data.oshi[1]):
+						found_not_en = true
+					for card_info in json.data.deck:
+						if !check_if_card_is_en(card_info[0],card_info[2]):
+							found_not_en = true
+							break
+					for card_info in json.data.cheerDeck:
+						if !check_if_card_is_en(card_info[0],card_info[2]):
+							found_not_en = true
+							break
+					if found_not_en:
+						continue
 				var deckButton = deckButtonClass.instantiate()
 				deckButton.deck_info = json.data
 				deckButton.pressed.connect(_set_selected)
@@ -42,6 +56,10 @@ func _all_decks() -> void:
 		$ScrollContainer.scroll_vertical = 0 #Reset the bar to the top
 	else:
 		print("An error occurred when trying to access the path.")
+
+func check_if_card_is_en(cardNumber, artNum):
+	return cardNumber in Database.cardData and str(artNum) in Database.cardData[cardNumber]["cardArt"] and \
+		"en" in Database.cardData[cardNumber]["cardArt"][str(artNum)] and !Database.cardData[cardNumber]["cardArt"][str(artNum)]["en"]["proxy"]
 
 
 func _set_selected(deckInfo : Dictionary) -> void:

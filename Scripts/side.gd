@@ -1735,11 +1735,11 @@ func _on_reject_damage(card_id):
 	send_command("Reject Damage",{"card_id":card_id})
 
 func _unhandled_key_input(event):
-	if event.is_action_pressed("Draw") and is_your_side and can_do_things and deck.cardList.size() > 0:
+	if event.is_action_pressed("Draw") and currentPrompt == -1 and is_your_side and can_do_things and deck.cardList.size() > 0:
 		send_command("Popup Command",{"command_id":200})
-	elif event.is_action_pressed("Cheer") and is_your_side and can_do_things and all_occupied_zones().size() > 0:
+	elif event.is_action_pressed("Cheer") and currentPrompt == -1 and is_your_side and can_do_things and all_occupied_zones().size() > 0:
 		send_command("Popup Command",{"command_id":300})
-	elif event.is_action_pressed("Reset") and is_your_side and can_do_things:
+	elif event.is_action_pressed("Reset") and currentPrompt == -1 and is_your_side and can_do_things:
 		for zone in zones:
 			if zone[1] in all_cards and all_cards[zone[1]].rested:
 				send_command("Popup Command", {"currentCard":zone[1], "command_id":1})

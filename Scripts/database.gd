@@ -12,6 +12,7 @@ var cardArts = {}
 var setup = false
 
 var current_banlist = {}
+var en_current_banlist = {}
 var unreleased = {}
 
 func setup_data(result, callback = null, progress = null):

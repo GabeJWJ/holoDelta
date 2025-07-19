@@ -18,6 +18,7 @@ class Game:
         player2.game = self
         self.spectating = []
         self.settings = {} if settings is None else settings
+        self.only_en = self.settings["onlyEN"] if "onlyEN" in self.settings else False
         self.allow_spectators = self.settings["spectators"] if "spectators" in self.settings else False
 
         self.step = 5

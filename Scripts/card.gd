@@ -86,7 +86,7 @@ func setup_info(number,art_code,back=null):
 				cardFront = load("res://Sou_Desu_Ne.png")
 		$Front.texture = cardFront
 		return
-	elif card_data.cardArt[str(artNum)].ja.unrevealed and !Settings.settings.AllowUnrevealed:
+	elif "ja" in card_data.cardArt[str(artNum)] and card_data.cardArt[str(artNum)].ja.unrevealed and !Settings.settings.AllowUnrevealed:
 		notFound = true
 		cardFront = load("res://spoilers.png")
 		$Front.texture = cardFront
@@ -95,9 +95,13 @@ func setup_info(number,art_code,back=null):
 	unlimited = card_data.cardLimit == -1
 	
 	var lang_code = "ja"
-	for lang in card_data.cardArt[str(artNum)]:
-		if lang == Settings.settings.Language and (Settings.settings.AllowProxies or !bool(card_data.cardArt[str(artNum)][lang].proxy)):
-			lang_code = lang
+	if 'en' in card_data.cardArt[str(artNum)] and Settings.settings.OnlyEN:
+		lang_code = 'en'
+	else:
+		for lang in card_data.cardArt[str(artNum)]:
+			if Settings.settings.UseCardLanguage and lang == Settings.settings.Language and (Settings.settings.AllowProxies or !bool(card_data.cardArt[str(artNum)][lang].proxy)):
+				lang_code = lang
+	
 	if cardNumber in Database.cardArts and int(artNum) in Database.cardArts[cardNumber] and lang_code in Database.cardArts[cardNumber][int(artNum)]:
 		cardFront = Database.cardArts[cardNumber][int(artNum)][lang_code]
 		$Front.texture = cardFront

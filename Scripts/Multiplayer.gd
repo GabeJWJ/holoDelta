@@ -78,8 +78,10 @@ func _ready():
 	if !DirAccess.dir_exists_absolute("user://Decks"):
 		DirAccess.make_dir_absolute("user://Decks")
 		
-		var dir = DirAccess.open("res://Decks")
-		for file_name in dir.get_files():
+	var dir = DirAccess.open("res://Decks")
+	var temp_loaded_decks = Settings.settings.LoadedDecks.duplicate()
+	for file_name in dir.get_files():
+		if file_name not in Settings.settings.LoadedDecks:
 			var deck_string = FileAccess.get_file_as_string("res://Decks/" + file_name)
 			var file_access = FileAccess.open("user://Decks/" + file_name, FileAccess.WRITE)
 			if not file_access:
@@ -87,6 +89,8 @@ func _ready():
 				return
 			file_access.store_line(deck_string)
 			file_access.close()
+			temp_loaded_decks.append(file_name)
+	Settings.update_settings("LoadedDecks", temp_loaded_decks)
 	
 	#Connect PopupMenus
 	$CanvasLayer/LanguageSelect.get_popup().index_pressed.connect(_on_language_selected)
@@ -94,6 +98,10 @@ func _ready():
 	#Initialize settings
 	$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed = Settings.settings.AllowUnrevealed
 	$CanvasLayer/Options/OptionBackground/AllowProxies.button_pressed = Settings.settings.AllowProxies
+	$CanvasLayer/Options/OptionBackground/AllowProxies.disabled = !Settings.settings.UseCardLanguage
+	$CanvasLayer/Options/OptionBackground/AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1
+	$CanvasLayer/Options/OptionBackground/UseCardLanguage.button_pressed = Settings.settings.UseCardLanguage
+	$CanvasLayer/OnlyEN.button_pressed = Settings.settings.OnlyEN
 	
 	$CanvasLayer/Options/OptionBackground/SFXSlider.value = Settings.settings.SFXVolume
 	$CanvasLayer/Sidebar/OptionsWindow/SFXSlider.value = Settings.settings.SFXVolume
@@ -257,6 +265,15 @@ func _on_check_unrevealed_pressed():
 
 func _on_allow_proxies_pressed():
 	Settings.update_settings("AllowProxies",$CanvasLayer/Options/OptionBackground/AllowProxies.button_pressed)
+
+func _on_use_card_language_pressed() -> void:
+	Settings.update_settings("UseCardLanguage",$CanvasLayer/Options/OptionBackground/UseCardLanguage.button_pressed)
+	$CanvasLayer/Options/OptionBackground/AllowProxies.disabled = !Settings.settings.UseCardLanguage
+	$CanvasLayer/Options/OptionBackground/AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1
+
+func _on_en_only_pressed() -> void:
+	Settings.update_settings("OnlyEN", $CanvasLayer/OnlyEN.button_pressed)
+	send_command("Server","Update Numbers")
 
 func _on_language_selected(index_selected):
 	Settings.update_settings("Language",Settings.languages[index_selected][0])
@@ -446,6 +463,9 @@ func fix_font_size():
 #region WebSocket
 
 func send_command(supertype:String, command:String, data=null) -> void:
+	if $CanvasLayer/LobbyButtons/LobbyCreate.disabled:
+		#Really hacky way to check if the websocket is connected. I'm tired.
+		return
 	if !data:
 		data = {}
 	$WebSocket.send_dict({"supertype":supertype, "command":command, "data":data})
@@ -517,10 +537,12 @@ func _on_websocket_received(raw_data):
 									player_name = Settings.settings["Name"]
 									update_name(player_name)
 								$CanvasLayer/PlayerName.placeholder_text = player_name
-							if "current" in data and "unreleased" in data:
+							if "current" in data and "en_current" in data and "unreleased" in data:
 								for number in data["current"]:
 									Database.current_banlist[number] = int(data["current"][number])
 									Database.unreleased[number] = int(data["current"][number])
+								for number in data["en_current"]:
+									Database.en_current_banlist[number] = int(data["en_current"][number])
 								for number in data["unreleased"]:
 									var numbers_found = [number]
 									for i in range(number.length()):
@@ -534,12 +556,12 @@ func _on_websocket_received(raw_data):
 									for found in numbers_found:
 										Database.unreleased[found] = int(data["unreleased"][number])
 							if "server_id" in data:
-								$CanvasLayer/LobbyButtons/LobbyCreate/Debug/ServerCode.text = data["server_id"]
+								$CanvasLayer/Debug/ServerCode.text = data["server_id"]
 						"Numbers":
-							if "players" in data and "lobbies" in data and "games" in data and !inGame:
+							if "players" in data and "lobbies" in data and "en_lobbies" in data and "games" in data and "en_games" in data and !inGame:
 								player_count.text = tr("PLAYERS_ONLINE").format({"amount":int(data["players"])})
-								lobby_join_button.text = tr("LOBBY_JOIN") + " ({amount})".format({"amount":int(data["lobbies"])})
-								spectate_button.text = tr("LOBBY_SPECTATE") + " ({amount})".format({"amount":int(data["games"])})
+								lobby_join_button.text = tr("LOBBY_JOIN") + " ({amount})".format({"amount":int(data["en_lobbies"] if Settings.settings.OnlyEN else data["lobbies"])})
+								spectate_button.text = tr("LOBBY_SPECTATE") + " ({amount})".format({"amount":int(data["en_games"] if Settings.settings.OnlyEN else data["games"])})
 						"Error":
 							if "error_text" in data:
 								$CanvasLayer/Error/RichTextLabel.text = data["error_text"]
@@ -602,7 +624,7 @@ func lobby_command(command:String, data:Dictionary):
 						lobby_chosen_ready.disabled = false
 						lobby_chosen_ready.text = tr("LOBBY_READY")
 					for reason in data["reasons"]:
-						lobby_deckerrorlist.text += tr(reason[0]).format({"cardNum":reason[1]})
+						lobby_deckerrorlist.text += tr(reason[0]).format({"cardNum":reason[1]}) + "\n"
 					lobby_deckerror.visible = true
 		"Game Start":
 			if "id" in data and "opponent_id" in data and "name" in data and !inGame:
@@ -624,6 +646,8 @@ func update_name(new_name:String):
 func create_lobby_options() -> void:
 	$CanvasLayer/LobbyButtons.visible = false
 	$CanvasLayer/LobbyCreateMenu.visible = true
+	$CanvasLayer/LobbyCreateMenu/VBoxContainer/OptionButton.selected = 2 if Settings.settings.OnlyEN else 1
+	
 
 func hide_lobby_options() -> void:
 	$CanvasLayer/LobbyButtons.visible = true
@@ -636,9 +660,13 @@ func create_lobby() -> void:
 		settings["public"] = false
 	if lobby_spectators.button_pressed:
 		settings["spectators"] = true
+	if Settings.settings.OnlyEN:
+		settings["onlyEN"] = true
 	if lobby_banlist.selected == 1:
 		settings["banlist"] = Database.current_banlist
 	elif lobby_banlist.selected == 2:
+		settings["banlist"] = Database.en_current_banlist
+	elif lobby_banlist.selected == 3:
 		settings["banlist"] = Database.unreleased
 	else:
 		settings["banlist"] = {}
@@ -658,22 +686,27 @@ func find_lobbies() -> void:
 
 func found_lobbies(found:Array) -> void:
 	for lobby_info in found:
-		var lobbyButton = Button.new()
-		lobbyButton.auto_translate = false
-		lobbyButton.text = lobby_info["hostName"] + " (%d waiting)" % lobby_info["waiting"] + "\n" + tr("LOBBY_BANLIST") + ": "
-		match int(lobby_info["banlist"]):
-			0:
-				lobbyButton.text += tr("LOBBY_BANLIST_NONE")
-			1:
-				lobbyButton.text += tr("LOBBY_BANLIST_CURRENT")
-			2:
-				lobbyButton.text += tr("LOBBY_BANLIST_UNRELEASED")
-			_:
-				lobbyButton.text += tr("LOBBY_BANLIST_CUSTOM")
-		lobbyButton.pressed.connect(join_lobby.bind(lobby_info["id"]))
-		lobbyButton.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-		lobbyButton.add_theme_font_size_override("font_size", 25)
-		lobby_list_found.add_child(lobbyButton)
+		if bool(lobby_info["only_en"]) or !Settings.settings.OnlyEN:
+			var lobbyButton = Button.new()
+			lobbyButton.auto_translate = false
+			lobbyButton.text = lobby_info["hostName"] + " (%d waiting)" % lobby_info["waiting"] + "\n" + tr("LOBBY_BANLIST") + ": "
+			match int(lobby_info["banlist"]):
+				0:
+					lobbyButton.text += tr("LOBBY_BANLIST_NONE")
+				1:
+					lobbyButton.text += tr("LOBBY_BANLIST_CURRENT")
+				2:
+					lobbyButton.text += tr("LOBBY_BANLIST_CURRENT_EN")
+				3:
+					lobbyButton.text += tr("LOBBY_BANLIST_UNRELEASED")
+				_:
+					lobbyButton.text += tr("LOBBY_BANLIST_CUSTOM")
+			if bool(lobby_info["only_en"]) and !Settings.settings.OnlyEN:
+				lobbyButton.text += "\n" + tr("OPTION_EN")
+			lobbyButton.pressed.connect(join_lobby.bind(lobby_info["id"]))
+			lobbyButton.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+			lobbyButton.add_theme_font_size_override("font_size", 25)
+			lobby_list_found.add_child(lobbyButton)
 	lobby_list_searching_text.visible = false
 
 func close_lobby_list() -> void:
@@ -704,13 +737,14 @@ func find_games() -> void:
 
 func found_games(found:Array) -> void:
 	for game_info in found:
-		var gameButton = Button.new()
-		gameButton.auto_translate = false
-		gameButton.text = tr("GAME_VS").format({"player1":game_info["players"][0],"player2":game_info["players"][1]})
-		gameButton.pressed.connect(spectate_game.bind(game_info["id"]))
-		gameButton.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-		gameButton.add_theme_font_size_override("font_size", 25)
-		game_list_found.add_child(gameButton)
+		if bool(game_info["only_en"]) or !Settings.settings.OnlyEN:
+			var gameButton = Button.new()
+			gameButton.auto_translate = false
+			gameButton.text = tr("GAME_VS").format({"player1":game_info["players"][0],"player2":game_info["players"][1]})
+			gameButton.pressed.connect(spectate_game.bind(game_info["id"]))
+			gameButton.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+			gameButton.add_theme_font_size_override("font_size", 25)
+			game_list_found.add_child(gameButton)
 	game_list_searching_text.visible = false
 
 func close_game_list() -> void:
@@ -894,8 +928,10 @@ func _hide_main_menu():
 	$CanvasLayer/PlaymatDiceCustom.visible = false
 	$CanvasLayer/PlayerName.visible = false
 	$CanvasLayer/Question.visible = false
-	$CanvasLayer/LobbyList.visible=false
-	$CanvasLayer/GameList.visible=false
+	$CanvasLayer/LobbyList.visible = false
+	$CanvasLayer/GameList.visible = false
+	$CanvasLayer/Debug.visible = false
+	$CanvasLayer/OnlyEN.visible = false
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/Sidebar/Tabs/Chat.visible = true

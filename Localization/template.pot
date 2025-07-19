@@ -104,11 +104,11 @@ msgid "DECK_CREATE"
 msgstr ""
 
 #: Scenes/board.tscn
-msgid "LOBBY_CREATE"
+msgid "DEBUG"
 msgstr ""
 
 #: Scenes/board.tscn
-msgid "DEBUG"
+msgid "LOBBY_CREATE"
 msgstr ""
 
 #: Scenes/board.tscn
@@ -168,7 +168,16 @@ msgid "EXIT"
 msgstr ""
 
 #: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "OPTION_EN"
+msgstr ""
+
+#: Scenes/board.tscn
 msgid "OPTION_UNREVEALED"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "OPTION_LANGUAGE"
 msgstr ""
 
 #: Scenes/board.tscn
@@ -600,6 +609,10 @@ msgstr ""
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOCHEER"
+msgstr ""
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_ONLYEN"
 msgstr ""
 
 #: Scripts/deck_creation.gd
@@ -1036,6 +1049,10 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "DECK_AUTOLOAD_CONFIRM_INFO"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT_EN"
 msgstr ""
 
 #: Scripts/Multiplayer.gd

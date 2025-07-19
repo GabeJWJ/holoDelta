@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
-"PO-Revision-Date: 2025-06-21 19:18\n"
+"PO-Revision-Date: 2025-07-09 00:04\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"

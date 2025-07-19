@@ -376,6 +376,23 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
 text = "DECK_CREATE"
 
+[node name="Debug" type="Button" parent="CanvasLayer"]
+offset_left = 37.0
+offset_top = 21.0
+offset_right = 266.0
+offset_bottom = 39.0
+theme = ExtResource("5_fdkx6")
+text = "DEBUG"
+
+[node name="ServerCode" type="Label" parent="CanvasLayer/Debug"]
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = -6.0
+offset_top = 33.0
+offset_right = 236.0
+offset_bottom = 54.0
+horizontal_alignment = 1
+
 [node name="LobbyButtons" type="VBoxContainer" parent="CanvasLayer"]
 offset_left = 517.0
 offset_top = 243.0
@@ -389,24 +406,6 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 disabled = true
 text = "LOBBY_CREATE"
-
-[node name="Debug" type="Button" parent="CanvasLayer/LobbyButtons/LobbyCreate"]
-layout_mode = 2
-offset_left = -480.0
-offset_top = -262.0
-offset_right = -251.0
-offset_bottom = -249.0
-theme = ExtResource("5_fdkx6")
-text = "DEBUG"
-
-[node name="ServerCode" type="Label" parent="CanvasLayer/LobbyButtons/LobbyCreate/Debug"]
-auto_translate_mode = 2
-layout_mode = 0
-offset_left = -6.0
-offset_top = 33.0
-offset_right = 236.0
-offset_bottom = 54.0
-horizontal_alignment = 1
 
 [node name="PlayerCount" type="Label" parent="CanvasLayer/LobbyButtons/LobbyCreate"]
 layout_mode = 0
@@ -473,12 +472,14 @@ text = "LOBBY_BANLIST"
 [node name="OptionButton" type="OptionButton" parent="CanvasLayer/LobbyCreateMenu/VBoxContainer"]
 layout_mode = 2
 selected = 1
-item_count = 3
+item_count = 4
 popup/item_0/text = "LOBBY_BANLIST_NONE"
 popup/item_1/text = "LOBBY_BANLIST_CURRENT"
 popup/item_1/id = 1
-popup/item_2/text = "LOBBY_BANLIST_UNRELEASED"
+popup/item_2/text = "LOBBY_BANLIST_CURRENT_EN"
 popup/item_2/id = 2
+popup/item_3/text = "LOBBY_BANLIST_UNRELEASED"
+popup/item_3/id = 3
 
 [node name="Control2" type="Control" parent="CanvasLayer/LobbyCreateMenu/VBoxContainer"]
 layout_mode = 2
@@ -509,6 +510,41 @@ text = "EXIT"
 text_overrun_behavior = 3
 clip_text = true
 
+[node name="LanguageSelect" type="MenuButton" parent="CanvasLayer"]
+auto_translate_mode = 2
+offset_left = 1209.0
+offset_top = 82.0
+offset_right = 1267.0
+offset_bottom = 103.0
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 13
+text = "English"
+flat = false
+item_count = 6
+popup/item_0/text = "English"
+popup/item_1/text = "日本語"
+popup/item_1/id = 1
+popup/item_2/text = "한글"
+popup/item_2/id = 2
+popup/item_3/text = "Español"
+popup/item_3/id = 3
+popup/item_4/text = "Français"
+popup/item_4/id = 4
+popup/item_5/text = "Tiếng Việt"
+popup/item_5/id = 5
+
+[node name="OnlyEN" type="CheckButton" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -151.0
+offset_top = 132.0
+offset_right = -13.0
+offset_bottom = 163.0
+grow_horizontal = 0
+theme = ExtResource("5_fdkx6")
+text = "OPTION_EN"
+
 [node name="Options" type="TextureButton" parent="CanvasLayer"]
 y_sort_enabled = true
 offset_left = 1211.0
@@ -527,7 +563,7 @@ layout_mode = 0
 offset_left = -2445.0
 offset_top = -45.0
 offset_right = -60.0
-offset_bottom = 3027.0
+offset_bottom = 3420.0
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [node name="CheckUnrevealed" type="TextureButton" parent="CanvasLayer/Options/OptionBackground"]
@@ -552,12 +588,33 @@ theme_override_font_sizes/font_size = 120
 text = "OPTION_UNREVEALED"
 autowrap_mode = 3
 
+[node name="UseCardLanguage" type="TextureButton" parent="CanvasLayer/Options/OptionBackground"]
+layout_mode = 0
+offset_left = 65.0002
+offset_top = 45.0
+offset_right = 465.0
+offset_bottom = 445.0
+toggle_mode = true
+texture_normal = ExtResource("6_1x0cl")
+texture_pressed = ExtResource("7_n8awk")
+
+[node name="CardLanguage" type="Label" parent="CanvasLayer/Options/OptionBackground/UseCardLanguage"]
+custom_minimum_size = Vector2(1748, 205)
+layout_mode = 0
+offset_left = 468.334
+offset_top = 125.0
+offset_right = 2216.33
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 120
+text = "OPTION_LANGUAGE"
+autowrap_mode = 3
+
 [node name="AllowProxies" type="TextureButton" parent="CanvasLayer/Options/OptionBackground"]
 layout_mode = 0
 offset_left = 68.3328
-offset_top = 56.6663
+offset_top = 416.666
 offset_right = 468.333
-offset_bottom = 456.666
+offset_bottom = 816.666
 toggle_mode = true
 texture_normal = ExtResource("6_1x0cl")
 texture_pressed = ExtResource("7_n8awk")
@@ -576,9 +633,9 @@ autowrap_mode = 3
 [node name="SFXSlider" type="HSlider" parent="CanvasLayer/Options/OptionBackground"]
 layout_mode = 0
 offset_left = 63.3337
-offset_top = 513.333
+offset_top = 873.333
 offset_right = 1876.34
-offset_bottom = 647.333
+offset_bottom = 1007.33
 theme = ExtResource("5_fdkx6")
 min_value = -30.0
 max_value = 10.0
@@ -608,9 +665,9 @@ bus = &"SFX"
 [node name="BGMSlider" type="HSlider" parent="CanvasLayer/Options/OptionBackground"]
 layout_mode = 0
 offset_left = 63.3337
-offset_top = 738.333
+offset_top = 1098.33
 offset_right = 1876.34
-offset_bottom = 872.333
+offset_bottom = 1232.33
 theme = ExtResource("5_fdkx6")
 min_value = -40.0
 max_value = 5.0
@@ -636,9 +693,9 @@ text = "BGM"
 [node name="Actions" type="Control" parent="CanvasLayer/Options/OptionBackground"]
 anchors_preset = 0
 offset_left = 11.6667
-offset_top = 38.3333
+offset_top = 398.333
 offset_right = 51.6667
-offset_bottom = 78.3333
+offset_bottom = 438.333
 
 [node name="Draw" type="Button" parent="CanvasLayer/Options/OptionBackground/Actions"]
 auto_translate_mode = 2
@@ -817,29 +874,6 @@ autowrap_mode = 3
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="LanguageSelect" type="MenuButton" parent="CanvasLayer"]
-auto_translate_mode = 2
-offset_left = 1209.0
-offset_top = 82.0
-offset_right = 1267.0
-offset_bottom = 103.0
-theme = ExtResource("5_fdkx6")
-theme_override_font_sizes/font_size = 13
-text = "English"
-flat = false
-item_count = 6
-popup/item_0/text = "English"
-popup/item_1/text = "日本語"
-popup/item_1/id = 1
-popup/item_2/text = "한글"
-popup/item_2/id = 2
-popup/item_3/text = "Español"
-popup/item_3/id = 3
-popup/item_4/text = "Français"
-popup/item_4/id = 4
-popup/item_5/text = "Tiếng Việt"
-popup/item_5/id = 5
 
 [node name="PlaymatDiceCustom" type="Button" parent="CanvasLayer"]
 offset_left = 92.0
@@ -1363,8 +1397,8 @@ theme_override_font_sizes/font_size = 20
 text = "Special thanks to:
 Ogbajoj, without whose spreadsheet this never would have been made
 Cyber for helping with the graphic design
-Weiss and Chill for the EN proxies and the visibility he's brought to this project
 LiquidRetko for the code contributions and Vietnamese Translation
+Weiss and Chill for the EN proxies and the visibility he's brought to this project
 AshiNoMegami for the Spanish translation
 M rick and Tarko for the French translation
 문정동호빵명인 and others for the Korean translation
@@ -1375,7 +1409,7 @@ MagnaDrake for helping with the Mac release
 よるみ for helping with the Japanese option
 
 And assorted thanks to:
-Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata, dr. AKA, Peeko, Soulscythe, J3Puffin, Chocolat, Rumos, FretfulGolem, AgentEmerald, Ilovebluewoman, Tanaka, Lordquendo, cendoru, BlueDragonOracle, Ink, ravenclawike, Stolas, Tomoki, nicogb, Chitanya589"
+Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata, dr. AKA, Peeko, Soulscythe, J3Puffin, Chocolat, Rumos, FretfulGolem, AgentEmerald, Ilovebluewoman, Tanaka, Lordquendo, cendoru, BlueDragonOracle, Ink, ravenclawike, Stolas, Tomoki, nicogb, Chitanya589, jarzyna"
 autowrap_mode = 3
 
 [node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]
@@ -1640,15 +1674,17 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/HBoxContainer/Paper" to="." method="_rps_paper"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/HBoxContainer/Scissors" to="." method="_rps_scissors"]
 [connection signal="pressed" from="CanvasLayer/Deck Creation" to="." method="_on_deck_creation_pressed"]
+[connection signal="pressed" from="CanvasLayer/Debug" to="." method="_restart"]
 [connection signal="pressed" from="CanvasLayer/LobbyButtons/LobbyCreate" to="." method="create_lobby_options"]
-[connection signal="pressed" from="CanvasLayer/LobbyButtons/LobbyCreate/Debug" to="." method="_restart"]
 [connection signal="pressed" from="CanvasLayer/LobbyButtons/LobbyJoin" to="." method="find_lobbies"]
 [connection signal="pressed" from="CanvasLayer/LobbyButtons/GameSpectate" to="." method="find_games"]
 [connection signal="pressed" from="CanvasLayer/LobbyCreateMenu/VBoxContainer/FinalCreate" to="." method="create_lobby"]
 [connection signal="pressed" from="CanvasLayer/LobbyCreateMenu/VBoxContainer/CreateBack" to="." method="hide_lobby_options"]
 [connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/OnlyEN" to="." method="_on_en_only_pressed"]
 [connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Options/OptionBackground/CheckUnrevealed" to="." method="_on_check_unrevealed_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options/OptionBackground/UseCardLanguage" to="." method="_on_use_card_language_pressed"]
 [connection signal="pressed" from="CanvasLayer/Options/OptionBackground/AllowProxies" to="." method="_on_allow_proxies_pressed"]
 [connection signal="drag_ended" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="drag_started" from="CanvasLayer/Options/OptionBackground/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]

@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2025-06-08 17:51\n"
+"PO-Revision-Date: 2025-07-09 00:04\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -791,6 +791,10 @@ msgid "CARD_REVEALED_HOLOPOWER"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "CARD_REVEALED_BOTTOMHOLOPOWER"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "DECK_DRAW"
 msgstr "Robar"
 
@@ -860,12 +864,12 @@ msgid "CHEERDECK_SHUFFLE"
 msgstr "Barajar"
 
 #: Scripts/side.gd
-msgid "ARCHIVE_HAND_ALL"
-msgstr ""
-
-#: Scripts/side.gd
 msgid "ARCHIVE_SEARCH"
 msgstr "Buscar"
+
+#: Scripts/side.gd
+msgid "ARCHIVE_HAND_ALL"
+msgstr ""
 
 #: Scripts/side.gd
 msgid "HOLOPOWER_ARCHIVE"
@@ -1016,6 +1020,14 @@ msgid "DOWNLOAD_CARDS"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
+msgid "DECK_AUTOLOAD_CONFIRM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "DECK_AUTOLOAD_CONFIRM_INFO"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"
 msgstr "Personalizada"
 
@@ -1113,6 +1125,10 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_BOTTOMHOLOPOWER"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
@@ -1445,6 +1461,10 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_BOTTOMHOLOPOWER"
 msgstr ""
 
 #: Scripts/Multiplayer.gd

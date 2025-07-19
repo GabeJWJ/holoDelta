@@ -12,6 +12,7 @@ class Lobby:
     def __init__(self, host, settings = None):
         random_characters = get_data("random_characters")
         current_banlist = get_data("current_banlist")
+        en_current_banlist = get_data("en_current_banlist")
         unreleased = get_data("unreleased")
         self.id = ''.join(sample(random_characters, 10))
         while self.id in get_all_lobbies():
@@ -26,15 +27,18 @@ class Lobby:
         self.chosen_ready = False
         self.waiting = []
         self.settings = {} if settings is None else settings
+        self.only_en = self.settings["onlyEN"] if "onlyEN" in self.settings else False
         self.public = self.settings["public"] if "public" in self.settings else True
         self.banlist = self.settings["banlist"] if "banlist" in self.settings else dict(current_banlist)
         self.allow_spectators = self.settings["spectators"] if "spectators" in self.settings else False
-        if self.banlist == {}:
+        if self.banlist == {} and not self.only_en:
             self.banlistCode = Banlist.none
         elif self.banlist == current_banlist:
             self.banlistCode = Banlist.current
         elif self.banlist == (current_banlist | unreleased):
             self.banlistCode = Banlist.unreleased
+        elif self.banlist == en_current_banlist:
+            self.banlistCode = Banlist.en_current
         else:
             self.banlistCode = Banlist.custom
         
@@ -100,7 +104,7 @@ class Lobby:
                     have_chosen_deck = self.chosen_deck is not None
 
                     if (is_host and not have_host_deck) or (is_chosen and not have_chosen_deck):
-                        deck, deck_legality = check_legal(data["deck"], self.banlist)
+                        deck, deck_legality = check_legal(data["deck"], self.banlist, self.only_en)
                         await get_player(player_id).tell("Lobby","Deck Legality",deck_legality)
 
                         if deck_legality["legal"]:

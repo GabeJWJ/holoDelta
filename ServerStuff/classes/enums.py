@@ -15,5 +15,6 @@ class Fuda(IntEnum):
 class Banlist(IntEnum):
     none = 0
     current = 1
-    unreleased = 2
+    en_current = 2
+    unreleased = 3
     custom = 99

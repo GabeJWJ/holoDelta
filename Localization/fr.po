@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-06-11 18:03\n"
+"PO-Revision-Date: 2025-07-09 00:04\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -791,6 +791,10 @@ msgid "CARD_REVEALED_HOLOPOWER"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "CARD_REVEALED_BOTTOMHOLOPOWER"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "DECK_DRAW"
 msgstr "Piocher"
 
@@ -860,12 +864,12 @@ msgid "CHEERDECK_SHUFFLE"
 msgstr "Mélanger"
 
 #: Scripts/side.gd
-msgid "ARCHIVE_HAND_ALL"
-msgstr "Archiver votre main"
-
-#: Scripts/side.gd
 msgid "ARCHIVE_SEARCH"
 msgstr "Chercher"
+
+#: Scripts/side.gd
+msgid "ARCHIVE_HAND_ALL"
+msgstr "Archiver votre main"
 
 #: Scripts/side.gd
 msgid "HOLOPOWER_ARCHIVE"
@@ -1016,6 +1020,14 @@ msgid "DOWNLOAD_CARDS"
 msgstr "Téléchargement des cartes, veuillez patienter..."
 
 #: Scripts/Multiplayer.gd
+msgid "DECK_AUTOLOAD_CONFIRM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "DECK_AUTOLOAD_CONFIRM_INFO"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"
 msgstr "Banlist personnalisée"
 
@@ -1114,6 +1126,10 @@ msgstr "{person} a archivé {cardName}"
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_HOLOPOWER"
 msgstr "{person} a ajouté {cardName} à ces Holopower"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_BOTTOMHOLOPOWER"
+msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_OSHISKILL_SP"
@@ -1446,6 +1462,10 @@ msgstr "Vous avez archivé {cardName}"
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
 msgstr "Vous avez ajouté {cardName} à vos Holopower"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_BOTTOMHOLOPOWER"
+msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_OSHISKILL_SP"

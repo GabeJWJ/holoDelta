@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-06-11 18:03\n"
+"PO-Revision-Date: 2025-07-09 00:04\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Quand cet Holomem est Inconscient, perdez 2 VIE"
@@ -5516,7 +5516,8 @@ msgid "hBP03-111_NAME"
 msgstr "Koronesuki"
 
 msgid "hBP03-111_EFFECT"
-msgstr "Koronesuki"
+msgstr "Le coût de Relais de l'Holomem avec ce Fan attaché est réduit de 1.\n\n"
+"Ce Fan ne peut être attaché qu'à vos Inugami Korone, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hY01-004_NAME"
 msgstr "Cheer Blanche"
@@ -6342,7 +6343,7 @@ msgid "hBP04-060_NAME"
 msgstr "Murasaki Shion"
 
 msgid "hBP04-060_ART_0_NAME"
-msgstr "Aujourd'huit streaming de jeux "
+msgstr "Aujourd'hui streaming de jeux"
 
 msgid "hBP04-060_ART_0_EFFECT"
 msgstr "Pour chaque Cheer attaché à l'Holomem Central de votre adversaire, infligez 10 dégâts spéciaux à l'Holomem Central et Collab de votre adversaire."
@@ -6950,23 +6951,22 @@ msgid "hBP04-048_NAME"
 msgstr "Yukihana Lamy"
 
 msgid "hBP04-048_ART_0_NAME"
-msgstr "Que tu sois béni aujourd’hui aussi"
-
-msgid "hBP04-048_ART_0_EFFECT"
-msgstr "Envoyez la première carte de votre Deck de Cheer vers  l'une de vos Holomem Yukihana Lamy avec un Yukimin attaché."
-
-msgid "hBP04-048_BLOOM_NAME"
 msgstr "Fille d’Unyria"
 
-msgid "hBP04-048_BLOOM_EFFECT"
+msgid "hBP04-048_ART_0_EFFECT"
 msgstr "Vous pouvez archiver un Cheer de cet Holomem pour l'effet suivant : infligez 30 dégâts spéciaux à un Holomem Central ou Collab de votre adversaire."
+
+msgid "hBP04-048_BLOOM_NAME"
+msgstr "Que tu sois béni aujourd’hui aussi"
+
+msgid "hBP04-048_BLOOM_EFFECT"
+msgstr "Envoyez la première carte de votre Deck de Cheer vers  l'une de vos Holomem Yukihana Lamy avec un Yukimin attaché."
 
 msgid "hBP04-090_NAME"
 msgstr "PC de travail"
 
 msgid "hBP04-090_EFFECT"
-msgstr "LIMITÉ : Seule une carte ne peut être jouée par tour.\n\n"
-"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n\n"
+msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n\n"
 "Regardez les quatre premières cartes de votre Deck. Révélez un Holomem et un Outil, un Mascotte ou un Fan d'entre elles et mettez-les dans votre main.  Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP04-101_NAME"
@@ -7104,10 +7104,12 @@ msgid "hBP04-013_GIFT_EFFECT"
 msgstr "Lorsque cet Holomem met inconscient un Holomem adverse, mettez la première carte de votre Deck dans vos Holopower. Puis regardez vos Holopower, revelez 1 carte et ajoutez la à votre main. Puis mélangez vos Holopower."
 
 msgid "hBP04-097_NAME"
-msgstr ""
+msgstr "Tube à essai vert"
 
 msgid "hBP04-097_EFFECT"
-msgstr ""
+msgstr "Les Arts de cet Holomem avec cet Outil attaché gagne +10 dégâts\n\n"
+"Si cet Outil est attaché à une Hakui Koyori 1st Bloom ou plus, il gagne l'effet suivant : durant votre phase principale, vous pouvez archivez un cheer de l'Holomem avec cet Outil attaché pour relever un Holomem avec ##SecretSocietyholoX qui se repose.\n\n"
+"Vous ne pouvez attacher qu'un Outil à un Holomem."
 
 msgid "hBP04-100_NAME"
 msgstr "Kokoro"

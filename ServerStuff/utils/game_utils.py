@@ -1,11 +1,10 @@
-from globals.live_data import get_all_players, get_player, get_all_lobbies, get_all_games
+from globals.live_data import get_player, get_all_lobbies, get_all_games
 from classes.lobby import Lobby
 from utils.game_network_utils import update_numbers_all
 
 
 
 async def call_command(player_id,command, data):
-    players = get_all_players()
     lobbies = get_all_lobbies()
     games = get_all_games()
     player = get_player(player_id)
@@ -26,13 +25,13 @@ async def call_command(player_id,command, data):
         case "Find Lobbies":
             #This will have to update to take filtering into account
 
-            found = [{"id":lob.id, "hostName": lob.host.name, "waiting": len(lob.waiting), "banlist":int(lob.banlistCode)} for lob in lobbies.values() if lob.public]
+            found = [{"id":lob.id, "hostName": lob.host.name, "waiting": len(lob.waiting), "banlist":int(lob.banlistCode), "only_en":lob.only_en} for lob in lobbies.values() if lob.public]
 
             await player.tell("Server","Found Lobbies",{"lobbies":found})
         case "Find Games":
             #This will have to update to take filtering into account
 
-            found = [{"id":game.id, "players":[p.name for p in game.players.values()] } for game in games.values() if game.allow_spectators]
+            found = [{"id":game.id, "players":[p.name for p in game.players.values()], "only_en":game.only_en } for game in games.values() if game.allow_spectators]
 
             await player.tell("Server","Found Games",{"games":found})
         
@@ -51,6 +50,9 @@ async def call_command(player_id,command, data):
         case "Name Change":
             if "new_name" in data and isinstance(data["new_name"],str):
                 player.name = data["new_name"]
+        
+        case "Update Numbers":
+            await update_numbers_all()
 
         case _:
             pass

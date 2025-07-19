@@ -138,11 +138,19 @@ func findByClass(node: Node, className : String, result : Array) -> void:
 func _ready() -> void:
 	tr("LEVEL_ANY") #for POT generation - Godot's automatic system won't find it in a popupmenu list
 	
+	if Settings.settings.OnlyEN:
+		$CanvasLayer/BanlistChoice.selected = 2
+	
 	for cardNumber in Database.cardData:
 		if cardNumber in Database.cardArts:
 			var newCardButton
 			for art_code in Database.cardData[cardNumber]["cardArt"]:
+				if Settings.settings.OnlyEN and ("en" not in Database.cardData[cardNumber]["cardArt"][art_code] or Database.cardData[cardNumber]["cardArt"][art_code]["en"]["proxy"]):
+					continue
 				newCardButton = add_to_collection(cardNumber,int(art_code))
+			
+			if !newCardButton:
+				continue
 			
 			#We add the constants we've found to the proper arrays and add the Card to the proper tab
 			match newCardButton.cardType:
@@ -1203,3 +1211,4 @@ func _not_real():
 	tr("DECKERROR_OVERCHEER")
 	tr("DECKERROR_CHEERBADFORMAT")
 	tr("DECKERROR_NOCHEER")
+	tr("DECKERROR_ONLYEN")

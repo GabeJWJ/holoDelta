@@ -18,6 +18,7 @@ initialize()
 
 random_characters = get_data("random_characters")
 current_banlist = get_data("current_banlist")
+en_current_banlist = get_data("en_current_banlist")
 unreleased = get_data("unreleased")
 card_data = get_data("card_data")
 bloom_levels = get_data("bloom_levels")
@@ -46,19 +47,13 @@ def get_cards():
 def check_connection():
     return {"Success"}
 
-
-@app.get("/live-match/:game_id")
-def get_live_match_data():
-    # Basic SQL stuff
-    return
-
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     manager = get_manager()
     await manager.connect(websocket)
     try:
         player = Player(websocket)
-        await player.tell("Server","Player Info",{"id":player.id, "name":player.name,"current":current_banlist,"unreleased":unreleased,"server_id":identifier})
+        await player.tell("Server","Player Info",{"id":player.id, "name":player.name,"current":current_banlist,"en_current":en_current_banlist,"unreleased":unreleased,"server_id":identifier})
         await update_numbers_all()
         while True:
             json_data = await websocket.receive_bytes()

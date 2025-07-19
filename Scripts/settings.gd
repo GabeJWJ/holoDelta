@@ -45,8 +45,17 @@ func _ready() -> void:
 	if !settings.has("AllowProxies"):
 		settings["AllowProxies"] = false
 	
+	if !settings.has("UseCardLanguage"):
+		settings["UseCardLanguage"] = settings["AllowProxies"]
+	
+	if !settings.has("OnlyEN"):
+		settings["OnlyEN"] = false
+	
 	if !settings.has("Name"):
 		settings["Name"] = ""
+	
+	if !settings.has("LoadedDecks"):
+		settings["LoadedDecks"] = []
 	
 	#There was a change in 1.1.3 from storing the language as the user-friendly name to
 	#	storing the locale code
