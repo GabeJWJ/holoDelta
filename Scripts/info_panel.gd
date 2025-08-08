@@ -170,7 +170,7 @@ func _input(event) -> void:
 			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 				_change_show()
 	if event is InputEventKey and event.pressed:
-		if event.is_action_pressed("LockInfo"):
+		if event.is_action_pressed("LockInfo") and (showing.size() != 0 or locked):
 			locked = !locked
 			if locked:
 				$LockOff.modulate.a = 1

@@ -23,10 +23,14 @@ func _ready() -> void:
 		elif card_data.cardArt[str(artNum)].ja.unrevealed and !Settings.settings.AllowUnrevealed:
 			%Front.texture = load("res://spoilers.png")
 		
-		var lang_code = "ja"
-		for lang in card_data.cardArt[str(artNum)]:
-			if lang == Settings.settings.Language and (Settings.settings.AllowProxies or !bool(card_data.cardArt[str(artNum)][lang].proxy)):
-				lang_code = lang
+		var lang_code = "ja" if "ja" in card_data.cardArt[str(artNum)] else "en"
+		if 'en' in card_data.cardArt[str(artNum)] and Settings.settings.OnlyEN:
+			lang_code = 'en'
+		else:
+			for lang in card_data.cardArt[str(artNum)]:
+				if Settings.settings.UseCardLanguage and lang == Settings.settings.Language and (Settings.settings.AllowProxies or !bool(card_data.cardArt[str(artNum)][lang].proxy)):
+					lang_code = lang
+		
 		if cardNumber in Database.cardArts and int(artNum) in Database.cardArts[cardNumber] and lang_code in Database.cardArts[cardNumber][int(artNum)]:
 			%Front.texture = Database.cardArts[cardNumber][int(artNum)][lang_code]
 		else:

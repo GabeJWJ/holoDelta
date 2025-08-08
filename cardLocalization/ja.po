@@ -6979,3 +6979,390 @@ msgstr "紫エール"
 msgid "hY06-004_NAME"
 msgstr "黄エール"
 
+msgid "hBD24-043_NAME"
+msgstr "ラオーラ・パンテーラ"
+
+msgid "hBD24-043_SKILL_NAME"
+msgstr "オワイトエンハンス"
+
+msgid "hBD24-043_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-043_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-043_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、白ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-044_NAME"
+msgstr "百鬼あやめ"
+
+msgid "hBD24-044_SKILL_NAME"
+msgstr "レッドエンハンス"
+
+msgid "hBD24-044_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、赤分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-044_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-044_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-045_NAME"
+msgstr "ときのそら"
+
+msgid "hBD24-045_SKILL_NAME"
+msgstr "オワイトエンハンス"
+
+msgid "hBD24-045_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-045_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-045_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、白ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-046_NAME"
+msgstr "一伊那尓栖"
+
+msgid "hBD24-046_SKILL_NAME"
+msgstr "パープルエンハンス"
+
+msgid "hBD24-046_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、紫分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-046_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-046_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、紫ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-047_NAME"
+msgstr "ロボ子さん"
+
+msgid "hBD24-047_SKILL_NAME"
+msgstr "パープルエンハンス"
+
+msgid "hBD24-047_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、紫分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-047_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-047_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、紫ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-048_NAME"
+msgstr "ラプラス・ダークネス"
+
+msgid "hBD24-048_SKILL_NAME"
+msgstr "パープルエンハンス"
+
+msgid "hBD24-048_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、紫分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-048_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-048_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、紫ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-049_NAME"
+msgstr "響咲リオナ"
+
+msgid "hBD24-049_SKILL_NAME"
+msgstr "オワイトエンハンス"
+
+msgid "hBD24-049_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-049_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-049_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、白ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-050_NAME"
+msgstr "角巻わため"
+
+msgid "hBD24-050_SKILL_NAME"
+msgstr "イエローエンハンス"
+
+msgid "hBD24-050_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、黄分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-050_SPSKILL_NAME"
+msgstr "Birthday Gift ~Yellow~"
+
+msgid "hBD24-050_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、黄ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-051_NAME"
+msgstr "轟はじめ"
+
+msgid "hBD24-051_SKILL_NAME"
+msgstr "オワイトエンハンス"
+
+msgid "hBD24-051_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、自分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-051_SPSKILL_NAME"
+msgstr "Birthday Gift ~White~"
+
+msgid "hBD24-051_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、白ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-052_NAME"
+msgstr "鷹嶺ルイ"
+
+msgid "hBD24-052_SKILL_NAME"
+msgstr "レッドエンハンス"
+
+msgid "hBD24-052_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、赤分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-052_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-052_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-053_NAME"
+msgstr "水宮枢"
+
+msgid "hBD24-053_SKILL_NAME"
+msgstr "ブルーエンハンス"
+
+msgid "hBD24-053_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、青分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-053_SPSKILL_NAME"
+msgstr "Birthday Gift ~Blue~"
+
+msgid "hBD24-053_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、青ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-054_NAME"
+msgstr "風真いろは"
+
+msgid "hBD24-054_SKILL_NAME"
+msgstr "グリーンエンハンス"
+
+msgid "hBD24-054_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、緑分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-054_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-054_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、緑ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-055_NAME"
+msgstr "AZKi"
+
+msgid "hBD24-055_SKILL_NAME"
+msgstr "グリーンエンハンス"
+
+msgid "hBD24-055_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、緑分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-055_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-055_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、緑ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-056_NAME"
+msgstr "大空スバル"
+
+msgid "hBD24-056_SKILL_NAME"
+msgstr "イエローエンハンス"
+
+msgid "hBD24-056_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、黄分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-056_SPSKILL_NAME"
+msgstr "Birthday Gift ~Yellow~"
+
+msgid "hBD24-056_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、黄ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-057_NAME"
+msgstr "小鳥遊キアラ"
+
+msgid "hBD24-057_SKILL_NAME"
+msgstr "レッドエンハンス"
+
+msgid "hBD24-057_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、赤分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-057_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-057_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-058_NAME"
+msgstr "輪堂千速"
+
+msgid "hBD24-058_SKILL_NAME"
+msgstr "グリーンエンハンス"
+
+msgid "hBD24-058_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、緑分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-058_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-058_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、緑ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-059_NAME"
+msgstr "アイラニ・イオフィフティーン"
+
+msgid "hBD24-059_SKILL_NAME"
+msgstr "グリーンエンハンス"
+
+msgid "hBD24-059_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、緑分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-059_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-059_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、緑ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-060_NAME"
+msgstr "虎金妃笑虎"
+
+msgid "hBD24-060_SKILL_NAME"
+msgstr "イエローエンハンス"
+
+msgid "hBD24-060_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、黄分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-060_SPSKILL_NAME"
+msgstr "Birthday Gift ~Yellow~"
+
+msgid "hBD24-060_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、黄ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-061_NAME"
+msgstr "宝鐘マリン"
+
+msgid "hBD24-061_SKILL_NAME"
+msgstr "レッドエンハンス"
+
+msgid "hBD24-061_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、赤分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-061_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-061_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-006_NAME"
+msgstr "ネリッサ・レイヴンクロフト"
+
+msgid "hBP05-006_SKILL_NAME"
+msgstr "Liebesträume"
+
+msgid "hBP05-006_SKILL_EFFECT"
+msgstr "[ターンに1回] このターンの間、自分の「#歌」を持つ[センターホロメンとコラボホロメン]のアーツが+10。"
+
+msgid "hBP05-006_SPSKILL_NAME"
+msgstr "Shoot the Moon"
+
+msgid "hBP05-006_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] このゲームの間、自分の〈ネリッサ・レイヴンクロフト〉全員のアーツが必要です-1。"
+
+msgid "hBP05-009_NAME"
+msgstr "白銀ノエル"
+
+msgid "hBP05-009_ART_0_NAME"
+msgstr "夏の思い出"
+
+msgid "hBP05-009_COLLAB_NAME"
+msgstr "夏深し"
+
+msgid "hBP05-009_COLLAB_EFFECT"
+msgstr "自分が後攻で最初のターンなら、自分のデッキから、1stホロメンの〈白銀ノエル〉を1枚出し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-011_NAME"
+msgstr "白銀ノエル"
+
+msgid "hBP05-011_ART_0_NAME"
+msgstr "団長幸せだよ"
+
+msgid "hBP05-011_ART_0_EFFECT"
+msgstr "自分のステージの異なるカード名の#3期生を持つホロメン1人につき、このアーツ+10。"
+
+msgid "hBP05-011_BLOOM_NAME"
+msgstr "みんなが居てくれて"
+
+msgid "hBP05-011_BLOOM_EFFECT"
+msgstr "このターンの間、自分の#3期生を持つ[センターホロメンとコラボホロメン]のアーツ+10。"
+
+msgid "hBP05-014_NAME"
+msgstr "兎田ぺこら"
+
+msgid "hBP05-014_ART_0_NAME"
+msgstr "かわいいぺこか？"
+
+msgid "hBP05-014_ART_0_EFFECT"
+msgstr "サイコロを1回振れる：偶数なら、自分のデッキを1枚引く。"
+
+msgid "hBP05-015_NAME"
+msgstr "兎田ぺこら"
+
+msgid "hBP05-015_ART_0_NAME"
+msgstr "にんじん…"
+
+msgid "hBP05-015_ART_0_EFFECT"
+msgstr "自分のステージに#3期生を持つホロメンが3人以上いるなら、自分のエールデッキの上から1枚をこのホロメンに送る。"
+
+msgid "hBP05-015_ART_1_NAME"
+msgstr "いらないぺこ？"
+
+msgid "hBP05-015_ART_1_EFFECT"
+msgstr "自分の推しホロメンの色が白なら、自分のデッキを1枚引く。"
+
+msgid "hBP05-058_NAME"
+msgstr "ネリッサ・レイヴンクロフト"
+
+msgid "hBP05-058_ART_0_NAME"
+msgstr "Byeya darlings!"
+
+msgid "hBP05-058_COLLAB_NAME"
+msgstr "SUGOIDEKAI"
+
+msgid "hBP05-058_COLLAB_EFFECT"
+msgstr "自分が後攻で最初のターンの時、自分の推しホロメンが〈ネリッサ・レイヴンクロフト〉なら、自分のデッキの上から1枚をホロパワーにする。"
+
+msgid "hBP05-060_NAME"
+msgstr "ネリッサ・レイヴンクロフト"
+
+msgid "hBP05-060_ART_0_NAME"
+msgstr "艶なる宴"
+
+msgid "hBP05-060_ART_0_EFFECT"
+msgstr "自分の手札1枚をアーカイブできる：相手のセンターホロメンかコラボホロメンに特殊ダメージ20を与える。"
+
+msgid "hBP05-060_BLOOM_NAME"
+msgstr "月の光"
+
+msgid "hBP05-060_BLOOM_EFFECT"
+msgstr "自分のデッキから、[〈ネリッサ・レイヴンクロフトの杖〉か〈Jailbird〉]1枚除外し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-080_NAME"
+msgstr "SorAZセレブレーション"
+
+msgid "hBP05-080_EFFECT"
+msgstr "自分のデッキを2枚引く。その後、自分のデッキの上から5枚を見る。その中から、最初のホログラムを1枚差し込み、手札を加える。そして残ったカードを好きな順番でデッキの下に戻す。"
+
+msgid "hY04-007_NAME"
+msgstr "青エール"
+

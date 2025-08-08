@@ -94,7 +94,7 @@ func setup_info(number,art_code,back=null):
 	cardType = card_data.cardType
 	unlimited = card_data.cardLimit == -1
 	
-	var lang_code = "ja"
+	var lang_code = "ja" if "ja" in card_data.cardArt[str(artNum)] else "en"
 	if 'en' in card_data.cardArt[str(artNum)] and Settings.settings.OnlyEN:
 		lang_code = 'en'
 	else:

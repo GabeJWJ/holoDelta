@@ -112,7 +112,7 @@ var cheer_multiple = 1
 @onready var cheerSleeveSelect = $CanvasLayer/YourStuff/TAB_SLEEVES/Cheer
 @onready var oshiSleeveSelect = $CanvasLayer/YourStuff/TAB_SLEEVES/Oshi
 
-var banlist = Database.current_banlist
+var banlist = Database.en_current_banlist if Settings.settings.OnlyEN else Database.current_banlist
 
 #endregion
 
@@ -146,6 +146,8 @@ func _ready() -> void:
 			var newCardButton
 			for art_code in Database.cardData[cardNumber]["cardArt"]:
 				if Settings.settings.OnlyEN and ("en" not in Database.cardData[cardNumber]["cardArt"][art_code] or Database.cardData[cardNumber]["cardArt"][art_code]["en"]["proxy"]):
+					continue
+				if !Settings.settings.OnlyEN and "ja" not in Database.cardData[cardNumber]["cardArt"][art_code]:
 					continue
 				newCardButton = add_to_collection(cardNumber,int(art_code))
 			
@@ -1042,6 +1044,8 @@ func _on_banlist_choice_item_selected(index: int) -> void:
 		1:
 			banlist = Database.current_banlist
 		2:
+			banlist = Database.en_current_banlist
+		3:
 			banlist = Database.unreleased
 	
 	for potential_card in all_cards:

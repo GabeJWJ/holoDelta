@@ -1405,11 +1405,12 @@ M rick and Tarko for the French translation
 HaruTsunX for helping with the sound design
 WunderRiku for the BGM
 星谷あさき and DT for advice with the server stuff
+Saum for mirroring when this site was down
 MagnaDrake for helping with the Mac release
 よるみ for helping with the Japanese option
 
 And assorted thanks to:
-Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata, dr. AKA, Peeko, Soulscythe, J3Puffin, Chocolat, Rumos, FretfulGolem, AgentEmerald, Ilovebluewoman, Tanaka, Lordquendo, cendoru, BlueDragonOracle, Ink, ravenclawike, Stolas, Tomoki, nicogb, Chitanya589, jarzyna"
+Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata, dr. AKA, Peeko, Soulscythe, J3Puffin, Chocolat, Rumos, FretfulGolem, AgentEmerald, Ilovebluewoman, Tanaka, Lordquendo, cendoru, BlueDragonOracle, Ink, ravenclawike, Stolas, Tomoki, nicogb, Chitanya589, jarzyna, Ven"
 autowrap_mode = 3
 
 [node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]
