@@ -94,6 +94,7 @@ func setup_info(number,art_code,back=null):
 	cardType = card_data.cardType
 	unlimited = card_data.cardLimit == -1
 	
+	#IF YOU CHANGE THIS CODE ALSO CHANGE IT IN DECK_INFO
 	var lang_code = "ja" if "ja" in card_data.cardArt[str(artNum)] else "en"
 	if 'en' in card_data.cardArt[str(artNum)] and Settings.settings.OnlyEN:
 		lang_code = 'en'
@@ -107,6 +108,7 @@ func setup_info(number,art_code,back=null):
 		$Front.texture = cardFront
 	else:
 		print(cardNumber, " ", artNum, " ", lang_code)
+	#YES I SHOULDN'T JUST COPY-PASTE CODE - THIS ONE WAS TRICKY TO SEPARATE INTO ITS OWN THING
 	
 	if card_data.has("tags"):
 		for tag in card_data.tags:

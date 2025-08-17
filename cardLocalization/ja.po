@@ -7366,3 +7366,234 @@ msgstr "自分のデッキを2枚引く。その後、自分のデッキの上�
 msgid "hY04-007_NAME"
 msgstr "青エール"
 
+msgid "hBD24-062_NAME"
+msgstr "常闇トワ"
+
+msgid "hBD24-062_SKILL_NAME"
+msgstr "パープルエンハンス"
+
+msgid "hBD24-062_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、紫分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-062_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-062_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、紫ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hDB24-063_NAME"
+msgstr "赤井はあと"
+
+msgid "hDB24-063_SKILL_NAME"
+msgstr "レッドエンハンス"
+
+msgid "hDB24-063_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、赤分の緑ホロメン1人のアーツ+20。"
+
+msgid "hDB24-063_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hDB24-063_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hSD08-001_NAME"
+msgstr "天音かなた"
+
+msgid "hSD08-001_SKILL_NAME"
+msgstr "ホワイトマック"
+
+msgid "hSD08-001_SKILL_EFFECT"
+msgstr "[ターンに1回] このターンの間、自分のホワイトセンターホロメンのアーツが+20されます。"
+
+msgid "hSD08-001_SPSKILL_NAME"
+msgstr "クイックガード"
+
+msgid "hSD08-001_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 相手のターンで、自分のホワイトホロメンが相手からダメージを受ける時に使える：そのホロメン1人がダメージ-20を受け取ります。"
+
+msgid "Summer"
+msgstr "サマー"
+
+msgid "hSD08-002_NAME"
+msgstr "天音かなた"
+
+msgid "hSD08-002_ART_0_NAME"
+msgstr "浴衣が似合うでしょ"
+
+msgid "hSD08-002_COLLAB_NAME"
+msgstr "ホロサマー"
+
+msgid "hSD08-002_COLLAB_EFFECT"
+msgstr "自分のデッキの上から5枚を見る。その中から、#サマーを持つDebutホロメン1枚を公開し、手札に加える。そして、エナジードリンク好きな順でデッキの下に戻す。"
+
+msgid "hSD08-003_NAME"
+msgstr "天音かなた"
+
+msgid "hSD08-003_ART_0_NAME"
+msgstr "みんなのスパグリ"
+
+msgid "hSD08-003_ART_0_EFFECT"
+msgstr "自分のステージの#サマーを持つホロメン1人につき、このアーツ+10。"
+
+msgid "hSD08-003_BLOOM_NAME"
+msgstr "相談するよ"
+
+msgid "hSD08-003_BLOOM_EFFECT"
+msgstr "自分のデッキから、#4期生を持つDebutホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hSD08-004_NAME"
+msgstr "天音かなた"
+
+msgid "hSD08-004_ART_0_NAME"
+msgstr "きみの背中に追いつけるように"
+
+msgid "hSD08-004_ART_0_EFFECT"
+msgstr "[ターンに1回]このアーツで相手のセンターホロメンをダウンさせた時、相手の2番目のホロメン1人に特殊ダメージ40を与える。"
+
+msgid "hSD08-004_GIFT_NAME"
+msgstr "エンジェルウィンド"
+
+msgid "hSD08-004_GIFT_EFFECT"
+msgstr "[センターポジション限定]自分のコラボポジションの#4期生を持つデビューホロメンのアーツ+40。"
+
+msgid "hSD08-005_NAME"
+msgstr "姫森ルーナ"
+
+msgid "hSD08-005_ART_0_NAME"
+msgstr "お祭りなのら"
+
+msgid "hSD08-005_GIFT_NAME"
+msgstr "なんでも入る巾着"
+
+msgid "hSD08-005_GIFT_EFFECT"
+msgstr "[コラボポジション限定]相手のターンで、自分のホロメンがダウンした時、自分のライフが相手以下なら、自分のアーカイブのカード名に「パソコン」を含むアイテム1枚を手札に戻せます。"
+
+msgid "hSD08-006_NAME"
+msgstr "常闇トワ"
+
+msgid "hSD08-006_ART_0_NAME"
+msgstr "トワに見惚れちゃった？"
+
+msgid "hSD08-006_COLLAB_NAME"
+msgstr "花火を見ていく？"
+
+msgid "hSD08-006_COLLAB_EFFECT"
+msgstr "相手のセンターホロメンに特殊ダメージ10を与える。自分が後攻で最初のターンなら、かわりに、相手のセンターホロメンに特殊ダメージ20を与える。"
+
+msgid "hSD08-007_NAME"
+msgstr "角巻わため"
+
+msgid "hSD08-007_ART_0_NAME"
+msgstr "わたあめおいしいねぇ"
+
+msgid "hSD08-007_COLLAB_NAME"
+msgstr "みんなと夏祭り"
+
+msgid "hSD08-007_COLLAB_EFFECT"
+msgstr "自分のアーカイブのエール1枚を自分の#4期生を持つ2ndホロメンに送れる。"
+
+msgid "hSD09-001_NAME"
+msgstr "宝鐘マリン"
+
+msgid "hSD09-001_SKILL_NAME"
+msgstr "レッドマイク"
+
+msgid "hSD09-001_SKILL_EFFECT"
+msgstr "[ターンに1回] このターンの間、自分の赤センターホロメンのアーツ+20。"
+
+msgid "hSD09-001_SPSKILL_NAME"
+msgstr "さあ！もう一度！"
+
+msgid "hSD09-001_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のアーカイブの赤ホロメン1枚を手札に戻す。"
+
+msgid "hSD09-002_NAME"
+msgstr "宝鐘マリン"
+
+msgid "hSD09-002_ART_0_NAME"
+msgstr "船長も一緒にい・か・が？"
+
+msgid "hSD09-002_COLLAB_NAME"
+msgstr "ホロサマー"
+
+msgid "hSD09-002_COLLAB_EFFECT"
+msgstr "自分のデッキの上から5枚を見る。その中から、#サマーを持つDebutホロメン1枚を除き、手札に加える。そして、エバーグリーンの好きな順でデッキの下に戻す。"
+
+msgid "hSD09-003_NAME"
+msgstr "宝鐘マリン"
+
+msgid "hSD09-003_ART_0_NAME"
+msgstr "マリンに任せろってマジで"
+
+msgid "hSD09-003_COLLAB_NAME"
+msgstr "みんな優勝するぞ"
+
+msgid "hSD09-003_COLLAB_EFFECT"
+msgstr "相手のセンターホロメンに、自分のステージの異なるカード名のホロメン1人につき、特殊ダメージ10を与える。"
+
+msgid "hSD09-004_NAME"
+msgstr "宝鐘マリン"
+
+msgid "hSD09-004_ART_0_NAME"
+msgstr "3期生の絆"
+
+msgid "hSD09-004_ART_0_EFFECT"
+msgstr "自分のステージに〈宝鐘マリン〉以外の#3期生を持つホロメンがいるなら、自分のデッキを1枚引く。"
+
+msgid "hSD09-004_ART_1_NAME"
+msgstr "キミたちと水平線の向こう側へ"
+
+msgid "hSD09-004_ART_1_EFFECT"
+msgstr "相手のセンターホロメンとコラボホロメンに、自分のステージの異なるカード名の#3期生を持つホロメン1人につき、特殊ダメージ10を与える。"
+
+msgid "hSD09-005_NAME"
+msgstr "白銀ノエル"
+
+msgid "hSD09-005_ART_0_NAME"
+msgstr "夏が来たぞー！"
+
+msgid "hSD09-005_COLLAB_NAME"
+msgstr "3期生の海の家"
+
+msgid "hSD09-005_COLLAB_EFFECT"
+msgstr "このターンの間、自分のステージの異なるカード名の#3期生を持つホロメン1人につき、自分のセンターポジションの2番目のホロメンのアーツ+10。"
+
+msgid "hSD09-006_NAME"
+msgstr "兎田ぺこら"
+
+msgid "hSD09-006_ART_0_NAME"
+msgstr "ご注文のかき氷ぺこ！"
+
+msgid "hSD09-006_COLLAB_NAME"
+msgstr "あんたたちが働くぺこー!!!"
+
+msgid "hSD09-006_COLLAB_EFFECT"
+msgstr "自分が後攻で最初のターンなら、自分のエールデッキの上から1枚を、自分の#3期生を持つホロメンに送る。"
+
+msgid "hSD09-007_NAME"
+msgstr "不知火フレア"
+
+msgid "hSD09-007_ART_0_NAME"
+msgstr "冷たいものをお待ちください♪"
+
+msgid "hSD09-007_GIFT_NAME"
+msgstr "クールダウンしよ"
+
+msgid "hSD09-007_GIFT_EFFECT"
+msgstr "[コラボポジション限定] 相手のターンで、このホロメンがダウンした時、自分のライフが相手より少ないなら、自分の減るライフ-1。"
+
+msgid "hY01-009_NAME"
+msgstr "白エール"
+
+msgid "hY02-007_NAME"
+msgstr "緑エール"
+
+msgid "hY03-011_NAME"
+msgstr "赤エール"
+
+msgid "hY03-012_NAME"
+msgstr "赤エール"
+
+msgid "hY04-009_NAME"
+msgstr "青エール"
+

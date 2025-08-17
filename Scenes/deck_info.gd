@@ -23,6 +23,7 @@ func _ready() -> void:
 		elif card_data.cardArt[str(artNum)].ja.unrevealed and !Settings.settings.AllowUnrevealed:
 			%Front.texture = load("res://spoilers.png")
 		
+		#IF YOU CHANGE THIS CODE ALSO CHANGE IT IN CARD
 		var lang_code = "ja" if "ja" in card_data.cardArt[str(artNum)] else "en"
 		if 'en' in card_data.cardArt[str(artNum)] and Settings.settings.OnlyEN:
 			lang_code = 'en'
@@ -35,6 +36,7 @@ func _ready() -> void:
 			%Front.texture = Database.cardArts[cardNumber][int(artNum)][lang_code]
 		else:
 			print(cardNumber, " ", artNum, " ", lang_code)
+		#YES I SHOULDN'T JUST COPY-PASTE CODE - THIS ONE WAS TRICKY TO SEPARATE INTO ITS OWN THING
 	
 	if "deckName" in deck_info:
 		%DeckName.text = deck_info.deckName

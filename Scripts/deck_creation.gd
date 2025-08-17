@@ -60,7 +60,7 @@ var tag_order = ["JP", "ID", "EN", "DEV_IS",
 	"Myth", "Council", "Promise", "Advent", "Justice",
 	"ReGloss", "FLOWGLOW",
 	"AnimalEars", "Art", "Bird", "Cooking", "Food", "HalfElf", "HoloWitch", "Kaela'sArms",
-	"Languages", "Magic", "Sea", "ShirakamiCharacter", "Shooter", "Song", "Baby", "Alcohol"]
+	"Languages", "Magic", "Sea", "ShirakamiCharacter", "Shooter", "Song", "Baby", "Alcohol", "Summer"]
 
 #Constants filled up at runtime. So the name select isn't giving you options that aren't in the game
 var oshi_colors = []
@@ -860,8 +860,9 @@ func _on_menu_card_right_clicked(card_id):
 			total_main -= 1
 			add_holomem_or_support(alreadyHere,-1)
 	
-	if alreadyHere != null and in_deck_dictionary[actualCard.cardNumber] <= 0:
-		in_deck_dictionary.erase(actualCard.cardNumber)
+	if alreadyHere != null and alreadyHere.get_amount() <= 0:
+		if in_deck_dictionary[actualCard.cardNumber] <= 0:
+			in_deck_dictionary.erase(actualCard.cardNumber)
 		alreadyHere.name = "PleaseDelete"
 		alreadyHere.queue_free()
 		update_main_deck_children()

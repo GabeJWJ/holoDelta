@@ -7366,3 +7366,234 @@ msgstr ""
 msgid "hY04-007_NAME"
 msgstr ""
 
+msgid "hBD24-062_NAME"
+msgstr ""
+
+msgid "hBD24-062_SKILL_NAME"
+msgstr ""
+
+msgid "hBD24-062_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBD24-062_SPSKILL_NAME"
+msgstr ""
+
+msgid "hBD24-062_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hDB24-063_NAME"
+msgstr ""
+
+msgid "hDB24-063_SKILL_NAME"
+msgstr ""
+
+msgid "hDB24-063_SKILL_EFFECT"
+msgstr ""
+
+msgid "hDB24-063_SPSKILL_NAME"
+msgstr ""
+
+msgid "hDB24-063_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hSD08-001_NAME"
+msgstr ""
+
+msgid "hSD08-001_SKILL_NAME"
+msgstr ""
+
+msgid "hSD08-001_SKILL_EFFECT"
+msgstr ""
+
+msgid "hSD08-001_SPSKILL_NAME"
+msgstr ""
+
+msgid "hSD08-001_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "Summer"
+msgstr ""
+
+msgid "hSD08-002_NAME"
+msgstr ""
+
+msgid "hSD08-002_ART_0_NAME"
+msgstr ""
+
+msgid "hSD08-002_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD08-002_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD08-003_NAME"
+msgstr ""
+
+msgid "hSD08-003_ART_0_NAME"
+msgstr ""
+
+msgid "hSD08-003_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD08-003_BLOOM_NAME"
+msgstr ""
+
+msgid "hSD08-003_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hSD08-004_NAME"
+msgstr ""
+
+msgid "hSD08-004_ART_0_NAME"
+msgstr ""
+
+msgid "hSD08-004_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD08-004_GIFT_NAME"
+msgstr ""
+
+msgid "hSD08-004_GIFT_EFFECT"
+msgstr ""
+
+msgid "hSD08-005_NAME"
+msgstr ""
+
+msgid "hSD08-005_ART_0_NAME"
+msgstr ""
+
+msgid "hSD08-005_GIFT_NAME"
+msgstr ""
+
+msgid "hSD08-005_GIFT_EFFECT"
+msgstr ""
+
+msgid "hSD08-006_NAME"
+msgstr ""
+
+msgid "hSD08-006_ART_0_NAME"
+msgstr ""
+
+msgid "hSD08-006_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD08-006_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD08-007_NAME"
+msgstr ""
+
+msgid "hSD08-007_ART_0_NAME"
+msgstr ""
+
+msgid "hSD08-007_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD08-007_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD09-001_NAME"
+msgstr ""
+
+msgid "hSD09-001_SKILL_NAME"
+msgstr ""
+
+msgid "hSD09-001_SKILL_EFFECT"
+msgstr ""
+
+msgid "hSD09-001_SPSKILL_NAME"
+msgstr ""
+
+msgid "hSD09-001_SPSKILL_EFFECT"
+msgstr ""
+
+msgid "hSD09-002_NAME"
+msgstr ""
+
+msgid "hSD09-002_ART_0_NAME"
+msgstr ""
+
+msgid "hSD09-002_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD09-002_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD09-003_NAME"
+msgstr ""
+
+msgid "hSD09-003_ART_0_NAME"
+msgstr ""
+
+msgid "hSD09-003_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD09-003_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD09-004_NAME"
+msgstr ""
+
+msgid "hSD09-004_ART_0_NAME"
+msgstr ""
+
+msgid "hSD09-004_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD09-004_ART_1_NAME"
+msgstr ""
+
+msgid "hSD09-004_ART_1_EFFECT"
+msgstr ""
+
+msgid "hSD09-005_NAME"
+msgstr ""
+
+msgid "hSD09-005_ART_0_NAME"
+msgstr ""
+
+msgid "hSD09-005_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD09-005_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD09-006_NAME"
+msgstr ""
+
+msgid "hSD09-006_ART_0_NAME"
+msgstr ""
+
+msgid "hSD09-006_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD09-006_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD09-007_NAME"
+msgstr ""
+
+msgid "hSD09-007_ART_0_NAME"
+msgstr ""
+
+msgid "hSD09-007_GIFT_NAME"
+msgstr ""
+
+msgid "hSD09-007_GIFT_EFFECT"
+msgstr ""
+
+msgid "hY01-009_NAME"
+msgstr ""
+
+msgid "hY02-007_NAME"
+msgstr ""
+
+msgid "hY03-011_NAME"
+msgstr ""
+
+msgid "hY03-012_NAME"
+msgstr ""
+
+msgid "hY04-009_NAME"
+msgstr ""
+

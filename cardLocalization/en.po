@@ -7366,3 +7366,234 @@ msgstr "Draw 2 cards from your deck. Then, look at the top 5 cards of your deck.
 msgid "hY04-007_NAME"
 msgstr "Blue Cheer"
 
+msgid "hBD24-062_NAME"
+msgstr "Tokoyami Towa"
+
+msgid "hBD24-062_SKILL_NAME"
+msgstr "Purple Enhance"
+
+msgid "hBD24-062_SKILL_EFFECT"
+msgstr "[1/Turn]During this turn, 1 of your purple holomem gets Arts+20."
+
+msgid "hBD24-062_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-062_SPSKILL_EFFECT"
+msgstr "[1/Game]Reveal 1 purple holomem from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hDB24-063_NAME"
+msgstr "Akai Haato"
+
+msgid "hDB24-063_SKILL_NAME"
+msgstr "Red Enhance"
+
+msgid "hDB24-063_SKILL_EFFECT"
+msgstr "[1/Turn]During this turn, 1 of your red holomem gets Arts+20."
+
+msgid "hDB24-063_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hDB24-063_SPSKILL_EFFECT"
+msgstr "[1/Game]Reveal 1 red holomem from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hSD08-001_NAME"
+msgstr "Amane Kanata"
+
+msgid "hSD08-001_SKILL_NAME"
+msgstr "White Mic"
+
+msgid "hSD08-001_SKILL_EFFECT"
+msgstr "[1/Turn]During this turn, your white center holomem gets Arts+20."
+
+msgid "hSD08-001_SPSKILL_NAME"
+msgstr "Quick Guard"
+
+msgid "hSD08-001_SPSKILL_EFFECT"
+msgstr "[1/Game]During your opponent's turn, usable if your white holomem would take Damage from your opponent:That holomem takes -20 Damage."
+
+msgid "Summer"
+msgstr "Summer"
+
+msgid "hSD08-002_NAME"
+msgstr "Amane Kanata"
+
+msgid "hSD08-002_ART_0_NAME"
+msgstr "I look good in a yukata, don't I?"
+
+msgid "hSD08-002_COLLAB_NAME"
+msgstr "holosummer"
+
+msgid "hSD08-002_COLLAB_EFFECT"
+msgstr "Look at the top 5 cards of your deck. Reveal 1 Debut holomem with #Summer from among them, and add the revealed card to hand. Then, return the remaining cards to the bottom of the deck in any order."
+
+msgid "hSD08-003_NAME"
+msgstr "Amane Kanata"
+
+msgid "hSD08-003_ART_0_NAME"
+msgstr "Everyone's Super Darling"
+
+msgid "hSD08-003_ART_0_EFFECT"
+msgstr "This Arts gets +10 for each of your holomem with #Summer."
+
+msgid "hSD08-003_BLOOM_NAME"
+msgstr "I can talk to you"
+
+msgid "hSD08-003_BLOOM_EFFECT"
+msgstr "Reveal 1 Debut holomem with #Gen 4 from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hSD08-004_NAME"
+msgstr "Amane Kanata"
+
+msgid "hSD08-004_ART_0_NAME"
+msgstr "So that I can catch up with you"
+
+msgid "hSD08-004_ART_0_EFFECT"
+msgstr "[1/Turn]If your opponent's center holomem is downed by this Arts, deal 40 Special Damage to 1 of your opponent's 2nd holomem."
+
+msgid "hSD08-004_GIFT_NAME"
+msgstr "Angel Wind"
+
+msgid "hSD08-004_GIFT_EFFECT"
+msgstr "[Center position only]Your collab Debut holomem with #Gen 4 gets Arts+40."
+
+msgid "hSD08-005_NAME"
+msgstr "Himemori Luna"
+
+msgid "hSD08-005_ART_0_NAME"
+msgstr "It's a festival"
+
+msgid "hSD08-005_GIFT_NAME"
+msgstr "Drawstring bag of holding"
+
+msgid "hSD08-005_GIFT_EFFECT"
+msgstr "[Collab position only]If your holomem is downed during your opponent's turn, if you have equal or less Life than your opponent, your may return 1 item with \"PC\" in its name from your archive to hand."
+
+msgid "hSD08-006_NAME"
+msgstr "Tokoyami Towa"
+
+msgid "hSD08-006_ART_0_NAME"
+msgstr "Are you captivated by Towa?"
+
+msgid "hSD08-006_COLLAB_NAME"
+msgstr "Are you going to watch the fireworks?"
+
+msgid "hSD08-006_COLLAB_EFFECT"
+msgstr "Deal 10 Special Damage to your opponent's center holomem. If you are going second and this is your first turn, deal 20 Special Damage instead."
+
+msgid "hSD08-007_NAME"
+msgstr "Tsunomaki Watame"
+
+msgid "hSD08-007_ART_0_NAME"
+msgstr "Cotton candy is delicious"
+
+msgid "hSD08-007_COLLAB_NAME"
+msgstr "Summer festival with everyone"
+
+msgid "hSD08-007_COLLAB_EFFECT"
+msgstr "You may send 1 cheer from your archive to your 2nd holomem with #Gen 4."
+
+msgid "hSD09-001_NAME"
+msgstr "Houshou Marine"
+
+msgid "hSD09-001_SKILL_NAME"
+msgstr "Red Mic"
+
+msgid "hSD09-001_SKILL_EFFECT"
+msgstr "[1/Turn]During this turn, your red center holomem gets Arts+20."
+
+msgid "hSD09-001_SPSKILL_NAME"
+msgstr "Now! Once more!"
+
+msgid "hSD09-001_SPSKILL_EFFECT"
+msgstr "[1/Game]Return 1 red holomem from your archive to hand."
+
+msgid "hSD09-002_NAME"
+msgstr "Houshou Marine"
+
+msgid "hSD09-002_ART_0_NAME"
+msgstr "Would you like to join Senchou?"
+
+msgid "hSD09-002_COLLAB_NAME"
+msgstr "holosummer"
+
+msgid "hSD09-002_COLLAB_EFFECT"
+msgstr "Look at the top 5 cards of your deck. Reveal 1 Debut holomem with #Summer from among them, and add the revealed card to hand. Then, return the remaining cards to the bottom of the deck in any order."
+
+msgid "hSD09-003_NAME"
+msgstr "Houshou Marine"
+
+msgid "hSD09-003_ART_0_NAME"
+msgstr "Seriously, leave it to Marine"
+
+msgid "hSD09-003_COLLAB_NAME"
+msgstr "A win for everyone"
+
+msgid "hSD09-003_COLLAB_EFFECT"
+msgstr "Deal 10 Special Damage for each differently-named holomem with #Gen 3 on your stage to your opponent's center holomem."
+
+msgid "hSD09-004_NAME"
+msgstr "Houshou Marine"
+
+msgid "hSD09-004_ART_0_NAME"
+msgstr "Bonds of 3rd Generation"
+
+msgid "hSD09-004_ART_0_EFFECT"
+msgstr "If your stage has a holomem with #Gen 3 other than <Houshou Marine>, draw 1 card from your deck."
+
+msgid "hSD09-004_ART_1_NAME"
+msgstr "Over the horizon alongside you"
+
+msgid "hSD09-004_ART_1_EFFECT"
+msgstr "Deal 10 Special Damage for each differently-named holomem with #Gen 3 on your stage to your opponent's center holomem and collab holomem."
+
+msgid "hSD09-005_NAME"
+msgstr "Shirogane Noel"
+
+msgid "hSD09-005_ART_0_NAME"
+msgstr "Summer is here!"
+
+msgid "hSD09-005_COLLAB_NAME"
+msgstr "3rd Generation Beach House"
+
+msgid "hSD09-005_COLLAB_EFFECT"
+msgstr "Your center 2nd holomem gets Arts+10 for each of your differently-named holomem with #Gen 3."
+
+msgid "hSD09-006_NAME"
+msgstr "Usada Pekora"
+
+msgid "hSD09-006_ART_0_NAME"
+msgstr "Your order of shaved ice peko!"
+
+msgid "hSD09-006_COLLAB_NAME"
+msgstr "You guys work hard!"
+
+msgid "hSD09-006_COLLAB_EFFECT"
+msgstr "If you are going second and this is your first turn, send the top card of your cheer deck to your holomem with #Gen 3."
+
+msgid "hSD09-007_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hSD09-007_ART_0_NAME"
+msgstr "Please wait for something cold♪"
+
+msgid "hSD09-007_GIFT_NAME"
+msgstr "Let's cool down"
+
+msgid "hSD09-007_GIFT_EFFECT"
+msgstr "[Collab position only]If this holomem is downed during your opponent's turn, if you have less Life than your opponent, you take -1 Life Damage."
+
+msgid "hY01-009_NAME"
+msgstr "White Cheer"
+
+msgid "hY02-007_NAME"
+msgstr "Green Cheer"
+
+msgid "hY03-011_NAME"
+msgstr "Red Cheer"
+
+msgid "hY03-012_NAME"
+msgstr "Red Cheer"
+
+msgid "hY04-009_NAME"
+msgstr "Blue Cheer"
+
