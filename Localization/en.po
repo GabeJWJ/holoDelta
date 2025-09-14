@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: holodelta\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-07-08 23:54-0400\n"
+"PO-Revision-Date: 2025-08-23 14:11-0400\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Language: en_US\n"
@@ -128,6 +128,10 @@ msgstr "No Banlist"
 #: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CURRENT"
 msgstr "Current"
+
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT_EN"
+msgstr "Current (EN)"
 
 #: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED"
@@ -286,6 +290,21 @@ msgstr "Main Menu"
 #: Scenes/board.tscn
 msgid "MENU_PROMPT"
 msgstr "Really return to Main Menu?"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "DOWNLOAD_FAIL"
+msgstr "Failed to download card data"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "DOWNLOAD_FAIL_FULL"
+msgstr ""
+"Couldn't download the cardData.zip archive.\n"
+"There are many reasons this could happen, and I don't which is happening "
+"here."
+
+#: Scenes/board.tscn
+msgid "TRYAGAIN"
+msgstr "Try Again"
 
 #: Scenes/deck_list.tscn
 msgid "DECK_SELECT_CANCEL"
@@ -1008,8 +1027,14 @@ msgstr ""
 "If you want to see it, click 'Yes' to proceed to the deck creator screen."
 
 #: Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_CURRENT_EN"
-msgstr "Current (EN)"
+msgid "LOAD_FAIL"
+msgstr "Failed to load card data"
+
+#: Scripts/Multiplayer.gd
+msgid "LOAD_FAIL_FULL"
+msgstr ""
+"You have the cardData.zip archive, but it couldn't be loaded.\n"
+"Please let me know if you see this, as I have no clue how this is possible."
 
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://kwq21hbtxatg"
 path.s3tc="res://.godot/imported/HoloDelta BG (Light Mode).svg-f3a3238df789eb0ef8048e3c77951937.s3tc.ctex"
+path.etc2="res://.godot/imported/HoloDelta BG (Light Mode).svg-f3a3238df789eb0ef8048e3c77951937.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://CyberAssets/Main Menu Assets/HoloDelta BG (Light Mode).svg"
-dest_files=["res://.godot/imported/HoloDelta BG (Light Mode).svg-f3a3238df789eb0ef8048e3c77951937.s3tc.ctex"]
+dest_files=["res://.godot/imported/HoloDelta BG (Light Mode).svg-f3a3238df789eb0ef8048e3c77951937.s3tc.ctex", "res://.godot/imported/HoloDelta BG (Light Mode).svg-f3a3238df789eb0ef8048e3c77951937.etc2.ctex"]
 
 [params]
 

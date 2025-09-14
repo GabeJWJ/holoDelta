@@ -67,6 +67,8 @@ var attached = []
 #Cheer variables
 @export var cheer_color:String
 
+@export var extraNames:Array = []
+
 
 func setup_info(number,art_code,back=null):
 	cardNumber = number
@@ -113,6 +115,10 @@ func setup_info(number,art_code,back=null):
 	if card_data.has("tags"):
 		for tag in card_data.tags:
 			tags.append(tag)
+	
+	if card_data.has("extraNames"):
+		for extraName in card_data.extraNames:
+			extraNames.append(extraName)
 	
 	match cardType:
 		"Oshi":
@@ -223,17 +229,17 @@ func getColorsAsText():
 
 #Shoutout to whamer for the idea to add powers of 2
 func getColorOrder():
-	var colorToPrime = {"White":1,"Green":2,"Red":4,"Blue":8,"Purple":16,"Yellow":32}
+	var colorToNum = {"White":1,"Green":2,"Red":3,"Blue":4,"Purple":5,"Yellow":6}
 	match cardType:
 		"Oshi":
-			var result = 0
-			for color in oshi_color:
-				result += colorToPrime[color]
+			var result = 0.0
+			for index in range(oshi_color.size()):
+				result += colorToNum[oshi_color[index]] * pow(7, -index)
 			return result
 		"Holomem":
-			var result = 0
-			for color in holomem_color:
-				result += colorToPrime[color]
+			var result = 0.0
+			for index in range(holomem_color.size()):
+				result += colorToNum[holomem_color[index]] * pow(7, -index)
 			return result
 	return 0
 
@@ -341,6 +347,10 @@ func full_desc():
 			if limited:
 				result += "\n\n" + tr("INFO_LIMITED")
 			result += "\n\n" + Settings.trans("%s_EFFECT" % cardNumber)
+	
+	if extraNames.size() == 1:
+		result += "\n\nEXTRA: " + Settings.trans("EXTRA_EXTRANAME").format({
+						cardType = Settings.trans(supportType if cardType == "Support" else cardType), extraName = Settings.trans(extraNames[0] + "_NAME") })
 	
 	return result
 

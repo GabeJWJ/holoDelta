@@ -156,6 +156,12 @@ msgstr ""
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT_EN"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr ""
 
@@ -324,6 +330,20 @@ msgstr ""
 
 #: Scenes/board.tscn
 msgid "MENU_PROMPT"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_FAIL"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_FAIL_FULL"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "TRYAGAIN"
 msgstr ""
 
 #: Scenes/deck_list.tscn
@@ -1052,7 +1072,11 @@ msgid "DECK_AUTOLOAD_CONFIRM_INFO"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_CURRENT_EN"
+msgid "LOAD_FAIL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "LOAD_FAIL_FULL"
 msgstr ""
 
 #: Scripts/Multiplayer.gd

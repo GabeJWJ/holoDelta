@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnf1otkfbvwpe"
 path.s3tc="res://.godot/imported/fuda_holoBack.png-c308475a79dbbb6b25146c2c1146441a.s3tc.ctex"
+path.etc2="res://.godot/imported/fuda_holoBack.png-c308475a79dbbb6b25146c2c1146441a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://fuda_holoBack.png"
-dest_files=["res://.godot/imported/fuda_holoBack.png-c308475a79dbbb6b25146c2c1146441a.s3tc.ctex"]
+dest_files=["res://.godot/imported/fuda_holoBack.png-c308475a79dbbb6b25146c2c1146441a.s3tc.ctex", "res://.godot/imported/fuda_holoBack.png-c308475a79dbbb6b25146c2c1146441a.etc2.ctex"]
 
 [params]
 

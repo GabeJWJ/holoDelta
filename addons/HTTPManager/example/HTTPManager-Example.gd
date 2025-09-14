@@ -60,5 +60,3 @@ func _on_button_pressed():
 #	$HTTPManager.job(
 #		"https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg"
 #	).download("C:/Users/Klaas/Downloads/video.mp4")
-
-

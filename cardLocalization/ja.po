@@ -16,6 +16,9 @@ msgstr "このホロメンがダウンした時、自分のライフ-2"
 msgid "EXTRA_UNLIM"
 msgstr "このホロメンはデッキに何枚でも入れられる"
 
+msgid "EXTRA_EXTRANAME"
+msgstr "この{cardType}は〈{extraName}〉としても扱う"
+
 msgid "Blue"
 msgstr "青"
 
@@ -7381,19 +7384,19 @@ msgstr "Birthday Gift ~Purple~"
 msgid "hBD24-062_SPSKILL_EFFECT"
 msgstr "[ゲームに1回] 自分のデッキから、紫ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
 
-msgid "hDB24-063_NAME"
+msgid "hBD24-063_NAME"
 msgstr "赤井はあと"
 
-msgid "hDB24-063_SKILL_NAME"
+msgid "hBD24-063_SKILL_NAME"
 msgstr "レッドエンハンス"
 
-msgid "hDB24-063_SKILL_EFFECT"
+msgid "hBD24-063_SKILL_EFFECT"
 msgstr "[タージに1回] このターンの間、赤分の緑ホロメン1人のアーツ+20。"
 
-msgid "hDB24-063_SPSKILL_NAME"
+msgid "hBD24-063_SPSKILL_NAME"
 msgstr "Birthday Gift ~Red~"
 
-msgid "hDB24-063_SPSKILL_EFFECT"
+msgid "hBD24-063_SPSKILL_EFFECT"
 msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
 
 msgid "hSD08-001_NAME"
@@ -7596,4 +7599,1048 @@ msgstr "赤エール"
 
 msgid "hY04-009_NAME"
 msgstr "青エール"
+
+msgid "hBD24-064_NAME"
+msgstr "大神ミオ"
+
+msgid "hBD24-064_SKILL_NAME"
+msgstr "グリーンエンハンス"
+
+msgid "hBD24-064_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、緑分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-064_SPSKILL_NAME"
+msgstr "Birthday Gift ~Green~"
+
+msgid "hBD24-064_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、緑ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-002_NAME"
+msgstr "アイラニ・イオフィフティーン"
+
+msgid "hBP05-002_SKILL_NAME"
+msgstr "IOFORIA~!"
+
+msgid "hBP05-002_SKILL_EFFECT"
+msgstr "[ターンに1回] 相手のターンで、自分の#ID1期生を持つホロメンが相手からダメージを受ける時に使える！そのホロメンのエール1枚を自分の他の#ID1期生を持つホロメンに付け替える。"
+
+msgid "hBP05-002_SPSKILL_NAME"
+msgstr "Kekuatan Iofi"
+
+msgid "hBP05-002_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のステージのエール2枚をアーカイブすることで、自分のデッキから、#ID1期生を持つホロメン2枚とし、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-003_NAME"
+msgstr "尾丸ポルカ"
+
+msgid "hBP05-003_SKILL_NAME"
+msgstr "ポルカの伝説"
+
+msgid "hBP05-003_SKILL_EFFECT"
+msgstr "[ターンに1回] 自分の手札が自分のステージの〈座員〉の枚数と同じになるまで、自分のデッキを引く。だし、引ける枚数は4枚まで。"
+
+msgid "hBP05-003_SPSKILL_NAME"
+msgstr "成功体験ー!!!"
+
+msgid "hBP05-003_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキの上から7枚を見る。その中から、[〈尾丸ポルカ〉とスタッフ]1枚ずつにし、公開した[〈尾丸ポルカ〉とスタッフ]を手札に加える。そして残ったカードをアーカイブする。"
+
+msgid "hBP05-019_NAME"
+msgstr "アイラニ・イオフィフティーン"
+
+msgid "hBP05-019_ART_0_NAME"
+msgstr "君といる時間"
+
+msgid "hBP05-019_COLLAB_NAME"
+msgstr "イオフィとおでかけ"
+
+msgid "hBP05-019_COLLAB_EFFECT"
+msgstr "このホロメンのエール1枚をアーカイブできます：自分の#ID1期生を持つホロメン1人のHP30回復。"
+
+msgid "hBP05-020_NAME"
+msgstr "アイラニ・イオフィフティーン"
+
+msgid "hBP05-020_ART_0_NAME"
+msgstr "君となら"
+
+msgid "hBP05-020_COLLAB_NAME"
+msgstr "過去・今・未来の私と君へ"
+
+msgid "hBP05-020_COLLAB_EFFECT"
+msgstr "自分が後攻で最初のターンなら、自分のエールデッキの上から1枚を自分の#ID1期生を持つホロメンに送る。"
+
+msgid "hBP05-021_NAME"
+msgstr "アイラニ・イオフィフティーン"
+
+msgid "hBP05-021_ART_0_NAME"
+msgstr "抹茶めっちゃ好き ( ´ڡ`* )"
+
+msgid "hBP05-021_BLOOM_NAME"
+msgstr "こんにちは、ベイブ！"
+
+msgid "hBP05-021_BLOOM_EFFECT"
+msgstr "自分のアーカイブのエール1枚をこのホロメンに送れる。"
+
+msgid "hBP05-022_NAME"
+msgstr "アイラニ・イオフィフティーン"
+
+msgid "hBP05-022_ART_0_NAME"
+msgstr "Matahari Terbenam"
+
+msgid "hBP05-022_COLLAB_NAME"
+msgstr "落日に染まる"
+
+msgid "hBP05-022_COLLAB_EFFECT"
+msgstr "自分のステージにエールが4枚以上あるなら、このターンの間、自分のステージの#ID1期生を持つホロメン1人のアーツ+20。"
+
+msgid "hBP05-023_NAME"
+msgstr "アイラニ・イオフィフティーン"
+
+msgid "hBP05-023_ART_0_NAME"
+msgstr "リレーションガーデン"
+
+msgid "hBP05-023_ART_0_EFFECT"
+msgstr "[センターポジション限定]自分の推しホロメンが〈アイラニ・イオフィフティーン〉なら、自分のステージのエール3枚につき、このアーツ+20。"
+
+msgid "hBP05-023_GIFT_NAME"
+msgstr "宇宙人のお姫様"
+
+msgid "hBP05-023_GIFT_EFFECT"
+msgstr "このホロメンが相手のホロメンをダウンさせた時、自分のアーカイブのエール1枚を自分の#ID1期生を持つホロメンに送れる。"
+
+msgid "hBP05-025_NAME"
+msgstr "アキ・ローゼンタール"
+
+msgid "hBP05-025_ART_0_NAME"
+msgstr "新たな旅を始めよう"
+
+msgid "hBP05-026_NAME"
+msgstr "アキ・ローゼンタール"
+
+msgid "hBP05-026_ART_0_NAME"
+msgstr "暮れなずむひととき"
+
+msgid "hBP05-026_COLLAB_NAME"
+msgstr "トワイライトリゾート"
+
+msgid "hBP05-026_COLLAB_EFFECT"
+msgstr "自分のアーカイブの〈石の斧〉1枚を、自分の〈アキ・ローゼンタール〉に付ける。"
+
+msgid "hBP05-027_NAME"
+msgstr "アキ・ローゼンタール"
+
+msgid "hBP05-027_ART_0_NAME"
+msgstr "ワンフォーオール"
+
+msgid "hBP05-027_ART_0_EFFECT"
+msgstr "このアーツで相手のホロメンをダウンさせた時、自分のデッキを1枚引きます。その後、自分の推しホロメンが〈アキ・ローゼンタール〉なら、自分のホロメン全員のHP20回復。"
+
+msgid "hBP05-027_BLOOM_NAME"
+msgstr "ゲーム？スポーティー？キャンプ？！"
+
+msgid "hBP05-027_BLOOM_EFFECT"
+msgstr "このホロメンに付いているツール1枚をアーカイブできます：自分のデッキから[ホロメンカツール]1枚除外し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-030_NAME"
+msgstr "尾丸ポルカ"
+
+msgid "hBP05-030_ART_0_NAME"
+msgstr "うたたねの記念日"
+
+msgid "hBP05-030_COLLAB_NAME"
+msgstr "まばゆい日常を君と"
+
+msgid "hBP05-030_COLLAB_EFFECT"
+msgstr "このターンの間、自分のファンが追加されますセンターホロメンのアーツ+10。"
+
+msgid "hBP05-031_NAME"
+msgstr "尾丸ポルカ"
+
+msgid "hBP05-031_ART_0_NAME"
+msgstr "あ、素晴らしきアイドル人生かな"
+
+msgid "hBP05-031_ART_0_EFFECT"
+msgstr "自分が後攻で最初のターンなら、自分のデッキから、〈座員〉1枚ずつ、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-032_NAME"
+msgstr "尾丸ポルカ"
+
+msgid "hBP05-032_ART_0_NAME"
+msgstr "朝のポルカ ※若干のフィクション"
+
+msgid "hBP05-032_ART_0_EFFECT"
+msgstr "自分の手札1枚をアーカイブできる：相手のセンターホロメンかコラボホロメンに特殊ダメージ10を与える。"
+
+msgid "hBP05-032_BLOOM_NAME"
+msgstr "ポルカとのなんでもない休日"
+
+msgid "hBP05-032_BLOOM_EFFECT"
+msgstr "相手のコラボホロメンに特殊ダメージ20を与える。"
+
+msgid "hBP05-033_NAME"
+msgstr "尾丸ポルカ"
+
+msgid "hBP05-033_ART_0_NAME"
+msgstr "すごいね、桜！"
+
+msgid "hBP05-033_ART_0_EFFECT"
+msgstr "サイコロを1回振れる：出た目の数1につき、自分のデッキの上から1枚をアーカイブする。その後、自分のアーカイブが10枚以上あるなら、このアーツ+10。"
+
+msgid "hBP05-033_ART_1_NAME"
+msgstr "来年も君と見に来たな"
+
+msgid "hBP05-033_ART_1_EFFECT"
+msgstr "このホロメンに付いている〈座員〉1枚につき、このアーツ+10。"
+
+msgid "hBP05-034_NAME"
+msgstr "尾丸ポルカ"
+
+msgid "hBP05-034_ART_0_NAME"
+msgstr "準備はいいですか？"
+
+msgid "hBP05-034_ART_0_EFFECT"
+msgstr "自分の推しホロメンが〈尾丸ポルカ〉なら、自分のアーカイブのカード10枚につき、このアーツ+30。"
+
+msgid "hBP05-034_BLOOM_NAME"
+msgstr "おまたせ〜！"
+
+msgid "hBP05-034_BLOOM_EFFECT"
+msgstr "[センターポジション限定]自分の手札を好きな枚数アーカイブできます。アーカイブしたカード1枚につき、自分のアーカイブの〈座員〉1枚を手札に戻します。"
+
+msgid "hBP05-047_NAME"
+msgstr "こぼ・かなえる"
+
+msgid "hBP05-047_ART_0_NAME"
+msgstr "アットユアサービス!!"
+
+msgid "hBP05-047_ART_0_EFFECT"
+msgstr "相手のバックホロメン1人に特殊ダメージ10を与える。"
+
+msgid "hBP05-048_NAME"
+msgstr "こぼ・かなえる"
+
+msgid "hBP05-048_ART_0_NAME"
+msgstr "キミが元気になれるように"
+
+msgid "hBP05-048_ART_0_EFFECT"
+msgstr "相手のバックホロメン2に特殊ダメージ10を与える。"
+
+msgid "hBP05-048_COLLAB_NAME"
+msgstr "幼馴染のドキドキ膝枕"
+
+msgid "hBP05-048_COLLAB_EFFECT"
+msgstr "相手のバックホロメン2に特殊ダメージ10を与える。"
+
+msgid "hBP05-049_NAME"
+msgstr "こぼ・かなえる"
+
+msgid "hBP05-049_ART_0_NAME"
+msgstr "雨跡をなぞる"
+
+msgid "hBP05-049_ART_0_EFFECT"
+msgstr "相手のバックホロメン全員のHPが合計80以上減っているなら、自分のアーカイブのエール1枚を自分の〈こぼ・かなえる〉に送れる。"
+
+msgid "hBP05-049_ART_1_NAME"
+msgstr "残響する雨音"
+
+msgid "hBP05-049_ART_1_EFFECT"
+msgstr "このホロメンのエール2枚をアーカイブできる：相手のバックホロメン全員に特殊ダメージ30を与える。ただし、ダウンしても相手のライフは減らない。"
+
+msgid "hY05-007_NAME"
+msgstr "紫エール"
+
+msgid "hY06-006_NAME"
+msgstr "黄エール"
+
+msgid "hBP05-086_NAME"
+msgstr "Cilus"
+
+msgid "hBP05-086_EFFECT"
+msgstr "このマスコットにホロメンのHP+20。\n\n◆〈こぼ・かなえる〉が付いていたら能力追加\n\n[センターポジション限定][ターンに1回]相手のバックホロメンがダウンしたとき、自分のデッキを1枚引く。\n\nマスコットは、自分のホロメン1人につき1枚だけ付ける。"
+
+msgid "hBP05-082_NAME"
+msgstr "アキ・ローゼンタールの斧"
+
+msgid "hBP05-082_EFFECT"
+msgstr "このカードは、自分の手札1枚か自分のステージの〈石の斧〉1枚をアーカイブに入れて使えません。\n\nこのツールにホロメンのアーツ+10。\n\n◆2つ以上の〈アキ・ローゼンタール〉に付いていたら能力追加このツールにホロメンのアーツ+40。\n\nツールは、自分のホロメン1人につき1枚だけ装備します。"
+
+msgid "hBP05-001_NAME"
+msgstr "白銀ノエル"
+
+msgid "hBP05-001_SKILL_NAME"
+msgstr "白銀聖騎士団"
+
+msgid "hBP05-001_SKILL_EFFECT"
+msgstr "[ターンに1回]自分のホロメンが相手のホロメンをダウンさせた時に使える:自分のデッキから、#3期生を持つホロメンを1枚除外し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-001_SPSKILL_NAME"
+msgstr "スーパーまずった太郎"
+
+msgid "hBP05-001_SPSKILL_EFFECT"
+msgstr "[ゲームに1回]相手のターンで、自分の#3期生を持つホロメンがダウンした時に使える:自分の減るライフ-1。その後、そのホロメンがバズホロメンか2番目のホロメンなら、自分のデッキを2枚引く。"
+
+msgid "hBP05-008_NAME"
+msgstr "白銀ノエル"
+
+msgid "hBP05-008_ART_0_NAME"
+msgstr "楽しく！"
+
+msgid "hBP05-008_GIFT_NAME"
+msgstr "まっするまっする"
+
+msgid "hBP05-008_GIFT_EFFECT"
+msgstr "[コラボポジション限定] 自分の#3期生を持つDebutホロメンがセンターポジションで受けるダメージ-20。"
+
+msgid "hBP05-010_NAME"
+msgstr "白銀ノエル"
+
+msgid "hBP05-010_ART_0_NAME"
+msgstr "生きる力"
+
+msgid "hBP05-010_ART_0_EFFECT"
+msgstr "このターンに自分が〈牛丼〉を使っていたら、このアーツ+30。"
+
+msgid "hBP05-010_GIFT_NAME"
+msgstr "闘団長"
+
+msgid "hBP05-010_GIFT_EFFECT"
+msgstr "[コラボポジション限定]自分の3期生を持つセンターホロメンがいる間、相手のホロメンのアーツは、自分のコラボホロメンしか対象にできない。ただし、特殊ダメージは除く。"
+
+msgid "hBP05-012_NAME"
+msgstr "白銀ノエル"
+
+msgid "hBP05-012_ART_0_NAME"
+msgstr "騎士団の道"
+
+msgid "hBP05-012_ART_0_EFFECT"
+msgstr "このホロメンのHPが減っているなら、このアーツ+40。"
+
+msgid "hBP05-012_ART_1_NAME"
+msgstr "慈悲の一撃"
+
+msgid "hBP05-012_ART_1_EFFECT"
+msgstr "[センターポジション限定] 自分の#3期生を持つコラボホロメンがいるなら、このアーツ+30。"
+
+msgid "hBP05-017_NAME"
+msgstr "姫森ルーナ"
+
+msgid "hBP05-017_ART_0_NAME"
+msgstr "レトロロマン"
+
+msgid "hBP05-017_ART_0_EFFECT"
+msgstr "自分のアーカイブの〈ルーナイト〉1枚にこのホロメンが付けられる。"
+
+msgid "hBP05-017_ART_1_NAME"
+msgstr "ぱくぱく"
+
+msgid "hBP05-017_ART_1_EFFECT"
+msgstr "【コラボポジション限定】自分のセンターホロメンに付いている〈ルーナイト〉1枚につき、このアーツに必要な-1。"
+
+msgid "hBP05-057_NAME"
+msgstr "ネリッサ・レイヴンクロフト"
+
+msgid "hBP05-057_ART_0_NAME"
+msgstr "Cool Summer Nights"
+
+msgid "hBP05-057_COLLAB_NAME"
+msgstr "Going out!"
+
+msgid "hBP05-057_COLLAB_EFFECT"
+msgstr "このターンの間、自分のステージの#歌を持つホロメン1人のアーツ+10。"
+
+msgid "hBP05-059_NAME"
+msgstr "ネリッサ・レイヴンクロフト"
+
+msgid "hBP05-059_ART_0_NAME"
+msgstr "ワンアンドオンリー"
+
+msgid "hBP05-059_ART_0_EFFECT"
+msgstr "自分の推しホロメンが〈ネリッサ・レイヴンクロフト〉なら、自分のデッキを1枚引く。"
+
+msgid "hBP05-059_ART_1_NAME"
+msgstr "ツノに触らないで！"
+
+msgid "hBP05-061_NAME"
+msgstr "ネリッサ・レイヴンクロフト"
+
+msgid "hBP05-061_ART_0_NAME"
+msgstr "Unleashed Charm"
+
+msgid "hBP05-061_ART_0_EFFECT"
+msgstr "自分の手札1～3枚をアーカイブできる：このターンの間、アーカイブしたカード1枚につき、自分のステージの#歌を持つホロメン1人のアーツ+20。"
+
+msgid "hBP05-061_GIFT_NAME"
+msgstr "DEO"
+
+msgid "hBP05-061_GIFT_EFFECT"
+msgstr "このホロメンが相手のホロメンをダウンさせた時、自分のデッキを2枚引く。"
+
+msgid "hBP05-062_NAME"
+msgstr "常闇トワ"
+
+msgid "hBP05-062_ART_0_NAME"
+msgstr "みんなありがとう"
+
+msgid "hBP05-062_ART_0_EFFECT"
+msgstr "相手のセンターホロメンかコラボホロメンのいずれかに、自分のステージの#歌を持つ1stホロメン1人につき、特殊ダメージ20を与える。"
+
+msgid "hBP05-062_BLOOM_NAME"
+msgstr "友達がいっぱい増えたよ"
+
+msgid "hBP05-062_BLOOM_EFFECT"
+msgstr "自分のデッキから、#歌を持つBuzz以外の1stホロメン2枚以内に、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-072_NAME"
+msgstr "角巻わため"
+
+msgid "hBP05-072_ART_0_NAME"
+msgstr "君と色違いのリュック"
+
+msgid "hBP05-072_ART_0_EFFECT"
+msgstr "[センターポジション限定]このホロメンにエールが4枚以上付いているなら、 このターンの間、このホロメンと自分のコラボホロメンのアーツ+50。"
+
+msgid "hBP05-072_ART_1_NAME"
+msgstr "わためと海辺デート"
+
+msgid "hBP05-072_ART_1_EFFECT"
+msgstr "自分の推しホロメンが〈角巻わため〉なら、自分のエールデッキの上から1枚を自分の〈角巻わため〉に送れる。"
+
+msgid "hBP05-075_NAME"
+msgstr "牛丼"
+
+msgid "hBP05-075_EFFECT"
+msgstr "自分のホロメンを1人選ぶ。このターンの間、選んだホロメンのバトンタッチに必要な-2。その後、選んだホロメンのHP20回復。"
+
+msgid "hBP05-081_NAME"
+msgstr "白銀ノエルのメイス"
+
+msgid "hBP05-081_EFFECT"
+msgstr "このツールにホロメンのアーツ+10。\n\n◆1つ以上の〈白銀ノエル〉に付いていたら能力追加このツールにホロメンにエールが3枚以上付いている間、このホロメンのアーツ+20。\n\nツールは、自分のホロメン1人につき1枚だけ付けられます。"
+
+msgid "hBP05-083_NAME"
+msgstr "ネリッサ・レイヴンクロフトの杖"
+
+msgid "hBP05-083_EFFECT"
+msgstr "このツールが付いているホロメンのアーツ+10。\n\n◆2つ以上の〈ネリッサ・レイヴンクロフト〉に付いていたら能力追加 [センターポジション・コラボポジション限定] [ターンに1回] このツールが付いているホロメンの能力で自分の手札をアーカイブした時、相手のセンターホロメンかコラボホロメンに特殊ダメージ20を与えます。\n\nツールは、自分のホロメン1人につき1枚だけ付けられます。"
+
+msgid "hBP05-084_NAME"
+msgstr "角巻わためのハープ"
+
+msgid "hBP05-084_EFFECT"
+msgstr "このツールが付いているホロメンのアーツ+10。\n\n▶2つ以上の〈角巻わため〉が付いていたら能力追加\n\n■自分のステージに〈わためいと〉がある間、このツールが付いているホロメンのアーツ+10。\n\n■このツールが付いているホロメンがアーツを使った時、自分のアーカイブのエール1枚を自分の〈角巻わため〉に送れる。\n\nツールは、自分のホロメン1人につき1枚だけ付けられます。"
+
+msgid "hBP05-087_NAME"
+msgstr "Jailbird"
+
+msgid "hBP05-087_EFFECT"
+msgstr "相手のターンで、このファンが付いているホロメンがダウンしたとき、このホロメンのエール1枚を自分の他の#歌を持つホロメンに付け替えられます。\n\nこのファンは、自分の〈ネリッサ・レイヴンクロフト〉だけに付けられ、1人につき何枚でも付けられます。"
+
+msgid "hBD24-065_NAME"
+msgstr "綺々羅々ヴィヴィ"
+
+msgid "hBD24-065_SKILL_NAME"
+msgstr "パープルエンハンス"
+
+msgid "hBD24-065_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、紫分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-065_SPSKILL_NAME"
+msgstr "Birthday Gift ~Purple~"
+
+msgid "hBD24-065_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、紫ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBD24-066_NAME"
+msgstr "カエラ・コヴァルスキア"
+
+msgid "hBD24-066_SKILL_NAME"
+msgstr "レッドエンハンス"
+
+msgid "hBD24-066_SKILL_EFFECT"
+msgstr "[タージに1回] このターンの間、赤分の緑ホロメン1人のアーツ+20。"
+
+msgid "hBD24-066_SPSKILL_NAME"
+msgstr "Birthday Gift ~Red~"
+
+msgid "hBD24-066_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のデッキから、赤ホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-007_NAME"
+msgstr "不知火フレア"
+
+msgid "hBP05-007_SKILL_NAME"
+msgstr "キミの力になりたいから"
+
+msgid "hBP05-007_SKILL_EFFECT"
+msgstr "[ターンに1回] 自分のコラボポジションの[デビューホロメンか1stホ口メンかスポットホロメン]と、バックホロメンの〈不知火フレア〉1人を交代させる。"
+
+msgid "hBP05-007_SPSKILL_NAME"
+msgstr "みんなで盛り上がろう！"
+
+msgid "hBP05-007_SPSKILL_EFFECT"
+msgstr "[ゲームに1回] 自分のステージのエール1～5枚を自分の〈不知火フレア〉1人に付け替えられる。その後、このターンの間、自分のセンターホロメンのエール1枚につき、自分のステージのホロメン全員のアーツ+10。"
+
+msgid "hBP05-016_NAME"
+msgstr "兎田ぺこら"
+
+msgid "hBP05-016_ART_0_NAME"
+msgstr "ウーサペコラを崇めるぺこ"
+
+msgid "hBP05-016_ART_0_EFFECT"
+msgstr "このホロメンに重なっているホロメン1枚につき、サイコロを1回振れる：出た目の数が1につき、このアーツ+10。"
+
+msgid "hBP05-016_GIFT_NAME"
+msgstr "最強の女神"
+
+msgid "hBP05-016_GIFT_EFFECT"
+msgstr "このホロメンがアーツを使った時、そのアーツでサイコロを振って出た目の数が奇数なら、自分のデッキを1枚引く。偶数なら、自分のデッキを2枚引く。"
+
+msgid "hBP05-018_NAME"
+msgstr "ベスティア・ゼータ"
+
+msgid "hBP05-018_ART_0_NAME"
+msgstr "海に行こう！"
+
+msgid "hBP05-018_ART_0_EFFECT"
+msgstr "自分のステージに#ID3期生を持つバズホロメンがいるなら、自分のデッキを1枚引いて。"
+
+msgid "hBP05-018_ART_1_NAME"
+msgstr "サマーバイブス"
+
+msgid "hBP05-018_ART_1_EFFECT"
+msgstr "このアーツで相手のホロメンをダウンさせた時、自分のデッキから、#ID3期生を持つ最初のホロメンを1枚引き、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-028_NAME"
+msgstr "獅白ぼたん"
+
+msgid "hBP05-028_ART_0_NAME"
+msgstr "ここからが俺たちのスタートだ"
+
+msgid "hBP05-028_ART_0_EFFECT"
+msgstr "自分の〈獅白ぼたん〉のエールを1枚アーカイブできる：相手のセンターホロメンに特殊ダメージ30を与える。"
+
+msgid "hBP05-028_GIFT_NAME"
+msgstr "ちょっと頑張りました"
+
+msgid "hBP05-028_GIFT_EFFECT"
+msgstr "[センターポジション限定][ターンに1回]自分の推しホロメンの〈獅白ぼたん〉か、自分のステージの〈獅白ぼたん〉が相手のホロメシに30以上の特殊ダメージを与えた時、自分のデッキを1枚引く。"
+
+msgid "hBP05-038_NAME"
+msgstr "モココ・アビスガード"
+
+msgid "hBP05-038_ART_0_NAME"
+msgstr "ノーーーーーーエ！"
+
+msgid "hBP05-038_ART_0_EFFECT"
+msgstr "このアーツは、自分のセンターホロメンが〈フワワ・アビスガード〉なら、エール1枚を必要とせずに使えます。"
+
+msgid "hBP05-038_GIFT_NAME"
+msgstr "モコフェ"
+
+msgid "hBP05-038_GIFT_EFFECT"
+msgstr "【コラボポジション限定】自分のSP推しスキル「BAUBAU！」を使った時、このターンの間、このホロメンのアーツ+70。自分のステージに2枚目のホロメンがいるなら、さらに、このターンの間、このホロメンのアーツ+50。"
+
+msgid "hBP05-046_NAME"
+msgstr "雪花ラミィ"
+
+msgid "hBP05-046_ART_0_NAME"
+msgstr "愛せな〜い！"
+
+msgid "hBP05-046_ART_0_EFFECT"
+msgstr "自分のステージに#5期生を持つ2枚目のホロメンがいるなら、相手のホロメン1人に特殊ダメージ20を与える。"
+
+msgid "hBP05-046_BLOOM_NAME"
+msgstr "ラミィちゃんしか〜？"
+
+msgid "hBP05-046_BLOOM_EFFECT"
+msgstr "自分のデッキから、〈雪民〉1枚除外し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-050_NAME"
+msgstr "フワワ・アビスガード"
+
+msgid "hBP05-050_ART_0_NAME"
+msgstr "キーボードクラッシャー"
+
+msgid "hBP05-050_ART_0_EFFECT"
+msgstr "このターンに自分の〈モココ・アビスガード〉がアーツを使ったなら、このアーツ+40。このターンに自分の推しスキル「モコちゃん！」を使ったなら、さらに、このアーツ+30。"
+
+msgid "hBP05-050_GIFT_NAME"
+msgstr "モゴジャ〜〜ン!!!"
+
+msgid "hBP05-050_GIFT_EFFECT"
+msgstr "[センターポジション限定]自分の推しキル「モコちゃん！」を使った時、自分のエールデッキの上から1枚を自分の#Adventを持つホロメンに送る。"
+
+msgid "hBP05-063_NAME"
+msgstr "不知火フレア"
+
+msgid "hBP05-063_ART_0_NAME"
+msgstr "キミも一緒にゲームしない？"
+
+msgid "hBP05-063_COLLAB_NAME"
+msgstr "おうちでまったり"
+
+msgid "hBP05-063_COLLAB_EFFECT"
+msgstr "このホロメンのエール1枚をアーカイブできます：自分のデッキから、自分のステージのホロメン全員と異なるカード名のデビューホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-064_NAME"
+msgstr "不知火フレア"
+
+msgid "hBP05-064_ART_0_NAME"
+msgstr "幸せの場所"
+
+msgid "hBP05-064_COLLAB_NAME"
+msgstr "Canvas"
+
+msgid "hBP05-064_COLLAB_EFFECT"
+msgstr "自分が後攻で最初のターンなら、自分のデッキから、異なるカード名のデビューホロメン2枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-065_NAME"
+msgstr "不知火フレア"
+
+msgid "hBP05-065_ART_0_NAME"
+msgstr "それは嘘じゃん！"
+
+msgid "hBP05-065_GIFT_NAME"
+msgstr "幸運の石"
+
+msgid "hBP05-065_GIFT_EFFECT"
+msgstr "[コラボポジション限定][ターンに1回] このホロメン以外の自分のホロメンが相手からダメージを受ける時、サイコロを1回振れる：奇数なら、そのホロメン1人がダメージ-40を受ける。偶数なら、そのホロメン1人がダメージ-20を受ける。"
+
+msgid "hBP05-066_NAME"
+msgstr "不知火フレア"
+
+msgid "hBP05-066_ART_0_NAME"
+msgstr "氷姿雪魄"
+
+msgid "hBP05-066_ART_0_EFFECT"
+msgstr "自分のステージの異なるカード名の#3期生を持つホロメン1人につき、このアーツ+10。"
+
+msgid "hBP05-066_GIFT_NAME"
+msgstr "冬の旅"
+
+msgid "hBP05-066_GIFT_EFFECT"
+msgstr "[コラボポジション限定]自分の#3期生を持つセンターホロメンがアーツを使った時、自分の手札1枚をアーカイブできる：自分のデッキを1枚引く。"
+
+msgid "hBP05-067_NAME"
+msgstr "不知火フレア"
+
+msgid "hBP05-067_ART_0_NAME"
+msgstr "みんなに笑ってほしいから"
+
+msgid "hBP05-067_ART_0_EFFECT"
+msgstr "サイコロを1回振れる：出た目の数が自分のライフ以上なら、このアーツ+60。出た目の数が自分のライフ以下なら、自分のデッキを1枚引く。"
+
+msgid "hBP05-067_GIFT_NAME"
+msgstr "カラフルストリーム"
+
+msgid "hBP05-067_GIFT_EFFECT"
+msgstr "このホロメンがアーツを使った時、このホロメンのエール2枚を自分のバックホロメン1人に送れる。その後、自分のアーカイブの、エールを送ったホロメンと同じカード名の1枚目のホロメン1枚を手札に戻す。"
+
+msgid "hBP05-073_NAME"
+msgstr "アユンダ・リス"
+
+msgid "hBP05-073_ART_0_NAME"
+msgstr "IT's Time to RE4GE!!!!!"
+
+msgid "hBP05-073_ART_0_EFFECT"
+msgstr "自分の推しホロメンが〈アユンダ・リス〉なら、自分の#ID1期生を持つホロメン全員のエール1枚につき、このアーツ+10。ただし、枚数は10枚まで。"
+
+msgid "hBP05-073_COLLAB_NAME"
+msgstr "BRRRR"
+
+msgid "hBP05-073_COLLAB_EFFECT"
+msgstr "自分のエールデッキの上から3枚を見る。その中から、エール1枚を除外し、自分の〈アユンダ・リス〉に送る。そして残ったエールを好きな順でエールデッキの下に戻す。その後、自分のデッキを1枚引く。"
+
+msgid "hBP05-074_NAME"
+msgstr "フレンドリーパソコン"
+
+msgid "hBP05-074_EFFECT"
+msgstr "自分のデッキから、エクストラ「このホロメンはデッキに何枚でも入れられる」を持つDebutホロメン1～2枚を公開し、ステージに出します。そしてデッキをシャッフルします。Debutホロメンを2枚出したなら、さらに、自分の手札1枚をデッキの下に戻します。"
+
+msgid "hBP05-078_NAME"
+msgstr "晩酌配信"
+
+msgid "hBP05-078_EFFECT"
+msgstr "このカードは、自分の手札にこのカードを6枚以下でなければ使えません。\n\n自分のデッキの上から4枚を見る。その中から、#お酒を持つホロメンを好きな枚数公開し、公開したホロメンを手札に加える。そして残りのカードの好きな順でデッキの下に戻す。"
+
+msgid "hY01-007_NAME"
+msgstr "白エール"
+
+msgid "hY02-006_NAME"
+msgstr "緑エール"
+
+msgid "hY03-009_NAME"
+msgstr "赤エール"
+
+msgid "hY04-006_NAME"
+msgstr "青エール"
+
+msgid "hY05-005_NAME"
+msgstr "紫エール"
+
+msgid "hY06-005_NAME"
+msgstr "黄エール"
+
+msgid "hBP05-004_NAME"
+msgstr "猫又おかゆ"
+
+msgid "hBP05-004_SKILL_NAME"
+msgstr "いっくよー"
+
+msgid "hBP05-004_SKILL_EFFECT"
+msgstr "[ターンに1回]自分のセンターホロメンが〈猫又おかゆ〉なら使える：相手のホロメン1人に特殊ダメージ10を与える。"
+
+msgid "hBP05-004_SPSKILL_NAME"
+msgstr "ウマウマ！"
+
+msgid "hBP05-004_SPSKILL_EFFECT"
+msgstr "[ゲームに1回]相手のセンターホロメンとHPが減っているバックホロメン1人を交代できる。その後、自分のセンターホロメンが〈猫又おかゆ〉なら、自分のデッキを3枚引く。"
+
+msgid "hBP05-005_NAME"
+msgstr "癒月ちょこ"
+
+msgid "hBP05-005_SKILL_NAME"
+msgstr "ちょこまみれになっちゃんっ！"
+
+msgid "hBP05-005_SKILL_EFFECT"
+msgstr "[ターンに1回]自分のデッキから、#食べ物を持つイベント1枚に、手札を加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-005_SPSKILL_NAME"
+msgstr "ちょこっとクッキング"
+
+msgid "hBP05-005_SPSKILL_EFFECT"
+msgstr "[ゲームに1回]自分のアーカイブの#食べ物を持つイベント1～4枚に手札を返す。その後、このターンの間、自分のステージの#料理を持つホロメン全員のアーツ+40。"
+
+msgid "hBP05-013_NAME"
+msgstr "ときのそら"
+
+msgid "hBP05-013_ART_0_NAME"
+msgstr "7周年いえーい✩°｡⋆⸜(* ॑꒳ ॑* )⸝"
+
+msgid "hBP05-013_GIFT_NAME"
+msgstr "Ray of Jewelry"
+
+msgid "hBP05-013_GIFT_EFFECT"
+msgstr "【センターポジション・コラボポジション限定】自分のステージの#0期生を持つホロメン全員のアーツ+30。"
+
+msgid "hBP05-024_NAME"
+msgstr "AZKi"
+
+msgid "hBP05-024_ART_0_NAME"
+msgstr "あずきんちでゆっくりしよっ"
+
+msgid "hBP05-024_ART_0_EFFECT"
+msgstr "自分のステージに〈開拓者〉があるなら、自分のエールデッキの上から1枚を自分の〈AZKi〉に送る。"
+
+msgid "hBP05-024_ART_1_NAME"
+msgstr "帰っちゃうの？"
+
+msgid "hBP05-024_ART_1_EFFECT"
+msgstr "自分の推しホロメンが〈AZKi〉なら、このホロメンのエール1枚につき、このアーツ+20。"
+
+msgid "hBP05-029_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBP05-029_ART_0_NAME"
+msgstr "誰かの為に生きてきたけど"
+
+msgid "hBP05-029_ART_0_EFFECT"
+msgstr "自分の推しホロメンが〈儒鳥風亭らでん〉なら、自分のデッキから、#きのこを持つイベント1枚を公開し、手札を加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-029_ART_1_NAME"
+msgstr "徐々に自分の人生を生きてる"
+
+msgid "hBP05-029_ART_1_EFFECT"
+msgstr "自分のステージに#ReGLOSSを持つ2ndホロメンがいるなら、このアーツ+40。"
+
+msgid "hBP05-035_NAME"
+msgstr "さくらみこ"
+
+msgid "hBP05-035_ART_0_NAME"
+msgstr "あえんびえん"
+
+msgid "hBP05-035_ART_0_EFFECT"
+msgstr "自分の手札2枚をアーカイブできる：相手のセンターホロメンかコラボ・ホロメンに特殊ダメージ50を与える。自分のステージに〈35P〉があるなら、さらに、自分のデッキを1枚引く。"
+
+msgid "hBP05-035_GIFT_NAME"
+msgstr "今はちょっとね、練習で･･･"
+
+msgid "hBP05-035_GIFT_EFFECT"
+msgstr "[センターポジション・コラボポジション限定] 相手のターンで、自分の〈さくらみこ〉がダウンしたときに使える：自分のデッキから、〈み俺恥〉を1枚出し、手札を加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-036_NAME"
+msgstr "星街すいせい"
+
+msgid "hBP05-036_ART_0_NAME"
+msgstr "声出し最高！"
+
+msgid "hBP05-036_ART_0_EFFECT"
+msgstr "相手のバックホロメンのHPが減っているなら、このアーツ+20。"
+
+msgid "hBP05-037_NAME"
+msgstr "星街すいせい"
+
+msgid "hBP05-037_ART_0_NAME"
+msgstr "Non-Limit Boost"
+
+msgid "hBP05-037_ART_0_EFFECT"
+msgstr "このホロメンにエールとエールが付いているなら、自分のアーカイブのエールを2枚このホロメンに送れる。どちらか1色しか付いていないなら、自分のアーカイブのエールを1枚このホロメンに送れる。"
+
+msgid "hBP05-037_ART_1_NAME"
+msgstr "Shout in Crisis"
+
+msgid "hBP05-037_ART_1_EFFECT"
+msgstr "このホロメンのエールをアーカイブする。"
+
+msgid "hBP05-039_NAME"
+msgstr "一条莉々華"
+
+msgid "hBP05-039_ART_0_NAME"
+msgstr "人生に手遅れとならないから"
+
+msgid "hBP05-039_ART_0_EFFECT"
+msgstr "このターンに自分が限界飯〉を使っていたなら、相手のセンターホロメンとコラボホロメンに特殊ダメージ20を与える。"
+
+msgid "hBP05-039_ART_1_NAME"
+msgstr "いつでも軌道修正できる"
+
+msgid "hBP05-039_ART_1_EFFECT"
+msgstr "このアーツの対象が相手の1位以上のコラボホロメンなら、このアーツ+70"
+
+msgid "hBP05-040_NAME"
+msgstr "miComet"
+
+msgid "hBP05-040_ART_0_NAME"
+msgstr "ビジネスパートナー"
+
+msgid "hBP05-040_ART_0_EFFECT"
+msgstr "このホロメンのエール1枚を自分のバックホロメンに付け替えられます。"
+
+msgid "hBP05-040_COLLAB_NAME"
+msgstr "ビジネスフレンド"
+
+msgid "hBP05-040_COLLAB_EFFECT"
+msgstr "自分のライフが3以下なら、自分のこのターンにBloomしたセンターホロメンの[〈さくらみこ〉か〈星街すいせい〉]を、自分の手札のホロメンを使ってもう1回Bloomできます。"
+
+msgid "hBP05-041_NAME"
+msgstr "猫又おかゆ"
+
+msgid "hBP05-041_ART_0_NAME"
+msgstr "ぐるぐる～"
+
+msgid "hBP05-041_ART_0_EFFECT"
+msgstr "相手のセンターホロメンに特殊ダメージ10を与える。"
+
+msgid "hBP05-042_NAME"
+msgstr "猫又おかゆ"
+
+msgid "hBP05-042_ART_0_NAME"
+msgstr "ずうっと一緒だよ"
+
+msgid "hBP05-042_COLLAB_NAME"
+msgstr "一緒に入りろ～！"
+
+msgid "hBP05-042_COLLAB_EFFECT"
+msgstr "自分が後攻で最初のターンなら、自分のデッキから、#ゲーマーズを持つ2ndホロメン1枚除外し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-043_NAME"
+msgstr "猫又おかゆ"
+
+msgid "hBP05-043_ART_0_NAME"
+msgstr "まだまだ遊べるよね〜？"
+
+msgid "hBP05-043_ART_0_EFFECT"
+msgstr "このホロメンのエール1枚をアーカイブできます：相手のセンターホウメンとバックホロメン1人に特殊ダメージ10を与える。"
+
+msgid "hBP05-043_GIFT_NAME"
+msgstr "僕でよくな～い？"
+
+msgid "hBP05-043_GIFT_EFFECT"
+msgstr "[コラボポジション限定]自分の#ゲーマーズを持つセンターホロメンがいる間、相手のホロメンのアーツは、自分のコラボホロメンしか対象にできない。ただし、特殊ダメージは除く。"
+
+msgid "hBP05-044_NAME"
+msgstr "猫又おかゆ"
+
+msgid "hBP05-044_ART_0_NAME"
+msgstr "ドンストップゲーミング！"
+
+msgid "hBP05-044_ART_0_EFFECT"
+msgstr "相手のホロメン1人に特殊ダメージ10を与える。"
+
+msgid "hBP05-044_BLOOM_NAME"
+msgstr "お弁当タイム･･･？"
+
+msgid "hBP05-044_BLOOM_EFFECT"
+msgstr "相手のセンターホロメンとバックホロメン1人に特殊ダメージ10を与える。自分のフリームエフェクト「お弁当タイム･･･？」はターンに1回しか使えない。"
+
+msgid "hBP05-045_NAME"
+msgstr "猫又おかゆ"
+
+msgid "hBP05-045_ART_0_NAME"
+msgstr "私のこと、大好きになってみない？"
+
+msgid "hBP05-045_ART_0_EFFECT"
+msgstr "相手のホロメン1人に特殊ダメージ20を与える。その後、自分のアーカイブのエール1枚を自分の#ゲーマーズを持つバックホロメンに送れる。"
+
+msgid "hBP05-045_GIFT_NAME"
+msgstr "自分らしく居られる場所"
+
+msgid "hBP05-045_GIFT_EFFECT"
+msgstr "[センターポジション限定]自分の推しホロメンの〈猫又おかゆ〉と自分のステージの〈猫又おかゆ〉に応じて相手のセンターホロメンに特殊ダメージ+20を与える。"
+
+msgid "hBP05-051_NAME"
+msgstr "火威青"
+
+msgid "hBP05-051_ART_0_NAME"
+msgstr "シャンパンシャンパン！"
+
+msgid "hBP05-051_ART_0_EFFECT"
+msgstr "自分のステージに#お酒を持つホロメンが3人以上いるなら、自分のアーカイブのエール1枚を自分の #お酒を持つバックホロメンに送れる。"
+
+msgid "hBP05-051_BLOOM_NAME"
+msgstr "私の目だけ見て"
+
+msgid "hBP05-051_BLOOM_EFFECT"
+msgstr "自分のデッキの上から3枚を見る。その中から、#お酒を持つホロメン1枚を除外し、手札に加える。そしてコーラル好きな順でデッキの下に戻す。"
+
+msgid "hBP05-052_NAME"
+msgstr "癒月ちょこ"
+
+msgid "hBP05-052_ART_0_NAME"
+msgstr "膝枕とかどうですか?"
+
+msgid "hBP05-052_COLLAB_NAME"
+msgstr "秘密の保健室"
+
+msgid "hBP05-052_COLLAB_EFFECT"
+msgstr "自分のアーカイブにイベントがあるなら、相手のセンターホロメンに特殊ダメージ10を与える。"
+
+msgid "hBP05-053_NAME"
+msgstr "癒月ちょこ"
+
+msgid "hBP05-053_ART_0_NAME"
+msgstr "ぎゅーって？"
+
+msgid "hBP05-053_COLLAB_NAME"
+msgstr "すうすう･･･"
+
+msgid "hBP05-053_COLLAB_EFFECT"
+msgstr "自分が後攻で最初のターンで、自分の推しホロメンが〈癒月ちょこ〉なら、自分のデッキを2枚引く。"
+
+msgid "hBP05-054_NAME"
+msgstr "癒月ちょこ"
+
+msgid "hBP05-054_ART_0_NAME"
+msgstr "ガァチィ？"
+
+msgid "hBP05-054_ART_0_EFFECT"
+msgstr "このアーツは、このターンに私が#食べ物を持つイベントカードを2枚以上使っていたら、エール1枚を必要とせずに使える。"
+
+msgid "hBP05-055_NAME"
+msgstr "癒月ちょこ"
+
+msgid "hBP05-055_ART_0_NAME"
+msgstr "ア゙ア゙ア゙ア゙ア゙"
+
+msgid "hBP05-055_GIFT_NAME"
+msgstr "寝坊助悪魔"
+
+msgid "hBP05-055_GIFT_EFFECT"
+msgstr "[センターポジション限定]相手に与えたステップは、このホロメンのHPが減っていないなら、自分のエールデッキの上から1枚を自分の〈癒月ちょこ〉に送れる。"
+
+msgid "hBP05-056_NAME"
+msgstr "癒月ちょこ"
+
+msgid "hBP05-056_ART_0_NAME"
+msgstr "愛を込めて"
+
+msgid "hBP05-056_ART_0_EFFECT"
+msgstr "このターンに自分が使っていた #食べ物を持つイベント1枚につき、このアーツ+20。ただし、枚数制限は2枚まで。"
+
+msgid "hBP05-056_ART_1_NAME"
+msgstr "夜に寄り添う"
+
+msgid "hBP05-056_ART_1_EFFECT"
+msgstr "自分の手札2枚をアーカイブできます：自分のアーカイブの#料理を持つホロメン1枚を手札に戻します。"
+
+msgid "hBP05-068_NAME"
+msgstr "白上フブキ"
+
+msgid "hBP05-068_ART_0_NAME"
+msgstr "おやつ食べてゲーム最高！"
+
+msgid "hBP05-068_COLLAB_NAME"
+msgstr "ゆるゆる休養日"
+
+msgid "hBP05-068_COLLAB_EFFECT"
+msgstr "このホロメンにマスコットを追加するなら、自分のデッキの上から1枚見る。そのカードをデッキの上か下に戻す。"
+
+msgid "hBP05-069_NAME"
+msgstr "白上フブキ"
+
+msgid "hBP05-069_ART_0_NAME"
+msgstr "満点じゃい！"
+
+msgid "hBP05-069_ART_0_EFFECT"
+msgstr "自分のエールデッキの上から1枚をこのホロメンに送れる。"
+
+msgid "hBP05-069_GIFT_NAME"
+msgstr "とびきりの笑顔"
+
+msgid "hBP05-069_GIFT_EFFECT"
+msgstr "[バックポジション限定] このホロメンは相手からダメージを受けない。"
+
+msgid "hBP05-070_NAME"
+msgstr "白上フブキ"
+
+msgid "hBP05-070_ART_0_NAME"
+msgstr "フブキカフェにようこそ"
+
+msgid "hBP05-070_ART_0_EFFECT"
+msgstr "自分のアーカイブの#白上のキャラクターを持つ[マスコットとファン]を好きな枚数選び、自分のホロメンに割り振って付ける。"
+
+msgid "hBP05-070_ART_1_NAME"
+msgstr "国王兼喫茶経営者"
+
+msgid "hBP05-070_ART_1_EFFECT"
+msgstr "自分の[推しホロメンが〈白上フブキ〉か推しホロメンの黄色い黄]で、自分のステージに[ツールとマスコットとファン]が合計4枚以上あるなら、このアーツ+100。"
+
+msgid "hBP05-071_NAME"
+msgstr "戌神ころね"
+
+msgid "hBP05-071_ART_0_NAME"
+msgstr "YB-2"
+
+msgid "hBP05-071_ART_0_EFFECT"
+msgstr "このターンの間、自分のステージの#ゲーマーズを持つホロメン1人のアーツ+30。"
+
+msgid "hBP05-071_BLOOM_NAME"
+msgstr "戌神族"
+
+msgid "hBP05-071_BLOOM_EFFECT"
+msgstr "自分のデッキから、#ゲーマーズを持つバズ以外の1stホロメン1枚を除き、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP05-076_NAME"
+msgstr "ちょこのビーフストロガノフ"
+
+msgid "hBP05-076_EFFECT"
+msgstr "このターンの間、自分のステージのホロメン1人のアーツ+10。その後、このターンの間、自分のステージの2番目のホロメンの〈癒月ちょこ〉1人のアーツ+10。"
+
+msgid "hBP05-079_NAME"
+msgstr "み俺恥"
+
+msgid "hBP05-079_EFFECT"
+msgstr "自分のデッキを2枚引く。その後、直前の相手のターンに自分のホロメンがダウンしていて、自分のライフが相手のライフより少ないなら、アーカイブのエール1枚を自分のホロメン1人に送る。"
+
+msgid "hBP05-085_NAME"
+msgstr "みこだにぇー"
+
+msgid "hBP05-085_EFFECT"
+msgstr "このマスコットが付いているホロメンのHP+10。\n\n◆〈さくらみこ〉が付いていたら能力追加相手のターンで、このマスコットが付いているホロメンがダウンした時、相手は、自身の手札を1枚アーカイブする。\n\nマスコットは、自分のホロメン1人につき1枚だけ付ける。"
+
+msgid "hBP05-077_NAME"
+msgstr "バカタレサーカス"
+
+msgid "hBP05-077_EFFECT"
+msgstr "このカードは、自分の手札がこのカードを6枚以下でなければ使えません。\n\n自分のデッキの上から4枚を見る。その中から、〈白上フブキ〉と〈不知火フレア〉と〈角巻わため〉と〈尾丸ポルカ〉を好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードの好きな順でデッキの下に戻す。"
 

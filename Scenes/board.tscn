@@ -438,6 +438,27 @@ theme_override_font_sizes/font_size = 20
 disabled = true
 text = "LOBBY_SPECTATE"
 
+[node name="ClientVersionText" type="Label" parent="CanvasLayer"]
+auto_translate_mode = 2
+visible = false
+offset_left = 991.0
+offset_top = 656.0
+offset_right = 1271.0
+offset_bottom = 680.0
+theme = ExtResource("5_fdkx6")
+text = "Client Version "
+horizontal_alignment = 2
+
+[node name="CardVersionText" type="Label" parent="CanvasLayer"]
+auto_translate_mode = 2
+offset_left = 990.0
+offset_top = 686.0
+offset_right = 1270.0
+offset_bottom = 710.0
+theme = ExtResource("5_fdkx6")
+text = "Card Version "
+horizontal_alignment = 2
+
 [node name="LobbyCreateMenu" type="ColorRect" parent="CanvasLayer"]
 visible = false
 offset_left = 481.0
@@ -1413,16 +1434,6 @@ And assorted thanks to:
 Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata, dr. AKA, Peeko, Soulscythe, J3Puffin, Chocolat, Rumos, FretfulGolem, AgentEmerald, Ilovebluewoman, Tanaka, Lordquendo, cendoru, BlueDragonOracle, Ink, ravenclawike, Stolas, Tomoki, nicogb, Chitanya589, jarzyna, Ven"
 autowrap_mode = 3
 
-[node name="VersionText" type="Label" parent="CanvasLayer/InfoButton/Info"]
-auto_translate_mode = 2
-layout_mode = 0
-offset_left = 161.0
-offset_top = 618.0
-offset_right = 243.0
-offset_bottom = 635.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Version "
-
 [node name="DeckLocationButton" type="Button" parent="CanvasLayer/InfoButton/Info"]
 layout_mode = 0
 offset_left = 13.0
@@ -1599,6 +1610,66 @@ offset_top = 412.0
 offset_right = 884.0
 offset_bottom = 439.0
 
+[node name="Failure" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_left = 230.0
+offset_top = 175.0
+offset_right = 1033.0
+offset_bottom = 565.0
+theme = ExtResource("5_fdkx6")
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="Title" type="Label" parent="CanvasLayer/Failure"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -393.5
+offset_top = 6.0
+offset_right = 393.5
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "DOWNLOAD_FAIL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Body" type="Label" parent="CanvasLayer/Failure"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -393.5
+offset_top = 82.0
+offset_right = 393.5
+offset_bottom = 270.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "DOWNLOAD_FAIL_FULL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TryAgain_Download" type="Button" parent="CanvasLayer/Failure"]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 313.0
+offset_right = 547.0
+offset_bottom = 357.0
+theme_override_font_sizes/font_size = 30
+text = "TRYAGAIN"
+
+[node name="TryAgain_Import" type="Button" parent="CanvasLayer/Failure"]
+visible = false
+layout_mode = 0
+offset_left = 249.0
+offset_top = 313.0
+offset_right = 547.0
+offset_bottom = 357.0
+theme_override_font_sizes/font_size = 30
+text = "TRYAGAIN"
+
 [node name="Error" type="Panel" parent="CanvasLayer"]
 visible = false
 offset_right = 1280.0
@@ -1633,7 +1704,6 @@ zoom = Vector2(0.27, 0.27)
 [node name="HTTPManager" type="Node" parent="."]
 script = ExtResource("18_n8kk3")
 parallel_connections_count = 15
-pause_on_failure = true
 print_debug = true
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
@@ -1728,7 +1798,10 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/Yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/No" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="CanvasLayer/Failure/TryAgain_Download" to="." method="_attempt_download_zip"]
+[connection signal="pressed" from="CanvasLayer/Failure/TryAgain_Import" to="." method="_attempt_load_zip"]
 [connection signal="pressed" from="CanvasLayer/Error/CloseError" to="." method="_on_close_error_pressed"]
+[connection signal="progress" from="HTTPManager" to="." method="_download_progress"]
 [connection signal="connected" from="WebSocket" to="." method="_on_websocket_connected"]
 [connection signal="received" from="WebSocket" to="." method="_on_websocket_received"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

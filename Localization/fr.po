@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-07-09 00:04\n"
+"PO-Revision-Date: 2025-08-30 02:34\n"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -92,12 +92,12 @@ msgid "DECK_CREATE"
 msgstr "Créer / Modifier un deck"
 
 #: Scenes/board.tscn
-msgid "LOBBY_CREATE"
-msgstr "Créer un Lobby"
-
-#: Scenes/board.tscn
 msgid "DEBUG"
 msgstr "Actualiser"
+
+#: Scenes/board.tscn
+msgid "LOBBY_CREATE"
+msgstr "Créer un Lobby"
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
@@ -144,6 +144,12 @@ msgstr "Actuel"
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT_EN"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr "Actuel + Non sorti"
 
@@ -156,8 +162,17 @@ msgid "EXIT"
 msgstr "Quitter"
 
 #: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "OPTION_EN"
+msgstr ""
+
+#: Scenes/board.tscn
 msgid "OPTION_UNREVEALED"
 msgstr "Accepte les cartes non dévoilées"
+
+#: Scenes/board.tscn
+msgid "OPTION_LANGUAGE"
+msgstr ""
 
 #: Scenes/board.tscn
 msgid "OPTION_PROXY"
@@ -304,6 +319,20 @@ msgstr "Menu principal"
 #: Scenes/board.tscn
 msgid "MENU_PROMPT"
 msgstr "Voulez-vous vraiment retourner au menu principal ?"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_FAIL"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_FAIL_FULL"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "TRYAGAIN"
+msgstr ""
 
 #: Scenes/deck_list.tscn
 msgid "DECK_SELECT_CANCEL"
@@ -589,6 +618,10 @@ msgstr "Les informations du deck de cheers sont incorrectes. Êtes-vous sûr qu'
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOCHEER"
 msgstr "Il n'y a pas de deck de cheers principal."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_ONLYEN"
+msgstr ""
 
 #: Scripts/deck_creation.gd
 #: Scripts/side.gd
@@ -1025,6 +1058,14 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "DECK_AUTOLOAD_CONFIRM_INFO"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "LOAD_FAIL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "LOAD_FAIL_FULL"
 msgstr ""
 
 #: Scripts/Multiplayer.gd

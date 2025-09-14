@@ -14,6 +14,7 @@ config/name="holoDelta"
 run/main_scene="res://Scenes/board.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.png"
+config/macos_native_icon="res://icon.icns"
 config/windows_native_icon="res://icon.ico"
 
 [autoload]
@@ -95,6 +96,11 @@ pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
+locale/translation_remaps={
+"res://Icons/bloomEF.png": PackedStringArray("res://Icons/ENbloomEF.png:en"),
+"res://Icons/collabEF.png": PackedStringArray("res://Icons/ENcollabEF.png:en"),
+"res://Icons/gift.png": PackedStringArray("res://Icons/ENgift.png:en")
+}
 locale/translations=PackedStringArray("res://Localization/en.po", "res://Localization/ja.po", "res://Localization/es.po", "res://Localization/fr.po", "res://Localization/ko.po", "res://Localization/vi.po")
 locale/translations_pot_files=PackedStringArray("res://Scenes/board.tscn", "res://Scenes/deck_list.tscn", "res://Scenes/sleeve_select.tscn", "res://Scenes/side.tscn", "res://Scenes/better_texture_button.tscn", "res://Scenes/card.tscn", "res://Scenes/die.tscn", "res://Scenes/fuda.tscn", "res://Scenes/info_panel.tscn", "res://Scenes/zone.tscn", "res://Scenes/deck_creation.tscn", "res://Scripts/RemapButton.gd", "res://Scripts/deck_creation.gd", "res://Scripts/side.gd", "res://Scripts/Multiplayer.gd", "res://Scripts/card.gd")
 pseudolocalization/expansion_ratio=0.3
@@ -104,4 +110,5 @@ pseudolocalization/expansion_ratio=0.3
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_s3tc_bptc=true
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0.748697, 0.83322, 0.881091, 1)

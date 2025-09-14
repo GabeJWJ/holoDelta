@@ -7,6 +7,7 @@ class Card:
         self.art_index = art_index
         self.id = id
         self.tags = []
+        self.extraNames = []
         self.attached = []
         self.onTopOf = []
         self.attachedTo = id
@@ -23,6 +24,8 @@ class Card:
 
             if "tags" in init_info:
                 self.tags + init_info["tags"]
+            if "extraNames" in init_info:
+                self.extraNames + init_info["extraNames"]
             match self.cardType:
                 case "Oshi":
                     self.life = init_info["life"]

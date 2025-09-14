@@ -35,10 +35,10 @@ class Lobby:
             self.banlistCode = Banlist.none
         elif self.banlist == current_banlist:
             self.banlistCode = Banlist.current
-        elif self.banlist == (current_banlist | unreleased):
-            self.banlistCode = Banlist.unreleased
         elif self.banlist == en_current_banlist:
             self.banlistCode = Banlist.en_current
+        elif self.banlist == (current_banlist | unreleased):
+            self.banlistCode = Banlist.unreleased
         else:
             self.banlistCode = Banlist.custom
         

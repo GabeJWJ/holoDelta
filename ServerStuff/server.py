@@ -1,8 +1,8 @@
 import json
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
-from fastapi.responses import RedirectResponse
+from fastapi.responses import RedirectResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
-from fastapi.middleware.gzip import GZipMiddleware
+#from fastapi.middleware.gzip import GZipMiddleware
 from traceback import format_exc
 from classes.connection_manager import ConnectionManager
 from classes.player import Player
@@ -28,12 +28,28 @@ identifier = get_data("identifier")
 initialize_manager(ConnectionManager())
 
 app = FastAPI()
-app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=9)
+#app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=9)
 app.mount("/game", StaticFiles(directory="Holodelta_web"), name="game")
 
 @app.get("/")
 def index():
     return RedirectResponse(url="/game/index.html")
+
+"""
+@app.get("/app/{os}")
+def get_app(os: str):
+    match os:
+        case "windows":
+            return FileResponse("app_release/holodelta_windows.exe")
+        case "linux":
+            return FileResponse("app_release/holodelta_linux.x86_64")
+        case "mac":
+            return FileResponse("app_release/holodelta_mac.zip")
+"""
+
+@app.get("/cardData.zip")
+def get_card_data_archive():
+    return FileResponse("app_release/cardData.zip")
 
 @app.get("/card/{card_id}")
 def call_card_info(card_id: str):

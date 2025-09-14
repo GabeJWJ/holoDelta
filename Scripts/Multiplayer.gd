@@ -59,6 +59,7 @@ var current_lobby = null
 var lobby_you_are_host = false
 
 var packet_number = -1
+var proper_hypertext
 
 # Stolen from https://forum.godotengine.org/t/how-do-you-get-all-nodes-of-a-certain-class/9143/2
 func findByClass(node: Node, className : String, result : Array) -> void:
@@ -69,7 +70,7 @@ func findByClass(node: Node, className : String, result : Array) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	proper_hypertext = "https://" if $WebSocket.use_WSS else "http://"
 	$WebSocket.host = Server.websocketURL
 	
 	randomize()
@@ -137,14 +138,26 @@ func _ready():
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
 	
 	#Setup Info
-	if !Database.setup:
+	if Database.setup:
+		$CanvasLayer/CardVersionText.text += Settings.card_version
+	else:
 		$CanvasLayer/Popup.visible = true
 		$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_CARDS")
-		json.parse(FileAccess.get_file_as_string("res://cardData.json"))
-		Database.setup_data(json.data, Settings._connect_local.bind($Timer2.start), _setup_art_progress)
+		
+		if OS.has_feature("editor") or (OS.has_feature("web") or OS.get_name() == "Web"):
+			#The web version (and editor) have the card data built-in
+			#Because it can update all the time
+			_start_data()
+		elif FileAccess.file_exists("user://cardData.zip"):
+			#If we have the card archive we just load it in
+			_attempt_load_zip()
+		else:
+			#If not we NEED to download it - game does not work without it.
+			_attempt_download_zip()
+		
 	
 	#Visual
-	$CanvasLayer/InfoButton/Info/VersionText.text += Settings.version
+	$CanvasLayer/ClientVersionText.text += Settings.client_version
 	$CanvasLayer/InfoButton/Info/DeckLocationButton/DeckLocation.text += ProjectSettings.globalize_path("user://Decks")
 	fix_font_size()
 	
@@ -209,26 +222,6 @@ func _parse_deck_code(deck_data: String, allow_log: bool=false) -> Variant:
 		if allow_log:
 			console.log("FAILED TO GET DECODED BASE 64. SKIPPED")
 		return null
-	
-#region Download DB
-
-func _setup_art_progress(current:int, max:int):
-	#print($CanvasLayer/Popup/ProgressBar.value, " ", $CanvasLayer/Popup/ProgressBar.max_value)
-	#You can uncomment the above line to see that the value and max_value are being properly set.
-	#It's just not showing
-	#I think because of the way it's getting called, the visual doesn't have a chance to 
-	#	update until after the entire thing's done?
-	$CanvasLayer/Popup/ProgressBar.max_value = max
-	$CanvasLayer/Popup/ProgressBar.value = current
-
-#Sometimes the game was trying to connect to the downloaded po files before they were really there?
-#This might help that.
-func _do_final():
-	Settings._connect_local()
-	$CanvasLayer/Popup.visible = false
-	Database.setup = true
-
-#endregion
 
 func update_info(topCard, card):
 	$CanvasLayer/Sidebar/InfoPanel._new_info(topCard, card)
@@ -255,6 +248,69 @@ func _on_yes_pressed():
 func _on_deck_creation_pressed():
 	get_tree().change_scene_to_file("res://Scenes/deck_creation.tscn")
 
+#region Setup
+
+func _attempt_download_zip():
+	$CanvasLayer/Popup/ProgressBar.max_value = 60000000 #Yeah I'm just hard-coding that it expects ~60 MB cuz getting the actual number is tricky
+	$CanvasLayer/Failure.visible = false
+	$CanvasLayer/Popup.visible = true
+	$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_CARDS")
+	$HTTPManager.job(proper_hypertext + Server.websocketURL + "/cardData.zip").on_failure(_download_zip_failed).on_success(_download_zip_suceeded).download("user://temp_cardData.zip")
+
+func _download_zip_suceeded(_result=null):
+	DirAccess.rename_absolute("user://temp_cardData.zip", "user://cardData.zip")
+	_attempt_load_zip()
+
+func _attempt_load_zip():
+	$CanvasLayer/Failure.visible = false
+	$CanvasLayer/Popup.visible = true
+	$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_CARDS")
+	var success = ProjectSettings.load_resource_pack("user://cardData.zip")
+	if success:
+		_start_data()
+	else:
+		_load_zip_failed()
+
+func _attempt_download_version():
+	pass
+
+func _start_data():
+	Settings.card_version = FileAccess.get_file_as_string("res://cardLocalization/card_version.txt")
+	$CanvasLayer/CardVersionText.text += Settings.card_version
+	json.parse(FileAccess.get_file_as_string("res://cardData.json"))
+	Database.setup_data(json.data, Settings._connect_local.bind($Timer2.start))
+	#go should include download version data
+		#    if succeed set info
+		#    if fail raise alert
+
+func _do_final():
+	Database.setup = true
+	$CanvasLayer/Popup.visible = false
+
+func _download_zip_failed(_result):
+	DirAccess.remove_absolute("user://temp_cardData.zip")
+	$CanvasLayer/Failure/Title.text = tr("DOWNLOAD_FAIL")
+	$CanvasLayer/Failure/Body.text = tr("DOWNLOAD_FAIL_FULL")
+	$CanvasLayer/Failure/TryAgain_Download.visible = true
+	$CanvasLayer/Failure/TryAgain_Import.visible = false
+	
+	$CanvasLayer/Failure.visible = true
+
+func _load_zip_failed():
+	$CanvasLayer/Failure/Title.text = tr("LOAD_FAIL")
+	$CanvasLayer/Failure/Body.text = tr("LOAD_FAIL_FULL")
+	$CanvasLayer/Failure/TryAgain_Download.visible = false
+	$CanvasLayer/Failure/TryAgain_Import.visible = true
+	
+	$CanvasLayer/Failure.visible = true
+
+func _download_version_failed(_result):
+	pass
+
+func _download_progress(_assigned_files, _current_files, total_bytes, current_bytes):
+	$CanvasLayer/Popup/ProgressBar.value = current_bytes
+
+#endregion
 
 #region Settings
 func _on_options_pressed():
@@ -932,6 +988,8 @@ func _hide_main_menu():
 	$CanvasLayer/GameList.visible = false
 	$CanvasLayer/Debug.visible = false
 	$CanvasLayer/OnlyEN.visible = false
+	$CanvasLayer/ClientVersionText.visible = false
+	$CanvasLayer/CardVersionText.visible = false
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
