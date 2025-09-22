@@ -137,6 +137,54 @@ scale = Vector2(0.75, 0.75)
 icon = ExtResource("10_he2sa")
 flat = true
 
+[node name="PotentialDamageRested" type="Label" parent="."]
+auto_translate_mode = 2
+visible = false
+offset_left = -213.75
+offset_top = 227.5
+offset_right = -102.75
+offset_bottom = 286.5
+rotation = -1.5708
+scale = Vector2(1.3, 1.3)
+theme = ExtResource("8_o7lry")
+theme_override_colors/font_color = Color(0.913725, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 40
+text = "20"
+horizontal_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="PotentialDamageRested"]
+z_index = -1
+layout_mode = 0
+offset_left = 19.0
+offset_top = -7.0
+offset_right = 329.0
+offset_bottom = 46.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="Accept" type="Button" parent="PotentialDamageRested"]
+modulate = Color(1, 1, 1, 0.509804)
+layout_mode = 0
+offset_left = 120.0
+offset_top = -3.75
+offset_right = 180.0
+offset_bottom = 56.25
+scale = Vector2(0.75, 0.75)
+icon = ExtResource("9_ru47b")
+flat = true
+
+[node name="Reject" type="Button" parent="PotentialDamageRested"]
+modulate = Color(1, 1, 1, 0.509804)
+layout_mode = 0
+offset_left = 175.0
+offset_top = -2.5
+offset_right = 235.0
+offset_bottom = 57.5
+scale = Vector2(0.75, 0.75)
+icon = ExtResource("10_he2sa")
+flat = true
+
 [node name="HTTPManager" type="Node" parent="."]
 script = ExtResource("11_viqh1")
 parallel_connections_count = 20
@@ -152,3 +200,9 @@ print_debug = true
 [connection signal="mouse_entered" from="PotentialDamage/Reject" to="." method="_on_reject_mouse_entered"]
 [connection signal="mouse_exited" from="PotentialDamage/Reject" to="." method="_on_reject_mouse_exited"]
 [connection signal="pressed" from="PotentialDamage/Reject" to="." method="_on_reject_pressed"]
+[connection signal="mouse_entered" from="PotentialDamageRested/Accept" to="." method="_on_accept_rested_mouse_entered"]
+[connection signal="mouse_exited" from="PotentialDamageRested/Accept" to="." method="_on_accept_rested_mouse_exited"]
+[connection signal="pressed" from="PotentialDamageRested/Accept" to="." method="_on_accept_pressed"]
+[connection signal="mouse_entered" from="PotentialDamageRested/Reject" to="." method="_on_reject_rested_mouse_entered"]
+[connection signal="mouse_exited" from="PotentialDamageRested/Reject" to="." method="_on_reject_rested_mouse_exited"]
+[connection signal="pressed" from="PotentialDamageRested/Reject" to="." method="_on_reject_pressed"]

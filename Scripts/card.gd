@@ -646,7 +646,11 @@ func _on_card_button_gui_input(event):
 func offer_damage(newDamage):
 	offered_damage += newDamage
 	$PotentialDamage.text = str(offered_damage)
-	$PotentialDamage.visible = true
+	$PotentialDamageRested.text = str(offered_damage)
+	if rested:
+		$PotentialDamageRested.visible = true
+	else:
+		$PotentialDamage.visible = true
 
 func _on_accept_mouse_entered():
 	$PotentialDamage/Accept.modulate.a = 1
@@ -660,6 +664,18 @@ func _on_reject_mouse_entered():
 func _on_reject_mouse_exited():
 	$PotentialDamage/Reject.modulate.a = 0.5
 
+func _on_accept_rested_mouse_entered():
+	$PotentialDamageRested/Accept.modulate.a = 1
+
+func _on_accept_rested_mouse_exited():
+	$PotentialDamageRested/Accept.modulate.a = 0.5
+
+func _on_reject_rested_mouse_entered():
+	$PotentialDamageRested/Reject.modulate.a = 1
+
+func _on_reject_rested_mouse_exited():
+	$PotentialDamageRested/Reject.modulate.a = 0.5
+
 
 func _on_accept_pressed():
 	emit_signal("accept_damage",cardID)
@@ -667,4 +683,5 @@ func _on_accept_pressed():
 func _on_reject_pressed():
 	offered_damage = 0
 	$PotentialDamage.visible = false
+	$PotentialDamageRested.visible = false
 	emit_signal("reject_damage",cardID)

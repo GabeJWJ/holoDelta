@@ -69,6 +69,7 @@ func _set_showing(to_show : Array, cheer_show : Dictionary, start_index : int) -
 	if to_show.size() > 1:
 		each_offset = clamp((max_offset-10)/(to_show.size()-1),0,75)
 		$ScrollIcon.visible = true
+		%ScrollIconTimer.start()
 	else:
 		$ScrollIcon.visible = false
 	
@@ -176,3 +177,6 @@ func _input(event) -> void:
 				$LockOff.modulate.a = 1
 			else:
 				$LockOff.modulate.a = 0.25
+
+func _on_scroll_icon_timer_timeout() -> void:
+	$ScrollIcon.visible = false

@@ -15,6 +15,10 @@ def initialize():
         data["unreleased"] = json.load(file)
     with open('data_source/cardData.json', 'r') as file:
         data["card_data"] = json.load(file)
+    with open('data_source/client_version.txt','r') as file:
+        data["client_version"] = file.read()
+    with open('data_source/card_version.txt','r') as file:
+        data["card_version"] = file.read()
     data["bloom_levels"] = {-1:"LEVEL_SPOT",0:"LEVEL_DEBUT",1:"LEVEL_1",2:"LEVEL_2"}
     data["fudas"] = ["DECK","CHEERDECK","ARCHIVE","HOLOPOWER"]
     data["identifier"] = ''.join(sample(random_characters, 10))

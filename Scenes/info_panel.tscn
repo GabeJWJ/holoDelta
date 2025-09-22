@@ -53,3 +53,10 @@ z_index = 4
 position = Vector2(28, 36)
 scale = Vector2(0.132812, 0.132812)
 texture = ExtResource("4_onx1c")
+
+[node name="ScrollIconTimer" type="Timer" parent="ScrollIcon"]
+unique_name_in_owner = true
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="ScrollIcon/ScrollIconTimer" to="." method="_on_scroll_icon_timer_timeout"]

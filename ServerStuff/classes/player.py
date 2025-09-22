@@ -40,5 +40,5 @@ class Player:
         if self.game is not None and self in self.game.players.values():
             await self.game.close_game()
             #May want to do some shenanigans to allow reconnection
-        del get_manager().websocket_to_player[self.websocket]
+        get_manager().disconnect(self.websocket)
         remove_player(self.id)

@@ -315,6 +315,7 @@ func _download_progress(_assigned_files, _current_files, total_bytes, current_by
 #region Settings
 func _on_options_pressed():
 	$CanvasLayer/Options/OptionBackground.visible = !$CanvasLayer/Options/OptionBackground.visible
+	print($WebSocket.socket.get_close_code())
 
 func _on_check_unrevealed_pressed():
 	Settings.update_settings("AllowUnrevealed",$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed)
