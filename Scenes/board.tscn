@@ -1716,6 +1716,7 @@ bus = &"BGM"
 script = ExtResource("20_v32ia")
 route = "/ws"
 autoconnect_mode = 2
+use_WSS = false
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0

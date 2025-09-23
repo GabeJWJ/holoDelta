@@ -28,15 +28,16 @@ version = (get_data("client_version"), get_data("card_version"))
 initialize_manager(ConnectionManager())
 
 app = FastAPI()
-app.mount("/game", StaticFiles(directory="Holodelta_web"), name="game")
+# app.mount("/game", StaticFiles(directory="Holodelta_web"), name="game")  # Commented out - directory doesn't exist
 
 @app.get("/")
 def index():
-    return RedirectResponse(url="/game/index.html")
+    return {"message": "holoDelta Server is running", "status": "ok"}
 
 @app.get("/cardData.zip")
 def get_card_data_archive():
-    return FileResponse("app_release/cardData.zip")
+    # return FileResponse("app_release/cardData.zip")  # Commented out - directory doesn't exist
+    return {"error": "cardData.zip not available"}
 
 @app.get("/version")
 def get_current_version():
