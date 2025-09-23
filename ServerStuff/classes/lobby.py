@@ -104,11 +104,19 @@ class Lobby:
                     have_chosen_deck = self.chosen_deck is not None
 
                     if (is_host and not have_host_deck) or (is_chosen and not have_chosen_deck):
-                        # 繞過牌組驗證，直接當作合法處理
-                        deck, deck_legality = check_legal(data["deck"], self.banlist, self.only_en)
-                        # 強制設定為合法
+                        # 繞過牌組驗證，直接使用原始牌組數據
                         deck_legality = {"legal": True, "reasons": []}
                         await get_player(player_id).tell("Lobby","Deck Legality",deck_legality)
+
+                        # 直接使用原始牌組數據，確保包含所有必要字段
+                        deck = data["deck"]
+                        if "oshi" not in deck or "deck" not in deck or "cheerDeck" not in deck:
+                            # 如果缺少必要字段，創建一個基本的牌組結構
+                            deck = {
+                                "oshi": deck.get("oshi", ["hSD01-002", 0]),
+                                "deck": deck.get("deck", []),
+                                "cheerDeck": deck.get("cheerDeck", [])
+                            }
 
                         # 直接處理為合法
                         if is_host:

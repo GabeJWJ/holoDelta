@@ -85,12 +85,19 @@ async def websocket_endpoint(websocket: WebSocket):
                                     await player.game.playing[player.id].call_command(player.id,command, data)
                         case _:
                             pass
-            except Exception:
+            except Exception as e:
                 error_string = format_exc()
-                await player.tell("Server","Error",{"error_text":error_string})
                 print(error_string)
+                # 檢查連接是否仍然有效
+                try:
+                    if websocket.client_state.name == "CONNECTED":
+                        await player.tell("Server","Error",{"error_text":error_string})
+                except:
+                    # 連接已關閉，不需要發送錯誤訊息
+                    pass
     except WebSocketDisconnect:
-        await manager.websocket_to_player[websocket].remove()
-        #manager.disconnect(websocket)
+        if websocket in manager.websocket_to_player:
+            await manager.websocket_to_player[websocket].remove()
+        manager.disconnect(websocket)
         await update_numbers_all()
 

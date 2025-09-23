@@ -15,11 +15,13 @@ static func apply_text_with_corrected_max_scale(parent_size: Vector2, label: But
 	
 	if Settings.settings.Language == "ko":
 		scale_to_apply_to_font *= 1.5
+	elif Settings.settings.Language == "zh_TW":
+		scale_to_apply_to_font *= 1.2
 	
 	while label.get_theme_font("font_size").get_string_size(text, HORIZONTAL_ALIGNMENT_CENTER, -1, default_font_size * scale_to_apply_to_font * scale).y > parent_size.y / scale:
 		scale_to_apply_to_font *= 0.95
 	
-	scale_to_apply_to_font = max( 1.0 if Settings.settings.Language == "ko" else 0.5, scale_to_apply_to_font)
+	scale_to_apply_to_font = max( 1.0 if Settings.settings.Language in ["ko", "zh_TW"] else 0.5, scale_to_apply_to_font)
 	
 	if scale_to_apply_to_font < 1:
 		label.add_theme_font_size_override("font_size", int(scale_to_apply_to_font * default_font_size * scale))

@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=16 format=3 uid="uid://c2xsywtxro80x"]
 
-[ext_resource type="FontFile" uid="uid://cofc4aorx22qc" path="res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf" id="1_qct6y"]
+[ext_resource type="FontFile" uid="uid://cfthpv3okqf62" path="res://CyberAssets/Main Menu Assets/SourceHanSansTC-Bold.otf" id="1_qct6y"]
 [ext_resource type="Texture2D" uid="uid://3fo5e4j2doqj" path="res://CyberAssets/Main Menu Assets/text_box_disabled.png" id="2_5wh57"]
 [ext_resource type="Texture2D" uid="uid://btlmd875gxsio" path="res://CyberAssets/Main Menu Assets/text box.png" id="2_i4crd"]
 

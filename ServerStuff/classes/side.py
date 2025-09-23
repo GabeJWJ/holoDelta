@@ -38,18 +38,18 @@ class Side:
         self.used_sp_oshi_skill = False
         self.can_undo_shuffle_hand = None
 
-        self.oshi = Card(deck["oshi"][0],deck["oshi"][1],0)
+        self.oshi = Card(deck["oshi"][0],int(deck["oshi"][1]),0)
         self.cards.append(self.oshi)
 
         for info in deck["deck"]:
-            for i in range(info[1]):
-                newCard = Card(info[0],info[2],len(self.cards))
+            for i in range(int(info[1])):
+                newCard = Card(info[0],int(info[2]),len(self.cards))
                 self.cards.append(newCard)
                 self.deck.append(newCard)
 
         for info in deck["cheerDeck"]:
-            for i in range(info[1]):
-                newCard = Card(info[0],info[2],len(self.cards))
+            for i in range(int(info[1])):
+                newCard = Card(info[0],int(info[2]),len(self.cards))
                 self.cards.append(newCard)
                 self.cheer_deck.append(newCard)
         

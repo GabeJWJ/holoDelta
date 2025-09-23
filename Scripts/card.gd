@@ -319,13 +319,13 @@ func full_desc():
 					result += "[img=18]res://CheerIcons/YellowArts.webp[/img]"
 				for i in range(art[1].Any):
 					result += "[img=18]res://CheerIcons/ColorlessArts.webp[/img]"
-				result += " " + Settings.trans("%s_ART_%s_NAME" % [cardNumber, art[0]])
+				result += " " + Settings.trans("%s_ART_%s_NAME" % [cardNumber, str(int(art[0]))])
 				result += " " + str(art[2]) + ("+" if art[3] else "")
 				if art[5] != null:
 					result += " [img=40]res://Icons/tokkou_50_%s.png[/img]" % art[5].to_lower()
 				result += "[/center]"
 				if art[4]:
-					result += "\n\n" + Settings.trans("%s_ART_%s_EFFECT" % [cardNumber, art[0]])
+					result += "\n\n" + Settings.trans("%s_ART_%s_EFFECT" % [cardNumber, str(int(art[0]))])
 			
 			var costText = ""
 			for i in range(baton_pass_cost):

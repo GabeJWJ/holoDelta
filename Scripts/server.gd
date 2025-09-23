@@ -1,7 +1,7 @@
 extends Node
 
 
-const websocketURL = "26.46.176.133:8000" #"127.0.0.1:8000" #
+const websocketURL = "26.46.176.133:8000"
 
 
 # Called when the node enters the scene tree for the first time.

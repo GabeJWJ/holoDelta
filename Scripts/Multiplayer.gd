@@ -132,7 +132,7 @@ func _ready():
 	$CanvasLayer/LanguageSelect.text = Settings.get_language()
 	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"en", "es", "fr", "ko", "vi":
+		"en", "es", "fr", "ko", "vi", "zh_TW":
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
@@ -337,7 +337,7 @@ func _on_language_selected(index_selected):
 	$CanvasLayer/LanguageSelect.text = Settings.languages[index_selected][1]
 	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"en", "es", "fr", "ko", "vi":
+		"en", "es", "fr", "ko", "vi", "zh_TW":
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
@@ -362,6 +362,7 @@ func _on_bgm_slider_value_changed(value):
 		AudioServer.set_bus_mute(Settings.bgm_bus_index, true)
 	else:
 		AudioServer.set_bus_mute(Settings.bgm_bus_index, false)
+
 
 func _on_playmat_dice_custom_pressed():
 	$CanvasLayer/PlaymatDiceCustom/ColorRect.visible = true
