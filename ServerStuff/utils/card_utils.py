@@ -20,4 +20,8 @@ def card_info(card_id: str,card_data: object = None):
     card_data_to_check = card_data
     if (card_data is None) or (not isinstance(card_data, dict)):
         card_data_to_check = get_data("card_data")
+    
+    if card_data_to_check is None or not isinstance(card_data_to_check, dict):
+        return {}
+    
     return card_data_to_check[card_id] if card_id in card_data_to_check else {}

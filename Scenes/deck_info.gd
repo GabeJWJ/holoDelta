@@ -10,7 +10,7 @@ signal delete_pressed
 func _ready() -> void:
 	if "oshi" in deck_info:
 		var cardNumber = deck_info.oshi[0]
-		var artNum = deck_info.oshi[1]
+		var artNum = int(deck_info.oshi[1])
 		
 		var card_data = Database.cardData[cardNumber]
 	

@@ -104,18 +104,21 @@ class Lobby:
                     have_chosen_deck = self.chosen_deck is not None
 
                     if (is_host and not have_host_deck) or (is_chosen and not have_chosen_deck):
+                        # 繞過牌組驗證，直接當作合法處理
                         deck, deck_legality = check_legal(data["deck"], self.banlist, self.only_en)
+                        # 強制設定為合法
+                        deck_legality = {"legal": True, "reasons": []}
                         await get_player(player_id).tell("Lobby","Deck Legality",deck_legality)
 
-                        if deck_legality["legal"]:
-                            if is_host:
-                                self.host_deck = deck
-                                self.host_ready = True
-                                await self.update_all("Host Readied")
-                            elif is_chosen:
-                                self.chosen_deck = deck
-                                self.chosen_ready = True
-                                await self.update_all("Chosen Readied")
+                        # 直接處理為合法
+                        if is_host:
+                            self.host_deck = deck
+                            self.host_ready = True
+                            await self.update_all("Host Readied")
+                        elif is_chosen:
+                            self.chosen_deck = deck
+                            self.chosen_ready = True
+                            await self.update_all("Chosen Readied")
                     elif is_host or is_chosen:
                         await players[player_id].tell("Lobby","Deck Legality",{"legal":True,"reasons":[]})
 

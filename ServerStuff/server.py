@@ -64,32 +64,31 @@ async def websocket_endpoint(websocket: WebSocket):
         await player.tell("Server","Player Info",{"id":player.id, "name":player.name,"current":current_banlist,"en_current":en_current_banlist,"unreleased":unreleased,"server_id":identifier})
         await update_numbers_all()
         while True:
-            json_data = await websocket.receive_bytes()
-            message = json.loads(str(json_data,'ascii'))
-            if "supertype" in message and "command" in message and player.id in get_all_players():
-                command = message["command"]
-                data = message["data"]
-                match message["supertype"]:
-                    case "Server":
-                        await call_command(player.id,command, data)
-                    case "Lobby":
-                        if player.lobby is not None:
-                            await player.lobby.call_command(player.id,command, data)
-                    case "Game":
-                        if player.game is not None:
-                            await player.game.call_command(player.id,command, data)
-                    case "Side":
-                        if player.game is not None:
-                            if player.id in player.game.playing:
-                                await player.game.playing[player.id].call_command(player.id,command, data)
-                    case _:
-                        pass
-            """
+            try:
+                json_data = await websocket.receive_bytes()
+                message = json.loads(str(json_data,'ascii'))
+                if "supertype" in message and "command" in message and player.id in get_all_players():
+                    command = message["command"]
+                    data = message["data"]
+                    match message["supertype"]:
+                        case "Server":
+                            await call_command(player.id,command, data)
+                        case "Lobby":
+                            if player.lobby is not None:
+                                await player.lobby.call_command(player.id,command, data)
+                        case "Game":
+                            if player.game is not None:
+                                await player.game.call_command(player.id,command, data)
+                        case "Side":
+                            if player.game is not None:
+                                if player.id in player.game.playing:
+                                    await player.game.playing[player.id].call_command(player.id,command, data)
+                        case _:
+                            pass
             except Exception:
                 error_string = format_exc()
                 await player.tell("Server","Error",{"error_text":error_string})
                 print(error_string)
-            """
     except WebSocketDisconnect:
         await manager.websocket_to_player[websocket].remove()
         #manager.disconnect(websocket)

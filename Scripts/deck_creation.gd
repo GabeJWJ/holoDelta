@@ -614,15 +614,15 @@ func load_from_deck_info(deck_info : Dictionary) -> void:
 	
 	#Make an oshi card if none exist or modify the one that does
 	if oshiCard == null:
-		create_oshi(deck_info.oshi[0],deck_info.oshi[1])
+		create_oshi(deck_info.oshi[0],int(deck_info.oshi[1]))
 	else:
-		oshiCard.setup_info(deck_info.oshi[0],deck_info.oshi[1])
+		oshiCard.setup_info(deck_info.oshi[0],int(deck_info.oshi[1]))
 	
 	#Create cards in deck
 	for card_info in deck_info.deck:
-		create_main_deck_card(card_info[0],card_info[2],card_info[1])
+		create_main_deck_card(card_info[0],int(card_info[2]),int(card_info[1]))
 	for card_info in deck_info.cheerDeck:
-		create_cheer_deck_card(card_info[0],card_info[2],card_info[1])
+		create_cheer_deck_card(card_info[0],int(card_info[2]),int(card_info[1]))
 	
 	#Set up sleeves
 	if deck_info.has("sleeve"):

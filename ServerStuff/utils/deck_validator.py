@@ -110,7 +110,7 @@ def check_legal(deck, banlist = None, only_en = False):
     
     if "cheerDeck" in deck:
         cheer_info = deck["cheerDeck"]
-        if type(cheer_info) is list and all(type(x) is list and len(x) == 3 and type(x[0]) is str and type(x[1]) is int and type(x[2]) for x in cheer_info):
+        if type(cheer_info) is list and all(type(x) is list and len(x) == 3 and type(x[0]) is str and type(x[1]) is int and type(x[2]) is int for x in cheer_info):
             total_cheer = 0
 
             for cheer_row in cheer_info:

@@ -72,7 +72,7 @@ var attached = []
 
 func setup_info(number,art_code,back=null):
 	cardNumber = number
-	artNum = art_code
+	artNum = int(art_code)
 	
 	if back:
 		cardBack = ImageTexture.create_from_image(back)

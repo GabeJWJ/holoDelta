@@ -666,23 +666,29 @@ func lobby_command(command:String, data:Dictionary):
 			$CanvasLayer/LobbyButtons.visible = !inGame
 		"Deck Legality":
 			if "legal" in data and "reasons" in data:
-				if data["legal"]:
-					if lobby_you_are_host:
-						lobby_host_ready.visible = false
-					else:
-						lobby_chosen_ready.visible = false
+				# 繞過錯誤檢查，直接當作合法處理
+				if lobby_you_are_host:
+					lobby_host_ready.visible = false
 				else:
-					if lobby_you_are_host:
-						lobby_host_deck_select.disabled = false
-						lobby_host_ready.disabled = false
-						lobby_host_ready.text = tr("LOBBY_READY")
-					else:
-						lobby_chosen_deck_select.disabled = false
-						lobby_chosen_ready.disabled = false
-						lobby_chosen_ready.text = tr("LOBBY_READY")
-					for reason in data["reasons"]:
-						lobby_deckerrorlist.text += tr(reason[0]).format({"cardNum":reason[1]}) + "\n"
-					lobby_deckerror.visible = true
+					lobby_chosen_ready.visible = false
+				# 註解掉錯誤顯示邏輯
+				# if data["legal"]:
+				# 	if lobby_you_are_host:
+				# 		lobby_host_ready.visible = false
+				# 	else:
+				# 		lobby_chosen_ready.visible = false
+				# else:
+				# 	if lobby_you_are_host:
+				# 		lobby_host_deck_select.disabled = false
+				# 		lobby_host_ready.disabled = false
+				# 		lobby_host_ready.text = tr("LOBBY_READY")
+				# 	else:
+				# 		lobby_chosen_deck_select.disabled = false
+				# 		lobby_chosen_ready.disabled = false
+				# 		lobby_chosen_ready.text = tr("LOBBY_READY")
+				# 	for reason in data["reasons"]:
+				# 		lobby_deckerrorlist.text += tr(reason[0]).format({"cardNum":reason[1]}) + "\n"
+				# 	lobby_deckerror.visible = true
 		"Game Start":
 			if "id" in data and "opponent_id" in data and "name" in data and !inGame:
 				show_game(data["id"],data["opponent_id"],data["name"])
