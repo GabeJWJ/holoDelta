@@ -1,6 +1,6 @@
 @echo off
-chcp 65001 >nul
-title HoloDelta Enhanced Launcher
+chcp 65001 >nul 2>&1
+title HoloDelta Launcher
 
 echo ========================================
 echo       HoloDelta - Enhanced Launcher
