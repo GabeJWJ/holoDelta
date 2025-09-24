@@ -42,8 +42,8 @@ holoDelta 是一個粉絲製作的 Hololive 交易卡牌遊戲模擬器。此專
 ## 伺服器設定
 
 1. 設定區域網路環境，我使用的是 RadminVPN
-2. 開啟啟動器並輸入您的區域網路 IP
-3. 注意！您的朋友也應該輸入您的區域網路 IP，而不是他們自己的
+2. 開啟啟動器並輸入您的區域網路 IP(若是伺服器主需要啟動伺服器端和客戶端)
+3. 注意！您的朋友也應該輸入伺服器主的區域網路 IP，而不是他們自己的
 
 ---
 
@@ -85,8 +85,8 @@ holoDelta は Hololive トレーディングカードゲームのファンメイ
 ## サーバーセットアップ
 
 1. LAN 環境を設定（私は RadminVPN を使用）
-2. ランチャーを開いて LAN IP を入力
-3. 注意！友達も自分の LAN IP ではなく、あなたの LAN IP を入力する必要があります
+2. ランチャーを開いて LAN IP を入力（サーバー主の場合はサーバー端とクライアント端の両方を起動する必要があります）
+3. 注意！友達も自分の LAN IP ではなく、サーバー主の LAN IP を入力する必要があります
 
 ---
 
@@ -124,6 +124,6 @@ If you encounter issues with the enhanced launcher:
 ## Server Setup
 
 1. set up a LAN enviroment, in my case, I use RadminVPN
-2. open launcher and input your LAN IP
-3. !CAUTION! YOUR FRIEND SHOULD ALSO INPUT YOUR LAN IP NOT THEIR'S  
+2. open launcher and input your LAN IP (if you are the server host, you need to start both server and client)
+3. !CAUTION! YOUR FRIEND SHOULD ALSO INPUT THE SERVER HOST'S LAN IP NOT THEIR'S  
 
