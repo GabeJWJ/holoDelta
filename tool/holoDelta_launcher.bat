@@ -17,8 +17,8 @@ if %errorlevel% neq 0 (
 )
 
 REM Check if the launcher file exists
-if not exist "holoDelta_launcher_enhanced.py" (
-    echo [ERROR] holoDelta_launcher_enhanced.py not found
+if not exist "holoDelta_launcher.py" (
+    echo [ERROR] holoDelta_launcher.py not found
     echo Please make sure you are running this script from the correct directory
     echo.
     pause
@@ -27,7 +27,7 @@ if not exist "holoDelta_launcher_enhanced.py" (
 
 REM Start the launcher
 echo [INFO] Launching HoloDelta Enhanced Launcher...
-python holoDelta_launcher_enhanced.py
+python holoDelta_launcher.py    
 
 REM Check if the launcher exited with an error
 if %errorlevel% neq 0 (

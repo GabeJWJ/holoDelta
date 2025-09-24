@@ -11,10 +11,10 @@ echo ""
 if ! command -v python3 &> /dev/null; then
     if ! command -v python &> /dev/null; then
         echo "[ERROR] Python is not installed or not in PATH"
-        echo "Please install Python 3.7+ using your package manager:"
-        echo "  Ubuntu/Debian: sudo apt install python3"
-        echo "  CentOS/RHEL: sudo yum install python3"
-        echo "  Arch Linux: sudo pacman -S python"
+        echo "Please install Python 3.7+ using one of the following methods:"
+        echo "  1. Download from https://www.python.org/downloads/"
+        echo "  2. Use Homebrew: brew install python"
+        echo "  3. Use MacPorts: sudo port install python37"
         echo ""
         read -p "Press Enter to exit..."
         exit 1
@@ -38,8 +38,8 @@ if [ "$(printf '%s\n' "$REQUIRED_VERSION" "$PYTHON_VERSION" | sort -V | head -n1
 fi
 
 # Check if the launcher file exists
-if [ ! -f "holoDelta_launcher_enhanced.py" ]; then
-    echo "[ERROR] holoDelta_launcher_enhanced.py not found"
+if [ ! -f "holoDelta_launcher.py" ]; then
+    echo "[ERROR] holoDelta_launcher.py not found"
     echo "Please make sure you are running this script from the correct directory"
     echo ""
     read -p "Press Enter to exit..."
@@ -48,7 +48,7 @@ fi
 
 # Start the launcher
 echo "[INFO] Launching HoloDelta Enhanced Launcher..."
-$PYTHON_CMD holoDelta_launcher_enhanced.py
+$PYTHON_CMD holoDelta_launcher.py
 
 # Check if the launcher exited with an error
 if [ $? -ne 0 ]; then
