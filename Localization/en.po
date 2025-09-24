@@ -86,6 +86,10 @@ msgid "RPS_WAIT"
 msgstr "Waiting for opponent..."
 
 #: Scenes/board.tscn
+msgid "SETTINGS_GAME_OPTIONS"
+msgstr "Game Options"
+
+#: Scenes/board.tscn
 msgid "DECK_CREATE"
 msgstr "Create/Edit Deck"
 
@@ -96,6 +100,14 @@ msgstr "Quick Refresh"
 #: Scenes/board.tscn
 msgid "LOBBY_CREATE"
 msgstr "Create Lobby"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_AUDIO_OPTIONS"
+msgstr "Audio Options"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_KEYBINDINGS"
+msgstr "Keybindings"
 
 #: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "PLAYERS_ONLINE"
@@ -140,6 +152,10 @@ msgstr "Current + Unreleased"
 #: Scenes/board.tscn
 msgid "LOBBY_BACK"
 msgstr "Back"
+
+#: Scenes/board.tscn
+msgid "LOBBY_PUBLIC_LOBBIES_FOUND"
+msgstr "{amount} Public Lobbies Found"
 
 #: Scenes/board.tscn
 msgid "EXIT"

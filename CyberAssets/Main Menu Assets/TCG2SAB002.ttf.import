@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cofc4aorx22qc"
+uid="uid://lc54o0cm5hx1"
 path="res://.godot/imported/TCG2SAB002.ttf-ebe30b60e4880e5e91c2dc47c1bfd51e.fontdata"
 
 [deps]
@@ -25,7 +25,7 @@ hinting=1
 subpixel_positioning=1
 oversampling=0.0
 Fallbacks=null
-fallbacks=[Resource("res://CyberAssets/Main Menu Assets/NotoSansJP-Black.ttf"), Resource("res://CyberAssets/Main Menu Assets/Oserif-2OPL3.ttf")]
+fallbacks=[]
 Compress=null
 compress=true
 preload=[]

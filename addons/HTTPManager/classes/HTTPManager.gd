@@ -441,4 +441,3 @@ func d( msg ):
 
 static func e( msg ):
 	printerr( "HTTPManager: "+str(msg) )
-

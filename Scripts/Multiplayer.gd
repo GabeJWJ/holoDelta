@@ -3,7 +3,7 @@ extends Node2D
 
 @export var player_side: PackedScene
 @onready var json = JSON.new()
-@onready var chat = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer/Chat
+@onready var chat = %Chat
 
 var deckInfo
 
@@ -24,24 +24,26 @@ var inGame = false
 var rps = false
 
 #Lobby stuff
-@onready var lobby_banlist = $CanvasLayer/LobbyCreateMenu/VBoxContainer/OptionButton
-@onready var lobby_private = $CanvasLayer/LobbyCreateMenu/VBoxContainer/CheckButton
-@onready var lobby_spectators = $CanvasLayer/LobbyCreateMenu/VBoxContainer/CheckButton2
-@onready var lobby_list = $CanvasLayer/LobbyList
-@onready var lobby_list_found = $CanvasLayer/LobbyList/VBoxContainer/ScrollContainer/LobbiesFound
-@onready var lobby_list_searching_text = $CanvasLayer/LobbyList/VBoxContainer/HBoxContainer/SearchingText
-@onready var lobby_list_code = $CanvasLayer/LobbyList/VBoxContainer/HBoxContainer2/LobbyCode
-@onready var lobby_list_code_button = $CanvasLayer/LobbyList/VBoxContainer/HBoxContainer2/JoinByCode
-@onready var game_list = $CanvasLayer/GameList
-@onready var game_list_found = $CanvasLayer/GameList/VBoxContainer/ScrollContainer/GamesFound
-@onready var game_list_searching_text = $CanvasLayer/GameList/VBoxContainer/HBoxContainer/SearchingText
-@onready var game_list_code = $CanvasLayer/GameList/VBoxContainer/HBoxContainer2/GameCode
-@onready var game_list_code_button = $CanvasLayer/GameList/VBoxContainer/HBoxContainer2/SpectateByCode
-@onready var lobby_host_name = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer/HostName
-@onready var lobby_host_options = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer/HostOptions
-@onready var lobby_host_ready = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer/HostOptions/Ready
-@onready var lobby_host_ready_text = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer/Ready
-@onready var lobby_host_deck_select = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer/HostOptions/DeckSelect
+@onready var lobby_banlist = %LobbyBanlist
+@onready var lobby_private = %LobbyPrivateButton
+@onready var lobby_spectators = %LobbySpectatorButton
+@onready var lobby_list = %LobbyPanel
+@onready var lobby_list_found = %LobbiesFound
+@onready var lobby_list_searching_text = %LobbyListSearchingText
+@onready var lobby_list_code = %LobbyListCode
+@onready var lobby_list_code_button = %JoinByCode
+# I renamed a lot of the game list UI components to spectate list for my own clarity
+# I will leave all the variable names the same though
+@onready var game_list = %SpectatePanel
+@onready var game_list_found = %GamesFound
+@onready var game_list_searching_text = %SpectateListSearchingText
+@onready var game_list_code = %SpectateListCode
+@onready var game_list_code_button = %SpectateByCode
+@onready var lobby_host_name = %HostName
+@onready var lobby_host_options = %HostOptions
+@onready var lobby_host_ready = %LobbyHostReady
+@onready var lobby_host_ready_text = %HostReadyLabel
+@onready var lobby_host_deck_select = %HostDeckSelect
 @onready var lobby_chosen_name = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer2/JoinName
 @onready var lobby_chosen_options = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2/JoinOptions
 @onready var lobby_chosen_ready = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2/JoinOptions/Ready
@@ -52,9 +54,9 @@ var rps = false
 @onready var lobby_game_start = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/HBoxContainer/StartGame
 @onready var lobby_deckerror = $CanvasLayer/LobbyScreen/DeckErrors
 @onready var lobby_deckerrorlist = $CanvasLayer/LobbyScreen/DeckErrors/ScrollContainer/Label
-@onready var player_count = $CanvasLayer/LobbyButtons/LobbyCreate/PlayerCount
-@onready var lobby_join_button = $CanvasLayer/LobbyButtons/LobbyJoin
-@onready var spectate_button = $CanvasLayer/LobbyButtons/GameSpectate
+@onready var player_count = %PlayerCount
+@onready var lobby_join_button = %LobbyJoin
+@onready var spectate_button = %GameSpectate
 var current_lobby = null
 var lobby_you_are_host = false
 
@@ -94,25 +96,25 @@ func _ready():
 	Settings.update_settings("LoadedDecks", temp_loaded_decks)
 	
 	#Connect PopupMenus
-	$CanvasLayer/LanguageSelect.get_popup().index_pressed.connect(_on_language_selected)
+	%LanguageSelect.get_popup().index_pressed.connect(_on_language_selected)
 	
 	#Initialize settings
-	$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed = Settings.settings.AllowUnrevealed
-	$CanvasLayer/Options/OptionBackground/AllowProxies.button_pressed = Settings.settings.AllowProxies
-	$CanvasLayer/Options/OptionBackground/AllowProxies.disabled = !Settings.settings.UseCardLanguage
-	$CanvasLayer/Options/OptionBackground/AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1
-	$CanvasLayer/Options/OptionBackground/UseCardLanguage.button_pressed = Settings.settings.UseCardLanguage
-	$CanvasLayer/OnlyEN.button_pressed = Settings.settings.OnlyEN
+	%CheckUnrevealed.button_pressed = Settings.settings.AllowUnrevealed
+	%AllowProxies.button_pressed = Settings.settings.AllowProxies
+	%AllowProxies.disabled = !Settings.settings.UseCardLanguage
+	%AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1
+	%UseCardLanguage.button_pressed = Settings.settings.UseCardLanguage
+	%OnlyEN.button_pressed = Settings.settings.OnlyEN
 	
-	$CanvasLayer/Options/OptionBackground/SFXSlider.value = Settings.settings.SFXVolume
-	$CanvasLayer/Sidebar/OptionsWindow/SFXSlider.value = Settings.settings.SFXVolume
+	%SFXSlider.value = Settings.settings.SFXVolume
+	%SFXSlider.value = Settings.settings.SFXVolume
 	AudioServer.set_bus_volume_db(Settings.sfx_bus_index, Settings.settings.SFXVolume)
 	if Settings.settings.SFXVolume <= -29:
 		AudioServer.set_bus_mute(Settings.sfx_bus_index, true)
 	else:
 		AudioServer.set_bus_mute(Settings.sfx_bus_index, false)
-	$CanvasLayer/Options/OptionBackground/BGMSlider.value = Settings.settings.BGMVolume
-	$CanvasLayer/Sidebar/OptionsWindow/BGMSlider.value = Settings.settings.BGMVolume
+	%BGMSlider.value = Settings.settings.BGMVolume
+	%BGMSlider.value = Settings.settings.BGMVolume
 	AudioServer.set_bus_volume_db(Settings.bgm_bus_index, Settings.settings.BGMVolume)
 	if Settings.settings.BGMVolume < -39:
 		AudioServer.set_bus_mute(Settings.bgm_bus_index, true)
@@ -123,14 +125,14 @@ func _ready():
 		playmat = Image.new()
 		playmat.load_webp_from_buffer(Settings.settings.Playmat)
 		playmat.resize(3485,1480)
-		$CanvasLayer/PlaymatDiceCustom/ColorRect/TextureRect.texture = ImageTexture.create_from_image(playmat)
+		%PlaymatTextureRect.texture = ImageTexture.create_from_image(playmat)
 	if Settings.settings.has("Dice") and Settings.settings.Dice.size() > 0:
 		dice = Image.new()
 		dice.load_webp_from_buffer(Settings.settings.Dice)
-		$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(dice)
+		%Die.new_texture(dice)
 	
-	$CanvasLayer/LanguageSelect.text = Settings.get_language()
-	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
+	%LanguageSelect.text = Settings.get_language()
+	%InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
 		"en", "es", "fr", "ko", "vi":
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -139,10 +141,10 @@ func _ready():
 	
 	#Setup Info
 	if Database.setup:
-		$CanvasLayer/CardVersionText.text += Settings.card_version
+		%CardVersionText.text += Settings.card_version
 	else:
-		$CanvasLayer/Popup.visible = true
-		$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_CARDS")
+		%Popup.visible = true
+		%DownloadLabel.text = tr("DOWNLOAD_CARDS")
 		
 		if OS.has_feature("editor") or (OS.has_feature("web") or OS.get_name() == "Web"):
 			#The web version (and editor) have the card data built-in
@@ -157,8 +159,12 @@ func _ready():
 		
 	
 	#Visual
-	$CanvasLayer/ClientVersionText.text += Settings.client_version
-	$CanvasLayer/InfoButton/Info/DeckLocationButton/DeckLocation.text += ProjectSettings.globalize_path("user://Decks")
+	%ClientVersionText.text += Settings.client_version
+	%DeckLocation.text += ProjectSettings.globalize_path("user://Decks")
+	
+	%LobbiesFoundLabel.text = tr("LOBBY_PUBLIC_LOBBIES_FOUND").format({"amount": "0"})
+	%SpectateFoundLabel.text = tr("LOBBY_PUBLIC_LOBBIES_FOUND").format({"amount": "0"})
+	
 	fix_font_size()
 	
 	#Automatic deck import
@@ -179,13 +185,13 @@ func _ready():
 				if converted_deck != null:
 					# Load the deck to game state
 					GameState.deck_to_import = converted_deck
-					$CanvasLayer/ConfirmDialog.set_yes_button_disabled(true)
-					$CanvasLayer/ConfirmDialog.visible = true
-					$CanvasLayer/ConfirmDialog.dialogTitle = tr("DECK_AUTOLOAD_CONFIRM")
-					$CanvasLayer/ConfirmDialog.dialogContent = tr("DECK_AUTOLOAD_CONFIRM_INFO")
-					$CanvasLayer/ConfirmDialog.confirmed.connect(_on_deck_import_confirmed)
-					$CanvasLayer/ConfirmDialog.cancelled.connect(_on_deck_import_cancelled)
-					
+					%ConfirmDialog.set_yes_button_disabled(true)
+					%ConfirmDialog.visible = true
+					%ConfirmDialog.dialogTitle = tr("DECK_AUTOLOAD_CONFIRM")
+					%ConfirmDialog.dialogContent = tr("DECK_AUTOLOAD_CONFIRM_INFO")
+					%ConfirmDialog.confirmed.connect(_on_deck_import_confirmed)
+					%ConfirmDialog.cancelled.connect(_on_deck_import_cancelled)
+
 func _on_deck_import_cancelled():
 	# Cancel the deck import process also
 	# means finishing the deck import process
@@ -224,10 +230,10 @@ func _parse_deck_code(deck_data: String, allow_log: bool=false) -> Variant:
 		return null
 
 func update_info(topCard, card):
-	$CanvasLayer/Sidebar/InfoPanel._new_info(topCard, card)
+	%InfoPanel._new_info(topCard, card)
 
 func clear_info():
-	$CanvasLayer/Sidebar/InfoPanel._clear_showing()
+	%InfoPanel._clear_showing()
 
 func _restart(id=null):
 	if get_tree():
@@ -276,7 +282,7 @@ func _attempt_download_version():
 
 func _start_data():
 	Settings.card_version = FileAccess.get_file_as_string("res://cardLocalization/card_version.txt")
-	$CanvasLayer/CardVersionText.text += Settings.card_version
+	%CardVersionText.text += Settings.card_version
 	json.parse(FileAccess.get_file_as_string("res://cardData.json"))
 	Database.setup_data(json.data, Settings._connect_local.bind($Timer2.start))
 	#go should include download version data
@@ -313,29 +319,47 @@ func _download_progress(_assigned_files, _current_files, total_bytes, current_by
 #endregion
 
 #region Settings
+@onready var menus = {
+	"option": %OptionPanel,
+	"credits": %CreditsPanel,
+	"create_lobby": %LobbyCreateMenu,
+	"join_lobby": %LobbyPanel,
+	"spectate_game": %SpectatePanel,
+	"customization": %CustomizationPanel
+}
+
+## Ensures popup menus are mutually exclusive so only one can appear at once
+func switch_menu(m: String):
+	# If the menu is already visible, toggle it off and exit early
+	if menus[m].visible:
+		menus[m].visible = false
+		return
+	for menu in menus:
+		menus[menu].visible = (menu == m)
+
 func _on_options_pressed():
-	$CanvasLayer/Options/OptionBackground.visible = !$CanvasLayer/Options/OptionBackground.visible
+	switch_menu("option")
 	print($WebSocket.socket.get_close_code())
 
 func _on_check_unrevealed_pressed():
-	Settings.update_settings("AllowUnrevealed",$CanvasLayer/Options/OptionBackground/CheckUnrevealed.button_pressed)
+	Settings.update_settings("AllowUnrevealed",%CheckUnrevealed.button_pressed)
 
 func _on_allow_proxies_pressed():
-	Settings.update_settings("AllowProxies",$CanvasLayer/Options/OptionBackground/AllowProxies.button_pressed)
+	Settings.update_settings("AllowProxies",%AllowProxies.button_pressed)
 
 func _on_use_card_language_pressed() -> void:
-	Settings.update_settings("UseCardLanguage",$CanvasLayer/Options/OptionBackground/UseCardLanguage.button_pressed)
-	$CanvasLayer/Options/OptionBackground/AllowProxies.disabled = !Settings.settings.UseCardLanguage
-	$CanvasLayer/Options/OptionBackground/AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1
+	Settings.update_settings("UseCardLanguage",%UseCardLanguage.button_pressed)
+	%AllowProxies.disabled = !Settings.settings.UseCardLanguage
+	%AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1
 
 func _on_en_only_pressed() -> void:
-	Settings.update_settings("OnlyEN", $CanvasLayer/OnlyEN.button_pressed)
+	Settings.update_settings("OnlyEN", %OnlyEN.button_pressed)
 	send_command("Server","Update Numbers")
 
 func _on_language_selected(index_selected):
 	Settings.update_settings("Language",Settings.languages[index_selected][0])
-	$CanvasLayer/LanguageSelect.text = Settings.languages[index_selected][1]
-	$CanvasLayer/Sidebar/InfoPanel.update_word_wrap()
+	%LanguageSelect.text = Settings.languages[index_selected][1]
+	%InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
 		"en", "es", "fr", "ko", "vi":
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -345,7 +369,7 @@ func _on_language_selected(index_selected):
 	_restart()
 
 func _on_sfx_slider_drag_ended(value_changed=null):
-	$CanvasLayer/Options/OptionBackground/SFXSlider/Test.play()
+	%SFXTestAudio.play()
 
 func _on_sfx_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(Settings.sfx_bus_index, value)
@@ -364,36 +388,36 @@ func _on_bgm_slider_value_changed(value):
 		AudioServer.set_bus_mute(Settings.bgm_bus_index, false)
 
 func _on_playmat_dice_custom_pressed():
-	$CanvasLayer/PlaymatDiceCustom/ColorRect.visible = true
+	switch_menu("customization")
 
 func _on_cosmetics_exit_pressed():
-	$CanvasLayer/PlaymatDiceCustom/ColorRect.visible = false
+	%CustomizationPanel.visible = false
 
 func _on_playmat_pressed():
-	$CanvasLayer/PlaymatDiceCustom/ColorRect/Playmat/LoadDialog.visible = true
+	%PlaymatLoadDialog.visible = true
 
 func _on_dice_pressed():
-	$CanvasLayer/PlaymatDiceCustom/ColorRect/Dice/LoadDialog.visible = true
+	%DiceLoadDialog.visible = true
 
 func _on_playmat_load_dialog_file_selected(path):
 	playmat = Image.load_from_file(path)
 	playmat.resize(3485,1480)
-	$CanvasLayer/PlaymatDiceCustom/ColorRect/TextureRect.texture = ImageTexture.create_from_image(playmat)
+	%PlaymatTextureRect.texture = ImageTexture.create_from_image(playmat)
 	Settings.update_settings("Playmat",Array(playmat.save_webp_to_buffer(true)))
 
 func _on_dice_load_dialog_file_selected(path):
 	dice = Image.load_from_file(path)
-	$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(dice)
+	%Die.new_texture(dice)
 	Settings.update_settings("Dice",Array(dice.save_webp_to_buffer(true)))
 
 func _on_playmat_default_pressed():
 	playmat = null
-	$CanvasLayer/PlaymatDiceCustom/ColorRect/TextureRect.texture = default_playmat
+	%PlaymatTextureRect.texture = default_playmat
 	Settings.update_settings("Playmat",null)
 
 func _on_dice_default_pressed():
 	dice = null
-	$CanvasLayer/PlaymatDiceCustom/ColorRect/SubViewportContainer/SubViewport/Die.new_texture(default_dice)
+	%Die.new_texture(default_dice)
 	Settings.update_settings("Dice",null)
 
 func _on_hide_cosmetics_toggled(toggled_on):
@@ -404,10 +428,10 @@ func _on_hide_cosmetics_toggled(toggled_on):
 #endregion
 
 func _on_info_button_pressed():
-	$CanvasLayer/InfoButton/Info.visible = !$CanvasLayer/InfoButton/Info.visible
+	switch_menu("credits")
 
 func _on_deck_location_button_pressed():
-	$CanvasLayer/InfoButton/Info/DeckLocationButton/DeckLocation.visible = !$CanvasLayer/InfoButton/Info/DeckLocationButton/DeckLocation.visible
+	%DeckLocation.visible = !%DeckLocation.visible
 
 #region Sidebar
 func _on_card_info_pressed():
@@ -520,22 +544,22 @@ func fix_font_size():
 #region WebSocket
 
 func send_command(supertype:String, command:String, data=null) -> void:
-	if $CanvasLayer/LobbyButtons/LobbyCreate.disabled:
+	if %LobbyCreate.disabled:
 		#Really hacky way to check if the websocket is connected. I'm tired.
 		return
 	if !data:
 		data = {}
-	$WebSocket.send_dict({"supertype":supertype, "command":command, "data":data})
+	%WebSocket.send_dict({"supertype":supertype, "command":command, "data":data})
 
 func _on_websocket_connected(url):
-	$CanvasLayer/LobbyButtons/LobbyCreate.disabled = false
-	$CanvasLayer/LobbyButtons/LobbyJoin.disabled = false
-	$CanvasLayer/LobbyButtons/GameSpectate.disabled = false
+	%LobbyCreate.disabled = false
+	%LobbyJoin.disabled = false
+	%GameSpectate.disabled = false
 	
 	# NOTE: This section is for the dialog in main menu
 	# solely for the purpose of query param deck check
 	if OS.has_feature("web"):
-		$CanvasLayer/ConfirmDialog.set_yes_button_disabled(false)
+		%ConfirmDialog.set_yes_button_disabled(false)
 
 func _on_websocket_received(raw_data):
 	var needed_string = raw_data.get_string_from_ascii()
@@ -579,7 +603,7 @@ func _on_websocket_received(raw_data):
 						"Create Lobby Failed":
 							print("Failed to Create Lobby")
 							hide_lobby_options()
-							$CanvasLayer/LobbyButtons.visible = true
+							%LobbyButtons.visible = true
 						"Join Lobby Failed":
 							print("Failed to Join Lobby")
 							lobby_list.visible = false
@@ -593,7 +617,7 @@ func _on_websocket_received(raw_data):
 								if Settings.settings["Name"] != "":
 									player_name = Settings.settings["Name"]
 									update_name(player_name)
-								$CanvasLayer/PlayerName.placeholder_text = player_name
+								%PlayerName.placeholder_text = player_name
 							if "current" in data and "en_current" in data and "unreleased" in data:
 								for number in data["current"]:
 									Database.current_banlist[number] = int(data["current"][number])
@@ -613,7 +637,7 @@ func _on_websocket_received(raw_data):
 									for found in numbers_found:
 										Database.unreleased[found] = int(data["unreleased"][number])
 							if "server_id" in data:
-								$CanvasLayer/Debug/ServerCode.text = data["server_id"]
+								%ServerCode.text = data["server_id"]
 						"Numbers":
 							if "players" in data and "lobbies" in data and "en_lobbies" in data and "games" in data and "en_games" in data and !inGame:
 								player_count.text = tr("PLAYERS_ONLINE").format({"amount":int(data["players"])})
@@ -661,9 +685,9 @@ func lobby_command(command:String, data:Dictionary):
 				show_lobby(data["hostName"],data["id"],false,{},null,false,false,false)
 		"Close":
 			clear_lobby_menu()
-			$CanvasLayer/DeckList.visible = false
-			$CanvasLayer/LobbyScreen.visible = false
-			$CanvasLayer/LobbyButtons.visible = !inGame
+			%DeckList.visible = false
+			%LobbyPanel.visible = false
+			%LobbyButtons.visible = !inGame
 		"Deck Legality":
 			if "legal" in data and "reasons" in data:
 				if data["legal"]:
@@ -688,8 +712,8 @@ func lobby_command(command:String, data:Dictionary):
 				show_game(data["id"],data["opponent_id"],data["name"])
 		"Game Start Without You":
 			if "id" in data and !gameToSpectate:
-				$CanvasLayer/Question.visible = true
-				$CanvasLayer/Question/Label.text = tr("LOBBY_GAMESTART_SPECTATE")
+				%SpectateConfirmPanel.visible = true
+				%RPSWaitLabel.text = tr("LOBBY_GAMESTART_SPECTATE")
 				gameToSpectate = data["id"]
 		_:
 			pass
@@ -697,21 +721,19 @@ func lobby_command(command:String, data:Dictionary):
 func update_name(new_name:String):
 	Settings.update_settings("Name",new_name)
 	if new_name == "":
-		new_name = $CanvasLayer/PlayerName.placeholder_text
+		new_name = %PlayerName.placeholder_text
 	send_command("Server","Name Change",{"new_name":new_name})
 
 func create_lobby_options() -> void:
-	$CanvasLayer/LobbyButtons.visible = false
-	$CanvasLayer/LobbyCreateMenu.visible = true
-	$CanvasLayer/LobbyCreateMenu/VBoxContainer/OptionButton.selected = 2 if Settings.settings.OnlyEN else 1
+	switch_menu("create_lobby")
+	lobby_banlist.selected = 2 if Settings.settings.OnlyEN else 1
 	
 
 func hide_lobby_options() -> void:
-	$CanvasLayer/LobbyButtons.visible = true
-	$CanvasLayer/LobbyCreateMenu.visible = false
+	%LobbyCreateMenu.visible = false
 
 func create_lobby() -> void:
-	$CanvasLayer/LobbyCreateMenu.visible = false
+	%LobbyCreateMenu.visible = false
 	var settings = {}
 	if lobby_private.button_pressed:
 		settings["public"] = false
@@ -733,7 +755,7 @@ func find_lobbies() -> void:
 	#Should be updated to allow filtering
 	send_command("Server","Find Lobbies")
 	
-	lobby_list.visible = true
+	switch_menu("join_lobby")
 	lobby_list_searching_text.visible = true
 	lobby_list_code.text = ""
 	lobby_list_code_button.disabled = true
@@ -764,6 +786,7 @@ func found_lobbies(found:Array) -> void:
 			lobbyButton.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 			lobbyButton.add_theme_font_size_override("font_size", 25)
 			lobby_list_found.add_child(lobbyButton)
+	%LobbiesFoundLabel.text = tr("LOBBY_PUBLIC_LOBBIES_FOUND").format({"amount": str(found.size())})
 	lobby_list_searching_text.visible = false
 
 func close_lobby_list() -> void:
@@ -784,7 +807,7 @@ func find_games() -> void:
 	#Should be updated to allow filtering
 	send_command("Server","Find Games")
 	
-	game_list.visible = true
+	switch_menu("spectate_game")
 	game_list_searching_text.visible = true
 	game_list_code.text = ""
 	game_list_code_button.disabled = true
@@ -803,6 +826,7 @@ func found_games(found:Array) -> void:
 			gameButton.add_theme_font_size_override("font_size", 25)
 			game_list_found.add_child(gameButton)
 	game_list_searching_text.visible = false
+	%SpectateFoundLabel.text = tr("LOBBY_PUBLIC_LOBBIES_FOUND").format({"amount": str(found.size())})
 
 func close_game_list() -> void:
 	game_list.visible = false
@@ -829,8 +853,8 @@ func show_lobby(host_name:String, lobby_id:String, you_are_host:bool, waiting:Di
 			lobby_you_are_host = true
 		
 		update_lobby(lobby_id, waiting, chosen, you_are_chosen, host_ready, chosen_ready, "Initialize")
-		$CanvasLayer/LobbyList.visible=false
-		$CanvasLayer/LobbyScreen.visible=true
+		%LobbyPanel.visible=false
+		%LobbyScreen.visible=true
 
 func update_lobby(lobby_id:String, waiting:Dictionary, chosen, you_are_chosen:bool, host_ready:bool, chosen_ready:bool, reason:String):
 	if current_lobby == lobby_id:
@@ -874,11 +898,11 @@ func choose_opponent(player_id):
 	send_command("Lobby","Choose Opponent",{"chosen":player_id})
 
 func _on_deck_select_pressed():
-	$CanvasLayer/DeckList._all_decks()
-	$CanvasLayer/DeckList.visible = true
+	%DeckList._all_decks()
+	%DeckList.visible = true
 
 func _hide_deck_list():
-	$CanvasLayer/DeckList.visible = false
+	%DeckList.visible = false
 
 func _on_deck_list_selected(deckJSON):
 	deckInfo = deckJSON
@@ -924,7 +948,7 @@ func exit_lobby():
 		lobby_host_deck_select.disabled = false
 		lobby_chosen_deck_select.disabled = false
 		deckInfo = null
-		$CanvasLayer/LobbyScreen.visible = false
+		%LobbyScreen.visible = false
 
 func clear_lobby_menu() -> void:
 	for waitButton in lobby_waiting.get_children():
@@ -938,7 +962,7 @@ func clear_lobby_menu() -> void:
 	lobby_host_options.visible = false
 	current_lobby = null
 	lobby_you_are_host = false
-	$CanvasLayer/LobbyButtons.visible = false
+	%LobbyButtons.visible = false
 
 func start_game():
 	send_command("Lobby","Start Game")
@@ -973,35 +997,30 @@ func show_game(game_id:String,opponent_id:String,opponent_name:String) -> void:
 	fix_font_size()
 
 func _hide_main_menu():
-	$CanvasLayer/LobbyScreen.visible = false
-	$CanvasLayer/LobbyButtons.visible = false
-	$CanvasLayer/Title.visible = false
-	$"CanvasLayer/Deck Creation".visible = false
-	$CanvasLayer/Exit.visible = false
-	$CanvasLayer/Options.visible = false
-	$CanvasLayer/InfoButton.visible = false
-	$CanvasLayer/LanguageSelect.visible = false
-	$CanvasLayer/gradient.visible = false
-	$CanvasLayer/PlaymatDiceCustom.visible = false
-	$CanvasLayer/PlayerName.visible = false
-	$CanvasLayer/Question.visible = false
-	$CanvasLayer/LobbyList.visible = false
-	$CanvasLayer/GameList.visible = false
-	$CanvasLayer/Debug.visible = false
-	$CanvasLayer/OnlyEN.visible = false
-	$CanvasLayer/ClientVersionText.visible = false
-	$CanvasLayer/CardVersionText.visible = false
+	%LobbyScreen.visible = false
+	%LobbyButtons.visible = false
+	%TitleVBox.visible = false
+	%Exit.visible = false
+	%OptionPanel.visible = false
+	%OptionButton.visible = false
+	%gradient.visible = false
+	%SpectateConfirmPanel.visible = false
+	%LobbyPanel.visible = false
+	%SpectatePanel.visible = false
+	%LeftBarMargins.visible = false
+	%ClientVersionText.visible = false
+	%CardVersionText.visible = false
 	
 	$CanvasLayer/Sidebar.visible = true
 	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
 
 func _spectate_yes():
-	$CanvasLayer/Question/No.disabled = true
-	$CanvasLayer/Question/Yes.disabled = true
+	%SpectateNo.disabled = true
+	%SpectateYes.disabled = true
 	send_command("Server","Spectate",{"game":gameToSpectate})
 
 func _spectate_no():
-	$CanvasLayer/Question.visible = false
+	%SpectateConfirmPanel.visible = false
 	gameToSpectate = null
 
 func show_spectated_game(player_info:Dictionary) -> void:
@@ -1020,7 +1039,7 @@ func show_spectated_game(player_info:Dictionary) -> void:
 		call_deferred("add_child",newSide)
 	
 	_hide_main_menu()
-	$CanvasLayer/MainMenu.visible = true
+	%MainMenu.visible = true
 	$CanvasLayer/Sidebar/ChatWindow/HBoxContainer.visible = false
 	
 	fix_font_size()
@@ -1046,28 +1065,28 @@ func game_command(command: String, data: Dictionary) -> void:
 				yourSide.set_player1(data["is_turn"])
 		
 		"Start Ingame RPS":
-			$CanvasLayer/QuestionRPS/CenterContainer.visible = false
-			$CanvasLayer/QuestionRPS/HBoxContainer.visible = true
-			$CanvasLayer/QuestionRPS/HBoxContainer/Rock.disabled = false
-			$CanvasLayer/QuestionRPS/HBoxContainer/Paper.disabled = false
-			$CanvasLayer/QuestionRPS/HBoxContainer/Scissors.disabled = false
-			$CanvasLayer/QuestionRPS/CenterContainer/Label.text = tr("RPS_WAIT")
-			$CanvasLayer/QuestionRPS.visible = true
+			%RPSWaitLabel.visible = false
+			%RPSHBox.visible = true
+			%Rock.disabled = false
+			%Paper.disabled = false
+			%Scissors.disabled = false
+			%RPSWaitLabel.text = tr("RPS_WAIT")
+			%QuestionRPS.visible = true
 			rps = true
 		"Ingame RPS Restart":
-			$CanvasLayer/QuestionRPS/HBoxContainer/Rock.disabled = false
-			$CanvasLayer/QuestionRPS/HBoxContainer/Paper.disabled = false
-			$CanvasLayer/QuestionRPS/HBoxContainer/Scissors.disabled = false
+			%Rock.disabled = false
+			%Paper.disabled = false
+			%Scissors.disabled = false
 		"Ingame RPS Win":
-			$CanvasLayer/QuestionRPS/HBoxContainer.visible = false
-			$CanvasLayer/QuestionRPS/CenterContainer.visible = true
-			$CanvasLayer/QuestionRPS/CenterContainer/Label.text = tr("INGAME_RPS_WON")
+			%RPSHBox.visible = false
+			%RPSWaitLabel.visible = true
+			%RPSWaitLabel.text = tr("INGAME_RPS_WON")
 			rps = false
 			$Timer.start()
 		"Ingame RPS Loss":
-			$CanvasLayer/QuestionRPS/HBoxContainer.visible = false
-			$CanvasLayer/QuestionRPS/CenterContainer.visible = true
-			$CanvasLayer/QuestionRPS/CenterContainer/Label.text = tr("INGAME_RPS_LOST")
+			%RPSHBox.visible = false
+			%RPSWaitLabel.visible = true
+			%RPSWaitLabel.text = tr("INGAME_RPS_LOST")
 			rps = false
 			$Timer.start()
 		
@@ -1113,32 +1132,32 @@ func game_command(command: String, data: Dictionary) -> void:
 		"Game Win":
 			if "winner" in data and "reason" in data:
 				if data["winner"] == player_id:
-					$CanvasLayer/Question/Label.text = tr("WIN") + "\n" + tr(data["reason"]).format({"person":opponentSide.player_name})
+					%SpectateConfirmLabel.text = tr("WIN") + "\n" + tr(data["reason"]).format({"person":opponentSide.player_name})
 					yourSide.can_do_things = false
 					yourSide._on_cancel_pressed()
 					opponentSide._on_cancel_pressed()
-					$CanvasLayer/QuestionRPS.visible = false
+					%QuestionRPS.visible = false
 				else:
 					if opponentSide:
-						$CanvasLayer/Question/Label.text = tr("LOSS") + "\n" + tr("YOU_" + data["reason"])
+						%SpectateConfirmLabel.text = tr("LOSS") + "\n" + tr("YOU_" + data["reason"])
 						yourSide.can_do_things = false
 						yourSide._on_cancel_pressed()
 						opponentSide._on_cancel_pressed()
-						$CanvasLayer/QuestionRPS.visible = false
+						%QuestionRPS.visible = false
 					elif data["winner"] in spectatedSides:
 						var winner = spectatedSides[data["winner"]].player_name
 						var loser = "LOSER"
 						for spectatedPlayer in spectatedSides:
 							if spectatedPlayer != data["winner"]:
 								loser = spectatedSides[spectatedPlayer].player_name
-						$CanvasLayer/Question/Label.text = tr("SPECTATE_WIN").format({"person":winner}) + "\n" + tr(data["reason"]).format({"person":loser})
-				$CanvasLayer/Question/MainMenu.visible = true
-				$CanvasLayer/Question/No.visible = false
-				$CanvasLayer/Question/Yes.visible = false
-				$CanvasLayer/Question.position = Vector2(422,194)
-				$CanvasLayer/Question.visible = true
+						%SpectateConfirmLabel.text = tr("SPECTATE_WIN").format({"person":winner}) + "\n" + tr(data["reason"]).format({"person":loser})
+				%SpectateMainMenu.visible = true
+				%SpectateNo.visible = false
+				%SpectateYes.visible = false
+				#$CanvasLayer/Question.position = Vector2(422,194)
+				%SpectateConfirmPanel.visible = true
 		"Close":
-			if inGame and !$CanvasLayer/Question.visible:
+			if inGame and !%SpectateConfirmPanel.visible:
 				_restart()
 		_:
 			pass
@@ -1147,23 +1166,23 @@ func _on_rps(choice):
 	send_command("Game","RPS",{"choice":choice})
 
 func _rps_rock():
-	$CanvasLayer/QuestionRPS/HBoxContainer/Rock.disabled = true
-	$CanvasLayer/QuestionRPS/HBoxContainer/Paper.disabled = true
-	$CanvasLayer/QuestionRPS/HBoxContainer/Scissors.disabled = true
+	%Rock.disabled = true
+	%Paper.disabled = true
+	%Scissors.disabled = true
 	send_command("Game","Ingame RPS",{"choice":0})
 func _rps_paper():
-	$CanvasLayer/QuestionRPS/HBoxContainer/Rock.disabled = true
-	$CanvasLayer/QuestionRPS/HBoxContainer/Paper.disabled = true
-	$CanvasLayer/QuestionRPS/HBoxContainer/Scissors.disabled = true
+	%Rock.disabled = true
+	%Paper.disabled = true
+	%Scissors.disabled = true
 	send_command("Game","Ingame RPS",{"choice":1})
 func _rps_scissors():
-	$CanvasLayer/QuestionRPS/HBoxContainer/Rock.disabled = true
-	$CanvasLayer/QuestionRPS/HBoxContainer/Paper.disabled = true
-	$CanvasLayer/QuestionRPS/HBoxContainer/Scissors.disabled = true
+	%Rock.disabled = true
+	%Paper.disabled = true
+	%Scissors.disabled = true
 	send_command("Game","Ingame RPS",{"choice":2})
 func _on_timer_timeout() -> void:
 	if !rps:
-		$CanvasLayer/QuestionRPS.visible = false
+		%QuestionRPS.visible = false
 
 func _on_choice_made(choice):
 	send_command("Game","Turn Choice",{"choice":choice})
@@ -1182,7 +1201,7 @@ func send_message_on_click():
 func _on_close_error_pressed() -> void:
 	$CanvasLayer/Error.visible = false
 	if !inGame:
-		$CanvasLayer/LobbyButtons.visible = true
+		%LobbyButtons.visible = true
 
 #endregion
 
