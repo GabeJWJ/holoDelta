@@ -57,6 +57,12 @@ start_launcher.bat
 python holoDelta_launcher_enhanced.py
 ```
 
+**方法3: 簡易啟動器 (備用方案)**
+```cmd
+# 如果增強版啟動器無法正常運行，使用此簡易版本
+simple_launcher.bat
+```
+
 #### Linux
 
 **方法1: 使用啟動腳本 (推薦)**
@@ -130,6 +136,18 @@ A: 請檢查：
 1. Python是否正確安裝 (python --version)
 2. tkinter是否可用 (python -c "import tkinter")
 3. 所有必需文件是否在同一目錄
+4. 如果仍有問題，請使用 simple_launcher.bat 作為備用方案
+```
+
+**Q: 增強版啟動器出現錯誤**
+```
+A: 如果增強版啟動器無法正常運行，請使用簡易啟動器：
+1. 雙擊運行 simple_launcher.bat
+2. 簡易啟動器會自動：
+   - 檢查Python環境
+   - 配置客戶端連接
+   - 安裝依賴包
+   - 啟動伺服器和客戶端
 ```
 
 **Q: 字體顯示異常**
@@ -161,7 +179,8 @@ A: 請確保 languages.json 文件存在且格式正確
 
 ```
 tool/
-├── holoDelta_launcher_enhanced.py  # 主程序
+├── holoDelta_launcher_enhanced.py  # 主程序 (增強版GUI啟動器)
+├── simple_launcher.bat             # 簡易啟動器 (備用方案)
 ├── languages.json                  # 多語言翻譯
 ├── launcher_config.json           # 啟動器配置
 ├── NotoSans-Black.ttf             # 字體文件
