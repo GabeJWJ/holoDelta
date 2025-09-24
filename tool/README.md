@@ -52,6 +52,12 @@
 start_launcher.bat
 ```
 
+**方法1.5: 使用tkinter檢測啟動器 (推薦)**
+```cmd
+# 自動檢測並安裝tkinter，雙擊運行
+start_launcher_with_check.bat
+```
+
 **方法2: 直接運行Python**
 ```cmd
 python holoDelta_launcher_enhanced.py
@@ -141,13 +147,22 @@ A: 請檢查：
 
 **Q: 增強版啟動器出現錯誤**
 ```
-A: 如果增強版啟動器無法正常運行，請使用簡易啟動器：
-1. 雙擊運行 simple_launcher.bat
-2. 簡易啟動器會自動：
-   - 檢查Python環境
-   - 配置客戶端連接
-   - 安裝依賴包
-   - 啟動伺服器和客戶端
+A: 如果增強版啟動器無法正常運行，請嘗試以下解決方案：
+1. 使用 tkinter 檢測啟動器：start_launcher_with_check.bat
+   - 自動檢測並安裝 tkinter
+   - 提供詳細的安裝指南
+2. 使用簡易啟動器：simple_launcher.bat
+   - 不依賴 GUI 界面
+   - 自動檢查環境和配置
+```
+
+**Q: tkinter 模組不可用**
+```
+A: 使用 start_launcher_with_check.bat 會自動：
+1. 檢測 tkinter 是否可用
+2. 嘗試自動安裝 tkinter
+3. 提供各系統的安裝指南
+4. 如果無法安裝，提供簡易啟動器選項
 ```
 
 **Q: 字體顯示異常**
@@ -180,11 +195,13 @@ A: 請確保 languages.json 文件存在且格式正確
 ```
 tool/
 ├── holoDelta_launcher_enhanced.py  # 主程序 (增強版GUI啟動器)
+├── launcher_with_tkinter_check.py  # tkinter檢測器
 ├── simple_launcher.bat             # 簡易啟動器 (備用方案)
 ├── languages.json                  # 多語言翻譯
 ├── launcher_config.json           # 啟動器配置
 ├── NotoSans-Black.ttf             # 字體文件
 ├── start_launcher.bat             # Windows啟動腳本
+├── start_launcher_with_check.bat  # Windows啟動腳本 (含tkinter檢測)
 ├── start_launcher.sh              # Linux啟動腳本
 ├── start_launcher.command         # macOS啟動腳本
 └── README.md                      # 說明文件
