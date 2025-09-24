@@ -329,11 +329,12 @@ func _download_progress(_assigned_files, _current_files, total_bytes, current_by
 }
 
 ## Ensures popup menus are mutually exclusive so only one can appear at once
-func switch_menu(m: String):
+func switch_menu(m: String, close_if_open = true):
 	# If the menu is already visible, toggle it off and exit early
-	if menus[m].visible:
-		menus[m].visible = false
-		return
+	if close_if_open:
+		if menus[m].visible:
+			menus[m].visible = false
+			return
 	for menu in menus:
 		menus[menu].visible = (menu == m)
 
@@ -540,6 +541,7 @@ func fix_font_size():
 				label.set_meta("fontSize", label.get_theme_font_size("font_size"))
 			#Scale is 0.8 here but 0.9 in the deck builder. This is intentional, and returns the best results
 			FixFontTool.apply_text_with_corrected_max_scale(label.size, label, tr(label.text), 0.8, false, Vector2(), label.get_meta("fontSize"))
+			pass
 
 #region WebSocket
 
@@ -755,7 +757,7 @@ func find_lobbies() -> void:
 	#Should be updated to allow filtering
 	send_command("Server","Find Lobbies")
 	
-	switch_menu("join_lobby")
+	switch_menu("join_lobby", false)
 	lobby_list_searching_text.visible = true
 	lobby_list_code.text = ""
 	lobby_list_code_button.disabled = true
@@ -807,7 +809,7 @@ func find_games() -> void:
 	#Should be updated to allow filtering
 	send_command("Server","Find Games")
 	
-	switch_menu("spectate_game")
+	switch_menu("spectate_game", false)
 	game_list_searching_text.visible = true
 	game_list_code.text = ""
 	game_list_code_button.disabled = true

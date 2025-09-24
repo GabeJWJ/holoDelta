@@ -125,15 +125,11 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 text = "DEBUG"
 
-[node name="ServerCode" type="Label" parent="CanvasLayer/LeftBarMargins/LeftBarVBox/DebugButton"]
+[node name="ServerCode" type="Label" parent="CanvasLayer/LeftBarMargins/LeftBarVBox"]
 unique_name_in_owner = true
 auto_translate_mode = 2
-visible = false
-layout_mode = 0
-offset_left = -6.0
-offset_top = 33.0
-offset_right = 236.0
-offset_bottom = 54.0
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
 text = "Server Code"
 horizontal_alignment = 1
 
@@ -1003,8 +999,6 @@ size_flags_horizontal = 3
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 30
 text = "COSMETICS_PM"
-text_overrun_behavior = 3
-clip_text = true
 
 [node name="PlaymatLoadDialog" type="FileDialog" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat"]
 unique_name_in_owner = true
@@ -1026,8 +1020,6 @@ size_flags_horizontal = 3
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
 text = "COSMETICS_PM_DEFAULT"
-text_overrun_behavior = 3
-clip_text = true
 
 [node name="DieHBox" type="HBoxContainer" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox"]
 layout_mode = 2
@@ -1039,8 +1031,6 @@ size_flags_horizontal = 3
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 30
 text = "COSMETICS_D"
-text_overrun_behavior = 3
-clip_text = true
 
 [node name="DiceLoadDialog" type="FileDialog" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice"]
 unique_name_in_owner = true
@@ -1062,8 +1052,6 @@ size_flags_horizontal = 3
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
 text = "COSMETICS_D_DEFAULT"
-text_overrun_behavior = 3
-clip_text = true
 
 [node name="Exit" type="Button" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox"]
 layout_mode = 2
