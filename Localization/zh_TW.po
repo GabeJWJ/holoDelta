@@ -2,20 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: holodelta\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-08-23 14:11-0400\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2025-09-23 14:11-0400\n"
+"Last-Translator: Diego TASI\n"
 "Language-Team: Chinese (Traditional)\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: holodelta\n"
-"X-Crowdin-Project-ID: 724315\n"
-"X-Crowdin-Language: zh-TW\n"
-"X-Crowdin-File: template.pot\n"
-"X-Crowdin-File-ID: 6\n"
-"X-Generator: Poedit 3.5\n"
+
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -593,7 +588,7 @@ msgstr "聲援牌組"
 
 #: Scripts/side.gd
 msgid "ARCHIVE"
-msgstr "檔案區"
+msgstr "存檔區"
 
 #: Scripts/side.gd
 msgid "HOLOPOWER"
@@ -653,7 +648,7 @@ msgstr "跳過開花"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_BLOOM_FAST"
-msgstr "即時開花"
+msgstr "立即開花"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_UNREST"
@@ -709,7 +704,7 @@ msgstr "打出"
 
 #: Scripts/side.gd
 msgid "CARD_SUPPORT_ARCHIVE"
-msgstr "送入檔案區"
+msgstr "送入存檔區"
 
 #: Scripts/side.gd
 msgid "CARD_CHEER_LIFE_REVEAL"
@@ -725,7 +720,7 @@ msgstr "放回牌組底端"
 
 #: Scripts/side.gd
 msgid "CARD_HAND_ARCHIVE"
-msgstr "送入檔案區"
+msgstr "送入存檔區"
 
 #: Scripts/side.gd
 msgid "CARD_HAND_HOLOPOWER"
@@ -737,7 +732,7 @@ msgstr "展示"
 
 #: Scripts/side.gd
 msgid "CARD_STAGE_ARCHIVE"
-msgstr "送入檔案區"
+msgstr "送入存檔區"
 
 #: Scripts/side.gd
 msgid "CARD_STAGE_HAND"
@@ -769,7 +764,7 @@ msgstr "放回牌組底端"
 
 #: Scripts/side.gd
 msgid "CARD_REVEALED_ARCHIVE"
-msgstr "送入檔案區"
+msgstr "送入存檔區"
 
 #: Scripts/side.gd
 msgid "CARD_REVEALED_HOLOPOWER"
@@ -789,11 +784,11 @@ msgstr "抽X張"
 
 #: Scripts/side.gd
 msgid "DECK_ARCHIVE"
-msgstr "從牌組送入檔案區"
+msgstr "從牌組送入存檔區"
 
 #: Scripts/side.gd
 msgid "DECK_ARCHIVEX"
-msgstr "從牌組送入檔案區X張"
+msgstr "從牌組送入存檔區X張"
 
 #: Scripts/side.gd
 msgid "DECK_HOLOPOWER"
@@ -853,15 +848,15 @@ msgstr "搜尋"
 
 #: Scripts/side.gd
 msgid "ARCHIVE_HAND_ALL"
-msgstr "將手牌全數送入檔案區"
+msgstr "將手牌全數送入存檔區"
 
 #: Scripts/side.gd
 msgid "HOLOPOWER_ARCHIVE"
-msgstr "送入檔案區"
+msgstr "送入存檔區"
 
 #: Scripts/side.gd
 msgid "HOLOPOWER_ARCHIVEX"
-msgstr "送入檔案區X張"
+msgstr "送入存檔區X張"
 
 #: Scripts/side.gd
 msgid "HOLOPOWER_REVEAL"
@@ -897,11 +892,11 @@ msgstr "開花"
 
 #: Scripts/side.gd
 msgid "LIST_DECK_HOLOMEM_BLOOM_FAST"
-msgstr "即時開花"
+msgstr "立即開花"
 
 #: Scripts/side.gd
 msgid "LIST_ARCHIVE_HOLOMEM_BLOOM_FAST"
-msgstr "即時開花"
+msgstr "立即開花"
 
 #: Scripts/side.gd
 msgid "LIST_CHEERDECK_CHEER_ATTACH"
@@ -945,7 +940,7 @@ msgstr "放回聲援牌組底端"
 
 #: Scripts/side.gd
 msgid "LIST_CARD_ARCHIVE"
-msgstr "送入檔案區"
+msgstr "送入存檔區"
 
 #: Scripts/side.gd
 msgid "LIST_CARD_HOLOPOWER"
@@ -969,7 +964,7 @@ msgstr "移除 X 點HP"
 
 #: Scripts/side.gd
 msgid "PROMPT_OSHICOST"
-msgstr "將 X 張卡送入檔案區"
+msgstr "將 X 張卡送入存檔區"
 
 #: Scripts/side.gd
 msgid "PROMPT_DRAW"
@@ -977,7 +972,7 @@ msgstr "抽 X 張卡"
 
 #: Scripts/side.gd
 msgid "PROMPT_DECK_ARCHIVE"
-msgstr "從牌組送入檔案區 X 張卡"
+msgstr "從牌組送入存檔區 X 張卡"
 
 #: Scripts/side.gd
 msgid "PROMPT_LOOKATX"
@@ -985,7 +980,7 @@ msgstr "檢視 X 張："
 
 #: Scripts/side.gd
 msgid "PROMPT_HOLOPOWER_ARCHIVE"
-msgstr "從holo能量送入檔案區 X 張卡"
+msgstr "從holo能量送入存檔區 X 張卡"
 
 #: Scripts/side.gd
 msgid "PROMPT_ART_DAMAGE"
@@ -1077,7 +1072,7 @@ msgstr "{person} 將 ({fromZone}) 的 {fromName} 開花成 {toName} ({fromLevel}
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_STAGE_ARCHIVE"
-msgstr "{person} 將 ({fromZone}) 的 {fromName} 送入檔案區"
+msgstr "{person} 將 ({fromZone}) 的 {fromName} 送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_STAGE_HAND"
@@ -1113,7 +1108,7 @@ msgstr "{person} 將 {cardName} 放至牌組底端"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_ARCHIVE"
-msgstr "{person} 將 {cardName} 送入檔案區"
+msgstr "{person} 將 {cardName} 送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_HOLOPOWER"
@@ -1141,7 +1136,7 @@ msgstr "{person} 從手牌將一張卡放至牌組底端"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_ARCHIVE"
-msgstr "{person} 從手牌將 {cardName} 送入檔案區"
+msgstr "{person} 從手牌將 {cardName} 送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_HOLOPOWER"
@@ -1205,7 +1200,7 @@ msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 作為生命值"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_HAND"
-msgstr "{person} 從檔案區將 {cardName} 加入手牌"
+msgstr "{person} 從存檔區將 {cardName} 加入手牌"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_HAND"
@@ -1221,7 +1216,7 @@ msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 加入手牌"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_TOPDECK"
-msgstr "{person} 從檔案區將 {cardName} 放至牌組頂端"
+msgstr "{person} 從存檔區將 {cardName} 放至牌組頂端"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DECK_TOPDECK"
@@ -1241,7 +1236,7 @@ msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 放至牌組頂�
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_BOTTOMDECK"
-msgstr "{person} 從檔案區將 {cardName} 放至牌組底端"
+msgstr "{person} 從存檔區將 {cardName} 放至牌組底端"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DECK_BOTTOMDECK"
@@ -1261,7 +1256,7 @@ msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 放至牌組底�
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_TOPCHEERDECK"
-msgstr "{person} 從檔案區將 {cardName} 放至聲援牌組頂端"
+msgstr "{person} 從存檔區將 {cardName} 放至聲援牌組頂端"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CHEERDECK_TOPCHEERDECK"
@@ -1277,7 +1272,7 @@ msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 放至聲援牌�
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
-msgstr "{person} 從檔案區將 {cardName} 放至聲援牌組底端"
+msgstr "{person} 從存檔區將 {cardName} 放至聲援牌組底端"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
@@ -1293,19 +1288,19 @@ msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 放至聲援牌�
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_ARCHIVE"
-msgstr "{person} 從 {fromFuda} 將 {cardName} 送入檔案區"
+msgstr "{person} 從 {fromFuda} 將 {cardName} 送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HOLOPOWER_ARCHIVE"
-msgstr "{person} 從holo能量將 {cardName} 送入檔案區"
+msgstr "{person} 從holo能量將 {cardName} 送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_ARCHIVE"
-msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 送入檔案區"
+msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_HOLOPOWER"
-msgstr "{person} 從檔案區將 {cardName} 作為holo能量"
+msgstr "{person} 從存檔區將 {cardName} 作為holo能量"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_HOLOPOWER"
@@ -1361,15 +1356,15 @@ msgstr "{person} 從聲援牌組將 {attachName} 附加至 ({toZone}) 的 {toNam
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_HAND_ALL"
-msgstr "{person} 將全部手牌送入檔案區"
+msgstr "{person} 將全部手牌送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
-msgstr "{person} 從檔案區將 {cardName} 打出至後備"
+msgstr "{person} 從存檔區將 {cardName} 打出至後備"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_CHEER_ATTACH"
-msgstr "{person} 從檔案區將 {attachName} 附加至 ({toZone}) 的 {toName}"
+msgstr "{person} 從存檔區將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_CHEER_ATTACH"
@@ -1413,7 +1408,7 @@ msgstr "你將 ({fromZone}) 的 {fromName} 開花成 {toName} ({fromLevel} 到 {
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_STAGE_ARCHIVE"
-msgstr "你將 ({fromZone}) 的 {fromName} 送入檔案區"
+msgstr "你將 ({fromZone}) 的 {fromName} 送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_STAGE_HAND"
@@ -1449,7 +1444,7 @@ msgstr "你將 {cardName} 放至牌組底端"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_REVEALED_ARCHIVE"
-msgstr "你將 {cardName} 送入檔案區"
+msgstr "你將 {cardName} 送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
@@ -1477,7 +1472,7 @@ msgstr "你從手牌將一張卡放至牌組底端"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_HAND_ARCHIVE"
-msgstr "你從手牌將 {cardName} 送入檔案區"
+msgstr "你從手牌將 {cardName} 送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_HAND_HOLOPOWER"
@@ -1541,7 +1536,7 @@ msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 作為生命值"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_HAND"
-msgstr "你從檔案區將 {cardName} 加入手牌"
+msgstr "你從存檔區將 {cardName} 加入手牌"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_FUDA_HAND"
@@ -1557,7 +1552,7 @@ msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 加入手牌"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_TOPDECK"
-msgstr "你從檔案區將 {cardName} 放至牌組頂端"
+msgstr "你從存檔區將 {cardName} 放至牌組頂端"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_DECK_TOPDECK"
@@ -1577,7 +1572,7 @@ msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 放至牌組頂端"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_BOTTOMDECK"
-msgstr "你從檔案區將 {cardName} 放至牌組底端"
+msgstr "你從存檔區將 {cardName} 放至牌組底端"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_DECK_BOTTOMDECK"
@@ -1597,7 +1592,7 @@ msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 放至牌組底端"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_TOPCHEERDECK"
-msgstr "你從檔案區將 {cardName} 放至聲援牌組頂端"
+msgstr "你從存檔區將 {cardName} 放至聲援牌組頂端"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_CHEERDECK_TOPCHEERDECK"
@@ -1613,7 +1608,7 @@ msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 放至聲援牌組頂�
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
-msgstr "你從檔案區將 {cardName} 放至聲援牌組底端"
+msgstr "你從存檔區將 {cardName} 放至聲援牌組底端"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
@@ -1629,19 +1624,19 @@ msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 放至聲援牌組底�
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_FUDA_ARCHIVE"
-msgstr "你從 {fromFuda} 將 {cardName} 送入檔案區"
+msgstr "你從 {fromFuda} 將 {cardName} 送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_HOLOPOWER_ARCHIVE"
-msgstr "你從holo能量將 {cardName} 送入檔案區"
+msgstr "你從holo能量將 {cardName} 送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ATTACHED_ARCHIVE"
-msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 送入檔案區"
+msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_HOLOPOWER"
-msgstr "你從檔案區將 {cardName} 作為holo能量"
+msgstr "你從存檔區將 {cardName} 作為holo能量"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_FUDA_HOLOPOWER"
@@ -1697,15 +1692,15 @@ msgstr "你從聲援牌組將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_HAND_ALL"
-msgstr "你將全部手牌送入檔案區"
+msgstr "你將全部手牌送入存檔區"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY"
-msgstr "你從檔案區將 {cardName} 打出至後備"
+msgstr "你從存檔區將 {cardName} 打出至後備"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_CHEER_ATTACH"
-msgstr "你從檔案區將 {attachName} 附加至 ({toZone}) 的 {toName}"
+msgstr "你從存檔區將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ATTACHED_CHEER_ATTACH"

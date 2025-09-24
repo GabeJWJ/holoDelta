@@ -1,3 +1,9 @@
 {
-  "language": "en"
+  "language": "en",
+  "window_size": {
+    "width": 1000,
+    "height": 700
+  },
+  "auto_detect_ip": true,
+  "default_port": 8000
 }

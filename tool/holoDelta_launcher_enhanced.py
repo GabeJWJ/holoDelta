@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-holoDelta 增強版視覺化啟動器
-參考原app設計風格，包含環境檢測和自動安裝功能
+HoloDelta Enhanced Visual Launcher
+Reference original app design style with environment detection and auto-installation features
 """
 
 import tkinter as tk
@@ -21,24 +21,104 @@ import shutil
 from pathlib import Path
 import platform
 
+class GradientCapsuleButton(tk.Button):
+    """Custom gradient capsule button with 8px purple border and gradient background"""
+    def __init__(self, parent, **kwargs):
+        # Extract button_type before passing to parent
+        button_type = kwargs.pop('button_type', 'blue')
+        
+        # Set gradient-like background colors
+        gradient_colors = {
+            'blue': '#e3f2fd',      # Light blue
+            'purple': '#f3e5f5',    # Light purple
+            'pink': '#fce4ec',      # Light pink
+            'orange': '#fff3e0',    # Light orange
+            'red': '#ffebee',       # Light red
+            'green': '#e8f5e8'      # Light green
+        }
+        
+        # Set active background (darker version)
+        active_colors = {
+            'blue': '#bbdefb',
+            'purple': '#e1bee7',
+            'pink': '#f8bbd9',
+            'orange': '#ffcc02',
+            'red': '#ffcdd2',
+            'green': '#c8e6c9'
+        }
+        
+        # Set default gradient button style with 8px purple stroke border
+        default_style = {
+            'relief': tk.FLAT,  # Flat relief for stroke effect
+            'bd': 8,  # 8px thick stroke
+            'highlightthickness': 0,
+            'cursor': 'hand2',
+            'padx': 20,
+            'pady': 8,
+            'highlightbackground': '#625b93',  # Purple stroke color
+            'highlightcolor': '#625b93',
+            'bg': gradient_colors.get(button_type, '#e3f2fd'),
+            'fg': '#625b93',  # Purple text
+            'activebackground': active_colors.get(button_type, '#bbdefb'),
+            'activeforeground': '#625b93'
+        }
+        default_style.update(kwargs)
+        super().__init__(parent, **default_style)
+        
+        # Store original colors for hover effects
+        self.original_bg = default_style['bg']
+        self.original_fg = default_style['fg']
+        
+        # Bind hover effects
+        self.bind("<Enter>", self._on_enter)
+        self.bind("<Leave>", self._on_leave)
+        
+    def _on_enter(self, event):
+        """Hover effect - slightly darker gradient"""
+        current_bg = self.cget('bg')
+        if current_bg == '#e3f2fd':  # Light blue
+            self.config(bg='#bbdefb')
+        elif current_bg == '#f3e5f5':  # Light purple
+            self.config(bg='#e1bee7')
+        elif current_bg == '#fce4ec':  # Light pink
+            self.config(bg='#f8bbd9')
+        elif current_bg == '#fff3e0':  # Light orange
+            self.config(bg='#ffcc02')
+        elif current_bg == '#ffebee':  # Light red
+            self.config(bg='#ffcdd2')
+        elif current_bg == '#e8f5e8':  # Light green
+            self.config(bg='#c8e6c9')
+            
+    def _on_leave(self, event):
+        """Leave effect - restore original color"""
+        self.config(bg=self.original_bg, fg=self.original_fg)
+
+class CapsuleButton(GradientCapsuleButton):
+    """Backward compatibility - alias for GradientCapsuleButton"""
+    pass
+
 class HoloDeltaLauncherEnhanced:
     def __init__(self, root):
         self.root = root
-        self.root.title("ホロデルタ - HoloDelta Launcher")
-        self.root.geometry("800x600")
+        self.root.title("HoloDelta - Enhanced Launcher")
+        self.root.geometry("1000x700")
         self.root.resizable(True, True)
         
-        # 設定視窗圖示和樣式
+        # Set default language to English
+        self.current_language = "en"
+        self.load_language_data()
+        
+        # Setup window
         self.setup_window()
         
-        # 伺服器進程
+        # Server and client processes
         self.server_process = None
         self.client_process = None
         
-        # 專案根目錄
+        # Project root directory
         self.project_root = Path(__file__).parent.parent
         
-        # 環境檢測結果
+        # Environment check results
         self.env_status = {
             'python': False,
             'godot': False,
@@ -46,190 +126,359 @@ class HoloDeltaLauncherEnhanced:
             'project_files': False
         }
         
-        # 創建界面
-        self.create_widgets()
+        # Create main scrollable frame
+        self.create_scrollable_interface()
         
-        # 執行環境檢測
+        # Execute environment check
         self.check_environment()
         
-    def setup_window(self):
-        """設定視窗樣式"""
-        # 設定背景色 (現代化的深色主題)
-        self.root.configure(bg='#1a1a2e')
-        
-        # 設定視窗圖示和樣式
+    def load_language_data(self):
+        """Load language data from languages.json"""
         try:
-            # 嘗試設定視窗圖示
+            lang_file = Path(__file__).parent / "languages.json"
+            if lang_file.exists():
+                with open(lang_file, 'r', encoding='utf-8') as f:
+                    self.languages = json.load(f)
+            else:
+                # Fallback language data
+                self.languages = {
+                    "en": {"title": "HoloDelta", "subtitle": "Enhanced Launcher"},
+                    "ja": {"title": "ホロデルタ", "subtitle": "拡張ランチャー"},
+                    "zh": {"title": "ホロデルタ", "subtitle": "增强版启动器"}
+                }
+        except Exception as e:
+            print(f"Failed to load language data: {e}")
+            self.languages = {"en": {}}
+    
+    def get_text(self, key, **kwargs):
+        """Get localized text"""
+        try:
+            text = self.languages.get(self.current_language, {}).get(key, 
+                   self.languages.get("en", {}).get(key, key))
+            return text.format(**kwargs) if kwargs else text
+        except:
+            return key
+    
+    def setup_window(self):
+        """Setup window style"""
+        # Set background color with gradient effect matching Figma design
+        self.root.configure(bg='#d8d9eb')
+        
+        # Set window icon and style
+        try:
+            # Try to set window icon
             self.root.iconbitmap(default="icon.ico")
         except:
             pass
         
-        # 設定視窗最小尺寸
-        self.root.minsize(900, 700)
+        # Set minimum window size
+        self.root.minsize(1000, 700)
         
-        # 嘗試設定自定義字體
+        # Add window styling for modern look
+        self.root.configure(relief='flat', bd=0)
+        
+        # Setup custom fonts
         self.setup_custom_font()
         
     def setup_custom_font(self):
-        """設定自定義字體"""
+        """Setup custom fonts matching Figma design"""
         try:
-            # 檢查 NotoSansJP-Black.ttf 字體文件是否存在
-            font_path = Path(__file__).parent.parent / "CyberAssets" / "Main Menu Assets" / "NotoSansJP-Black.ttf"
+            # Check if NotoSans-Black.ttf font file exists (matching Figma design)
+            font_path = Path(__file__).parent / "NotoSans-Black.ttf"
             if font_path.exists():
-                # 嘗試載入 NotoSansJP 字體
                 try:
-                    # 在 Windows 上，我們需要先安裝字體或使用系統字體名稱
-                    # 這裡我們使用 Noto Sans JP 作為字體家族名稱
-                    self.custom_font = font.Font(family="Noto Sans JP", size=12, weight="bold")
-                    self.title_font = font.Font(family="Noto Sans JP", size=24, weight="bold")
-                    self.subtitle_font = font.Font(family="Noto Sans JP", size=11)
-                    self.log_font = font.Font(family="Noto Sans JP", size=10)
-                    print("成功載入 NotoSansJP-Black 字體")
+                    # Use Noto Sans as font family name (matching Figma)
+                    self.custom_font = font.Font(family="Noto Sans", size=12, weight="bold")
+                    self.title_font = font.Font(family="Noto Sans", size=32, weight="bold")  # Larger title like Figma
+                    self.subtitle_font = font.Font(family="Noto Sans", size=11)
+                    self.log_font = font.Font(family="Noto Sans", size=10)
+                    print("Successfully loaded NotoSans-Black font")
                 except:
-                    # 如果載入失敗，使用備用字體
+                    # Fallback fonts
                     self.custom_font = font.Font(family="Microsoft YaHei UI", size=12, weight="bold")
-                    self.title_font = font.Font(family="Microsoft YaHei UI", size=24, weight="bold")
+                    self.title_font = font.Font(family="Microsoft YaHei UI", size=32, weight="bold")
                     self.subtitle_font = font.Font(family="Microsoft YaHei UI", size=11)
                     self.log_font = font.Font(family="Consolas", size=10)
-                    print("使用備用字體 Microsoft YaHei UI")
+                    print("Using fallback font Microsoft YaHei UI")
             else:
-                # 使用系統預設字體
+                # Use system default fonts
                 self.custom_font = font.Font(family="Microsoft YaHei UI", size=12, weight="bold")
-                self.title_font = font.Font(family="Microsoft YaHei UI", size=24, weight="bold")
+                self.title_font = font.Font(family="Microsoft YaHei UI", size=32, weight="bold")
                 self.subtitle_font = font.Font(family="Microsoft YaHei UI", size=11)
                 self.log_font = font.Font(family="Consolas", size=10)
-                print("使用系統預設字體")
+                print("Using system default fonts")
         except Exception as e:
-            print(f"字體設定失敗: {e}")
-            # 最終備用字體
+            print(f"Font setup failed: {e}")
+            # Final fallback fonts
             self.custom_font = font.Font(family="Arial", size=12, weight="bold")
-            self.title_font = font.Font(family="Arial", size=24, weight="bold")
+            self.title_font = font.Font(family="Arial", size=32, weight="bold")
             self.subtitle_font = font.Font(family="Arial", size=11)
             self.log_font = font.Font(family="Arial", size=10)
             
+    def create_scrollable_interface(self):
+        """Create scrollable interface"""
+        # Create main container with scrollbar
+        main_container = tk.Frame(self.root, bg='#d8d9eb')
+        main_container.pack(fill=tk.BOTH, expand=True)
+        
+        # Create canvas and scrollbar
+        self.canvas = tk.Canvas(main_container, bg='#d8d9eb', highlightthickness=0)
+        self.scrollbar = ttk.Scrollbar(main_container, orient="vertical", command=self.canvas.yview)
+        self.scrollable_frame = tk.Frame(self.canvas, bg='#d8d9eb')
+        
+        self.scrollable_frame.bind(
+            "<Configure>",
+            lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all"))
+        )
+        
+        self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
+        
+        # Pack canvas and scrollbar
+        self.canvas.pack(side="left", fill="both", expand=True)
+        self.scrollbar.pack(side="right", fill="y")
+        
+        # Bind mousewheel to canvas
+        self.bind_mousewheel()
+        
+        # Create language selector
+        self.create_language_selector()
+        
+        # Create interface components
+        self.create_widgets()
+        
+    def bind_mousewheel(self):
+        """Bind mousewheel events for scrolling"""
+        def _on_mousewheel(event):
+            self.canvas.yview_scroll(int(-1*(event.delta/120)), "units")
+        
+        def _bind_to_mousewheel(event):
+            self.canvas.bind_all("<MouseWheel>", _on_mousewheel)
+        
+        def _unbind_from_mousewheel(event):
+            self.canvas.unbind_all("<MouseWheel>")
+        
+        self.canvas.bind('<Enter>', _bind_to_mousewheel)
+        self.canvas.bind('<Leave>', _unbind_from_mousewheel)
+        
+    def create_language_selector(self):
+        """Create language selection dropdown"""
+        lang_frame = tk.Frame(self.scrollable_frame, bg='#d8d9eb')
+        lang_frame.pack(fill=tk.X, padx=25, pady=(25, 10))
+        
+        tk.Label(
+            lang_frame,
+            text="🌐 Language:",
+            font=self.custom_font,
+            fg='#ff1c99',
+            bg='#d8d9eb'
+        ).pack(side=tk.LEFT, padx=(0, 10))
+        
+        self.language_var = tk.StringVar(value=self.current_language)
+        self.language_combo = ttk.Combobox(
+            lang_frame,
+            textvariable=self.language_var,
+            values=["en", "ja", "zh"],
+            state="readonly",
+            width=10,
+            style="Capsule.TCombobox"
+        )
+        self.language_combo.pack(side=tk.LEFT)
+        self.language_combo.bind("<<ComboboxSelected>>", self.change_language)
+        
+        # Style the combobox to match Figma design
+        style = ttk.Style()
+        style.configure("Capsule.TCombobox", 
+                       fieldbackground='white',
+                       background='white',
+                       foreground='#625b93',
+                       borderwidth=0,
+                       relief='flat')
+        
+    def change_language(self, event=None):
+        """Change application language"""
+        new_lang = self.language_var.get()
+        if new_lang != self.current_language:
+            self.current_language = new_lang
+            self.refresh_interface()
+            
+    def refresh_interface(self):
+        """Refresh interface with new language"""
+        # Update window title
+        self.root.title(f"{self.get_text('title')} - {self.get_text('subtitle')}")
+        
+        # Clear and recreate the scrollable interface
+        for widget in self.scrollable_frame.winfo_children():
+            widget.destroy()
+            
+        # Recreate interface components
+        self.create_language_selector()
+        self.create_widgets()
+        
+    def update_text_elements(self):
+        """Update all text elements with current language"""
+        # Update title
+        if hasattr(self, 'title_label'):
+            self.title_label.config(text=self.get_text('title'))
+            
+        # Update environment section
+        if hasattr(self, 'env_frame'):
+            self.env_frame.config(text=f"🔧 {self.get_text('environment_check')}")
+            
+        # Update server section
+        if hasattr(self, 'server_frame'):
+            self.server_frame.config(text=f"🌐 {self.get_text('server_settings')}")
+            
+        # Update status section
+        if hasattr(self, 'status_frame'):
+            self.status_frame.config(text=f"📊 {self.get_text('running_status')}")
+            
+        # Update environment check items
+        self.update_environment_items()
+        
+        # Update server settings items
+        self.update_server_settings_items()
+            
+        # Update buttons
+        self.update_button_texts()
+        
+    def update_environment_items(self):
+        """Update environment check items with current language"""
+        if hasattr(self, 'env_items'):
+            for key, item_data in self.env_items.items():
+                # Update install button text
+                if 'install_btn' in item_data:
+                    install_btn = item_data['install_btn']
+                    if install_btn.cget('state') == 'disabled':
+                        install_btn.config(text=f"✅ {self.get_text('installed')}")
+                    else:
+                        install_btn.config(text=f"🔧 {self.get_text('install_repair')}")
+    
+    def update_server_settings_items(self):
+        """Update server settings items with current language"""
+        # This method will be called to update server settings labels and buttons
+        # The actual text updates will be handled by recreating the interface
+        pass
+    
+    def update_button_texts(self):
+        """Update button texts with current language"""
+        if hasattr(self, 'start_server_btn'):
+            self.start_server_btn.config(text=f"🚀 {self.get_text('start_server')}")
+        if hasattr(self, 'start_client_btn'):
+            self.start_client_btn.config(text=f"🎮 {self.get_text('start_client')}")
+        if hasattr(self, 'stop_server_btn'):
+            self.stop_server_btn.config(text=f"⏹️ {self.get_text('stop_server')}")
+        if hasattr(self, 'stop_client_btn'):
+            self.stop_client_btn.config(text=f"⏹️ {self.get_text('stop_client')}")
+            
     def create_widgets(self):
-        """創建界面元件"""
-        # 主容器 - 使用現代化的深色主題
-        main_container = tk.Frame(self.root, bg='#1a1a2e')
-        main_container.pack(fill=tk.BOTH, expand=True, padx=25, pady=25)
+        """Create interface components"""
+        # Title section
+        self.create_title_section()
         
-        # 標題區域
-        self.create_title_section(main_container)
+        # Environment status section
+        self.create_environment_section()
         
-        # 環境狀態區域
-        self.create_environment_section(main_container)
+        # Server settings section
+        self.create_server_section()
         
-        # 伺服器設定區域
-        self.create_server_section(main_container)
+        # Control buttons section
+        self.create_control_section()
         
-        # 控制按鈕區域
-        self.create_control_section(main_container)
+        # Status display section
+        self.create_status_section()
         
-        # 狀態顯示區域
-        self.create_status_section(main_container)
+        # Footer section
+        self.create_footer_section()
         
-        # 底部資訊
-        self.create_footer_section(main_container)
+    def create_title_section(self):
+        """Create title section"""
+        title_frame = tk.Frame(self.scrollable_frame, bg='#d8d9eb')
+        title_frame.pack(fill=tk.X, pady=(0, 30), padx=25)
         
-    def create_title_section(self, parent):
-        """創建標題區域"""
-        title_frame = tk.Frame(parent, bg='#1a1a2e')
-        title_frame.pack(fill=tk.X, pady=(0, 30))
-        
-        # 主標題 - 使用漸變效果
-        title_label = tk.Label(
+        # Main title with Figma design colors
+        self.title_label = tk.Label(
             title_frame, 
-            text="ホロデルタ", 
+            text=self.get_text('title'), 
             font=self.title_font,
-            fg='#ff6b9d',  # 粉紅色
-            bg='#1a1a2e'
+            fg='#625b93',  # Purple color from Figma
+            bg='#d8d9eb'
         )
-        title_label.pack()
+        self.title_label.pack()
         
-        # 副標題
-        subtitle_label = tk.Label(
-            title_frame,
-            text="An unofficial Hololive OCG simulator - Enhanced Launcher",
-            font=self.subtitle_font,
-            fg='#a8a8a8',  # 淺灰色
-            bg='#1a1a2e'
-        )
-        subtitle_label.pack()
-        
-        # 分隔線
-        separator = tk.Frame(title_frame, height=2, bg='#ff6b9d')
+        # Separator line with updated color
+        separator = tk.Frame(title_frame, height=2, bg='#625b93')
         separator.pack(fill=tk.X, pady=(10, 0))
         
-    def create_environment_section(self, parent):
-        """創建環境檢測區域"""
-        env_frame = tk.LabelFrame(
-            parent, 
-            text="🔧 環境檢測", 
+    def create_environment_section(self):
+        """Create environment check section"""
+        self.env_frame = tk.LabelFrame(
+            self.scrollable_frame, 
+            text=f"🔧 {self.get_text('environment_check')}", 
             font=self.custom_font,
-            fg='#ff6b9d',
-            bg='#16213e',
+            fg='#625b93',
+            bg='#ffffff',
             relief=tk.FLAT,
             bd=0,
-            highlightbackground='#ff6b9d',
+            highlightbackground='#625b93',
             highlightthickness=1
         )
-        env_frame.pack(fill=tk.X, pady=(0, 20))
+        # Add semi-transparent effect by using a lighter background
+        # Note: True transparency is limited in tkinter, using closest approximation
+        self.env_frame.configure(bg='#f0f2f5')
+        self.env_frame.pack(fill=tk.X, pady=(0, 20), padx=25)
         
-        # 環境檢測項目
+        # Environment check items
         self.env_items = {}
         env_items = [
-            ('python', 'Python 3.7+', '檢查Python環境'),
-            ('godot', 'Godot 4.5+', '檢查Godot引擎'),
-            ('server_deps', '伺服器依賴', '檢查Python套件'),
-            ('project_files', '專案文件', '檢查holoDelta專案')
+            ('python', self.get_text('python_check'), self.get_text('python_desc')),
+            ('godot', self.get_text('godot_check'), self.get_text('godot_desc')),
+            ('server_deps', self.get_text('server_deps_check'), self.get_text('server_deps_desc')),
+            ('project_files', self.get_text('project_files_check'), self.get_text('project_files_desc'))
         ]
         
         for i, (key, name, desc) in enumerate(env_items):
-            item_frame = tk.Frame(env_frame, bg='#16213e')
+            item_frame = tk.Frame(self.env_frame, bg='#f0f2f5')
             item_frame.pack(fill=tk.X, padx=15, pady=8)
             
-            # 狀態指示器 - 使用更現代的圖標
+            # Status indicator with modern icons
             status_label = tk.Label(
                 item_frame, 
                 text="●", 
-                fg='#ff6b6b',
-                bg='#16213e',
+                fg='#e74c3c',
+                bg='#f0f2f5',
                 font=('Arial', 14)
             )
             status_label.pack(side=tk.LEFT, padx=(0, 15))
             
-            # 項目名稱
+            # Item name
             name_label = tk.Label(
                 item_frame,
                 text=name,
                 font=self.custom_font,
-                fg='#ffffff',
-                bg='#16213e'
+                fg='#625b93',
+                bg='#f0f2f5'
             )
             name_label.pack(side=tk.LEFT, padx=(0, 15))
             
-            # 描述
+            # Description
             desc_label = tk.Label(
                 item_frame,
                 text=desc,
                 font=self.subtitle_font,
-                fg='#a8a8a8',
-                bg='#16213e'
+                fg='#625b93',
+                bg='#f0f2f5'
             )
             desc_label.pack(side=tk.LEFT)
             
-            # 安裝按鈕 - 現代化設計
-            install_btn = tk.Button(
+            # Install button with gradient capsule design
+            install_btn = GradientCapsuleButton(
                 item_frame,
-                text="🔧 安裝/修復",
+                text=f"🔧 {self.get_text('install_repair')}",
                 command=lambda k=key: self.install_dependency(k),
-                bg='#ff6b9d',
-                fg='white',
-                font=self.subtitle_font,
-                relief=tk.FLAT,
-                padx=15,
-                pady=5,
-                cursor='hand2'
+                button_type='blue',
+                fg='#625b93',
+                font=self.subtitle_font
             )
             install_btn.pack(side=tk.RIGHT)
             
@@ -238,31 +487,31 @@ class HoloDeltaLauncherEnhanced:
                 'install_btn': install_btn
             }
             
-    def create_server_section(self, parent):
-        """創建伺服器設定區域"""
-        server_frame = tk.LabelFrame(
-            parent,
-            text="🌐 伺服器設定",
+    def create_server_section(self):
+        """Create server settings section"""
+        self.server_frame = tk.LabelFrame(
+            self.scrollable_frame,
+            text=f"🌐 {self.get_text('server_settings')}",
             font=self.custom_font,
-            fg='#ff6b9d',
-            bg='#16213e',
+            fg='#625b93',
+            bg='#f0f2f5',
             relief=tk.FLAT,
             bd=0,
-            highlightbackground='#ff6b9d',
+            highlightbackground='#625b93',
             highlightthickness=1
         )
-        server_frame.pack(fill=tk.X, pady=(0, 20))
+        self.server_frame.pack(fill=tk.X, pady=(0, 20), padx=25)
         
-        # IP地址設定
-        ip_frame = tk.Frame(server_frame, bg='#16213e')
+        # IP address setting
+        ip_frame = tk.Frame(self.server_frame, bg='#f0f2f5')
         ip_frame.pack(fill=tk.X, padx=15, pady=10)
         
         tk.Label(
             ip_frame,
-            text="🌍 局域網IP地址:",
+            text=f"🌍 {self.get_text('lan_ip')}",
             font=self.custom_font,
-            fg='#ffffff',
-            bg='#16213e'
+            fg='#625b93',
+            bg='#f0f2f5'
         ).pack(side=tk.LEFT, padx=(0, 15))
         
         self.ip_var = tk.StringVar()
@@ -273,37 +522,33 @@ class HoloDeltaLauncherEnhanced:
             width=20,
             relief=tk.FLAT,
             bd=2,
-            bg='#0f3460',
-            fg='#ffffff',
-            insertbackground='#ffffff'
+            bg='#ffffff',
+            fg='#625b93',
+            insertbackground='#625b93'
         )
         self.ip_entry.pack(side=tk.LEFT, padx=(0, 15))
         
-        # 自動檢測按鈕
-        auto_detect_btn = tk.Button(
+        # Auto detect button with gradient capsule design
+        auto_detect_btn = GradientCapsuleButton(
             ip_frame,
-            text="🔍 自動檢測",
+            text=f"🔍 {self.get_text('auto_detect')}",
             command=self.auto_detect_ip,
-            bg='#4A90E2',
-            fg='white',
-            font=self.subtitle_font,
-            relief=tk.FLAT,
-            padx=15,
-            pady=5,
-            cursor='hand2'
+            button_type='pink',
+            fg='#625b93',
+            font=self.subtitle_font
         )
         auto_detect_btn.pack(side=tk.LEFT)
         
-        # 端口設定
-        port_frame = tk.Frame(server_frame, bg='#16213e')
+        # Port setting
+        port_frame = tk.Frame(self.server_frame, bg='#f0f2f5')
         port_frame.pack(fill=tk.X, padx=15, pady=(0, 15))
         
         tk.Label(
             port_frame,
-            text="🔌 端口:",
+            text=f"🔌 {self.get_text('port')}",
             font=self.custom_font,
-            fg='#ffffff',
-            bg='#16213e'
+            fg='#625b93',
+            bg='#f0f2f5'
         ).pack(side=tk.LEFT, padx=(0, 15))
         
         self.port_var = tk.StringVar(value="8000")
@@ -314,195 +559,185 @@ class HoloDeltaLauncherEnhanced:
             width=10,
             relief=tk.FLAT,
             bd=2,
-            bg='#0f3460',
-            fg='#ffffff',
-            insertbackground='#ffffff'
+            bg='#ffffff',
+            fg='#625b93',
+            insertbackground='#625b93'
         )
         port_entry.pack(side=tk.LEFT, padx=(0, 15))
         
-        # 客戶端配置按鈕
-        update_config_btn = tk.Button(
+        # Client config buttons with gradient capsule design
+        update_config_btn = GradientCapsuleButton(
             port_frame,
-            text="⚙️ 更新客戶端配置",
+            text=f"⚙️ {self.get_text('update_client_config')}",
             command=self.update_client_config_manual,
-            bg='#FFA500',
-            fg='white',
-            font=self.subtitle_font,
-            relief=tk.FLAT,
-            padx=15,
-            pady=5,
-            cursor='hand2'
+            button_type='purple',
+            fg='#625b93',
+            font=self.subtitle_font
         )
         update_config_btn.pack(side=tk.LEFT, padx=(0, 10))
         
-        restore_config_btn = tk.Button(
+        restore_config_btn = GradientCapsuleButton(
             port_frame,
-            text="🔄 恢復原始配置",
+            text=f"🔄 {self.get_text('restore_config')}",
             command=self.restore_client_config_manual,
-            bg='#6C757D',
-            fg='white',
-            font=self.subtitle_font,
-            relief=tk.FLAT,
-            padx=15,
-            pady=5,
-            cursor='hand2'
+            button_type='orange',
+            fg='#625b93',
+            font=self.subtitle_font
         )
         restore_config_btn.pack(side=tk.LEFT)
         
-    def create_control_section(self, parent):
-        """創建控制按鈕區域"""
-        control_frame = tk.Frame(parent, bg='#1a1a2e')
-        control_frame.pack(fill=tk.X, pady=(0, 20))
+    def create_control_section(self):
+        """Create control buttons section"""
+        control_frame = tk.Frame(self.scrollable_frame, bg='#d8d9eb')
+        control_frame.pack(fill=tk.X, pady=(0, 20), padx=25)
         
-        # 主要控制按鈕 - 現代化設計
+        # Main control buttons with capsule design
         button_style = {
             'font': self.custom_font,
-            'relief': tk.FLAT,
-            'padx': 25,
-            'pady': 12,
-            'width': 15,
-            'cursor': 'hand2'
+            'padx': 30,
+            'pady': 15,
+            'width': 15
         }
         
-        self.start_server_btn = tk.Button(
+        self.start_server_btn = GradientCapsuleButton(
             control_frame,
-            text="🚀 啟動伺服器",
+            text=f"🚀 {self.get_text('start_server')}",
             command=self.start_server,
-            bg='#7B68EE',
-            fg='white',
+            button_type='purple',
+            fg='#625b93',
             **button_style
         )
         self.start_server_btn.pack(side=tk.LEFT, padx=(0, 15))
         
-        self.start_client_btn = tk.Button(
+        self.start_client_btn = GradientCapsuleButton(
             control_frame,
-            text="🎮 啟動客戶端",
+            text=f"🎮 {self.get_text('start_client')}",
             command=self.start_client,
-            bg='#32CD32',
-            fg='white',
+            button_type='pink',
+            fg='#625b93',
             **button_style
         )
         self.start_client_btn.pack(side=tk.LEFT, padx=(0, 15))
         
-        self.stop_server_btn = tk.Button(
+        self.stop_server_btn = GradientCapsuleButton(
             control_frame,
-            text="⏹️ 停止伺服器",
+            text=f"⏹️ {self.get_text('stop_server')}",
             command=self.stop_server,
-            bg='#FF6B6B',
-            fg='white',
+            button_type='red',
+            fg='#625b93',
             state='disabled',
             **button_style
         )
         self.stop_server_btn.pack(side=tk.LEFT, padx=(0, 15))
         
-        self.stop_client_btn = tk.Button(
+        self.stop_client_btn = GradientCapsuleButton(
             control_frame,
-            text="⏹️ 停止客戶端",
+            text=f"⏹️ {self.get_text('stop_client')}",
             command=self.stop_client,
-            bg='#FF6B6B',
-            fg='white',
+            button_type='red',
+            fg='#625b93',
             state='disabled',
             **button_style
         )
         self.stop_client_btn.pack(side=tk.LEFT)
         
-    def create_status_section(self, parent):
-        """創建狀態顯示區域"""
-        status_frame = tk.LabelFrame(
-            parent,
-            text="📊 運行狀態",
+    def create_status_section(self):
+        """Create status display section"""
+        self.status_frame = tk.LabelFrame(
+            self.scrollable_frame,
+            text=f"📊 {self.get_text('running_status')}",
             font=self.custom_font,
-            fg='#ff6b9d',
-            bg='#16213e',
+            fg='#625b93',
+            bg='#f0f2f5',
             relief=tk.FLAT,
             bd=0,
-            highlightbackground='#ff6b9d',
+            highlightbackground='#625b93',
             highlightthickness=1
         )
-        status_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 20))
+        self.status_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 20), padx=25)
         
-        # 狀態文字區域 - 現代化終端風格
+        # Status text area with modern terminal style
         self.status_text = scrolledtext.ScrolledText(
-            status_frame,
+            self.status_frame,
             height=12,
             font=self.log_font,
-            bg='#0f1419',
-            fg='#00ff88',
+            bg='#ffffff',
+            fg='#625b93',
             relief=tk.FLAT,
             bd=0,
-            insertbackground='#00ff88',
-            selectbackground='#ff6b9d',
+            insertbackground='#625b93',
+            selectbackground='#ff1c99',
             selectforeground='white'
         )
         self.status_text.pack(fill=tk.BOTH, expand=True, padx=15, pady=15)
         
-    def create_footer_section(self, parent):
-        """創建底部資訊區域"""
-        footer_frame = tk.Frame(parent, bg='#1a1a2e')
-        footer_frame.pack(fill=tk.X)
+    def create_footer_section(self):
+        """Create footer section"""
+        footer_frame = tk.Frame(self.scrollable_frame, bg='#d8d9eb')
+        footer_frame.pack(fill=tk.X, padx=25, pady=(0, 25))
         
-        # 版本資訊
+        # Version info
         version_label = tk.Label(
             footer_frame,
-            text="✨ HoloDelta Enhanced Launcher v2.0.0",
+            text=f"✨ {self.get_text('version')}",
             font=self.subtitle_font,
-            fg='#a8a8a8',
-            bg='#1a1a2e'
+            fg='#625b93',
+            bg='#d8d9eb'
         )
         version_label.pack(side=tk.RIGHT)
         
-        # 線上玩家數 (模擬)
+        # Online players count (simulated)
         players_label = tk.Label(
             footer_frame,
-            text="👥 0 players online",
+            text=f"👥 0 {self.get_text('players_online')}",
             font=self.subtitle_font,
-            fg='#a8a8a8',
-            bg='#1a1a2e'
+            fg='#625b93',
+            bg='#d8d9eb'
         )
         players_label.pack(side=tk.LEFT)
         
     def check_environment(self):
-        """檢查環境依賴"""
-        self.log_message("正在檢查環境依賴...")
+        """Check environment dependencies"""
+        self.log_message(self.get_text('checking_environment'))
         
-        # 檢查Python
+        # Check Python
         self.env_status['python'] = self.check_python()
         self.update_env_status('python', self.env_status['python'])
         
-        # 檢查Godot
+        # Check Godot
         self.env_status['godot'] = self.check_godot()
         self.update_env_status('godot', self.env_status['godot'])
         
-        # 檢查伺服器依賴
+        # Check server dependencies
         self.env_status['server_deps'] = self.check_server_dependencies()
         self.update_env_status('server_deps', self.env_status['server_deps'])
         
-        # 檢查專案文件
+        # Check project files
         self.env_status['project_files'] = self.check_project_files()
         self.update_env_status('project_files', self.env_status['project_files'])
         
-        # 自動檢測IP
+        # Auto detect IP
         self.auto_detect_ip()
         
-        # 顯示當前客戶端配置
+        # Show current client config
         self.show_current_client_config()
         
     def check_python(self):
-        """檢查Python環境"""
+        """Check Python environment"""
         try:
             version = sys.version_info
             if version.major >= 3 and version.minor >= 7:
-                self.log_message(f"Python {version.major}.{version.minor}.{version.micro} - 正常")
+                self.log_message(self.get_text('python_ok', version=f"{version.major}.{version.minor}.{version.micro}"))
                 return True
             else:
-                self.log_message(f"Python版本過舊: {version.major}.{version.minor}.{version.micro}", "ERROR")
+                self.log_message(self.get_text('python_old', version=f"{version.major}.{version.minor}.{version.micro}"), "ERROR")
                 return False
         except Exception as e:
-            self.log_message(f"Python檢查失敗: {e}", "ERROR")
+            self.log_message(self.get_text('python_check_failed', error=e), "ERROR")
             return False
             
     def check_godot(self):
-        """檢查Godot安裝"""
+        """Check Godot installation"""
         godot_paths = [
             "C:\\Godot\\Godot_v4.5-stable_win64.exe",
             "C:\\Godot\\Godot.exe",
@@ -514,76 +749,76 @@ class HoloDeltaLauncherEnhanced:
                 try:
                     result = subprocess.run([path, "--version"], capture_output=True, text=True, timeout=5)
                     if result.returncode == 0:
-                        self.log_message(f"找到Godot: {result.stdout.strip()}")
+                        self.log_message(self.get_text('godot_found', path=result.stdout.strip()))
                         return True
                 except:
                     continue
             elif os.path.exists(path):
-                self.log_message(f"找到Godot: {path}")
+                self.log_message(self.get_text('godot_found', path=path))
                 return True
                 
-        self.log_message("未找到Godot安裝", "ERROR")
+        self.log_message(self.get_text('godot_not_found'), "ERROR")
         return False
         
     def check_server_dependencies(self):
-        """檢查伺服器依賴"""
+        """Check server dependencies"""
         try:
             server_dir = self.project_root / "ServerStuff"
             if not server_dir.exists():
-                self.log_message("ServerStuff目錄不存在", "ERROR")
+                self.log_message("ServerStuff directory not found", "ERROR")
                 return False
                 
             requirements_file = server_dir / "requirements.txt"
             if not requirements_file.exists():
-                self.log_message("requirements.txt不存在", "ERROR")
+                self.log_message("requirements.txt not found", "ERROR")
                 return False
                 
-            # 檢查主要依賴
+            # Check main dependencies
             try:
                 import fastapi
                 import uvicorn
-                self.log_message("伺服器依賴檢查通過")
+                self.log_message(self.get_text('server_deps_ok'))
                 return True
             except ImportError as e:
-                self.log_message(f"缺少依賴: {e}", "ERROR")
+                self.log_message(self.get_text('server_deps_missing', error=e), "ERROR")
                 return False
                 
         except Exception as e:
-            self.log_message(f"伺服器依賴檢查失敗: {e}", "ERROR")
+            self.log_message(f"Server dependencies check failed: {e}", "ERROR")
             return False
             
     def check_project_files(self):
-        """檢查專案文件"""
+        """Check project files"""
         try:
             project_file = self.project_root / "project.godot"
             if not project_file.exists():
-                self.log_message("project.godot不存在", "ERROR")
+                self.log_message(self.get_text('project_godot_missing'), "ERROR")
                 return False
                 
             scripts_dir = self.project_root / "Scripts"
             if not scripts_dir.exists():
-                self.log_message("Scripts目錄不存在", "ERROR")
+                self.log_message(self.get_text('scripts_missing'), "ERROR")
                 return False
                 
-            self.log_message("專案文件檢查通過")
+            self.log_message(self.get_text('project_files_ok'))
             return True
             
         except Exception as e:
-            self.log_message(f"專案文件檢查失敗: {e}", "ERROR")
+            self.log_message(f"Project files check failed: {e}", "ERROR")
             return False
             
     def update_env_status(self, key, status):
-        """更新環境狀態顯示"""
+        """Update environment status display"""
         if key in self.env_items:
             if status:
-                self.env_items[key]['status'].config(fg='#00ff88', text='✅')
-                self.env_items[key]['install_btn'].config(state='disabled', text='✅ 已安裝')
+                self.env_items[key]['status'].config(fg='#27ae60', text='✅')
+                self.env_items[key]['install_btn'].config(state='disabled', text=f"✅ {self.get_text('installed')}")
             else:
-                self.env_items[key]['status'].config(fg='#ff6b6b', text='❌')
-                self.env_items[key]['install_btn'].config(state='normal', text='🔧 安裝/修復')
+                self.env_items[key]['status'].config(fg='#e74c3c', text='❌')
+                self.env_items[key]['install_btn'].config(state='normal', text=f"🔧 {self.get_text('install_repair')}")
                 
     def install_dependency(self, dependency):
-        """安裝依賴"""
+        """Install dependency"""
         if dependency == 'python':
             self.install_python()
         elif dependency == 'godot':
@@ -594,28 +829,28 @@ class HoloDeltaLauncherEnhanced:
             self.repair_project_files()
             
     def install_python(self):
-        """安裝Python"""
+        """Install Python"""
         response = messagebox.askyesno(
-            "安裝Python",
-            "需要安裝Python 3.7或更高版本。\n是否要打開下載頁面？"
+            self.get_text('install_python_title'),
+            self.get_text('install_python_msg')
         )
         if response:
             webbrowser.open("https://www.python.org/downloads/")
             
     def install_godot(self):
-        """安裝Godot"""
+        """Install Godot"""
         response = messagebox.askyesno(
-            "安裝Godot",
-            "需要安裝Godot 4.5或更高版本。\n是否要打開下載頁面？"
+            self.get_text('install_godot_title'),
+            self.get_text('install_godot_msg')
         )
         if response:
             webbrowser.open("https://godotengine.org/download/")
             
     def install_server_dependencies(self):
-        """安裝伺服器依賴"""
+        """Install server dependencies"""
         def install_thread():
             try:
-                self.log_message("正在安裝伺服器依賴...")
+                self.log_message(self.get_text('installing_deps'))
                 server_dir = self.project_root / "ServerStuff"
                 requirements_file = server_dir / "requirements.txt"
                 
@@ -624,57 +859,57 @@ class HoloDeltaLauncherEnhanced:
                     result = subprocess.run(cmd, capture_output=True, text=True, cwd=server_dir)
                     
                     if result.returncode == 0:
-                        self.log_message("伺服器依賴安裝成功")
+                        self.log_message(self.get_text('deps_install_success'))
                         self.env_status['server_deps'] = True
                         self.update_env_status('server_deps', True)
                     else:
-                        self.log_message(f"安裝失敗: {result.stderr}", "ERROR")
+                        self.log_message(self.get_text('deps_install_failed', error=result.stderr), "ERROR")
                 else:
-                    self.log_message("requirements.txt不存在", "ERROR")
+                    self.log_message(self.get_text('requirements_missing'), "ERROR")
                     
             except Exception as e:
-                self.log_message(f"安裝過程出錯: {e}", "ERROR")
+                self.log_message(self.get_text('install_error', error=e), "ERROR")
                 
         threading.Thread(target=install_thread, daemon=True).start()
         
     def repair_project_files(self):
-        """修復專案文件"""
-        self.log_message("檢查專案文件完整性...")
-        # 這裡可以添加專案文件修復邏輯
-        messagebox.showinfo("修復專案文件", "專案文件檢查完成")
+        """Repair project files"""
+        self.log_message("Checking project file integrity...")
+        # Add project file repair logic here
+        messagebox.showinfo("Repair Project Files", "Project file check completed")
         
     def update_client_config(self):
-        """更新客戶端配置以連接到正確的伺服器"""
+        """Update client config to connect to correct server"""
         try:
             ip = self.ip_var.get().strip()
             port = self.port_var.get().strip()
             
             if not ip or not port:
-                self.log_message("IP地址或端口未設定", "ERROR")
+                self.log_message(self.get_text('ip_not_set'), "ERROR")
                 return False
                 
-            # 檢查server.gd文件是否存在
+            # Check if server.gd file exists
             server_gd_path = self.project_root / "Scripts" / "server.gd"
             if not server_gd_path.exists():
-                self.log_message("找不到Scripts/server.gd文件", "ERROR")
+                self.log_message("Scripts/server.gd file not found", "ERROR")
                 return False
                 
-            # 備份原始文件
+            # Backup original file
             backup_path = server_gd_path.with_suffix('.gd.backup')
             if not backup_path.exists():
                 shutil.copy2(server_gd_path, backup_path)
-                self.log_message("已備份原始server.gd文件")
+                self.log_message("Backed up original server.gd file")
                 
-            # 讀取當前配置
+            # Read current config
             current_config = server_gd_path.read_text(encoding='utf-8')
             
-            # 檢查是否已經配置了正確的IP
+            # Check if already configured with correct IP
             websocket_url = f'"{ip}:{port}"'
             if f'const websocketURL = {websocket_url}' in current_config:
-                self.log_message(f"客戶端已配置為連接到 {ip}:{port}")
+                self.log_message(f"Client already configured to connect to {ip}:{port}")
                 return True
                 
-            # 更新配置
+            # Update config
             new_config = f'''extends Node
 
 
@@ -691,49 +926,49 @@ func _process(_delta: float) -> void:
 \tpass
 '''
             
-            # 寫入新配置
+            # Write new config
             server_gd_path.write_text(new_config, encoding='utf-8')
-            self.log_message(f"已更新客戶端配置: {ip}:{port}", "SUCCESS")
+            self.log_message(self.get_text('config_updated', ip=ip, port=port), "SUCCESS")
             return True
             
         except Exception as e:
-            self.log_message(f"更新客戶端配置失敗: {e}", "ERROR")
+            self.log_message(self.get_text('config_update_failed', error=e), "ERROR")
             return False
             
     def restore_client_config(self):
-        """恢復客戶端原始配置"""
+        """Restore client original config"""
         try:
             server_gd_path = self.project_root / "Scripts" / "server.gd"
             backup_path = server_gd_path.with_suffix('.gd.backup')
             
             if backup_path.exists():
                 shutil.copy2(backup_path, server_gd_path)
-                self.log_message("已恢復客戶端原始配置", "SUCCESS")
+                self.log_message(self.get_text('config_restored'), "SUCCESS")
                 return True
             else:
-                self.log_message("找不到備份文件", "WARNING")
+                self.log_message(self.get_text('backup_not_found'), "WARNING")
                 return False
                 
         except Exception as e:
-            self.log_message(f"恢復客戶端配置失敗: {e}", "ERROR")
+            self.log_message(self.get_text('config_restore_failed', error=e), "ERROR")
             return False
             
     def update_client_config_manual(self):
-        """手動更新客戶端配置"""
+        """Manually update client config"""
         if self.update_client_config():
-            messagebox.showinfo("成功", "客戶端配置已更新")
+            messagebox.showinfo(self.get_text('success'), self.get_text('client_config_updated'))
         else:
-            messagebox.showerror("錯誤", "客戶端配置更新失敗")
+            messagebox.showerror(self.get_text('error'), self.get_text('client_config_update_failed'))
             
     def restore_client_config_manual(self):
-        """手動恢復客戶端配置"""
+        """Manually restore client config"""
         if self.restore_client_config():
-            messagebox.showinfo("成功", "客戶端配置已恢復")
+            messagebox.showinfo(self.get_text('success'), self.get_text('client_config_restored'))
         else:
-            messagebox.showerror("錯誤", "客戶端配置恢復失敗")
+            messagebox.showerror(self.get_text('error'), self.get_text('client_config_restore_failed'))
             
     def get_current_client_config(self):
-        """獲取當前客戶端配置"""
+        """Get current client config"""
         try:
             server_gd_path = self.project_root / "Scripts" / "server.gd"
             if not server_gd_path.exists():
@@ -742,7 +977,7 @@ func _process(_delta: float) -> void:
             content = server_gd_path.read_text(encoding='utf-8')
             for line in content.split('\n'):
                 if 'const websocketURL' in line:
-                    # 提取IP和端口
+                    # Extract IP and port
                     import re
                     match = re.search(r'"([^"]+)"', line)
                     if match:
@@ -750,31 +985,31 @@ func _process(_delta: float) -> void:
             return None
             
         except Exception as e:
-            self.log_message(f"讀取客戶端配置失敗: {e}", "ERROR")
+            self.log_message(self.get_text('config_read_failed', error=e), "ERROR")
             return None
             
     def show_current_client_config(self):
-        """顯示當前客戶端配置"""
+        """Show current client config"""
         current_config = self.get_current_client_config()
         if current_config:
-            self.log_message(f"當前客戶端配置: {current_config}")
+            self.log_message(self.get_text('current_config', config=current_config))
         else:
-            self.log_message("無法讀取客戶端配置", "WARNING")
+            self.log_message(self.get_text('config_read_failed'), "WARNING")
         
     def log_message(self, message, level="INFO"):
-        """記錄訊息到狀態區域"""
+        """Log message to status area"""
         timestamp = time.strftime("%H:%M:%S")
         
-        # 根據級別設定顏色 - 現代化終端風格
+        # Set colors based on level - original multi-color configuration
         color_map = {
-            "INFO": "#00ff88",
-            "ERROR": "#ff6b6b",
-            "SUCCESS": "#00ff88",
-            "WARNING": "#ffa500",
-            "SERVER": "#4A90E2"
+            "INFO": "#3498db",
+            "ERROR": "#e74c3c",
+            "SUCCESS": "#27ae60",
+            "WARNING": "#f39c12",
+            "SERVER": "#9b59b6"
         }
         
-        # 添加圖標
+        # Add icons
         icon_map = {
             "INFO": "ℹ️",
             "ERROR": "❌",
@@ -788,7 +1023,7 @@ func _process(_delta: float) -> void:
         self.status_text.insert(tk.END, log_entry)
         self.status_text.see(tk.END)
         
-        # 設定文字顏色
+        # Set text color
         start_line = self.status_text.index(tk.END + "-2l")
         end_line = self.status_text.index(tk.END + "-1l")
         self.status_text.tag_add(level, start_line, end_line)
@@ -797,18 +1032,18 @@ func _process(_delta: float) -> void:
         self.root.update_idletasks()
         
     def auto_detect_ip(self):
-        """自動檢測本機IP地址"""
+        """Auto detect local IP address"""
         try:
             with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
                 s.connect(("8.8.8.8", 80))
                 local_ip = s.getsockname()[0]
                 self.ip_var.set(local_ip)
-                self.log_message(f"自動檢測到本機IP: {local_ip}")
+                self.log_message(self.get_text('auto_detected_ip', ip=local_ip))
         except Exception as e:
-            self.log_message(f"無法自動檢測IP地址: {e}", "ERROR")
+            self.log_message(self.get_text('ip_detection_failed', error=e), "ERROR")
             
     def validate_ip(self, ip):
-        """驗證IP地址格式"""
+        """Validate IP address format"""
         try:
             socket.inet_aton(ip)
             return True
@@ -816,24 +1051,24 @@ func _process(_delta: float) -> void:
             return False
             
     def start_server(self):
-        """啟動伺服器"""
+        """Start server"""
         if not self.env_status['server_deps']:
-            messagebox.showerror("錯誤", "請先安裝伺服器依賴")
+            messagebox.showerror(self.get_text('error'), self.get_text('install_server_deps_first'))
             return
             
         ip = self.ip_var.get().strip()
         port = self.port_var.get().strip()
         
         if not ip:
-            messagebox.showerror("錯誤", "請輸入IP地址")
+            messagebox.showerror(self.get_text('error'), self.get_text('ip_not_set'))
             return
             
         if not self.validate_ip(ip):
-            messagebox.showerror("錯誤", "IP地址格式不正確")
+            messagebox.showerror(self.get_text('error'), self.get_text('invalid_ip'))
             return
             
         if not port.isdigit():
-            messagebox.showerror("錯誤", "端口必須是數字")
+            messagebox.showerror(self.get_text('error'), self.get_text('port_not_number'))
             return
             
         server_thread = threading.Thread(target=self._start_server_thread, args=(ip, port))
@@ -841,9 +1076,9 @@ func _process(_delta: float) -> void:
         server_thread.start()
         
     def _start_server_thread(self, ip, port):
-        """在線程中啟動伺服器"""
+        """Start server in thread"""
         try:
-            self.log_message("正在啟動伺服器...")
+            self.log_message(self.get_text('starting_server'))
             
             if self.server_process:
                 self.server_process.terminate()
@@ -871,48 +1106,48 @@ func _process(_delta: float) -> void:
             self.root.after(0, lambda: self.start_server_btn.config(state='disabled'))
             self.root.after(0, lambda: self.stop_server_btn.config(state='normal'))
             
-            self.log_message(f"伺服器已啟動 - http://{ip}:{port}", "SUCCESS")
-            self.log_message(f"WebSocket地址 - ws://{ip}:{port}/ws", "SUCCESS")
+            self.log_message(self.get_text('server_started', ip=ip, port=port), "SUCCESS")
+            self.log_message(self.get_text('websocket_url', ip=ip, port=port), "SUCCESS")
             
             for line in iter(self.server_process.stdout.readline, ''):
                 if line:
                     self.root.after(0, lambda l=line: self.log_message(l.strip(), "SERVER"))
                     
         except Exception as e:
-            self.log_message(f"啟動伺服器失敗: {e}", "ERROR")
+            self.log_message(self.get_text('server_start_failed', error=e), "ERROR")
             self.root.after(0, lambda: self.start_server_btn.config(state='normal'))
             self.root.after(0, lambda: self.stop_server_btn.config(state='disabled'))
             
     def stop_server(self):
-        """停止伺服器"""
+        """Stop server"""
         if self.server_process:
             try:
                 self.server_process.terminate()
                 self.server_process.wait(timeout=5)
-                self.log_message("伺服器已停止", "SUCCESS")
+                self.log_message(self.get_text('server_stopped'), "SUCCESS")
             except subprocess.TimeoutExpired:
                 self.server_process.kill()
-                self.log_message("強制停止伺服器", "WARNING")
+                self.log_message(self.get_text('force_stop_server'), "WARNING")
             except Exception as e:
-                self.log_message(f"停止伺服器時發生錯誤: {e}", "ERROR")
+                self.log_message(self.get_text('server_stop_error', error=e), "ERROR")
             finally:
                 self.server_process = None
                 self.start_server_btn.config(state='normal')
                 self.stop_server_btn.config(state='disabled')
                 
     def start_client(self):
-        """啟動客戶端"""
+        """Start client"""
         if not self.env_status['godot']:
-            messagebox.showerror("錯誤", "請先安裝Godot")
+            messagebox.showerror(self.get_text('error'), self.get_text('install_godot_first'))
             return
             
         if not self.env_status['project_files']:
-            messagebox.showerror("錯誤", "專案文件不完整")
+            messagebox.showerror(self.get_text('error'), self.get_text('project_files_incomplete'))
             return
             
-        # 更新客戶端配置以連接到正確的伺服器
+        # Update client config to connect to correct server
         if not self.update_client_config():
-            messagebox.showerror("錯誤", "無法更新客戶端配置")
+            messagebox.showerror(self.get_text('error'), self.get_text('update_config_failed'))
             return
             
         godot_paths = [
@@ -935,7 +1170,7 @@ func _process(_delta: float) -> void:
                 break
                 
         if not godot_exe:
-            messagebox.showerror("錯誤", "找不到Godot執行檔")
+            messagebox.showerror(self.get_text('error'), self.get_text('godot_not_found_error'))
             return
             
         client_thread = threading.Thread(target=self._start_client_thread, args=(godot_exe,))
@@ -943,9 +1178,9 @@ func _process(_delta: float) -> void:
         client_thread.start()
         
     def _start_client_thread(self, godot_exe):
-        """在線程中啟動客戶端"""
+        """Start client in thread"""
         try:
-            self.log_message("正在啟動客戶端...")
+            self.log_message(self.get_text('starting_client'))
             
             os.chdir(self.project_root)
             
@@ -956,32 +1191,32 @@ func _process(_delta: float) -> void:
             self.root.after(0, lambda: self.start_client_btn.config(state='disabled'))
             self.root.after(0, lambda: self.stop_client_btn.config(state='normal'))
             
-            self.log_message("客戶端已啟動", "SUCCESS")
+            self.log_message(self.get_text('client_started'), "SUCCESS")
             
         except Exception as e:
-            self.log_message(f"啟動客戶端失敗: {e}", "ERROR")
+            self.log_message(self.get_text('client_start_failed', error=e), "ERROR")
             self.root.after(0, lambda: self.start_client_btn.config(state='normal'))
             self.root.after(0, lambda: self.stop_client_btn.config(state='disabled'))
             
     def stop_client(self):
-        """停止客戶端"""
+        """Stop client"""
         if self.client_process:
             try:
                 self.client_process.terminate()
                 self.client_process.wait(timeout=5)
-                self.log_message("客戶端已停止", "SUCCESS")
+                self.log_message(self.get_text('client_stopped'), "SUCCESS")
             except subprocess.TimeoutExpired:
                 self.client_process.kill()
-                self.log_message("強制停止客戶端", "WARNING")
+                self.log_message(self.get_text('force_stop_client'), "WARNING")
             except Exception as e:
-                self.log_message(f"停止客戶端時發生錯誤: {e}", "ERROR")
+                self.log_message(self.get_text('client_stop_error', error=e), "ERROR")
             finally:
                 self.client_process = None
                 self.start_client_btn.config(state='normal')
                 self.stop_client_btn.config(state='disabled')
                 
     def on_closing(self):
-        """關閉應用程式時的清理工作"""
+        """Cleanup when closing application"""
         if self.server_process:
             self.stop_server()
         if self.client_process:

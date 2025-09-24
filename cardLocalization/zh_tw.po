@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: holoDelta - future\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
+"Last-Translator: Diego TASI\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
@@ -227,10 +227,10 @@ msgid "Ninomae Ina'nis"
 msgstr "一伊那爾棲"
 
 msgid "Noir Vesper"
-msgstr "ノワール・ヴェスパー"
+msgstr "諾瓦爾·維斯珀"
 
 msgid "Octavio"
-msgstr "オクタビオ"
+msgstr "奧克塔維奧"
 
 msgid "Omaru Polka"
 msgstr "尾丸波爾卡"
@@ -245,16 +245,16 @@ msgid "Otonose Kanade"
 msgstr "音乃瀨奏"
 
 msgid "Ouro Kronii"
-msgstr "オーロ・クロニー"
+msgstr "奧羅·克洛尼"
 
 msgid "Pavolia Reine"
-msgstr "パヴォリア・レイネ"
+msgstr "帕沃莉亞·蕾內"
 
 msgid "Raora Panthera"
-msgstr "ラオーラ・パンテーラ"
+msgstr "拉歐拉·潘特拉"
 
 msgid "Regis Altare"
-msgstr "リージス・アルテア"
+msgstr "瑞吉斯·阿爾特爾"
 
 msgid "Rikka"
 msgstr "律可"
@@ -269,7 +269,7 @@ msgid "Sakura Miko"
 msgstr "櫻巫女"
 
 msgid "Shiori Novella"
-msgstr "シオリ・ノヴェラ"
+msgstr "詩織·諾薇拉"
 
 msgid "Shirakami Fubuki"
 msgstr "白上吹雪"
@@ -299,7 +299,7 @@ msgid "Tokoyami Towa"
 msgstr "常闇永遠"
 
 msgid "Tsukishita Kaoru"
-msgstr "月下カオル"
+msgstr "月下薰"
 
 msgid "Tsukumo Sana"
 msgstr "九十九佐命"
@@ -314,16 +314,16 @@ msgid "Usada Pekora"
 msgstr "兔田佩克拉"
 
 msgid "Utsugi Uyu"
-msgstr "羽継烏有"
+msgstr "羽繼烏有"
 
 msgid "Vestia Zeta"
-msgstr "ベスティア・ゼータ"
+msgstr "維斯提亞·澤塔"
 
 msgid "Amelia Watson"
 msgstr "華生·艾米莉亞"
 
 msgid "Yakushiji Suzaku"
-msgstr "薬師寺朱雀"
+msgstr "藥師寺朱雀"
 
 msgid "Yatogami Fuma"
 msgstr "夜十神封魔"
@@ -425,7 +425,7 @@ msgid "JP"
 msgstr "JP"
 
 msgid "Myth"
-msgstr "神話"
+msgstr "Myth"
 
 msgid "Promise"
 msgstr "Promise"
@@ -506,10 +506,10 @@ msgid "hSD01-006_NAME"
 msgstr "時乃空"
 
 msgid "hSD01-006_ART_0_NAME"
-msgstr "夢想演唱會"
+msgstr "夢之演唱會"
 
 msgid "hSD01-006_ART_1_NAME"
-msgstr "SorAZ Sympathy"
+msgstr "SorAZ共情"
 
 msgid "hSD01-006_ART_1_EFFECT"
 msgstr "自己舞台上有Holo成員<AZKi>時，此技藝+50。"
@@ -575,7 +575,7 @@ msgid "hSD01-012_COLLAB_NAME"
 msgstr "一起畫畫！"
 
 msgid "hSD01-012_COLLAB_EFFECT"
-msgstr "可以將自己檔案區的1張[白聲援或綠聲援]送到自己C位Holo成員上。"
+msgstr "可以將自己存檔區的1張[白聲援或綠聲援]送到自己C位Holo成員上。"
 
 msgid "hSD01-013_NAME"
 msgstr "SorAZ"
@@ -593,7 +593,7 @@ msgid "hSD01-014_ART_0_NAME"
 msgstr "​嘿"
 
 msgid "EXTRA_SPOT"
-msgstr "此Holo成員無法Bloom"
+msgstr "此Holo成員無法「開花」"
 
 msgid "hSD01-015_NAME"
 msgstr "博衣可佑理"
@@ -670,11 +670,11 @@ msgstr "アキロゼ幻想曲"
 msgid "hBP01-035_ART_0_EFFECT"
 msgstr "此Holo成員裝備有工具時，從自己聲援牌組最上方將1張送到自己的Holo成員上。"
 
-msgid "hBP01-035_BLOOM_NAME"
+msgid "hBP01-035_「開花」_NAME"
 msgstr "不萊梅的音樂節"
 
-msgid "hBP01-035_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的1張工具卡裝備到自己的Holo成員上。"
+msgid "hBP01-035_「開花」_EFFECT"
+msgstr "可以將自己存檔區的1張工具卡裝備到自己的Holo成員上。"
 
 msgid "hBP01-036_NAME"
 msgstr "亞綺·羅森塔爾"
@@ -697,17 +697,17 @@ msgstr "秘密的備用鑰匙"
 msgid "hBP01-037_ART_0_EFFECT"
 msgstr "此Holo成員裝備有工具時，此技藝+50。"
 
-msgid "hBP01-037_BLOOM_NAME"
+msgid "hBP01-037_「開花」_NAME"
 msgstr "哥德式人偶"
 
-msgid "hBP01-037_BLOOM_EFFECT"
+msgid "hBP01-037_「開花」_EFFECT"
 msgstr "從自己聲援牌組最上方將1張送到自己的Holo成員上。之後，此Holo成員裝備有工具時，為此Holo成員回復40點HP。"
 
 msgid "hBP01-038_NAME"
 msgstr "兔田佩克拉"
 
 msgid "hBP01-038_ART_0_NAME"
-msgstr "空佩口ー！"
+msgstr "空pekoー！"
 
 msgid "hBP01-038_ART_0_EFFECT"
 msgstr "可以擲1次骰子：偶數時，此技藝+20。"
@@ -716,12 +716,12 @@ msgid "hBP01-041_NAME"
 msgstr "兔田佩克拉"
 
 msgid "hBP01-041_ART_0_NAME"
-msgstr "不能錯過ぺこ喔！"
+msgstr "不能錯過peko喔！"
 
-msgid "hBP01-041_BLOOM_NAME"
+msgid "hBP01-041_「開花」_NAME"
 msgstr "將成長後的兔田佩克拉"
 
-msgid "hBP01-041_BLOOM_EFFECT"
+msgid "hBP01-041_「開花」_EFFECT"
 msgstr "從自己聲援牌組最上方將1張送到自己C位Holo成員或聯動Holo成員上。"
 
 msgid "hBP01-042_NAME"
@@ -745,10 +745,10 @@ msgstr "全人類兔化計畫"
 msgid "hBP01-043_ART_0_EFFECT"
 msgstr "可以擲3次骰子：每1點總和，此技藝+10。"
 
-msgid "hBP01-043_BLOOM_NAME"
+msgid "hBP01-043_「開花」_NAME"
 msgstr "公主禮服"
 
-msgid "hBP01-043_BLOOM_EFFECT"
+msgid "hBP01-043_「開花」_EFFECT"
 msgstr "為此Holo成員回復50點HP。"
 
 msgid "hBP01-044_NAME"
@@ -763,10 +763,10 @@ msgstr "AZKi"
 msgid "hBP01-046_ART_0_NAME"
 msgstr "來到了這麼美好的世界！"
 
-msgid "hBP01-046_BLOOM_NAME"
+msgid "hBP01-046_「開花」_NAME"
 msgstr "因為有開拓者們在"
 
-msgid "hBP01-046_BLOOM_EFFECT"
+msgid "hBP01-046_「開花」_EFFECT"
 msgstr "選擇自己舞台上的1～3張聲援，分配並重新裝備到自己的Holo成員上。"
 
 msgid "hBP01-047_NAME"
@@ -775,11 +775,11 @@ msgstr "AZKi"
 msgid "hBP01-047_ART_0_NAME"
 msgstr "嶄新的地圖"
 
-msgid "hBP01-047_BLOOM_NAME"
+msgid "hBP01-047_「開花」_NAME"
 msgstr "生命之軌跡"
 
-msgid "hBP01-047_BLOOM_EFFECT"
-msgstr "為此Holo成員回復40點HP。之後，可以擲1次骰子：奇數時，可以將自己檔案區的1～3張綠色聲援送到此Holo成員上。"
+msgid "hBP01-047_「開花」_EFFECT"
+msgstr "為此Holo成員回復40點HP。之後，可以擲1次骰子：奇數時，可以將自己存檔區的1～3張綠色聲援送到此Holo成員上。"
 
 msgid "hBP01-056_NAME"
 msgstr "鷹嶺琉依"
@@ -821,7 +821,7 @@ msgid "hBP01-059_ART_1_NAME"
 msgstr "Lui's Party"
 
 msgid "hBP01-059_ART_1_EFFECT"
-msgstr "可以將自己1張手牌放入檔案區：從自己牌組中公開1張非Buzz的1st Holo成員，加入手牌。然後洗牌。"
+msgstr "可以將自己1張手牌放入存檔區：從自己牌組中公開1張非Buzz的1st Holo成員，加入手牌。然後洗牌。"
 
 msgid "hBP01-060_NAME"
 msgstr "鷹嶺琉依"
@@ -829,11 +829,11 @@ msgstr "鷹嶺琉依"
 msgid "hBP01-060_ART_0_NAME"
 msgstr "給我好好跟上！"
 
-msgid "hBP01-060_BLOOM_NAME"
+msgid "hBP01-060_「開花」_NAME"
 msgstr "真的多虧了大家！！"
 
-msgid "hBP01-060_BLOOM_EFFECT"
-msgstr "從Debut進行Bloom時，可以將自己1張手牌放入檔案區：抽2張牌。"
+msgid "hBP01-060_「開花」_EFFECT"
+msgstr "從Debut進行「開花」時，可以將自己1張手牌放入存檔區：抽2張牌。"
 
 msgid "hBP01-061_NAME"
 msgstr "鷹嶺琉依"
@@ -842,13 +842,13 @@ msgid "hBP01-061_ART_0_NAME"
 msgstr "Hawk Rave"
 
 msgid "hBP01-061_ART_0_EFFECT"
-msgstr "可以將自己1～5張手牌放入檔案區：對手的C位Holo成員或聯動Holo成員，每1張放入檔案區的卡片造成20點特殊傷害。"
+msgstr "可以將自己1～5張手牌放入存檔區：對手的C位Holo成員或聯動Holo成員，每1張放入存檔區的卡片造成20點特殊傷害。"
 
-msgid "hBP01-061_BLOOM_NAME"
+msgid "hBP01-061_「開花」_NAME"
 msgstr "組織的司令塔"
 
-msgid "hBP01-061_BLOOM_EFFECT"
-msgstr "可以將自己檔案區中1～2張持有「秘密結社holoX」的Holo成員返回手牌。"
+msgid "hBP01-061_「開花」_EFFECT"
+msgstr "可以將自己存檔區中1～2張持有「秘密結社holoX」的Holo成員返回手牌。"
 
 msgid "hBP01-062_NAME"
 msgstr "小鳥遊琪亞拉"
@@ -857,7 +857,7 @@ msgid "hBP01-062_ART_0_NAME"
 msgstr "Kikkeriki！"
 
 msgid "hBP01-062_ART_0_EFFECT"
-msgstr "可以將自己1張手牌放入檔案區。此技藝+20。"
+msgstr "可以將自己1張手牌放入存檔區。此技藝+20。"
 
 msgid "hBP01-068_NAME"
 msgstr "尾丸波爾卡"
@@ -874,10 +874,10 @@ msgstr "相互依賴"
 msgid "hBP01-070_ART_0_EFFECT"
 msgstr "此技藝必須在此Holo成員裝備有<座員>時才能使用。"
 
-msgid "hBP01-070_BLOOM_NAME"
+msgid "hBP01-070_「開花」_NAME"
 msgstr "宴會開始了！"
 
-msgid "hBP01-070_BLOOM_EFFECT"
+msgid "hBP01-070_「開花」_EFFECT"
 msgstr "從自己牌組中公開1張粉絲卡，加入手牌。然後洗牌。"
 
 msgid "hBP01-071_NAME"
@@ -889,11 +889,11 @@ msgstr "波爾卡馬戲團"
 msgid "hBP01-071_ART_0_EFFECT"
 msgstr "自己所有Holo成員裝備的每1張粉絲卡，此技藝+20。"
 
-msgid "hBP01-071_BLOOM_NAME"
+msgid "hBP01-071_「開花」_NAME"
 msgstr "波爾卡幻象"
 
-msgid "hBP01-071_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的1張<座員>返回手牌。"
+msgid "hBP01-071_「開花」_EFFECT"
+msgstr "可以將自己存檔區的1張<座員>返回手牌。"
 
 msgid "hBP01-082_NAME"
 msgstr "可波·卡娜埃露"
@@ -944,7 +944,7 @@ msgid "hBP01-098_COLLAB_NAME"
 msgstr "那是「俺」"
 
 msgid "hBP01-098_COLLAB_EFFECT"
-msgstr "可以將自己檔案區的1張聲援送到自己的Holo成員上。"
+msgstr "可以將自己存檔區的1張聲援送到自己的Holo成員上。"
 
 msgid "hBP01-099_NAME"
 msgstr "寶鐘瑪琳"
@@ -985,10 +985,10 @@ msgstr "時乃空"
 msgid "hBP01-022_ART_0_NAME"
 msgstr "今天會是最棒的一天喔♪"
 
-msgid "hBP01-022_BLOOM_NAME"
+msgid "hBP01-022_「開花」_NAME"
 msgstr "準備好享受了嗎！？"
 
-msgid "hBP01-022_BLOOM_EFFECT"
+msgid "hBP01-022_「開花」_EFFECT"
 msgstr "抽1張牌。"
 
 msgid "hBP01-051_NAME"
@@ -1025,7 +1025,7 @@ msgid "hBP01-072_ART_0_EFFECT"
 msgstr "此Holo成員裝備有紅聲援時，可以擲1次骰子：奇數時，對手的聯動Holo成員造成20點特殊傷害。"
 
 msgid "hBP01-092_NAME"
-msgstr "オーロ・クロニー"
+msgstr "奧羅·克洛尼"
 
 msgid "hBP01-092_ART_0_NAME"
 msgstr "Kro-nichiwa～"
@@ -1039,11 +1039,11 @@ msgstr "哈珂斯·貝爾絲"
 msgid "hBP01-074_ART_0_NAME"
 msgstr "歡樂時光開始了！"
 
-msgid "hBP01-074_BLOOM_NAME"
+msgid "hBP01-074_「開花」_NAME"
 msgstr "老鼠偶像終於登場！"
 
-msgid "hBP01-074_BLOOM_EFFECT"
-msgstr "從Debut進行Bloom時，可以將自己檔案區的1張[Debut Holo成員或1st Holo成員]返回手牌：返回的卡片持有EN時：對手的聯動Holo成員造成20點特殊傷害。"
+msgid "hBP01-074_「開花」_EFFECT"
+msgstr "從Debut進行「開花」時，可以將自己存檔區的1張[Debut Holo成員或1st Holo成員]返回手牌：返回的卡片持有EN時：對手的聯動Holo成員造成20點特殊傷害。"
 
 msgid "hBP01-075_NAME"
 msgstr "哈珂斯·貝爾絲"
@@ -1063,32 +1063,32 @@ msgstr "七詩無名"
 msgid "hBP01-019_ART_0_NAME"
 msgstr "謝謝你一直以來的支持！"
 
-msgid "hBP01-019_BLOOM_NAME"
+msgid "hBP01-019_「開花」_NAME"
 msgstr "想和大家一起唱歌跳舞！"
 
-msgid "hBP01-019_BLOOM_EFFECT"
-msgstr "從Debut進行Bloom時，從自己牌組中公開1張持有Promise且非Buzz的[Debut Holo成員或1st Holo成員]，加入手牌。然後洗牌。"
+msgid "hBP01-019_「開花」_EFFECT"
+msgstr "從Debut進行「開花」時，從自己牌組中公開1張持有Promise且非Buzz的[Debut Holo成員或1st Holo成員]，加入手牌。然後洗牌。"
 
 msgid "hBP01-094_NAME"
-msgstr "オーロ・クロニー"
+msgstr "奧羅·克洛尼"
 
 msgid "hBP01-094_ART_0_NAME"
 msgstr "讓這成為難忘的fes吧！"
 
-msgid "hBP01-094_BLOOM_NAME"
+msgid "hBP01-094_「開花」_NAME"
 msgstr "Kro-nichiwa！"
 
-msgid "hBP01-094_BLOOM_EFFECT"
+msgid "hBP01-094_「開花」_EFFECT"
 msgstr "從自己聲援牌組中，公開1張與自己持有Promise的Holo成員同色的聲援，送到持有Promise的Holo成員上。然後洗牌聲援牌組。"
 
 msgid "hBP01-095_NAME"
-msgstr "オーロ・クロニー"
+msgstr "奧羅·克洛尼"
 
 msgid "hBP01-095_ART_0_NAME"
 msgstr "快轉"
 
 msgid "hBP01-095_ART_0_EFFECT"
-msgstr "可以將自己此回合登場的1位Debut Holo成員，用自己手牌中的1st Holo成員進行Bloom。"
+msgstr "可以將自己此回合登場的1位Debut Holo成員，用自己手牌中的1st Holo成員進行「開花」。"
 
 msgid "hBP01-095_COLLAB_NAME"
 msgstr "倒帶"
@@ -1117,10 +1117,10 @@ msgstr "IRyS"
 msgid "hBP01-030_ART_0_NAME"
 msgstr "我會努力唱歌，請看著我喔！"
 
-msgid "hBP01-030_BLOOM_NAME"
+msgid "hBP01-030_「開花」_NAME"
 msgstr "用希望包圍舞台吧！"
 
-msgid "hBP01-030_BLOOM_EFFECT"
+msgid "hBP01-030_「開花」_EFFECT"
 msgstr "此回合，自己持有Promise的[C位Holo成員與聯動Holo成員]的技藝+30。"
 
 msgid "hBP01-031_NAME"
@@ -1156,10 +1156,10 @@ msgstr "天音彼方"
 msgid "hBP01-012_ART_0_NAME"
 msgstr "要多～多為我加油喔！"
 
-msgid "hBP01-012_BLOOM_NAME"
+msgid "hBP01-012_「開花」_NAME"
 msgstr "為偶像彼方碳"
 
-msgid "hBP01-012_BLOOM_EFFECT"
+msgid "hBP01-012_「開花」_EFFECT"
 msgstr "可以擲1次骰子：3點以下時，從自己牌組中公開1張吉祥物，裝備到自己的Holo成員上。然後洗牌。"
 
 msgid "hBP01-013_NAME"
@@ -1168,10 +1168,10 @@ msgstr "天音彼方"
 msgid "hBP01-013_ART_0_NAME"
 msgstr "天使舞台"
 
-msgid "hBP01-013_BLOOM_NAME"
+msgid "hBP01-013_「開花」_NAME"
 msgstr "天使的工作"
 
-msgid "hBP01-013_BLOOM_EFFECT"
+msgid "hBP01-013_「開花」_EFFECT"
 msgstr "對手的C位Holo成員造成80點特殊傷害（即使擊倒也不會減少對手生命值）。"
 
 msgid "hBP01-014_NAME"
@@ -1184,25 +1184,25 @@ msgid "hBP01-014_ART_0_EFFECT"
 msgstr "此技藝擊倒對手Holo成員時，若造成的傷害超過剩餘HP 50點以上，對手生命值-1。"
 
 msgid "hBP01-014_COLLAB_NAME"
-msgstr "墮落天使"
+msgstr "墮天使"
 
 msgid "hBP01-014_COLLAB_EFFECT"
 msgstr "對手的C位Holo成員造成50點傷害。"
 
 msgid "hBP01-026_NAME"
-msgstr "ベスティア・ゼータ"
+msgstr "維斯提亞·澤塔"
 
 msgid "hBP01-026_ART_0_NAME"
 msgstr "舞台上的一切都是「我的」"
 
-msgid "hBP01-026_BLOOM_NAME"
+msgid "hBP01-026_「開花」_NAME"
 msgstr "嶄新的命運"
 
-msgid "hBP01-026_BLOOM_EFFECT"
-msgstr "從Debut進行Bloom時，從自己牌組中公開1張持有#ID3期生且非Buzz的[Debut Holo成員或1st Holo成員]，加入手牌。然後洗牌。"
+msgid "hBP01-026_「開花」_EFFECT"
+msgstr "從Debut進行「開花」時，從自己牌組中公開1張持有#ID3期生且非Buzz的[Debut Holo成員或1st Holo成員]，加入手牌。然後洗牌。"
 
 msgid "hBP01-027_NAME"
-msgstr "ベスティア・ゼータ"
+msgstr "維斯提亞·澤塔"
 
 msgid "hBP01-027_ART_0_NAME"
 msgstr "存取碼：ID"
@@ -1222,10 +1222,10 @@ msgstr "艾拉妮·伊歐菲芙婷"
 msgid "hBP01-054_ART_0_NAME"
 msgstr "我很期待喔！"
 
-msgid "hBP01-054_BLOOM_NAME"
+msgid "hBP01-054_「開花」_NAME"
 msgstr "綠光蔓延的海洋"
 
-msgid "hBP01-054_BLOOM_EFFECT"
+msgid "hBP01-054_「開花」_EFFECT"
 msgstr "從自己聲援牌組最上方將1張送到自己<艾拉妮·伊歐菲芙婷>以外持有#ID的Holo成員上。"
 
 msgid "hBP01-055_NAME"
@@ -1241,7 +1241,7 @@ msgid "hBP01-055_COLLAB_NAME"
 msgstr "AREA 15"
 
 msgid "hBP01-055_COLLAB_EFFECT"
-msgstr "可以將自己檔案區的聲援各1張，送到自己持有#ID的1~3位Holo成員上。"
+msgstr "可以將自己存檔區的聲援各1張，送到自己持有#ID的1~3位Holo成員上。"
 
 msgid "hBP01-090_NAME"
 msgstr "暮娜·惑星諾瓦"
@@ -1249,10 +1249,10 @@ msgstr "暮娜·惑星諾瓦"
 msgid "hBP01-090_ART_0_NAME"
 msgstr "敬請期待！！"
 
-msgid "hBP01-090_BLOOM_NAME"
+msgid "hBP01-090_「開花」_NAME"
 msgstr "青金石"
 
-msgid "hBP01-090_BLOOM_EFFECT"
+msgid "hBP01-090_「開花」_EFFECT"
 msgstr "從自己聲援牌組中，公開1張[綠聲援或藍聲援]，送到自己的Holo成員上。然後洗牌聲援牌組。"
 
 msgid "hBP01-091_NAME"
@@ -1265,7 +1265,7 @@ msgid "hBP01-091_ART_1_NAME"
 msgstr "月夜歌姬"
 
 msgid "hBP01-091_ART_1_EFFECT"
-msgstr "可以將此Holo成員的1張[綠聲援或藍聲援]放入檔案區：對手1位後備Holo成員造成30點特殊傷害。"
+msgstr "可以將此Holo成員的1張[綠聲援或藍聲援]放入存檔區：對手1位後備Holo成員造成30點特殊傷害。"
 
 msgid "hBP01-083_NAME"
 msgstr "可波·卡娜埃露"
@@ -1285,14 +1285,14 @@ msgstr "可波·卡娜埃露"
 msgid "hBP01-086_ART_0_NAME"
 msgstr "OnAeru"
 
-msgid "hBP01-086_BLOOM_NAME"
+msgid "hBP01-086_「開花」_NAME"
 msgstr "虛擬行銷"
 
-msgid "hBP01-086_BLOOM_EFFECT"
-msgstr "可以將自己持有#ID的Holo成員的1張聲援放入檔案區：對手所有後備Holo成員造成10點特殊傷害（即使擊倒也不會減少對手生命值）。"
+msgid "hBP01-086_「開花」_EFFECT"
+msgstr "可以將自己持有#ID的Holo成員的1張聲援放入存檔區：對手所有後備Holo成員造成10點特殊傷害（即使擊倒也不會減少對手生命值）。"
 
 msgid "hBP01-024_NAME"
-msgstr "ベスティア・ゼータ"
+msgstr "維斯提亞·澤塔"
 
 msgid "hBP01-024_ART_0_NAME"
 msgstr "任務開始！"
@@ -1304,13 +1304,13 @@ msgid "hBP01-087_ART_0_NAME"
 msgstr "雨之咒"
 
 msgid "hBP01-087_ART_0_EFFECT"
-msgstr "可以將此Holo成員的1張聲援放入檔案區：對手所有後備Holo成員造成20點特殊傷害（即使擊倒也不會減少對手生命值）。"
+msgstr "可以將此Holo成員的1張聲援放入存檔區：對手所有後備Holo成員造成20點特殊傷害（即使擊倒也不會減少對手生命值）。"
 
 msgid "hBP01-087_ART_1_NAME"
 msgstr "浪之咒"
 
 msgid "hBP01-087_ART_1_EFFECT"
-msgstr "可以將此Holo成員的2張聲援放入檔案區：對手的C位Holo成員造成與其所有後備Holo成員所受傷害總和相等的特殊傷害。"
+msgstr "可以將此Holo成員的2張聲援放入存檔區：對手的C位Holo成員造成與其所有後備Holo成員所受傷害總和相等的特殊傷害。"
 
 msgid "hBP01-069_NAME"
 msgstr "尾丸波爾卡"
@@ -1331,7 +1331,7 @@ msgid "hBP01-045_GIFT_NAME"
 msgstr "Overwrite"
 
 msgid "hBP01-045_GIFT_EFFECT"
-msgstr "自己生命值為3點以下時，此Holo成員可以無視Bloom等級，Bloom成手牌中的2nd <AZKi>。"
+msgstr "自己生命值為3點以下時，此Holo成員可以無視「開花」等級，「開花」成手牌中的2nd <AZKi>。"
 
 msgid "hBP01-063_NAME"
 msgstr "小鳥遊琪亞拉"
@@ -1343,7 +1343,7 @@ msgid "hBP01-063_COLLAB_NAME"
 msgstr "Kiwawa的魔法"
 
 msgid "hBP01-063_COLLAB_EFFECT"
-msgstr "自己C位Holo成員持有「鳥」時，可以將自己1張手牌放入檔案區：從自己牌組中公開1張吉祥物，加入手牌。然後洗牌。"
+msgstr "自己C位Holo成員持有「鳥」時，可以將自己1張手牌放入存檔區：從自己牌組中公開1張吉祥物，加入手牌。然後洗牌。"
 
 msgid "hBP01-065_NAME"
 msgstr "小鳥遊琪亞拉"
@@ -1351,11 +1351,11 @@ msgstr "小鳥遊琪亞拉"
 msgid "hBP01-065_ART_0_NAME"
 msgstr "我會努力炒熱氣氛！"
 
-msgid "hBP01-065_BLOOM_NAME"
+msgid "hBP01-065_「開花」_NAME"
 msgstr "Let's do this!!!!"
 
-msgid "hBP01-065_BLOOM_EFFECT"
-msgstr "查看自己牌組最上方3張。從中公開1張Holo成員，加入手牌。然後將剩餘卡片放入檔案區。"
+msgid "hBP01-065_「開花」_EFFECT"
+msgstr "查看自己牌組最上方3張。從中公開1張Holo成員，加入手牌。然後將剩餘卡片放入存檔區。"
 
 msgid "hBP01-100_NAME"
 msgstr "森美聲"
@@ -1367,7 +1367,7 @@ msgid "hBP01-100_COLLAB_NAME"
 msgstr "靈魂收割"
 
 msgid "hBP01-100_COLLAB_EFFECT"
-msgstr "可以將自己檔案區的1～3張聲援返回聲援牌組。然後洗牌聲援牌組。"
+msgstr "可以將自己存檔區的1～3張聲援返回聲援牌組。然後洗牌聲援牌組。"
 
 msgid "hBP01-066_NAME"
 msgstr "小鳥遊琪亞拉"
@@ -1379,7 +1379,7 @@ msgid "hBP01-066_ART_1_NAME"
 msgstr "給我跪下"
 
 msgid "hBP01-066_ART_1_EFFECT"
-msgstr "可以將此Holo成員疊加的1張Holo成員卡放入檔案區：對手的聯動Holo成員造成40點特殊傷害。"
+msgstr "可以將此Holo成員疊加的1張Holo成員卡放入存檔區：對手的聯動Holo成員造成40點特殊傷害。"
 
 msgid "hBP01-101_NAME"
 msgstr "華生·艾米莉亞"
@@ -1391,7 +1391,7 @@ msgid "hBP01-101_COLLAB_NAME"
 msgstr "發現線索"
 
 msgid "hBP01-101_COLLAB_EFFECT"
-msgstr "可以將自己檔案區的1張道具卡返回手牌。"
+msgstr "可以將自己存檔區的1張道具卡返回手牌。"
 
 msgid "hBP01-067_NAME"
 msgstr "小鳥遊琪亞拉"
@@ -1403,7 +1403,7 @@ msgid "hBP01-067_ART_1_NAME"
 msgstr "Majestic Phoenix"
 
 msgid "hBP01-067_ART_1_EFFECT"
-msgstr "自己檔案區每有1張Holo成員，此技藝+10。然後將自己檔案區的6張Holo成員返回牌組並洗牌。"
+msgstr "自己存檔區每有1張Holo成員，此技藝+10。然後將自己存檔區的6張Holo成員返回牌組並洗牌。"
 
 msgid "hBP01-076_NAME"
 msgstr "星街彗星"
@@ -1424,7 +1424,7 @@ msgid "hBP01-077_COLLAB_NAME"
 msgstr "閃耀的衣櫃"
 
 msgid "hBP01-077_COLLAB_EFFECT"
-msgstr "自己的主推Holo成員是<星街彗星>時，可以將此Holo成員的1張藍色聲援放入檔案區：抽2張牌。"
+msgstr "自己的主推Holo成員是<星街彗星>時，可以將此Holo成員的1張藍色聲援放入存檔區：抽2張牌。"
 
 msgid "hBP01-079_NAME"
 msgstr "星街彗星"
@@ -1432,10 +1432,10 @@ msgstr "星街彗星"
 msgid "hBP01-079_ART_0_NAME"
 msgstr "Sui醬——今天也很可愛——!!"
 
-msgid "hBP01-079_BLOOM_NAME"
+msgid "hBP01-079_「開花」_NAME"
 msgstr "我會讓你大吃一驚，別錯過喔！"
 
-msgid "hBP01-079_BLOOM_EFFECT"
+msgid "hBP01-079_「開花」_EFFECT"
 msgstr "對手1位後備Holo成員造成20點特殊傷害（即使擊倒也不會減少對手生命值）。"
 
 msgid "hBP01-080_NAME"
@@ -1457,7 +1457,7 @@ msgid "hBP01-081_ART_0_NAME"
 msgstr "閃耀的彗星"
 
 msgid "hBP01-081_ART_0_EFFECT"
-msgstr "可以將此Holo成員的2張藍色聲援放入檔案區：此Holo成員疊加的每1張Holo成員卡，此技藝+60（此技藝也可以對手的後備Holo成員為對象）。"
+msgstr "可以將此Holo成員的2張藍色聲援放入存檔區：此Holo成員疊加的每1張Holo成員卡，此技藝+60（此技藝也可以對手的後備Holo成員為對象）。"
 
 msgid "hBP01-081_COLLAB_NAME"
 msgstr "雪山的回憶"
@@ -1499,7 +1499,7 @@ msgid "hBP01-018_ART_0_EFFECT"
 msgstr "可以公開自己牌組最上方1張：公開的卡片持有#Promise時，此技藝+20。然後將公開的卡片加入手牌。"
 
 msgid "hBP01-025_NAME"
-msgstr "ベスティア・ゼータ"
+msgstr "維斯提亞·澤塔"
 
 msgid "hBP01-025_ART_0_NAME"
 msgstr "溫泉水不能喝喔！"
@@ -1622,7 +1622,7 @@ msgid "hBP01-089_ART_0_NAME"
 msgstr "辛苦Moona了"
 
 msgid "hBP01-093_NAME"
-msgstr "オーロ・クロニー"
+msgstr "奧羅·克洛尼"
 
 msgid "hBP01-093_ART_0_NAME"
 msgstr "Kro-yasumi～"
@@ -1649,7 +1649,7 @@ msgid "hBP02-054_ART_0_NAME"
 msgstr "死神的大弟子"
 
 msgid "hBP02-054_ART_0_EFFECT"
-msgstr "自己檔案區有Holo成員時，此技藝+10。"
+msgstr "自己存檔區有Holo成員時，此技藝+10。"
 
 msgid "hBP02-013_NAME"
 msgstr "白上吹雪"
@@ -1666,7 +1666,7 @@ msgstr "和大家一起！"
 msgid "hBP02-013_GIFT_EFFECT"
 msgstr "此Holo成員最多可以裝備2張不同卡名的吉祥物。"
 
-msgid "Bloom Effect"
+msgid "「開花」 Effect"
 msgstr "開花效果"
 
 msgid "Collab Effect"
@@ -1703,13 +1703,13 @@ msgid "hSD01-019_NAME"
 msgstr "超強電腦"
 
 msgid "hSD01-019_EFFECT"
-msgstr "此卡必須將自己1張聲援放入檔案區才能使用。\r\n\r\n從自己牌組中公開1張非Buzz的[1st Holo成員或2nd Holo成員]，加入手牌。然後洗牌。"
+msgstr "此卡必須將自己1張聲援放入存檔區才能使用。\r\n\r\n從自己牌組中公開1張非Buzz的[1st Holo成員或2nd Holo成員]，加入手牌。然後洗牌。"
 
 msgid "hSD01-020_NAME"
 msgstr "Holo粉之輪"
 
 msgid "hSD01-020_EFFECT"
-msgstr "擲1次骰子：3點以上時，將自己檔案區的1張聲援送到自己的Holo成員上。"
+msgstr "擲1次骰子：3點以上時，將自己存檔區的1張聲援送到自己的Holo成員上。"
 
 msgid "hSD01-021_NAME"
 msgstr "First Gravity"
@@ -1769,7 +1769,7 @@ msgid "hBP01-105_NAME"
 msgstr "螢光棒"
 
 msgid "hBP01-105_EFFECT"
-msgstr "此卡必須將自己1張holo能量放入檔案區才能使用。\r\n\r\n從自己聲援牌組中，公開1張與自己Holo成員同色的聲援，送到自己的Holo成員上。然後洗牌聲援牌組。"
+msgstr "此卡必須將自己1張holo能量放入存檔區才能使用。\r\n\r\n從自己聲援牌組中，公開1張與自己Holo成員同色的聲援，送到自己的Holo成員上。然後洗牌聲援牌組。"
 
 msgid "hBP01-108_NAME"
 msgstr "那就是敵人了呢"
@@ -1787,7 +1787,7 @@ msgid "hBP01-110_NAME"
 msgstr "用鈍器把你敲扁喔！"
 
 msgid "hBP01-110_EFFECT"
-msgstr "擲1次骰子：3點以下時，將對手舞台上的1張聲援放入檔案區。\r\n\r\n◆自己的主推Holo成員是<七詩無名>時，可變更能力[遊戲1次]將對手C位Holo成員的2張聲援放入檔案區。"
+msgstr "擲1次骰子：3點以下時，將對手舞台上的1張聲援放入存檔區。\r\n\r\n◆自己的主推Holo成員是<七詩無名>時，可變更能力[遊戲1次]將對手C位Holo成員的2張聲援放入存檔區。"
 
 msgid "hBP01-114_NAME"
 msgstr "石斧"
@@ -1829,7 +1829,7 @@ msgid "hBP01-123_NAME"
 msgstr "野兔同盟"
 
 msgid "hBP01-123_EFFECT"
-msgstr "此粉絲卡裝備的Holo成員因能力擲骰子時，可以將此粉絲卡放入檔案區：重擲1次骰子。\r\n\r\n此粉絲卡只能裝備於自己的<兔田佩克拉>，每位可裝備任意張數。"
+msgstr "此粉絲卡裝備的Holo成員因能力擲骰子時，可以將此粉絲卡放入存檔區：重擲1次骰子。\r\n\r\n此粉絲卡只能裝備於自己的<兔田佩克拉>，每位可裝備任意張數。"
 
 msgid "hBP01-124_NAME"
 msgstr "開拓者"
@@ -1856,7 +1856,7 @@ msgid "hBP01-117_NAME"
 msgstr "Friend"
 
 msgid "hBP01-117_EFFECT"
-msgstr "此吉祥物裝備的Holo成員的技藝+10。\r\n\r\n◆裝備於<七詩無名>時追加能力：在對手回合，此吉祥物裝備的Holo成員受到傷害時，可以將此吉祥物放入檔案區：此吉祥物曾裝備的Holo成員受到的傷害-30。\r\n\r\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員的技藝+10。\r\n\r\n◆裝備於<七詩無名>時追加能力：在對手回合，此吉祥物裝備的Holo成員受到傷害時，可以將此吉祥物放入存檔區：此吉祥物曾裝備的Holo成員受到的傷害-30。\r\n\r\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hBP01-113_NAME"
 msgstr "Promise"
@@ -1889,7 +1889,7 @@ msgid "hBP01-107_NAME"
 msgstr "安可"
 
 msgid "hBP01-107_EFFECT"
-msgstr "將自己檔案區的1～3張聲援返回聲援牌組。然後洗牌聲援牌組。"
+msgstr "將自己存檔區的1～3張聲援返回聲援牌組。然後洗牌聲援牌組。"
 
 msgid "hBP01-106_NAME"
 msgstr "剩下交給你了！"
@@ -1901,16 +1901,16 @@ msgid "hBP01-103_NAME"
 msgstr "電競電腦"
 
 msgid "hBP01-103_EFFECT"
-msgstr "此卡必須將自己1張holo能量放入檔案區才能使用。\n\n從自己牌組中，公開1張與自己主推Holo成員同色且非Buzz的[Debut Holo成員或1st Holo成員]，加入手牌。然後洗牌。"
+msgstr "此卡必須將自己1張holo能量放入存檔區才能使用。\n\n從自己牌組中，公開1張與自己主推Holo成員同色且非Buzz的[Debut Holo成員或1st Holo成員]，加入手牌。然後洗牌。"
 
 msgid "hBD24-001_NAME"
-msgstr "パヴォリア・レイネ"
+msgstr "帕沃莉亞·蕾內"
 
 msgid "hBP01-125_NAME"
 msgstr "KFP"
 
 msgid "hBP01-125_EFFECT"
-msgstr "從手牌裝備此粉絲卡到Holo成員上時，可以將自己1張手牌放入檔案區：抽1張牌。\r\n\r\n此粉絲卡只能裝備於自己的<小鳥遊琪亞拉>，每位可裝備任意張數。"
+msgstr "從手牌裝備此粉絲卡到Holo成員上時，可以將自己1張手牌放入存檔區：抽1張牌。\r\n\r\n此粉絲卡只能裝備於自己的<小鳥遊琪亞拉>，每位可裝備任意張數。"
 
 msgid "hPR-002_NAME"
 msgstr "ReGLOSS"
@@ -1925,7 +1925,7 @@ msgid "hBP01-121_NAME"
 msgstr "Kotori"
 
 msgid "hBP01-121_EFFECT"
-msgstr "此吉祥物裝備的Holo成員在C位位置或聯動位置受到的傷害-10。\r\n\r\n◆裝備於<小鳥遊琪亞拉>時追加能力：此吉祥物裝備的Holo成員的Bloom等級提升時，抽1張牌。\r\n\r\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員在C位位置或聯動位置受到的傷害-10。\r\n\r\n◆裝備於<小鳥遊琪亞拉>時追加能力：此吉祥物裝備的Holo成員的「開花」等級提升時，抽1張牌。\r\n\r\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hBP02-001_NAME"
 msgstr "白上吹雪"
@@ -1982,7 +1982,7 @@ msgid "hSD01-002_SPSKILL_NAME"
 msgstr "右手麥克風"
 
 msgid "hSD01-002_SPSKILL_EFFECT"
-msgstr "[遊戲1次]將自己檔案區的聲援以任意張數送到自己1位綠色Holo成員上。"
+msgstr "[遊戲1次]將自己存檔區的聲援以任意張數送到自己1位綠色Holo成員上。"
 
 msgid "hYS01-001_SKILL_NAME"
 msgstr "白色接力棒"
@@ -2018,7 +2018,7 @@ msgid "hYS01-003_SPSKILL_NAME"
 msgstr "來！再一次！"
 
 msgid "hYS01-003_SPSKILL_EFFECT"
-msgstr "[遊戲1次]將自己檔案區的1張紅色Holo成員返回手牌。"
+msgstr "[遊戲1次]將自己存檔區的1張紅色Holo成員返回手牌。"
 
 msgid "hYS01-004_SKILL_NAME"
 msgstr "藍色接力棒"
@@ -2060,7 +2060,7 @@ msgid "hBP01-005_SKILL_NAME"
 msgstr "女幹部的指揮"
 
 msgid "hBP01-005_SKILL_EFFECT"
-msgstr "[回合1次]自己的紅色Holo成員因能力將手牌放入檔案區時可以使用：每1張要放入檔案區的手牌，改為將1張holo能量放入檔案區。"
+msgstr "[回合1次]自己的紅色Holo成員因能力將手牌放入存檔區時可以使用：每1張要放入存檔區的手牌，改為將1張holo能量放入存檔區。"
 
 msgid "hBP01-005_SPSKILL_NAME"
 msgstr "鷹眼"
@@ -2084,13 +2084,13 @@ msgid "hBP01-008_SKILL_NAME"
 msgstr "雨之薩滿"
 
 msgid "hBP01-008_SKILL_EFFECT"
-msgstr "[回合1次]自己的藍色Holo成員因能力將聲援放入檔案區時可以使用：對手1位Holo成員造成20點特殊傷害。"
+msgstr "[回合1次]自己的藍色Holo成員因能力將聲援放入存檔區時可以使用：對手1位Holo成員造成20點特殊傷害。"
 
 msgid "hBP01-008_SPSKILL_NAME"
 msgstr "祈雨"
 
 msgid "hBP01-008_SPSKILL_EFFECT"
-msgstr "[遊戲1次]將自己檔案區的1~5張聲援，分配並送到自己持有#ID的Holo成員上。"
+msgstr "[遊戲1次]將自己存檔區的1~5張聲援，分配並送到自己持有#ID的Holo成員上。"
 
 msgid "hBP01-002_SKILL_NAME"
 msgstr "文明的守護者"
@@ -2132,7 +2132,7 @@ msgid "hBP01-006_SKILL_NAME"
 msgstr "不死鳥之尾"
 
 msgid "hBP01-006_SKILL_EFFECT"
-msgstr "[回合1次]將自己檔案區的1張Holo成員返回手牌。"
+msgstr "[回合1次]將自己存檔區的1張Holo成員返回手牌。"
 
 msgid "hBP01-006_SPSKILL_NAME"
 msgstr "浴火重生"
@@ -2228,7 +2228,7 @@ msgid "hBP02-003_SKILL_NAME"
 msgstr "Ahoy!!"
 
 msgid "hBP02-003_SKILL_EFFECT"
-msgstr "[回合1次]將自己此回合Bloom過的1位持有#3期生的Holo成員，使用手牌中的Holo成員再進行1次Bloom。"
+msgstr "[回合1次]將自己此回合「開花」過的1位持有#3期生的Holo成員，使用手牌中的Holo成員再進行1次「開花」。"
 
 msgid "hBP02-003_SPSKILL_NAME"
 msgstr "出航～！"
@@ -2300,7 +2300,7 @@ msgid "hSD02-014_NAME"
 msgstr "ぽよ余"
 
 msgid "hSD02-014_EFFECT"
-msgstr "此吉祥物裝備的Holo成員的HP+20。\r\n\r\n◆裝備於<百鬼綾目>時追加能力：此吉祥物裝備的Holo成員進行Bloom時，抽1張牌。\r\n\r\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員的HP+20。\r\n\r\n◆裝備於<百鬼綾目>時追加能力：此吉祥物裝備的Holo成員進行「開花」時，抽1張牌。\r\n\r\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hSD03-001_NAME"
 msgstr "貓又小粥"
@@ -2345,7 +2345,7 @@ msgid "hBP02-092_NAME"
 msgstr "フブラ"
 
 msgid "hBP02-092_EFFECT"
-msgstr "此吉祥物裝備的Holo成員的HP+20。\r\n\r\n◆裝備於<白上吹雪>時追加能力[回合1次]：在自己的主要階段，可以將自己Holo成員的2張聲援放入檔案區：此回合，此Holo成員的技藝+50。\r\n\r\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員的HP+20。\r\n\r\n◆裝備於<白上吹雪>時追加能力[回合1次]：在自己的主要階段，可以將自己Holo成員的2張聲援放入存檔區：此回合，此Holo成員的技藝+50。\r\n\r\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hBP02-093_NAME"
 msgstr "ミテイル"
@@ -2389,20 +2389,20 @@ msgstr "辛苦なきりー"
 msgid "hSD02-006_ART_0_NAME"
 msgstr "一起慶祝"
 
-msgid "hSD02-006_BLOOM_NAME"
+msgid "hSD02-006_「開花」_NAME"
 msgstr "生日派對"
 
-msgid "hSD02-006_BLOOM_EFFECT"
-msgstr "可以將自己1張手牌放入檔案區：對手的C位Holo成員或聯動Holo成員造成20點特殊傷害。"
+msgid "hSD02-006_「開花」_EFFECT"
+msgstr "可以將自己1張手牌放入存檔區：對手的C位Holo成員或聯動Holo成員造成20點特殊傷害。"
 
 msgid "hSD02-007_ART_0_NAME"
 msgstr "別錯過閃耀的余喔～～！！"
 
-msgid "hSD02-007_BLOOM_NAME"
+msgid "hSD02-007_「開花」_NAME"
 msgstr "哪一個哪一個♪"
 
-msgid "hSD02-007_BLOOM_EFFECT"
-msgstr "從Debut進行Bloom時，查看自己牌組最上方2張。從中公開1張，加入手牌。然後將剩餘卡片放入檔案區。"
+msgid "hSD02-007_「開花」_EFFECT"
+msgstr "從Debut進行「開花」時，查看自己牌組最上方2張。從中公開1張，加入手牌。然後將剩餘卡片放入存檔區。"
 
 msgid "hSD02-008_ART_0_NAME"
 msgstr "夢幻生日"
@@ -2411,7 +2411,7 @@ msgid "hSD02-008_ART_1_NAME"
 msgstr "禮物是什麼呢？"
 
 msgid "hSD02-008_ART_1_EFFECT"
-msgstr "可以將自己1張手牌放入檔案區：對手的C位Holo成員或聯動Holo成員造成50點特殊傷害。"
+msgstr "可以將自己1張手牌放入存檔區：對手的C位Holo成員或聯動Holo成員造成50點特殊傷害。"
 
 msgid "hSD02-009_ART_0_NAME"
 msgstr "あやふぶみ的「あや」擔當"
@@ -2420,7 +2420,7 @@ msgid "hSD02-009_ART_1_NAME"
 msgstr "余第一余"
 
 msgid "hSD02-009_ART_1_EFFECT"
-msgstr "可以將自己1~3張手牌放入檔案區：對手的C位Holo成員，每1張放入檔案區的卡片造成40點特殊傷害。"
+msgstr "可以將自己1~3張手牌放入存檔區：對手的C位Holo成員，每1張放入存檔區的卡片造成40點特殊傷害。"
 
 msgid "hSD02-010_ART_0_NAME"
 msgstr "あやふぶみ的「ふぶ」擔當"
@@ -2429,7 +2429,7 @@ msgid "hSD02-010_COLLAB_NAME"
 msgstr "快回來－"
 
 msgid "hSD02-010_COLLAB_EFFECT"
-msgstr "可以將自己檔案區的1張吉祥物返回手牌。"
+msgstr "可以將自己存檔區的1張吉祥物返回手牌。"
 
 msgid "hSD02-011_ART_0_NAME"
 msgstr "あやふぶみ的「み」擔當"
@@ -2438,16 +2438,16 @@ msgid "hSD02-011_COLLAB_NAME"
 msgstr "鬼獸會"
 
 msgid "hSD02-011_COLLAB_EFFECT"
-msgstr "可以將自己手牌的1張Holo成員放入檔案區：從自己聲援牌組最上方將1張送到自己的Debut Holo成員上。"
+msgstr "可以將自己手牌的1張Holo成員放入存檔區：從自己聲援牌組最上方將1張送到自己的Debut Holo成員上。"
 
 msgid "hSD03-007_ART_0_NAME"
 msgstr "全力獻上我的歌聲！"
 
-msgid "hSD03-007_BLOOM_NAME"
+msgid "hSD03-007_「開花」_NAME"
 msgstr "要再多笑一點喔！"
 
-msgid "hSD03-007_BLOOM_EFFECT"
-msgstr "將自己檔案區的1張聲援送到自己持有#Gamers的Holo成員上。"
+msgid "hSD03-007_「開花」_EFFECT"
+msgstr "將自己存檔區的1張聲援送到自己持有#Gamers的Holo成員上。"
 
 msgid "hSD03-008_ART_0_NAME"
 msgstr "最了不起的貓又小粥～"
@@ -2464,11 +2464,11 @@ msgstr "最喜歡你了！啾♡"
 msgid "hSD04-007_ART_0_EFFECT"
 msgstr "為自己1位後備Holo成員回復20點HP。"
 
-msgid "hSD04-007_BLOOM_NAME"
+msgid "hSD04-007_「開花」_NAME"
 msgstr "巧可ーん！"
 
-msgid "hSD04-007_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的1張非LIMITED事件卡返回手牌。"
+msgid "hSD04-007_「開花」_EFFECT"
+msgstr "可以將自己存檔區的1張非LIMITED事件卡返回手牌。"
 
 msgid "hSD04-008_ART_0_NAME"
 msgstr "努力做好了喔"
@@ -2477,7 +2477,7 @@ msgid "hSD04-008_ART_1_NAME"
 msgstr "請慢用"
 
 msgid "hSD04-008_ART_1_EFFECT"
-msgstr "可以將自己檔案區的1張持有#食物的事件卡返回手牌：此技藝+20。"
+msgstr "可以將自己存檔區的1張持有#食物的事件卡返回手牌：此技藝+20。"
 
 msgid "hBP02-042_ART_0_NAME"
 msgstr "你好～"
@@ -2497,11 +2497,11 @@ msgstr "Change the Ale"
 msgid "hBP02-046_ART_0_EFFECT"
 msgstr "可以擲1次骰子：5點以上時，將對手舞台上的1張聲援，重新裝備到對手的Holo成員上。"
 
-msgid "hBP02-046_BLOOM_NAME"
+msgid "hBP02-046_「開花」_NAME"
 msgstr "交換的魔法"
 
-msgid "hBP02-046_BLOOM_EFFECT"
-msgstr "可以將自己1張手牌放入檔案區：將自己檔案區的1張持有#魔法的卡片返回手牌。"
+msgid "hBP02-046_「開花」_EFFECT"
+msgstr "可以將自己1張手牌放入存檔區：將自己存檔區的1張持有#魔法的卡片返回手牌。"
 
 msgid "hBP02-047_ART_0_NAME"
 msgstr "紫羅蘭魔法"
@@ -2509,10 +2509,10 @@ msgstr "紫羅蘭魔法"
 msgid "hBP02-047_ART_0_EFFECT"
 msgstr "對手的C位Holo成員與聯動Holo成員，每有1張其裝備的聲援，造成20點特殊傷害。"
 
-msgid "hBP02-047_BLOOM_NAME"
+msgid "hBP02-047_「開花」_NAME"
 msgstr "惡作劇的魔法"
 
-msgid "hBP02-047_BLOOM_EFFECT"
+msgid "hBP02-047_「開花」_EFFECT"
 msgstr "可以擲1次骰子：4點以上時，將對手舞台上的1張聲援，重新裝備到對手的Holo成員上。"
 
 msgid "hSD02-001_SKILL_NAME"
@@ -2525,7 +2525,7 @@ msgid "hSD02-001_SPSKILL_NAME"
 msgstr "來！再一次！"
 
 msgid "hSD02-001_SPSKILL_EFFECT"
-msgstr "[遊戲1次]將自己檔案區的1張紅色Holo成員返回手牌。"
+msgstr "[遊戲1次]將自己存檔區的1張紅色Holo成員返回手牌。"
 
 msgid "hSD03-001_SKILL_NAME"
 msgstr "藍色麥克風"
@@ -2549,7 +2549,7 @@ msgid "hSD04-001_SPSKILL_NAME"
 msgstr "卡片交換"
 
 msgid "hSD04-001_SPSKILL_EFFECT"
-msgstr "[遊戲1次]抽2張牌後，將1張手牌放入檔案區。"
+msgstr "[遊戲1次]抽2張牌後，將1張手牌放入存檔區。"
 
 msgid "hBP02-005_SKILL_NAME"
 msgstr "喂～～～～～～"
@@ -2615,7 +2615,7 @@ msgid "hSD03-006_ART_1_NAME"
 msgstr "嚇—"
 
 msgid "hSD03-006_ART_1_EFFECT"
-msgstr "可以將此Holo成員的1張聲援放入檔案區：對手的C位Holo成員與1位後備Holo成員造成10點特殊傷害。"
+msgstr "可以將此Holo成員的1張聲援放入存檔區：對手的C位Holo成員與1位後備Holo成員造成10點特殊傷害。"
 
 msgid "hSD03-012_NAME"
 msgstr "盜賊建設"
@@ -2654,7 +2654,7 @@ msgid "hSD03-009_ART_1_NAME"
 msgstr "小粥～"
 
 msgid "hSD03-009_ART_1_EFFECT"
-msgstr "可以將此Holo成員的2張藍色聲援放入檔案區：對手的C位Holo成員與1位後備Holo成員造成30點特殊傷害。"
+msgstr "可以將此Holo成員的2張藍色聲援放入存檔區：對手的C位Holo成員與1位後備Holo成員造成30點特殊傷害。"
 
 msgid "hSD03-010_NAME"
 msgstr "戌神沁音"
@@ -2684,7 +2684,7 @@ msgid "hSD03-013_NAME"
 msgstr "おかにゃん"
 
 msgid "hSD03-013_EFFECT"
-msgstr "此吉祥物裝備的Holo成員在C位位置或聯動位置受到的傷害-10。\n\n◆裝備於<貓又小粥>時追加能力：此吉祥物裝備的Holo成員因能力將聲援放入檔案區時，可改為將此吉祥物放入檔案區，代替1張藍色聲援。\n\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員在C位位置或聯動位置受到的傷害-10。\n\n◆裝備於<貓又小粥>時追加能力：此吉祥物裝備的Holo成員因能力將聲援放入存檔區時，可改為將此吉祥物放入存檔區，代替1張藍色聲援。\n\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hSD04-002_NAME"
 msgstr "癒月巧可"
@@ -2714,13 +2714,13 @@ msgid "hSD04-004_COLLAB_NAME"
 msgstr "地獄級大碗飯"
 
 msgid "hSD04-004_COLLAB_EFFECT"
-msgstr "可以將自己1張手牌放入檔案區：從自己牌組中公開1張持有#食物的事件卡，加入手牌。然後洗牌。"
+msgstr "可以將自己1張手牌放入存檔區：從自己牌組中公開1張持有#食物的事件卡，加入手牌。然後洗牌。"
 
 msgid "hSD04-014_NAME"
 msgstr "しょこら"
 
 msgid "hSD04-014_EFFECT"
-msgstr "此吉祥物裝備的Holo成員的HP+20。\n\n◆裝備於<癒月巧可>時追加能力：此吉祥物裝備的Holo成員進行Bloom時，為此Holo成員回復20點HP。\n\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員的HP+20。\n\n◆裝備於<癒月巧可>時追加能力：此吉祥物裝備的Holo成員進行「開花」時，為此Holo成員回復20點HP。\n\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hSD04-009_NAME"
 msgstr "癒月巧可"
@@ -2744,7 +2744,7 @@ msgid "hSD04-010_COLLAB_NAME"
 msgstr "巧可ーーッ!!"
 
 msgid "hSD04-010_COLLAB_EFFECT"
-msgstr "自己C位Holo成員是<癒月巧可>時，可以將自己檔案區的1張聲援送到自己的Holo成員上。"
+msgstr "自己C位Holo成員是<癒月巧可>時，可以將自己存檔區的1張聲援送到自己的Holo成員上。"
 
 msgid "hSD04-011_NAME"
 msgstr "姬森璐娜"
@@ -2771,7 +2771,7 @@ msgid "hSD04-013_EFFECT"
 msgstr "選擇自己1位Holo成員。為選擇的Holo成員回復20點HP。自己舞台上有持有#料理的Holo成員時，再加此回合，選擇的Holo成員的技藝+20。"
 
 msgid "hBD24-008_NAME"
-msgstr "ベスティア・ゼータ"
+msgstr "維斯提亞·澤塔"
 
 msgid "hBD24-008_SKILL_NAME"
 msgstr "白色強化"
@@ -2825,7 +2825,7 @@ msgid "hBP02-007_SKILL_NAME"
 msgstr "取樣"
 
 msgid "hBP02-007_SKILL_EFFECT"
-msgstr "【回合1次】將自己2張手牌放入檔案區，可將檔案區中2張持有#EN的Holo成員返回手牌。"
+msgstr "【回合1次】將自己2張手牌放入存檔區，可將存檔區中2張持有#EN的Holo成員返回手牌。"
 
 msgid "hBP02-007_SPSKILL_NAME"
 msgstr "死神饒舌"
@@ -2848,10 +2848,10 @@ msgstr "紫咲詩音"
 msgid "hBP02-045_ART_0_NAME"
 msgstr "超級開心！！"
 
-msgid "hBP02-045_BLOOM_NAME"
+msgid "hBP02-045_「開花」_NAME"
 msgstr "久違的全體演唱會ー!!"
 
-msgid "hBP02-045_BLOOM_EFFECT"
+msgid "hBP02-045_「開花」_EFFECT"
 msgstr "查看自己牌組最上方3張。從中公開1張[藍色Holo成員或紫色Holo成員]，加入手牌。然後將剩餘卡片以任意順序放回牌組最下方。"
 
 msgid "hBP02-055_NAME"
@@ -2864,7 +2864,7 @@ msgid "hBP02-055_COLLAB_NAME"
 msgstr "Showtime"
 
 msgid "hBP02-055_COLLAB_EFFECT"
-msgstr "可以將自己手牌的1張Holo成員放入檔案區：此回合，自己舞台上1位持有#Myth的Holo成員的技藝+20。"
+msgstr "可以將自己手牌的1張Holo成員放入存檔區：此回合，自己舞台上1位持有#Myth的Holo成員的技藝+20。"
 
 msgid "hBP02-056_NAME"
 msgstr "森美聲"
@@ -2878,11 +2878,11 @@ msgstr "森美聲"
 msgid "hBP02-057_ART_0_NAME"
 msgstr "一起High起來吧！"
 
-msgid "hBP02-057_BLOOM_NAME"
+msgid "hBP02-057_「開花」_NAME"
 msgstr "一起創造最棒的fes"
 
-msgid "hBP02-057_BLOOM_EFFECT"
-msgstr "可以將自己手牌中2張持有相同標籤的Holo成員放入檔案區：抽2張牌。"
+msgid "hBP02-057_「開花」_EFFECT"
+msgstr "可以將自己手牌中2張持有相同標籤的Holo成員放入存檔區：抽2張牌。"
 
 msgid "hBP02-058_NAME"
 msgstr "森美聲"
@@ -2893,11 +2893,11 @@ msgstr "Dead Beat"
 msgid "hBP02-058_ART_0_EFFECT"
 msgstr "此Holo成員裝備有工具或吉祥物時，此技藝+30。"
 
-msgid "hBP02-058_BLOOM_NAME"
+msgid "hBP02-058_「開花」_NAME"
 msgstr "怎麼了？"
 
-msgid "hBP02-058_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的1張[<森美聲的鐮刀>或<Death-sensei>]返回手牌。"
+msgid "hBP02-058_「開花」_EFFECT"
+msgstr "可以將自己存檔區的1張[<森美聲的鐮刀>或<Death-sensei>]返回手牌。"
 
 msgid "hBP02-059_NAME"
 msgstr "森美聲"
@@ -2906,13 +2906,13 @@ msgid "hBP02-059_ART_0_NAME"
 msgstr "Featuring Myth"
 
 msgid "hBP02-059_ART_0_EFFECT"
-msgstr "自己檔案區有4張以上持有#Myth的Holo成員時，此技藝+40。8張以上時，再加此技藝+40。"
+msgstr "自己存檔區有4張以上持有#Myth的Holo成員時，此技藝+40。8張以上時，再加此技藝+40。"
 
-msgid "hBP02-059_BLOOM_NAME"
+msgid "hBP02-059_「開花」_NAME"
 msgstr "Soul Voice"
 
-msgid "hBP02-059_BLOOM_EFFECT"
-msgstr "從自己牌組中公開1張卡片，放入檔案區。然後洗牌。"
+msgid "hBP02-059_「開花」_EFFECT"
+msgstr "從自己牌組中公開1張卡片，放入存檔區。然後洗牌。"
 
 msgid "hBP02-061_NAME"
 msgstr "一伊那爾棲"
@@ -2932,10 +2932,10 @@ msgstr "一伊那爾棲"
 msgid "hBP02-063_ART_0_NAME"
 msgstr "好好享受吧！！！"
 
-msgid "hBP02-063_BLOOM_NAME"
+msgid "hBP02-063_「開花」_NAME"
 msgstr "大家準備好「WAH」了嗎ー！"
 
-msgid "hBP02-063_BLOOM_EFFECT"
+msgid "hBP02-063_「開花」_EFFECT"
 msgstr "為自己1位持有#Myth的Holo成員回復20點HP。"
 
 msgid "hBP02-064_NAME"
@@ -2945,7 +2945,7 @@ msgid "hBP02-064_ART_0_NAME"
 msgstr "古風的微笑"
 
 msgid "hBP02-064_ART_0_EFFECT"
-msgstr "自己檔案區有5張以上持有#Myth的Holo成員時，可以將此Holo成員的1張聲援，重新裝備到自己其他Holo成員上。10張以上時，再加此技藝+50。"
+msgstr "自己存檔區有5張以上持有#Myth的Holo成員時，可以將此Holo成員的1張聲援，重新裝備到自己其他Holo成員上。10張以上時，再加此技藝+50。"
 
 msgid "hBP02-065_NAME"
 msgstr "納瑞莎·雷文克羅夫特"
@@ -2981,13 +2981,13 @@ msgid "hBP02-083_NAME"
 msgstr "魔法衣櫃"
 
 msgid "hBP02-083_EFFECT"
-msgstr "此卡必須將自己1張holo能量放入檔案區才能使用。\n\n將自己檔案區的1張聲援送到自己的<紫咲詩音>上。自己持有魔法的事件卡每回合只能使用1次。"
+msgstr "此卡必須將自己1張holo能量放入存檔區才能使用。\n\n將自己存檔區的1張聲援送到自己的<紫咲詩音>上。自己持有魔法的事件卡每回合只能使用1次。"
 
 msgid "hBP02-088_NAME"
 msgstr "森美聲的鐮刀"
 
 msgid "hBP02-088_EFFECT"
-msgstr "此工具裝備的Holo成員的技藝+10。\n\n◆裝備於1st以上的<森美聲>時追加能力：\n\n從手牌裝備此工具到Holo成員上時，將自己牌組最上方1張放入檔案區。\n\n工具卡每位Holo成員只能裝備1張。"
+msgstr "此工具裝備的Holo成員的技藝+10。\n\n◆裝備於1st以上的<森美聲>時追加能力：\n\n從手牌裝備此工具到Holo成員上時，將自己牌組最上方1張放入存檔區。\n\n工具卡每位Holo成員只能裝備1張。"
 
 msgid "hBP02-098_NAME"
 msgstr "Death-sensei"
@@ -2999,7 +2999,7 @@ msgid "hBP02-102_NAME"
 msgstr "塩っこ"
 
 msgid "hBP02-102_EFFECT"
-msgstr "■此粉絲卡裝備的Holo成員的技藝+10。\n\n■此粉絲卡裝備的Holo成員受到傷害時，將此粉絲卡放入檔案區。\n\n此粉絲卡只能裝備於自己的<紫咲詩音>，每位可裝備任意張數。"
+msgstr "■此粉絲卡裝備的Holo成員的技藝+10。\n\n■此粉絲卡裝備的Holo成員受到傷害時，將此粉絲卡放入存檔區。\n\n此粉絲卡只能裝備於自己的<紫咲詩音>，每位可裝備任意張數。"
 
 msgid "hBD24-010_NAME"
 msgstr "雪花菈米"
@@ -3037,10 +3037,10 @@ msgstr "納瑞莎·雷文克羅夫特"
 msgid "hBP02-067_ART_0_NAME"
 msgstr "比起咖啡更喜歡紅茶"
 
-msgid "hBP02-067_BLOOM_NAME"
+msgid "hBP02-067_「開花」_NAME"
 msgstr "與ネリッサ的茶會"
 
-msgid "hBP02-067_BLOOM_EFFECT"
+msgid "hBP02-067_「開花」_EFFECT"
 msgstr "查看自己牌組最上方3張。從中公開1張持有#歌的Holo成員，加入手牌。然後將剩餘卡片以任意順序放回牌組最下方。"
 
 msgid "hBP02-068_NAME"
@@ -3065,7 +3065,7 @@ msgid "hBP02-077_NAME"
 msgstr "復古電腦"
 
 msgid "hBP02-077_EFFECT"
-msgstr "此卡必須在自己生命值為3點以下時才能使用。\n\n將自己檔案區的1張Holo成員返回手牌。"
+msgstr "此卡必須在自己生命值為3點以下時才能使用。\n\n將自己存檔區的1張Holo成員返回手牌。"
 
 msgid "hBD24-012_NAME"
 msgstr "白銀諾艾爾"
@@ -3109,11 +3109,11 @@ msgstr "白銀諾艾爾"
 msgid "hBP02-016_ART_0_NAME"
 msgstr "給我烙印在眼裡喔♡"
 
-msgid "hBP02-016_BLOOM_NAME"
+msgid "hBP02-016_「開花」_NAME"
 msgstr "諾艾爾醬的英姿・・・・・・"
 
-msgid "hBP02-016_BLOOM_EFFECT"
-msgstr "從Debut進行Bloom時，從自己牌組中公開1張持有#3期生的[Debut Holo成員、1st Holo成員或Spot Holo成員]，加入手牌。然後洗牌。"
+msgid "hBP02-016_「開花」_EFFECT"
+msgstr "從Debut進行「開花」時，從自己牌組中公開1張持有#3期生的[Debut Holo成員、1st Holo成員或Spot Holo成員]，加入手牌。然後洗牌。"
 
 msgid "hBP02-017_NAME"
 msgstr "白銀諾艾爾"
@@ -3158,7 +3158,7 @@ msgid "hBP02-095_NAME"
 msgstr "ドクロくん"
 
 msgid "hBP02-095_EFFECT"
-msgstr "此吉祥物裝備的Holo成員的技藝+10。\n\n◆裝備於<寶鐘瑪琳>時追加能力：\n\n[限C位位置]此吉祥物裝備的Holo成員進行Bloom時，抽1張牌。\n\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員的技藝+10。\n\n◆裝備於<寶鐘瑪琳>時追加能力：\n\n[限C位位置]此吉祥物裝備的Holo成員進行「開花」時，抽1張牌。\n\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hBP02-031_NAME"
 msgstr "寶鐘瑪琳"
@@ -3166,10 +3166,10 @@ msgstr "寶鐘瑪琳"
 msgid "hBP02-031_ART_0_NAME"
 msgstr "一起出航吧！（健全）"
 
-msgid "hBP02-031_BLOOM_NAME"
+msgid "hBP02-031_「開花」_NAME"
 msgstr "你們的聲音是船長的支柱！"
 
-msgid "hBP02-031_BLOOM_EFFECT"
+msgid "hBP02-031_「開花」_EFFECT"
 msgstr "對手的聯動Holo成員造成20點特殊傷害。"
 
 msgid "hBP02-032_NAME"
@@ -3178,10 +3178,10 @@ msgstr "寶鐘瑪琳"
 msgid "hBP02-032_ART_0_NAME"
 msgstr "Yosoro"
 
-msgid "hBP02-032_BLOOM_NAME"
+msgid "hBP02-032_「開花」_NAME"
 msgstr "寶鐘海賊團"
 
-msgid "hBP02-032_BLOOM_EFFECT"
+msgid "hBP02-032_「開花」_EFFECT"
 msgstr "從自己牌組中公開1張<寶鐘瑪琳>，加入手牌。然後洗牌。自己的開花效果「寶鐘海賊團」每回合只能使用1次。"
 
 msgid "hBP02-033_NAME"
@@ -3193,11 +3193,11 @@ msgstr "你們～？船長，可愛嗎？"
 msgid "hBP02-033_ART_0_EFFECT"
 msgstr "此Holo成員疊加的每1張Holo成員卡，此技藝+20。"
 
-msgid "hBP02-033_BLOOM_NAME"
+msgid "hBP02-033_「開花」_NAME"
 msgstr "哥德女王"
 
-msgid "hBP02-033_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的1張Holo成員返回手牌。之後，此Holo成員疊加的Holo成員卡在3張以上時，對手的C位Holo成員或聯動Holo成員造成50點特殊傷害。"
+msgid "hBP02-033_「開花」_EFFECT"
+msgstr "可以將自己存檔區的1張Holo成員返回手牌。之後，此Holo成員疊加的Holo成員卡在3張以上時，對手的C位Holo成員或聯動Holo成員造成50點特殊傷害。"
 
 msgid "hBP02-085_NAME"
 msgstr "HOLOLIVE FANTASY"
@@ -3215,7 +3215,7 @@ msgid "hBP02-096_NAME"
 msgstr "狗"
 
 msgid "hBP02-096_EFFECT"
-msgstr "此吉祥物裝備的Holo成員的技藝+10。\n\n◆裝備於<沙花叉克蘿伊>時追加能力：此吉祥物裝備的Holo成員擊倒對手Holo成員時，可以將自己檔案區的1張聲援送到自己持有#秘密結社holoX的Holo成員上。\n\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員的技藝+10。\n\n◆裝備於<沙花叉克蘿伊>時追加能力：此吉祥物裝備的Holo成員擊倒對手Holo成員時，可以將自己存檔區的1張聲援送到自己持有#秘密結社holoX的Holo成員上。\n\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hBD24-016_NAME"
 msgstr "沙花叉克蘿伊"
@@ -3274,10 +3274,10 @@ msgstr "沙花叉克蘿伊"
 msgid "hBP02-038_ART_0_NAME"
 msgstr "（這裡是該高興的地方）"
 
-msgid "hBP02-038_BLOOM_NAME"
+msgid "hBP02-038_「開花」_NAME"
 msgstr "把你的心也咬走喔♡"
 
-msgid "hBP02-038_BLOOM_EFFECT"
+msgid "hBP02-038_「開花」_EFFECT"
 msgstr "查看自己聲援牌組最上方3張。從中公開1張聲援，送到自己的Holo成員上。然後將剩餘聲援以任意順序放回聲援牌組最下方。"
 
 msgid "hBP02-041_NAME"
@@ -3287,7 +3287,7 @@ msgid "hBP02-041_ART_0_NAME"
 msgstr "毒貓"
 
 msgid "hBP02-041_ART_0_EFFECT"
-msgstr "可以將此Holo成員的1張藍色聲援放入檔案區：對手的C位Holo成員與1位後備Holo成員造成20點特殊傷害。"
+msgstr "可以將此Holo成員的1張藍色聲援放入存檔區：對手的C位Holo成員與1位後備Holo成員造成20點特殊傷害。"
 
 msgid "hBP02-041_GIFT_NAME"
 msgstr "毒之愛"
@@ -3301,10 +3301,10 @@ msgstr "癒月巧可"
 msgid "hBP02-060_ART_0_NAME"
 msgstr "藏不住的魅力"
 
-msgid "hBP02-060_BLOOM_NAME"
+msgid "hBP02-060_「開花」_NAME"
 msgstr "誘惑的視線"
 
-msgid "hBP02-060_BLOOM_EFFECT"
+msgid "hBP02-060_「開花」_EFFECT"
 msgstr "可以為自己1位後備Holo成員回復50點HP：對手的C位Holo成員，每回復10點傷害，造成10點特殊傷害。"
 
 msgid "hBP02-004_NAME"
@@ -3314,13 +3314,13 @@ msgid "hBP02-004_SKILL_NAME"
 msgstr "噗欸噗欸噗欸～"
 
 msgid "hBP02-004_SKILL_EFFECT"
-msgstr "[回合1次]自己C位Holo成員為<沙花叉克蘿伊>時可以使用：查看自己牌組最上方3張。可將所有卡片放入檔案區，或以任意順序放回牌組最上方。"
+msgstr "[回合1次]自己C位Holo成員為<沙花叉克蘿伊>時可以使用：查看自己牌組最上方3張。可將所有卡片放入存檔區，或以任意順序放回牌組最上方。"
 
 msgid "hBP02-004_SPSKILL_NAME"
 msgstr "人生重來按鈕"
 
 msgid "hBP02-004_SPSKILL_EFFECT"
-msgstr "[遊戲1次]計算自己手牌數量，將「所有手牌與檔案區所有Holo成員」返回牌組並洗牌。然後每有1張從手牌返回牌組的卡片，抽1張牌。"
+msgstr "[遊戲1次]計算自己手牌數量，將「所有手牌與存檔區所有Holo成員」返回牌組並洗牌。然後每有1張從手牌返回牌組的卡片，抽1張牌。"
 
 msgid "hBP02-039_NAME"
 msgstr "沙花叉克蘿伊"
@@ -3329,13 +3329,13 @@ msgid "hBP02-039_ART_0_NAME"
 msgstr "HoloX拉霸"
 
 msgid "hBP02-039_ART_0_EFFECT"
-msgstr "可以公開自己牌組最上方3張：每公開1張Holo成員，此技藝+20。然後將公開的卡片放入檔案區。"
+msgstr "可以公開自己牌組最上方3張：每公開1張Holo成員，此技藝+20。然後將公開的卡片放入存檔區。"
 
 msgid "hBP02-039_GIFT_NAME"
 msgstr "噗咿噗咿噗咿～"
 
 msgid "hBP02-039_GIFT_EFFECT"
-msgstr "[回合1次]此Holo成員的技藝「HoloX拉霸」公開卡片時，可將公開的1張支援卡加入手牌，而非放入檔案區。"
+msgstr "[回合1次]此Holo成員的技藝「HoloX拉霸」公開卡片時，可將公開的1張支援卡加入手牌，而非放入存檔區。"
 
 msgid "hBP02-040_NAME"
 msgstr "沙花叉克蘿伊"
@@ -3344,13 +3344,13 @@ msgid "hBP02-040_ART_0_NAME"
 msgstr "HoloX拉霸"
 
 msgid "hBP02-040_ART_0_EFFECT"
-msgstr "可以公開自己牌組最上方3張：每公開1張Holo成員，此技藝+20。然後將公開的卡片放入檔案區。"
+msgstr "可以公開自己牌組最上方3張：每公開1張Holo成員，此技藝+20。然後將公開的卡片放入存檔區。"
 
 msgid "hBP02-040_GIFT_NAME"
 msgstr "超級火熱"
 
 msgid "hBP02-040_GIFT_EFFECT"
-msgstr "[回合1次]此Holo成員的技藝「HoloX拉霸」公開卡片時，若公開的3張卡片為相同Bloom等級的Holo成員，對手生命值-1。"
+msgstr "[回合1次]此Holo成員的技藝「HoloX拉霸」公開卡片時，若公開的3張卡片為相同「開花」等級的Holo成員，對手生命值-1。"
 
 msgid "hBP02-078_NAME"
 msgstr "かなた建設"
@@ -3446,7 +3446,7 @@ msgid "hBP02-049_COLLAB_NAME"
 msgstr "奧莉一直看著你喔"
 
 msgid "hBP02-049_COLLAB_EFFECT"
-msgstr "抽1張牌後，將1張手牌放入檔案區。"
+msgstr "抽1張牌後，將1張手牌放入存檔區。"
 
 msgid "hBP02-050_NAME"
 msgstr "克雷西·奧莉"
@@ -3467,7 +3467,7 @@ msgid "hBP02-097_NAME"
 msgstr "UDIN"
 
 msgid "hBP02-097_EFFECT"
-msgstr "此吉祥物裝備的Holo成員的技藝+10。\n\n◆裝備於<克雷西·奧莉>時追加能力：此吉祥物裝備的Holo成員進行Bloom時，抽1張牌後，將1張手牌放入檔案區。\n\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員的技藝+10。\n\n◆裝備於<克雷西·奧莉>時追加能力：此吉祥物裝備的Holo成員進行「開花」時，抽1張牌後，將1張手牌放入存檔區。\n\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hBP02-006_NAME"
 msgstr "克雷西·奧莉"
@@ -3476,13 +3476,13 @@ msgid "hBP02-006_SKILL_NAME"
 msgstr "殭屍戰術"
 
 msgid "hBP02-006_SKILL_EFFECT"
-msgstr "[回合1次]將自己1位持有#ID2期生的Holo成員，使用自己檔案區的Holo成員進行Bloom。"
+msgstr "[回合1次]將自己1位持有#ID2期生的Holo成員，使用自己存檔區的Holo成員進行「開花」。"
 
 msgid "hBP02-006_SPSKILL_NAME"
 msgstr "復活的奧莉"
 
 msgid "hBP02-006_SPSKILL_EFFECT"
-msgstr "[遊戲1次]抽4張牌後，將2張手牌放入檔案區。之後，可以將自己1位Holo成員，使用自己檔案區的Holo成員進行Bloom。"
+msgstr "[遊戲1次]抽4張牌後，將2張手牌放入存檔區。之後，可以將自己1位Holo成員，使用自己存檔區的Holo成員進行「開花」。"
 
 msgid "hBP02-051_NAME"
 msgstr "克雷西·奧莉"
@@ -3490,11 +3490,11 @@ msgstr "克雷西·奧莉"
 msgid "hBP02-051_ART_0_NAME"
 msgstr "看著主推大聲尖叫吧！！"
 
-msgid "hBP02-051_BLOOM_NAME"
+msgid "hBP02-051_「開花」_NAME"
 msgstr "限界化！！"
 
-msgid "hBP02-051_BLOOM_EFFECT"
-msgstr "可以將自己1位持有#ID2期生的Debut Holo成員，使用自己檔案區的Holo成員進行Bloom。自己的開花效果「限界化！！」每回合只能使用1次。"
+msgid "hBP02-051_「開花」_EFFECT"
+msgstr "可以將自己1位持有#ID2期生的Debut Holo成員，使用自己存檔區的Holo成員進行「開花」。自己的開花效果「限界化！！」每回合只能使用1次。"
 
 msgid "hBP02-052_NAME"
 msgstr "克雷西·奧莉"
@@ -3505,10 +3505,10 @@ msgstr "以正義之名，我將"
 msgid "hBP02-052_ART_0_EFFECT"
 msgstr "此Holo成員裝備有非紫色的聲援時，此技藝+20。"
 
-msgid "hBP02-052_BLOOM_NAME"
+msgid "hBP02-052_「開花」_NAME"
 msgstr "真實一路"
 
-msgid "hBP02-052_BLOOM_EFFECT"
+msgid "hBP02-052_「開花」_EFFECT"
 msgstr "抽1張牌。"
 
 msgid "hBP02-053_NAME"
@@ -3520,11 +3520,11 @@ msgstr "計算過的戰術"
 msgid "hBP02-053_ART_0_EFFECT"
 msgstr "自己舞台上有2位以上持有#ID2期生的2nd Holo成員時，此技藝+40。"
 
-msgid "hBP02-053_BLOOM_NAME"
+msgid "hBP02-053_「開花」_NAME"
 msgstr "復活的殭屍"
 
-msgid "hBP02-053_BLOOM_EFFECT"
-msgstr "可以將自己2張手牌放入檔案區：此回合，此Holo成員的技藝+40。"
+msgid "hBP02-053_「開花」_EFFECT"
+msgstr "可以將自己2張手牌放入存檔區：此回合，此Holo成員的技藝+40。"
 
 msgid "hBP02-081_NAME"
 msgstr "Hololive Indonesia 2期生"
@@ -3548,13 +3548,13 @@ msgid "hBD24-013_SPSKILL_EFFECT"
 msgstr "[遊戲1次]從自己牌組中公開1張紫色Holo成員，加入手牌。然後洗牌。"
 
 msgid "hBP02-002_NAME"
-msgstr "パヴォリア・レイネ"
+msgstr "帕沃莉亞·蕾內"
 
 msgid "hBP02-002_SKILL_NAME"
 msgstr "HALU"
 
 msgid "hBP02-002_SKILL_EFFECT"
-msgstr "[回合1次]將自己Holo成員的1張聲援放入檔案區，可從自己聲援牌組中公開1張聲援，送到自己的Holo成員上。然後洗牌聲援牌組。"
+msgstr "[回合1次]將自己Holo成員的1張聲援放入存檔區，可從自己聲援牌組中公開1張聲援，送到自己的Holo成員上。然後洗牌聲援牌組。"
 
 msgid "hBP02-002_SPSKILL_NAME"
 msgstr "極彩之宴"
@@ -3563,13 +3563,13 @@ msgid "hBP02-002_SPSKILL_EFFECT"
 msgstr "[遊戲1次]此回合，自己舞台上所有持有#ID2期生的Holo成員，每有1種顏色的聲援，技藝+20。"
 
 msgid "hBP02-018_NAME"
-msgstr "パヴォリア・レイネ"
+msgstr "帕沃莉亞·蕾內"
 
 msgid "hBP02-018_ART_0_NAME"
 msgstr "Perhatian!"
 
 msgid "hBP02-019_NAME"
-msgstr "パヴォリア・レイネ"
+msgstr "帕沃莉亞·蕾內"
 
 msgid "hBP02-019_ART_0_NAME"
 msgstr "Very Easy!"
@@ -3578,31 +3578,31 @@ msgid "hBP02-019_COLLAB_NAME"
 msgstr "讓朋友HALU的方法"
 
 msgid "hBP02-019_COLLAB_EFFECT"
-msgstr "可以將自己檔案區的1張聲援送到自己的Holo成員上。"
+msgstr "可以將自己存檔區的1張聲援送到自己的Holo成員上。"
 
 msgid "hBP02-020_NAME"
-msgstr "パヴォリア・レイネ"
+msgstr "帕沃莉亞·蕾內"
 
 msgid "hBP02-020_ART_0_NAME"
 msgstr "Royal Halu Sleepover"
 
 msgid "hBP02-021_NAME"
-msgstr "パヴォリア・レイネ"
+msgstr "帕沃莉亞·蕾內"
 
 msgid "hBP02-021_ART_0_NAME"
 msgstr "所以請看著我！最喜歡你了！"
 
 msgid "hBP02-021_ART_0_EFFECT"
-msgstr "可以將自己檔案區的1張聲援送到自己的Holo成員上。"
+msgstr "可以將自己存檔區的1張聲援送到自己的Holo成員上。"
 
-msgid "hBP02-021_BLOOM_NAME"
+msgid "hBP02-021_「開花」_NAME"
 msgstr "我會用心唱歌跳舞。"
 
-msgid "hBP02-021_BLOOM_EFFECT"
+msgid "hBP02-021_「開花」_EFFECT"
 msgstr "自己舞台上每有1種顏色的聲援，為自己1位Holo成員回復10點HP。"
 
 msgid "hBP02-022_NAME"
-msgstr "パヴォリア・レイネ"
+msgstr "帕沃莉亞·蕾內"
 
 msgid "hBP02-022_ART_0_NAME"
 msgstr "Spicy Night"
@@ -3610,14 +3610,14 @@ msgstr "Spicy Night"
 msgid "hBP02-022_ART_0_EFFECT"
 msgstr "自己舞台上有2種以上顏色的聲援時，此技藝+20。"
 
-msgid "hBP02-022_BLOOM_NAME"
+msgid "hBP02-022_「開花」_NAME"
 msgstr "你在等什麼？"
 
-msgid "hBP02-022_BLOOM_EFFECT"
+msgid "hBP02-022_「開花」_EFFECT"
 msgstr "從自己牌組中公開1張<Tatang>，加入手牌。然後洗牌。"
 
 msgid "hBP02-023_NAME"
-msgstr "パヴォリア・レイネ"
+msgstr "帕沃莉亞·蕾內"
 
 msgid "hBP02-023_ART_0_NAME"
 msgstr "孔雀之舞"
@@ -3625,10 +3625,10 @@ msgstr "孔雀之舞"
 msgid "hBP02-023_ART_0_EFFECT"
 msgstr "自己舞台上每有1種顏色的聲援，此技藝+20。"
 
-msgid "hBP02-023_BLOOM_NAME"
+msgid "hBP02-023_「開花」_NAME"
 msgstr "Kanjeng"
 
-msgid "hBP02-023_BLOOM_EFFECT"
+msgid "hBP02-023_「開花」_EFFECT"
 msgstr "從自己聲援牌組中公開1張聲援，送到自己的Holo成員上。然後洗牌聲援牌組。"
 
 msgid "hBP02-024_NAME"
@@ -3644,7 +3644,7 @@ msgid "hBP02-094_NAME"
 msgstr "Tatang"
 
 msgid "hBP02-094_EFFECT"
-msgstr "此吉祥物裝備的Holo成員的技藝+10。\n\n◆裝備於<パヴォリア・レイネ>時追加能力：此吉祥物裝備的Holo成員的HP+30。\n\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員的技藝+10。\n\n◆裝備於<帕沃莉亞·蕾內>時追加能力：此吉祥物裝備的Holo成員的HP+30。\n\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hBP02-101_NAME"
 msgstr "ミオファ"
@@ -3667,10 +3667,10 @@ msgstr "大神澪"
 msgid "hBP02-026_ART_0_NAME"
 msgstr "今年也請守護我喔！"
 
-msgid "hBP02-026_BLOOM_NAME"
+msgid "hBP02-026_「開花」_NAME"
 msgstr "作為偶像成長的姿態"
 
-msgid "hBP02-026_BLOOM_EFFECT"
+msgid "hBP02-026_「開花」_EFFECT"
 msgstr "從自己聲援牌組中，公開1張與自己舞台上持有#Gamers的Holo成員同色的聲援，送到自己的Holo成員上。然後洗牌聲援牌組。"
 
 msgid "hBP02-027_NAME"
@@ -3680,7 +3680,7 @@ msgid "hBP02-027_ART_0_NAME"
 msgstr "塔羅的指引"
 
 msgid "hBP02-027_ART_0_EFFECT"
-msgstr "可以將自己牌組最上方1張放入檔案區：放入檔案區的卡片為Holo成員時，此技藝+20。為支援卡時，此技藝+50。"
+msgstr "可以將自己牌組最上方1張放入存檔區：放入存檔區的卡片為Holo成員時，此技藝+20。為支援卡時，此技藝+50。"
 
 msgid "hBP02-009_NAME"
 msgstr "白上吹雪"
@@ -3710,7 +3710,7 @@ msgid "hBP02-091_NAME"
 msgstr "フブチュン"
 
 msgid "hBP02-091_EFFECT"
-msgstr "此吉祥物裝備的Holo成員的HP+20。\n\n◆裝備於<白上吹雪>時追加能力：此吉祥物裝備的Holo成員進行聯動時，可以將自己檔案區的1張吉祥物返回手牌。\n\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員的HP+20。\n\n◆裝備於<白上吹雪>時追加能力：此吉祥物裝備的Holo成員進行聯動時，可以將自己存檔區的1張吉祥物返回手牌。\n\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hBP02-012_NAME"
 msgstr "白上吹雪"
@@ -3721,10 +3721,10 @@ msgstr "請助我一臂之力"
 msgid "hBP02-012_ART_0_EFFECT"
 msgstr "此回合，自己裝備有吉祥物的[C位Holo成員與聯動Holo成員]的技藝+20。"
 
-msgid "hBP02-012_BLOOM_NAME"
+msgid "hBP02-012_「開花」_NAME"
 msgstr "我稍微動一下喔"
 
-msgid "hBP02-012_BLOOM_EFFECT"
+msgid "hBP02-012_「開花」_EFFECT"
 msgstr "可以將自己舞台上的1張吉祥物，重新裝備到自己的Holo成員上。"
 
 msgid "hBP02-011_NAME"
@@ -3733,10 +3733,10 @@ msgstr "白上吹雪"
 msgid "hBP02-011_ART_0_NAME"
 msgstr "不行喔！"
 
-msgid "hBP02-011_BLOOM_NAME"
+msgid "hBP02-011_「開花」_NAME"
 msgstr "不能從白上身上移開視線"
 
-msgid "hBP02-011_BLOOM_EFFECT"
+msgid "hBP02-011_「開花」_EFFECT"
 msgstr "從自己牌組中公開1張持有#白上's角色的卡片，加入手牌。然後洗牌。"
 
 msgid "hBP02-010_NAME"
@@ -3859,10 +3859,10 @@ msgstr "轟一"
 msgid "hSD05-007_ART_0_NAME"
 msgstr "膽量、魅力、最強"
 
-msgid "hSD05-007_BLOOM_NAME"
+msgid "hSD05-007_「開花」_NAME"
 msgstr "目標是宇宙第一番長的萬事屋"
 
-msgid "hSD05-007_BLOOM_EFFECT"
+msgid "hSD05-007_「開花」_EFFECT"
 msgstr "抽1張牌。"
 
 msgid "hSD05-008_NAME"
@@ -3883,10 +3883,10 @@ msgstr "滅紫之雷"
 msgid "hSD05-009_ART_0_EFFECT"
 msgstr "自己舞台上有<轟一>以外的#ReGLOSS Holo成員時，此技藝+30。"
 
-msgid "hSD05-009_BLOOM_NAME"
+msgid "hSD05-009_「開花」_NAME"
 msgstr "用舞蹈為這個世界增添色彩！"
 
-msgid "hSD05-009_BLOOM_EFFECT"
+msgid "hSD05-009_「開花」_EFFECT"
 msgstr "從自己牌組中公開1張持有#ReGLOSS的[Debut Holo成員或1st Holo成員]，加入手牌。然後洗牌。"
 
 msgid "hSD05-010_NAME"
@@ -3896,7 +3896,7 @@ msgid "hSD05-010_ART_0_NAME"
 msgstr "來一段"
 
 msgid "hSD05-010_ART_0_EFFECT"
-msgstr "可以將自己檔案區的1張聲援送到自己持有#ReGLOSS的Holo成員上。"
+msgstr "可以將自己存檔區的1張聲援送到自己持有#ReGLOSS的Holo成員上。"
 
 msgid "hSD05-011_NAME"
 msgstr "一條莉莉華"
@@ -3988,10 +3988,10 @@ msgstr "風真伊呂波"
 msgid "hSD06-005_ART_0_NAME"
 msgstr "和風真一起！"
 
-msgid "hSD06-005_BLOOM_NAME"    
+msgid "hSD06-005_「開花」_NAME"    
 msgstr "和風真出門"
 
-msgid "hSD06-005_BLOOM_EFFECT"
+msgid "hSD06-005_「開花」_EFFECT"
 msgstr "從自己聲援牌組最上方將1張送到自己持有#秘密結社holoX的Holo成員上。"
 
 msgid "hSD06-006_NAME"
@@ -4000,10 +4000,10 @@ msgstr "風真伊呂波"
 msgid "hSD06-006_ART_0_NAME"
 msgstr "要變成刀上的鐵鏽了！"
 
-msgid "hSD06-006_BLOOM_NAME"
+msgid "hSD06-006_「開花」_NAME"
 msgstr "武士少女"
 
-msgid "hSD06-006_BLOOM_EFFECT"
+msgid "hSD06-006_「開花」_EFFECT"
 msgstr "從自己牌組中公開1張[<チャキ丸>或<ぽこべぇ>]，加入手牌。然後洗牌。"
 
 msgid "hSD06-007_NAME"
@@ -4015,10 +4015,10 @@ msgstr "是天才嗎？"
 msgid "hSD06-007_ART_0_EFFECT"
 msgstr "自己舞台上有5張以上聲援時，此技藝+50。"
 
-msgid "hSD06-007_BLOOM_NAME"
+msgid "hSD06-007_「開花」_NAME"
 msgstr "為您帶來元氣"
 
-msgid "hSD06-007_BLOOM_EFFECT"
+msgid "hSD06-007_「開花」_EFFECT"
 msgstr "為自己1位持有#秘密結社holoX的Holo成員回復30點HP。"
 
 msgid "hSD06-008_NAME"
@@ -4040,7 +4040,7 @@ msgid "hSD06-009_ART_0_NAME"
 msgstr "可靠的女幹部"
 
 msgid "hSD06-009_ART_0_EFFECT"
-msgstr "可以將自己檔案區的1張持有#秘密結社holoX的Debut Holo成員返回手牌。"
+msgstr "可以將自己存檔區的1張持有#秘密結社holoX的Debut Holo成員返回手牌。"
 
 msgid "hSD06-010_NAME"
 msgstr "拉普拉斯·達克尼斯"
@@ -4126,10 +4126,10 @@ msgstr "最喜歡你的是我～♡"
 msgid "hSD07-006_ART_0_EFFECT"
 msgstr "自己生命值為3點以下時，此技藝+30。"
 
-msgid "hSD07-006_BLOOM_NAME"
+msgid "hSD07-006_「開花」_NAME"
 msgstr "エルフレンド的鳴唱"
 
-msgid "hSD07-006_BLOOM_EFFECT"
+msgid "hSD07-006_「開花」_EFFECT"
 msgstr "從自己牌組中公開1張<エルフレンド>，加入手牌。然後洗牌。"
 
 msgid "hSD07-007_NAME"
@@ -4138,10 +4138,10 @@ msgstr "不知火芙蕾雅"
 msgid "hSD07-007_ART_0_NAME"
 msgstr "希望你能看到！"
 
-msgid "hSD07-007_BLOOM_NAME"
+msgid "hSD07-007_「開花」_NAME"
 msgstr "又成長了一點的我"
 
-msgid "hSD07-007_BLOOM_EFFECT"
+msgid "hSD07-007_「開花」_EFFECT"
 msgstr "[限後備位置] 可以將自己剩餘HP70點以下的聯動Holo成員與此Holo成員交換。"
 
 msgid "hSD07-008_NAME"
@@ -4151,7 +4151,7 @@ msgid "hSD07-008_ART_0_NAME"
 msgstr "エルフレンド派對"
 
 msgid "hSD07-008_ART_0_EFFECT"
-msgstr "可以將自己檔案區的1張<エルフレンド>裝備到此Holo成員上。"
+msgstr "可以將自己存檔區的1張<エルフレンド>裝備到此Holo成員上。"
 
 msgid "hSD07-009_NAME"
 msgstr "不知火芙蕾雅"
@@ -4214,7 +4214,7 @@ msgid "hSD07-013_COLLAB_NAME"
 msgstr "飯快吃完了……"
 
 msgid "hSD07-013_COLLAB_EFFECT"
-msgstr "自己C位Holo成員是<不知火芙蕾雅>時，可以將自己檔案區的1張聲援送到此Holo成員以外的自己Holo成員上。"
+msgstr "自己C位Holo成員是<不知火芙蕾雅>時，可以將自己存檔區的1張聲援送到此Holo成員以外的自己Holo成員上。"
 
 msgid "hSD07-014_NAME"
 msgstr "不知火建設"
@@ -4253,7 +4253,7 @@ msgid "hBP03-002_SKILL_NAME"
 msgstr "poi"
 
 msgid "hBP03-002_SKILL_EFFECT"
-msgstr "將自己檔案區的1張聲援送到自己後備Holo成員的<獅白牡丹>上。"
+msgstr "將自己存檔區的1張聲援送到自己後備Holo成員的<獅白牡丹>上。"
 
 msgid "hBP03-002_SPSKILL_NAME"
 msgstr "狙擊"
@@ -4357,10 +4357,10 @@ msgstr "姬森璐娜"
 msgid "hBP03-012_ART_0_NAME"
 msgstr "說好了喔！"
 
-msgid "hBP03-012_BLOOM_NAME"
+msgid "hBP03-012_「開花」_NAME"
 msgstr "一起創造最棒的演唱會吧"
 
-msgid "hBP03-012_BLOOM_EFFECT"
+msgid "hBP03-012_「開花」_EFFECT"
 msgstr "此回合，自己1位裝備有粉絲卡的Holo成員的技藝+20。"
 
 msgid "hBP03-013_NAME"
@@ -4370,7 +4370,7 @@ msgid "hBP03-013_ART_0_NAME"
 msgstr "月亮銀河"
 
 msgid "hBP03-013_ART_0_EFFECT"
-msgstr "可以將自己檔案區的1張<月騎士>裝備到自己的<姬森璐娜>上。"
+msgstr "可以將自己存檔區的1張<月騎士>裝備到自己的<姬森璐娜>上。"
 
 msgid "hBP03-013_GIFT_NAME"
 msgstr "和んなたん一起去宇宙！"
@@ -4387,11 +4387,11 @@ msgstr "辛苦了喔"
 msgid "hBP03-014_ART_0_EFFECT"
 msgstr "此Holo成員裝備有<月騎士>時，此技藝+50。"
 
-msgid "hBP03-014_BLOOM_NAME"
+msgid "hBP03-014_「開花」_NAME"
 msgstr "跟著璐娜來～"
 
-msgid "hBP03-014_BLOOM_EFFECT"
-msgstr "自己的主推Holo成員是<姬森璐娜>時，可以將自己檔案區的1張<月騎士>裝備到自己的<姬森璐娜>上。"
+msgid "hBP03-014_「開花」_EFFECT"
+msgstr "自己的主推Holo成員是<姬森璐娜>時，可以將自己存檔區的1張<月騎士>裝備到自己的<姬森璐娜>上。"
 
 msgid "hBP03-016_NAME"
 msgstr "獅白牡丹"
@@ -4409,7 +4409,7 @@ msgid "hBP03-017_COLLAB_NAME"
 msgstr "準備"
 
 msgid "hBP03-017_COLLAB_EFFECT"
-msgstr "自己的主推Holo成員是<獅白牡丹>時，可以將自己聲援牌組最上方1張放入檔案區：為自己1位Holo成員回復10點HP。"
+msgstr "自己的主推Holo成員是<獅白牡丹>時，可以將自己聲援牌組最上方1張放入存檔區：為自己1位Holo成員回復10點HP。"
 
 msgid "hBP03-018_NAME"
 msgstr "獅白牡丹"
@@ -4429,11 +4429,11 @@ msgstr "流口水"
 msgid "hBP03-019_ART_0_EFFECT"
 msgstr "可以公開自己手牌中的1張<角卷綿芽>並放回牌組最下方：為此Holo成員回復20點HP。"
 
-msgid "hBP03-019_BLOOM_NAME"
+msgid "hBP03-019_「開花」_NAME"
 msgstr "唱歌是件快樂的事"
 
-msgid "hBP03-019_BLOOM_EFFECT"
-msgstr "可以將自己後備Holo成員的1張聲援放入檔案區：對手的C位Holo成員或聯動Holo成員造成30點特殊傷害。自己的開花效果「唱歌是件快樂的事」每回合只能使用1次。"
+msgid "hBP03-019_「開花」_EFFECT"
+msgstr "可以將自己後備Holo成員的1張聲援放入存檔區：對手的C位Holo成員或聯動Holo成員造成30點特殊傷害。自己的開花效果「唱歌是件快樂的事」每回合只能使用1次。"
 
 msgid "hBP03-020_NAME"
 msgstr "獅白牡丹"
@@ -4441,10 +4441,10 @@ msgstr "獅白牡丹"
 msgid "hBP03-020_ART_0_NAME"
 msgstr "搭購物車來的"
 
-msgid "hBP03-020_BLOOM_NAME"
+msgid "hBP03-020_「開花」_NAME"
 msgstr "SSSSR"
 
-msgid "hBP03-020_BLOOM_EFFECT"
+msgid "hBP03-020_「開花」_EFFECT"
 msgstr "從自己聲援牌組最上方將1張送到自己後備Holo成員的<獅白牡丹>上。"
 
 msgid "hBP03-021_NAME"
@@ -4454,13 +4454,13 @@ msgid "hBP03-021_ART_0_NAME"
 msgstr "神準"
 
 msgid "hBP03-021_ART_0_EFFECT"
-msgstr "自己的主推Holo成員是<獅白牡丹>時，可以將自己後備Holo成員的1張聲援放入檔案區：對手的C位Holo成員或聯動Holo成員造成40點特殊傷害。"
+msgstr "自己的主推Holo成員是<獅白牡丹>時，可以將自己後備Holo成員的1張聲援放入存檔區：對手的C位Holo成員或聯動Holo成員造成40點特殊傷害。"
 
-msgid "hBP03-021_BLOOM_NAME"
+msgid "hBP03-021_「開花」_NAME"
 msgstr "總會有辦法的獅白牡丹"
 
-msgid "hBP03-021_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的聲援各1張，送到自己持有#射擊的1~2位後備Holo成員上。"
+msgid "hBP03-021_「開花」_EFFECT"
+msgstr "可以將自己存檔區的聲援各1張，送到自己持有#射擊的1~2位後備Holo成員上。"
 
 msgid "hBP03-031_NAME"
 msgstr "赤井心"
@@ -4480,10 +4480,10 @@ msgstr "赤井心"
 msgid "hBP03-033_ART_0_NAME"
 msgstr "哈洽馬洽馬～！"
 
-msgid "hBP03-033_BLOOM_NAME"
+msgid "hBP03-033_「開花」_NAME"
 msgstr "全力上吧喔喔喔！"
 
-msgid "hBP03-033_BLOOM_EFFECT"
+msgid "hBP03-033_「開花」_EFFECT"
 msgstr "對手的C位Holo成員造成10點特殊傷害。若該C位Holo成員裝備有工具，則改為對其造成30點特殊傷害。"
 
 msgid "hBP03-034_NAME"
@@ -4495,11 +4495,11 @@ msgstr "Red or Rouge"
 msgid "hBP03-034_ART_0_EFFECT"
 msgstr "可以擲1次骰子：奇數時，對手的C位Holo成員與聯動Holo成員造成20點特殊傷害。偶數時，此技藝+40。"
 
-msgid "hBP03-034_BLOOM_NAME"
+msgid "hBP03-034_「開花」_NAME"
 msgstr "另一個心"
 
-msgid "hBP03-034_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的1張持有#1期生且非Buzz的[1st Holo成員或2nd Holo成員]返回手牌。"
+msgid "hBP03-034_「開花」_EFFECT"
+msgstr "可以將自己存檔區的1張持有#1期生且非Buzz的[1st Holo成員或2nd Holo成員]返回手牌。"
 
 msgid "hBP03-037_NAME"
 msgstr "茸茸・阿比斯加德"
@@ -4516,11 +4516,11 @@ msgstr "茸茸・阿比斯加德"
 msgid "hBP03-038_ART_0_NAME"
 msgstr "モココ的甜甜圈烘焙"
 
-msgid "hBP03-038_BLOOM_NAME"
+msgid "hBP03-038_「開花」_NAME"
 msgstr "是玩樂時間啦ー！"
 
-msgid "hBP03-038_BLOOM_EFFECT"
-msgstr "從Debut進行Bloom時，從自己牌組中公開1張1st Holo成員的<茸茸・阿比斯加德>，加入手牌。然後洗牌。"
+msgid "hBP03-038_「開花」_EFFECT"
+msgstr "從Debut進行「開花」時，從自己牌組中公開1張1st Holo成員的<茸茸・阿比斯加德>，加入手牌。然後洗牌。"
 
 msgid "hBP03-039_NAME"
 msgstr "茸茸・阿比斯加德"
@@ -4558,10 +4558,10 @@ msgstr "茸茸・阿比斯加德"
 msgid "hBP03-042_ART_0_NAME"
 msgstr "芙瓦瓦的森林散步"
 
-msgid "hBP03-042_BLOOM_NAME"
+msgid "hBP03-042_「開花」_NAME"
 msgstr "芙花流水"
 
-msgid "hBP03-042_BLOOM_EFFECT"
+msgid "hBP03-042_「開花」_EFFECT"
 msgstr "自己舞台上有<茸茸・阿比斯加德>時，對手的C位Holo成員或1位後備Holo成員造成20點特殊傷害。但即使擊倒也不會減少對手生命值。"
 
 msgid "hBP03-043_NAME"
@@ -4585,10 +4585,10 @@ msgstr "交給帥哥我吧"
 msgid "hBP03-049_ART_0_EFFECT"
 msgstr "對手的C位Holo成員或1位後備Holo成員，每有1位自己不同卡名的#ReGLOSS後備Holo成員，造成10點特殊傷害。"
 
-msgid "hBP03-049_BLOOM_NAME"
+msgid "hBP03-049_「開花」_NAME"
 msgstr "真是群令人傷腦筋的公主殿下"
 
-msgid "hBP03-049_BLOOM_EFFECT"
+msgid "hBP03-049_「開花」_EFFECT"
 msgstr "從自己聲援牌組中，公開1張與自己持有#ReGLOSS的C位Holo成員同色的聲援，送到自己持有#ReGLOSS的Holo成員上。然後洗牌聲援牌組。"
 
 msgid "hBP03-050_NAME"
@@ -4616,7 +4616,7 @@ msgid "hBP03-052_ART_0_NAME"
 msgstr "是那種感覺啊"
 
 msgid "hBP03-052_ART_0_EFFECT"
-msgstr "對手的C位Holo成員造成10點特殊傷害。之後，自己的主推Holo成員是<常闇永遠>時，可以將對手[C位Holo成員或聯動Holo成員]裝備的1張工具卡放入檔案區。"
+msgstr "對手的C位Holo成員造成10點特殊傷害。之後，自己的主推Holo成員是<常闇永遠>時，可以將對手[C位Holo成員或聯動Holo成員]裝備的1張工具卡放入存檔區。"
 
 msgid "hBP03-053_NAME"
 msgstr "常闇永遠"
@@ -4634,7 +4634,7 @@ msgid "hBP03-054_ART_0_NAME"
 msgstr "讓你大爆炸喔！"
 
 msgid "hBP03-054_ART_0_EFFECT"
-msgstr "可以將此Holo成員的4張聲援放入檔案區：將對手舞台上的1張聲援放回聲援牌組最下方。"
+msgstr "可以將此Holo成員的4張聲援放入存檔區：將對手舞台上的1張聲援放回聲援牌組最下方。"
 
 msgid "hBP03-054_COLLAB_NAME"
 msgstr "只有永遠才能展現的色彩"
@@ -4682,7 +4682,7 @@ msgid "hBP03-068_ART_0_NAME"
 msgstr "綿芽之歌"
 
 msgid "hBP03-068_ART_0_EFFECT"
-msgstr "自己有裝備<綿友>的Holo成員時，可以將自己檔案區的1張聲援送到自己的黃色Holo成員上。"
+msgstr "自己有裝備<綿友>的Holo成員時，可以將自己存檔區的1張聲援送到自己的黃色Holo成員上。"
 
 msgid "hBP03-069_NAME"
 msgstr "角卷綿芽"
@@ -4702,10 +4702,10 @@ msgstr "要看到最後喔，綿友！"
 msgid "hBP03-070_ART_0_EFFECT"
 msgstr "從自己聲援牌組最上方將1張送到自己後備Holo成員的<角卷綿芽>上。"
 
-msgid "hBP03-070_BLOOM_NAME"
+msgid "hBP03-070_「開花」_NAME"
 msgstr "我會盡全力唱歌跳舞！"
 
-msgid "hBP03-070_BLOOM_EFFECT"
+msgid "hBP03-070_「開花」_EFFECT"
 msgstr "自己舞台上的Holo成員在5位以下時，可以從自己牌組中公開1張Debut Holo成員的<角卷綿芽>：將公開的Holo成員登場到舞台上。然後洗牌。"
 
 msgid "hBP03-071_NAME"
@@ -4717,11 +4717,11 @@ msgstr "角卷猜拳"
 msgid "hBP03-071_ART_0_EFFECT"
 msgstr "與對手猜拳直到分出勝負：自己獲勝時，此回合，此Holo成員獲得紅+60。"
 
-msgid "hBP03-071_BLOOM_NAME"
+msgid "hBP03-071_「開花」_NAME"
 msgstr "Member sheep 歡迎回來～"
 
-msgid "hBP03-071_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的1張<綿友>返回手牌。"
+msgid "hBP03-071_「開花」_EFFECT"
+msgstr "可以將自己存檔區的1張<綿友>返回手牌。"
 
 msgid "hBP03-072_NAME"
 msgstr "角卷綿芽"
@@ -4774,10 +4774,10 @@ msgstr "阿芸達·栗絲"
 msgid "hBP03-076_ART_0_NAME"
 msgstr "噗嚕噗嚕，おつリス!!!!!"
 
-msgid "hBP03-076_BLOOM_NAME"
+msgid "hBP03-076_「開花」_NAME"
 msgstr "呀吼ー！大家好嗎？"
 
-msgid "hBP03-076_BLOOM_EFFECT"
+msgid "hBP03-076_「開花」_EFFECT"
 msgstr "從自己聲援牌組中公開1張[綠聲援或黃聲援]，送到自己的Holo成員上。然後洗牌聲援牌組。"
 
 msgid "hBP03-077_NAME"
@@ -4786,10 +4786,10 @@ msgstr "阿芸達·栗絲"
 msgid "hBP03-077_ART_0_NAME"
 msgstr "堅果"
 
-msgid "hBP03-077_BLOOM_NAME"
+msgid "hBP03-077_「開花」_NAME"
 msgstr "同期的羈絆"
 
-msgid "hBP03-077_BLOOM_EFFECT"
+msgid "hBP03-077_「開花」_EFFECT"
 msgstr "自己舞台上的Holo成員在5位以下時，可以從自己牌組中公開1張持有#ID1期生的Debut Holo成員：將公開的Holo成員登場到舞台上。然後洗牌。"
 
 msgid "hBP03-078_NAME"
@@ -4801,10 +4801,10 @@ msgstr "魔法森林的松鼠女孩"
 msgid "hBP03-078_ART_0_EFFECT"
 msgstr "■此Holo成員裝備有綠聲援時，此技藝+50。\n■此Holo成員裝備有藍聲援時，此技藝+50。"
 
-msgid "hBP03-078_BLOOM_NAME"
+msgid "hBP03-078_「開花」_NAME"
 msgstr "魔法支援"
 
-msgid "hBP03-078_BLOOM_EFFECT"
+msgid "hBP03-078_「開花」_EFFECT"
 msgstr "可以將自己持有#ID1期生的Holo成員的1張聲援，重新裝備到自己其他Holo成員上。"
 
 msgid "hBP03-083_NAME"
@@ -4817,13 +4817,13 @@ msgid "hBP03-083_GIFT_NAME"
 msgstr "搞什麼啊"
 
 msgid "hBP03-083_GIFT_EFFECT"
-msgstr "對手表現階段結束時，若該表現階段自己的生命值減少，可以將自己檔案區的1張聲援送到此Holo成員上。"
+msgstr "對手表現階段結束時，若該表現階段自己的生命值減少，可以將自己存檔區的1張聲援送到此Holo成員上。"
 
 msgid "hBP03-084_NAME"
 msgstr "豪華電腦"
 
 msgid "hBP03-084_EFFECT"
-msgstr "此卡必須將自己1張holo能量放入檔案區才能使用。\n\n從自己牌組中公開1張與自己主推Holo成員同色的1st Holo成員，加入手牌。然後洗牌。"
+msgstr "此卡必須將自己1張holo能量放入存檔區才能使用。\n\n從自己牌組中公開1張與自己主推Holo成員同色的1st Holo成員，加入手牌。然後洗牌。"
 
 msgid "hBP03-086_NAME"
 msgstr "雙螢幕電腦"
@@ -4889,25 +4889,25 @@ msgid "hBP03-105_NAME"
 msgstr "月騎士"
 
 msgid "hBP03-105_EFFECT"
-msgstr "在對手回合，此粉絲卡裝備的Holo成員受到傷害時，可以將此粉絲卡放入檔案區：此粉絲卡曾裝備的Holo成員受到的傷害-30。\n\n此粉絲卡只能裝備於自己的<姬森璐娜>，每位可裝備任意張數。"
+msgstr "在對手回合，此粉絲卡裝備的Holo成員受到傷害時，可以將此粉絲卡放入存檔區：此粉絲卡曾裝備的Holo成員受到的傷害-30。\n\n此粉絲卡只能裝備於自己的<姬森璐娜>，每位可裝備任意張數。"
 
 msgid "hBP03-106_NAME"
 msgstr "SSRB"
 
 msgid "hBP03-106_EFFECT"
-msgstr "此粉絲卡裝備的Holo成員因能力將聲援放入檔案區時，可改為將此粉絲卡放入檔案區，代替1張聲援。\n\n此粉絲卡只能裝備於自己的<獅白牡丹>，每位可裝備任意張數。"
+msgstr "此粉絲卡裝備的Holo成員因能力將聲援放入存檔區時，可改為將此粉絲卡放入存檔區，代替1張聲援。\n\n此粉絲卡只能裝備於自己的<獅白牡丹>，每位可裝備任意張數。"
 
 msgid "hBP03-108_NAME"
 msgstr "はあとん"
 
 msgid "hBP03-108_EFFECT"
-msgstr "此粉絲卡裝備的Holo成員因能力擲骰子時，可以將此粉絲卡放入檔案區：取消該次擲骰結果，從頭重擲。\n\n此粉絲卡只能裝備於自己的<赤井心>，每位可裝備任意張數。"
+msgstr "此粉絲卡裝備的Holo成員因能力擲骰子時，可以將此粉絲卡放入存檔區：取消該次擲骰結果，從頭重擲。\n\n此粉絲卡只能裝備於自己的<赤井心>，每位可裝備任意張數。"
 
 msgid "hBP03-109_NAME"
 msgstr "Ruffians"
 
 msgid "hBP03-109_EFFECT"
-msgstr "在對手回合，此粉絲卡裝備的Holo成員被擊倒時，可以將自己檔案區的1張藍色聲援送到自己的<茸茸・阿比斯加德>上。\n\n此粉絲卡只能裝備於自己的<茸茸・阿比斯加德>或<茸茸・阿比斯加德>，每位可裝備任意張數。"
+msgstr "在對手回合，此粉絲卡裝備的Holo成員被擊倒時，可以將自己存檔區的1張藍色聲援送到自己的<茸茸・阿比斯加德>上。\n\n此粉絲卡只能裝備於自己的<茸茸・阿比斯加德>或<茸茸・阿比斯加德>，每位可裝備任意張數。"
 
 msgid "hBP03-112_NAME"
 msgstr "綿友"
@@ -4945,11 +4945,11 @@ msgstr "由風真來斬"
 msgid "hBP03-024_ART_0_EFFECT"
 msgstr "此Holo成員裝備有2張以上非綠色聲援時，此技藝+50。"
 
-msgid "hBP03-024_BLOOM_NAME"
+msgid "hBP03-024_「開花」_NAME"
 msgstr "由風真來守護"
 
-msgid "hBP03-024_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的聲援各1張，分別送到自己的[<風真伊呂波>與<星街彗星>]上。"
+msgid "hBP03-024_「開花」_EFFECT"
+msgstr "可以將自己存檔區的聲援各1張，分別送到自己的[<風真伊呂波>與<星街彗星>]上。"
 
 msgid "hBP03-046_NAME"
 msgstr "火威青"
@@ -4987,10 +4987,10 @@ msgstr "日出聲援"
 msgid "hBP03-079_ART_0_EFFECT"
 msgstr "此Holo成員裝備有3張以上聲援時，此技藝+30。"
 
-msgid "hBP03-079_BLOOM_NAME"
+msgid "hBP03-079_「開花」_NAME"
 msgstr "今天是美好的一天"
 
-msgid "hBP03-079_BLOOM_EFFECT"
+msgid "hBP03-079_「開花」_EFFECT"
 msgstr "從自己聲援牌組中公開1張黃色聲援，送到此Holo成員上。然後洗牌聲援牌組。"
 
 msgid "hBP03-003_NAME"
@@ -5000,7 +5000,7 @@ msgid "hBP03-003_SKILL_NAME"
 msgstr "35P要回來了嗎!?"
 
 msgid "hBP03-003_SKILL_EFFECT"
-msgstr "[回合1次] 可以擲1次骰子：1、2、4或6點時，將自己檔案區的1張<35P>返回手牌。3或5點時，將自己檔案區的2張<35P>返回手牌。"
+msgstr "[回合1次] 可以擲1次骰子：1、2、4或6點時，將自己存檔區的1張<35P>返回手牌。3或5點時，將自己存檔區的2張<35P>返回手牌。"
 
 msgid "hBP03-003_SPSKILL_NAME"
 msgstr "永不放棄的心"
@@ -5042,7 +5042,7 @@ msgid "hBP03-023_NAME"
 msgstr "兔田佩克拉"
 
 msgid "hBP03-023_ART_0_NAME"
-msgstr "來玩卡牌ぺこ"
+msgstr "來玩卡牌peko"
 
 msgid "hBP03-023_ART_0_EFFECT"
 msgstr "此回合自己的<兔田佩克拉>曾因能力擲骰子1次以上時，此技藝+40。"
@@ -5101,10 +5101,10 @@ msgstr "與35P的紀念照"
 msgid "hBP03-029_ART_0_EFFECT"
 msgstr "此Holo成員裝備有<35P>時，此技藝+30。"
 
-msgid "hBP03-029_BLOOM_NAME"
+msgid "hBP03-029_「開花」_NAME"
 msgstr "にぇ"
 
-msgid "hBP03-029_BLOOM_EFFECT"
+msgid "hBP03-029_「開花」_EFFECT"
 msgstr "從自己牌組中公開1張<35P>，加入手牌。然後洗牌。"
 
 msgid "hBP03-030_NAME"
@@ -5129,7 +5129,7 @@ msgid "hBP03-035_ART_0_NAME"
 msgstr "挑戰者"
 
 msgid "hBP03-035_ART_0_EFFECT"
-msgstr "自己的主推Holo成員是<鷹嶺琉依>時，可以將自己2張手牌放入檔案區：抽3張牌。"
+msgstr "自己的主推Holo成員是<鷹嶺琉依>時，可以將自己2張手牌放入存檔區：抽3張牌。"
 
 msgid "hBP03-036_NAME"
 msgstr "小鳥遊琪亞拉"
@@ -5137,11 +5137,11 @@ msgstr "小鳥遊琪亞拉"
 msgid "hBP03-036_ART_0_NAME"
 msgstr "鋼之翼"
 
-msgid "hBP03-036_BLOOM_NAME"
+msgid "hBP03-036_「開花」_NAME"
 msgstr "快樂時光"
 
-msgid "hBP03-036_BLOOM_EFFECT"
-msgstr "可以從自己牌組中公開1~4張<小鳥遊琪亞拉>，放入檔案區。然後洗牌。"
+msgid "hBP03-036_「開花」_EFFECT"
+msgstr "可以從自己牌組中公開1~4張<小鳥遊琪亞拉>，放入存檔區。然後洗牌。"
 
 msgid "hBP03-044_NAME"
 msgstr "星街彗星"
@@ -5152,10 +5152,10 @@ msgstr "虛擬幽靈"
 msgid "hBP03-044_ART_0_EFFECT"
 msgstr "自己的主推Holo成員是<星街彗星>時，可以將此Holo成員的1張藍色聲援，重新裝備到自己後備Holo成員的<星街彗星>上。"
 
-msgid "hBP03-044_BLOOM_NAME"
+msgid "hBP03-044_「開花」_NAME"
 msgstr "行星舞台"
 
-msgid "hBP03-044_BLOOM_EFFECT"
+msgid "hBP03-044_「開花」_EFFECT"
 msgstr "查看自己牌組最上方4張。從中公開1張<星街彗星>，加入手牌。然後將剩餘卡片以任意順序放回牌組最下方。"
 
 msgid "hBP03-045_NAME"
@@ -5167,11 +5167,11 @@ msgstr "元氣滿滿！！"
 msgid "hBP03-045_ART_0_EFFECT"
 msgstr "對手每有1位HP減少的後備Holo成員，此技藝+10。"
 
-msgid "hBP03-045_BLOOM_NAME"
+msgid "hBP03-045_「開花」_NAME"
 msgstr "藍色之雨"
 
-msgid "hBP03-045_BLOOM_EFFECT"
-msgstr "可以將自己持有#ID的Holo成員的1張聲援放入檔案區：對手的後備Holo成員分配造成30點特殊傷害（每次10點）。但即使擊倒也不會減少對手生命值。"
+msgid "hBP03-045_「開花」_EFFECT"
+msgstr "可以將自己持有#ID的Holo成員的1張聲援放入存檔區：對手的後備Holo成員分配造成30點特殊傷害（每次10點）。但即使擊倒也不會減少對手生命值。"
 
 msgid "hBP03-057_NAME"
 msgstr "蘿蔔子"
@@ -5194,10 +5194,10 @@ msgstr "蘿蔔子"
 msgid "hBP03-059_ART_0_NAME"
 msgstr "露出笑容吧"
 
-msgid "hBP03-059_BLOOM_NAME"
+msgid "hBP03-059_「開花」_NAME"
 msgstr "PON了多少就"
 
-msgid "hBP03-059_BLOOM_EFFECT"
+msgid "hBP03-059_「開花」_EFFECT"
 msgstr "查看自己牌組最上方3張。從中公開1張持有#0期生的Holo成員，加入手牌。然後將剩餘卡片以任意順序放回牌組最下方。"
 
 msgid "hBP03-060_NAME"
@@ -5228,7 +5228,7 @@ msgid "hBP03-062_COLLAB_NAME"
 msgstr "沁音餐館"
 
 msgid "hBP03-062_COLLAB_EFFECT"
-msgstr "可以將此Holo成員的1張聲援放入檔案區：從自己牌組中公開1張持有#Gamers的Debut Holo成員，加入手牌。然後洗牌。"
+msgstr "可以將此Holo成員的1張聲援放入存檔區：從自己牌組中公開1張持有#Gamers的Debut Holo成員，加入手牌。然後洗牌。"
 
 msgid "hBP03-063_NAME"
 msgstr "戌神沁音"
@@ -5270,7 +5270,7 @@ msgid "hBP03-066_ART_0_NAME"
 msgstr "最兇天災"
 
 msgid "hBP03-066_ART_0_EFFECT"
-msgstr "此技藝的對象為對手的2nd Holo成員時，可以將此Holo成員疊加的1張1st Holo成員卡放入檔案區：此技藝+50。"
+msgstr "此技藝的對象為對手的2nd Holo成員時，可以將此Holo成員疊加的1張1st Holo成員卡放入存檔區：此技藝+50。"
 
 msgid "hBP03-066_GIFT_NAME"
 msgstr "Wonderful～♡"
@@ -5299,10 +5299,10 @@ msgstr "音乃瀨奏"
 msgid "hBP03-082_ART_0_NAME"
 msgstr "才不軟ＱＱ呢"
 
-msgid "hBP03-082_BLOOM_NAME"
+msgid "hBP03-082_「開花」_NAME"
 msgstr "因為這裡是我的舞台！"
 
-msgid "hBP03-082_BLOOM_EFFECT"
+msgid "hBP03-082_「開花」_EFFECT"
 msgstr "可以將自己舞台上的1~2張聲援，重新裝備到此Holo成員上。"
 
 msgid "hBP03-085_NAME"
@@ -5357,13 +5357,13 @@ msgid "hBP03-102_NAME"
 msgstr "肥狗"
 
 msgid "hBP03-102_EFFECT"
-msgstr "此吉祥物裝備的Holo成員的技藝+10。\n\n◆裝備於<戌神沁音>時追加能力：此吉祥物裝備的Holo成員進行聯動時，可以將自己檔案區的1張聲援送到此Holo成員上。\n\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員的技藝+10。\n\n◆裝備於<戌神沁音>時追加能力：此吉祥物裝備的Holo成員進行聯動時，可以將自己存檔區的1張聲援送到此Holo成員上。\n\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hBP03-103_NAME"
 msgstr "瘦狗"
 
 msgid "hBP03-103_EFFECT"
-msgstr "此吉祥物裝備的Holo成員的技藝+10。\n\n◆裝備於<戌神沁音>時追加能力：此吉祥物裝備的Holo成員被擊倒時，可以將自己1張holo能量放入檔案區：將此吉祥物返回手牌。\n\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員的技藝+10。\n\n◆裝備於<戌神沁音>時追加能力：此吉祥物裝備的Holo成員被擊倒時，可以將自己1張holo能量放入存檔區：將此吉祥物返回手牌。\n\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hBP03-107_NAME"
 msgstr "35P"
@@ -5666,7 +5666,7 @@ msgid "hY03-008_NAME"
 msgstr "紅聲援"
 
 msgid "hBD24-031_NAME"
-msgstr "オーロ・クロニー"
+msgstr "奧羅·克洛尼"
 
 msgid "hBD24-031_SKILL_NAME"
 msgstr "藍色強化"
@@ -5801,7 +5801,7 @@ msgid "hBD24-041_SPSKILL_EFFECT"
 msgstr "[遊戲1次]從自己牌組中公開1張紅色Holo成員，加入手牌。然後洗牌。"
 
 msgid "hBD24-042_NAME"
-msgstr "シオリ・ノヴェラ"
+msgstr "詩織·諾薇拉"
 
 msgid "hBD24-042_SKILL_NAME"
 msgstr "藍色強化"
@@ -5831,13 +5831,13 @@ msgid "hBP04-006_SPSKILL_EFFECT"
 msgstr "[遊戲1次] 自己生命值為3點以下時可以使用：此回合，自己C位Holo成員<大空昴>的技藝+100。"
 
 msgid "hBP04-050_NAME"
-msgstr "シオリ・ノヴェラ"
+msgstr "詩織·諾薇拉"
 
 msgid "hBP04-050_ART_0_NAME"
 msgstr "Shiori～n！"
 
 msgid "hBP04-051_NAME"
-msgstr "シオリ・ノヴェラ"
+msgstr "詩織·諾薇拉"
 
 msgid "hBP04-051_ART_0_NAME"
 msgstr "你不覺得這是個很棒的故事嗎？"
@@ -5846,19 +5846,19 @@ msgid "hBP04-051_ART_1_NAME"
 msgstr "無盡的求知慾"
 
 msgid "hBP04-052_NAME"
-msgstr "シオリ・ノヴェラ"
+msgstr "詩織·諾薇拉"
 
 msgid "hBP04-052_ART_0_NAME"
 msgstr "迷人的故事"
 
-msgid "hBP04-052_BLOOM_NAME"
+msgid "hBP04-052_「開花」_NAME"
 msgstr "越獄計畫"
 
-msgid "hBP04-052_BLOOM_EFFECT"
+msgid "hBP04-052_「開花」_EFFECT"
 msgstr "對手1位後備Holo成員造成20點特殊傷害。但即使擊倒也不會減少對手生命值。"
 
 msgid "hBP04-053_NAME"
-msgstr "シオリ・ノヴェラ"
+msgstr "詩織·諾薇拉"
 
 msgid "hBP04-053_ART_0_NAME"
 msgstr "回憶的書籤"
@@ -5866,10 +5866,10 @@ msgstr "回憶的書籤"
 msgid "hBP04-053_ART_0_EFFECT"
 msgstr "可以公開自己holo能量最上方1張：公開的卡片為持有#EN的Holo成員時，對手1位Holo成員造成20點特殊傷害。\n然後將公開的卡片面朝下放回holo能量最下方。"
 
-msgid "hBP04-053_BLOOM_NAME"
+msgid "hBP04-053_「開花」_NAME"
 msgstr "禁忌的知識"
 
-msgid "hBP04-053_BLOOM_EFFECT"
+msgid "hBP04-053_「開花」_EFFECT"
 msgstr "從自己聲援牌組最上方將1張送到自己持有#EN的Holo成員上。"
 
 msgid "hBP04-067_NAME"
@@ -5947,11 +5947,11 @@ msgstr "太陽少女"
 msgid "hBP04-072_ART_0_EFFECT"
 msgstr "雙方舞台上每有1張聲援，此技藝+10。但最多計算8張。"
 
-msgid "hBP04-072_BLOOM_NAME"
+msgid "hBP04-072_「開花」_NAME"
 msgstr "陽光舞台"
 
-msgid "hBP04-072_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的1張黃色聲援送到自己的Holo成員上。"
+msgid "hBP04-072_「開花」_EFFECT"
+msgstr "可以將自己存檔區的1張黃色聲援送到自己的Holo成員上。"
 
 msgid "hBP04-093_NAME"
 msgstr "Hololive 2期生"
@@ -5995,11 +5995,11 @@ msgstr "我最重要的人"
 msgid "hBP04-014_ART_0_EFFECT"
 msgstr "自己舞台上有<白上吹雪>以外的#Gamers Holo成員時，此技藝+50。"
 
-msgid "hBP04-014_BLOOM_NAME"
+msgid "hBP04-014_「開花」_NAME"
 msgstr "回來吧"
 
-msgid "hBP04-014_BLOOM_EFFECT"
-msgstr "可以將自己檔案區中1~2張持有#白上's角色的卡片返回手牌。"
+msgid "hBP04-014_「開花」_EFFECT"
+msgstr "可以將自己存檔區中1~2張持有#白上's角色的卡片返回手牌。"
 
 msgid "hBP04-015_NAME"
 msgstr "IRyS"
@@ -6011,7 +6011,7 @@ msgid "hBP04-015_ART_0_EFFECT"
 msgstr "自己舞台上每有1位持有#Promise的Holo成員，此技藝+10。但最多計算4位。"
 
 msgid "hBP04-016_NAME"
-msgstr "ラオーラ・パンテーラ"
+msgstr "拉歐拉·潘特拉"
 
 msgid "hBP04-016_ART_0_NAME"
 msgstr "加油オーラ"
@@ -6020,25 +6020,25 @@ msgid "hBP04-016_ART_0_EFFECT"
 msgstr "自己舞台上的Holo成員在5位以下時，可以從自己牌組中公開1張持有#正義的Spot Holo成員，登場到舞台上。然後洗牌。"
 
 msgid "hBP04-017_NAME"
-msgstr "ラオーラ・パンテーラ"
+msgstr "拉歐拉·潘特拉"
 
 msgid "hBP04-017_ART_0_NAME"
 msgstr "正義的粉紅豹"
 
 msgid "hBP04-018_NAME"
-msgstr "ラオーラ・パンテーラ"
+msgstr "拉歐拉·潘特拉"
 
 msgid "hBP04-018_ART_0_NAME"
 msgstr "收集情報是我的專長"
 
-msgid "hBP04-018_BLOOM_NAME"
+msgid "hBP04-018_「開花」_NAME"
 msgstr "神眼繪師"
 
-msgid "hBP04-018_BLOOM_EFFECT"
+msgid "hBP04-018_「開花」_EFFECT"
 msgstr "此回合，自己舞台上1位持有#繪畫的Holo成員的技藝+20。"
 
 msgid "hBP04-019_NAME"
-msgstr "ラオーラ・パンテーラ"
+msgstr "拉歐拉·潘特拉"
 
 msgid "hBP04-019_ART_0_NAME"
 msgstr "藝術實況主"
@@ -6061,10 +6061,10 @@ msgstr "原來我是屬於吹雪的嗎？"
 msgid "hBP04-026_ART_0_EFFECT"
 msgstr "自己舞台上有<大神澪>以外的#Gamers Holo成員時，此技藝+50。"
 
-msgid "hBP04-026_BLOOM_NAME"
+msgid "hBP04-026_「開花」_NAME"
 msgstr "吹雪是特別的存在"
 
-msgid "hBP04-026_BLOOM_EFFECT"
+msgid "hBP04-026_「開花」_EFFECT"
 msgstr "自己的主推Holo成員是<白上吹雪>時，從自己聲援牌組中公開1張白聲援，送到自己的<白上吹雪>上。然後洗牌聲援牌組。"
 
 msgid "hBP04-032_NAME"
@@ -6103,11 +6103,11 @@ msgstr "社長拳"
 msgid "hBP04-035_ART_0_EFFECT"
 msgstr "對手的聯動Holo成員造成20點特殊傷害。"
 
-msgid "hBP04-035_BLOOM_NAME"
+msgid "hBP04-035_「開花」_NAME"
 msgstr "極限餐料理人"
 
-msgid "hBP04-035_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的1張<極限餐>返回手牌。"
+msgid "hBP04-035_「開花」_EFFECT"
+msgstr "可以將自己存檔區的1張<極限餐>返回手牌。"
 
 msgid "hBP04-036_NAME"
 msgstr "一條莉莉華"
@@ -6118,10 +6118,10 @@ msgstr "嘻嘻"
 msgid "hBP04-036_ART_0_EFFECT"
 msgstr "此技藝的對象為對手的聯動Holo成員時，抽1張牌。"
 
-msgid "hBP04-036_BLOOM_NAME"
+msgid "hBP04-036_「開花」_NAME"
 msgstr "獨佔美食"
 
-msgid "hBP04-036_BLOOM_EFFECT"
+msgid "hBP04-036_「開花」_EFFECT"
 msgstr "對手的聯動Holo成員造成20點特殊傷害。"
 
 msgid "hBP04-037_NAME"
@@ -6133,10 +6133,10 @@ msgstr "哦？想打架嗎？"
 msgid "hBP04-037_ART_0_EFFECT"
 msgstr "對手的C位Holo成員造成50點特殊傷害。之後，此回合自己曾使用<極限餐>時，對手的C位Holo成員或聯動Holo成員造成30點特殊傷害。"
 
-msgid "hBP04-037_BLOOM_NAME"
+msgid "hBP04-037_「開花」_NAME"
 msgstr "KPG"
 
-msgid "hBP04-037_BLOOM_EFFECT"
+msgid "hBP04-037_「開花」_EFFECT"
 msgstr "可以擲1次骰子：4點以上時，若對手沒有聯動Holo成員，對手必須將其1位後備Holo成員移動到聯動位置（此移動不視為聯動）。"
 
 msgid "hBP04-039_NAME"
@@ -6160,11 +6160,11 @@ msgstr "凱拉·可瓦爾斯基亞"
 msgid "hBP04-041_ART_0_NAME"
 msgstr "無聲的笑"
 
-msgid "hBP04-041_BLOOM_NAME"
+msgid "hBP04-041_「開花」_NAME"
 msgstr "JDON my soul"
 
-msgid "hBP04-041_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的1張工具卡返回手牌。"
+msgid "hBP04-041_「開花」_EFFECT"
+msgstr "可以將自己存檔區的1張工具卡返回手牌。"
 
 msgid "hBP04-042_NAME"
 msgstr "凱拉·可瓦爾斯基亞"
@@ -6208,11 +6208,11 @@ msgstr "遊戲直播中"
 msgid "hBP04-060_ART_0_EFFECT"
 msgstr "對手的C位Holo成員與聯動Holo成員，每有1張其裝備的聲援，造成10點特殊傷害。"
 
-msgid "hBP04-060_BLOOM_NAME"
+msgid "hBP04-060_「開花」_NAME"
 msgstr "聲援逆轉"
 
-msgid "hBP04-060_BLOOM_EFFECT"
-msgstr "可以將對手檔案區的1張聲援送到對手的C位Holo成員上。"
+msgid "hBP04-060_「開花」_EFFECT"
+msgstr "可以將對手存檔區的1張聲援送到對手的C位Holo成員上。"
 
 msgid "hBP04-061_NAME"
 msgstr "克雷西·奧莉"
@@ -6223,11 +6223,11 @@ msgstr "HOLORO之魂"
 msgid "hBP04-061_ART_0_EFFECT"
 msgstr "自己舞台上此Holo成員以外每有1位持有#ID2期生的2nd Holo成員，此技藝+20。"
 
-msgid "hBP04-061_BLOOM_NAME"
+msgid "hBP04-061_「開花」_NAME"
 msgstr "請看看奧莉！"
 
-msgid "hBP04-061_BLOOM_EFFECT"
-msgstr "因自己的SP主推技能「復活的奧莉」進行Bloom時，為自己1位<克雷西·奧莉>回復所有HP。"
+msgid "hBP04-061_「開花」_EFFECT"
+msgstr "因自己的SP主推技能「復活的奧莉」進行「開花」時，為自己1位<克雷西·奧莉>回復所有HP。"
 
 msgid "hBP04-062_NAME"
 msgstr "森美聲"
@@ -6236,7 +6236,7 @@ msgid "hBP04-062_ART_0_NAME"
 msgstr "最後一杯"
 
 msgid "hBP04-062_ART_0_EFFECT"
-msgstr "查看自己牌組最上方2張。從中將1張放入檔案區。然後將剩餘卡片放回牌組最上方。"
+msgstr "查看自己牌組最上方2張。從中將1張放入存檔區。然後將剩餘卡片放回牌組最上方。"
 
 msgid "hBP04-062_GIFT_NAME"
 msgstr "永遠的休息"
@@ -6271,10 +6271,10 @@ msgstr "夏色祭"
 msgid "hBP04-081_ART_0_NAME"
 msgstr "我會全力歌唱的ッ！！"
 
-msgid "hBP04-081_BLOOM_NAME"
+msgid "hBP04-081_「開花」_NAME"
 msgstr "為了傳達給我最喜歡的你"
 
-msgid "hBP04-081_BLOOM_EFFECT"
+msgid "hBP04-081_「開花」_EFFECT"
 msgstr "從自己聲援牌組中公開1張黃色聲援，送到此Holo成員上。然後洗牌聲援牌組。"
 
 msgid "hBP04-082_NAME"
@@ -6286,10 +6286,10 @@ msgstr "找到喜歡的了"
 msgid "hBP04-082_ART_0_EFFECT"
 msgstr "此Holo成員每有1張聲援，此技藝+20。"
 
-msgid "hBP04-082_BLOOM_NAME"
+msgid "hBP04-082_「開花」_NAME"
 msgstr "Let's Shopping"
 
-msgid "hBP04-082_BLOOM_EFFECT"
+msgid "hBP04-082_「開花」_EFFECT"
 msgstr "自己舞台上每有1位不同卡名的#1期生 Holo成員，可以擲1次骰子：每出現1次4點以上，從自己聲援牌組最上方將1張送到此Holo成員上。"
 
 msgid "hBP04-083_NAME"
@@ -6316,10 +6316,10 @@ msgstr "桃鈴音音"
 msgid "hBP04-085_ART_0_NAME"
 msgstr "要好好努力!!!!!!"
 
-msgid "hBP04-085_BLOOM_NAME"
+msgid "hBP04-085_「開花」_NAME"
 msgstr "心情超棒!!!!!!!!!!!!!!"
 
-msgid "hBP04-085_BLOOM_EFFECT"
+msgid "hBP04-085_「開花」_EFFECT"
 msgstr "從自己聲援牌組中，公開1張與自己舞台上持有#5期生的Holo成員同色的聲援，送到自己持有#5期生的Holo成員上。然後洗牌聲援牌組。"
 
 msgid "hBP04-086_NAME"
@@ -6332,7 +6332,7 @@ msgid "hBP04-086_ART_1_NAME"
 msgstr "閃亮亮力量"
 
 msgid "hBP04-086_ART_1_EFFECT"
-msgstr "自己檔案區每有1張聲援，此技藝+20。但最多計算5張。"
+msgstr "自己存檔區每有1張聲援，此技藝+20。但最多計算5張。"
 
 msgid "hBP04-087_NAME"
 msgstr "伊莉莎白·蘿絲·布拉德弗雷姆"
@@ -6410,7 +6410,7 @@ msgid "hBP04-007_SPSKILL_NAME"
 msgstr "思考人生的人才會贏"
 
 msgid "hBP04-007_SPSKILL_EFFECT"
-msgstr "[遊戲1次] 將自己檔案區的聲援，各1張送到自己所有裝備有<古代武器>的Holo成員上。"
+msgstr "[遊戲1次] 將自己存檔區的聲援，各1張送到自己所有裝備有<古代武器>的Holo成員上。"
 
 msgid "hBP04-073_NAME"
 msgstr "安雅·梅爾菲莎"
@@ -6449,7 +6449,7 @@ msgid "hBP04-076_COLLAB_NAME"
 msgstr "我獻給大家的歌"
 
 msgid "hBP04-076_COLLAB_EFFECT"
-msgstr "可以將自己檔案區的1張<古代武器>裝備到自己的<安雅·梅爾菲莎>上。"
+msgstr "可以將自己存檔區的1張<古代武器>裝備到自己的<安雅·梅爾菲莎>上。"
 
 msgid "hBP04-077_NAME"
 msgstr "安雅·梅爾菲莎"
@@ -6479,7 +6479,7 @@ msgid "hBP04-099_NAME"
 msgstr "古代武器"
 
 msgid "hBP04-099_EFFECT"
-msgstr "在對手回合，此工具裝備的Holo成員被擊倒時，可以將自己1張手牌放入檔案區：將此工具返回手牌。\n\n◆裝備於1st以上的<安雅·梅爾菲莎>時追加能力：自己舞台上每有1張<古代武器>，此工具裝備的Holo成員的技藝+10。\n\n工具卡每位Holo成員只能裝備1張。"
+msgstr "在對手回合，此工具裝備的Holo成員被擊倒時，可以將自己1張手牌放入存檔區：將此工具返回手牌。\n\n◆裝備於1st以上的<安雅·梅爾菲莎>時追加能力：自己舞台上每有1張<古代武器>，此工具裝備的Holo成員的技藝+10。\n\n工具卡每位Holo成員只能裝備1張。"
 
 msgid "hBP04-002_NAME"
 msgstr "儒烏風亭螺鈿"
@@ -6488,13 +6488,13 @@ msgid "hBP04-002_SKILL_NAME"
 msgstr "ReGLOSS的風流雅士"
 
 msgid "hBP04-002_SKILL_EFFECT"
-msgstr "[回合1次] 將自己檔案區的1張聲援送到自己持有#ReGLOSS的Holo成員上。"
+msgstr "[回合1次] 將自己存檔區的1張聲援送到自己持有#ReGLOSS的Holo成員上。"
 
 msgid "hBP04-002_SPSKILL_NAME"
 msgstr "用剩下的時間轉圈圈"
 
 msgid "hBP04-002_SPSKILL_EFFECT"
-msgstr "[遊戲1次] 將自己檔案區的1~4張持有#蘑菇的事件卡返回手牌。然後每返回2張卡片，抽1張牌。"
+msgstr "[遊戲1次] 將自己存檔區的1~4張持有#蘑菇的事件卡返回手牌。然後每返回2張卡片，抽1張牌。"
 
 msgid "hBP04-020_NAME"
 msgstr "儒烏風亭螺鈿"
@@ -6545,7 +6545,7 @@ msgid "hBP04-024_ART_0_NAME"
 msgstr "喝采反芻"
 
 msgid "hBP04-024_ART_0_EFFECT"
-msgstr "可以將自己檔案區的1張聲援送到此Holo成員上。"
+msgstr "可以將自己存檔區的1張聲援送到此Holo成員上。"
 
 msgid "hBP04-024_GIFT_NAME"
 msgstr "冷靜沉著"
@@ -6592,10 +6592,10 @@ msgstr "塞西莉亞·伊默格林"
 msgid "hBP04-030_ART_0_NAME"
 msgstr "可以聽我說嗎？"
 
-msgid "hBP04-030_BLOOM_NAME"
+msgid "hBP04-030_「開花」_NAME"
 msgstr "我想到了這樣的旋律"
 
-msgid "hBP04-030_BLOOM_EFFECT"
+msgid "hBP04-030_「開花」_EFFECT"
 msgstr "選擇自己舞台上的1~2張聲援，分配並重新裝備到自己的Holo成員上。"
 
 msgid "hBP04-031_NAME"
@@ -6638,13 +6638,13 @@ msgid "hBP04-065_ART_0_NAME"
 msgstr "礦石與開採者"
 
 msgid "hBP04-065_ART_0_EFFECT"
-msgstr "自己檔案區有紅聲援時，此技藝+20。"
+msgstr "自己存檔區有紅聲援時，此技藝+20。"
 
-msgid "hBP04-065_BLOOM_NAME"
+msgid "hBP04-065_「開花」_NAME"
 msgstr "絕世的光輝"
 
-msgid "hBP04-065_BLOOM_EFFECT"
-msgstr "可以將自己Holo成員的1張紅聲援放入檔案區：抽2張牌。"
+msgid "hBP04-065_「開花」_EFFECT"
+msgstr "可以將自己Holo成員的1張紅聲援放入存檔區：抽2張牌。"
 
 msgid "hBP04-066_NAME"
 msgstr "古石碧珠"
@@ -6653,13 +6653,13 @@ msgid "hBP04-066_ART_0_NAME"
 msgstr "希望這份光輝能傳達出去"
 
 msgid "hBP04-066_ART_0_EFFECT"
-msgstr "對手檔案區每有1張聲援，此技藝+10。"
+msgstr "對手存檔區每有1張聲援，此技藝+10。"
 
-msgid "hBP04-066_BLOOM_NAME"
+msgid "hBP04-066_「開花」_NAME"
 msgstr "『感情結晶體』"
 
-msgid "hBP04-066_BLOOM_EFFECT"
-msgstr "計算自己手牌數量，可以將所有手牌放入檔案區：每放入1張卡片，抽1張牌。自己的開花效果『感情結晶體』每回合只能使用1次。"
+msgid "hBP04-066_「開花」_EFFECT"
+msgstr "計算自己手牌數量，可以將所有手牌放入存檔區：每放入1張卡片，抽1張牌。自己的開花效果『感情結晶體』每回合只能使用1次。"
 
 msgid "hBP04-005_NAME"
 msgstr "拉普拉斯·達克尼斯"
@@ -6706,14 +6706,14 @@ msgstr "拉普拉斯·達克尼斯"
 msgid "hBP04-057_ART_0_NAME"
 msgstr "讓你們見識最棒的舞台！！"
 
-msgid "hBP04-057_BLOOM_NAME"
+msgid "hBP04-057_「開花」_NAME"
 msgstr "holoX集合"
 
 msgid "hBP04-058_ART_0_NAME"
 msgstr "吾輩に勝つつもりか?"
 
-msgid "hBP04-057_BLOOM_EFFECT"
-msgstr "可以擲1次骰子：奇數時，將自己檔案區的1張持有#秘密結社holoX的Holo成員返回手牌。偶數時，將自己檔案區的1張持有#秘密結社holoX的Holo成員放回牌組最上方。"
+msgid "hBP04-057_「開花」_EFFECT"
+msgstr "可以擲1次骰子：奇數時，將自己存檔區的1張持有#秘密結社holoX的Holo成員返回手牌。偶數時，將自己存檔區的1張持有#秘密結社holoX的Holo成員放回牌組最上方。"
 
 msgid "hBP04-058_NAME"
 msgstr "拉普拉斯·達克尼斯"
@@ -6733,11 +6733,11 @@ msgstr "吾輩最強傳說"
 msgid "hBP04-059_ART_0_EFFECT"
 msgstr "對手的C位Holo成員，造成與此回合自己因能力擲骰子次數x10點的特殊傷害。"
 
-msgid "hBP04-059_BLOOM_NAME"
+msgid "hBP04-059_「開花」_NAME"
 msgstr "Yes My Dark!"
 
-msgid "hBP04-059_BLOOM_EFFECT"
-msgstr "將自己1張手牌放入檔案區，可擲3次骰子：每出現1次奇數，抽1張牌。自己的開花效果「Yes My Dark!」每回合只能使用1次。"
+msgid "hBP04-059_「開花」_EFFECT"
+msgstr "將自己1張手牌放入存檔區，可擲3次骰子：每出現1次奇數，抽1張牌。自己的開花效果「Yes My Dark!」每回合只能使用1次。"
 
 msgid "hBP04-103_NAME"
 msgstr "烏鴉"
@@ -6803,12 +6803,12 @@ msgid "hBP04-048_ART_0_NAME"
 msgstr "願今日也有祝福"
 
 msgid "hBP04-048_ART_0_EFFECT"
-msgstr "可以將此Holo成員的1張聲援放入檔案區：對手的C位Holo成員或1位後備Holo成員造成30點特殊傷害。"
+msgstr "可以將此Holo成員的1張聲援放入存檔區：對手的C位Holo成員或1位後備Holo成員造成30點特殊傷害。"
 
-msgid "hBP04-048_BLOOM_NAME"
+msgid "hBP04-048_「開花」_NAME"
 msgstr "ユニーリア的千金"
 
-msgid "hBP04-048_BLOOM_EFFECT"
+msgid "hBP04-048_「開花」_EFFECT"
 msgstr "從自己聲援牌組最上方將1張送到自己裝備有<雪民>的<雪花菈米>上。"
 
 msgid "hBP04-090_NAME"
@@ -6836,15 +6836,15 @@ msgid "hBP04-106_EFFECT"
 msgstr "此粉絲卡裝備的Holo成員對對手C位Holo成員造成的特殊傷害+10。\n\n此粉絲卡只能裝備於自己的<雪花菈米>，每位可裝備任意張數。"
 
 msgid "hBP04-027_NAME"
-msgstr "パヴォリア・レイネ"
+msgstr "帕沃莉亞·蕾內"
 
 msgid "hBP04-027_ART_0_NAME"
 msgstr "Terima Kasih"
 
-msgid "hBP04-027_BLOOM_NAME"
+msgid "hBP04-027_「開花」_NAME"
 msgstr "HOLORO"
 
-msgid "hBP04-027_BLOOM_EFFECT"
+msgid "hBP04-027_「開花」_EFFECT"
 msgstr "從自己聲援牌組最上方將1張送到自己的<克雷西·奧莉>或<安雅·梅爾菲莎>上。"
 
 msgid "hBP04-038_NAME"
@@ -6856,10 +6856,10 @@ msgstr "色色的♡♡"
 msgid "hBP04-038_ART_0_EFFECT"
 msgstr "此Holo成員疊加的每1張Holo成員卡，此技藝+20。"
 
-msgid "hBP04-038_BLOOM_NAME"
+msgid "hBP04-038_「開花」_NAME"
 msgstr "在看哪裡呢～！！❤️♡"
 
-msgid "hBP04-038_BLOOM_EFFECT"
+msgid "hBP04-038_「開花」_EFFECT"
 msgstr "對手的C位Holo成員與聯動Holo成員造成10點特殊傷害。"
 
 msgid "hBP04-095_NAME"
@@ -6914,7 +6914,7 @@ msgid "hBP04-011_ART_0_NAME"
 msgstr "助手君っ要看好喔！"
 
 msgid "hBP04-011_ART_0_EFFECT"
-msgstr "可以將自己檔案區的1張<こより的助手君>，裝備到自己其他的<博衣可佑理>上。"
+msgstr "可以將自己存檔區的1張<こより的助手君>，裝備到自己其他的<博衣可佑理>上。"
 
 msgid "hBP04-012_NAME"
 msgstr "博衣可佑理"
@@ -6925,10 +6925,10 @@ msgstr "助手君和こよ會永遠在一起喔！"
 msgid "hBP04-012_ART_0_EFFECT"
 msgstr "此Holo成員裝備有<こより的助手君>時，抽1張牌。"
 
-msgid "hBP04-012_BLOOM_NAME"
+msgid "hBP04-012_「開花」_NAME"
 msgstr "はい！はい！はい！はい！"
 
-msgid "hBP04-012_BLOOM_EFFECT"
+msgid "hBP04-012_「開花」_EFFECT"
 msgstr "從自己牌組中公開1張持有#こよ實驗室的支援卡，加入手牌。然後洗牌。"
 
 msgid "hBP04-013_NAME"
@@ -6950,7 +6950,7 @@ msgid "hBP04-097_NAME"
 msgstr "綠色試管"
 
 msgid "hBP04-097_EFFECT"
-msgstr "此工具裝備的Holo成員的技藝+10。\n\n◆裝備於1st以上的<博衣可佑理>時追加能力：在自己的主要階段，可以將此工具裝備的Holo成員的1張聲援放入檔案區：將自己1位休息中的#秘密結社holoX Holo成員變為活動狀態。\n\n工具卡每位Holo成員只能裝備1張。"
+msgstr "此工具裝備的Holo成員的技藝+10。\n\n◆裝備於1st以上的<博衣可佑理>時追加能力：在自己的主要階段，可以將此工具裝備的Holo成員的1張聲援放入存檔區：將自己1位休息中的#秘密結社holoX Holo成員變為活動狀態。\n\n工具卡每位Holo成員只能裝備1張。"
 
 msgid "hBP04-100_NAME"
 msgstr "ココロ"
@@ -6962,7 +6962,7 @@ msgid "hBP04-105_NAME"
 msgstr "こより的助手君"
 
 msgid "hBP04-105_EFFECT"
-msgstr "從手牌或檔案區裝備此粉絲卡到Holo成員上時，可以將自己舞台上的1張聲援，重新裝備到此粉絲卡裝備的Holo成員上。\n\n此粉絲卡只能裝備於自己的<博衣可佑理>，每位可裝備任意張數。"
+msgstr "從手牌或存檔區裝備此粉絲卡到Holo成員上時，可以將自己舞台上的1張聲援，重新裝備到此粉絲卡裝備的Holo成員上。\n\n此粉絲卡只能裝備於自己的<博衣可佑理>，每位可裝備任意張數。"
 
 msgid "hY01-006_NAME"
 msgstr "白聲援"
@@ -6983,7 +6983,7 @@ msgid "hY06-004_NAME"
 msgstr "黃聲援"
 
 msgid "hBD24-043_NAME"
-msgstr "ラオーラ・パンテーラ"
+msgstr "拉歐拉·潘特拉"
 
 msgid "hBD24-043_SKILL_NAME"
 msgstr "白色強化"
@@ -7303,17 +7303,17 @@ msgstr "團長很幸福喔"
 msgid "hBP05-011_ART_0_EFFECT"
 msgstr "自己舞台上每有1位不同卡名的#3期生 Holo成員，此技藝+10。"
 
-msgid "hBP05-011_BLOOM_NAME"
+msgid "hBP05-011_「開花」_NAME"
 msgstr "因為有大家在"
 
-msgid "hBP05-011_BLOOM_EFFECT"
+msgid "hBP05-011_「開花」_EFFECT"
 msgstr "此回合，自己持有#3期生的[C位Holo成員與聯動Holo成員]的技藝+10。"
 
 msgid "hBP05-014_NAME"
 msgstr "兔田佩克拉"
 
 msgid "hBP05-014_ART_0_NAME"
-msgstr "可愛嗎ぺこ？"
+msgstr "可愛嗎peko？"
 
 msgid "hBP05-014_ART_0_EFFECT"
 msgstr "可以擲1次骰子：偶數的話，抽1張牌。"
@@ -7328,7 +7328,7 @@ msgid "hBP05-015_ART_0_EFFECT"
 msgstr "自己舞台上有3位以上#3期生 Holo成員的話，從自己聲援牌組最上方將1張送到此Holo成員上。"
 
 msgid "hBP05-015_ART_1_NAME"
-msgstr "不需要嗎ぺこ？"
+msgstr "不需要嗎peko？"
 
 msgid "hBP05-015_ART_1_EFFECT"
 msgstr "自己的主推Holo成員顏色是白色的話，抽1張牌。"
@@ -7352,12 +7352,12 @@ msgid "hBP05-060_ART_0_NAME"
 msgstr "艷麗的宴會"
 
 msgid "hBP05-060_ART_0_EFFECT"
-msgstr "可以將自己1張手牌放入檔案區：對手的C位Holo成員或聯動Holo成員造成20點特殊傷害。"
+msgstr "可以將自己1張手牌放入存檔區：對手的C位Holo成員或聯動Holo成員造成20點特殊傷害。"
 
-msgid "hBP05-060_BLOOM_NAME"
+msgid "hBP05-060_「開花」_NAME"
 msgstr "月光"
 
-msgid "hBP05-060_BLOOM_EFFECT"
+msgid "hBP05-060_「開花」_EFFECT"
 msgstr "從自己牌組中將1張[<納瑞莎·雷文克羅夫特的杖>或<Jailbird>]加入手牌。然後洗牌。"
 
 msgid "hBP05-080_NAME"
@@ -7438,10 +7438,10 @@ msgstr "大家的Super Chat"
 msgid "hSD08-003_ART_0_EFFECT"
 msgstr "自己舞台上每有1位持有#夏日的Holo成員，此技藝+10。"
 
-msgid "hSD08-003_BLOOM_NAME"
+msgid "hSD08-003_「開花」_NAME"
 msgstr "要商量喔"
 
-msgid "hSD08-003_BLOOM_EFFECT"
+msgid "hSD08-003_「開花」_EFFECT"
 msgstr "從自己牌組中公開1張持有#4期生的Debut Holo成員，加入手牌。然後洗牌。"
 
 msgid "hSD08-004_NAME"
@@ -7469,7 +7469,7 @@ msgid "hSD08-005_GIFT_NAME"
 msgstr "什麼都能裝的束口袋"
 
 msgid "hSD08-005_GIFT_EFFECT"
-msgstr "[限聯動位置]在對手回合，自己的Holo成員被擊倒時，若自己的生命值等於或少於對手，可以將自己檔案區的1張卡名包含「電腦」的道具卡返回手牌。"
+msgstr "[限聯動位置]在對手回合，自己的Holo成員被擊倒時，若自己的生命值等於或少於對手，可以將自己存檔區的1張卡名包含「電腦」的道具卡返回手牌。"
 
 msgid "hSD08-006_NAME"
 msgstr "常闇永遠"
@@ -7493,7 +7493,7 @@ msgid "hSD08-007_COLLAB_NAME"
 msgstr "和大家的夏日祭典"
 
 msgid "hSD08-007_COLLAB_EFFECT"
-msgstr "可以將自己檔案區的1張聲援送到自己持有#4期生的2nd Holo成員上。"
+msgstr "可以將自己存檔區的1張聲援送到自己持有#4期生的2nd Holo成員上。"
 
 msgid "hSD09-001_NAME"
 msgstr "寶鐘瑪琳"
@@ -7508,7 +7508,7 @@ msgid "hSD09-001_SPSKILL_NAME"
 msgstr "來！再一次！"
 
 msgid "hSD09-001_SPSKILL_EFFECT"
-msgstr "[遊戲1次] 將自己檔案區的1張紅色Holo成員返回手牌。"
+msgstr "[遊戲1次] 將自己存檔區的1張紅色Holo成員返回手牌。"
 
 msgid "hSD09-002_NAME"
 msgstr "寶鐘瑪琳"
@@ -7565,10 +7565,10 @@ msgid "hSD09-006_NAME"
 msgstr "兔田佩克拉"
 
 msgid "hSD09-006_ART_0_NAME"
-msgstr "您點的刨冰ぺこ！"
+msgstr "您點的刨冰peko！"
 
 msgid "hSD09-006_COLLAB_NAME"
-msgstr "你們快來工作ぺこー!!!"
+msgstr "你們快來工作pekoー!!!"
 
 msgid "hSD09-006_COLLAB_EFFECT"
 msgstr "若自己是後攻且為第一回合，從自己聲援牌組最上方將1張送到自己持有#3期生的Holo成員上。"
@@ -7628,7 +7628,7 @@ msgid "hBP05-002_SPSKILL_NAME"
 msgstr "Kekuatan Iofi"
 
 msgid "hBP05-002_SPSKILL_EFFECT"
-msgstr "[遊戲1次] 將自己舞台上的2張聲援放入檔案區，可從自己牌組中將2張持有#ID1期生的Holo成員加入手牌。然後洗牌。"
+msgstr "[遊戲1次] 將自己舞台上的2張聲援放入存檔區，可從自己牌組中將2張持有#ID1期生的Holo成員加入手牌。然後洗牌。"
 
 msgid "hBP05-003_NAME"
 msgstr "尾丸波爾卡"
@@ -7643,7 +7643,7 @@ msgid "hBP05-003_SPSKILL_NAME"
 msgstr "成功體驗ー!!!"
 
 msgid "hBP05-003_SPSKILL_EFFECT"
-msgstr "[遊戲1次] 查看自己牌組最上方7張。從中將各1張[<尾丸波爾卡>與工作人員]加入手牌。然後將剩餘卡片放入檔案區。"
+msgstr "[遊戲1次] 查看自己牌組最上方7張。從中將各1張[<尾丸波爾卡>與工作人員]加入手牌。然後將剩餘卡片放入存檔區。"
 
 msgid "hBP05-019_NAME"
 msgstr "艾拉妮·伊歐菲芙婷"
@@ -7655,7 +7655,7 @@ msgid "hBP05-019_COLLAB_NAME"
 msgstr "和イオフィ出門"
 
 msgid "hBP05-019_COLLAB_EFFECT"
-msgstr "可以將此Holo成員的1張聲援放入檔案區：為自己1位持有#ID1期生的Holo成員回復30點HP。"
+msgstr "可以將此Holo成員的1張聲援放入存檔區：為自己1位持有#ID1期生的Holo成員回復30點HP。"
 
 msgid "hBP05-020_NAME"
 msgstr "艾拉妮·伊歐菲芙婷"
@@ -7675,11 +7675,11 @@ msgstr "艾拉妮·伊歐菲芙婷"
 msgid "hBP05-021_ART_0_NAME"
 msgstr "抹茶超喜歡 ( ´ڡ`* )"
 
-msgid "hBP05-021_BLOOM_NAME"
+msgid "hBP05-021_「開花」_NAME"
 msgstr "你好，寶貝！"
 
-msgid "hBP05-021_BLOOM_EFFECT"
-msgstr "可以將自己檔案區的1張聲援送到此Holo成員上。"
+msgid "hBP05-021_「開花」_EFFECT"
+msgstr "可以將自己存檔區的1張聲援送到此Holo成員上。"
 
 msgid "hBP05-022_NAME"
 msgstr "艾拉妮·伊歐菲芙婷"
@@ -7706,7 +7706,7 @@ msgid "hBP05-023_GIFT_NAME"
 msgstr "宇宙人的公主殿下"
 
 msgid "hBP05-023_GIFT_EFFECT"
-msgstr "此Holo成員擊倒對手Holo成員時，可以將自己檔案區的1張聲援送到自己持有#ID1期生的Holo成員上。"
+msgstr "此Holo成員擊倒對手Holo成員時，可以將自己存檔區的1張聲援送到自己持有#ID1期生的Holo成員上。"
 
 msgid "hBP05-025_NAME"
 msgstr "亞綺·羅森塔爾"
@@ -7724,7 +7724,7 @@ msgid "hBP05-026_COLLAB_NAME"
 msgstr "暮光度假村"
 
 msgid "hBP05-026_COLLAB_EFFECT"
-msgstr "將自己檔案區的1張<石斧>裝備到自己的<亞綺·羅森塔爾>上。"
+msgstr "將自己存檔區的1張<石斧>裝備到自己的<亞綺·羅森塔爾>上。"
 
 msgid "hBP05-027_NAME"
 msgstr "亞綺·羅森塔爾"
@@ -7735,11 +7735,11 @@ msgstr "One for All"
 msgid "hBP05-027_ART_0_EFFECT"
 msgstr "此技藝擊倒對手Holo成員時，抽1張牌。之後，若自己的主推Holo成員是<亞綺·羅森塔爾>，為自己所有Holo成員回復20點HP。"
 
-msgid "hBP05-027_BLOOM_NAME"
+msgid "hBP05-027_「開花」_NAME"
 msgstr "遊戲？運動？露營？！"
 
-msgid "hBP05-027_BLOOM_EFFECT"
-msgstr "可以將此Holo成員裝備的1張工具卡放入檔案區：從自己牌組中將1張[Holo成員或工具]加入手牌。然後洗牌。"
+msgid "hBP05-027_「開花」_EFFECT"
+msgstr "可以將此Holo成員裝備的1張工具卡放入存檔區：從自己牌組中將1張[Holo成員或工具]加入手牌。然後洗牌。"
 
 msgid "hBP05-030_NAME"
 msgstr "尾丸波爾卡"
@@ -7769,12 +7769,12 @@ msgid "hBP05-032_ART_0_NAME"
 msgstr "早晨的波爾卡 ※含些許虛構"
 
 msgid "hBP05-032_ART_0_EFFECT"
-msgstr "可以將自己1張手牌放入檔案區：對手的C位Holo成員或聯動Holo成員造成10點特殊傷害。"
+msgstr "可以將自己1張手牌放入存檔區：對手的C位Holo成員或聯動Holo成員造成10點特殊傷害。"
 
-msgid "hBP05-032_BLOOM_NAME"
+msgid "hBP05-032_「開花」_NAME"
 msgstr "與波爾卡的平凡假日"
 
-msgid "hBP05-032_BLOOM_EFFECT"
+msgid "hBP05-032_「開花」_EFFECT"
 msgstr "對手的聯動Holo成員造成20點特殊傷害。"
 
 msgid "hBP05-033_NAME"
@@ -7784,7 +7784,7 @@ msgid "hBP05-033_ART_0_NAME"
 msgstr "櫻花，好美！"
 
 msgid "hBP05-033_ART_0_EFFECT"
-msgstr "可以擲1次骰子：每1點，將自己牌組最上方1張放入檔案區。之後，若自己檔案區有10張以上卡片，此技藝+10。"
+msgstr "可以擲1次骰子：每1點，將自己牌組最上方1張放入存檔區。之後，若自己存檔區有10張以上卡片，此技藝+10。"
 
 msgid "hBP05-033_ART_1_NAME"
 msgstr "明年也想和你一起來看"
@@ -7799,13 +7799,13 @@ msgid "hBP05-034_ART_0_NAME"
 msgstr "準備好了嗎？"
 
 msgid "hBP05-034_ART_0_EFFECT"
-msgstr "若自己的主推Holo成員是<尾丸波爾卡>，自己檔案區每有10張卡片，此技藝+30。"
+msgstr "若自己的主推Holo成員是<尾丸波爾卡>，自己存檔區每有10張卡片，此技藝+30。"
 
-msgid "hBP05-034_BLOOM_NAME"
+msgid "hBP05-034_「開花」_NAME"
 msgstr "久等了～！"
 
-msgid "hBP05-034_BLOOM_EFFECT"
-msgstr "[限C位位置]可以將任意張數的手牌放入檔案區。每放入1張卡片，將自己檔案區的1張<座員>返回手牌。"
+msgid "hBP05-034_「開花」_EFFECT"
+msgstr "[限C位位置]可以將任意張數的手牌放入存檔區。每放入1張卡片，將自己存檔區的1張<座員>返回手牌。"
 
 msgid "hBP05-047_NAME"
 msgstr "可波·卡娜埃露"
@@ -7838,13 +7838,13 @@ msgid "hBP05-049_ART_0_NAME"
 msgstr "描摹雨跡"
 
 msgid "hBP05-049_ART_0_EFFECT"
-msgstr "若對手所有後備Holo成員的HP合計減少80點以上，可以將自己檔案區的1張聲援送到自己的<可波·卡娜埃露>上。"
+msgstr "若對手所有後備Holo成員的HP合計減少80點以上，可以將自己存檔區的1張聲援送到自己的<可波·卡娜埃露>上。"
 
 msgid "hBP05-049_ART_1_NAME"
 msgstr "迴響的雨聲"
 
 msgid "hBP05-049_ART_1_EFFECT"
-msgstr "可以將此Holo成員的2張聲援放入檔案區：對手所有後備Holo成員造成30點特殊傷害。但即使擊倒也不會減少對手生命值。"
+msgstr "可以將此Holo成員的2張聲援放入存檔區：對手所有後備Holo成員造成30點特殊傷害。但即使擊倒也不會減少對手生命值。"
 
 msgid "hY05-007_NAME"
 msgstr "紫聲援"
@@ -7862,7 +7862,7 @@ msgid "hBP05-082_NAME"
 msgstr "亞綺·羅森塔爾的斧頭"
 
 msgid "hBP05-082_EFFECT"
-msgstr "此卡必須將自己1張手牌或自己舞台上的1張<石斧>放入檔案區才能使用。\n\n此工具裝備的Holo成員的技藝+10。\n\n◆裝備於2nd以上的<亞綺·羅森塔爾>時追加能力：此工具裝備的Holo成員的技藝+40。\n\n工具卡每位Holo成員只能裝備1張。"
+msgstr "此卡必須將自己1張手牌或自己舞台上的1張<石斧>放入存檔區才能使用。\n\n此工具裝備的Holo成員的技藝+10。\n\n◆裝備於2nd以上的<亞綺·羅森塔爾>時追加能力：此工具裝備的Holo成員的技藝+40。\n\n工具卡每位Holo成員只能裝備1張。"
 
 msgid "hBP05-001_NAME"
 msgstr "白銀諾艾爾"
@@ -7928,7 +7928,7 @@ msgid "hBP05-017_ART_0_NAME"
 msgstr "復古浪漫"
 
 msgid "hBP05-017_ART_0_EFFECT"
-msgstr "可以將自己檔案區的1張<月騎士>裝備到此Holo成員上。"
+msgstr "可以將自己存檔區的1張<月騎士>裝備到此Holo成員上。"
 
 msgid "hBP05-017_ART_1_NAME"
 msgstr "パクパク"
@@ -7967,7 +7967,7 @@ msgid "hBP05-061_ART_0_NAME"
 msgstr "Unleashed Charm"
 
 msgid "hBP05-061_ART_0_EFFECT"
-msgstr "可以將自己1～3張手牌放入檔案區：此回合，每放入1張卡片，自己舞台上1位持有#歌的Holo成員的技藝+20。"
+msgstr "可以將自己1～3張手牌放入存檔區：此回合，每放入1張卡片，自己舞台上1位持有#歌的Holo成員的技藝+20。"
 
 msgid "hBP05-061_GIFT_NAME"
 msgstr "DEO"
@@ -7984,10 +7984,10 @@ msgstr "謝謝大家"
 msgid "hBP05-062_ART_0_EFFECT"
 msgstr "對手的C位Holo成員或聯動Holo成員，每有1位自己舞台上持有#歌的1st Holo成員，造成20點特殊傷害。"
 
-msgid "hBP05-062_BLOOM_NAME"
+msgid "hBP05-062_「開花」_NAME"
 msgstr "交到好多朋友了"
 
-msgid "hBP05-062_BLOOM_EFFECT"
+msgid "hBP05-062_「開花」_EFFECT"
 msgstr "從自己牌組中將最多2張持有#歌且非Buzz的1st Holo成員加入手牌。然後洗牌。"
 
 msgid "hBP05-072_NAME"
@@ -8021,13 +8021,13 @@ msgid "hBP05-083_NAME"
 msgstr "納瑞莎·雷文克羅夫特的杖"
 
 msgid "hBP05-083_EFFECT"
-msgstr "此工具裝備的Holo成員的技藝+10。\n\n◆裝備於2nd以上的<納瑞莎·雷文克羅夫特>時追加能力[限C位・聯動位置][回合1次]：此工具裝備的Holo成員因能力將自己的手牌放入檔案區時，對手的C位Holo成員或聯動Holo成員造成20點特殊傷害。\n\n工具卡每位Holo成員只能裝備1張。"
+msgstr "此工具裝備的Holo成員的技藝+10。\n\n◆裝備於2nd以上的<納瑞莎·雷文克羅夫特>時追加能力[限C位・聯動位置][回合1次]：此工具裝備的Holo成員因能力將自己的手牌放入存檔區時，對手的C位Holo成員或聯動Holo成員造成20點特殊傷害。\n\n工具卡每位Holo成員只能裝備1張。"
 
 msgid "hBP05-084_NAME"
 msgstr "角卷綿芽的豎琴"
 
 msgid "hBP05-084_EFFECT"
-msgstr "此工具裝備的Holo成員的技藝+10。\n\n◆裝備於2nd以上的<角卷綿芽>時追加能力：\n\n■自己舞台上有<綿友>時，此工具裝備的Holo成員的技藝+10。\n\n■此工具裝備的Holo成員使用技藝時，可以將自己檔案區的1張聲援送到自己的<角卷綿芽>上。\n\n工具卡每位Holo成員只能裝備1張。"
+msgstr "此工具裝備的Holo成員的技藝+10。\n\n◆裝備於2nd以上的<角卷綿芽>時追加能力：\n\n■自己舞台上有<綿友>時，此工具裝備的Holo成員的技藝+10。\n\n■此工具裝備的Holo成員使用技藝時，可以將自己存檔區的1張聲援送到自己的<角卷綿芽>上。\n\n工具卡每位Holo成員只能裝備1張。"
 
 msgid "hBP05-087_NAME"
 msgstr "Jailbird"
@@ -8084,7 +8084,7 @@ msgid "hBP05-016_NAME"
 msgstr "兔田佩克拉"
 
 msgid "hBP05-016_ART_0_NAME"
-msgstr "崇拜兔田女神ぺこ"
+msgstr "崇拜兔田女神peko"
 
 msgid "hBP05-016_ART_0_EFFECT"
 msgstr "此Holo成員疊加的每1張Holo成員卡，可以擲1次骰子：每1點，此技藝+10。"
@@ -8096,7 +8096,7 @@ msgid "hBP05-016_GIFT_EFFECT"
 msgstr "此Holo成員使用技藝時，若該技藝擲出的骰子點數為奇數，抽1張牌。若為偶數，抽2張牌。"
 
 msgid "hBP05-018_NAME"
-msgstr "ベスティア・ゼータ"
+msgstr "維斯提亞·澤塔"
 
 msgid "hBP05-018_ART_0_NAME"
 msgstr "去海邊吧！"
@@ -8117,7 +8117,7 @@ msgid "hBP05-028_ART_0_NAME"
 msgstr "我們的起點從這裡開始"
 
 msgid "hBP05-028_ART_0_EFFECT"
-msgstr "可以將自己的<獅白牡丹>的1張聲援放入檔案區：對手的C位Holo成員造成30點特殊傷害。"
+msgstr "可以將自己的<獅白牡丹>的1張聲援放入存檔區：對手的C位Holo成員造成30點特殊傷害。"
 
 msgid "hBP05-028_GIFT_NAME"
 msgstr "稍微努力了一下"
@@ -8149,10 +8149,10 @@ msgstr "不能愛～！"
 msgid "hBP05-046_ART_0_EFFECT"
 msgstr "自己舞台上有2nd Holo成員持有#5期生時，對手1位Holo成員造成20點特殊傷害。"
 
-msgid "hBP05-046_BLOOM_NAME"
+msgid "hBP05-046_「開花」_NAME"
 msgstr "菈米醬しか～？"
 
-msgid "hBP05-046_BLOOM_EFFECT"
+msgid "hBP05-046_「開花」_EFFECT"
 msgstr "從自己牌組中將1張<雪民>加入手牌。然後洗牌。"
 
 msgid "hBP05-050_NAME"
@@ -8180,7 +8180,7 @@ msgid "hBP05-063_COLLAB_NAME"
 msgstr "在家悠閒"
 
 msgid "hBP05-063_COLLAB_EFFECT"
-msgstr "可以將此Holo成員的1張聲援放入檔案區：從自己牌組中公開1張與自己舞台上所有Holo成員不同卡名的Debut Holo成員，加入手牌。然後洗牌。"
+msgstr "可以將此Holo成員的1張聲援放入存檔區：從自己牌組中公開1張與自己舞台上所有Holo成員不同卡名的Debut Holo成員，加入手牌。然後洗牌。"
 
 msgid "hBP05-064_NAME"
 msgstr "不知火芙蕾雅"
@@ -8219,7 +8219,7 @@ msgid "hBP05-066_GIFT_NAME"
 msgstr "冬之旅"
 
 msgid "hBP05-066_GIFT_EFFECT"
-msgstr "[限聯動位置]自己持有#3期生的C位Holo成員使用技藝時，可以將自己1張手牌放入檔案區：抽1張牌。"
+msgstr "[限聯動位置]自己持有#3期生的C位Holo成員使用技藝時，可以將自己1張手牌放入存檔區：抽1張牌。"
 
 msgid "hBP05-067_NAME"
 msgstr "不知火芙蕾雅"
@@ -8234,7 +8234,7 @@ msgid "hBP05-067_GIFT_NAME"
 msgstr "多彩直播"
 
 msgid "hBP05-067_GIFT_EFFECT"
-msgstr "此Holo成員使用技藝時，可以將此Holo成員的2張聲援送到自己1位後備Holo成員上。之後，將自己檔案區中1張與送出聲援的Holo成員同卡名的1st Holo成員返回手牌。"
+msgstr "此Holo成員使用技藝時，可以將此Holo成員的2張聲援送到自己1位後備Holo成員上。之後，將自己存檔區中1張與送出聲援的Holo成員同卡名的1st Holo成員返回手牌。"
 
 msgid "hBP05-073_NAME"
 msgstr "阿芸達·栗絲"
@@ -8309,7 +8309,7 @@ msgid "hBP05-005_SPSKILL_NAME"
 msgstr "巧可っとクッキング"
 
 msgid "hBP05-005_SPSKILL_EFFECT"
-msgstr "[遊戲1次]將自己檔案區的1～4張持有#食物的事件卡返回手牌。之後，此回合，自己舞台上所有持有#料理的Holo成員的技藝+40。"
+msgstr "[遊戲1次]將自己存檔區的1～4張持有#食物的事件卡返回手牌。之後，此回合，自己舞台上所有持有#料理的Holo成員的技藝+40。"
 
 msgid "hBP05-013_NAME"
 msgstr "時乃空"
@@ -8360,7 +8360,7 @@ msgid "hBP05-035_ART_0_NAME"
 msgstr "啊嗯嗯嗯"
 
 msgid "hBP05-035_ART_0_EFFECT"
-msgstr "可以將自己2張手牌放入檔案區：對手的C位Holo成員或聯動Holo成員造成50點特殊傷害。自己舞台上有<35P>時，再抽1張牌。"
+msgstr "可以將自己2張手牌放入存檔區：對手的C位Holo成員或聯動Holo成員造成50點特殊傷害。自己舞台上有<35P>時，再抽1張牌。"
 
 msgid "hBP05-035_GIFT_NAME"
 msgstr "現在只是在練習..."
@@ -8384,13 +8384,13 @@ msgid "hBP05-037_ART_0_NAME"
 msgstr "Non-Limit Boost"
 
 msgid "hBP05-037_ART_0_EFFECT"
-msgstr "若此Holo成員同時裝備有紅聲援與藍聲援，可以將自己檔案區的2張聲援送到此Holo成員上。若只裝備其中一種，可以將自己檔案區的1張聲援送到此Holo成員上。"
+msgstr "若此Holo成員同時裝備有紅聲援與藍聲援，可以將自己存檔區的2張聲援送到此Holo成員上。若只裝備其中一種，可以將自己存檔區的1張聲援送到此Holo成員上。"
 
 msgid "hBP05-037_ART_1_NAME"
 msgstr "Shout in Crisis"
 
 msgid "hBP05-037_ART_1_EFFECT"
-msgstr "將此Holo成員的聲援放入檔案區。"
+msgstr "將此Holo成員的聲援放入存檔區。"
 
 msgid "hBP05-039_NAME"
 msgstr "一條莉莉華"
@@ -8420,7 +8420,7 @@ msgid "hBP05-040_COLLAB_NAME"
 msgstr "商業夥伴"
 
 msgid "hBP05-040_COLLAB_EFFECT"
-msgstr "若自己生命值為3點以下，可以將自己此回合Bloom過的C位Holo成員[<櫻巫女>或<星街彗星>]，使用手牌中的Holo成員再進行1次Bloom。"
+msgstr "若自己生命值為3點以下，可以將自己此回合「開花」過的C位Holo成員[<櫻巫女>或<星街彗星>]，使用手牌中的Holo成員再進行1次「開花」。"
 
 msgid "hBP05-041_NAME"
 msgstr "貓又小粥"
@@ -8450,7 +8450,7 @@ msgid "hBP05-043_ART_0_NAME"
 msgstr "還能繼續玩吧～？"
 
 msgid "hBP05-043_ART_0_EFFECT"
-msgstr "可以將此Holo成員的1張聲援放入檔案區：對手的C位Holo成員與1位後備Holo成員造成10點特殊傷害。"
+msgstr "可以將此Holo成員的1張聲援放入存檔區：對手的C位Holo成員與1位後備Holo成員造成10點特殊傷害。"
 
 msgid "hBP05-043_GIFT_NAME"
 msgstr "選我不就好了～？"
@@ -8467,10 +8467,10 @@ msgstr "Don't Stop Gaming！"
 msgid "hBP05-044_ART_0_EFFECT"
 msgstr "對手1位Holo成員造成10點特殊傷害。"
 
-msgid "hBP05-044_BLOOM_NAME"
+msgid "hBP05-044_「開花」_NAME"
 msgstr "便當時間...？"
 
-msgid "hBP05-044_BLOOM_EFFECT"
+msgid "hBP05-044_「開花」_EFFECT"
 msgstr "對手的C位Holo成員與1位後備Holo成員造成10點特殊傷害。自己的開花效果「便當時間...？」每回合只能使用1次。"
 
 msgid "hBP05-045_NAME"
@@ -8480,7 +8480,7 @@ msgid "hBP05-045_ART_0_NAME"
 msgstr "要不要試著愛上我看看？"
 
 msgid "hBP05-045_ART_0_EFFECT"
-msgstr "對手1位Holo成員造成20點特殊傷害。之後，可以將自己檔案區的1張聲援送到自己持有#Gamers的後備Holo成員上。"
+msgstr "對手1位Holo成員造成20點特殊傷害。之後，可以將自己存檔區的1張聲援送到自己持有#Gamers的後備Holo成員上。"
 
 msgid "hBP05-045_GIFT_NAME"
 msgstr "能做自己的地方"
@@ -8495,12 +8495,12 @@ msgid "hBP05-051_ART_0_NAME"
 msgstr "香檳香檳！"
 
 msgid "hBP05-051_ART_0_EFFECT"
-msgstr "自己舞台上有3位以上持有#酒精的Holo成員時，可以將自己檔案區的1張聲援送到自己持有#酒精的後備Holo成員上。"
+msgstr "自己舞台上有3位以上持有#酒精的Holo成員時，可以將自己存檔區的1張聲援送到自己持有#酒精的後備Holo成員上。"
 
-msgid "hBP05-051_BLOOM_NAME"
+msgid "hBP05-051_「開花」_NAME"
 msgstr "只看著我的眼睛"
 
-msgid "hBP05-051_BLOOM_EFFECT"
+msgid "hBP05-051_「開花」_EFFECT"
 msgstr "查看自己牌組最上方3張。從中將1張持有#酒精的Holo成員加入手牌。然後將剩餘卡片以任意順序放回牌組最下方。"
 
 msgid "hBP05-052_NAME"
@@ -8513,7 +8513,7 @@ msgid "hBP05-052_COLLAB_NAME"
 msgstr "秘密的保健室"
 
 msgid "hBP05-052_COLLAB_EFFECT"
-msgstr "自己檔案區有事件卡時，對手的C位Holo成員造成10點特殊傷害。"
+msgstr "自己存檔區有事件卡時，對手的C位Holo成員造成10點特殊傷害。"
 
 msgid "hBP05-053_NAME"
 msgstr "癒月巧可"
@@ -8561,7 +8561,7 @@ msgid "hBP05-056_ART_1_NAME"
 msgstr "依偎在夜裡"
 
 msgid "hBP05-056_ART_1_EFFECT"
-msgstr "可以將自己2張手牌放入檔案區：將自己檔案區的1張持有#料理的Holo成員返回手牌。"
+msgstr "可以將自己2張手牌放入存檔區：將自己存檔區的1張持有#料理的Holo成員返回手牌。"
 
 msgid "hBP05-068_NAME"
 msgstr "白上吹雪"
@@ -8597,7 +8597,7 @@ msgid "hBP05-070_ART_0_NAME"
 msgstr "歡迎光臨吹雪咖啡廳"
 
 msgid "hBP05-070_ART_0_EFFECT"
-msgstr "選擇自己檔案區中任意數量的持有#白上's角色的[吉祥物與粉絲]，分配並裝備到自己的Holo成員上。"
+msgstr "選擇自己存檔區中任意數量的持有#白上's角色的[吉祥物與粉絲]，分配並裝備到自己的Holo成員上。"
 
 msgid "hBP05-070_ART_1_NAME"
 msgstr "國王兼咖啡廳經營者"
@@ -8614,10 +8614,10 @@ msgstr "YB-2"
 msgid "hBP05-071_ART_0_EFFECT"
 msgstr "此回合，自己舞台上1位持有#Gamers的Holo成員的技藝+30。"
 
-msgid "hBP05-071_BLOOM_NAME"
+msgid "hBP05-071_「開花」_NAME"
 msgstr "戌神族"
 
-msgid "hBP05-071_BLOOM_EFFECT"
+msgid "hBP05-071_「開花」_EFFECT"
 msgstr "從自己牌組中將1張持有#Gamers且非Buzz的1st Holo成員加入手牌。然後洗牌。"
 
 msgid "hBP05-076_NAME"
@@ -8630,13 +8630,13 @@ msgid "hBP05-079_NAME"
 msgstr "み俺恥"
 
 msgid "hBP05-079_EFFECT"
-msgstr "抽2張牌。之後，若在前一個對手回合自己的Holo成員被擊倒，且自己的生命值少於對手，將檔案區的1張聲援送到自己1位Holo成員上。"
+msgstr "抽2張牌。之後，若在前一個對手回合自己的Holo成員被擊倒，且自己的生命值少於對手，將存檔區的1張聲援送到自己1位Holo成員上。"
 
 msgid "hBP05-085_NAME"
 msgstr "みこだにぇー"
 
 msgid "hBP05-085_EFFECT"
-msgstr "此吉祥物裝備的Holo成員的HP+10。\n\n◆裝備於<櫻巫女>時追加能力：在對手回合，此吉祥物裝備的Holo成員被擊倒時，對手必須將其1張手牌放入檔案區。\n\n吉祥物卡每位Holo成員只能裝備1張。"
+msgstr "此吉祥物裝備的Holo成員的HP+10。\n\n◆裝備於<櫻巫女>時追加能力：在對手回合，此吉祥物裝備的Holo成員被擊倒時，對手必須將其1張手牌放入存檔區。\n\n吉祥物卡每位Holo成員只能裝備1張。"
 
 msgid "hBP05-077_NAME"
 msgstr "笨蛋組馬戲團"
