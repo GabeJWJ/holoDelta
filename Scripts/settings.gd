@@ -12,7 +12,7 @@ extends Node
 
 var settings = {}
 @onready var json = JSON.new()
-var languages = [["en","English"], ["ja","日本語"], ["ko","한글"], ["es", "Español"], ["fr","Français"], ["vi","Tiếng Việt"]] #Contains both the locale code and the user-friendly text for buttons
+var languages = [["en","English"], ["ja","日本語"], ["ko","한글"], ["es", "Español"], ["fr","Français"], ["vi","Tiếng Việt"], ["zh_TW","繁體中文"]] #Contains both the locale code and the user-friendly text for buttons
 enum bloomCode {OK,Instant,Skip,No} #OK - can bloom normally, Instant - can bloom on something played this turn, Skip - can bloom a 2nd on debut, No - can't bloom
 var client_version = FileAccess.get_file_as_string("res://client_version.txt")
 var card_version = "Not Found"

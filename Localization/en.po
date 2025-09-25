@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: holodelta\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-08-23 14:11-0400\n"
+"PO-Revision-Date: 2025-09-24 20:57-0400\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Language: en_US\n"
@@ -16,6 +16,190 @@ msgstr ""
 "X-Crowdin-File: template.pot\n"
 "X-Crowdin-File-ID: 6\n"
 "X-Generator: Poedit 3.5\n"
+
+#: Scenes/board.tscn
+msgid "TITLE"
+msgstr "holoDelta"
+
+#: Scenes/board.tscn
+msgid "SUBTITLE"
+msgstr "An unofficial Hololive OCG simulator"
+
+#: Scenes/board.tscn
+msgid "DEBUG"
+msgstr "Quick Refresh"
+
+#: Scenes/board.tscn
+msgid "DECK_CREATE"
+msgstr "Create/Edit Deck"
+
+#: Scenes/board.tscn
+msgid "COSMETICS"
+msgstr "Cosmetics"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "OPTION_EN"
+msgstr "Only EN"
+
+#: Scenes/board.tscn
+msgid "INFO"
+msgstr "Info"
+
+#: Scenes/board.tscn
+msgid "LOBBY_CREATE"
+msgstr "Create Lobby"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_JOIN"
+msgstr "Join Lobby"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_SPECTATE"
+msgstr "Spectate Game"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "PLAYERS_ONLINE"
+msgstr "{amount} players online"
+
+#: Scenes/board.tscn
+msgid "INFO_DLOC"
+msgstr "Deck Location"
+
+#: Scenes/board.tscn
+msgid "INFO_CANCEL"
+msgstr "Close"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_GAME_OPTIONS"
+msgstr "Game Options"
+
+#: Scenes/board.tscn
+msgid "OPTION_UNREVEALED"
+msgstr "Allow Unrevealed Cards"
+
+#: Scenes/board.tscn
+msgid "OPTION_LANGUAGE"
+msgstr "Match Card Language"
+
+#: Scenes/board.tscn
+msgid "OPTION_PROXY"
+msgstr "Allow Proxies"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_AUDIO_OPTIONS"
+msgstr "Audio Options"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_KEYBINDINGS"
+msgstr "Keybindings"
+
+#: Scenes/board.tscn
+msgid "ACTION_DRAW"
+msgstr "Draw"
+
+#: Scenes/board.tscn
+msgid "ACTION_CHEER"
+msgstr "Cheer Phase"
+
+#: Scenes/board.tscn
+msgid "ACTION_RESET"
+msgstr "Reset Phase"
+
+#: Scenes/board.tscn
+msgid "ACTION_TABS"
+msgstr "Switch Tabs"
+
+#: Scenes/board.tscn
+msgid "ACTION_LOCK"
+msgstr "Lock Info Panel"
+
+#: Scenes/board.tscn
+msgid "ACTION_LSTEP"
+msgstr "Last Phase"
+
+#: Scenes/board.tscn
+msgid "ACTION_NSTEP"
+msgstr "Next Phase"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_PUBLIC_LOBBIES_FOUND"
+msgstr "{amount} Public Lobbies Found"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_LOBBYCODE"
+msgstr "Enter Lobby Code"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SEARCHING"
+msgstr "Searching..."
+
+#: Scenes/board.tscn
+msgid "LOBBY_REFRESH"
+msgstr "Refresh"
+
+#: Scenes/board.tscn
+msgid "LOBBY_BACK"
+msgstr "Back"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SETTINGS"
+msgstr "Lobby Settings"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_PRIVATE"
+msgstr "Private"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_ALLOWSPECTATORS"
+msgstr "Allow Spectators"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST"
+msgstr "Banlist"
+
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_NONE"
+msgstr "No Banlist"
+
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT"
+msgstr "Current"
+
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT_EN"
+msgstr "Current (EN)"
+
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_UNRELEASED"
+msgstr "Current + Unreleased"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "LOBBY_GAMECODE"
+msgstr "Enter Game Code"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM"
+msgstr "Load Playmat from file"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM_DEFAULT"
+msgstr "Playmat to Default"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D"
+msgstr "Load Die from file"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D_DEFAULT"
+msgstr "Die to Default"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_CANCEL"
+msgstr "Close"
+
+#: Scenes/board.tscn
+msgid "EXIT"
+msgstr "Exit Game"
 
 #: Scenes/board.tscn
 msgid "SEND_CHAT"
@@ -61,14 +245,6 @@ msgstr "Perf."
 msgid "STEP6"
 msgstr "End"
 
-#: Scenes/board.tscn
-msgid "TITLE"
-msgstr "holoDelta"
-
-#: Scenes/board.tscn
-msgid "SUBTITLE"
-msgstr "An unofficial Hololive OCG simulator"
-
 #: Scenes/board.tscn Scenes/side.tscn
 msgid "RPS_ROCK"
 msgstr "Rock"
@@ -84,166 +260,6 @@ msgstr "Scissors"
 #: Scenes/board.tscn Scripts/side.gd Scripts/Multiplayer.gd
 msgid "RPS_WAIT"
 msgstr "Waiting for opponent..."
-
-#: Scenes/board.tscn
-msgid "SETTINGS_GAME_OPTIONS"
-msgstr "Game Options"
-
-#: Scenes/board.tscn
-msgid "DECK_CREATE"
-msgstr "Create/Edit Deck"
-
-#: Scenes/board.tscn
-msgid "DEBUG"
-msgstr "Quick Refresh"
-
-#: Scenes/board.tscn
-msgid "LOBBY_CREATE"
-msgstr "Create Lobby"
-
-#: Scenes/board.tscn
-msgid "SETTINGS_AUDIO_OPTIONS"
-msgstr "Audio Options"
-
-#: Scenes/board.tscn
-msgid "SETTINGS_KEYBINDINGS"
-msgstr "Keybindings"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "PLAYERS_ONLINE"
-msgstr "{amount} players online"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_JOIN"
-msgstr "Join Lobby"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_SPECTATE"
-msgstr "Spectate Game"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_PRIVATE"
-msgstr "Private"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_ALLOWSPECTATORS"
-msgstr "Allow Spectators"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST"
-msgstr "Banlist"
-
-#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_NONE"
-msgstr "No Banlist"
-
-#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_CURRENT"
-msgstr "Current"
-
-#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_CURRENT_EN"
-msgstr "Current (EN)"
-
-#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_UNRELEASED"
-msgstr "Current + Unreleased"
-
-#: Scenes/board.tscn
-msgid "LOBBY_BACK"
-msgstr "Back"
-
-#: Scenes/board.tscn
-msgid "LOBBY_PUBLIC_LOBBIES_FOUND"
-msgstr "{amount} Public Lobbies Found"
-
-#: Scenes/board.tscn
-msgid "EXIT"
-msgstr "Exit Game"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "OPTION_EN"
-msgstr "Only EN"
-
-#: Scenes/board.tscn
-msgid "OPTION_UNREVEALED"
-msgstr "Allow Unrevealed Cards"
-
-#: Scenes/board.tscn
-msgid "OPTION_LANGUAGE"
-msgstr "Match Card Language"
-
-#: Scenes/board.tscn
-msgid "OPTION_PROXY"
-msgstr "Allow Proxies"
-
-#: Scenes/board.tscn
-msgid "ACTION_DRAW"
-msgstr "Draw"
-
-#: Scenes/board.tscn
-msgid "ACTION_CHEER"
-msgstr "Cheer Phase"
-
-#: Scenes/board.tscn
-msgid "ACTION_RESET"
-msgstr "Reset Phase"
-
-#: Scenes/board.tscn
-msgid "ACTION_TABS"
-msgstr "Switch Tabs"
-
-#: Scenes/board.tscn
-msgid "ACTION_LOCK"
-msgstr "Lock Info Panel"
-
-#: Scenes/board.tscn
-msgid "ACTION_LSTEP"
-msgstr "Last Phase"
-
-#: Scenes/board.tscn
-msgid "ACTION_NSTEP"
-msgstr "Next Phase"
-
-#: Scenes/board.tscn
-msgid "COSMETICS"
-msgstr "Cosmetics"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_CANCEL"
-msgstr "Close"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_PM"
-msgstr "Load Playmat from file"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_D"
-msgstr "Load Die from file"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_PM_DEFAULT"
-msgstr "Playmat to Default"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_D_DEFAULT"
-msgstr "Die to Default"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_LOBBYCODE"
-msgstr "Enter Lobby Code"
-
-#: Scenes/board.tscn
-msgid "LOBBY_SEARCHING"
-msgstr "Searching..."
-
-#: Scenes/board.tscn
-msgid "LOBBY_REFRESH"
-msgstr "Refresh"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_GAMECODE"
-msgstr "Enter Game Code"
 
 #: Scenes/board.tscn
 msgid "LOBBY_HOST"
@@ -272,18 +288,6 @@ msgstr "Start Game"
 #: Scenes/board.tscn Scenes/side.tscn
 msgid "OK"
 msgstr "OK"
-
-#: Scenes/board.tscn
-msgid "INFO"
-msgstr "Info"
-
-#: Scenes/board.tscn
-msgid "INFO_DLOC"
-msgstr "Deck Location"
-
-#: Scenes/board.tscn
-msgid "INFO_CANCEL"
-msgstr "Close"
 
 #: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_GAMESTART_SPECTATE"

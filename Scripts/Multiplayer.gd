@@ -102,7 +102,7 @@ func _ready():
 	%CheckUnrevealed.button_pressed = Settings.settings.AllowUnrevealed
 	%AllowProxies.button_pressed = Settings.settings.AllowProxies
 	%AllowProxies.disabled = !Settings.settings.UseCardLanguage
-	%AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1
+	%AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1.0
 	%UseCardLanguage.button_pressed = Settings.settings.UseCardLanguage
 	%OnlyEN.button_pressed = Settings.settings.OnlyEN
 	
@@ -134,10 +134,10 @@ func _ready():
 	%LanguageSelect.text = Settings.get_language()
 	%InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"en", "es", "fr", "ko", "vi":
-			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
+		_:
+			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	
 	#Setup Info
 	if Database.setup:
@@ -340,7 +340,6 @@ func switch_menu(m: String, close_if_open = true):
 
 func _on_options_pressed():
 	switch_menu("option")
-	print($WebSocket.socket.get_close_code())
 
 func _on_check_unrevealed_pressed():
 	Settings.update_settings("AllowUnrevealed",%CheckUnrevealed.button_pressed)
@@ -351,7 +350,7 @@ func _on_allow_proxies_pressed():
 func _on_use_card_language_pressed() -> void:
 	Settings.update_settings("UseCardLanguage",%UseCardLanguage.button_pressed)
 	%AllowProxies.disabled = !Settings.settings.UseCardLanguage
-	%AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1
+	%AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1.0
 
 func _on_en_only_pressed() -> void:
 	Settings.update_settings("OnlyEN", %OnlyEN.button_pressed)
@@ -362,10 +361,10 @@ func _on_language_selected(index_selected):
 	%LanguageSelect.text = Settings.languages[index_selected][1]
 	%InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"en", "es", "fr", "ko", "vi":
-			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
+		_:
+			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	fix_font_size()
 	_restart()
 
