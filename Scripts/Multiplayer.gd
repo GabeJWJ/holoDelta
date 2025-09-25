@@ -44,16 +44,16 @@ var rps = false
 @onready var lobby_host_ready = %LobbyHostReady
 @onready var lobby_host_ready_text = %HostReadyLabel
 @onready var lobby_host_deck_select = %HostDeckSelect
-@onready var lobby_chosen_name = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer2/JoinName
-@onready var lobby_chosen_options = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2/JoinOptions
-@onready var lobby_chosen_ready = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2/JoinOptions/Ready
-@onready var lobby_chosen_ready_text = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer2/Ready
-@onready var lobby_chosen_deck_select = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2/JoinOptions/DeckSelect
-@onready var lobby_waiting = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/ScrollContainer/VBoxContainer
-@onready var lobby_code = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/LobbyCode
-@onready var lobby_game_start = $CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/HBoxContainer/StartGame
-@onready var lobby_deckerror = $CanvasLayer/LobbyScreen/DeckErrors
-@onready var lobby_deckerrorlist = $CanvasLayer/LobbyScreen/DeckErrors/ScrollContainer/Label
+@onready var lobby_chosen_name = %JoinName
+@onready var lobby_chosen_options = %JoinOptions
+@onready var lobby_chosen_ready = %LobbyJoinReady
+@onready var lobby_chosen_ready_text = %JoinReady
+@onready var lobby_chosen_deck_select = %JoinDeckSelect
+@onready var lobby_waiting = %WaitingPlayersVBox
+@onready var lobby_code = %LobbyCode
+@onready var lobby_game_start = %StartGame
+@onready var lobby_deckerror = %DeckErrors
+@onready var lobby_deckerrorlist = %DeckErrorList
 @onready var player_count = %PlayerCount
 @onready var lobby_join_button = %LobbyJoin
 @onready var spectate_button = %GameSpectate
@@ -340,7 +340,7 @@ func switch_menu(m: String, close_if_open = true):
 
 func _on_options_pressed():
 	switch_menu("option")
-	print($WebSocket.socket.get_close_code())
+	# print($WebSocket.socket.get_close_code())
 
 func _on_check_unrevealed_pressed():
 	Settings.update_settings("AllowUnrevealed",%CheckUnrevealed.button_pressed)
@@ -546,7 +546,7 @@ func fix_font_size():
 #region WebSocket
 
 func send_command(supertype:String, command:String, data=null) -> void:
-	if %LobbyCreate.disabled:
+	if %LobbyCreate.disabled: # This is the button to open the create lobby menu
 		#Really hacky way to check if the websocket is connected. I'm tired.
 		return
 	if !data:
@@ -677,6 +677,7 @@ func _on_websocket_received(raw_data):
 #region Lobbies
 
 func lobby_command(command:String, data:Dictionary):
+	print("Received lobby command: ", command, " data: ", data)
 	match command:
 		"Update":
 			if "state" in data:
@@ -845,6 +846,7 @@ func update_spectate_from_code_button(current_string:String) -> void:
 	game_list_code_button.disabled = (current_string == "")
 
 func show_lobby(host_name:String, lobby_id:String, you_are_host:bool, waiting:Dictionary, chosen, you_are_chosen:bool, host_ready:bool, chosen_ready:bool):
+	# print("Attempting to show lobby, lobby ID is: ", current_lobby)
 	if !current_lobby:
 		clear_lobby_menu()
 		
@@ -859,6 +861,7 @@ func show_lobby(host_name:String, lobby_id:String, you_are_host:bool, waiting:Di
 		%LobbyScreen.visible=true
 
 func update_lobby(lobby_id:String, waiting:Dictionary, chosen, you_are_chosen:bool, host_ready:bool, chosen_ready:bool, reason:String):
+	# print("Attempting to update lobby, lobby ID is: ", current_lobby, " Only running if lobby ID = ", lobby_id)
 	if current_lobby == lobby_id:
 		if !you_are_chosen:
 			lobby_chosen_options.visible = false
@@ -891,7 +894,7 @@ func update_lobby(lobby_id:String, waiting:Dictionary, chosen, you_are_chosen:bo
 		lobby_host_ready_text.visible = host_ready
 		lobby_chosen_ready_text.visible = chosen_ready
 		
-		lobby_code.text = current_lobby
+		lobby_code.text = "[center]" + current_lobby + "[/center]"
 		
 		if lobby_you_are_host and host_ready and chosen_ready:
 			lobby_game_start.visible = true
@@ -932,12 +935,28 @@ func close_deckerror() -> void:
 	lobby_deckerrorlist.text = ""
 
 func exit_lobby():
+	# print("Exit requested, lobby ID is: ", current_lobby)
 	if current_lobby:
 		if lobby_you_are_host:
 			send_command("Lobby","Close Lobby")
 		else:
 			send_command("Lobby","Leave Lobby")
 		
+		clear_lobby_menu()
+		lobby_host_ready.disabled = true
+		lobby_chosen_ready.disabled = true
+		lobby_host_ready.visible = true
+		lobby_chosen_ready.visible = true
+		lobby_host_ready.text = tr("LOBBY_READY")
+		lobby_chosen_ready.text = tr("LOBBY_READY")
+		lobby_host_deck_select.text = tr("DECK_SELECT")
+		lobby_chosen_deck_select.text = tr("DECK_SELECT")
+		lobby_host_deck_select.disabled = false
+		lobby_chosen_deck_select.disabled = false
+		deckInfo = null
+		%LobbyScreen.visible = false
+	else:
+		# This is the case that the host has exited the lobby, clearing the other player's lobby ID.
 		clear_lobby_menu()
 		lobby_host_ready.disabled = true
 		lobby_chosen_ready.disabled = true
@@ -963,6 +982,7 @@ func clear_lobby_menu() -> void:
 	lobby_host_ready_text.visible = false
 	lobby_host_options.visible = false
 	current_lobby = null
+	print("CLEARING LOBBY MENU, lobby ID is: ", current_lobby)
 	lobby_you_are_host = false
 	%LobbyButtons.visible = false
 

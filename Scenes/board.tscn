@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=36 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
@@ -52,6 +52,12 @@ bg_color = Color(0, 0, 0, 0.843137)
 bg_color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0jqk"]
+bg_color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0h845"]
+bg_color = Color(0, 0.301961, 0.427451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3p72o"]
 bg_color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dv823"]
@@ -1379,27 +1385,33 @@ text = "RPS_WAIT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LobbyScreen" type="ColorRect" parent="CanvasLayer"]
+[node name="LobbyScreen" type="PanelContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
-offset_right = 1278.0
-offset_bottom = 719.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("5_fdkx6")
-color = Color(8.66354e-07, 0.302922, 0.426445, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_0h845")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/LobbyScreen"]
-layout_mode = 0
-offset_right = 1278.0
-offset_bottom = 719.0
+[node name="LobbyHBox" type="HBoxContainer" parent="CanvasLayer/LobbyScreen"]
+layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/HBoxContainer"]
+[node name="ActivePlayersMargins" type="MarginContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="ActivePlayersVBox" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Control" type="Control" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="HostLabel" type="Label" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer"]
+[node name="HostLabel" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
@@ -1407,11 +1419,11 @@ text = "LOBBY_HOST"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer"]
+[node name="HostLabelHBox" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox"]
 layout_mode = 2
 alignment = 1
 
-[node name="HostName" type="Label" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="HostName" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostLabelHBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -1420,7 +1432,7 @@ text = "LOBBY_NONE_CHOSEN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HostReadyLabel" type="Label" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="HostReadyLabel" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostLabelHBox"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -1428,30 +1440,29 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 15
 text = "LOBBY_READY"
 
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer"]
+[node name="HostCenterContainer" type="CenterContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HostOptions" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer"]
+[node name="HostOptions" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 
-[node name="HostDeckSelect" type="Button" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer/HostOptions"]
+[node name="HostDeckSelect" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
 text = "DECK_SELECT"
 
-[node name="LobbyHostReady" type="Button" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer/HostOptions"]
+[node name="LobbyHostReady" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 disabled = true
 text = "LOBBY_READY"
 
-[node name="JoinLabel" type="Label" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer"]
+[node name="JoinLabel" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
@@ -1459,11 +1470,12 @@ text = "LOBBY_CHOSEN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer"]
+[node name="JoinLabelHBox" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox"]
 layout_mode = 2
 alignment = 1
 
-[node name="JoinName" type="Label" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer2"]
+[node name="JoinName" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinLabelHBox"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 20
@@ -1471,104 +1483,135 @@ text = "LOBBY_NONE_CHOSEN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Ready" type="Label" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/HBoxContainer2"]
+[node name="JoinReady" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinLabelHBox"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 15
 text = "LOBBY_READY"
 
-[node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer"]
+[node name="JoinCenterContainer" type="CenterContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="JoinOptions" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2"]
-visible = false
+[node name="JoinOptions" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="DeckSelect" type="Button" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2/JoinOptions"]
+[node name="JoinDeckSelect" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
 text = "DECK_SELECT"
 
-[node name="Ready" type="Button" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2/JoinOptions"]
+[node name="LobbyJoinReady" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 disabled = true
 text = "LOBBY_READY"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/LobbyScreen/LobbyHBox"]
+layout_mode = 2
+
+[node name="WaitingMargins" type="MarginContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="WaitingVBox" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="LobbyCode" type="RichTextLabel" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2"]
+[node name="SelectOpponentLabel2" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "LOBBY_CODE"
+horizontal_alignment = 1
+
+[node name="LobbyCode" type="RichTextLabel" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 10
+size_flags_vertical = 0
 focus_mode = 2
 theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
 fit_content = true
 scroll_active = false
+context_menu_enabled = true
 selection_enabled = true
 deselect_on_focus_loss_enabled = false
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2"]
-custom_minimum_size = Vector2(0, 500)
+[node name="SelectOpponentLabel" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "LOBBY_SELECT_OPPONENT"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/ScrollContainer"]
+[node name="WaitingPlayersVBox" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ScrollContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Control" type="Control" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/ScrollContainer/VBoxContainer"]
+[node name="ButtonHBox" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
 layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
+size_flags_vertical = 8
 alignment = 2
 
-[node name="StartGame" type="Button" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/HBoxContainer"]
+[node name="StartGame" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 2
+size_flags_horizontal = 2
 theme_override_font_sizes/font_size = 20
 text = "LOBBY_STARTGAME"
 
-[node name="Control" type="Control" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/HBoxContainer"]
+[node name="LobbyExit" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox"]
 layout_mode = 2
-
-[node name="LobbyExit" type="Button" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 10
 theme_override_font_sizes/font_size = 20
 text = "LOBBY_BACK"
 
-[node name="Control2" type="Control" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/HBoxContainer"]
-layout_mode = 2
-
-[node name="Control2" type="Control" parent="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-
-[node name="DeckErrors" type="ColorRect" parent="CanvasLayer/LobbyScreen"]
+[node name="DeckErrors" type="PanelContainer" parent="CanvasLayer/LobbyScreen"]
+unique_name_in_owner = true
 visible = false
-layout_mode = 0
-offset_left = 117.0
-offset_top = 19.0
-offset_right = 1195.0
-offset_bottom = 631.0
+layout_mode = 2
 theme = ExtResource("5_fdkx6")
-color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+theme_override_styles/panel = SubResource("StyleBoxFlat_3p72o")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/LobbyScreen/DeckErrors"]
-layout_mode = 0
-offset_right = 1078.0
-offset_bottom = 561.0
+[node name="DeckErrorMargins" type="MarginContainer" parent="CanvasLayer/LobbyScreen/DeckErrors"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
 
-[node name="Label" type="Label" parent="CanvasLayer/LobbyScreen/DeckErrors/ScrollContainer"]
+[node name="DeckErrorVBox" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins"]
+layout_mode = 2
+
+[node name="DeckErrorScroll" type="ScrollContainer" parent="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DeckErrorList" type="Label" parent="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox/DeckErrorScroll"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
@@ -1577,14 +1620,11 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/DeckErrors"]
-layout_mode = 0
-offset_top = 565.0
-offset_right = 1077.0
-offset_bottom = 605.0
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox"]
+layout_mode = 2
 alignment = 1
 
-[node name="OK" type="Button" parent="CanvasLayer/LobbyScreen/DeckErrors/HBoxContainer"]
+[node name="OK" type="Button" parent="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "OK"
@@ -1923,13 +1963,13 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Rock" to="." method="_rps_rock"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Paper" to="." method="_rps_paper"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Scissors" to="." method="_rps_scissors"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer/HostOptions/HostDeckSelect" to="." method="_on_deck_select_pressed"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer/HostOptions/LobbyHostReady" to="." method="ready_lobby"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2/JoinOptions/DeckSelect" to="." method="_on_deck_select_pressed"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer/CenterContainer2/JoinOptions/Ready" to="." method="ready_lobby"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/HBoxContainer/StartGame" to="." method="start_game"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/HBoxContainer/VBoxContainer2/HBoxContainer/LobbyExit" to="." method="exit_lobby"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/DeckErrors/HBoxContainer/OK" to="." method="close_deckerror"]
+[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions/HostDeckSelect" to="." method="_on_deck_select_pressed"]
+[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions/LobbyHostReady" to="." method="ready_lobby"]
+[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions/JoinDeckSelect" to="." method="_on_deck_select_pressed"]
+[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions/LobbyJoinReady" to="." method="ready_lobby"]
+[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox/StartGame" to="." method="start_game"]
+[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox/LobbyExit" to="." method="exit_lobby"]
+[connection signal="pressed" from="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox/HBoxContainer/OK" to="." method="close_deckerror"]
 [connection signal="pressed" from="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox/SpectateYes" to="." method="_spectate_yes"]
 [connection signal="pressed" from="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox/SpectateNo" to="." method="_spectate_no"]
 [connection signal="pressed" from="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox/SpectateMainMenu" to="." method="_on_yes_pressed"]
