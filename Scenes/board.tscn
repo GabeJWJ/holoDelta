@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=34 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
@@ -10,9 +10,11 @@
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="5_fdkx6"]
 [ext_resource type="Texture2D" uid="uid://dt60hgar0dc4g" path="res://checkOff.png" id="6_1x0cl"]
 [ext_resource type="Texture2D" uid="uid://tqwtibgdslug" path="res://checkOn.png" id="7_n8awk"]
+[ext_resource type="StyleBox" uid="uid://buhp4fypa12ug" path="res://Themes/blue_transparent_stylebox.tres" id="7_sgknu"]
 [ext_resource type="Texture2D" uid="uid://dexhtkhame0ay" path="res://CyberAssets/Game Side Menu/Notification.png" id="9_a1xo7"]
 [ext_resource type="PackedScene" uid="uid://cvqdjg5xohy5a" path="res://Scenes/deck_list.tscn" id="10_058xr"]
 [ext_resource type="Theme" uid="uid://das1sj7oj6yqf" path="res://Themes/step.tres" id="10_dyxng"]
+[ext_resource type="StyleBox" uid="uid://cd242umd6rlar" path="res://Themes/dark_transparent_stylebox.tres" id="11_122ys"]
 [ext_resource type="AudioStream" uid="uid://citw8blr274yn" path="res://HaruTsunXAssets/Die Roll 2.wav" id="12_lpjdh"]
 [ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="14_rk7pw"]
 [ext_resource type="Script" path="res://Scripts/RemapButton.gd" id="14_x8gke"]
@@ -21,6 +23,8 @@
 [ext_resource type="Script" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="18_n8kk3"]
 [ext_resource type="PackedScene" uid="uid://dyqgt6khk244r" path="res://Scenes/confirm_dialog.tscn" id="19_ogfn8"]
 [ext_resource type="AudioStream" uid="uid://dx0hyqv3whb28" path="res://ChikuTaku The Game VGM Menu Select Watson Amelia WUNDER RiKU ✨ チクタク オリジナル曲.mp3" id="19_vg3fm"]
+[ext_resource type="LabelSettings" uid="uid://dhdlni742no3g" path="res://Themes/white_text.tres" id="20_dcvur"]
+[ext_resource type="StyleBox" uid="uid://bu0x76epm4jgt" path="res://Themes/red_transparent_stylebox.tres" id="20_poi5y"]
 [ext_resource type="Script" path="res://addons/websocket/WebSocket.gd" id="20_v32ia"]
 
 [sub_resource type="Gradient" id="Gradient_8vfua"]
@@ -32,24 +36,6 @@ width = 1280
 height = 720
 fill_from = Vector2(0.111111, 0.87478)
 fill_to = Vector2(0.934524, 0.282187)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcafo"]
-bg_color = Color(0.113725, 0.164706, 0.223529, 0.905882)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwcq1"]
-bg_color = Color(0, 0, 0, 0.843137)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qpn5o"]
-bg_color = Color(0, 0, 0, 0.843137)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcctd"]
-bg_color = Color(0, 0, 0, 0.843137)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1p7p"]
-bg_color = Color(0, 0, 0, 0.843137)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ntqje"]
-bg_color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0jqk"]
 bg_color = Color(0.113725, 0.164706, 0.223529, 0.905882)
@@ -63,8 +49,8 @@ bg_color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dv823"]
 bg_color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ptrg"]
-bg_color = Color(0.92549, 0, 0.105882, 0.796078)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvtkr"]
+bg_color = Color(0.27451, 0.760784, 1, 1)
 
 [node name="Board" type="Node2D"]
 position = Vector2(1020, 1566)
@@ -135,6 +121,7 @@ text = "DEBUG"
 unique_name_in_owner = true
 auto_translate_mode = 2
 layout_mode = 2
+size_flags_horizontal = 4
 theme = ExtResource("5_fdkx6")
 text = "Server Code"
 horizontal_alignment = 1
@@ -309,7 +296,7 @@ offset_right = 544.0
 offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_gcafo")
+theme_override_styles/panel = ExtResource("7_sgknu")
 
 [node name="InfoMargins" type="MarginContainer" parent="CanvasLayer/CreditsPanel"]
 layout_mode = 2
@@ -407,7 +394,7 @@ offset_right = 14.88
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jwcq1")
+theme_override_styles/panel = ExtResource("11_122ys")
 
 [node name="OptionMargins" type="MarginContainer" parent="CanvasLayer/OptionPanel"]
 layout_mode = 2
@@ -702,7 +689,7 @@ offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("5_fdkx6")
-theme_override_styles/panel = SubResource("StyleBoxFlat_qpn5o")
+theme_override_styles/panel = ExtResource("11_122ys")
 
 [node name="LobbyListMargins" type="MarginContainer" parent="CanvasLayer/LobbyPanel"]
 layout_mode = 2
@@ -780,7 +767,7 @@ offset_top = 200.0
 offset_right = 815.0
 offset_bottom = 608.0
 theme = ExtResource("5_fdkx6")
-theme_override_styles/panel = SubResource("StyleBoxFlat_jcctd")
+theme_override_styles/panel = ExtResource("11_122ys")
 
 [node name="LobbyCreateMargins" type="MarginContainer" parent="CanvasLayer/LobbyCreateMenu"]
 layout_mode = 2
@@ -857,7 +844,7 @@ offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("5_fdkx6")
-theme_override_styles/panel = SubResource("StyleBoxFlat_l1p7p")
+theme_override_styles/panel = ExtResource("11_122ys")
 
 [node name="SpectateListMargins" type="MarginContainer" parent="CanvasLayer/SpectatePanel"]
 layout_mode = 2
@@ -935,7 +922,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ntqje")
+theme_override_styles/panel = ExtResource("7_sgknu")
 
 [node name="PlaymatMargins" type="MarginContainer" parent="CanvasLayer/CustomizationPanel"]
 layout_mode = 2
@@ -1697,6 +1684,55 @@ text = "MENU"
 unique_name_in_owner = true
 visible = false
 
+[node name="MainMenuConfirm" type="PanelContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+top_level = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -318.5
+offset_top = -65.5
+offset_right = 318.5
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme = ExtResource("5_fdkx6")
+theme_override_styles/panel = ExtResource("7_sgknu")
+
+[node name="MainMenuConfirmMargins" type="MarginContainer" parent="CanvasLayer/MainMenuConfirm"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="MainMenuConfirmVBox" type="VBoxContainer" parent="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ConfirmExitLabel" type="Label" parent="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox"]
+layout_mode = 2
+text = "MENU_PROMPT"
+label_settings = ExtResource("20_dcvur")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenuButtonsHBox" type="HBoxContainer" parent="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox"]
+layout_mode = 2
+
+[node name="ExitConfrimYes" type="Button" parent="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "YES"
+
+[node name="ExitConfirmNo" type="Button" parent="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "NO"
+
 [node name="MainMenu" type="Button" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
@@ -1709,75 +1745,34 @@ theme_override_colors/font_color = Color(0.760664, 0.18676, 0.19329, 1)
 theme_override_font_sizes/font_size = 15
 text = "MENU"
 
-[node name="Confirmation" type="ColorRect" parent="CanvasLayer/MainMenu"]
-visible = false
-top_level = true
-layout_mode = 0
-offset_left = 392.0
-offset_top = 320.0
-offset_right = 1029.0
-offset_bottom = 550.0
-color = Color(0.113725, 0.164706, 0.223529, 0.905882)
-
-[node name="Label" type="Label" parent="CanvasLayer/MainMenu/Confirmation"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -389.0
-offset_right = 389.0
-offset_bottom = 110.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 35
-text = "MENU_PROMPT"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Yes" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
-layout_mode = 0
-offset_left = 165.0
-offset_top = 148.0
-offset_right = 239.0
-offset_bottom = 190.0
-theme_override_font_sizes/font_size = 25
-text = "YES"
-
-[node name="No" type="Button" parent="CanvasLayer/MainMenu/Confirmation"]
-layout_mode = 0
-offset_left = 401.0
-offset_top = 148.0
-offset_right = 475.0
-offset_bottom = 190.0
-theme_override_font_sizes/font_size = 25
-text = "NO"
-
 [node name="ConfirmDialog" parent="CanvasLayer" instance=ExtResource("19_ogfn8")]
 unique_name_in_owner = true
 visible = false
-offset_left = 384.0
-offset_top = 213.0
-offset_right = 384.0
-offset_bottom = 213.0
 
-[node name="Popup" type="ColorRect" parent="CanvasLayer"]
+[node name="Popup" type="PanelContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
 offset_right = 1278.0
 offset_bottom = 719.0
-color = Color(0.27451, 0.760784, 1, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_fvtkr")
 
-[node name="DownloadLabel" type="Label" parent="CanvasLayer/Popup"]
+[node name="PopupMargins" type="MarginContainer" parent="CanvasLayer/Popup"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="PopupVBox" type="VBoxContainer" parent="CanvasLayer/Popup/PopupMargins"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="DownloadLabel" type="Label" parent="CanvasLayer/Popup/PopupMargins/PopupVBox"]
 unique_name_in_owner = true
 auto_translate_mode = 2
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 214.0
-offset_top = -220.5
-offset_right = 1030.0
-offset_bottom = 214.5
-grow_vertical = 2
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
 theme = ExtResource("5_fdkx6")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 20
@@ -1785,105 +1780,109 @@ text = "vspvjfspvs"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Popup"]
-layout_mode = 0
-offset_left = 350.0
-offset_top = 412.0
-offset_right = 884.0
-offset_bottom = 439.0
+[node name="PopupProgressBar" type="ProgressBar" parent="CanvasLayer/Popup/PopupMargins/PopupVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 6
 
-[node name="Failure" type="ColorRect" parent="CanvasLayer"]
+[node name="Failure" type="PanelContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
 visible = false
-offset_left = 230.0
-offset_top = 175.0
-offset_right = 1033.0
-offset_bottom = 565.0
-theme = ExtResource("5_fdkx6")
-color = Color(0.113725, 0.164706, 0.223529, 0.905882)
-
-[node name="Title" type="Label" parent="CanvasLayer/Failure"]
-layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -393.5
-offset_top = 6.0
-offset_right = 393.5
-offset_bottom = 70.0
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -91.5
+offset_right = 171.0
+offset_bottom = 91.5
 grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("5_fdkx6")
+theme_override_styles/panel = ExtResource("11_122ys")
+
+[node name="FailureMargins" type="MarginContainer" parent="CanvasLayer/Failure"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="FailureVBox" type="VBoxContainer" parent="CanvasLayer/Failure/FailureMargins"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="FailureTitle" type="Label" parent="CanvasLayer/Failure/FailureMargins/FailureVBox"]
+unique_name_in_owner = true
+layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 text = "DOWNLOAD_FAIL"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Body" type="Label" parent="CanvasLayer/Failure"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -393.5
-offset_top = 82.0
-offset_right = 393.5
-offset_bottom = 270.0
-grow_horizontal = 2
+[node name="FailureBody" type="Label" parent="CanvasLayer/Failure/FailureMargins/FailureVBox"]
+unique_name_in_owner = true
+layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "DOWNLOAD_FAIL_FULL"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TryAgain_Download" type="Button" parent="CanvasLayer/Failure"]
-layout_mode = 0
-offset_left = 249.0
-offset_top = 313.0
-offset_right = 547.0
-offset_bottom = 357.0
+[node name="TryAgain_Download" type="Button" parent="CanvasLayer/Failure/FailureMargins/FailureVBox"]
+unique_name_in_owner = true
+layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "TRYAGAIN"
 
-[node name="TryAgain_Import" type="Button" parent="CanvasLayer/Failure"]
+[node name="TryAgain_Import" type="Button" parent="CanvasLayer/Failure/FailureMargins/FailureVBox"]
+unique_name_in_owner = true
 visible = false
-layout_mode = 0
-offset_left = 249.0
-offset_top = 313.0
-offset_right = 547.0
-offset_bottom = 357.0
+layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "TRYAGAIN"
 
-[node name="Error" type="Panel" parent="CanvasLayer"]
+[node name="Error" type="PanelContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
 visible = false
-offset_right = 1280.0
-offset_bottom = 172.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_6ptrg")
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.189
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("20_poi5y")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Error"]
-layout_mode = 0
-offset_left = 84.0
-offset_top = 14.0
-offset_right = 1190.0
-offset_bottom = 172.0
+[node name="ErrorMargins" type="MarginContainer" parent="CanvasLayer/Error"]
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+
+[node name="ErrorHBox" type="HBoxContainer" parent="CanvasLayer/Error/ErrorMargins"]
+layout_mode = 2
+
+[node name="ErrorMessage" type="RichTextLabel" parent="CanvasLayer/Error/ErrorMargins/ErrorHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
 focus_mode = 2
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
 selection_enabled = true
 
-[node name="CloseError" type="TextureButton" parent="CanvasLayer/Error"]
-layout_mode = 0
-offset_left = 1199.0
-offset_top = 8.0
-offset_right = 1266.0
-offset_bottom = 75.0
+[node name="CloseError" type="TextureButton" parent="CanvasLayer/Error/ErrorMargins/ErrorHBox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 8
 texture_normal = ExtResource("18_b7won")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 5
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-670, -400)
 zoom = Vector2(0.27, 0.27)
 
 [node name="HTTPManager" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("18_n8kk3")
 parallel_connections_count = 15
 print_debug = true
@@ -1901,10 +1900,12 @@ route = "/ws"
 autoconnect_mode = 2
 
 [node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
 wait_time = 3.0
 one_shot = true
 
 [node name="Timer2" type="Timer" parent="."]
+unique_name_in_owner = true
 wait_time = 0.2
 one_shot = true
 
@@ -1972,12 +1973,12 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox/SpectateMainMenu" to="." method="_on_yes_pressed"]
 [connection signal="cancel" from="CanvasLayer/DeckList" to="." method="_hide_deck_list"]
 [connection signal="selected" from="CanvasLayer/DeckList" to="." method="_on_deck_list_selected"]
+[connection signal="pressed" from="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox/ExitConfrimYes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox/ExitConfirmNo" to="." method="_on_no_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
-[connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/Yes" to="." method="_on_yes_pressed"]
-[connection signal="pressed" from="CanvasLayer/MainMenu/Confirmation/No" to="." method="_on_no_pressed"]
-[connection signal="pressed" from="CanvasLayer/Failure/TryAgain_Download" to="." method="_attempt_download_zip"]
-[connection signal="pressed" from="CanvasLayer/Failure/TryAgain_Import" to="." method="_attempt_load_zip"]
-[connection signal="pressed" from="CanvasLayer/Error/CloseError" to="." method="_on_close_error_pressed"]
+[connection signal="pressed" from="CanvasLayer/Failure/FailureMargins/FailureVBox/TryAgain_Download" to="." method="_attempt_download_zip"]
+[connection signal="pressed" from="CanvasLayer/Failure/FailureMargins/FailureVBox/TryAgain_Import" to="." method="_attempt_load_zip"]
+[connection signal="pressed" from="CanvasLayer/Error/ErrorMargins/ErrorHBox/CloseError" to="." method="_on_close_error_pressed"]
 [connection signal="progress" from="HTTPManager" to="." method="_download_progress"]
 [connection signal="connected" from="WebSocket" to="." method="_on_websocket_connected"]
 [connection signal="received" from="WebSocket" to="." method="_on_websocket_received"]

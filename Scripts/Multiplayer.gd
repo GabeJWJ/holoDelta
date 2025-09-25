@@ -72,8 +72,8 @@ func findByClass(node: Node, className : String, result : Array) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	proper_hypertext = "https://" if $WebSocket.use_WSS else "http://"
-	$WebSocket.host = Server.websocketURL
+	proper_hypertext = "https://" if %WebSocket.use_WSS else "http://"
+	%WebSocket.host = Server.websocketURL
 	
 	randomize()
 	
@@ -243,10 +243,10 @@ func _on_exit_pressed():
 	get_tree().quit()
 
 func _on_main_menu_pressed():
-	$CanvasLayer/MainMenu/Confirmation.visible = true
+	%MainMenuConfirm.visible = true
 
 func _on_no_pressed():
-	$CanvasLayer/MainMenu/Confirmation.visible = false
+	%MainMenuConfirm.visible = false
 
 func _on_yes_pressed():
 	_restart()
@@ -257,20 +257,20 @@ func _on_deck_creation_pressed():
 #region Setup
 
 func _attempt_download_zip():
-	$CanvasLayer/Popup/ProgressBar.max_value = 60000000 #Yeah I'm just hard-coding that it expects ~60 MB cuz getting the actual number is tricky
-	$CanvasLayer/Failure.visible = false
-	$CanvasLayer/Popup.visible = true
-	$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_CARDS")
-	$HTTPManager.job(proper_hypertext + Server.websocketURL + "/cardData.zip").on_failure(_download_zip_failed).on_success(_download_zip_suceeded).download("user://temp_cardData.zip")
+	%ProgressBar.max_value = 60000000 #Yeah I'm just hard-coding that it expects ~60 MB cuz getting the actual number is tricky
+	%Failure.visible = false
+	%Popup.visible = true
+	%DownloadLabel.text = tr("DOWNLOAD_CARDS")
+	%HTTPManager.job(proper_hypertext + Server.websocketURL + "/cardData.zip").on_failure(_download_zip_failed).on_success(_download_zip_suceeded).download("user://temp_cardData.zip")
 
 func _download_zip_suceeded(_result=null):
 	DirAccess.rename_absolute("user://temp_cardData.zip", "user://cardData.zip")
 	_attempt_load_zip()
 
 func _attempt_load_zip():
-	$CanvasLayer/Failure.visible = false
-	$CanvasLayer/Popup.visible = true
-	$CanvasLayer/Popup/Label.text = tr("DOWNLOAD_CARDS")
+	%Failure.visible = false
+	%Popup.visible = true
+	%DownloadLabel.text = tr("DOWNLOAD_CARDS")
 	var success = ProjectSettings.load_resource_pack("user://cardData.zip")
 	if success:
 		_start_data()
@@ -284,37 +284,37 @@ func _start_data():
 	Settings.card_version = FileAccess.get_file_as_string("res://cardLocalization/card_version.txt")
 	%CardVersionText.text += Settings.card_version
 	json.parse(FileAccess.get_file_as_string("res://cardData.json"))
-	Database.setup_data(json.data, Settings._connect_local.bind($Timer2.start))
+	Database.setup_data(json.data, Settings._connect_local.bind(%Timer2.start))
 	#go should include download version data
 		#    if succeed set info
 		#    if fail raise alert
 
 func _do_final():
 	Database.setup = true
-	$CanvasLayer/Popup.visible = false
+	%Popup.visible = false
 
 func _download_zip_failed(_result):
 	DirAccess.remove_absolute("user://temp_cardData.zip")
-	$CanvasLayer/Failure/Title.text = tr("DOWNLOAD_FAIL")
-	$CanvasLayer/Failure/Body.text = tr("DOWNLOAD_FAIL_FULL")
-	$CanvasLayer/Failure/TryAgain_Download.visible = true
-	$CanvasLayer/Failure/TryAgain_Import.visible = false
+	%FailureTitle.text = tr("DOWNLOAD_FAIL")
+	%FailureBody.text = tr("DOWNLOAD_FAIL_FULL")
+	%TryAgain_Download.visible = true
+	%TryAgain_Import.visible = false
 	
-	$CanvasLayer/Failure.visible = true
+	switch_menu("failure", false)
 
 func _load_zip_failed():
-	$CanvasLayer/Failure/Title.text = tr("LOAD_FAIL")
-	$CanvasLayer/Failure/Body.text = tr("LOAD_FAIL_FULL")
-	$CanvasLayer/Failure/TryAgain_Download.visible = false
-	$CanvasLayer/Failure/TryAgain_Import.visible = true
+	%FailureTitle.text = tr("LOAD_FAIL")
+	%FailureBody.text = tr("LOAD_FAIL_FULL")
+	%TryAgain_Download.visible = false
+	%TryAgain_Import.visible = true
 	
-	$CanvasLayer/Failure.visible = true
+	switch_menu("failure", false)
 
 func _download_version_failed(_result):
 	pass
 
 func _download_progress(_assigned_files, _current_files, total_bytes, current_bytes):
-	$CanvasLayer/Popup/ProgressBar.value = current_bytes
+	%PopupProgressBar.value = current_bytes
 
 #endregion
 
@@ -325,7 +325,9 @@ func _download_progress(_assigned_files, _current_files, total_bytes, current_by
 	"create_lobby": %LobbyCreateMenu,
 	"join_lobby": %LobbyPanel,
 	"spectate_game": %SpectatePanel,
-	"customization": %CustomizationPanel
+	"customization": %CustomizationPanel,
+	"failure": %Failure,
+	"error": %Error
 }
 
 ## Ensures popup menus are mutually exclusive so only one can appear at once
@@ -646,8 +648,8 @@ func _on_websocket_received(raw_data):
 								spectate_button.text = tr("LOBBY_SPECTATE") + " ({amount})".format({"amount":int(data["en_games"] if Settings.settings.OnlyEN else data["games"])})
 						"Error":
 							if "error_text" in data:
-								$CanvasLayer/Error/RichTextLabel.text = data["error_text"]
-								$CanvasLayer/Error.visible = true
+								%ErrorMessage.text = "[center]" + data["error_text"] + "[/center]"
+								%Error.visible = true
 						"Spectate":
 							if "game_state" in data:
 								_enable_steps(!data["game_state"]["firstTurn"])
@@ -1098,13 +1100,13 @@ func game_command(command: String, data: Dictionary) -> void:
 			%RPSWaitLabel.visible = true
 			%RPSWaitLabel.text = tr("INGAME_RPS_WON")
 			rps = false
-			$Timer.start()
+			%Timer.start()
 		"Ingame RPS Loss":
 			%RPSHBox.visible = false
 			%RPSWaitLabel.visible = true
 			%RPSWaitLabel.text = tr("INGAME_RPS_LOST")
 			rps = false
-			$Timer.start()
+			%Timer.start()
 		
 		"Select Step":
 			if "step" in data:
@@ -1215,7 +1217,7 @@ func send_message_on_click():
 	send_message($CanvasLayer/Sidebar/ChatWindow/HBoxContainer/ToSend.text)
 
 func _on_close_error_pressed() -> void:
-	$CanvasLayer/Error.visible = false
+	%Error.visible = false
 	if !inGame:
 		%LobbyButtons.visible = true
 
