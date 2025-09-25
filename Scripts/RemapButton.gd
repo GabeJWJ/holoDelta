@@ -32,6 +32,8 @@ func _toggled(button_pressed):
 
 
 func _unhandled_input(event):
+	if not event is InputEventKey:
+		return
 	if event.pressed:
 		InputMap.action_erase_events(action)
 		InputMap.action_add_event(action, event)
