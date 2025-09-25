@@ -102,7 +102,7 @@ func _ready():
 	%CheckUnrevealed.button_pressed = Settings.settings.AllowUnrevealed
 	%AllowProxies.button_pressed = Settings.settings.AllowProxies
 	%AllowProxies.disabled = !Settings.settings.UseCardLanguage
-	%AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1
+	%AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1.0
 	%UseCardLanguage.button_pressed = Settings.settings.UseCardLanguage
 	%OnlyEN.button_pressed = Settings.settings.OnlyEN
 	
@@ -134,10 +134,10 @@ func _ready():
 	%LanguageSelect.text = Settings.get_language()
 	%InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"en", "es", "fr", "ko", "vi":
-			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
+		_:
+			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	
 	#Setup Info
 	if Database.setup:
@@ -340,7 +340,6 @@ func switch_menu(m: String, close_if_open = true):
 
 func _on_options_pressed():
 	switch_menu("option")
-	# print($WebSocket.socket.get_close_code())
 
 func _on_check_unrevealed_pressed():
 	Settings.update_settings("AllowUnrevealed",%CheckUnrevealed.button_pressed)
@@ -351,7 +350,7 @@ func _on_allow_proxies_pressed():
 func _on_use_card_language_pressed() -> void:
 	Settings.update_settings("UseCardLanguage",%UseCardLanguage.button_pressed)
 	%AllowProxies.disabled = !Settings.settings.UseCardLanguage
-	%AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1
+	%AllowProxies.modulate.a = 0.5 if !Settings.settings.UseCardLanguage else 1.0
 
 func _on_en_only_pressed() -> void:
 	Settings.update_settings("OnlyEN", %OnlyEN.button_pressed)
@@ -362,10 +361,10 @@ func _on_language_selected(index_selected):
 	%LanguageSelect.text = Settings.languages[index_selected][1]
 	%InfoPanel.update_word_wrap()
 	match Settings.settings.Language:
-		"en", "es", "fr", "ko", "vi":
-			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
+		_:
+			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	fix_font_size()
 	_restart()
 
@@ -677,7 +676,6 @@ func _on_websocket_received(raw_data):
 #region Lobbies
 
 func lobby_command(command:String, data:Dictionary):
-	print("Received lobby command: ", command, " data: ", data)
 	match command:
 		"Update":
 			if "state" in data:
@@ -846,7 +844,6 @@ func update_spectate_from_code_button(current_string:String) -> void:
 	game_list_code_button.disabled = (current_string == "")
 
 func show_lobby(host_name:String, lobby_id:String, you_are_host:bool, waiting:Dictionary, chosen, you_are_chosen:bool, host_ready:bool, chosen_ready:bool):
-	# print("Attempting to show lobby, lobby ID is: ", current_lobby)
 	if !current_lobby:
 		clear_lobby_menu()
 		
@@ -861,7 +858,6 @@ func show_lobby(host_name:String, lobby_id:String, you_are_host:bool, waiting:Di
 		%LobbyScreen.visible=true
 
 func update_lobby(lobby_id:String, waiting:Dictionary, chosen, you_are_chosen:bool, host_ready:bool, chosen_ready:bool, reason:String):
-	# print("Attempting to update lobby, lobby ID is: ", current_lobby, " Only running if lobby ID = ", lobby_id)
 	if current_lobby == lobby_id:
 		if !you_are_chosen:
 			lobby_chosen_options.visible = false
@@ -935,7 +931,6 @@ func close_deckerror() -> void:
 	lobby_deckerrorlist.text = ""
 
 func exit_lobby():
-	# print("Exit requested, lobby ID is: ", current_lobby)
 	if current_lobby:
 		if lobby_you_are_host:
 			send_command("Lobby","Close Lobby")
@@ -982,7 +977,6 @@ func clear_lobby_menu() -> void:
 	lobby_host_ready_text.visible = false
 	lobby_host_options.visible = false
 	current_lobby = null
-	print("CLEARING LOBBY MENU, lobby ID is: ", current_lobby)
 	lobby_you_are_host = false
 	%LobbyButtons.visible = false
 

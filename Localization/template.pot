@@ -27,6 +27,208 @@ msgstr ""
 "Content-Transfer-Encoding: 8-bit\n"
 
 #: Scenes/board.tscn
+msgid "TITLE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SUBTITLE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "DEBUG"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "DECK_CREATE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "OPTION_EN"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "INFO"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "LOBBY_CREATE"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_JOIN"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_SPECTATE"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "PLAYERS_ONLINE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "INFO_DLOC"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "INFO_CANCEL"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SETTINGS_GAME_OPTIONS"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "OPTION_UNREVEALED"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "OPTION_LANGUAGE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "OPTION_PROXY"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SETTINGS_AUDIO_OPTIONS"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SETTINGS_KEYBINDINGS"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_DRAW"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_CHEER"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_RESET"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_TABS"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_LOCK"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_LSTEP"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_NSTEP"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_PUBLIC_LOBBIES_FOUND"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_LOBBYCODE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "LOBBY_SEARCHING"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "LOBBY_REFRESH"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "LOBBY_BACK"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "LOBBY_SETTINGS"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_PRIVATE"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_ALLOWSPECTATORS"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_NONE"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT_EN"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_UNRELEASED"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_GAMECODE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM_DEFAULT"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D_DEFAULT"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_CANCEL"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "EXIT"
+msgstr ""
+
+#: Scenes/board.tscn
 msgid "SEND_CHAT"
 msgstr ""
 
@@ -71,14 +273,6 @@ msgid "STEP6"
 msgstr ""
 
 #: Scenes/board.tscn
-msgid "TITLE"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "SUBTITLE"
-msgstr ""
-
-#: Scenes/board.tscn
 #: Scenes/side.tscn
 msgid "RPS_ROCK"
 msgstr ""
@@ -97,167 +291,6 @@ msgstr ""
 #: Scripts/side.gd
 #: Scripts/Multiplayer.gd
 msgid "RPS_WAIT"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "DECK_CREATE"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "DEBUG"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "LOBBY_CREATE"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "PLAYERS_ONLINE"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_JOIN"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_SPECTATE"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_PRIVATE"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_ALLOWSPECTATORS"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_NONE"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_CURRENT"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_CURRENT_EN"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_UNRELEASED"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "LOBBY_BACK"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "EXIT"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "OPTION_EN"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "OPTION_UNREVEALED"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "OPTION_LANGUAGE"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "OPTION_PROXY"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "ACTION_DRAW"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "ACTION_CHEER"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "ACTION_RESET"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "ACTION_TABS"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "ACTION_LOCK"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "ACTION_LSTEP"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "ACTION_NSTEP"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "COSMETICS"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "COSMETICS_CANCEL"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "COSMETICS_PM"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "COSMETICS_D"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "COSMETICS_PM_DEFAULT"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "COSMETICS_D_DEFAULT"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_LOBBYCODE"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "LOBBY_SEARCHING"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "LOBBY_REFRESH"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_GAMECODE"
 msgstr ""
 
 #: Scenes/board.tscn
@@ -290,18 +323,6 @@ msgstr ""
 #: Scenes/board.tscn
 #: Scenes/side.tscn
 msgid "OK"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "INFO"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "INFO_DLOC"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "INFO_CANCEL"
 msgstr ""
 
 #: Scenes/board.tscn

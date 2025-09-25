@@ -177,7 +177,7 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 text = "English"
 flat = false
-item_count = 6
+item_count = 7
 popup/item_0/text = "English"
 popup/item_1/text = "日本語"
 popup/item_1/id = 1
@@ -189,6 +189,8 @@ popup/item_4/text = "Français"
 popup/item_4/id = 4
 popup/item_5/text = "Tiếng Việt"
 popup/item_5/id = 5
+popup/item_6/text = "繁體中文"
+popup/item_6/id = 6
 
 [node name="InfoButton" type="Button" parent="CanvasLayer/LeftBarMargins/LeftBarVBox"]
 unique_name_in_owner = true
@@ -235,7 +237,6 @@ unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
-placeholder_text = "Name"
 alignment = 1
 
 [node name="LobbyCreate" type="Button" parent="CanvasLayer/LobbyButtons"]
@@ -349,11 +350,13 @@ theme_override_font_sizes/font_size = 20
 text = "Special thanks to:
 - Ogbajoj, without whose spreadsheet this never would have been made
 - Cyber for helping with the graphic design
+- ScratcherMatch for the UI fixes/improvements
 - LiquidRetko for the code contributions and Vietnamese Translation
 - Weiss and Chill for the EN proxies and the visibility he's brought to this project
 - AshiNoMegami for the Spanish translation
 - M rick and Tarko for the French translation
 - 문정동호빵명인 and others for the Korean translation
+- Diego (TASI) for the Traditional Chinese translation
 - HaruTsunX for helping with the sound design
 - WunderRiku for the BGM
 - 星谷あさき and DT for advice with the server stuff
@@ -1954,12 +1957,6 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/CardInfo" to="." method="_on_card_info_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/Chat" to="." method="_on_chat_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/Options" to="." method="_on_sidebar_options_pressed"]
-[connection signal="toggled" from="CanvasLayer/Sidebar/Steps/Step1" to="." method="_on_step_pressed" binds= [1]]
-[connection signal="toggled" from="CanvasLayer/Sidebar/Steps/Step2" to="." method="_on_step_pressed" binds= [2]]
-[connection signal="toggled" from="CanvasLayer/Sidebar/Steps/Step3" to="." method="_on_step_pressed" binds= [3]]
-[connection signal="toggled" from="CanvasLayer/Sidebar/Steps/Step4" to="." method="_on_step_pressed" binds= [4]]
-[connection signal="toggled" from="CanvasLayer/Sidebar/Steps/Step5" to="." method="_on_step_pressed" binds= [5]]
-[connection signal="toggled" from="CanvasLayer/Sidebar/Steps/Step6" to="." method="_on_step_pressed" binds= [6]]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Rock" to="." method="_rps_rock"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Paper" to="." method="_rps_paper"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Scissors" to="." method="_rps_scissors"]
