@@ -1,9 +1,8 @@
-[gd_scene load_steps=34 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=43 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
 [ext_resource type="Texture2D" uid="uid://kwq21hbtxatg" path="res://CyberAssets/Main Menu Assets/HoloDelta BG (Light Mode).svg" id="3_t0eaa"]
-[ext_resource type="PackedScene" uid="uid://chrab4uqxsh2s" path="res://Scenes/info_panel.tscn" id="4_7im2k"]
 [ext_resource type="Texture2D" uid="uid://chv6t7kvxgx0s" path="res://gear.png" id="4_n5n8m"]
 [ext_resource type="Texture2D" uid="uid://biy2phmp4flym" path="res://gearSelected.png" id="5_13mvd"]
 [ext_resource type="Texture2D" uid="uid://cx76tmf8royup" path="res://CyberAssets/Game Side Menu/Side Menu.png" id="5_ct7jt"]
@@ -19,13 +18,22 @@
 [ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="14_rk7pw"]
 [ext_resource type="Script" path="res://Scripts/RemapButton.gd" id="14_x8gke"]
 [ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="15_ycoxv"]
+[ext_resource type="StyleBox" uid="uid://damybw7gv0yg7" path="res://Themes/button_active_shrink_margins.tres" id="17_m66xg"]
 [ext_resource type="Texture2D" uid="uid://3f3xq8idq8m7" path="res://CloseError.png" id="18_b7won"]
+[ext_resource type="ButtonGroup" uid="uid://c2qh82lsaycto" path="res://UI/sidebar_tab_button_group.tres" id="18_isnxy"]
 [ext_resource type="Script" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="18_n8kk3"]
 [ext_resource type="PackedScene" uid="uid://dyqgt6khk244r" path="res://Scenes/confirm_dialog.tscn" id="19_ogfn8"]
 [ext_resource type="AudioStream" uid="uid://dx0hyqv3whb28" path="res://ChikuTaku The Game VGM Menu Select Watson Amelia WUNDER RiKU ✨ チクタク オリジナル曲.mp3" id="19_vg3fm"]
+[ext_resource type="Texture2D" uid="uid://vxfe3fkfuq14" path="res://UI/chat.png" id="20_cu85v"]
 [ext_resource type="LabelSettings" uid="uid://dhdlni742no3g" path="res://Themes/white_text.tres" id="20_dcvur"]
+[ext_resource type="Texture2D" uid="uid://cy6rk1ewblrkk" path="res://UI/information.png" id="20_f4c3e"]
 [ext_resource type="StyleBox" uid="uid://bu0x76epm4jgt" path="res://Themes/red_transparent_stylebox.tres" id="20_poi5y"]
 [ext_resource type="Script" path="res://addons/websocket/WebSocket.gd" id="20_v32ia"]
+[ext_resource type="Texture2D" uid="uid://cr17emtr7b78o" path="res://UI/settings.png" id="22_b5lix"]
+[ext_resource type="ButtonGroup" uid="uid://cg04rurq5f5al" path="res://UI/turn_steps_button_group.tres" id="23_r3vn8"]
+[ext_resource type="Script" path="res://Scripts/info_panel.gd" id="24_a27xy"]
+[ext_resource type="Texture2D" uid="uid://syjyaota42p2" path="res://CyberAssets/Game Side Menu/scroll_icon_2.png" id="25_t7idx"]
+[ext_resource type="Texture2D" uid="uid://brfosqsw30a1j" path="res://CyberAssets/DeckBuilder/61457.png" id="26_e0lsu"]
 
 [sub_resource type="Gradient" id="Gradient_8vfua"]
 colors = PackedColorArray(0.691703, 0.82893, 0.968311, 1, 0.989179, 0.909736, 0.929764, 1)
@@ -36,6 +44,9 @@ width = 1280
 height = 720
 fill_from = Vector2(0.111111, 0.87478)
 fill_to = Vector2(0.934524, 0.282187)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2xwu4"]
+texture = ExtResource("5_ct7jt")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0jqk"]
 bg_color = Color(0.113725, 0.164706, 0.223529, 0.905882)
@@ -337,7 +348,7 @@ theme_override_font_sizes/font_size = 20
 text = "Special thanks to:
 - Ogbajoj, without whose spreadsheet this never would have been made
 - Cyber for helping with the graphic design
-- ScratcherMatch for the UI fixes/improvements
+- Scratchermatch for the UI fixes/improvements
 - LiquidRetko for the code contributions and Vietnamese Translation
 - Weiss and Chill for the EN proxies and the visibility he's brought to this project
 - AshiNoMegami for the Spanish translation
@@ -352,7 +363,9 @@ text = "Special thanks to:
 - よるみ for helping with the Japanese option
 
 And assorted thanks to:
-Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata, dr. AKA, Peeko, Soulscythe, J3Puffin, Chocolat, Rumos, FretfulGolem, AgentEmerald, Ilovebluewoman, Tanaka, Lordquendo, cendoru, BlueDragonOracle, Ink, ravenclawike, Stolas, Tomoki, nicogb, Chitanya589, jarzyna, Ven"
+Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999, muerto, Leipaa, Rubyshes, Dran, Zeslo, APR Financing, Airnyan, DinoBros, Richard99, Thymos, Third, Circuitous, Cometa, Zexel, chaosumbreon87, dewy, laev, Flappyxx, Eirtilyth, Keni Chan, WataWata, dr. AKA, Peeko, Soulscythe, J3Puffin, Chocolat, Rumos, FretfulGolem, AgentEmerald, Ilovebluewoman, Tanaka, Lordquendo, cendoru, BlueDragonOracle, Ink, ravenclawike, Stolas, Tomoki, nicogb, Chitanya589, jarzyna, Ven
+
+Ui icons created by Freepik - Flaticon - https://www.flaticon.com/free-icons/ui"
 autowrap_mode = 3
 
 [node name="DeckLocation" type="Label" parent="CanvasLayer/CreditsPanel/InfoMargins/InfoVBox"]
@@ -712,7 +725,12 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="LobbiesFound" type="VBoxContainer" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyListScroll"]
+[node name="LobbiesFoundMargins" type="MarginContainer" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyListScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LobbiesFound" type="VBoxContainer" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyListScroll/LobbiesFoundMargins"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -860,14 +878,19 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "LOBBY_PUBLIC_LOBBIES_FOUND"
+text = "SPECTATE_PUBLIC_GAMES_FOUND"
 horizontal_alignment = 1
 
 [node name="SpectateListScroll" type="ScrollContainer" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="GamesFound" type="VBoxContainer" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/SpectateListScroll"]
+[node name="GamesFoundMargins" type="MarginContainer" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/SpectateListScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GamesFound" type="VBoxContainer" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/SpectateListScroll/GamesFoundMargins"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1070,38 +1093,286 @@ text = "EXIT"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="Sidebar" type="ColorRect" parent="CanvasLayer"]
-visible = false
-offset_right = 370.0
-offset_bottom = 720.0
-theme = ExtResource("5_fdkx6")
-color = Color(0, 0, 0, 0.843137)
-
-[node name="CardTextSideMenu" type="Sprite2D" parent="CanvasLayer/Sidebar"]
-position = Vector2(-10, 0)
-scale = Vector2(1.01172, 0.997)
-texture = ExtResource("5_ct7jt")
-centered = false
-
-[node name="InfoPanel" parent="CanvasLayer/Sidebar" instance=ExtResource("4_7im2k")]
+[node name="Sidebar" type="PanelContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
-position = Vector2(75, 0)
-
-[node name="ChatWindow" type="Node2D" parent="CanvasLayer/Sidebar"]
 visible = false
-position = Vector2(70, 0)
+anchors_preset = -1
+anchor_right = 0.291
+anchor_bottom = 1.0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("5_fdkx6")
+theme_override_styles/panel = SubResource("StyleBoxTexture_2xwu4")
+metadata/_edit_use_anchors_ = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Sidebar/ChatWindow"]
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 293.0
-offset_bottom = 675.0
+[node name="SidebarHBox" type="HBoxContainer" parent="CanvasLayer/Sidebar"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="ButtonMargins" type="MarginContainer" parent="CanvasLayer/Sidebar/SidebarHBox"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Buttons" type="VBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="InfoTabButton" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/pressed = ExtResource("17_m66xg")
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("18_isnxy")
+icon = ExtResource("20_f4c3e")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ChatTabButton" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("5_fdkx6")
+theme_override_styles/pressed = ExtResource("17_m66xg")
+toggle_mode = true
+button_group = ExtResource("18_isnxy")
+icon = ExtResource("20_cu85v")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Notification" type="TextureRect" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons/ChatTabButton"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -9.0
+offset_top = -11.0
+offset_right = 12.0
+offset_bottom = 10.0
+grow_horizontal = 0
+texture = ExtResource("9_a1xo7")
+expand_mode = 1
+
+[node name="OptionTabButton" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("5_fdkx6")
+theme_override_styles/pressed = ExtResource("17_m66xg")
+toggle_mode = true
+button_group = ExtResource("18_isnxy")
+icon = ExtResource("22_b5lix")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Step1" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" groups=["step_buttons"]]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 10
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("23_r3vn8")
+text = "STEP1"
+autowrap_mode = 1
+
+[node name="Step2" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" groups=["step_buttons"]]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("23_r3vn8")
+text = "STEP2"
+autowrap_mode = 1
+
+[node name="Step3" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" groups=["step_buttons"]]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("23_r3vn8")
+text = "STEP3"
+autowrap_mode = 1
+
+[node name="Step4" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" groups=["step_buttons"]]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("23_r3vn8")
+text = "STEP4"
+autowrap_mode = 1
+
+[node name="Step5" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" groups=["step_buttons"]]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("23_r3vn8")
+text = "STEP5"
+autowrap_mode = 1
+
+[node name="Step6" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" groups=["step_buttons"]]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme = ExtResource("10_dyxng")
+disabled = true
+toggle_mode = true
+button_group = ExtResource("23_r3vn8")
+text = "STEP6"
+autowrap_mode = 1
+
+[node name="InfoMargins" type="MarginContainer" parent="CanvasLayer/Sidebar/SidebarHBox"]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(292, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("24_a27xy")
+
+[node name="InfoVBox" type="VBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="InfoLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox"]
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "SIDEBAR_INFO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icons" type="Control" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ScrollIcon" type="TextureRect" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox/Icons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.823529)
+z_index = 4
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = -1
+offset_left = -10.0
+offset_top = -1.0
+offset_right = 40.0
+offset_bottom = 49.0
+texture = ExtResource("25_t7idx")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ScrollIconTimer" type="Timer" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox/Icons/ScrollIcon"]
+unique_name_in_owner = true
+wait_time = 2.0
+one_shot = true
+
+[node name="LockVBox" type="VBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox/Icons"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -49.0
+offset_top = -1.0
+offset_right = 18.0
+offset_bottom = 41.0
+grow_horizontal = 0
+theme_override_constants/separation = 0
+
+[node name="LockIcon" type="TextureRect" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox/Icons/LockVBox"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.258824)
+z_index = 2
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("26_e0lsu")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="LockText" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox/Icons/LockVBox"]
+auto_translate_mode = 2
+z_index = 2
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(0, 0, 0, 0.466667)
+text = "CTRL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Preview" type="Control" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="CardText" type="RichTextLabel" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("5_fdkx6")
+bbcode_enabled = true
+
+[node name="ChatVBoxMargins" type="MarginContainer" parent="CanvasLayer/Sidebar/SidebarHBox"]
+unique_name_in_owner = true
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(292, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ChatVBox" type="VBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ChatLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox"]
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "SIDEBAR_CHAT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChatPanelContainer" type="PanelContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChatMargins" type="MarginContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatPanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ChatScroll" type="ScrollContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatPanelContainer/ChatMargins"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
 theme = ExtResource("5_fdkx6")
 horizontal_scroll_mode = 0
 
-[node name="Chat" type="Label" parent="CanvasLayer/Sidebar/ChatWindow/ScrollContainer"]
+[node name="Chat" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatPanelContainer/ChatMargins/ChatScroll"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(280, 670)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1111,33 +1382,75 @@ theme_override_constants/outline_size = 2
 theme_override_font_sizes/font_size = 0
 autowrap_mode = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Sidebar/ChatWindow"]
-offset_left = 10.0
-offset_top = 671.0
-offset_right = 293.0
-offset_bottom = 714.0
+[node name="ChatHBox" type="HBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox"]
+layout_mode = 2
 theme = ExtResource("5_fdkx6")
+theme_override_constants/separation = 15
 alignment = 2
 
-[node name="ToSend" type="LineEdit" parent="CanvasLayer/Sidebar/ChatWindow/HBoxContainer"]
+[node name="ToSend" type="LineEdit" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_fdkx6")
 
-[node name="Send" type="Button" parent="CanvasLayer/Sidebar/ChatWindow/HBoxContainer"]
+[node name="Send" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox"]
 layout_mode = 2
 text = "SEND_CHAT"
 
-[node name="OptionsWindow" type="Node2D" parent="CanvasLayer/Sidebar"]
+[node name="OptionMargins" type="MarginContainer" parent="CanvasLayer/Sidebar/SidebarHBox"]
+unique_name_in_owner = true
 visible = false
-position = Vector2(70, 0)
+clip_contents = true
+custom_minimum_size = Vector2(292, 0)
+layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="SFXSlider" type="HSlider" parent="CanvasLayer/Sidebar/OptionsWindow"]
-offset_left = 25.0
-offset_top = 91.0
-offset_right = 1838.0
-offset_bottom = 225.0
-scale = Vector2(0.12, 0.12)
+[node name="OptionsVBox" type="VBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins"]
+layout_mode = 2
+
+[node name="OptionsLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "SIDEBAR_OPTIONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameCodeLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "SIDEBAR_GAME_CODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameCode" type="RichTextLabel" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+focus_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/bold_italics_font_size = 20
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/mono_font_size = 20
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+fit_content = true
+context_menu_enabled = true
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="SFXLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
+auto_translate_mode = 2
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
+layout_mode = 2
 theme = ExtResource("5_fdkx6")
 min_value = -30.0
 max_value = 10.0
@@ -1145,27 +1458,14 @@ scrollable = false
 tick_count = 11
 ticks_on_borders = true
 
-[node name="Label" type="Label" parent="CanvasLayer/Sidebar/OptionsWindow/SFXSlider"]
+[node name="BGMLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
 auto_translate_mode = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.028
-anchor_top = -0.763
-anchor_right = 0.028
-anchor_bottom = -0.763
-offset_left = 1844.67
-offset_top = 109.242
-offset_right = 2171.67
-offset_bottom = 220.242
-theme_override_font_sizes/font_size = 110
-text = "SFX"
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "BGM"
 
-[node name="BGMSlider" type="HSlider" parent="CanvasLayer/Sidebar/OptionsWindow"]
-offset_left = 25.0
-offset_top = 123.89
-offset_right = 1838.0
-offset_bottom = 257.89
-scale = Vector2(0.12, 0.12)
+[node name="BGMSlider" type="HSlider" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
+layout_mode = 2
 theme = ExtResource("5_fdkx6")
 min_value = -40.0
 max_value = 5.0
@@ -1173,152 +1473,19 @@ scrollable = false
 tick_count = 11
 ticks_on_borders = true
 
-[node name="Label" type="Label" parent="CanvasLayer/Sidebar/OptionsWindow/BGMSlider"]
-auto_translate_mode = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.028
-anchor_top = -0.763
-anchor_right = 0.028
-anchor_bottom = -0.763
-offset_left = 1844.67
-offset_top = 109.242
-offset_right = 2171.67
-offset_bottom = 220.242
-theme_override_font_sizes/font_size = 110
-text = "BGM"
-
-[node name="HideCosmetics" type="TextureButton" parent="CanvasLayer/Sidebar/OptionsWindow"]
+[node name="Unrevealed" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
 visible = false
-offset_left = 26.0
-offset_top = 17.0
-offset_right = 426.0
-offset_bottom = 417.0
-scale = Vector2(0.12, 0.12)
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "OPTION_COSMETICS_HIDE"
+
+[node name="HideCosmetics" type="TextureButton" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
+visible = false
+layout_mode = 2
 toggle_mode = true
 texture_normal = ExtResource("6_1x0cl")
 texture_pressed = ExtResource("7_n8awk")
-
-[node name="Unrevealed" type="Label" parent="CanvasLayer/Sidebar/OptionsWindow/HideCosmetics"]
-layout_mode = 0
-offset_left = 468.334
-offset_top = 125.0
-offset_right = 2216.33
-offset_bottom = 330.0
-theme = ExtResource("5_fdkx6")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 100
-text = "OPTION_COSMETICS_HIDE"
-
-[node name="GameCode" type="Label" parent="CanvasLayer/Sidebar/OptionsWindow"]
-offset_left = 27.0
-offset_top = 171.0
-offset_right = 277.0
-offset_bottom = 219.0
-theme = ExtResource("5_fdkx6")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Tabs" type="Node2D" parent="CanvasLayer/Sidebar"]
-
-[node name="CardInfo" type="Button" parent="CanvasLayer/Sidebar/Tabs"]
-offset_left = 15.0
-offset_top = 15.0
-offset_right = 55.0
-offset_bottom = 28.0
-theme = ExtResource("5_fdkx6")
-toggle_mode = true
-button_pressed = true
-text = "TAB_INFO"
-
-[node name="Chat" type="Button" parent="CanvasLayer/Sidebar/Tabs"]
-visible = false
-offset_left = 15.0
-offset_top = 45.0
-offset_right = 55.0
-offset_bottom = 58.0
-theme = ExtResource("5_fdkx6")
-toggle_mode = true
-text = "TAB_CHAT"
-
-[node name="Notification" type="Sprite2D" parent="CanvasLayer/Sidebar/Tabs/Chat"]
-visible = false
-position = Vector2(50, -7)
-scale = Vector2(0.004, 0.004)
-texture = ExtResource("9_a1xo7")
-
-[node name="Options" type="Button" parent="CanvasLayer/Sidebar/Tabs"]
-offset_left = 15.0
-offset_top = 185.0
-offset_right = 55.0
-offset_bottom = 198.0
-theme = ExtResource("5_fdkx6")
-toggle_mode = true
-text = "TAB_SETTINGS"
-
-[node name="Steps" type="Node2D" parent="CanvasLayer/Sidebar"]
-
-[node name="Step1" type="Button" parent="CanvasLayer/Sidebar/Steps"]
-offset_left = 10.0
-offset_top = 360.0
-offset_right = 62.0
-offset_bottom = 381.0
-theme = ExtResource("10_dyxng")
-disabled = true
-toggle_mode = true
-text = "STEP1"
-
-[node name="Step2" type="Button" parent="CanvasLayer/Sidebar/Steps"]
-offset_left = 10.0
-offset_top = 395.0
-offset_right = 62.0
-offset_bottom = 416.0
-theme = ExtResource("10_dyxng")
-disabled = true
-toggle_mode = true
-text = "STEP2"
-
-[node name="Step3" type="Button" parent="CanvasLayer/Sidebar/Steps"]
-offset_left = 10.0
-offset_top = 430.0
-offset_right = 62.0
-offset_bottom = 451.0
-theme = ExtResource("10_dyxng")
-disabled = true
-toggle_mode = true
-text = "STEP3"
-
-[node name="Step4" type="Button" parent="CanvasLayer/Sidebar/Steps"]
-offset_left = 10.0
-offset_top = 465.0
-offset_right = 62.0
-offset_bottom = 486.0
-theme = ExtResource("10_dyxng")
-disabled = true
-toggle_mode = true
-text = "STEP4"
-
-[node name="Step5" type="Button" parent="CanvasLayer/Sidebar/Steps"]
-offset_left = 10.0
-offset_top = 500.0
-offset_right = 62.0
-offset_bottom = 521.0
-theme = ExtResource("10_dyxng")
-disabled = true
-toggle_mode = true
-text = "STEP5"
-
-[node name="Step6" type="Button" parent="CanvasLayer/Sidebar/Steps"]
-offset_left = 10.0
-offset_top = 540.0
-offset_right = 62.0
-offset_bottom = 561.0
-theme = ExtResource("10_dyxng")
-disabled = true
-toggle_mode = true
-text = "STEP6"
 
 [node name="QuestionRPS" type="PanelContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
@@ -1554,11 +1721,17 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="WaitingPlayersVBox" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="WaitingPlayersVBox" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ScrollContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = 15
 
 [node name="ButtonHBox" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
 layout_mode = 2
@@ -1736,10 +1909,17 @@ text = "NO"
 [node name="MainMenu" type="Button" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
-offset_left = 1171.0
-offset_top = 691.0
-offset_right = 1269.0
-offset_bottom = 707.0
+anchors_preset = -1
+anchor_left = 0.933
+anchor_top = 0.947
+anchor_right = 0.933
+anchor_bottom = 0.947
+offset_left = -49.24
+offset_top = -12.84
+offset_right = 48.76
+offset_bottom = 13.16
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("5_fdkx6")
 theme_override_colors/font_color = Color(0.760664, 0.18676, 0.19329, 1)
 theme_override_font_sizes/font_size = 15
@@ -1948,16 +2128,16 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/DiceDefault" to="." method="_on_dice_default_pressed"]
 [connection signal="pressed" from="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/Exit" to="." method="_on_cosmetics_exit_pressed"]
 [connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_exit_pressed"]
-[connection signal="text_submitted" from="CanvasLayer/Sidebar/ChatWindow/HBoxContainer/ToSend" to="." method="send_message"]
-[connection signal="pressed" from="CanvasLayer/Sidebar/ChatWindow/HBoxContainer/Send" to="." method="send_message_on_click"]
-[connection signal="drag_ended" from="CanvasLayer/Sidebar/OptionsWindow/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
-[connection signal="drag_started" from="CanvasLayer/Sidebar/OptionsWindow/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
-[connection signal="value_changed" from="CanvasLayer/Sidebar/OptionsWindow/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/Sidebar/OptionsWindow/BGMSlider" to="." method="_on_bgm_slider_value_changed"]
-[connection signal="toggled" from="CanvasLayer/Sidebar/OptionsWindow/HideCosmetics" to="." method="_on_hide_cosmetics_toggled"]
-[connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/CardInfo" to="." method="_on_card_info_pressed"]
-[connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/Chat" to="." method="_on_chat_pressed"]
-[connection signal="pressed" from="CanvasLayer/Sidebar/Tabs/Options" to="." method="_on_sidebar_options_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons/InfoTabButton" to="." method="_on_card_info_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons/ChatTabButton" to="." method="_on_chat_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons/OptionTabButton" to="." method="_on_sidebar_options_pressed"]
+[connection signal="text_submitted" from="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox/ToSend" to="." method="send_message"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox/Send" to="." method="send_message_on_click"]
+[connection signal="drag_ended" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="drag_started" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/BGMSlider" to="." method="_on_bgm_slider_value_changed"]
+[connection signal="toggled" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/HideCosmetics" to="." method="_on_hide_cosmetics_toggled"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Rock" to="." method="_rps_rock"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Paper" to="." method="_rps_paper"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Scissors" to="." method="_rps_scissors"]

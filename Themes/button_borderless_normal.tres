@@ -1,0 +1,15 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://loevbwocoga4"]
+
+[ext_resource type="Texture2D" uid="uid://btlmd875gxsio" path="res://CyberAssets/Main Menu Assets/text box.png" id="1_nqmw8"]
+
+[resource]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+texture = ExtResource("1_nqmw8")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(3, 5, 1609, 277)

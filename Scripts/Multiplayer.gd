@@ -132,7 +132,7 @@ func _ready():
 		%Die.new_texture(dice)
 	
 	%LanguageSelect.text = Settings.get_language()
-	%InfoPanel.update_word_wrap()
+	%InfoMargins.update_word_wrap()
 	match Settings.settings.Language:
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
@@ -163,7 +163,10 @@ func _ready():
 	%DeckLocation.text += ProjectSettings.globalize_path("user://Decks")
 	
 	%LobbiesFoundLabel.text = tr("LOBBY_PUBLIC_LOBBIES_FOUND").format({"amount": "0"})
-	%SpectateFoundLabel.text = tr("LOBBY_PUBLIC_LOBBIES_FOUND").format({"amount": "0"})
+	%SpectateFoundLabel.text = tr("SPECTATE_PUBLIC_GAMES_FOUND").format({"amount": "0"})
+	
+	# Connect the step buttons in the sidebar
+	%Step5.button_group.pressed.connect(_on_step_pressed)
 	
 	fix_font_size()
 	
@@ -230,10 +233,10 @@ func _parse_deck_code(deck_data: String, allow_log: bool=false) -> Variant:
 		return null
 
 func update_info(topCard, card):
-	%InfoPanel._new_info(topCard, card)
+	%InfoMargins._new_info(topCard, card)
 
 func clear_info():
-	%InfoPanel._clear_showing()
+	%InfoMargins._clear_showing()
 
 func _restart(id=null):
 	if get_tree():
@@ -361,7 +364,7 @@ func _on_en_only_pressed() -> void:
 func _on_language_selected(index_selected):
 	Settings.update_settings("Language",Settings.languages[index_selected][0])
 	%LanguageSelect.text = Settings.languages[index_selected][1]
-	%InfoPanel.update_word_wrap()
+	%InfoMargins.update_word_wrap()
 	match Settings.settings.Language:
 		"ja":
 			chat.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
@@ -436,86 +439,136 @@ func _on_deck_location_button_pressed():
 	%DeckLocation.visible = !%DeckLocation.visible
 
 #region Sidebar
+# If you want to add more tabs to the sidebar, follow these steps:
+# Create a button in the Buttons VBox and assign it the sidebar_tab button group found in the UI folder
+# Add any control node as a child of SidebarHBox
+# Set its horizontal alignment to fill and expand
+# Add ALL content for that tab to that control node
+# Assign the parent control node a unique name
+# Add "unique_string": %UniqueName, to the sidebar tabs dictionary
+# If you want it to cycle when user hits tab key, add it to cyclable tabs too
+# Connect the button's pressed signal to a new function, and in that function call switch_sidebar_tab("unique string")
+@onready var sidebar_tabs = {
+	"info": %InfoMargins,
+	"chat": %ChatVBoxMargins,
+	"options": %OptionMargins
+}
+
+# These should be ordered correctly for the tab cycle functionality to work!
+# Right now, it's currently setup to only cycle between info and chat.
+@onready var cyclable_tabs = {
+	# ie. first tab
+	"info": %InfoMargins,
+	# last tab
+	"chat": %ChatVBoxMargins,
+}
+
+var current_tab = "info"
+
+## Switches to the sidebar given tab. Tab names are recorded in the variable sidebar_tabs
+func switch_sidebar_tab(tab):
+	for t in sidebar_tabs:
+		sidebar_tabs[t].visible = (tab == t)
+
+## Switches to either the next or previous tab
+func cycle_sidebar_tab(reverse = false):
+	var tabs = cyclable_tabs.keys()
+	var current_idx = tabs.find(current_tab)
+	if reverse:
+		var next_tab = tabs[current_idx - 1]
+		switch_sidebar_tab(next_tab)
+	else:
+		var next_tab = tabs[current_idx + 1] if current_idx < tabs.size() else tabs[0]
+		switch_sidebar_tab(next_tab)
+
+## Do not call this function directly. Instead call switch_sidebar_tab("info")
 func _on_card_info_pressed():
-	$CanvasLayer/Sidebar/ChatWindow.visible = false
-	$CanvasLayer/Sidebar/OptionsWindow.visible = false
-	
-	$CanvasLayer/Sidebar/Tabs/Chat.button_pressed = false
-	$CanvasLayer/Sidebar/Tabs/Options.button_pressed = false
-	
-	$CanvasLayer/Sidebar/InfoPanel.visible = true
+	switch_sidebar_tab("info")
 
+## Do not call this function directly. Instead call switch_sidebar_tab("chat")
 func _on_chat_pressed():
-	$CanvasLayer/Sidebar/InfoPanel.visible = false
-	$CanvasLayer/Sidebar/OptionsWindow.visible = false
-	
-	$CanvasLayer/Sidebar/Tabs/CardInfo.button_pressed = false
-	$CanvasLayer/Sidebar/Tabs/Options.button_pressed = false
-	
-	$CanvasLayer/Sidebar/ChatWindow.visible = true
-	$CanvasLayer/Sidebar/Tabs/Chat/Notification.visible = false
+	switch_sidebar_tab("chat")
+	%Notification.visible = false
 
+## Do not call this function directly. Instead call switch_sidebar_tab("options")
 func _on_sidebar_options_pressed():
-	$CanvasLayer/Sidebar/InfoPanel.visible = false
-	$CanvasLayer/Sidebar/ChatWindow.visible = false
-	
-	$CanvasLayer/Sidebar/Tabs/CardInfo.button_pressed = false
-	$CanvasLayer/Sidebar/Tabs/Chat.button_pressed = false
-	
-	$CanvasLayer/Sidebar/OptionsWindow.visible = true
+	switch_sidebar_tab("options")
 
-func _select_step(step_id):
+# The step buttons now use button groups to ensure mutual exclusivity, so much of the code here has
+# been reworked. Cycling must check that a button is enabled before choosing it, and all buttons
+# pressed signals connect to one function, which determines which button is currently pressed.
+
+# New workflow:
+# press a step button OR hotkey -> _select_step(id)
+# Send command to server to go to selected step
+# Server calls on all peers: _actually_select_step
+
+
+## Sends the server command to update connected peers with the new step
+func _select_step(step_id: int):
 	send_command("Game","Select Step",{"step":step_id})
 
-func _actually_select_step(step_id):
-	for stepButton in $CanvasLayer/Sidebar/Steps.get_children():
+
+## Called by the server on the peer
+## Iterates over all children of a node, checks if their name contains id,
+## Presses them if it does, unpresses them if it doesn't (without a signal)
+## Finally, sets the step variable in yourSide
+func _actually_select_step(step_id: int):
+	for stepButton: BaseButton in get_tree().get_nodes_in_group("step_buttons"):
 		if stepButton.name.contains(str(step_id)):
 			stepButton.set_pressed_no_signal(true)
 		else:
+			# Set pressed no signal does NOT unpress other button group buttons.
+			# So we still have to do it manually.
 			stepButton.set_pressed_no_signal(false)
 	if yourSide:
 		yourSide.step = step_id
 
-func _on_step_pressed(toggle_on, step_id):
-	$CanvasLayer/Sidebar/Steps.get_node("Step" + str(step_id)).set_pressed_no_signal(!toggle_on)
-	if !yourSide or !yourSide.is_turn:
-		return
-	_select_step(step_id)
+func _on_step_pressed(button: BaseButton):
+	# Extremely hacky way of getting the step number
+	_select_step(int(str(button.name)[4]))
 
+## enables all steps except perf. unless allow_performance is true
 func _enable_steps(allow_performance = false):
-	for stepButton in $CanvasLayer/Sidebar/Steps.get_children():
+	for stepButton in get_tree().get_nodes_in_group("step_buttons"):
 		if stepButton.name.contains("5"):
 			stepButton.disabled = !allow_performance
 		else:
 			stepButton.disabled = false
 
+## returns true if any of the step buttons are enabled
+## this is probably to determine if control has been passed over yet
 func _steps_enabled():
-	for stepButton in $CanvasLayer/Sidebar/Steps.get_children():
+	for stepButton in get_tree().get_nodes_in_group("step_buttons"):
 		if !stepButton.disabled:
 			return true
 	return false
 
+## returns the index of the next step, taking into account perf being disabled
 func _next_step():
 	var result = yourSide.step + 1
-	if result == 5 and $CanvasLayer/Sidebar/Steps/Step5.disabled:
+	if result == 5 and %Step5.disabled:
 		result = 6
 	return result
 
+## returns the index of the previous step, taking into account perf being disabled
 func _last_step():
 	var result = yourSide.step - 1
 	if result == 0:
 		result = 1
-	elif result == 5 and $CanvasLayer/Sidebar/Steps/Step5.disabled:
+	elif result == 5 and %Step5.disabled:
 		result = 4
 	return result
 
+## Handles key inputs
 func _unhandled_key_input(event):
+	# Refuse to handle input if your game board isn't loaded yet
 	if yourSide != null:
+		# Normally the tab key
 		if event.is_action_pressed("SwapPanels"):
-			if $CanvasLayer/Sidebar/ChatWindow.visible:
-				_on_card_info_pressed()
-			elif $CanvasLayer/Sidebar/InfoPanel.visible:
-				_on_chat_pressed()
+			cycle_sidebar_tab()
+		# If it is your turn and at least one of your step buttons is enabled
+		# This is probably to determine that the server is ready for your input?
 		if yourSide.is_turn and _steps_enabled():
 			if event.is_action_pressed("Next Step"):
 				var newStep = _next_step()
@@ -536,13 +589,17 @@ func fix_font_size():
 	
 	var all_labels = []
 	findByClass(self, "Button", all_labels)
-	for label in all_labels:
+	for label: BaseButton in all_labels:
+		if label.text == "":
+			continue # Don't try to correct font size for labels with icon only
+		if label.is_in_group("step_buttons"):
+			continue # Don't mess with the font sizes on the step buttons
 		if label.auto_translate:
 			if !label.has_meta("fontSize"):
 				label.set_meta("fontSize", label.get_theme_font_size("font_size"))
 			#Scale is 0.8 here but 0.9 in the deck builder. This is intentional, and returns the best results
 			FixFontTool.apply_text_with_corrected_max_scale(label.size, label, tr(label.text), 0.8, false, Vector2(), label.get_meta("fontSize"))
-			pass
+			pass # This is here so you can put a breakpoint to find out which label is throwing an error
 
 #region WebSocket
 
@@ -829,7 +886,7 @@ func found_games(found:Array) -> void:
 			gameButton.add_theme_font_size_override("font_size", 25)
 			game_list_found.add_child(gameButton)
 	game_list_searching_text.visible = false
-	%SpectateFoundLabel.text = tr("LOBBY_PUBLIC_LOBBIES_FOUND").format({"amount": str(found.size())})
+	%SpectateFoundLabel.text = tr("SPECTATE_PUBLIC_GAMES_FOUND").format({"amount": str(found.size())})
 
 func close_game_list() -> void:
 	game_list.visible = false
@@ -1008,7 +1065,7 @@ func show_game(game_id:String,opponent_id:String,opponent_name:String) -> void:
 	yourSide.made_turn_choice.connect(_on_choice_made)
 	yourSide.rps.connect(_on_rps)
 	
-	$CanvasLayer/Sidebar/OptionsWindow/GameCode.text = game_id
+	%GameCode.text = "[center]" + game_id + "[/center]"
 	
 	_hide_main_menu()
 	
@@ -1029,8 +1086,8 @@ func _hide_main_menu():
 	%ClientVersionText.visible = false
 	%CardVersionText.visible = false
 	
-	$CanvasLayer/Sidebar.visible = true
-	$CanvasLayer/Sidebar/Tabs/Chat.visible = true
+	%Sidebar.visible = true
+	%ChatVBox.visible = true
 
 func _spectate_yes():
 	%SpectateNo.disabled = true
@@ -1058,7 +1115,7 @@ func show_spectated_game(player_info:Dictionary) -> void:
 	
 	_hide_main_menu()
 	%MainMenu.visible = true
-	$CanvasLayer/Sidebar/ChatWindow/HBoxContainer.visible = false
+	%ChatVBox.visible = false
 	
 	fix_font_size()
 
@@ -1123,8 +1180,8 @@ func game_command(command: String, data: Dictionary) -> void:
 					elif data["sender"] in spectatedSides:
 						sender_name = spectatedSides[data["sender"]].player_name
 					chat.text += "\n\n" + sender_name + ": " + data["message"]
-					$CanvasLayer/Sidebar/Tabs/Chat/Notification.visible = !$CanvasLayer/Sidebar/ChatWindow.visible
-				$CanvasLayer/Sidebar/ChatWindow/ScrollContainer.scroll_vertical = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer.get_v_scroll_bar().max_value
+					%Notification.visible = !%ChatVBoxMargins.visible
+				%ChatScroll.scroll_vertical = %ChatScroll.get_v_scroll_bar().max_value
 		"Game Message":
 			if "sender" in data and "message_code" in data and "untranslated" in data and "translated" in data:
 				var format_info = data["untranslated"]
@@ -1146,7 +1203,7 @@ func game_command(command: String, data: Dictionary) -> void:
 					elif data["sender"] in spectatedSides:
 						format_info["person"] = spectatedSides[data["sender"]].player_name
 					chat.text += "\n" + tr(data["message_code"]).format(format_info)
-				$CanvasLayer/Sidebar/ChatWindow/ScrollContainer.scroll_vertical = $CanvasLayer/Sidebar/ChatWindow/ScrollContainer.get_v_scroll_bar().max_value
+				%ChatScroll.scroll_vertical = %ChatScroll.get_v_scroll_bar().max_value
 		"Game Win":
 			if "winner" in data and "reason" in data:
 				if data["winner"] == player_id:
@@ -1211,10 +1268,10 @@ func _on_end_turn():
 func send_message(message):
 	if message != "":
 		send_command("Game","Chat",{"message":message})
-		$CanvasLayer/Sidebar/ChatWindow/HBoxContainer/ToSend.text = ""
+		%ToSend.text = ""
 
 func send_message_on_click():
-	send_message($CanvasLayer/Sidebar/ChatWindow/HBoxContainer/ToSend.text)
+	send_message(%ToSend.text)
 
 func _on_close_error_pressed() -> void:
 	%Error.visible = false
