@@ -1340,7 +1340,6 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
 [node name="ChatVBox" type="VBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins"]
-unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 10
 
@@ -1383,6 +1382,8 @@ theme_override_font_sizes/font_size = 0
 autowrap_mode = 3
 
 [node name="ChatHBox" type="HBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_constants/separation = 15

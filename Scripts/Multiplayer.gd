@@ -32,8 +32,6 @@ var rps = false
 @onready var lobby_list_searching_text = %LobbyListSearchingText
 @onready var lobby_list_code = %LobbyListCode
 @onready var lobby_list_code_button = %JoinByCode
-# I renamed a lot of the game list UI components to spectate list for my own clarity
-# I will leave all the variable names the same though
 @onready var game_list = %SpectatePanel
 @onready var game_list_found = %GamesFound
 @onready var game_list_searching_text = %SpectateListSearchingText
@@ -464,9 +462,10 @@ func _on_deck_location_button_pressed():
 }
 
 var current_tab = "info"
-
+	
 ## Switches to the sidebar given tab. Tab names are recorded in the variable sidebar_tabs
 func switch_sidebar_tab(tab):
+	current_tab = tab
 	for t in sidebar_tabs:
 		sidebar_tabs[t].visible = (tab == t)
 
@@ -474,12 +473,12 @@ func switch_sidebar_tab(tab):
 func cycle_sidebar_tab(reverse = false):
 	var tabs = cyclable_tabs.keys()
 	var current_idx = tabs.find(current_tab)
+	var next_tab
 	if reverse:
-		var next_tab = tabs[current_idx - 1]
-		switch_sidebar_tab(next_tab)
+		next_tab = tabs[current_idx - 1]
 	else:
-		var next_tab = tabs[current_idx + 1] if current_idx < tabs.size() else tabs[0]
-		switch_sidebar_tab(next_tab)
+		next_tab = tabs[current_idx + 1] if current_idx + 1 < tabs.size() else tabs[0]
+	switch_sidebar_tab(next_tab)
 
 ## Do not call this function directly. Instead call switch_sidebar_tab("info")
 func _on_card_info_pressed():
@@ -512,6 +511,7 @@ func _select_step(step_id: int):
 ## Called by the server on the peer
 ## Iterates over all children of a node, checks if their name contains id,
 ## Presses them if it does, unpresses them if it doesn't (without a signal)
+## Calls enable
 ## Finally, sets the step variable in yourSide
 func _actually_select_step(step_id: int):
 	for stepButton: BaseButton in get_tree().get_nodes_in_group("step_buttons"):
@@ -529,8 +529,8 @@ func _on_step_pressed(button: BaseButton):
 	_select_step(int(str(button.name)[4]))
 
 ## enables all steps except perf. unless allow_performance is true
-func _enable_steps(allow_performance = false):
-	for stepButton in get_tree().get_nodes_in_group("step_buttons"):
+func _enable_steps(allow_performance := false):
+	for stepButton: BaseButton in get_tree().get_nodes_in_group("step_buttons"):
 		if stepButton.name.contains("5"):
 			stepButton.disabled = !allow_performance
 		else:
@@ -579,6 +579,13 @@ func _unhandled_key_input(event):
 			elif event.is_action_pressed("Last Step"):
 				var newStep = _last_step()
 				_select_step(newStep)
+
+func toggle_step_mouse_filters(state: bool) -> void:
+	for step_button: BaseButton in get_tree().get_nodes_in_group("step_buttons"):
+		if state:
+			step_button.mouse_filter = Control.MOUSE_FILTER_STOP
+		else:
+			step_button.mouse_filter = Control.MOUSE_FILTER_IGNORE
 #endregion
 
 
@@ -591,7 +598,7 @@ func fix_font_size():
 	findByClass(self, "Button", all_labels)
 	for label: BaseButton in all_labels:
 		if label.text == "":
-			continue # Don't try to correct font size for labels with icon only
+			continue # Don't try to correct font size for labels with no text (icon only)
 		if label.is_in_group("step_buttons"):
 			continue # Don't mess with the font sizes on the step buttons
 		if label.auto_translate:
@@ -708,8 +715,13 @@ func _on_websocket_received(raw_data):
 								%ErrorMessage.text = "[center]" + data["error_text"] + "[/center]"
 								%Error.visible = true
 						"Spectate":
+							# This command is only received once when the spectator first joins
 							if "game_state" in data:
-								_enable_steps(!data["game_state"]["firstTurn"])
+								#_enable_steps(!data["game_state"]["firstTurn"])
+								# I have no reliable way to reenable the perf button for spectator only
+								# So I will leave it enabled from the start!
+								# The best solution is the server sends whether it is turn 1 in the step command
+								_enable_steps(true)
 								_actually_select_step(int(data["game_state"]["step"]))
 								show_spectated_game(data["game_state"]["players"])
 						_:
@@ -1086,8 +1098,12 @@ func _hide_main_menu():
 	%ClientVersionText.visible = false
 	%CardVersionText.visible = false
 	
+	# For now, this function enables the sidebar too
 	%Sidebar.visible = true
-	%ChatVBox.visible = true
+	# ChatHBox gets disabled later if you are a spectator. This is here to reenable it.
+	%ChatHBox.visible = true
+	# Same goes for the step button mouse filters
+	toggle_step_mouse_filters(true)
 
 func _spectate_yes():
 	%SpectateNo.disabled = true
@@ -1113,11 +1129,25 @@ func show_spectated_game(player_info:Dictionary) -> void:
 		firstPlayer = false
 		call_deferred("add_child",newSide)
 	
+	# hide_main_menu shows the sidebar and chat input by default
 	_hide_main_menu()
+	# This is the button to return to the main menu from the spectate screen
 	%MainMenu.visible = true
-	%ChatVBox.visible = false
+	# Hide the chat input and button if spectating
+	%ChatHBox.visible = false
+	# Disable the step button mouse filters if spectating
+	toggle_step_mouse_filters(false)
 	
 	fix_font_size()
+	
+	# Trying to fix a bizarre visual bug
+	var timer = Timer.new()
+	add_child(timer)
+	timer.start(2)
+	await timer.timeout
+	# For some reason, we have to hide and show
+	%Buttons.visible = false
+	%Buttons.visible = true
 
 #endregion
 
