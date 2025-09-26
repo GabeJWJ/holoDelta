@@ -304,6 +304,14 @@ msgid "LOBBY_CHOSEN"
 msgstr "Chosen"
 
 #: Scenes/board.tscn
+msgid "LOBBY_CODE"
+msgstr "Lobby Code:"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SELECT_OPPONENT"
+msgstr "Select Opponent"
+
+#: Scenes/board.tscn
 msgid "LOBBY_STARTGAME"
 msgstr "Start Game"
 
