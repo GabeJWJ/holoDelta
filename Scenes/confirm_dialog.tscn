@@ -6,37 +6,46 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqi58"]
 bg_color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[node name="ConfirmDialog" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="ConfirmDialog" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -67.0
+offset_right = 90.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oqi58")
 script = ExtResource("1_ulpvw")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_right = 500.0
-offset_bottom = 300.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_oqi58")
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
 
-[node name="DialogTitle" type="Label" parent="Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="DialogTitle" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 auto_translate_mode = 2
-layout_mode = 0
-offset_left = 25.0
-offset_top = 17.0
-offset_right = 475.0
-offset_bottom = 92.0
+layout_mode = 2
 theme = ExtResource("1_yhfgx")
 theme_type_variation = &"TooltipLabel"
 theme_override_font_sizes/font_size = 23
 text = "TITLE"
 horizontal_alignment = 1
 
-[node name="DialogContent" type="Label" parent="Panel"]
+[node name="DialogContent" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 auto_translate_mode = 2
-layout_mode = 0
-offset_left = 25.0
-offset_top = 100.0
-offset_right = 475.0
-offset_bottom = 230.0
+layout_mode = 2
 theme = ExtResource("1_yhfgx")
 theme_type_variation = &"TooltipLabel"
 theme_override_colors/font_color = Color(1, 1, 0, 1)
@@ -45,27 +54,24 @@ text = "CONTENT"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="YesButton" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 100.0
-offset_top = 250.0
-offset_right = 151.0
-offset_bottom = 273.0
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="YesButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
 theme = ExtResource("1_yhfgx")
 theme_override_font_sizes/font_size = 20
 text = "YES"
 autowrap_mode = 3
 
-[node name="NoButton" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 350.0
-offset_top = 250.0
-offset_right = 399.0
-offset_bottom = 273.0
+[node name="NoButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
 theme = ExtResource("1_yhfgx")
 theme_override_font_sizes/font_size = 20
 text = "NO"
 autowrap_mode = 3
-
-[connection signal="pressed" from="Panel/YesButton" to="." method="_on_yes_button_pressed"]
-[connection signal="pressed" from="Panel/NoButton" to="." method="_on_no_button_pressed"]

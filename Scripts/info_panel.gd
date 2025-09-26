@@ -3,7 +3,7 @@
 #Basically it contains a list of cards to show keeping track of id, image, and text
 #But that's split up into two different lists for some reason
 
-extends Node2D
+extends MarginContainer
 
 var showing_card_ids = [] #This is used for one thing - hovering over a card attached to the card you were already looking at
 var showing = [] #A list of pairs [card image : TextureRect, card text : String]
@@ -64,14 +64,14 @@ func _set_showing(to_show : Array, cheer_show : Dictionary, start_index : int) -
 	#The cards should be spaced out nicely, but they need to all fit on the panel
 	#This code will dynamically figure out how far apart they should be
 	#Also, if there are multiple cards being shown will show Cyber's scroll wheel icon
-	var max_offset = clamp(100 * (to_show.size() - 1),75,140)
+	var max_offset = clamp(100 * (to_show.size() - 1),55,120)
 	var each_offset = 75
 	if to_show.size() > 1:
 		each_offset = clamp((max_offset-10)/(to_show.size()-1),0,75)
-		$ScrollIcon.visible = true
+		%ScrollIcon.visible = true
 		%ScrollIconTimer.start()
 	else:
-		$ScrollIcon.visible = false
+		%ScrollIcon.visible = false
 	
 	#Creates showing and showing_grays based on to_show
 	#Goes in reverse order so that the cards at the front of the list will naturally be on top
@@ -79,14 +79,14 @@ func _set_showing(to_show : Array, cheer_show : Dictionary, start_index : int) -
 	for i in range(to_show.size()):
 		var entry = to_show[-i-1]
 		var preview = TextureRect.new()
-		$Info.add_child(preview)
+		%Preview.add_child(preview)
 		preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE #Will refuse to shrink without this
 		preview.size = Vector2(150,209)
 		preview.position = Vector2(max_offset,10) - (i * Vector2(each_offset,0))
 		preview.texture = entry[0]
 		showing.insert(0,[preview,entry[1]])
 		var gray = TextureRect.new()
-		$Info.add_child(gray)
+		%Preview.add_child(gray)
 		gray.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		gray.size = Vector2(150,209)
 		gray.position = Vector2(max_offset,10) - (i * Vector2(each_offset,0))
@@ -105,7 +105,7 @@ func _set_showing(to_show : Array, cheer_show : Dictionary, start_index : int) -
 	#We don't bother with reverse order here, though we could
 	for cheer_color in cheer_attached:
 		for icon in cheer_attached[cheer_color]:
-			$Info.add_child(icon)
+			%Preview.add_child(icon)
 			icon.position = Vector2(15+(each_offset*cheer_i),190)
 			cheer_i += 1
 	
@@ -146,7 +146,7 @@ func _clear_showing() -> void:
 		cheer_attached[cheer_color].clear()
 	%CardText.text = ""
 	showing_card_ids = []
-	$ScrollIcon.visible = false
+	%ScrollIcon.visible = false
 
 func update_word_wrap() -> void:
 	#For some reason, Japanese won't word wrap under word smart mode when exported
@@ -174,9 +174,9 @@ func _input(event) -> void:
 		if event.is_action_pressed("LockInfo") and (showing.size() != 0 or locked):
 			locked = !locked
 			if locked:
-				$LockOff.modulate.a = 1
+				%LockIcon.modulate.a = 1
 			else:
-				$LockOff.modulate.a = 0.25
+				%LockIcon.modulate.a = 0.25
 
 func _on_scroll_icon_timer_timeout() -> void:
-	$ScrollIcon.visible = false
+	%ScrollIcon.visible = false

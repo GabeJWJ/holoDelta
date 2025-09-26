@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bxsc8cl0qv85i"]
+
+[ext_resource type="StyleBox" uid="uid://loevbwocoga4" path="res://Themes/button_borderless_normal.tres" id="1_07nje"]
+[ext_resource type="StyleBox" uid="uid://dggiindbqyalc" path="res://Themes/button_borderless_shrink.tres" id="2_momw5"]
+
+[resource]
+Button/styles/focus = ExtResource("1_07nje")
+Button/styles/hover = ExtResource("1_07nje")
+Button/styles/normal = ExtResource("1_07nje")
+Button/styles/pressed = ExtResource("2_momw5")

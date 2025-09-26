@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dhdlni742no3g"]
+
+[ext_resource type="FontFile" uid="uid://d1prs0o0rldol" path="res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf" id="1_5t0y7"]
+
+[resource]
+font = ExtResource("1_5t0y7")
+font_size = 35

@@ -16,8 +16,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# sets the title and content of dialog
-	$Panel/DialogTitle.text = dialogTitle
-	$Panel/DialogContent.text = dialogContent
+	%DialogTitle.text = dialogTitle
+	%DialogContent.text = dialogContent
 	pass
 
 func _on_yes_button_pressed() -> void:
@@ -30,4 +30,4 @@ func _on_no_button_pressed() -> void:
 	
 # simply disabling the yes button or not
 func set_yes_button_disabled(state: bool):
-	$Panel/YesButton.disabled = state
+	%YesButton.disabled = state
