@@ -1796,6 +1796,7 @@ text = "OK"
 [node name="SpectateConfirmPanel" type="PanelContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
+z_index = 99
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
