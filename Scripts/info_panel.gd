@@ -51,7 +51,11 @@ func _new_info(top_card, card_to_show) -> void:
 			showing_card_ids.append(attached_card.cardID)
 			result.append([attached_card.cardFront,attached_card.full_desc()])
 	
-	_set_showing(result, cheer_result, showing_card_ids.find(card_to_show.cardID))
+	#If you hover over an attached cheer the index is -1, which just shows the last card
+	#That doesn't feel right, so we'll clamp to 0
+	var index_to_show = max(0, showing_card_ids.find(card_to_show.cardID))
+	
+	_set_showing(result, cheer_result, index_to_show)
 
 func _set_showing(to_show : Array, cheer_show : Dictionary, start_index : int) -> void:
 	#Actually physically sets the display according to passed values
@@ -64,12 +68,11 @@ func _set_showing(to_show : Array, cheer_show : Dictionary, start_index : int) -
 	#The cards should be spaced out nicely, but they need to all fit on the panel
 	#This code will dynamically figure out how far apart they should be
 	#Also, if there are multiple cards being shown will show Cyber's scroll wheel icon
-	var max_offset = clamp(100 * (to_show.size() - 1),55,120)
+	var max_offset = clamp(60 * (to_show.size() - 1),35,90)
 	var each_offset = 75
 	if to_show.size() > 1:
 		each_offset = clamp((max_offset-10)/(to_show.size()-1),0,75)
 		%ScrollIcon.visible = true
-		%ScrollIconTimer.start()
 	else:
 		%ScrollIcon.visible = false
 	
@@ -81,14 +84,14 @@ func _set_showing(to_show : Array, cheer_show : Dictionary, start_index : int) -
 		var preview = TextureRect.new()
 		%Preview.add_child(preview)
 		preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE #Will refuse to shrink without this
-		preview.size = Vector2(150,209)
+		preview.size = Vector2(165,230)
 		preview.position = Vector2(max_offset,10) - (i * Vector2(each_offset,0))
 		preview.texture = entry[0]
 		showing.insert(0,[preview,entry[1]])
 		var gray = TextureRect.new()
 		%Preview.add_child(gray)
 		gray.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		gray.size = Vector2(150,209)
+		gray.size = Vector2(165,230)
 		gray.position = Vector2(max_offset,10) - (i * Vector2(each_offset,0))
 		gray.texture = gray_text
 		showing_grays.insert(0,gray)
@@ -106,7 +109,7 @@ func _set_showing(to_show : Array, cheer_show : Dictionary, start_index : int) -
 	for cheer_color in cheer_attached:
 		for icon in cheer_attached[cheer_color]:
 			%Preview.add_child(icon)
-			icon.position = Vector2(15+(each_offset*cheer_i),190)
+			icon.position = Vector2(15+(each_offset*cheer_i),210)
 			cheer_i += 1
 	
 	_show_specific(start_index)
@@ -177,6 +180,3 @@ func _input(event) -> void:
 				%LockIcon.modulate.a = 1
 			else:
 				%LockIcon.modulate.a = 0.25
-
-func _on_scroll_icon_timer_timeout() -> void:
-	%ScrollIcon.visible = false

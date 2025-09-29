@@ -1263,6 +1263,7 @@ size_flags_vertical = 0
 
 [node name="ScrollIcon" type="TextureRect" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox/Icons"]
 unique_name_in_owner = true
+visible = false
 modulate = Color(1, 1, 1, 0.823529)
 z_index = 4
 custom_minimum_size = Vector2(50, 50)
@@ -1275,11 +1276,6 @@ offset_bottom = 49.0
 texture = ExtResource("25_t7idx")
 expand_mode = 1
 stretch_mode = 4
-
-[node name="ScrollIconTimer" type="Timer" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox/Icons/ScrollIcon"]
-unique_name_in_owner = true
-wait_time = 2.0
-one_shot = true
 
 [node name="LockVBox" type="VBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox/Icons"]
 layout_mode = 1
@@ -1450,7 +1446,8 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "SFX"
 
-[node name="SFXSlider" type="HSlider" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
+[node name="InGameSFXSlider" type="HSlider" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 min_value = -30.0
@@ -1465,7 +1462,8 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "BGM"
 
-[node name="BGMSlider" type="HSlider" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
+[node name="InGameBGMSlider" type="HSlider" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 min_value = -40.0
@@ -2135,10 +2133,10 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons/OptionTabButton" to="." method="_on_sidebar_options_pressed"]
 [connection signal="text_submitted" from="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox/ToSend" to="." method="send_message"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox/Send" to="." method="send_message_on_click"]
-[connection signal="drag_ended" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
-[connection signal="drag_started" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
-[connection signal="value_changed" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/BGMSlider" to="." method="_on_bgm_slider_value_changed"]
+[connection signal="drag_ended" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="drag_started" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameBGMSlider" to="." method="_on_bgm_slider_value_changed"]
 [connection signal="toggled" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/HideCosmetics" to="." method="_on_hide_cosmetics_toggled"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Rock" to="." method="_rps_rock"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Paper" to="." method="_rps_paper"]

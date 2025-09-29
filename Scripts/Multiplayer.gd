@@ -105,14 +105,14 @@ func _ready():
 	%OnlyEN.button_pressed = Settings.settings.OnlyEN
 	
 	%SFXSlider.value = Settings.settings.SFXVolume
-	%SFXSlider.value = Settings.settings.SFXVolume
+	%InGameSFXSlider.value = Settings.settings.SFXVolume
 	AudioServer.set_bus_volume_db(Settings.sfx_bus_index, Settings.settings.SFXVolume)
 	if Settings.settings.SFXVolume <= -29:
 		AudioServer.set_bus_mute(Settings.sfx_bus_index, true)
 	else:
 		AudioServer.set_bus_mute(Settings.sfx_bus_index, false)
 	%BGMSlider.value = Settings.settings.BGMVolume
-	%BGMSlider.value = Settings.settings.BGMVolume
+	%InGameBGMSlider.value = Settings.settings.BGMVolume
 	AudioServer.set_bus_volume_db(Settings.bgm_bus_index, Settings.settings.BGMVolume)
 	if Settings.settings.BGMVolume < -39:
 		AudioServer.set_bus_mute(Settings.bgm_bus_index, true)
@@ -756,10 +756,12 @@ func lobby_command(command:String, data:Dictionary):
 			if "id" in data and "hostName" in data:
 				show_lobby(data["hostName"],data["id"],false,{},null,false,false,false)
 		"Close":
-			clear_lobby_menu()
+			exit_lobby()
 			%DeckList.visible = false
 			%LobbyPanel.visible = false
 			%LobbyButtons.visible = !inGame
+			if !inGame:
+				deckInfo = null
 		"Deck Legality":
 			if "legal" in data and "reasons" in data:
 				if data["legal"]:
@@ -784,6 +786,7 @@ func lobby_command(command:String, data:Dictionary):
 				show_game(data["id"],data["opponent_id"],data["name"])
 		"Game Start Without You":
 			if "id" in data and !gameToSpectate:
+				exit_lobby()
 				%SpectateConfirmPanel.visible = true
 				%RPSWaitLabel.text = tr("LOBBY_GAMESTART_SPECTATE")
 				gameToSpectate = data["id"]
@@ -1019,22 +1022,6 @@ func exit_lobby():
 		lobby_chosen_deck_select.text = tr("DECK_SELECT")
 		lobby_host_deck_select.disabled = false
 		lobby_chosen_deck_select.disabled = false
-		deckInfo = null
-		%LobbyScreen.visible = false
-	else:
-		# This is the case that the host has exited the lobby, clearing the other player's lobby ID.
-		clear_lobby_menu()
-		lobby_host_ready.disabled = true
-		lobby_chosen_ready.disabled = true
-		lobby_host_ready.visible = true
-		lobby_chosen_ready.visible = true
-		lobby_host_ready.text = tr("LOBBY_READY")
-		lobby_chosen_ready.text = tr("LOBBY_READY")
-		lobby_host_deck_select.text = tr("DECK_SELECT")
-		lobby_chosen_deck_select.text = tr("DECK_SELECT")
-		lobby_host_deck_select.disabled = false
-		lobby_chosen_deck_select.disabled = false
-		deckInfo = null
 		%LobbyScreen.visible = false
 
 func clear_lobby_menu() -> void:
