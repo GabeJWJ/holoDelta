@@ -409,7 +409,10 @@ func specialStart4(life_info,ist):
 	cheerDeck.update_size()
 	
 	get_parent()._enable_steps()
-
+	if is_turn:
+		get_parent().toggle_step_mouse_filters(true)
+	else:
+		get_parent().toggle_step_mouse_filters(false)
 func specialStart4_fake(oshi_info, zone_info):
 	oshiCard.queue_free()
 	oshiCard = get_real_card(oshi_info, oshiBack)
@@ -1786,6 +1789,7 @@ func end_turn():
 		$"CanvasLayer/End Turn".visible = false
 		emit_signal("ended_turn")
 		get_parent()._enable_steps(true)
+		get_parent().toggle_step_mouse_filters(false)
 
 
 func _on_fuda_shuffled():
@@ -1834,6 +1838,7 @@ func side_command(command: String, data: Dictionary) -> void:
 		"Your Turn":
 			set_is_turn(true)
 			get_parent()._enable_steps(true)
+			get_parent().toggle_step_mouse_filters(true)
 			
 		"Game Loss":
 			game_loss()

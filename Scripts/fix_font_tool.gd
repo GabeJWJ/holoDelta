@@ -18,6 +18,7 @@ static func apply_text_with_corrected_max_scale(parent_size: Vector2, label: But
 	
 	
 	# Repeatedly multiplies font size by 95% the original value until it fits
+	# SOMETIMES THROWS WACK ERORRS IF YOU HAVE CLIP TEXT ENABLED
 	while label.get_theme_font("font_size").get_string_size(text, HORIZONTAL_ALIGNMENT_CENTER, -1, default_font_size * scale_to_apply_to_font * scale).y > max(parent_size.y / scale, 0.1):
 		scale_to_apply_to_font *= 0.95
 	

@@ -1,14 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://w54g66g0fow1"]
+[gd_scene load_steps=14 format=3 uid="uid://w54g66g0fow1"]
 
 [ext_resource type="Script" path="res://Scripts/deck_creation.gd" id="1_vhmc0"]
 [ext_resource type="Texture2D" uid="uid://cx76tmf8royup" path="res://CyberAssets/Game Side Menu/Side Menu.png" id="2_dcm3l"]
-[ext_resource type="PackedScene" uid="uid://chrab4uqxsh2s" path="res://Scenes/info_panel.tscn" id="2_xdide"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="3_da1xd"]
+[ext_resource type="Script" path="res://Scripts/info_panel.gd" id="4_7stf2"]
 [ext_resource type="PackedScene" uid="uid://cvqdjg5xohy5a" path="res://Scenes/deck_list.tscn" id="4_lmglq"]
 [ext_resource type="PackedScene" uid="uid://gfca1xt2vdra" path="res://Scenes/sleeve_select.tscn" id="5_0bh18"]
+[ext_resource type="Texture2D" uid="uid://syjyaota42p2" path="res://CyberAssets/Game Side Menu/scroll_icon_2.png" id="6_ow068"]
 [ext_resource type="Texture2D" uid="uid://ngxbbonnmuab" path="res://CyberAssets/DeckBuilder/Deck_Builder_BG.png" id="6_t38qv"]
 [ext_resource type="Texture2D" uid="uid://bnsmsduvikadg" path="res://holoBack.png" id="6_to43o"]
 [ext_resource type="Texture2D" uid="uid://bcans1dkc8eyo" path="res://cheerBack.png" id="7_kh04n"]
+[ext_resource type="Texture2D" uid="uid://brfosqsw30a1j" path="res://CyberAssets/DeckBuilder/61457.png" id="7_n8jtr"]
 [ext_resource type="AudioStream" uid="uid://dx0hyqv3whb28" path="res://ChikuTaku The Game VGM Menu Select Watson Amelia WUNDER RiKU ✨ チクタク オリジナル曲.mp3" id="10_ncvki"]
 [ext_resource type="Script" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="11_h6gkd"]
 
@@ -28,8 +30,106 @@ scale = Vector2(1.01172, 0.997)
 texture = ExtResource("2_dcm3l")
 centered = false
 
-[node name="InfoPanel" parent="CanvasLayer" instance=ExtResource("2_xdide")]
-allowed_to_scroll = false
+[node name="InfoMargins" type="MarginContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(292, 0)
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 296.0
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+script = ExtResource("4_7stf2")
+
+[node name="InfoVBox" type="VBoxContainer" parent="CanvasLayer/InfoMargins"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="InfoLabel" type="Label" parent="CanvasLayer/InfoMargins/InfoVBox"]
+layout_mode = 2
+theme = ExtResource("3_da1xd")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "SIDEBAR_INFO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icons" type="Control" parent="CanvasLayer/InfoMargins/InfoVBox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ScrollIcon" type="TextureRect" parent="CanvasLayer/InfoMargins/InfoVBox/Icons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.823529)
+z_index = 4
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = -1
+offset_left = -10.0
+offset_top = -1.0
+offset_right = 40.0
+offset_bottom = 49.0
+texture = ExtResource("6_ow068")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ScrollIconTimer" type="Timer" parent="CanvasLayer/InfoMargins/InfoVBox/Icons/ScrollIcon"]
+unique_name_in_owner = true
+wait_time = 2.0
+one_shot = true
+
+[node name="LockVBox" type="VBoxContainer" parent="CanvasLayer/InfoMargins/InfoVBox/Icons"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -49.0
+offset_top = -1.0
+offset_right = 18.0
+offset_bottom = 41.0
+grow_horizontal = 0
+theme_override_constants/separation = 0
+
+[node name="LockIcon" type="TextureRect" parent="CanvasLayer/InfoMargins/InfoVBox/Icons/LockVBox"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.258824)
+z_index = 2
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("7_n8jtr")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="LockText" type="Label" parent="CanvasLayer/InfoMargins/InfoVBox/Icons/LockVBox"]
+auto_translate_mode = 2
+z_index = 2
+layout_mode = 2
+theme = ExtResource("3_da1xd")
+theme_override_colors/font_color = Color(0, 0, 0, 0.466667)
+text = "CTRL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Preview" type="Control" parent="CanvasLayer/InfoMargins/InfoVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="CardText" type="RichTextLabel" parent="CanvasLayer/InfoMargins/InfoVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_da1xd")
+bbcode_enabled = true
 
 [node name="PossibleCards" type="TabContainer" parent="CanvasLayer"]
 offset_left = 886.0

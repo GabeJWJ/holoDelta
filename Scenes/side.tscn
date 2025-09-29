@@ -333,6 +333,7 @@ text = "START_READY"
 
 [node name="Question" type="ColorRect" parent="CanvasLayer"]
 visible = false
+z_index = 10
 offset_left = 399.0
 offset_top = 130.0
 offset_right = 1246.0

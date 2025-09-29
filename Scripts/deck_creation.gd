@@ -223,7 +223,7 @@ func _ready() -> void:
 	
 	#Last minute initializations
 	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
-	$CanvasLayer/InfoPanel.update_word_wrap()
+	%InfoMargins.update_word_wrap()
 	update_analytics()
 	fix_font_size()
 	
@@ -1024,10 +1024,10 @@ func update_analytics():
 	analytics.text = result
 
 func update_info(card_id):
-	$CanvasLayer/InfoPanel._new_info(all_cards[card_id],all_cards[card_id])
+	%InfoMargins._new_info(all_cards[card_id],all_cards[card_id])
 
 func clear_info():
-	$CanvasLayer/InfoPanel._clear_showing()
+	%InfoMargins._clear_showing()
 #endregion
 
 #region Bottom Bar Buttons
