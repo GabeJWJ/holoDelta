@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=41 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
@@ -31,9 +31,7 @@
 [ext_resource type="Script" path="res://addons/websocket/WebSocket.gd" id="20_v32ia"]
 [ext_resource type="Texture2D" uid="uid://cr17emtr7b78o" path="res://UI/settings.png" id="22_b5lix"]
 [ext_resource type="ButtonGroup" uid="uid://cg04rurq5f5al" path="res://UI/turn_steps_button_group.tres" id="23_r3vn8"]
-[ext_resource type="Script" path="res://Scripts/info_panel.gd" id="24_a27xy"]
-[ext_resource type="Texture2D" uid="uid://syjyaota42p2" path="res://CyberAssets/Game Side Menu/scroll_icon_2.png" id="25_t7idx"]
-[ext_resource type="Texture2D" uid="uid://brfosqsw30a1j" path="res://CyberAssets/DeckBuilder/61457.png" id="26_e0lsu"]
+[ext_resource type="PackedScene" uid="uid://chrab4uqxsh2s" path="res://Scenes/info_panel.tscn" id="24_jpb5x"]
 
 [sub_resource type="Gradient" id="Gradient_8vfua"]
 colors = PackedColorArray(0.691703, 0.82893, 0.968311, 1, 0.989179, 0.909736, 0.929764, 1)
@@ -1234,95 +1232,9 @@ button_group = ExtResource("23_r3vn8")
 text = "STEP6"
 autowrap_mode = 1
 
-[node name="InfoMargins" type="MarginContainer" parent="CanvasLayer/Sidebar/SidebarHBox"]
+[node name="InfoMargins" parent="CanvasLayer/Sidebar/SidebarHBox" instance=ExtResource("24_jpb5x")]
 unique_name_in_owner = true
-clip_contents = true
-custom_minimum_size = Vector2(292, 0)
 layout_mode = 2
-size_flags_horizontal = 3
-script = ExtResource("24_a27xy")
-
-[node name="InfoVBox" type="VBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 5
-
-[node name="InfoLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox"]
-layout_mode = 2
-theme = ExtResource("5_fdkx6")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
-text = "SIDEBAR_INFO"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Icons" type="Control" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox"]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="ScrollIcon" type="TextureRect" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox/Icons"]
-unique_name_in_owner = true
-visible = false
-modulate = Color(1, 1, 1, 0.823529)
-z_index = 4
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 1
-anchors_preset = -1
-offset_left = -10.0
-offset_top = -1.0
-offset_right = 40.0
-offset_bottom = 49.0
-texture = ExtResource("25_t7idx")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="LockVBox" type="VBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox/Icons"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -49.0
-offset_top = -1.0
-offset_right = 18.0
-offset_bottom = 41.0
-grow_horizontal = 0
-theme_override_constants/separation = 0
-
-[node name="LockIcon" type="TextureRect" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox/Icons/LockVBox"]
-unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0.258824)
-z_index = 2
-custom_minimum_size = Vector2(25, 25)
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("26_e0lsu")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="LockText" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox/Icons/LockVBox"]
-auto_translate_mode = 2
-z_index = 2
-layout_mode = 2
-theme = ExtResource("5_fdkx6")
-theme_override_colors/font_color = Color(0, 0, 0, 0.466667)
-text = "CTRL"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Preview" type="Control" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 250)
-layout_mode = 2
-
-[node name="CardText" type="RichTextLabel" parent="CanvasLayer/Sidebar/SidebarHBox/InfoMargins/InfoVBox"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 360)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = ExtResource("5_fdkx6")
-bbcode_enabled = true
 
 [node name="ChatVBoxMargins" type="MarginContainer" parent="CanvasLayer/Sidebar/SidebarHBox"]
 unique_name_in_owner = true
@@ -2026,6 +1938,7 @@ text = "TRYAGAIN"
 [node name="Error" type="PanelContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
+z_index = 100
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.189

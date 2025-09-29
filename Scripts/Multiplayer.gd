@@ -714,6 +714,7 @@ func _on_websocket_received(raw_data):
 							if "error_text" in data:
 								%ErrorMessage.text = "[center]" + data["error_text"] + "[/center]"
 								%Error.visible = true
+								%Error.get_parent().move_child(%Error, -1) # Make Error receive input events as well as being in front
 						"Spectate":
 							# This command is only received once when the spectator first joins
 							if "game_state" in data:
