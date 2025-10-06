@@ -5,51 +5,95 @@
 [ext_resource type="Texture2D" uid="uid://brfosqsw30a1j" path="res://CyberAssets/DeckBuilder/61457.png" id="3_7wkbs"]
 [ext_resource type="Texture2D" uid="uid://syjyaota42p2" path="res://CyberAssets/Game Side Menu/scroll_icon_2.png" id="4_onx1c"]
 
-[node name="InfoPanel" type="Node2D"]
+[node name="InfoMargins" type="MarginContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(292, 0)
+size_flags_horizontal = 3
 script = ExtResource("1_dle75")
 
-[node name="Info" type="ColorRect" parent="."]
-offset_right = 300.0
-offset_bottom = 720.0
-size_flags_vertical = 3
-color = Color(0, 0, 0, 0)
-
-[node name="CardText" type="RichTextLabel" parent="Info"]
+[node name="InfoVBox" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 360)
 layout_mode = 2
-offset_left = 5.0
-offset_top = 224.0
-offset_right = 295.0
-offset_bottom = 710.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = ExtResource("2_ducyq")
-bbcode_enabled = true
+theme_override_constants/separation = 5
 
-[node name="LockOff" type="Sprite2D" parent="."]
+[node name="InfoLabel" type="Label" parent="InfoVBox"]
+layout_mode = 2
+theme = ExtResource("2_ducyq")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "SIDEBAR_INFO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icons" type="Control" parent="InfoVBox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ScrollIcon" type="TextureRect" parent="InfoVBox/Icons"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.823529)
+z_index = 4
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = -1
+offset_left = -6.0
+offset_top = -1.0
+offset_right = 44.0
+offset_bottom = 49.0
+texture = ExtResource("4_onx1c")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ScrollIconTimer" type="Timer" parent="InfoVBox/Icons/ScrollIcon"]
+unique_name_in_owner = true
+wait_time = 2.0
+one_shot = true
+
+[node name="LockVBox" type="VBoxContainer" parent="InfoVBox/Icons"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -63.0
+offset_top = -1.0
+offset_right = 4.0
+offset_bottom = 48.0
+grow_horizontal = 0
+theme_override_constants/separation = 0
+
+[node name="LockIcon" type="TextureRect" parent="InfoVBox/Icons/LockVBox"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.258824)
 z_index = 2
-position = Vector2(275, 20)
-scale = Vector2(0.07, 0.07)
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
 texture = ExtResource("3_7wkbs")
+expand_mode = 1
+stretch_mode = 4
 
-[node name="LockButton" type="Label" parent="LockOff"]
+[node name="LockText" type="Label" parent="InfoVBox/Icons/LockVBox"]
 auto_translate_mode = 2
-offset_left = -200.0
-offset_top = 243.0
-offset_right = 200.0
-offset_bottom = 403.0
+z_index = 2
+layout_mode = 2
 theme = ExtResource("2_ducyq")
-theme_override_font_sizes/font_size = 110
+theme_override_colors/font_color = Color(0, 0, 0, 0.466667)
 text = "CTRL"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ScrollIcon" type="Sprite2D" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0.823529)
-z_index = 4
-position = Vector2(28, 36)
-scale = Vector2(0.132812, 0.132812)
-texture = ExtResource("4_onx1c")
+[node name="Preview" type="Control" parent="InfoVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="CardText" type="RichTextLabel" parent="InfoVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_ducyq")
+bbcode_enabled = true

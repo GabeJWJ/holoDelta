@@ -5,6 +5,15 @@
 
 extends MarginContainer
 
+# Variables to calculate offsets dynamically
+const CARD_SIZE := Vector2(165,230)
+const CHEER_SCALE := Vector2(0.75,0.75)
+# In the future, I will try an add a scrollbar if the minimum offset is large enough that cards don't fit anymore
+const MINIMUM_OFFSET := 0 # The smallest possible interval in px cards can be separated. SETTING TOO LARGE A VALUE WILL CAUSE CARD OVERFLOW!!!
+const MAXIMUM_OFFSET := 90 # The largest possible interval in px cards can be separated
+const POPUP_Y := 0 # Y position of selected card
+const NORMAL_Y := 10 # Y position of unselected cards
+
 var showing_card_ids = [] #This is used for one thing - hovering over a card attached to the card you were already looking at
 var showing = [] #A list of pairs [card image : TextureRect, card text : String]
 var showing_grays = [] #A list of transparent gray TextureRects positioned over the cards to dull not shown cards
@@ -44,7 +53,7 @@ func _new_info(top_card, card_to_show) -> void:
 		if attached_card.cardType == "Cheer":
 			var preview = TextureRect.new()
 			preview.z_index = 1
-			preview.scale = Vector2(0.75,0.75)
+			preview.scale = CHEER_SCALE
 			preview.texture = cheer[attached_card.cheer_color]
 			cheer_result[attached_card.cheer_color].append(preview)
 		else:
@@ -68,10 +77,17 @@ func _set_showing(to_show : Array, cheer_show : Dictionary, start_index : int) -
 	#The cards should be spaced out nicely, but they need to all fit on the panel
 	#This code will dynamically figure out how far apart they should be
 	#Also, if there are multiple cards being shown will show Cyber's scroll wheel icon
-	var max_offset = clamp(60 * (to_show.size() - 1),35,90)
-	var each_offset = 75
+	
+	# This could all almost certainly be rewritten to take advantage of an HBox
+	# If that happens, the cheer icon placement will need to go into a control
+	# node below said HBox.
+	var vbox_width = %InfoVBox.size.x
+	var card_center = (vbox_width / 2) - (CARD_SIZE.x / 2)# What a card's pos.x should be assigned to for 1 card to be centered
+	var available_space = vbox_width - CARD_SIZE.x
+	var each_offset = clamp(available_space / to_show.size(), MINIMUM_OFFSET, MAXIMUM_OFFSET)
+	# Work our way from right to left, right being the topmost card
+	var starting_pos = card_center + ((to_show.size() - 1) * (each_offset / 2))
 	if to_show.size() > 1:
-		each_offset = clamp((max_offset-10)/(to_show.size()-1),0,75)
 		%ScrollIcon.visible = true
 	else:
 		%ScrollIcon.visible = false
@@ -84,15 +100,15 @@ func _set_showing(to_show : Array, cheer_show : Dictionary, start_index : int) -
 		var preview = TextureRect.new()
 		%Preview.add_child(preview)
 		preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE #Will refuse to shrink without this
-		preview.size = Vector2(165,230)
-		preview.position = Vector2(max_offset,10) - (i * Vector2(each_offset,0))
+		preview.size = CARD_SIZE
+		preview.position = Vector2(starting_pos - (each_offset * i), NORMAL_Y)
 		preview.texture = entry[0]
 		showing.insert(0,[preview,entry[1]])
 		var gray = TextureRect.new()
 		%Preview.add_child(gray)
 		gray.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		gray.size = Vector2(165,230)
-		gray.position = Vector2(max_offset,10) - (i * Vector2(each_offset,0))
+		gray.size = CARD_SIZE
+		gray.position = Vector2(starting_pos - (each_offset * i), NORMAL_Y)
 		gray.texture = gray_text
 		showing_grays.insert(0,gray)
 	
@@ -121,7 +137,8 @@ func _show_specific(showing_id):
 	
 	%CardText.text = showing[showing_id][1]
 	showing[showing_id][0].z_index = 1
-	showing[showing_id][0].position.y = 3
+	if showing.size() != 1:
+		showing[showing_id][0].position.y = POPUP_Y
 	showing_grays[showing_id].visible = false
 	current_showing = showing_id
 
@@ -130,7 +147,7 @@ func _change_show(change=1) -> void:
 	#change : int - the index delta
 	
 	showing[current_showing][0].z_index = 0
-	showing[current_showing][0].position.y = 10
+	showing[current_showing][0].position.y = NORMAL_Y
 	showing_grays[current_showing].visible = true
 	_show_specific(clamp(current_showing+change,0,showing.size()-1))
 
