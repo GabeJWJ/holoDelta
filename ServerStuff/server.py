@@ -18,6 +18,7 @@ initialize()
 random_characters = get_data("random_characters")
 current_banlist = get_data("current_banlist")
 en_current_banlist = get_data("en_current_banlist")
+en_unreleased = get_data("en_unreleased")
 unreleased = get_data("unreleased")
 card_data = get_data("card_data")
 bloom_levels = get_data("bloom_levels")
@@ -60,7 +61,7 @@ async def websocket_endpoint(websocket: WebSocket):
     await manager.connect(websocket)
     try:
         player = Player(websocket)
-        await player.tell("Server","Player Info",{"id":player.id, "name":player.name,"current":current_banlist,"en_current":en_current_banlist,"unreleased":unreleased,"server_id":identifier})
+        await player.tell("Server","Player Info",{"id":player.id, "name":player.name,"current":current_banlist,"en_current":en_current_banlist,"en_unreleased":en_unreleased,"unreleased":unreleased,"server_id":identifier})
         await update_numbers_all()
         while True:
             json_data = await websocket.receive_bytes()

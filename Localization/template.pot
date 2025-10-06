@@ -201,6 +201,16 @@ msgstr ""
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_UNRELEASED_EN"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "SPECTATE_PUBLIC_GAMES_FOUND"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_GAMECODE"
 msgstr ""
 
@@ -229,26 +239,6 @@ msgid "EXIT"
 msgstr ""
 
 #: Scenes/board.tscn
-msgid "SEND_CHAT"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "OPTION_COSMETICS_HIDE"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "TAB_INFO"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "TAB_CHAT"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "TAB_SETTINGS"
-msgstr ""
-
-#: Scenes/board.tscn
 msgid "STEP1"
 msgstr ""
 
@@ -270,6 +260,26 @@ msgstr ""
 
 #: Scenes/board.tscn
 msgid "STEP6"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_CHAT"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SEND_CHAT"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_OPTIONS"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_GAME_CODE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "OPTION_COSMETICS_HIDE"
 msgstr ""
 
 #: Scenes/board.tscn
@@ -314,6 +324,14 @@ msgstr ""
 
 #: Scenes/board.tscn
 msgid "LOBBY_CHOSEN"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "LOBBY_CODE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "LOBBY_SELECT_OPPONENT"
 msgstr ""
 
 #: Scenes/board.tscn
@@ -417,6 +435,10 @@ msgstr ""
 
 #: Scenes/side.tscn
 msgid "MULLIGAN_TEXT"
+msgstr ""
+
+#: Scenes/info_panel.tscn
+msgid "SIDEBAR_INFO"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
@@ -1935,3 +1957,4 @@ msgstr ""
 #: Scripts/card.gd
 msgid "INFO_LIMITED"
 msgstr ""
+

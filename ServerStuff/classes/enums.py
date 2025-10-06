@@ -17,4 +17,5 @@ class Banlist(IntEnum):
     current = 1
     en_current = 2
     unreleased = 3
+    en_unreleased = 4
     custom = 99

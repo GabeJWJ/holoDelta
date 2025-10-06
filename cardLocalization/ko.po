@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-09-13 23:58\n"
+"PO-Revision-Date: 2025-10-06 01:26\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "이 홀로멤이 다운됐을 때, 자신의 라이프 -2."
@@ -19,7 +19,7 @@ msgid "EXTRA_UNLIM"
 msgstr "이 홀로멤은 덱에 몇 장이라도 넣을 수 있다."
 
 msgid "EXTRA_EXTRANAME"
-msgstr ""
+msgstr "이{cardType}은(는) 〈{extraName}〉(으)로도 취급한다"
 
 msgid "Blue"
 msgstr "청"
@@ -6150,7 +6150,7 @@ msgid "KoyoLabo"
 msgstr "코요라보"
 
 msgid "hBP04-003_NAME"
-msgstr "이치죠 리리카"
+msgstr "이치조 리리카"
 
 msgid "hBP04-003_SKILL_NAME"
 msgstr "Reach the top!"
@@ -6246,13 +6246,13 @@ msgid "hBP04-026_BLOOM_EFFECT"
 msgstr "자신의 오시 홀로멤이 〈시라카미 후부키〉일 때, 자신의 옐 덱에서, 백 옐 1장을 공개하고, 자신의 〈시라카미 후부키〉에게 보낸다. 그리고 옐 덱을 셔플 한다."
 
 msgid "hBP04-032_NAME"
-msgstr "이치죠 리리카"
+msgstr "이치조 리리카"
 
 msgid "hBP04-032_ART_0_NAME"
 msgstr "콘리리"
 
 msgid "hBP04-033_NAME"
-msgstr "이치죠 리리카"
+msgstr "이치조 리리카"
 
 msgid "hBP04-033_ART_0_NAME"
 msgstr "리리카 스탠바이"
@@ -6264,7 +6264,7 @@ msgid "hBP04-033_ART_1_EFFECT"
 msgstr "이 턴에서 자신이 〈한계밥〉을 사용하고 있을 때, 상대의 콜라보 홀로멤에게 특수 대미지 20을 준다."
 
 msgid "hBP04-034_NAME"
-msgstr "이치죠 리리카"
+msgstr "이치조 리리카"
 
 msgid "hBP04-034_ART_0_NAME"
 msgstr "Let's Dance"
@@ -6273,7 +6273,7 @@ msgid "hBP04-034_ART_1_NAME"
 msgstr "Subscribe or Die!"
 
 msgid "hBP04-035_NAME"
-msgstr "이치죠 리리카"
+msgstr "이치조 리리카"
 
 msgid "hBP04-035_ART_0_NAME"
 msgstr "사장 펀치"
@@ -6288,7 +6288,7 @@ msgid "hBP04-035_BLOOM_EFFECT"
 msgstr "자신의 아카이브의 〈한계밥〉 1장을 패로 되돌릴 수 있다."
 
 msgid "hBP04-036_NAME"
-msgstr "이치죠 리리카"
+msgstr "이치조 리리카"
 
 msgid "hBP04-036_ART_0_NAME"
 msgstr "이히히"
@@ -6303,7 +6303,7 @@ msgid "hBP04-036_BLOOM_EFFECT"
 msgstr "상대의 콜라보 홀로멤에게 특수 대미지 20을 준다."
 
 msgid "hBP04-037_NAME"
-msgstr "이치죠 리리카"
+msgstr "이치조 리리카"
 
 msgid "hBP04-037_ART_0_NAME"
 msgstr "오? 싸울래?"
@@ -7277,1574 +7277,1600 @@ msgid "hBD24-048_SPSKILL_EFFECT"
 msgstr "[게임에 1번] 자신의 덱에서, 자색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-049_NAME"
-msgstr ""
+msgstr "이사키 리오나"
 
 msgid "hBD24-049_SKILL_NAME"
-msgstr ""
+msgstr "화이트 인핸스"
 
 msgid "hBD24-049_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 백색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-049_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~White~"
 
 msgid "hBD24-049_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 백색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-050_NAME"
-msgstr ""
+msgstr "츠노마키 와타메"
 
 msgid "hBD24-050_SKILL_NAME"
-msgstr ""
+msgstr "옐로우 인핸스"
 
 msgid "hBD24-050_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 황색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-050_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Yellow~"
 
 msgid "hBD24-050_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 황색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-051_NAME"
-msgstr ""
+msgstr "토도로키 하지메"
 
 msgid "hBD24-051_SKILL_NAME"
-msgstr ""
+msgstr "화이트 인핸스"
 
 msgid "hBD24-051_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 백색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-051_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~White~"
 
 msgid "hBD24-051_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 백색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-052_NAME"
-msgstr ""
+msgstr "타카네 루이"
 
 msgid "hBD24-052_SKILL_NAME"
-msgstr ""
+msgstr "레드 인핸스"
 
 msgid "hBD24-052_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 적색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-052_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Red~"
 
 msgid "hBD24-052_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 적색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-053_NAME"
-msgstr ""
+msgstr "미즈미야 스우"
 
 msgid "hBD24-053_SKILL_NAME"
-msgstr ""
+msgstr "블루 인핸스"
 
 msgid "hBD24-053_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 청색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-053_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Blue~"
 
 msgid "hBD24-053_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 청색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-054_NAME"
-msgstr ""
+msgstr "카자마 이로하"
 
 msgid "hBD24-054_SKILL_NAME"
-msgstr ""
+msgstr "그린 인핸스"
 
 msgid "hBD24-054_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 녹색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-054_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Green~"
 
 msgid "hBD24-054_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 녹색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-055_NAME"
-msgstr ""
+msgstr "AZKi"
 
 msgid "hBD24-055_SKILL_NAME"
-msgstr ""
+msgstr "그린 인핸스"
 
 msgid "hBD24-055_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 녹색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-055_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Green~"
 
 msgid "hBD24-055_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 녹색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-056_NAME"
-msgstr ""
+msgstr "오오조라 스바루"
 
 msgid "hBD24-056_SKILL_NAME"
-msgstr ""
+msgstr "옐로우 인핸스"
 
 msgid "hBD24-056_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 황색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-056_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Yellow~"
 
 msgid "hBD24-056_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 황색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-057_NAME"
-msgstr ""
+msgstr "타카나시 키아라"
 
 msgid "hBD24-057_SKILL_NAME"
-msgstr ""
+msgstr "레드 인핸스"
 
 msgid "hBD24-057_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 적색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-057_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Red~"
 
 msgid "hBD24-057_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서 적색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-058_NAME"
-msgstr ""
+msgstr "린도 치하야"
 
 msgid "hBD24-058_SKILL_NAME"
-msgstr ""
+msgstr "그린 인핸스"
 
 msgid "hBD24-058_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 녹색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-058_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Green~"
 
 msgid "hBD24-058_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 녹색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-059_NAME"
-msgstr ""
+msgstr "아이라니 이오피프틴"
 
 msgid "hBD24-059_SKILL_NAME"
-msgstr ""
+msgstr "그린 인핸스"
 
 msgid "hBD24-059_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 녹색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-059_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Green~"
 
 msgid "hBD24-059_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 녹색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-060_NAME"
-msgstr ""
+msgstr "코가네이 니코"
 
 msgid "hBD24-060_SKILL_NAME"
-msgstr ""
+msgstr "옐로우 인핸스"
 
 msgid "hBD24-060_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 황색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-060_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Yellow~"
 
 msgid "hBD24-060_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 황색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-061_NAME"
-msgstr ""
+msgstr "호쇼 마린"
 
 msgid "hBD24-061_SKILL_NAME"
-msgstr ""
+msgstr "레드 인핸스"
 
 msgid "hBD24-061_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 적색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-061_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Red~"
 
 msgid "hBD24-061_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 적색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBP05-006_NAME"
-msgstr ""
+msgstr "네리사 레이븐크로프트"
 
 msgid "hBP05-006_SKILL_NAME"
-msgstr ""
+msgstr "Liebesträume"
 
 msgid "hBP05-006_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 #노래를 가진 [센터 홀로멤과 콜라보 홀로멤]의 아츠 +10."
 
 msgid "hBP05-006_SPSKILL_NAME"
-msgstr ""
+msgstr "Shoot the Moon"
 
 msgid "hBP05-006_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 이 게임 동안, 자신의 〈네리사 레이븐크로프트〉 전원의 아츠에 필요한 무 -1."
 
 msgid "hBP05-009_NAME"
-msgstr ""
+msgstr "시로가네 노엘"
 
 msgid "hBP05-009_ART_0_NAME"
-msgstr ""
+msgstr "여름의 추억"
 
 msgid "hBP05-009_COLLAB_NAME"
-msgstr ""
+msgstr "이펙트 여름 찾기"
 
 msgid "hBP05-009_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신이 후공이고 최초의 턴이라면, 자신의 덱에서, 1st 홀로멤인 〈시로가네 노엘〉 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-011_NAME"
-msgstr ""
+msgstr "시로가네 노엘"
 
 msgid "hBP05-011_ART_0_NAME"
-msgstr ""
+msgstr "단장 행복해 "
 
 msgid "hBP05-011_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 스테이지에 서로 다른 카드명인 #3기생을 가진 홀로멤 1명당, 이 아츠 +10."
 
 msgid "hBP05-011_BLOOM_NAME"
-msgstr ""
+msgstr "모두가 있어 줘서"
 
 msgid "hBP05-011_BLOOM_EFFECT"
-msgstr ""
+msgstr "이 턴 동안, 자신의 #3기생을 가진 [센터 홀로멤과 콜라보 홀로멤]의 아츠 +10."
 
 msgid "hBP05-014_NAME"
-msgstr ""
+msgstr "우사다 페코라"
 
 msgid "hBP05-014_ART_0_NAME"
-msgstr ""
+msgstr "귀여워 페코?"
 
 msgid "hBP05-014_ART_0_EFFECT"
-msgstr ""
+msgstr "주사위를 1번 굴릴 수 있다 : 짝수라면, 자신의 덱을 1장 드로우 한다."
 
 msgid "hBP05-015_NAME"
-msgstr ""
+msgstr "우사다 페코라"
 
 msgid "hBP05-015_ART_0_NAME"
-msgstr ""
+msgstr "당근… "
 
 msgid "hBP05-015_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 스테이지에 #3기생을 가진 홀로멤이 3명 이상 있다면, 자신의 옐 덱의 위에서부터 1장을 이 홀로멤에게 보낸다."
 
 msgid "hBP05-015_ART_1_NAME"
-msgstr ""
+msgstr "필요 없어 페코? "
 
 msgid "hBP05-015_ART_1_EFFECT"
-msgstr ""
+msgstr "자신의 오시 홀로멤의 색이 백색이라면, 자신의 덱을 1장 드로우 한다."
 
 msgid "hBP05-058_NAME"
-msgstr ""
+msgstr "네리사 레이븐크로프트"
 
 msgid "hBP05-058_ART_0_NAME"
-msgstr ""
+msgstr "Bye-ya, darlings! "
 
 msgid "hBP05-058_COLLAB_NAME"
-msgstr ""
+msgstr "SUGOIDEKAI"
 
 msgid "hBP05-058_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신이 후공이고 최초의 턴일 때, 자신의 오시 홀로멤이 〈네리사 레이븐크로프트〉라면, 자신의 덱의 위에서부터 1장을 홀로 파워로 한다"
 
 msgid "hBP05-060_NAME"
-msgstr ""
+msgstr "네리사 레이븐크로프트"
 
 msgid "hBP05-060_ART_0_NAME"
-msgstr ""
+msgstr "요염한 축제"
 
 msgid "hBP05-060_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 패 1장을 아카이브 할 수 있다 : 상대의 센터 홀로멤이나 콜라보 홀로멤에게 특수 대미지 20을 준다."
 
 msgid "hBP05-060_BLOOM_NAME"
-msgstr ""
+msgstr "달의 빛"
 
 msgid "hBP05-060_BLOOM_EFFECT"
-msgstr ""
+msgstr "자신의 덱에서, [〈네리사 레이븐크로프트의 지팡이〉나 〈Jailbird〉] 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-080_NAME"
-msgstr ""
+msgstr "SorAZ 셀러브레이션"
 
 msgid "hBP05-080_EFFECT"
-msgstr ""
+msgstr "자신의 덱을 2장 드로우 한다. 그 후, 자신의 덱의 위에서부터 5장을 본다. 그중에서, 1st 홀로멤 1장을 공개하고, 패에 더한다. 그리고 남은 카드를 원하는 순서로 덱의 아래로 되돌린다."
 
 msgid "hY04-007_NAME"
-msgstr ""
+msgstr "청 옐"
 
 msgid "hBD24-062_NAME"
-msgstr ""
+msgstr "토코야미 토와"
 
 msgid "hBD24-062_SKILL_NAME"
-msgstr ""
+msgstr "퍼플 인핸스"
 
 msgid "hBD24-062_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 자색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-062_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Purple~"
 
 msgid "hBD24-062_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 자색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-063_NAME"
-msgstr ""
+msgstr "아카이 하아토"
 
 msgid "hBD24-063_SKILL_NAME"
-msgstr ""
+msgstr "레드 인핸스"
 
 msgid "hBD24-063_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 적색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-063_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Red~"
 
 msgid "hBD24-063_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 적색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hSD08-001_NAME"
-msgstr ""
+msgstr "아마네 카나타"
 
 msgid "hSD08-001_SKILL_NAME"
-msgstr ""
+msgstr "화이트 마이크"
 
 msgid "hSD08-001_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 백색 센터 홀로멤의 아츠 +20."
 
 msgid "hSD08-001_SPSKILL_NAME"
-msgstr ""
+msgstr "퀵 가드"
 
 msgid "hSD08-001_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 상대의 턴에서, 자신의 백색 홀로멤이 상대에게 대미지를 받을 때 사용할 수 있다 : 그 홀로멤 1명이 받는 대미지 -20."
 
 msgid "Summer"
-msgstr ""
+msgstr "서머"
 
 msgid "hSD08-002_NAME"
-msgstr ""
+msgstr "아마네 카나타"
 
 msgid "hSD08-002_ART_0_NAME"
-msgstr ""
+msgstr "유카타 어울리지"
 
 msgid "hSD08-002_COLLAB_NAME"
-msgstr ""
+msgstr "홀로 서머"
 
 msgid "hSD08-002_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신의 덱의 위에서부터 5장을 본다, 그중에서, #서머를 가진 Debut 홀로멤 1장을 공개하고, 패에 더한다. 그리고 남은 카드를 원하는 순서로 덱의 아래로 되돌린다."
 
 msgid "hSD08-003_NAME"
-msgstr ""
+msgstr "아마네 카나타"
 
 msgid "hSD08-003_ART_0_NAME"
-msgstr ""
+msgstr "모두의 슈퍼 달링"
 
 msgid "hSD08-003_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 스테이지의 #서머를 가진 홀로멤 1명당, 이 아츠 +10."
 
 msgid "hSD08-003_BLOOM_NAME"
-msgstr ""
+msgstr "상담 해줄게"
 
 msgid "hSD08-003_BLOOM_EFFECT"
-msgstr ""
+msgstr "자신의 덱에서, #4기생을 가진 Debut 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hSD08-004_NAME"
-msgstr ""
+msgstr "아마네 카나타"
 
 msgid "hSD08-004_ART_0_NAME"
-msgstr ""
+msgstr "너의 등을 쫓아 갈 수 있게"
 
 msgid "hSD08-004_ART_0_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 아츠로 상대의 센터 홀로멤을 다운 시켰을 때, 상대의 2nd 홀로멤 1명에게 특수 대미지 40을 준다."
 
 msgid "hSD08-004_GIFT_NAME"
-msgstr ""
+msgstr "엔젤 윈드"
 
 msgid "hSD08-004_GIFT_EFFECT"
-msgstr ""
+msgstr "[센터 포지션 한정] 자신의 콜라보 포지션인 #4기생을 가진 Debut 홀로멤의 아츠 +40."
 
 msgid "hSD08-005_NAME"
-msgstr ""
+msgstr "히메모리 루나"
 
 msgid "hSD08-005_ART_0_NAME"
-msgstr ""
+msgstr "축제이노라"
 
 msgid "hSD08-005_GIFT_NAME"
-msgstr ""
+msgstr "뭐든지 들어가는 주머니"
 
 msgid "hSD08-005_GIFT_EFFECT"
-msgstr ""
+msgstr "[콜라보 포지션 한정] 상대의 턴에서, 자신의 홀로멤이 다운 했을 때, 자신의 라이프가 상대 이하라면, 자신의 아카이브의 카드명에 「컴퓨터」를 가진 아이템 1장을 패로 되돌릴 수 있다."
 
 msgid "hSD08-006_NAME"
-msgstr ""
+msgstr "토코야미 토와"
 
 msgid "hSD08-006_ART_0_NAME"
-msgstr ""
+msgstr "토와한테 반해버렸어?"
 
 msgid "hSD08-006_COLLAB_NAME"
-msgstr ""
+msgstr "불꽃놀이 보러 갈래?"
 
 msgid "hSD08-006_COLLAB_EFFECT"
-msgstr ""
+msgstr "상대의 센터 홀로멤에게 특수 대미지 10을 준다. 자신이 후공이고 최초의 턴이라면, 대신, 상대의 센터 홀로멤에게 특수 대미지 20을 준다."
 
 msgid "hSD08-007_NAME"
-msgstr ""
+msgstr "츠노마키 와타메"
 
 msgid "hSD08-007_ART_0_NAME"
-msgstr ""
+msgstr "솜사탕 맛있네"
 
 msgid "hSD08-007_COLLAB_NAME"
-msgstr ""
+msgstr "모두와 여름 축제"
 
 msgid "hSD08-007_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신의 아카이브의 옐 1장을 자신의 #4기생을 가진 2nd 홀로멤에게 보낼 수 있다."
 
 msgid "hSD09-001_NAME"
-msgstr ""
+msgstr "호쇼 마린"
 
 msgid "hSD09-001_SKILL_NAME"
-msgstr ""
+msgstr "레드 마이크"
 
 msgid "hSD09-001_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 적색 센터 홀로멤의 아츠 +20."
 
 msgid "hSD09-001_SPSKILL_NAME"
-msgstr ""
+msgstr "자! 다시 한 번!"
 
 msgid "hSD09-001_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 아카이브의 적색 홀로멤 1장을 패로 되돌린다."
 
 msgid "hSD09-002_NAME"
-msgstr ""
+msgstr "호쇼 마린"
 
 msgid "hSD09-002_ART_0_NAME"
-msgstr ""
+msgstr "선장도 함께 어・때・요?"
 
 msgid "hSD09-002_COLLAB_NAME"
-msgstr ""
+msgstr "홀로 서머"
 
 msgid "hSD09-002_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신의 덱의 위에서부터 5장을 본다. 그중에서 #서머를 가진 Debut 홀로멤 1장을 공개하고, 패에 더한다. 그리고 남은 카드를 원하는 순서로 덱의 아래로 되돌린다."
 
 msgid "hSD09-003_NAME"
-msgstr ""
+msgstr "호쇼 마린"
 
 msgid "hSD09-003_ART_0_NAME"
-msgstr ""
+msgstr "마린에게 맡겨 달라고 진심으로"
 
 msgid "hSD09-003_COLLAB_NAME"
-msgstr ""
+msgstr "모두 우승하자고"
 
 msgid "hSD09-003_COLLAB_EFFECT"
-msgstr ""
+msgstr "상대의 센터 홀로멤에게, 자신의 스테이지에 서로 다른 카드명인 #3기생을 가진 홀로멤 1장당, 특수 대미지 10을 준다."
 
 msgid "hSD09-004_NAME"
-msgstr ""
+msgstr "호쇼 마린"
 
 msgid "hSD09-004_ART_0_NAME"
-msgstr ""
+msgstr "3기생의 유대"
 
 msgid "hSD09-004_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 스테이지에 〈호쇼 마린〉 이외의 #3기생을 가진 홀로멤이 있을 때, 자신의 덱을 1장 드로우 한다."
 
 msgid "hSD09-004_ART_1_NAME"
-msgstr ""
+msgstr "너희들과 수평선 너머로"
 
 msgid "hSD09-004_ART_1_EFFECT"
-msgstr ""
+msgstr "상대의 센터 홀로멤과 콜라보 홀로멤에게, 자신의 스테이지의 서로 다른 카드명인 #3기생을 가진 홀로멤 1명당, 특수 대미지 10을 준다."
 
 msgid "hSD09-005_NAME"
-msgstr ""
+msgstr "시로가네 노엘"
 
 msgid "hSD09-005_ART_0_NAME"
-msgstr ""
+msgstr "여름이 왔다구—!"
 
 msgid "hSD09-005_COLLAB_NAME"
-msgstr ""
+msgstr "3기생의 바다의 집"
 
 msgid "hSD09-005_COLLAB_EFFECT"
-msgstr ""
+msgstr "이 턴 동안, 자신의 스테이지의 서로 다른 카드명인 #3기생을 가진 홀로멤 1명당, 자신의 센터 포지션인 2nd 홀로멤의 아츠 +10."
 
 msgid "hSD09-006_NAME"
-msgstr ""
+msgstr "우사다 페코라"
 
 msgid "hSD09-006_ART_0_NAME"
-msgstr ""
+msgstr "주문한 빙수야 페코"
 
 msgid "hSD09-006_COLLAB_NAME"
-msgstr ""
+msgstr "너희들 일하는 거야 페코—!"
 
 msgid "hSD09-006_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신이 후공이고 최초의 턴이라면, 자신의 옐 덱의 위에서부터 1장을, 자신의 #3기생을 가진 홀로멤에게 보낸다."
 
 msgid "hSD09-007_NAME"
-msgstr ""
+msgstr "시라누이 후레아"
 
 msgid "hSD09-007_ART_0_NAME"
-msgstr ""
+msgstr "차가운 거 오래 기다리셨습니다♪"
 
 msgid "hSD09-007_GIFT_NAME"
-msgstr ""
+msgstr "쿨 다운 하자"
 
 msgid "hSD09-007_GIFT_EFFECT"
-msgstr ""
+msgstr "[콜라보 포지션 한정] 상대의 턴에서, 이 홀로멤이 다운 했을 때, 자신의 라이프가 상대보다 적다면, 자신의 줄 라이프 -1."
 
 msgid "hY01-009_NAME"
-msgstr ""
+msgstr "백 옐"
 
 msgid "hY02-007_NAME"
-msgstr ""
+msgstr "녹 옐"
 
 msgid "hY03-011_NAME"
-msgstr ""
+msgstr "적 옐"
 
 msgid "hY03-012_NAME"
-msgstr ""
+msgstr "적 옐"
 
 msgid "hY04-009_NAME"
-msgstr ""
+msgstr "청 옐"
 
 msgid "hBD24-064_NAME"
-msgstr ""
+msgstr "오오카미 미오"
 
 msgid "hBD24-064_SKILL_NAME"
-msgstr ""
+msgstr "그린 인핸스"
 
 msgid "hBD24-064_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 녹색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-064_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Green~"
 
 msgid "hBD24-064_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 녹색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBP05-002_NAME"
-msgstr ""
+msgstr "아이라니 이오피프틴"
 
 msgid "hBP05-002_SKILL_NAME"
-msgstr ""
+msgstr "IOFORIA~!"
 
 msgid "hBP05-002_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 상대의 턴에서, 자신의 #ID 1기생을 가진 홀로멤이 상대에게서 대미지를 받을 때 사용할 수 있다 : 그 홀로멤의 옐 1장을 자신의 다른 #ID 1기생을 가진 홀로멤에게 바꿔 붙인다."
 
 msgid "hBP05-002_SPSKILL_NAME"
-msgstr ""
+msgstr "Kekuatan Iofi"
 
 msgid "hBP05-002_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 스테이지의 옐 2장을 아카이브 하는 것으로, 자신의 덱에서, #ID 1기생을 가진 홀로멤 2장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-003_NAME"
-msgstr ""
+msgstr "오마루 폴카"
 
 msgid "hBP05-003_SKILL_NAME"
-msgstr ""
+msgstr "폴카의 전설"
 
 msgid "hBP05-003_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 자신의 패가 자신의 스테이지의 〈좌원〉의 매수와 같아지도록, 자신의 덱을 드로우 한다. 단, 드로우 하는 매수는 4장까지."
 
 msgid "hBP05-003_SPSKILL_NAME"
-msgstr ""
+msgstr "성공 체험—!!"
 
 msgid "hBP05-003_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱의 위에서부터 7장을 본다. 그중에서, [〈오마루 폴카〉와 스태프] 1장씩을 공개하고, 공개한 [〈오마루 폴카〉와 스태프]를 패에 더한다. 그리고 남은 카드를 아카이브 한다."
 
 msgid "hBP05-019_NAME"
-msgstr ""
+msgstr "아이라니 이오피프틴"
 
 msgid "hBP05-019_ART_0_NAME"
-msgstr ""
+msgstr "너와 있는 시간"
 
 msgid "hBP05-019_COLLAB_NAME"
-msgstr ""
+msgstr "이오피랑 외출"
 
 msgid "hBP05-019_COLLAB_EFFECT"
-msgstr ""
+msgstr "이 홀로멤의 옐 1장을 아카이브 할 수 있다 : 자신의 #ID 1기생을 가진 홀로멤 1명의 HP 30 회복."
 
 msgid "hBP05-020_NAME"
-msgstr ""
+msgstr "아이라니 이오피프틴"
 
 msgid "hBP05-020_ART_0_NAME"
-msgstr ""
+msgstr "너와 함께라면"
 
 msgid "hBP05-020_COLLAB_NAME"
-msgstr ""
+msgstr "과거・지금・미래의 나와 너에게"
 
 msgid "hBP05-020_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신이 후공이고 최초의 턴이라면, 자신의 옐 덱의 위에서부터 1장을 자신의 #ID 1기생 을 가진 홀로멤에게 보낸다."
 
 msgid "hBP05-021_NAME"
-msgstr ""
+msgstr "아이라니 이오피프틴"
 
 msgid "hBP05-021_ART_0_NAME"
-msgstr ""
+msgstr "말차 엄청 좋아 (´ڡ`* )"
 
 msgid "hBP05-021_BLOOM_NAME"
-msgstr ""
+msgstr "Hello beb!"
 
 msgid "hBP05-021_BLOOM_EFFECT"
-msgstr ""
+msgstr "자신의 아카이브의 옐 1장을 이 홀로멤에게 보낼 수 있다."
 
 msgid "hBP05-022_NAME"
-msgstr ""
+msgstr "아이라니 이오피프틴"
 
 msgid "hBP05-022_ART_0_NAME"
-msgstr ""
+msgstr "Matahari Terbenam"
 
 msgid "hBP05-022_COLLAB_NAME"
-msgstr ""
+msgstr "일몰에 물들다"
 
 msgid "hBP05-022_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신의 스테이지에 옐이 4장 이상 있다면, 이 턴 동안, 자신의 #ID 1기생을 가진 홀로멤 1명의 아츠 +20."
 
 msgid "hBP05-023_NAME"
-msgstr ""
+msgstr "아이라니 이오피프틴"
 
 msgid "hBP05-023_ART_0_NAME"
-msgstr ""
+msgstr "릴레이션 가든"
 
 msgid "hBP05-023_ART_0_EFFECT"
-msgstr ""
+msgstr "[센터 포지션 한정] 자신의 오시 홀로멤이 〈아이라니 이오피프틴〉이라면, 자신의 스테이지의 옐 3장당, 이 아츠 +20."
 
 msgid "hBP05-023_GIFT_NAME"
-msgstr ""
+msgstr "외계인 공주님"
 
 msgid "hBP05-023_GIFT_EFFECT"
-msgstr ""
+msgstr "이 홀로멤이 상대의 홀로멤을 다운 시켰을 때, 자신의 아카이브의 옐 1장을 자신의 #ID 1기생을 가진 홀로멤에게 보낼 수 있다."
 
 msgid "hBP05-025_NAME"
-msgstr ""
+msgstr "아키 로젠탈"
 
 msgid "hBP05-025_ART_0_NAME"
-msgstr ""
+msgstr "새로운 여행을 시작하자"
 
 msgid "hBP05-026_NAME"
-msgstr ""
+msgstr "아키 로젠탈"
 
 msgid "hBP05-026_ART_0_NAME"
-msgstr ""
+msgstr "해가 질 듯 말 듯한 한때"
 
 msgid "hBP05-026_COLLAB_NAME"
-msgstr ""
+msgstr "트와일라잇 리조트"
 
 msgid "hBP05-026_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신의 아카이브의 〈돌 도끼〉 1장을, 자신의 〈아키 로젠탈〉에 붙일 수 있다."
 
 msgid "hBP05-027_NAME"
-msgstr ""
+msgstr "아키 로젠탈"
 
 msgid "hBP05-027_ART_0_NAME"
-msgstr ""
+msgstr "원 포 올"
 
 msgid "hBP05-027_ART_0_EFFECT"
-msgstr ""
+msgstr "이 아츠로 상대의 홀로멤을 다운 시켰을 때, 자신의 덱을 1장 드로우 한다. 그 후, 자신의 오시 홀로멤이 〈아키 로젠탈〉이라면, 자신의 홀로멤 전원의 HP 20 회복."
 
 msgid "hBP05-027_BLOOM_NAME"
-msgstr ""
+msgstr "게임? 스포티? 캠프?!"
 
 msgid "hBP05-027_BLOOM_EFFECT"
-msgstr ""
+msgstr "이 홀로멤에게 붙어 있는 툴 1장을 아카이브 할 수 있다 : 자신의 덱에서, [홀로멤이나 툴] 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-030_NAME"
-msgstr ""
+msgstr "오마루 폴카"
 
 msgid "hBP05-030_ART_0_NAME"
-msgstr ""
+msgstr "선잠 기념일"
 
 msgid "hBP05-030_COLLAB_NAME"
-msgstr ""
+msgstr "눈부신 일상을 당신과"
 
 msgid "hBP05-030_COLLAB_EFFECT"
-msgstr ""
+msgstr "이 턴 동안, 자신의 팬이 붙어 있는 센터 홀로멤의 아츠 +10."
 
 msgid "hBP05-031_NAME"
-msgstr ""
+msgstr "오마루 폴카"
 
 msgid "hBP05-031_ART_0_NAME"
-msgstr ""
+msgstr " 아ゝ멋진 아이돌 인생인가"
 
 msgid "hBP05-031_ART_0_EFFECT"
-msgstr ""
+msgstr "자신이 후공이고 최초의 턴이라면, 자신의 덱에서, 〈좌원〉 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-032_NAME"
-msgstr ""
+msgstr "오마루 폴카"
 
 msgid "hBP05-032_ART_0_NAME"
-msgstr ""
+msgstr "아침의 폴카 ※약간의 픽션"
 
 msgid "hBP05-032_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 패 1장을 아카이브 할 수 있다 : 상대의 센터 홀로멤이나 콜라보 홀로멤에게 특수 대미지 10을 준다."
 
 msgid "hBP05-032_BLOOM_NAME"
-msgstr ""
+msgstr "폴카와의 아무것도 아닌 휴일"
 
 msgid "hBP05-032_BLOOM_EFFECT"
-msgstr ""
+msgstr "상대의 콜라보 홀로멤에게 특수 대미지 20을 준다."
 
 msgid "hBP05-033_NAME"
-msgstr ""
+msgstr "오마루 폴카"
 
 msgid "hBP05-033_ART_0_NAME"
-msgstr ""
+msgstr "굉장하네, 벚꽃!"
 
 msgid "hBP05-033_ART_0_EFFECT"
-msgstr ""
+msgstr "주사위를 1번 굴릴 수 있다 : 나온 눈의 수 1당, 자신의 덱의 위에서부터 1장을 아카이브 한다. 그 후, 자신의 아카이브가 10장 이상 있다면, 이 아츠 +10."
 
 msgid "hBP05-033_ART_1_NAME"
-msgstr ""
+msgstr "내년에도 너랑 보러 오고 싶다"
 
 msgid "hBP05-033_ART_1_EFFECT"
-msgstr ""
+msgstr "이 홀로멤에 붙어 있는 〈좌원〉 1장당, 이 아츠 +10."
 
 msgid "hBP05-034_NAME"
-msgstr ""
+msgstr "오마루 폴카"
 
 msgid "hBP05-034_ART_0_NAME"
-msgstr ""
+msgstr "Are you ready?"
 
 msgid "hBP05-034_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 오시 홀로멤이 〈오마루 폴카〉라면, 자신의 아카이브의 카드 10장당, 이 아츠 +30."
 
 msgid "hBP05-034_BLOOM_NAME"
-msgstr ""
+msgstr "기다렸지~!"
 
 msgid "hBP05-034_BLOOM_EFFECT"
-msgstr ""
+msgstr "[센터 포지션 한정] 자신의 패를 원하는 매수 아카이브 할 수 있다 : 아카이브 한 카드 1장당, 자신의 아카이브의 〈좌원〉 1장을 패로 되돌린다."
 
 msgid "hBP05-047_NAME"
-msgstr ""
+msgstr "코보 카나에루"
 
 msgid "hBP05-047_ART_0_NAME"
-msgstr ""
+msgstr "앳 유어 서비스!"
 
 msgid "hBP05-047_ART_0_EFFECT"
-msgstr ""
+msgstr "상대의 백 홀로멤 1명에게 특수 대미지 10을 준다."
 
 msgid "hBP05-048_NAME"
-msgstr ""
+msgstr "코보 카나에루"
 
 msgid "hBP05-048_ART_0_NAME"
-msgstr ""
+msgstr "네가 기운을 차릴 수 있도록"
 
 msgid "hBP05-048_ART_0_EFFECT"
-msgstr ""
+msgstr "상대의 백 홀로멤 2명에게 특수 대미지 10을 준다."
 
 msgid "hBP05-048_COLLAB_NAME"
-msgstr ""
+msgstr "소꿉친구의 두근두근 무릎 베개"
 
 msgid "hBP05-048_COLLAB_EFFECT"
-msgstr ""
+msgstr "상대의 백 홀로멤 2명에게 특수 대미지 10을 준다."
 
 msgid "hBP05-049_NAME"
-msgstr ""
+msgstr "코보 카나에루"
 
 msgid "hBP05-049_ART_0_NAME"
-msgstr ""
+msgstr "빗자국을 더듬다"
 
 msgid "hBP05-049_ART_0_EFFECT"
-msgstr ""
+msgstr "상대의 백 홀로멤 전원의 HP가 합계 80 이상 줄어 있다면, 자신의 아카이브의 청 옐 1장을 자신의 〈코보 카나에루〉에게 보낼 수 있다."
 
 msgid "hBP05-049_ART_1_NAME"
-msgstr ""
+msgstr "잔향이 남는 빗소리"
 
 msgid "hBP05-049_ART_1_EFFECT"
-msgstr ""
+msgstr "이 홀로멤의 옐 2장을 아카이브 할 수 있다 : 상대의 백 홀로멤 전원에게 특수 대미지 30을 준다. 단, 다운 해도 상대의 라이프는 줄지 않는다."
 
 msgid "hY05-007_NAME"
-msgstr ""
+msgstr "자 옐"
 
 msgid "hY06-006_NAME"
-msgstr ""
+msgstr "황 옐"
 
 msgid "hBP05-086_NAME"
-msgstr ""
+msgstr "Cilus"
 
 msgid "hBP05-086_EFFECT"
-msgstr ""
+msgstr "이 마스코트가 붙어 있는 홀로멤의 HP +20.\n\n"
+"◆〈코보 카나에루〉에게 붙어 있다면 능력 추가\n"
+"[센터 포지션 한정][턴에 1번] 상대의 백 홀로멤이 다운 했을 때, 자신의 덱을 1장 드로우 한다.\n\n"
+"마스코트는, 자신의 홀로멤 1명당 1장만 붙일 수 있다."
 
 msgid "hBP05-082_NAME"
-msgstr ""
+msgstr "아키 로젠탈의 도끼"
 
 msgid "hBP05-082_EFFECT"
-msgstr ""
+msgstr "이 카드는, 자신의 패 1장이나 자신의 스테이지의 〈돌 도끼〉 1장을 아카이브 하지 않으면 사용할 수 없다.\n\n"
+"이 툴이 붙어 있는 홀로멤의 아츠 +10.\n\n"
+"◆2nd 이상의 〈아키 로젠탈〉에게 붙어 있다면 능력 추가\n"
+"이 툴이 붙어 있는 홀로멤의 아츠 +40.\n\n"
+"툴은, 자신의 홀로멤 1명당 1장만 붙일 수 있다."
 
 msgid "hBP05-001_NAME"
-msgstr ""
+msgstr "시로가네 노엘"
 
 msgid "hBP05-001_SKILL_NAME"
-msgstr ""
+msgstr "백은의 기사들"
 
 msgid "hBP05-001_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 자신의 홀로멤이 상대의 홀로멤을 다운 시켰을 때 사용할 수 있다 : 자신의 덱에서, #3기생을 가진 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-001_SPSKILL_NAME"
-msgstr ""
+msgstr "슈퍼 위험했다 타로"
 
 msgid "hBP05-001_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 상대의 턴에서, 자신의 #3기생을 가진 홀로멤이 다운 했을 때 사용할 수 있다 : 자신의 줄 라이프 -1. 그 후, 그 홀로멤이 Buzz 홀로멤이나 2nd 홀로멤이라면, 자신의 덱을 2장 드로우 한다."
 
 msgid "hBP05-008_NAME"
-msgstr ""
+msgstr "시로가네 노엘"
 
 msgid "hBP05-008_ART_0_NAME"
-msgstr ""
+msgstr "즐겁게!"
 
 msgid "hBP05-008_GIFT_NAME"
-msgstr ""
+msgstr "머슬 머슬"
 
 msgid "hBP05-008_GIFT_EFFECT"
-msgstr ""
+msgstr "[콜라보 포지션 한정] 자신의 #3기생을 가진 Debut 홀로멤이 센터 포지션에서 받는 대미지 -20."
 
 msgid "hBP05-010_NAME"
-msgstr ""
+msgstr "시로가네 노엘"
 
 msgid "hBP05-010_ART_0_NAME"
-msgstr ""
+msgstr "살아갈 힘"
 
 msgid "hBP05-010_ART_0_EFFECT"
-msgstr ""
+msgstr "이 턴에 자신이 〈규동〉을 사용하고 있다면, 이 아츠 +30."
 
 msgid "hBP05-010_GIFT_NAME"
-msgstr ""
+msgstr "싸우는 단장"
 
 msgid "hBP05-010_GIFT_EFFECT"
-msgstr ""
+msgstr "[콜라보 포지션 한정] 자신의 #3기생을 가진 센터 홀로멤이 있는 동안, 상대의 홀로멤의 아츠는, 자신의 콜라보 홀로멤밖에 대상으로 할 수 없다. 단, 특수 대미지는 제외한다."
 
 msgid "hBP05-012_NAME"
-msgstr ""
+msgstr "시로가네 노엘"
 
 msgid "hBP05-012_ART_0_NAME"
-msgstr ""
+msgstr "기사단의 길"
 
 msgid "hBP05-012_ART_0_EFFECT"
-msgstr ""
+msgstr "이 홀로멤의 HP가 줄어 있다면, 이 아츠 +40."
 
 msgid "hBP05-012_ART_1_NAME"
-msgstr ""
+msgstr "자비의 일격"
 
 msgid "hBP05-012_ART_1_EFFECT"
-msgstr ""
+msgstr "[센터 포지션 한정] 자신의 #3기생을 가진 콜라보 홀로멤이 있다면, 이 아츠 +30."
 
 msgid "hBP05-017_NAME"
-msgstr ""
+msgstr "히메모리 루나"
 
 msgid "hBP05-017_ART_0_NAME"
-msgstr ""
+msgstr "레트로 로망"
 
 msgid "hBP05-017_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 아카이브의 〈루나이트〉 1장을 이 홀로멤에게 붙일 수 있다."
 
 msgid "hBP05-017_ART_1_NAME"
-msgstr ""
+msgstr "덥석덥석"
 
 msgid "hBP05-017_ART_1_EFFECT"
-msgstr ""
+msgstr "[콜라보 포지션 한정] 자신의 센터 홀로멤에게 붙어 있는 〈루나이트〉 1장당, 이 아츠에 필요한 무 -1."
 
 msgid "hBP05-057_NAME"
-msgstr ""
+msgstr "네리사 레이븐크로프트"
 
 msgid "hBP05-057_ART_0_NAME"
-msgstr ""
+msgstr "Cool Summer Nights"
 
 msgid "hBP05-057_COLLAB_NAME"
-msgstr ""
+msgstr "Going out!"
 
 msgid "hBP05-057_COLLAB_EFFECT"
-msgstr ""
+msgstr "이 턴 동안, 자신의 스테이지의 #노래를 가진 홀로멤 1명의 아츠 +10."
 
 msgid "hBP05-059_NAME"
-msgstr ""
+msgstr "네리사 레이븐크로프트"
 
 msgid "hBP05-059_ART_0_NAME"
-msgstr ""
+msgstr "원 앤 온리"
 
 msgid "hBP05-059_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 오시 홀로멤이 〈네리사 레이븐크로프트〉라면, 자신의 덱을 1장 드로우 한다"
 
 msgid "hBP05-059_ART_1_NAME"
-msgstr ""
+msgstr "뿔에 손대지 마!"
 
 msgid "hBP05-061_NAME"
-msgstr ""
+msgstr "네리사 레이븐크로프트"
 
 msgid "hBP05-061_ART_0_NAME"
-msgstr ""
+msgstr "Unleashed Charm"
 
 msgid "hBP05-061_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 패 1~3장을 아카이브 할 수 있다 : 이 턴 동안, 아카이브 한 카드 1장당, 자신의 스테이지의 #노래를 가진 홀로멤 1명의 아츠 +20."
 
 msgid "hBP05-061_GIFT_NAME"
-msgstr ""
+msgstr "DEO"
 
 msgid "hBP05-061_GIFT_EFFECT"
-msgstr ""
+msgstr "이 홀로멤이 상대의 홀로멤을 다운 시켰을 때, 자신의 덱을 2장 드로우 한다."
 
 msgid "hBP05-062_NAME"
-msgstr ""
+msgstr "토코야미 토와"
 
 msgid "hBP05-062_ART_0_NAME"
-msgstr ""
+msgstr "고마워 얘들아"
 
 msgid "hBP05-062_ART_0_EFFECT"
-msgstr ""
+msgstr "상대의 센터 홀로멤이나 콜라보 홀로멤 어느 한 쪽에, 자신의 스테이지의 #노래를 가진 1st 홀로멤 1명당, 특수 대미지 20을 준다."
 
 msgid "hBP05-062_BLOOM_NAME"
-msgstr ""
+msgstr "친구가 잔뜩 늘었어"
 
 msgid "hBP05-062_BLOOM_EFFECT"
-msgstr ""
+msgstr "자신의 덱에서, #노래를 가진 Buzz 이외의 1st 홀로멤 2장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-072_NAME"
-msgstr ""
+msgstr "츠노마키 와타메"
 
 msgid "hBP05-072_ART_0_NAME"
-msgstr ""
+msgstr "너와 색이 다른 배낭"
 
 msgid "hBP05-072_ART_0_EFFECT"
-msgstr ""
+msgstr "[센터 포지션 한정] 이 홀로멤에게 옐이 4장 이상 붙어 있다면, 이 턴 동안, 이 홀로멤과 자신의 콜라보 홀로멤의 아츠 +50."
 
 msgid "hBP05-072_ART_1_NAME"
-msgstr ""
+msgstr "와타메랑 해변 데이트"
 
 msgid "hBP05-072_ART_1_EFFECT"
-msgstr ""
+msgstr "자신의 오시 홀로멤이 〈츠노마키 와타메〉라면, 자신의 옐 덱의 위에서부터 1장을 자신의 〈츠노마키 와타메〉에게 보낼 수 있다."
 
 msgid "hBP05-075_NAME"
-msgstr ""
+msgstr "규동"
 
 msgid "hBP05-075_EFFECT"
-msgstr ""
+msgstr "자신의 홀로멤 1명을 고른다. 이 턴 동안, 고른 홀로멤의 배턴 터치에 필요한 무 -2. 그 후, 고른 홀로멤의 HP 20 회복."
 
 msgid "hBP05-081_NAME"
-msgstr ""
+msgstr "시로가네 노엘의 메이스"
 
 msgid "hBP05-081_EFFECT"
-msgstr ""
+msgstr "이 툴이 붙어 있는 홀로멤의 아츠 +10.\n\n"
+"◆1st 이상의 〈시로가네 노엘〉에게 붙어 있다면 능력 추가\n"
+"이 툴이 붙어 있는 홀로멤에게 옐이 3장 이상 붙어 있는 동안, 이 홀로멤의 아츠 +20.\n\n"
+"툴은, 자신의 홀로멤 1명당 1장만 붙일 수 있다."
 
 msgid "hBP05-083_NAME"
-msgstr ""
+msgstr "네리사 레이븐크로프트의 지팡이"
 
 msgid "hBP05-083_EFFECT"
-msgstr ""
+msgstr "이 툴이 붙어 있는 홀로멤의 아츠 +10.\n\n"
+"◆2nd 이상의 〈네리사 레이븐크로프트〉에게 붙어 있다면 능력 추가\n"
+"[센터 포지션・콜라보 포지션 한정][턴에 1번] 이 툴이 붙어 있는 홀로멤의 능력으로 자신의 패를 아카이브 했을 때, 상대의 센터 홀로멤이나 콜라보 홀로멤에게 특수 대미지 20을 준다.\n\n"
+"툴은, 자신의 홀로멤 1명당 1장만 붙일 수 있다."
 
 msgid "hBP05-084_NAME"
-msgstr ""
+msgstr "츠노마키 와타메의 하프"
 
 msgid "hBP05-084_EFFECT"
-msgstr ""
+msgstr "이 툴이 붙어 있는 홀로멤의 아츠 +10.\n\n"
+"◆2nd 이상의 〈츠노마키 와타메〉에게 붙어 있다면 능력 추가\n"
+"■자신의 스테이지에 〈와타메이트〉가 있는 동안, 이 툴이 붙어 있는 홀로멤의 아츠 +10.\n"
+"■이 툴이 붙어 있는 홀로멤이 아츠를 사용했을 때, 자신의 아카이브의 옐 1장을 자신의 〈츠노마키 와타메〉에게 보낼 수 있다.\n\n"
+"툴은, 자신의 홀로멤 1명당 1장만 붙일 수 있다."
 
 msgid "hBP05-087_NAME"
-msgstr ""
+msgstr "Jailbird"
 
 msgid "hBP05-087_EFFECT"
-msgstr ""
+msgstr "상대의 턴에서, 이 팬이 붙어 있는 홀로멤이 다운 했을 때, 이 홀로멤의 옐 1장을 자신의 다른 #노래를 가진 홀로멤에게 바꿔 붙일 수 있다.\n\n"
+"이 팬은, 자신의 〈네리사 레이븐크로프트〉에게만 붙일 수 있고, 1명당 몇 장이라도 붙일 수 있다."
 
 msgid "hBD24-065_NAME"
-msgstr ""
+msgstr "키키라라 비비"
 
 msgid "hBD24-065_SKILL_NAME"
-msgstr ""
+msgstr "퍼플 인핸스"
 
 msgid "hBD24-065_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 자색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-065_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Purple~"
 
 msgid "hBD24-065_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 자색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBD24-066_NAME"
-msgstr ""
+msgstr "카엘라 코발스키아"
 
 msgid "hBD24-066_SKILL_NAME"
-msgstr ""
+msgstr "레드 인핸스"
 
 msgid "hBD24-066_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 이 턴 동안, 자신의 적색 홀로멤 1명의 아츠 +20."
 
 msgid "hBD24-066_SPSKILL_NAME"
-msgstr ""
+msgstr "Birthday Gift ~Red~"
 
 msgid "hBD24-066_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 덱에서, 적색 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플한다."
 
 msgid "hBP05-007_NAME"
-msgstr ""
+msgstr "시라누이 후레아"
 
 msgid "hBP05-007_SKILL_NAME"
-msgstr ""
+msgstr "너의 힘이 되고 싶으니까"
 
 msgid "hBP05-007_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 자신의 콜라보 포지션인 [Debut 홀로멤이나 1st 홀로멤이나 Spot 홀로멤]과, 백 홀로멤인 〈시라누이 후레아〉 1명을 교대시킨다."
 
 msgid "hBP05-007_SPSKILL_NAME"
-msgstr ""
+msgstr "모두 달아 오르자!"
 
 msgid "hBP05-007_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 스테이지의 옐 1~5장을 자신의 〈시라누이 후레아〉 1명에게 바꿔 붙일 수 있다. 그 후, 이 턴 동안, 자신의 센터 홀로멤의 옐 1장당, 자신의 스테이지의 홀로멤 전원의 아츠 +10."
 
 msgid "hBP05-016_NAME"
-msgstr ""
+msgstr "우사다 페코라"
 
 msgid "hBP05-016_ART_0_NAME"
-msgstr ""
+msgstr "우사페코라를 우러러 받들라 페코"
 
 msgid "hBP05-016_ART_0_EFFECT"
-msgstr ""
+msgstr "이 홀로멤에게 겹쳐져 있는 홀로멤 1장당, 주사위를 1번 굴릴 수 있다 : 나온 눈의 합계수 1당, 이 아츠 +10."
 
 msgid "hBP05-016_GIFT_NAME"
-msgstr ""
+msgstr "최강 여신"
 
 msgid "hBP05-016_GIFT_EFFECT"
-msgstr ""
+msgstr "이 홀로멤이 아츠를 사용했을 때, 그 아츠로 주사위를 굴려서 나온 눈의 합계수가 홀수라면 자신의 덱을 1장 드로우 한다. 짝수라면, 자신의 덱을 2장 드로우 한다."
 
 msgid "hBP05-018_NAME"
-msgstr ""
+msgstr "베스티아 제타"
 
 msgid "hBP05-018_ART_0_NAME"
-msgstr ""
+msgstr "바다에 가자"
 
 msgid "hBP05-018_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 스테이지에 #ID 3기생을 가진 Buzz 홀로멤이 있다면, 자신의 덱을 1장 드로우 한다."
 
 msgid "hBP05-018_ART_1_NAME"
-msgstr ""
+msgstr "Summer Vibes"
 
 msgid "hBP05-018_ART_1_EFFECT"
-msgstr ""
+msgstr "이 아츠로 상대의 홀로멤을 다운 시켰을 때, 자신의 덱에서, #ID 3기생을 가진 1st 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-028_NAME"
-msgstr ""
+msgstr "시시로 보탄"
 
 msgid "hBP05-028_ART_0_NAME"
-msgstr ""
+msgstr "여기부터가 우리들의 스타트다"
 
 msgid "hBP05-028_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 〈시시로 보탄〉의 옐 1장을 아카이브 할 수 있다 : 상대의 센터 홀로멤에게 특수 대미지 30을 준다."
 
 msgid "hBP05-028_GIFT_NAME"
-msgstr ""
+msgstr "조금 열심히 했습니다"
 
 msgid "hBP05-028_GIFT_EFFECT"
-msgstr ""
+msgstr "[센터 포지션 한정][턴에 1번] 자신의 오시 홀로멤인 〈시시로 보탄〉이나 자신의 스테이지의 〈시시로 보탄〉이 상대의 홀로멤에게 30 이상의 특수 대미지를 줬을 때, 자신의 덱을 1장 드로우 한다."
 
 msgid "hBP05-038_NAME"
-msgstr ""
+msgstr "모코코 어비스가드"
 
 msgid "hBP05-038_ART_0_NAME"
-msgstr ""
+msgstr "노——————이!"
 
 msgid "hBP05-038_ART_0_EFFECT"
-msgstr ""
+msgstr "이 아츠는, 자신의 센터 홀로멤이 〈후와와 어비스가드〉라면, 옐 1장을 필요로 하지 않고 사용할 수 있다."
 
 msgid "hBP05-038_GIFT_NAME"
-msgstr ""
+msgstr "모코쿼이"
 
 msgid "hBP05-038_GIFT_EFFECT"
-msgstr ""
+msgstr "[콜라보 포지션 한정] 자신의 SP 오시 스킬 「BAU BAU!」를 사용했을 때, 이 턴 동안, 이 홀로멤의 아츠 +70. 자신의 스테이지에 2nd 홀로멤이 있다면, 다시, 이 턴 동안, 이 홀로멤의 아츠 +50."
 
 msgid "hBP05-046_NAME"
-msgstr ""
+msgstr "유키하나 라미"
 
 msgid "hBP05-046_ART_0_NAME"
-msgstr ""
+msgstr "사랑하지 않아~!"
 
 msgid "hBP05-046_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 스테이지에 #5기생을 가진 2nd 홀로멤이 있다면, 상대의 홀로멤 1명에게 특수 대미지 20을 준다."
 
 msgid "hBP05-046_BLOOM_NAME"
-msgstr ""
+msgstr "라미쨩밖에~?"
 
 msgid "hBP05-046_BLOOM_EFFECT"
-msgstr ""
+msgstr "자신의 덱에서, 〈유키민〉 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-050_NAME"
-msgstr ""
+msgstr "후와와 어비스가드"
 
 msgid "hBP05-050_ART_0_NAME"
-msgstr ""
+msgstr "키보드 크러셔"
 
 msgid "hBP05-050_ART_0_EFFECT"
-msgstr ""
+msgstr "이 턴에 자신의 〈모코코 어비스가드〉가 아츠를 사용하고 있다면, 이 아츠 +40. 이 턴에 자신의 오시 스킬 「모코쨩!」을 사용하고 있다면, 다시, 이 아츠 +30."
 
 msgid "hBP05-050_GIFT_NAME"
-msgstr ""
+msgstr "모고쟝~~!!!"
 
 msgid "hBP05-050_GIFT_EFFECT"
-msgstr ""
+msgstr "[센터 포지션 한정] 자신의 오시 스킬 「모코쨩!」을 사용했을 때, 자신의 옐 덱의 위에서부터 1장을 자신의 #Advent를 가진 홀로멤에게 보낸다."
 
 msgid "hBP05-063_NAME"
-msgstr ""
+msgstr "시라누이 후레아"
 
 msgid "hBP05-063_ART_0_NAME"
-msgstr ""
+msgstr "너도 같이 게임 안 할래?"
 
 msgid "hBP05-063_COLLAB_NAME"
-msgstr ""
+msgstr "집에서 느긋하게"
 
 msgid "hBP05-063_COLLAB_EFFECT"
-msgstr ""
+msgstr "이 홀로멤의 옐 1장을 아카이브 할 수 있다 : 자신의 덱에서, 자신의 스테이지의 홀로멤 전원과 서로 다른 카드명인 Debut 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-064_NAME"
-msgstr ""
+msgstr "시라누이 후레아"
 
 msgid "hBP05-064_ART_0_NAME"
-msgstr ""
+msgstr "행복의 장소"
 
 msgid "hBP05-064_COLLAB_NAME"
-msgstr ""
+msgstr "Canvas"
 
 msgid "hBP05-064_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신이 후공이고 최초의 턴이라면, 자신의 덱에서, 서로 다른 카드명인 Debut 홀로멤 2장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-065_NAME"
-msgstr ""
+msgstr "시라누이 후레아"
 
 msgid "hBP05-065_ART_0_NAME"
-msgstr ""
+msgstr "그건 거짓말이잖아!"
 
 msgid "hBP05-065_GIFT_NAME"
-msgstr ""
+msgstr "행복의 돌"
 
 msgid "hBP05-065_GIFT_EFFECT"
-msgstr ""
+msgstr "[콜라보 포지션 한정][턴에 1번] 이 홀로멤 이외의 자신의 홀로멤이 상대에게서 대미지를 받을 때, 주사위를 1번 굴릴 수 있다 : 홀수라면, 그 홀로멤 1명이 받을 대미지 -40. 짝수라면, 그 홀로멤 1명이 받을 대미지 -20."
 
 msgid "hBP05-066_NAME"
-msgstr ""
+msgstr "시라누이 후레아"
 
 msgid "hBP05-066_ART_0_NAME"
-msgstr ""
+msgstr "설백빙자"
 
 msgid "hBP05-066_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 스테이지의 서로 다른 카드명인 #3기생을 가진 홀로멤 1명당, 이 아츠 +10."
 
 msgid "hBP05-066_GIFT_NAME"
-msgstr ""
+msgstr "겨울 여행"
 
 msgid "hBP05-066_GIFT_EFFECT"
-msgstr ""
+msgstr "[콜라보 포지션 한정] 자신의 #3기생을 가진 센터 홀로멤이 아츠를 사용했을 때, 자신의 패 1장을 아카이브 할 수 있다 : 자신의 덱을 1장 드로우 한다."
 
 msgid "hBP05-067_NAME"
-msgstr ""
+msgstr "시라누이 후레아"
 
 msgid "hBP05-067_ART_0_NAME"
-msgstr ""
+msgstr "모두가 웃어 줬으면 하니까"
 
 msgid "hBP05-067_ART_0_EFFECT"
-msgstr ""
+msgstr "주사위를 1번 굴릴 수 있다 : 나온 눈의 수가 자신의 라이프 이상이라면, 이 아츠 +60. 나온 눈의 수가 자신의 라이프 이하라면, 자신의 덱을 1장 드로우 한다."
 
 msgid "hBP05-067_GIFT_NAME"
-msgstr ""
+msgstr "컬러풀 스트림"
 
 msgid "hBP05-067_GIFT_EFFECT"
-msgstr ""
+msgstr "이 홀로멤이 아츠를 사용했을 때, 이 홀로멤의 옐 2장을 자신의 백 홀로멤 1명에게 보낼 수 있다. 그 후, 자신의 아카이브의, 옐을 보낸 홀로멤과 같은 이름인 1st 홀로멤을 패로 되돌린다."
 
 msgid "hBP05-073_NAME"
-msgstr ""
+msgstr "아윤다 리스"
 
 msgid "hBP05-073_ART_0_NAME"
-msgstr ""
+msgstr "IT's Time to RE4GE!!!!!"
 
 msgid "hBP05-073_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 오시 홀로멤이 〈아윤다 리스〉라면, 자신의 #ID 1기생을 가진 홀로멤 전원의 옐 1장당, 이 아츠 +10. 단, 세는 매수는 10장까지."
 
 msgid "hBP05-073_COLLAB_NAME"
-msgstr ""
+msgstr "BRRRR"
 
 msgid "hBP05-073_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신의 옐 덱의 위에서부터 3장을 본다. 그중에서, 옐 1장을 공개하고, 자신의 〈아윤다 리스〉에게 보낸다. 그리고 남은 옐을 원하는 순서로 옐 덱의 아래로 되돌린다. 그 후, 자신의 덱을 1장 드로우 한다."
 
 msgid "hBP05-074_NAME"
-msgstr ""
+msgstr "프렌들리 컴퓨터"
 
 msgid "hBP05-074_EFFECT"
-msgstr ""
+msgstr "자신의 덱에서, 엑스트라 「이 홀로멤은 덱에 몇 장이라도 넣을 수 있다」를 가진 Debut 홀로멤 1~2장을 공개하고, 스테이지에 낸다. 그리고 덱을 셔플 한다. Debut 홀로멤을 2장 냈다면, 다시, 자신의 패 1장을 덱의 아래로 되돌린다."
 
 msgid "hBP05-078_NAME"
-msgstr ""
+msgstr "음주 방송"
 
 msgid "hBP05-078_EFFECT"
-msgstr ""
+msgstr "이 카드는, 자신의 패가 이 카드를 포함하지 않고 6장 이하가 아니라면 사용할 수 없다.\n\n"
+"자신의 덱의 위에서부터 4장을 본다. 그중에서, #술을 가진 홀로멤을 원하는 매수 공개하고, 공개한 홀로멤을 패에 더한다. 그리고 남은 카드는 원하는 순서로 덱의 아래로 되돌린다."
 
 msgid "hY01-007_NAME"
-msgstr ""
+msgstr "백 옐"
 
 msgid "hY02-006_NAME"
-msgstr ""
+msgstr "녹 옐"
 
 msgid "hY03-009_NAME"
-msgstr ""
+msgstr "적 옐"
 
 msgid "hY04-006_NAME"
-msgstr ""
+msgstr "청 옐"
 
 msgid "hY05-005_NAME"
-msgstr ""
+msgstr "자 옐"
 
 msgid "hY06-005_NAME"
-msgstr ""
+msgstr "황 옐"
 
 msgid "hBP05-004_NAME"
-msgstr ""
+msgstr "네코마타 오카유"
 
 msgid "hBP05-004_SKILL_NAME"
-msgstr ""
+msgstr "간다—"
 
 msgid "hBP05-004_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 자신의 센터 홀로멤이 〈네코마타 오카유〉라면 사용할 수 있다 : 상대의 홀로멤 1명에게 특수 대미지 10을 준다."
 
 msgid "hBP05-004_SPSKILL_NAME"
-msgstr ""
+msgstr "우마우마!"
 
 msgid "hBP05-004_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 상대의 센터 홀로멤과 HP가 줄어 있는 백 홀로멤 1명을 교대시킬 수 있다. 그 후, 자신의 센터 홀로멤이 〈네코마타 오카유〉라면, 자신의 덱을 3장 드로우 한다."
 
 msgid "hBP05-005_NAME"
-msgstr ""
+msgstr "유즈키 초코"
 
 msgid "hBP05-005_SKILL_NAME"
-msgstr ""
+msgstr "초코 범벅이 되어라!"
 
 msgid "hBP05-005_SKILL_EFFECT"
-msgstr ""
+msgstr "[턴에 1번] 자신의 덱에서, #음식을 가진 이벤트 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-005_SPSKILL_NAME"
-msgstr ""
+msgstr "초콧토 쿠킹"
 
 msgid "hBP05-005_SPSKILL_EFFECT"
-msgstr ""
+msgstr "[게임에 1번] 자신의 아카이브의 #음식을 가진 이벤트 1~4장을 패로 되돌린다. 그 후, 이 턴 동안, 자신의 스테이지의 #요리를 가진 홀로멤 전원의 아츠 +40."
 
 msgid "hBP05-013_NAME"
-msgstr ""
+msgstr "토키노 소라"
 
 msgid "hBP05-013_ART_0_NAME"
-msgstr ""
+msgstr "7주년 예이 ✩°｡⋆⸜(* ॑꒳ ॑* )⸝"
 
 msgid "hBP05-013_GIFT_NAME"
-msgstr ""
+msgstr "Ray of Jewelry"
 
 msgid "hBP05-013_GIFT_EFFECT"
-msgstr ""
+msgstr "[센터 포지션・콜라보 포지션 한정] 자신의 스테이지에 #0기생을 가진 홀로멤 전원의 아츠 +30."
 
 msgid "hBP05-024_NAME"
-msgstr ""
+msgstr "AZKi"
 
 msgid "hBP05-024_ART_0_NAME"
-msgstr ""
+msgstr "아즈키네 집에서 느긋히 있자"
 
 msgid "hBP05-024_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 스테이지에 〈개척자〉가 있다면, 자신의 옐 덱의 위에서부터 1장을 자신의 〈AZKi〉에게 보낸다."
 
 msgid "hBP05-024_ART_1_NAME"
-msgstr ""
+msgstr "돌아가는 거야?"
 
 msgid "hBP05-024_ART_1_EFFECT"
-msgstr ""
+msgstr "자신의 오시 홀로멤이 〈AZKi〉라면, 이 홀로멤의 옐 1장당, 이 아츠 +20."
 
 msgid "hBP05-029_NAME"
-msgstr ""
+msgstr "주우후테이 라덴"
 
 msgid "hBP05-029_ART_0_NAME"
-msgstr ""
+msgstr "누군가를 위해 살아왔지만"
 
 msgid "hBP05-029_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 오시 홀로멤이 〈주우후테이 라덴〉이라면, 자신의 덱에서 #버섯을 가진 이벤트 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-029_ART_1_NAME"
-msgstr ""
+msgstr "드디어 자신의 인생을 살아간다"
 
 msgid "hBP05-029_ART_1_EFFECT"
-msgstr ""
+msgstr "자신의 스테이지에 #ReGLOSS를 가진 2nd 홀로멤이 있다면, 이 아츠 +40."
 
 msgid "hBP05-035_NAME"
-msgstr ""
+msgstr "사쿠라 미코"
 
 msgid "hBP05-035_ART_0_NAME"
-msgstr ""
+msgstr "아엥비엥"
 
 msgid "hBP05-035_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 패 2장을 아카이브 할 수 있다 : 상대의 센터 홀로멤이나 콜라보 홀로멤에게 특수 대미지 50을 준다. 자신의 스테이지에 〈35P〉가 있다면, 다시, 자신의 덱을 1장 드로우 한다."
 
 msgid "hBP05-035_GIFT_NAME"
-msgstr ""
+msgstr "지금 건 조금 말야, 연습으로…"
 
 msgid "hBP05-035_GIFT_EFFECT"
-msgstr ""
+msgstr "[센터 포지션 한정・콜라보 포지션 한정] 상대의 턴에서, 자신의 〈사쿠라 미코〉가 다운 했을 때 사용할 수 있다 : 자신의 덱에서, 〈미오레하지〉 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-036_NAME"
-msgstr ""
+msgstr "호시마치 스이세이"
 
 msgid "hBP05-036_ART_0_NAME"
-msgstr ""
+msgstr "소리내는 거 최고!"
 
 msgid "hBP05-036_ART_0_EFFECT"
-msgstr ""
+msgstr "상대의 백 홀로멤의 HP가 줄어 있다면, 이 아츠 +20."
 
 msgid "hBP05-037_NAME"
-msgstr ""
+msgstr "호시마치 스이세이"
 
 msgid "hBP05-037_ART_0_NAME"
-msgstr ""
+msgstr "Non-Limit Boost"
 
 msgid "hBP05-037_ART_0_EFFECT"
-msgstr ""
+msgstr "이 홀로멤에게 적 옐과 청 옐이 붙어 있다면, 자신의 아카이브의 옐 2장을 이 홀로멤에게 보낼 수 있다. 어느쪽의 1색밖에 붙어 있지 않다면, 자신의 아카이브의 옐 1장을 이 홀로멤에게 보낼 수 있다."
 
 msgid "hBP05-037_ART_1_NAME"
-msgstr ""
+msgstr "Shout in Crisis"
 
 msgid "hBP05-037_ART_1_EFFECT"
-msgstr ""
+msgstr "이 홀로멤의 옐 전부를 아카이브 한다."
 
 msgid "hBP05-039_NAME"
-msgstr ""
+msgstr "이치조 리리카"
 
 msgid "hBP05-039_ART_0_NAME"
-msgstr ""
+msgstr "인생에 늦은 건 없으니까"
 
 msgid "hBP05-039_ART_0_EFFECT"
-msgstr ""
+msgstr "이 턴에 자신이 〈한계밥〉을 사용하고 있다면, 상대의 센터 홀로멤과 콜라보 홀로멤에게 특수 대미지 20을 준다."
 
 msgid "hBP05-039_ART_1_NAME"
-msgstr ""
+msgstr "언제든지 궤도 수정 할 수 있어"
 
 msgid "hBP05-039_ART_1_EFFECT"
-msgstr ""
+msgstr "이 아츠의 대상이 상대의 1st 이상인 콜라보 홀로멤이라면, 이 아츠 +70."
 
 msgid "hBP05-040_NAME"
-msgstr ""
+msgstr "miComet"
 
 msgid "hBP05-040_ART_0_NAME"
-msgstr ""
+msgstr "비지니스 파트너"
 
 msgid "hBP05-040_ART_0_EFFECT"
-msgstr ""
+msgstr "이 홀로멤의 옐 1장을 자신의 백 홀로멤에게 바꿔 붙일 수 있다."
 
 msgid "hBP05-040_COLLAB_NAME"
-msgstr ""
+msgstr "비지니스 프렌드"
 
 msgid "hBP05-040_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신의 라이프가 3 이하라면, 자신의 이 턴에 Bloom 한 센터 홀로멤인 [〈사쿠라 미코〉나 〈호시마치 스이세이〉]를, 자신의 패의 홀로멤을 사용해 다시 1번 Bloom 할 수 있다."
 
 msgid "hBP05-041_NAME"
-msgstr ""
+msgstr "네코마타 오카유"
 
 msgid "hBP05-041_ART_0_NAME"
-msgstr ""
+msgstr "빙글빙글~"
 
 msgid "hBP05-041_ART_0_EFFECT"
-msgstr ""
+msgstr "상대의 센터 홀로멤에게 특수 대미지 10을 준다."
 
 msgid "hBP05-042_NAME"
-msgstr ""
+msgstr "네코마타 오카유"
 
 msgid "hBP05-042_ART_0_NAME"
-msgstr ""
+msgstr "쭈욱 함께야"
 
 msgid "hBP05-042_COLLAB_NAME"
-msgstr ""
+msgstr "같이 들어가자~!"
 
 msgid "hBP05-042_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신이 후공이고 최초의 턴이라면, 자신의 덱에서, #게이머즈를 가진 2nd 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-043_NAME"
-msgstr ""
+msgstr "네코마타 오카유"
 
 msgid "hBP05-043_ART_0_NAME"
-msgstr ""
+msgstr "아직 더 놀 수 있지~?"
 
 msgid "hBP05-043_ART_0_EFFECT"
-msgstr ""
+msgstr "이 홀로멤의 청 옐 1장을 아카이브 할 수 있다 : 상대의 센터 홀로멤과 백 홀로멤 1명에게 특수 대미지 10을 준다."
 
 msgid "hBP05-043_GIFT_NAME"
-msgstr ""
+msgstr "나로 괜찮지 않아~?"
 
 msgid "hBP05-043_GIFT_EFFECT"
-msgstr ""
+msgstr "[콜라보 포지션 한정] 자신의#게이머즈를 가진 센터 홀로멤이 있을 때, 상대의 홀로멤의 아츠는, 자신의 콜라보 홀로멤밖에 대상으로 할 수 없다. 특수 대미지는 제외한다."
 
 msgid "hBP05-044_NAME"
-msgstr ""
+msgstr "네코마타 오카유"
 
 msgid "hBP05-044_ART_0_NAME"
-msgstr ""
+msgstr "돈 스톱 게이밍!"
 
 msgid "hBP05-044_ART_0_EFFECT"
-msgstr ""
+msgstr "상대의 홀로멤 1명에게 특수 대미지 10을 준다."
 
 msgid "hBP05-044_BLOOM_NAME"
-msgstr ""
+msgstr "도시락 타임…?"
 
 msgid "hBP05-044_BLOOM_EFFECT"
-msgstr ""
+msgstr "상대의 센터 홀로멤과 백 홀로멤 1장에게 특수 대미지 10을 준다. 자신의 【블룸 이펙트】 「도시락 타임…?」은 턴에 1번밖에 사용할 수 없다."
 
 msgid "hBP05-045_NAME"
-msgstr ""
+msgstr "네코마타 오카유"
 
 msgid "hBP05-045_ART_0_NAME"
-msgstr ""
+msgstr "나를, 좋아해져 보지 않을래?"
 
 msgid "hBP05-045_ART_0_EFFECT"
-msgstr ""
+msgstr "상대의 홀로멤 1명에게 특수 대미지 20을 준다. 그 후, 자신의 아카이브의 옐 1장을 자신의 #게이머즈를 가진 백 홀로멤에게 보낼 수 있다."
 
 msgid "hBP05-045_GIFT_NAME"
-msgstr ""
+msgstr "나답게 있을 수 있는 장소"
 
 msgid "hBP05-045_GIFT_EFFECT"
-msgstr ""
+msgstr "[센터 포지션 한정] 자신의 오시 홀로멤인 〈네코마타 오카유〉와 자신의 스테이지의 〈네코마타 오카유〉 전원이 상대의 센터 홀로멤에게 주는 특수 대미지 +20."
 
 msgid "hBP05-051_NAME"
-msgstr ""
+msgstr "히오도시 아오"
 
 msgid "hBP05-051_ART_0_NAME"
-msgstr ""
+msgstr "샴페인 샴페인!"
 
 msgid "hBP05-051_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 스테이지에 #술을 가진 홀로멤이 3장 이상 있다면, 자신의 아카이브의 옐 1장을 자신의 #술을 가진 백 홀로멤에게 보낼 수 있다."
 
 msgid "hBP05-051_BLOOM_NAME"
-msgstr ""
+msgstr "내 눈만 봐"
 
 msgid "hBP05-051_BLOOM_EFFECT"
-msgstr ""
+msgstr "자신의 덱의 위에서부터 3장을 본다. 그중에서, #술을 가진 홀로멤 1장을 공개하고, 패에 더한다. 그리고 남은 카드를 원하는 순서로 덱의 아래로 되돌린다."
 
 msgid "hBP05-052_NAME"
-msgstr ""
+msgstr "유즈키 초코"
 
 msgid "hBP05-052_ART_0_NAME"
-msgstr ""
+msgstr "무릎베개 같은 건 어떠세요?"
 
 msgid "hBP05-052_COLLAB_NAME"
-msgstr ""
+msgstr "비밀의 보건의"
 
 msgid "hBP05-052_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신의 아카이브에 이벤트가 있다면, 상대의 센터 홀로멤에게 특수 대미지 10을 준다."
 
 msgid "hBP05-053_NAME"
-msgstr ""
+msgstr "유즈키 초코"
 
 msgid "hBP05-053_ART_0_NAME"
-msgstr ""
+msgstr "꼬—옥 안아줘?"
 
 msgid "hBP05-053_COLLAB_NAME"
-msgstr ""
+msgstr "식식…"
 
 msgid "hBP05-053_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신이 후공이고 최초의 턴이며, 자신의 오시 홀로멤이 〈유즈키 초코〉라면, 자신의 덱을 2장 드로우 한다."
 
 msgid "hBP05-054_NAME"
-msgstr ""
+msgstr "유즈키 초코"
 
 msgid "hBP05-054_ART_0_NAME"
-msgstr ""
+msgstr "가치이?"
 
 msgid "hBP05-054_ART_0_EFFECT"
-msgstr ""
+msgstr "이 아츠는, 이 턴에 자신이 #음식을 가진 이벤트 카드를 2장 이상 사용하고 있다면, 옐 1장을 필요로 하지 않고 사용할 수 있다."
 
 msgid "hBP05-055_NAME"
-msgstr ""
+msgstr "유즈키 초코"
 
 msgid "hBP05-055_ART_0_NAME"
-msgstr ""
+msgstr "아아아아아"
 
 msgid "hBP05-055_GIFT_NAME"
-msgstr ""
+msgstr "늦잠꾸러기 악마"
 
 msgid "hBP05-055_GIFT_EFFECT"
-msgstr ""
+msgstr "[센터 포지션 한정] 상대의 퍼포먼스 스텝이 종료할 때, 이 홀로멤의 HP가 줄어 있지 않다면, 자신의 옐 덱의 위에서 부터 1장을 자신의 〈유즈키 초코〉 1명에게 보낼 수 있다."
 
 msgid "hBP05-056_NAME"
-msgstr ""
+msgstr "유즈키 초코"
 
 msgid "hBP05-056_ART_0_NAME"
-msgstr ""
+msgstr "사랑을 담아서"
 
 msgid "hBP05-056_ART_0_EFFECT"
-msgstr ""
+msgstr "이 턴에 자신이 사용했던 #음식을 가진 이벤트 1장당, 이 아츠 +20. 단, 세는 매수는 2장까지."
 
 msgid "hBP05-056_ART_1_NAME"
-msgstr ""
+msgstr "밤에 다가붙는"
 
 msgid "hBP05-056_ART_1_EFFECT"
-msgstr ""
+msgstr "자신의 패 2장을 아카이브 할 수 있다 : 자신의 아카이브의 #음식를 가진 홀로멤 1명을 패로 되돌린다."
 
 msgid "hBP05-068_NAME"
-msgstr ""
+msgstr "시라카미 후부키"
 
 msgid "hBP05-068_ART_0_NAME"
-msgstr ""
+msgstr "간식 먹고 게임 최고!"
 
 msgid "hBP05-068_COLLAB_NAME"
-msgstr ""
+msgstr "하늘하늘 휴양일"
 
 msgid "hBP05-068_COLLAB_EFFECT"
-msgstr ""
+msgstr "이 홀로멤에게 마스코트가 붙어 있다면, 자신의 덱의 위에서부터 1장을 본다. 그 카드를 덱의 위나 아래로 되돌린다."
 
 msgid "hBP05-069_NAME"
-msgstr ""
+msgstr "시라카미 후부키"
 
 msgid "hBP05-069_ART_0_NAME"
-msgstr ""
+msgstr "만점이라구!"
 
 msgid "hBP05-069_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 옐 덱의 위에서부터 1장을 이 홀로멤에게 보낼 수 있다."
 
 msgid "hBP05-069_GIFT_NAME"
-msgstr ""
+msgstr "회심의 미소"
 
 msgid "hBP05-069_GIFT_EFFECT"
-msgstr ""
+msgstr "[백 포지션 한정] 이 홀로멤은 상대에게서 대미지를 받지 않는다."
 
 msgid "hBP05-070_NAME"
-msgstr ""
+msgstr "시라카미 후부키"
 
 msgid "hBP05-070_ART_0_NAME"
-msgstr ""
+msgstr "후부키 카페에 어서오세요"
 
 msgid "hBP05-070_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 아카이브의 #시라카미's 캐릭터를 가진 [마스코트와 팬]을 원하는 매수 골라, 자신의 홀로멤에게 나눠서 붙일 수 있다."
 
 msgid "hBP05-070_ART_1_NAME"
-msgstr ""
+msgstr "국왕 겸 카페 운영자"
 
 msgid "hBP05-070_ART_1_EFFECT"
-msgstr ""
+msgstr "자신의 [오시 홀로멤이 〈시라카미 후부키〉이거나 오시 홀로멤의 색이 황색]이고, 자신의 스테이지에 [툴이나 마스코트나 팬]이 합계 4장 이상 있다면, 이 아츠 +100."
 
 msgid "hBP05-071_NAME"
-msgstr ""
+msgstr "이누가미 코로네"
 
 msgid "hBP05-071_ART_0_NAME"
-msgstr ""
+msgstr "YB-2"
 
 msgid "hBP05-071_ART_0_EFFECT"
-msgstr ""
+msgstr "이 턴 동안, 자신의 스테이지의 #게이머즈를 가진 홀로멤 1명의 아츠 +30."
 
 msgid "hBP05-071_BLOOM_NAME"
-msgstr ""
+msgstr "이누가미 족"
 
 msgid "hBP05-071_BLOOM_EFFECT"
-msgstr ""
+msgstr "자신의 덱에서, #게이머즈를 가진 Buzz 이외의 1st 홀로멤 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP05-076_NAME"
-msgstr ""
+msgstr "초코의 비프 스트로가노프"
 
 msgid "hBP05-076_EFFECT"
-msgstr ""
+msgstr "이 턴 동안, 자신의 스테이지의 홀로멤 1명의 아츠 +10. 그 후, 이 턴 동안, 자신의 스테이지의 2nd 홀로멤인 〈유즈키 초코〉 1명의 아츠 +10."
 
 msgid "hBP05-079_NAME"
-msgstr ""
+msgstr "미오레하지"
 
 msgid "hBP05-079_EFFECT"
-msgstr ""
+msgstr "자신의 덱을 2장 드로우 한다. 그 후, 직전 상대의 턴에 자신의 홀로멤이 다운 했었고, 자신의 라이프가 상대의 라이프보다 적다면, 아카이브의 옐 1장을 자신의 홀로멤 1명에게 보낸다."
 
 msgid "hBP05-085_NAME"
-msgstr ""
+msgstr "미코다니에"
 
 msgid "hBP05-085_EFFECT"
-msgstr ""
+msgstr "이 마스코트가 붙어 있는 홀로멤의 HP +10.\n\n"
+"◆〈사쿠라 미코〉에게 붙어 있다면 능력 추가\n"
+"상대의 턴에서, 이 마스코트가 붙어 있는 홀로멤이 다운 했을 때, 상대는, 자신의 패 1장을 아카이브 한다.\n\n"
+"마스코트는, 자신의 홀로멤 1명당 1장만 붙일 수 있다."
 
 msgid "hBP05-077_NAME"
-msgstr ""
+msgstr "바카타레 서커스"
 
 msgid "hBP05-077_EFFECT"
-msgstr ""
+msgstr "이 카드는, 자신의 패가 이 카드를 포함하지 않고 6장 이하가 아니라면 사용할 수 없다.\n\n"
+"자신의 덱의 위에서부터 4장을 본다. 그중에서, 〈시라카미 후부키〉와 〈시라누이 후레아〉와 〈츠노마키 와타메〉와 〈오미루 폴카〉를 원하는 매수 공개하고, 공개한 홀로멤을 패에 더한다. 그리고 남은 카드는 원하는 순서로 덱의 아래로 되돌린다."
+
+msgid "hY01-008_NAME"
+msgstr "백 옐"
 

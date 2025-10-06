@@ -14,6 +14,7 @@ class Lobby:
         current_banlist = get_data("current_banlist")
         en_current_banlist = get_data("en_current_banlist")
         unreleased = get_data("unreleased")
+        en_unreleased = get_data("en_unreleased")
         self.id = ''.join(sample(random_characters, 10))
         while self.id in get_all_lobbies():
             self.id = ''.join(sample(random_characters, 10))
@@ -39,6 +40,10 @@ class Lobby:
             self.banlistCode = Banlist.en_current
         elif self.banlist == (current_banlist | unreleased):
             self.banlistCode = Banlist.unreleased
+        elif self.only_en:
+            #Just realized the way I'm checking banlists is bad and awful
+            #Needs a full revamp
+            self.banlistCode = Banlist.en_unreleased
         else:
             self.banlistCode = Banlist.custom
         
@@ -53,7 +58,8 @@ class Lobby:
     async def remove_player(self, player_id):
         player = get_player(player_id)
         if player in self.waiting:
-            self.waiting.remove(player)
+            if player in self.waiting:
+                self.waiting.remove(player)
             player.lobby = None
             if self.chosen == player:
                 self.chosen = None

@@ -14,6 +14,7 @@ var setup = false
 var current_banlist = {}
 var en_current_banlist = {}
 var unreleased = {}
+var en_unreleased = {}
 
 func setup_data(result, callback = null, progress = null):
 	cardData = result

@@ -12,51 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-07-09 00:04\n"
-
-#: Scenes/board.tscn
-msgid "SEND_CHAT"
-msgstr "전송"
-
-#: Scenes/board.tscn
-msgid "OPTION_COSMETICS_HIDE"
-msgstr "상대의 꾸미기 숨기기"
-
-#: Scenes/board.tscn
-msgid "TAB_INFO"
-msgstr "정보"
-
-#: Scenes/board.tscn
-msgid "TAB_CHAT"
-msgstr "채팅"
-
-#: Scenes/board.tscn
-msgid "TAB_SETTINGS"
-msgstr "설정"
-
-#: Scenes/board.tscn
-msgid "STEP1"
-msgstr "리셋"
-
-#: Scenes/board.tscn
-msgid "STEP2"
-msgstr "드로우"
-
-#: Scenes/board.tscn
-msgid "STEP3"
-msgstr "옐"
-
-#: Scenes/board.tscn
-msgid "STEP4"
-msgstr "메인"
-
-#: Scenes/board.tscn
-msgid "STEP5"
-msgstr "퍼포먼스"
-
-#: Scenes/board.tscn
-msgid "STEP6"
-msgstr "엔드"
+"PO-Revision-Date: 2025-10-06 01:26\n"
 
 #: Scenes/board.tscn
 msgid "TITLE"
@@ -68,43 +24,30 @@ msgstr "비공식 홀로라이브 OCG 시뮬레이터\n"
 "(임시 한글화)"
 
 #: Scenes/board.tscn
-#: Scenes/side.tscn
-msgid "RPS_ROCK"
-msgstr "바위"
-
-#: Scenes/board.tscn
-#: Scenes/side.tscn
-msgid "RPS_PAPER"
-msgstr "보"
-
-#: Scenes/board.tscn
-#: Scenes/side.tscn
-msgid "RPS_SCISSORS"
-msgstr "가위"
-
-#: Scenes/board.tscn
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "RPS_WAIT"
-msgstr "상대를 기다리는 중..."
+msgid "DEBUG"
+msgstr "디버그\n"
+"(새로고침)"
 
 #: Scenes/board.tscn
 msgid "DECK_CREATE"
 msgstr "덱 생성/수정"
 
 #: Scenes/board.tscn
-msgid "LOBBY_CREATE"
-msgstr "로비 생성"
-
-#: Scenes/board.tscn
-msgid "DEBUG"
-msgstr "디버그\n"
-"(새로고침)"
+msgid "COSMETICS"
+msgstr "꾸미기"
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
-msgid "PLAYERS_ONLINE"
-msgstr "접속 중인 유저 수 ({amount})"
+msgid "OPTION_EN"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "INFO"
+msgstr "정보"
+
+#: Scenes/board.tscn
+msgid "LOBBY_CREATE"
+msgstr "로비 생성"
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
@@ -115,6 +58,97 @@ msgstr "로비 참여"
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_SPECTATE"
 msgstr "로비 관전"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "PLAYERS_ONLINE"
+msgstr "접속 중인 유저 수 ({amount})"
+
+#: Scenes/board.tscn
+msgid "INFO_DLOC"
+msgstr "덱 파일 위치"
+
+#: Scenes/board.tscn
+msgid "INFO_CANCEL"
+msgstr "닫기"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_GAME_OPTIONS"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "OPTION_UNREVEALED"
+msgstr "미발매 카드 허용"
+
+#: Scenes/board.tscn
+msgid "OPTION_LANGUAGE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "OPTION_PROXY"
+msgstr "프록시 허용"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_AUDIO_OPTIONS"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SETTINGS_KEYBINDINGS"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "ACTION_DRAW"
+msgstr "드로우"
+
+#: Scenes/board.tscn
+msgid "ACTION_CHEER"
+msgstr "옐 스텝"
+
+#: Scenes/board.tscn
+msgid "ACTION_RESET"
+msgstr "리셋 스텝"
+
+#: Scenes/board.tscn
+msgid "ACTION_TABS"
+msgstr "탭 전환"
+
+#: Scenes/board.tscn
+msgid "ACTION_LOCK"
+msgstr "정보 패널 고정"
+
+#: Scenes/board.tscn
+msgid "ACTION_LSTEP"
+msgstr "마지막 스텝"
+
+#: Scenes/board.tscn
+msgid "ACTION_NSTEP"
+msgstr "다음 스텝"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_PUBLIC_LOBBIES_FOUND"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_LOBBYCODE"
+msgstr "로비 코드 입력"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SEARCHING"
+msgstr "검색 중..."
+
+#: Scenes/board.tscn
+msgid "LOBBY_REFRESH"
+msgstr "새로고침"
+
+#: Scenes/board.tscn
+msgid "LOBBY_BACK"
+msgstr "뒤로"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SETTINGS"
+msgstr ""
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
@@ -146,94 +180,119 @@ msgstr "현재 금제"
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT_EN"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr "현재 금제 + 미출시 카드"
 
 #: Scenes/board.tscn
-msgid "LOBBY_BACK"
-msgstr "뒤로"
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_UNRELEASED_EN"
+msgstr ""
 
 #: Scenes/board.tscn
-msgid "EXIT"
-msgstr "게임 종료"
+#: Scripts/Multiplayer.gd
+msgid "SPECTATE_PUBLIC_GAMES_FOUND"
+msgstr ""
 
 #: Scenes/board.tscn
-msgid "OPTION_UNREVEALED"
-msgstr "미발매 카드 허용"
-
-#: Scenes/board.tscn
-msgid "OPTION_PROXY"
-msgstr "프록시 허용"
-
-#: Scenes/board.tscn
-msgid "ACTION_DRAW"
-msgstr "드로우"
-
-#: Scenes/board.tscn
-msgid "ACTION_CHEER"
-msgstr "옐 스텝"
-
-#: Scenes/board.tscn
-msgid "ACTION_RESET"
-msgstr "리셋 스텝"
-
-#: Scenes/board.tscn
-msgid "ACTION_TABS"
-msgstr "탭 전환"
-
-#: Scenes/board.tscn
-msgid "ACTION_LOCK"
-msgstr "정보 패널 고정"
-
-#: Scenes/board.tscn
-msgid "ACTION_LSTEP"
-msgstr "마지막 스텝"
-
-#: Scenes/board.tscn
-msgid "ACTION_NSTEP"
-msgstr "다음 스텝"
-
-#: Scenes/board.tscn
-msgid "COSMETICS"
-msgstr "꾸미기"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_CANCEL"
-msgstr "닫기"
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_GAMECODE"
+msgstr "게임 코드 입력"
 
 #: Scenes/board.tscn
 msgid "COSMETICS_PM"
 msgstr "매트 이미지 불러오기"
 
 #: Scenes/board.tscn
-msgid "COSMETICS_D"
-msgstr "주사위 이미지 불러오기"
-
-#: Scenes/board.tscn
 msgid "COSMETICS_PM_DEFAULT"
 msgstr "매트 초기화"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D"
+msgstr "주사위 이미지 불러오기"
 
 #: Scenes/board.tscn
 msgid "COSMETICS_D_DEFAULT"
 msgstr "주사위 초기화"
 
 #: Scenes/board.tscn
+msgid "COSMETICS_CANCEL"
+msgstr "닫기"
+
+#: Scenes/board.tscn
+msgid "EXIT"
+msgstr "게임 종료"
+
+#: Scenes/board.tscn
+msgid "STEP1"
+msgstr "리셋"
+
+#: Scenes/board.tscn
+msgid "STEP2"
+msgstr "드로우"
+
+#: Scenes/board.tscn
+msgid "STEP3"
+msgstr "옐"
+
+#: Scenes/board.tscn
+msgid "STEP4"
+msgstr "메인"
+
+#: Scenes/board.tscn
+msgid "STEP5"
+msgstr "퍼포먼스"
+
+#: Scenes/board.tscn
+msgid "STEP6"
+msgstr "엔드"
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_CHAT"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SEND_CHAT"
+msgstr "전송"
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_OPTIONS"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_GAME_CODE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "OPTION_COSMETICS_HIDE"
+msgstr "상대의 꾸미기 숨기기"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_ROCK"
+msgstr "바위"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_PAPER"
+msgstr "보"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_SCISSORS"
+msgstr "가위"
+
+#: Scenes/board.tscn
+#: Scripts/side.gd
 #: Scripts/Multiplayer.gd
-msgid "LOBBY_LOBBYCODE"
-msgstr "로비 코드 입력"
-
-#: Scenes/board.tscn
-msgid "LOBBY_SEARCHING"
-msgstr "검색 중..."
-
-#: Scenes/board.tscn
-msgid "LOBBY_REFRESH"
-msgstr "새로고침"
-
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_GAMECODE"
-msgstr "게임 코드 입력"
+msgid "RPS_WAIT"
+msgstr "상대를 기다리는 중..."
 
 #: Scenes/board.tscn
 msgid "LOBBY_HOST"
@@ -259,6 +318,14 @@ msgid "LOBBY_CHOSEN"
 msgstr "선택된 상대"
 
 #: Scenes/board.tscn
+msgid "LOBBY_CODE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "LOBBY_SELECT_OPPONENT"
+msgstr ""
+
+#: Scenes/board.tscn
 msgid "LOBBY_STARTGAME"
 msgstr "게임 시작"
 
@@ -266,18 +333,6 @@ msgstr "게임 시작"
 #: Scenes/side.tscn
 msgid "OK"
 msgstr "OK"
-
-#: Scenes/board.tscn
-msgid "INFO"
-msgstr "정보"
-
-#: Scenes/board.tscn
-msgid "INFO_DLOC"
-msgstr "덱 파일 위치"
-
-#: Scenes/board.tscn
-msgid "INFO_CANCEL"
-msgstr "닫기"
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
@@ -306,6 +361,20 @@ msgstr "메인 메뉴"
 #: Scenes/board.tscn
 msgid "MENU_PROMPT"
 msgstr "메인 메뉴로 돌아가시겠습니까?"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_FAIL"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_FAIL_FULL"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "TRYAGAIN"
+msgstr ""
 
 #: Scenes/deck_list.tscn
 msgid "DECK_SELECT_CANCEL"
@@ -358,6 +427,10 @@ msgstr "상대"
 #: Scenes/side.tscn
 msgid "MULLIGAN_TEXT"
 msgstr "상대의 멀리건을 보는 중"
+
+#: Scenes/info_panel.tscn
+msgid "SIDEBAR_INFO"
+msgstr ""
 
 #: Scenes/deck_creation.tscn
 msgid "TAB_OSHI"
@@ -591,6 +664,10 @@ msgstr "옐 덱의 형식이 잘못되었습니다. 홀로델타용 덱 파일�
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOCHEER"
 msgstr "옐 덱이 비어있습니다."
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_ONLYEN"
+msgstr ""
 
 #: Scripts/deck_creation.gd
 #: Scripts/side.gd
@@ -1027,6 +1104,14 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "DECK_AUTOLOAD_CONFIRM_INFO"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "LOAD_FAIL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "LOAD_FAIL_FULL"
 msgstr ""
 
 #: Scripts/Multiplayer.gd

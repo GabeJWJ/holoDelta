@@ -823,7 +823,7 @@ unique_name_in_owner = true
 layout_mode = 2
 alignment = 1
 selected = 1
-item_count = 4
+item_count = 5
 popup/item_0/text = "LOBBY_BANLIST_NONE"
 popup/item_1/text = "LOBBY_BANLIST_CURRENT"
 popup/item_1/id = 1
@@ -831,6 +831,8 @@ popup/item_2/text = "LOBBY_BANLIST_CURRENT_EN"
 popup/item_2/id = 2
 popup/item_3/text = "LOBBY_BANLIST_UNRELEASED"
 popup/item_3/id = 3
+popup/item_4/text = "LOBBY_BANLIST_UNRELEASED_EN"
+popup/item_4/id = 4
 
 [node name="HSeparator" type="HSeparator" parent="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox"]
 layout_mode = 2

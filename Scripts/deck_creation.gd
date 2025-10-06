@@ -1048,6 +1048,8 @@ func _on_banlist_choice_item_selected(index: int) -> void:
 			banlist = Database.en_current_banlist
 		3:
 			banlist = Database.unreleased
+		4:
+			banlist = Database.en_unreleased
 	
 	for potential_card in all_cards:
 		if is_instance_valid(potential_card):

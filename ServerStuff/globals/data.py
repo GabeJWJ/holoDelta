@@ -11,6 +11,8 @@ def initialize():
         data["current_banlist"] = json.load(file)
     with open('data_source/banlists/en_current.json', 'r') as file:
         data["en_current_banlist"] = json.load(file)
+    with open('data_source/banlists/en_unreleased.json', 'r') as file:
+        data["en_unreleased"] = json.load(file)
     with open('data_source/banlists/unreleased.json', 'r') as file:
         data["unreleased"] = json.load(file)
     with open('data_source/cardData.json', 'r') as file:

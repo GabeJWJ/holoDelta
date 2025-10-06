@@ -628,6 +628,18 @@ func _on_websocket_connected(url):
 	if OS.has_feature("web"):
 		%ConfirmDialog.set_yes_button_disabled(false)
 
+func _serf_placeholder_numbers(number):
+	var numbers_found = [number]
+	for i in range(number.length()):
+		if number[i] == "*":
+			var new_numbers_found = []
+			for num in range(10):
+				for old_number in numbers_found:
+					var temp_number = old_number.left(i) + str(num) + old_number.right(number.length()-i-1)
+					new_numbers_found.append(temp_number)
+			numbers_found = new_numbers_found.duplicate()
+	return numbers_found
+
 func _on_websocket_received(raw_data):
 	var needed_string = raw_data.get_string_from_ascii()
 	
@@ -685,24 +697,19 @@ func _on_websocket_received(raw_data):
 									player_name = Settings.settings["Name"]
 									update_name(player_name)
 								%PlayerName.placeholder_text = player_name
-							if "current" in data and "en_current" in data and "unreleased" in data:
+							if "current" in data and "en_current" in data and "unreleased" in data and "en_unreleased" in data:
 								for number in data["current"]:
 									Database.current_banlist[number] = int(data["current"][number])
 									Database.unreleased[number] = int(data["current"][number])
 								for number in data["en_current"]:
 									Database.en_current_banlist[number] = int(data["en_current"][number])
+									Database.en_unreleased[number] = int(data["en_current"][number])
 								for number in data["unreleased"]:
-									var numbers_found = [number]
-									for i in range(number.length()):
-										if number[i] == "*":
-											var new_numbers_found = []
-											for num in range(10):
-												for old_number in numbers_found:
-													var temp_number = old_number.left(i) + str(num) + old_number.right(number.length()-i-1)
-													new_numbers_found.append(temp_number)
-											numbers_found = new_numbers_found.duplicate()
-									for found in numbers_found:
+									for found in _serf_placeholder_numbers(number):
 										Database.unreleased[found] = int(data["unreleased"][number])
+								for number in data["en_unreleased"]:
+									for found in _serf_placeholder_numbers(number):
+										Database.en_unreleased[found] = int(data["en_unreleased"][number])
 							if "server_id" in data:
 								%ServerCode.text = data["server_id"]
 						"Numbers":
@@ -823,6 +830,8 @@ func create_lobby() -> void:
 		settings["banlist"] = Database.en_current_banlist
 	elif lobby_banlist.selected == 3:
 		settings["banlist"] = Database.unreleased
+	elif lobby_banlist.selected == 4:
+		settings["banlist"] = Database.en_unreleased
 	else:
 		settings["banlist"] = {}
 	send_command("Server","Create Lobby",{"settings":settings})
@@ -854,6 +863,8 @@ func found_lobbies(found:Array) -> void:
 					lobbyButton.text += tr("LOBBY_BANLIST_CURRENT_EN")
 				3:
 					lobbyButton.text += tr("LOBBY_BANLIST_UNRELEASED")
+				4:
+					lobbyButton.text += tr("LOBBY_BANLIST_UNRELEASED_EN")
 				_:
 					lobbyButton.text += tr("LOBBY_BANLIST_CUSTOM")
 			if bool(lobby_info["only_en"]) and !Settings.settings.OnlyEN:
