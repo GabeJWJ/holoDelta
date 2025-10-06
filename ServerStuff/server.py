@@ -2,6 +2,7 @@ import json
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import RedirectResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.gzip import GZipMiddleware
 from traceback import format_exc
 from classes.connection_manager import ConnectionManager
 from classes.player import Player
@@ -30,6 +31,7 @@ initialize_manager(ConnectionManager())
 
 app = FastAPI()
 app.mount("/game", StaticFiles(directory="Holodelta_web"), name="game")
+app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=7)
 
 @app.get("/")
 def index():
