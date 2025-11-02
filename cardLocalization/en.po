@@ -3188,7 +3188,7 @@ msgstr "holoSparkling"
 
 msgid "hBP02-086_EFFECT"
 msgstr "■The holomem this tool is attached to gets Arts+20.\n"
-"■The holomem without #Alccohol this tool is attached to takes +10 damage.\n\n"
+"■The holomem without #Alcohol this tool is attached to takes +10 damage.\n\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP02-016_NAME"
