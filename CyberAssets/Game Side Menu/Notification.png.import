@@ -3,20 +3,22 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dexhtkhame0ay"
-path="res://.godot/imported/Notification.png-aae1e2e8e0d93b404ff45a06765ca6b9.ctex"
+path.bptc="res://.godot/imported/Notification.png-aae1e2e8e0d93b404ff45a06765ca6b9.bptc.ctex"
+path.astc="res://.godot/imported/Notification.png-aae1e2e8e0d93b404ff45a06765ca6b9.astc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://CyberAssets/Game Side Menu/Notification.png"
-dest_files=["res://.godot/imported/Notification.png-aae1e2e8e0d93b404ff45a06765ca6b9.ctex"]
+dest_files=["res://.godot/imported/Notification.png-aae1e2e8e0d93b404ff45a06765ca6b9.bptc.ctex", "res://.godot/imported/Notification.png-aae1e2e8e0d93b404ff45a06765ca6b9.astc.ctex"]
 
 [params]
 
-compress/mode=1
-compress/high_quality=false
+compress/mode=2
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
