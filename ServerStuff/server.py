@@ -11,7 +11,7 @@ from globals.data import initialize, get_data
 from globals.live_data import get_all_players, get_manager, initialize_manager
 from utils.game_network_utils import update_numbers_all
 from utils.game_utils import call_command
-#import utils.azure_blob_storage as azb
+import utils.azure_blob_storage as azb
 
 
 # Initialize the data source
@@ -38,19 +38,10 @@ app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=9)
 def index():
     return RedirectResponse(url="/game/index.html")
 
-"""
-BOUNTY -
-This is the place where the zip gets fed through.
-I have it sent as a downloadstream because I want to avoid downloading the full file and keeping it in memory when passing it
-This exact thing MIGHT be fine to keep as a local file that gets returned, but the cosmetics NEED to use Blob Storage, so...
-Cosmetics sharing probably also need it to be asynchronous, but let me know if I'm misinterpreting something.
-
-Check utils/azure_blob_storage.py and the Setup region of Multiplayer.gd for context
-
 @app.get("/cardData.zip")
 async def get_card_data_archive():
     return StreamingResponse(await azb.get_card_data(), media_type="application/zip")
-"""
+
 
 @app.get("/version")
 def get_current_version():

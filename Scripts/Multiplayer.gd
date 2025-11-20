@@ -273,7 +273,6 @@ func _attempt_download_zip():
 	%Popup.visible = true
 	%DownloadLabel.text = tr("DOWNLOAD_CARDS")
 	
-	#BOUNTY - Probably just this one line MAY need to change
 	%HTTPManager.job(proper_hypertext + Server.websocketURL + "/cardData.zip").on_failure(_download_zip_failed).on_success(_download_zip_suceeded).download("user://temp_cardData.zip")
 
 func _download_zip_suceeded(_result=null):
