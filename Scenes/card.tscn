@@ -34,6 +34,7 @@ texture_hover = ExtResource("5_f6tys")
 
 [node name="DamageCounter" type="Sprite2D" parent="."]
 visible = false
+modulate = Color(1, 1, 1, 0.47451)
 position = Vector2(-110.667, -176)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_p2v7u")

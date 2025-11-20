@@ -499,23 +499,23 @@ visible = false
 z_index = 4
 
 [node name="MainMenu" type="Button" parent="CanvasLayer"]
-offset_left = 404.0
-offset_top = 686.0
-offset_right = 469.0
-offset_bottom = 701.0
+offset_left = 400.0
+offset_top = 689.0
+offset_right = 470.0
+offset_bottom = 714.0
 theme = ExtResource("3_da1xd")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 8
 text = "MENU"
 text_overrun_behavior = 3
 clip_text = true
 
 [node name="Clear" type="Button" parent="CanvasLayer"]
-offset_left = 314.0
-offset_top = 686.0
-offset_right = 380.0
-offset_bottom = 701.0
+offset_left = 313.0
+offset_top = 689.0
+offset_right = 387.0
+offset_bottom = 714.0
 theme = ExtResource("3_da1xd")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 8
 text = "DECK_CLEAR"
 text_overrun_behavior = 3
 clip_text = true

@@ -45,6 +45,7 @@ var attached = []
 @export var offered_damage:int
 @export var extra_hp:int
 @export var baton_pass_cost:int
+@export var default_baton_pass_cost:int
 @export var unlimited:bool
 @export var buzz:bool
 @export var holomem_color:Array
@@ -145,6 +146,7 @@ func setup_info(number,art_code,back=null):
 			offered_damage = 0
 			extra_hp = 0
 			baton_pass_cost = card_data.batonPassCost
+			default_baton_pass_cost = card_data.batonPassCost
 			holomem_color = []
 			for color in card_data.color:
 				holomem_color.append(color)
@@ -328,8 +330,13 @@ func full_desc():
 					result += "\n\n" + Settings.trans("%s_ART_%s_EFFECT" % [cardNumber, art[0]])
 			
 			var costText = ""
-			for i in range(baton_pass_cost):
-				costText += "[img=18]res://CheerIcons/ColorlessArts.webp[/img]"
+			for i in range(default_baton_pass_cost):
+				costText += "[img=18" + (" color=ffffff70" if i >= baton_pass_cost else "") + "]res://CheerIcons/ColorlessArts.webp[/img]"
+			if default_baton_pass_cost < baton_pass_cost:
+				costText += " [lb]"
+				for i in range(baton_pass_cost - default_baton_pass_cost):
+					costText += "[img=18]res://CheerIcons/ColorlessArts.webp[/img]"
+				costText += "[rb]"
 			if costText == "":
 				costText = tr("INFO_NOBATONPASSCOST")
 			result += "\n\n" + tr("INFO_HOLOMEM_2").format({costText = costText})
@@ -435,6 +442,13 @@ func add_extra_hp(amount):
 func clear_extra_hp():
 	extra_hp = 0
 	update_damage()
+
+func add_extra_baton_pass_cost(amount):
+	baton_pass_cost += amount
+	if baton_pass_cost < 0:
+		baton_pass_cost = 0
+	if baton_pass_cost > 99:
+		baton_pass_cost = 99
 
 func update_attached():
 	var cheer_i = 0

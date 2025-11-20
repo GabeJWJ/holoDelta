@@ -47,6 +47,7 @@ class Card:
                     self.offered_damage = 0
                     self.extra_hp = 0
                     self.baton_pass_cost = init_info["batonPassCost"]
+                    self.default_baton_pass_cost = init_info["batonPassCost"]
                     self.color = init_info["color"] if "color" in init_info else []
                     self.name = init_info["name"] if "name" in init_info else []
                     self.arts = {}
@@ -119,9 +120,16 @@ class Card:
             self.extra_hp = 0
         if self.extra_hp > 999:
             self.extra_hp = 999
-
+    
     async def clear_extra_hp(self):
         self.extra_hp = 0
+    
+    async def add_extra_baton_pass_cost(self,amount):
+        self.baton_pass_cost += amount
+        if self.baton_pass_cost < 0:
+            self.baton_pass_cost = 0
+        if self.baton_pass_cost > 99:
+            self.baton_pass_cost = 99
 
     async def update_attached(self):
         for attached_card in self.attached:
@@ -251,6 +259,7 @@ class Card:
                 result["damage"] = self.damage
                 result["extra_hp"] = self.extra_hp
                 result["baton_pass_cost"] = self.baton_pass_cost
+                result["default_baton_pass_cost"] = self.default_baton_pass_cost
                 result["color"] = self.color
                 result["name"] = self.name
                 result["arts"] = self.arts

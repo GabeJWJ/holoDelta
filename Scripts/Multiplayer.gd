@@ -138,6 +138,7 @@ func _ready():
 			chat.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	
 	#Setup Info
+	
 	if Database.setup:
 		%CardVersionText.text += Settings.card_version
 	else:
@@ -149,16 +150,17 @@ func _ready():
 			#Because it can update all the time
 			_start_data()
 		elif FileAccess.file_exists("user://cardData.zip"):
-			#If we have the card archive we just load it in
-			_attempt_load_zip()
+			#If we have the card archive we check the version and ask if they wish to update
+			_attempt_download_version()
 		else:
 			#If not we NEED to download it - game does not work without it.
 			_attempt_download_zip()
-		
 	
 	#Visual
 	%ClientVersionText.text += Settings.client_version
 	%DeckLocation.text += ProjectSettings.globalize_path("user://Decks")
+	if !(OS.has_feature("web") or OS.get_name() == "Web"):
+		%ClientVersionText.visible = true
 	
 	%LobbiesFoundLabel.text = tr("LOBBY_PUBLIC_LOBBIES_FOUND").format({"amount": "0"})
 	%SpectateFoundLabel.text = tr("SPECTATE_PUBLIC_GAMES_FOUND").format({"amount": "0"})
@@ -260,35 +262,63 @@ func _on_deck_creation_pressed():
 func _attempt_download_zip():
 	%ProgressBar.max_value = 60000000 #Yeah I'm just hard-coding that it expects ~60 MB cuz getting the actual number is tricky
 	%Failure.visible = false
+	%Update.visible = false
 	%Popup.visible = true
 	%DownloadLabel.text = tr("DOWNLOAD_CARDS")
+	
+	#BOUNTY - Probably just this one line MAY need to change
 	%HTTPManager.job(proper_hypertext + Server.websocketURL + "/cardData.zip").on_failure(_download_zip_failed).on_success(_download_zip_suceeded).download("user://temp_cardData.zip")
 
 func _download_zip_suceeded(_result=null):
 	DirAccess.rename_absolute("user://temp_cardData.zip", "user://cardData.zip")
+	DirAccess.remove_absolute("user://temp_cardData.zip")
 	_attempt_load_zip()
 
 func _attempt_load_zip():
 	%Failure.visible = false
+	%Update.visible = false
 	%Popup.visible = true
 	%DownloadLabel.text = tr("DOWNLOAD_CARDS")
 	var success = ProjectSettings.load_resource_pack("user://cardData.zip")
 	if success:
 		_start_data()
+		#_attempt_download_version()
 	else:
 		_load_zip_failed()
 
 func _attempt_download_version():
-	pass
+	%HTTPManager.job(proper_hypertext + Server.websocketURL + "/version").on_success(_download_version_succeded).on_failure(_download_version_failed).fetch()
 
 func _start_data():
 	Settings.card_version = FileAccess.get_file_as_string("res://cardLocalization/card_version.txt")
-	%CardVersionText.text += Settings.card_version
+	%CardVersionText.text = "Card Version " + Settings.card_version
 	json.parse(FileAccess.get_file_as_string("res://cardData.json"))
 	Database.setup_data(json.data, Settings._connect_local.bind(%Timer2.start))
-	#go should include download version data
-		#    if succeed set info
-		#    if fail raise alert
+
+func _download_version_succeded(result):
+	if FileAccess.file_exists("user://cardData.zip"):
+		var zip_reader = ZIPReader.new()
+		zip_reader.open("user://cardData.zip")
+		if zip_reader.file_exists("cardLocalization/card_version.txt"):
+			Settings.card_version = zip_reader.read_file("cardLocalization/card_version.txt").get_string_from_ascii()
+		zip_reader.close()
+	
+	var found_version = result.fetch()
+	var update_needed = false
+	if found_version.Client != Settings.client_version:
+		%UpdateClientBody.text = tr("UPDATE_MENU_CLIENT_UPDATEFOUND").format({"current":Settings.client_version, "found":found_version.Client})
+		%Client_Download.disabled = false
+		update_needed = true
+	if found_version.Card != Settings.card_version:
+		%UpdateCardBody.text = tr("UPDATE_MENU_CARD_UPDATEFOUND").format({"current":Settings.card_version, "found":found_version.Card})
+		%Card_Download.disabled = false
+		update_needed = true
+	
+	if update_needed:
+		%Popup.visible = false
+		switch_menu("update",false)
+	else:
+		_attempt_load_zip()
 
 func _do_final():
 	Database.setup = true
@@ -312,7 +342,8 @@ func _load_zip_failed():
 	switch_menu("failure", false)
 
 func _download_version_failed(_result):
-	pass
+	# DO NOT FORGET THIS SHOULD LOAD ZIP
+	print("Failed")
 
 func _download_progress(_assigned_files, _current_files, total_bytes, current_bytes):
 	%PopupProgressBar.value = current_bytes
@@ -328,6 +359,7 @@ func _download_progress(_assigned_files, _current_files, total_bytes, current_by
 	"spectate_game": %SpectatePanel,
 	"customization": %CustomizationPanel,
 	"failure": %Failure,
+	"update": %Update,
 	"error": %Error
 }
 

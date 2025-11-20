@@ -1,6 +1,6 @@
 import json
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
-from fastapi.responses import RedirectResponse, FileResponse
+from fastapi.responses import RedirectResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.gzip import GZipMiddleware
 from traceback import format_exc
@@ -11,6 +11,7 @@ from globals.data import initialize, get_data
 from globals.live_data import get_all_players, get_manager, initialize_manager
 from utils.game_network_utils import update_numbers_all
 from utils.game_utils import call_command
+#import utils.azure_blob_storage as azb
 
 
 # Initialize the data source
@@ -25,21 +26,31 @@ card_data = get_data("card_data")
 bloom_levels = get_data("bloom_levels")
 fudas = get_data("fudas")
 identifier = get_data("identifier")
-version = (get_data("client_version"), get_data("card_version"))
+version = {"Client": get_data("client_version"), "Card": get_data("card_version")}
 
 initialize_manager(ConnectionManager())
 
 app = FastAPI()
 app.mount("/game", StaticFiles(directory="Holodelta_web"), name="game")
-app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=7)
+app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=9)
 
 @app.get("/")
 def index():
     return RedirectResponse(url="/game/index.html")
 
+"""
+BOUNTY -
+This is the place where the zip gets fed through.
+I have it sent as a downloadstream because I want to avoid downloading the full file and keeping it in memory when passing it
+This exact thing MIGHT be fine to keep as a local file that gets returned, but later things I want to do NEED to use Blob Storage, so...
+Said later applications probably also need it to be asynchronous, but let me know if I'm misinterpreting something.
+
+Check utils/azure_blob_storage.py and the Setup region of Multiplayer.gd for context
+
 @app.get("/cardData.zip")
-def get_card_data_archive():
-    return FileResponse("app_release/cardData.zip")
+async def get_card_data_archive():
+    return StreamingResponse(await azb.get_card_data(), media_type="application/zip")
+"""
 
 @app.get("/version")
 def get_current_version():

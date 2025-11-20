@@ -591,6 +591,8 @@ class Side:
                 await self.remove_from_fuda(currentCard, Fuda.cheerDeck)
                 await self.tell_player("Reveal Cheer",{"card_id":currentCard})
                 await self.tell_others("Reveal Cheer",{"card":await actualCard.to_dict()})
+            case 302: #Mill from Cheer Deck
+                await self.mill(Fuda.cheerDeck,Fuda.archive)
             case 398: #Search Cheer Deck
                 await self.game._send_message(self.player,"MESSAGE_CHEERDECK_SEARCH")
                 await self.tell_others("Look At",{"fuda":int(Fuda.cheerDeck)})
@@ -884,6 +886,30 @@ class Side:
                     actualCard = self.cards[currentCard]
                     await actualCard.add_extra_hp(-1*input)
                     await self.tell_all("Extra HP",{"card_id":currentCard, "amount":-1*input})
+            case 16: #Add Extra Baton Pass Cost
+                if currentCard is not None:
+                    actualCard = self.cards[currentCard]
+                    await actualCard.add_extra_baton_pass_cost(input)
+                    await self.tell_all("Extra Baton Pass Cost",{"card_id":currentCard, "amount":input})
+            case 17: #Remove Baton Pass Cost
+                if currentCard is not None:
+                    actualCard = self.cards[currentCard]
+                    await actualCard.add_extra_baton_pass_cost(-1*input)
+                    await self.tell_all("Extra Baton Pass Cost",{"card_id":currentCard, "amount":-1*input})
+            
+            case 53: #Request Damage
+                if currentCard is not None:
+                    opponentSide = self.game.playing[self.opponent.id]
+                    actualCard = opponentSide.cards[currentCard]
+                    actualCard.offered_damage += input
+                    await opponentSide.tell_player("Offered Damage",{"card_id":currentCard,"amount":input})
+            case 54: #Request Damage to Back
+                opponentSide = self.game.playing[self.opponent.id]
+                for occupied_back_zone in await opponentSide.all_occupied_zones(True):
+                    card_to_hit = opponentSide.zones[occupied_back_zone]
+                    actualCard = opponentSide.cards[card_to_hit]
+                    actualCard.offered_damage += input
+                    await opponentSide.tell_player("Offered Damage",{"card_id":card_to_hit,"amount":input})
                     
             case 70: #Oshi Skill X Cost
                 if currentCard is not None:
@@ -924,7 +950,10 @@ class Side:
                     await self.game._send_message(self.player,"MESSAGE_DECK_LOOKATX",{},{"amount":input})
                     await self.tell_player("Look At X",{"fuda":Fuda.deck, "ids":[card.id for card in self.deck[:input]]})
                     await self.tell_others("Look At X",{"fuda":Fuda.deck,"X":input})
-            
+
+            case 303: #Archive X from Cheer Deck
+                if input <= len(self.cheer_deck):
+                    await self.mill(Fuda.cheerDeck,Fuda.archive,input)
             case 397: #Look At X Cheer Deck
                 if input <= len(self.cheer_deck):
                     await self.game._send_message(self.player,"MESSAGE_CHEERDECK_LOOKATX",{},{"amount":input})

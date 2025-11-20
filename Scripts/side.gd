@@ -504,6 +504,7 @@ func get_real_card(card_dict, back, temp=false):
 		if card_dict.cardType == "Holomem":
 			newCard.damage = int(card_dict.damage)
 			newCard.extra_hp = int(card_dict.extra_hp)
+			newCard.baton_pass_cost = int(card_dict.baton_pass_cost)
 		all_cards[new_id] = newCard
 		newCard.position = Vector2(1000,1000)
 		move_child($Zones,-1)
@@ -1156,6 +1157,15 @@ func _on_card_clicked(card_id : int) -> void:
 		send_command("Click Notification",{"player_id":player_id,"card_id":currentCard})
 	
 	if !is_your_side:
+		var currentZone = find_what_zone(currentCard)
+		if currentZone:
+			popup.add_item("CARD_HOLOMEM_REQUESTDAMAGE", 53)
+			if currentZone not in [centerZone, collabZone]:
+				popup.add_item("CARD_HOLOMEM_REQUESTDAMAGEBACK", 54)
+			
+			if actualCard.attached.size() > 0 or actualCard.onTopOf.size() > 0:
+				popup.add_separator()
+		
 		if actualCard.attached.size() > 0:
 			popup.add_item(tr("CARD_HOLOMEM_LOOK_ATTACHED"),50)
 		if actualCard.onTopOf.size() > 0:
@@ -1213,6 +1223,9 @@ func _on_card_clicked(card_id : int) -> void:
 					popup.add_item(tr("CARD_HOLOMEM_EXTRAHP"), 12)
 					if actualCard.extra_hp > 0:
 						popup.add_item(tr("CARD_HOLOMEM_REMOVEEXTRAHP"), 13)
+					popup.add_item(tr("CARD_HOLOMEM_EXTRABATONPASS"), 16)
+					if actualCard.baton_pass_cost > 0:
+						popup.add_item(tr("CARD_HOLOMEM_REMOVEBATONPASS"), 17)
 					
 					if actualCard.onTopOf.size() > 0:
 						popup.add_separator()
@@ -1353,6 +1366,11 @@ func _on_cheer_deck_clicked():
 		if all_occupied_zones().size() > 0:
 			popup.add_item(tr("CHEERDECK_REVEAL"),300)
 			popup.add_separator()
+		
+		popup.add_item(tr("CHEERDECK_ARCHIVE"),302)
+		popup.add_item(tr("CHEERDECK_ARCHIVEX"),303)
+		
+		popup.add_separator()
 		
 		popup.add_item(tr("CHEERDECK_LOOKX"),397)
 		popup.add_item(tr("CHEERDECK_SEARCH"),398)
@@ -1499,6 +1517,12 @@ func _on_popup_menu_id_pressed(id):
 		13: #Remove Extra HP
 			set_prompt(tr("PROMPT_REMOVEEXTRAHP") + "\nX=",10,2)
 			currentPrompt = 13
+		16: #Add Extra Baton Pass Cost
+			set_prompt(tr("PROMPT_EXTRABATONPASS") + "\nX=",1,1)
+			currentPrompt = 16
+		17: #Remove Baton Pass Cost
+			set_prompt(tr("PROMPT_REMOVEBATONPASS") + "\nX=",1,1)
+			currentPrompt = 17
 		
 		22: #Attach Revealed Support
 			var possibleZones = all_occupied_zones()
@@ -1518,6 +1542,12 @@ func _on_popup_menu_id_pressed(id):
 			currentAttached = all_cards[currentCard]
 			showLookAt(currentAttached.onTopOf)
 			currentPrompt = 52
+		53: #Request Damage
+			set_prompt(tr("PROMPT_REQUESTDAMAGE") + "\nX=",20,3)
+			currentPrompt = 53
+		54: #Request Damage to Back
+			set_prompt(tr("PROMPT_REQUESTDAMAGEBACK") + "\nX=",20,3)
+			currentPrompt = 54
 		70: #Oshi Skill
 			var skill = all_cards[currentCard].oshi_skills[0]
 			if skill[1] >= 0:
@@ -1589,6 +1619,9 @@ func _on_popup_menu_id_pressed(id):
 			currentPrompt = 298
 			currentFuda = deck
 		
+		303: #Archive X from Cheer Deck
+			set_prompt(tr("PROMPT_CHEERDECK_ARCHIVE") + "\nX=",2)
+			currentPrompt = 303
 		397: #Look at X
 			set_prompt(tr("PROMPT_LOOKATX"),3)
 			currentPrompt = 397
@@ -1855,6 +1888,9 @@ func side_command(command: String, data: Dictionary) -> void:
 		"Extra HP":
 			if "card_id" in data and "amount" in data:
 				all_cards[int(data["card_id"])].add_extra_hp(int(data["amount"]))
+		"Extra Baton Pass Cost":
+			if "card_id" in data and "amount" in data:
+				all_cards[int(data["card_id"])].add_extra_baton_pass_cost(int(data["amount"]))
 		"Offered Damage":
 			if "card_id" in data and "amount" in data:
 				all_cards[int(data["card_id"])].offer_damage(int(data["amount"]))
@@ -1961,6 +1997,9 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 		"Extra HP":
 			if "card_id" in data and int(data["card_id"]) in all_cards and "amount" in data:
 				all_cards[int(data["card_id"])].add_extra_hp(int(data["amount"]))
+		"Extra Baton Pass Cost":
+			if "card_id" in data and int(data["card_id"]) in all_cards and "amount" in data:
+				all_cards[int(data["card_id"])].add_extra_baton_pass_cost(int(data["amount"]))
 		
 		"Add To Hand":
 			add_fake_to_hand()

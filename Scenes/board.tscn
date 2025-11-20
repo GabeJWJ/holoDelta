@@ -1937,6 +1937,79 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "TRYAGAIN"
 
+[node name="Update" type="PanelContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -211.0
+offset_right = 171.0
+offset_bottom = 221.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("5_fdkx6")
+theme_override_styles/panel = ExtResource("11_122ys")
+
+[node name="UpdateMargins" type="MarginContainer" parent="CanvasLayer/Update"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="UpdateVBox" type="VBoxContainer" parent="CanvasLayer/Update/UpdateMargins"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="UpdateTitle" type="Label" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "UPDATE_MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpdateClientBody" type="Label" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "UPDATE_MENU_CLIENT_UPTODATE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Client_Download" type="Button" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "DOWNLOAD_CLIENT"
+
+[node name="UpdateCardBody" type="Label" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "UPDATE_MENU_CARD_UPTODATE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Card_Download" type="Button" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "DOWNLOAD_CARD"
+
+[node name="UpdateBack" type="Button" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "BACK"
+
 [node name="Error" type="PanelContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
@@ -2073,6 +2146,8 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/Failure/FailureMargins/FailureVBox/TryAgain_Download" to="." method="_attempt_download_zip"]
 [connection signal="pressed" from="CanvasLayer/Failure/FailureMargins/FailureVBox/TryAgain_Import" to="." method="_attempt_load_zip"]
+[connection signal="pressed" from="CanvasLayer/Update/UpdateMargins/UpdateVBox/Card_Download" to="." method="_attempt_download_zip"]
+[connection signal="pressed" from="CanvasLayer/Update/UpdateMargins/UpdateVBox/UpdateBack" to="." method="_attempt_load_zip"]
 [connection signal="pressed" from="CanvasLayer/Error/ErrorMargins/ErrorHBox/CloseError" to="." method="_on_close_error_pressed"]
 [connection signal="progress" from="HTTPManager" to="." method="_download_progress"]
 [connection signal="connected" from="WebSocket" to="." method="_on_websocket_connected"]
