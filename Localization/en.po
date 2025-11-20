@@ -1,18 +1,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: holodelta\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2025-11-19 20:17-0500\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: holodelta\n"
 "X-Crowdin-Project-ID: 724315\n"
 "X-Crowdin-Language: en\n"
 "X-Crowdin-File: template.pot\n"
 "X-Crowdin-File-ID: 6\n"
-"Language-Team: English\n"
-"Language: en_US\n"
-"PO-Revision-Date: 2025-10-06 01:26\n"
+"X-Generator: Poedit 3.5\n"
 
 #: Scenes/board.tscn
 msgid "TITLE"
@@ -34,8 +37,7 @@ msgstr "Create/Edit Deck"
 msgid "COSMETICS"
 msgstr "Cosmetics"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "OPTION_EN"
 msgstr "Only EN"
 
@@ -47,18 +49,15 @@ msgstr "Info"
 msgid "LOBBY_CREATE"
 msgstr "Create Lobby"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_JOIN"
 msgstr "Join Lobby"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_SPECTATE"
 msgstr "Spectate Game"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "PLAYERS_ONLINE"
 msgstr "{amount} players online"
 
@@ -122,15 +121,17 @@ msgstr "Last Phase"
 msgid "ACTION_NSTEP"
 msgstr "Next Phase"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_PUBLIC_LOBBIES_FOUND"
 msgstr "{amount} Public Lobbies Found"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_LOBBYCODE"
 msgstr "Enter Lobby Code"
+
+#: Scenes/board.tscn
+msgid "LOBBY_LOBBYCODE_PASTE"
+msgstr "Paste Lobby Code"
 
 #: Scenes/board.tscn
 msgid "LOBBY_SEARCHING"
@@ -148,58 +149,43 @@ msgstr "Back"
 msgid "LOBBY_SETTINGS"
 msgstr "Lobby Settings"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_PRIVATE"
 msgstr "Private"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_ALLOWSPECTATORS"
 msgstr "Allow Spectators"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST"
 msgstr "Banlist"
 
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_NONE"
 msgstr "No Banlist"
 
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CURRENT"
 msgstr "Current"
 
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CURRENT_EN"
 msgstr "Current (EN)"
 
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr "Current + Unreleased"
 
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED_EN"
 msgstr "Current + Unreleased (EN)"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "SPECTATE_PUBLIC_GAMES_FOUND"
 msgstr "{amount} Public Games Found"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_GAMECODE"
 msgstr "Enter Game Code"
 
@@ -271,24 +257,19 @@ msgstr "Game Code"
 msgid "OPTION_COSMETICS_HIDE"
 msgstr "Hide Opponent Cosmetics"
 
-#: Scenes/board.tscn
-#: Scenes/side.tscn
+#: Scenes/board.tscn Scenes/side.tscn
 msgid "RPS_ROCK"
 msgstr "Rock"
 
-#: Scenes/board.tscn
-#: Scenes/side.tscn
+#: Scenes/board.tscn Scenes/side.tscn
 msgid "RPS_PAPER"
 msgstr "Paper"
 
-#: Scenes/board.tscn
-#: Scenes/side.tscn
+#: Scenes/board.tscn Scenes/side.tscn
 msgid "RPS_SCISSORS"
 msgstr "Scissors"
 
-#: Scenes/board.tscn
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/side.gd Scripts/Multiplayer.gd
 msgid "RPS_WAIT"
 msgstr "Waiting for opponent..."
 
@@ -296,18 +277,15 @@ msgstr "Waiting for opponent..."
 msgid "LOBBY_HOST"
 msgstr "Host"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_NONE_CHOSEN"
 msgstr "No One"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_READY"
 msgstr "Ready"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "DECK_SELECT"
 msgstr "Choose Deck"
 
@@ -320,6 +298,10 @@ msgid "LOBBY_CODE"
 msgstr "Lobby Code:"
 
 #: Scenes/board.tscn
+msgid "LOBBY_LOBBYCODE_COPY"
+msgstr "Copy Lobby Code"
+
+#: Scenes/board.tscn
 msgid "LOBBY_SELECT_OPPONENT"
 msgstr "Select Opponent"
 
@@ -327,32 +309,25 @@ msgstr "Select Opponent"
 msgid "LOBBY_STARTGAME"
 msgstr "Start Game"
 
-#: Scenes/board.tscn
-#: Scenes/side.tscn
+#: Scenes/board.tscn Scenes/side.tscn
 msgid "OK"
 msgstr "OK"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_GAMESTART_SPECTATE"
 msgstr "Game started. Spectate?"
 
-#: Scenes/board.tscn
-#: Scenes/deck_list.tscn
-#: Scenes/side.tscn
+#: Scenes/board.tscn Scenes/deck_list.tscn Scenes/side.tscn
 #: Scenes/deck_creation.tscn
 msgid "YES"
 msgstr "Yes"
 
-#: Scenes/board.tscn
-#: Scenes/deck_list.tscn
-#: Scenes/side.tscn
+#: Scenes/board.tscn Scenes/deck_list.tscn Scenes/side.tscn
 #: Scenes/deck_creation.tscn
 msgid "NO"
 msgstr "No"
 
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
+#: Scenes/board.tscn Scenes/deck_creation.tscn
 msgid "MENU"
 msgstr "Main Menu"
 
@@ -360,20 +335,44 @@ msgstr "Main Menu"
 msgid "MENU_PROMPT"
 msgstr "Really return to Main Menu?"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "DOWNLOAD_FAIL"
 msgstr "Failed to download card data"
 
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "DOWNLOAD_FAIL_FULL"
-msgstr "Couldn't download the cardData.zip archive.\n"
-"There are many reasons this could happen, and I don't which is happening here."
+msgstr ""
+"Couldn't download the cardData.zip archive.\n"
+"There are many reasons this could happen, and I don't which is happening "
+"here."
 
 #: Scenes/board.tscn
 msgid "TRYAGAIN"
 msgstr "Try Again"
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU"
+msgstr "Update Menu"
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU_CLIENT_UPTODATE"
+msgstr "Client Is Up To Date"
+
+#: Scenes/board.tscn
+msgid "DOWNLOAD_CLIENT"
+msgstr "Get Client Update"
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU_CARD_UPTODATE"
+msgstr "Card DB Is Up To Date"
+
+#: Scenes/board.tscn
+msgid "DOWNLOAD_CARD"
+msgstr "Update Card DB"
+
+#: Scenes/board.tscn
+msgid "BACK"
+msgstr "Back"
 
 #: Scenes/deck_list.tscn
 msgid "DECK_SELECT_CANCEL"
@@ -435,13 +434,11 @@ msgstr "Card Information"
 msgid "TAB_OSHI"
 msgstr "Oshi"
 
-#: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
 msgid "NAME"
 msgstr "Name"
 
-#: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
 msgid "COLOR"
 msgstr "Color"
 
@@ -457,33 +454,27 @@ msgstr "Search"
 msgid "TAB_HOLOMEM"
 msgstr "Holomem"
 
-#: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
 msgid "LEVEL"
 msgstr "Level"
 
-#: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
 msgid "LEVEL_ANY"
 msgstr "Any Level"
 
-#: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
 msgid "LEVEL_DEBUT"
 msgstr "Debut"
 
-#: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
 msgid "LEVEL_1"
 msgstr "1st"
 
-#: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
 msgid "LEVEL_2"
 msgstr "2nd"
 
-#: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
 msgid "LEVEL_SPOT"
 msgstr "SPOT"
 
@@ -499,8 +490,7 @@ msgstr "Buzz"
 msgid "TAB_SUPPORT"
 msgstr "Support"
 
-#: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
 msgid "SUPPORT_TYPE"
 msgstr "Type"
 
@@ -646,11 +636,15 @@ msgstr "{cardNum} is not a real card. At least, it's not in the database."
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_OSHIBADFORMAT"
-msgstr "The oshi data is formatted incorrectly. Are you sure this is a holodelta deck file?"
+msgstr ""
+"The oshi data is formatted incorrectly. Are you sure this is a holodelta "
+"deck file?"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_DECKBADFORMAT"
-msgstr "The main deck data is formatted incorrectly. Are you sure this is a holodelta deck file?"
+msgstr ""
+"The main deck data is formatted incorrectly. Are you sure this is a "
+"holodelta deck file?"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NODECK"
@@ -658,7 +652,9 @@ msgstr "There is no main deck."
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_CHEERBADFORMAT"
-msgstr "The cheer deck data is formatted incorrectly. Are you sure this is a holodelta deck file?"
+msgstr ""
+"The cheer deck data is formatted incorrectly. Are you sure this is a "
+"holodelta deck file?"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOCHEER"
@@ -667,12 +663,6 @@ msgstr "There is no cheer deck."
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_ONLYEN"
 msgstr "{cardNum} (or the specific art chosen) is not available in English."
-
-#: Scripts/deck_creation.gd
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid ""
-msgstr ""
 
 #: Scripts/side.gd
 msgid "DECK"
@@ -700,11 +690,11 @@ msgstr "Mulligan?"
 
 #: Scripts/side.gd
 msgid "MULLIGAN_FORCED"
-msgstr "No debuts found.\n"
+msgstr ""
+"No debuts found.\n"
 "You must mulligan."
 
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
+#: Scripts/side.gd Scripts/Multiplayer.gd
 msgid "LOSS"
 msgstr "You Lose!"
 
@@ -787,6 +777,14 @@ msgstr "Add extra HP"
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
 msgstr "Remove extra HP"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_EXTRABATONPASS"
+msgstr "Increase Baton Pass Cost"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REMOVEBATONPASS"
+msgstr "Decrease Baton Pass Cost"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_UNBLOOM"
@@ -920,14 +918,21 @@ msgstr "Undo shuffle hand into deck"
 msgid "DECK_RPS"
 msgstr "Play RPS"
 
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
+#: Scripts/side.gd Scripts/Multiplayer.gd
 msgid "FORFEIT"
 msgstr "Forfeit"
 
 #: Scripts/side.gd
 msgid "CHEERDECK_REVEAL"
 msgstr "Reveal and attach"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_ARCHIVE"
+msgstr "Archive top card"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_ARCHIVEX"
+msgstr "Archive X from top"
 
 #: Scripts/side.gd
 msgid "CHEERDECK_LOOKX"
@@ -1062,6 +1067,22 @@ msgid "PROMPT_REMOVEEXTRAHP"
 msgstr "Remove X HP"
 
 #: Scripts/side.gd
+msgid "PROMPT_EXTRABATONPASS"
+msgstr "Add X Baton Pass Cost"
+
+#: Scripts/side.gd
+msgid "PROMPT_REMOVEBATONPASS"
+msgstr "Remove X Baton Pass Cost"
+
+#: Scripts/side.gd
+msgid "PROMPT_REQUESTDAMAGE"
+msgstr "Request X Damage"
+
+#: Scripts/side.gd
+msgid "PROMPT_REQUESTDAMAGEBACK"
+msgstr "Request X Damage"
+
+#: Scripts/side.gd
 msgid "PROMPT_OSHICOST"
 msgstr "Archive X Cards"
 
@@ -1076,6 +1097,10 @@ msgstr "Mill X Cards"
 #: Scripts/side.gd
 msgid "PROMPT_LOOKATX"
 msgstr "Look at X:"
+
+#: Scripts/side.gd
+msgid "PROMPT_CHEERDECK_ARCHIVE"
+msgstr "Archive X Cards"
 
 #: Scripts/side.gd
 msgid "PROMPT_HOLOPOWER_ARCHIVE"
@@ -1093,19 +1118,37 @@ msgstr "Opponent Going Second"
 msgid "TURN_FIRST"
 msgstr "Opponent Going First"
 
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REQUESTDAMAGE"
+msgstr "Request damage"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REQUESTDAMAGEBACK"
+msgstr "Request damage to all back holomem"
+
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_CARDS"
 msgstr "Setting Up Cards, Please Wait..."
 
 #: Scripts/Multiplayer.gd
 msgid "DECK_AUTOLOAD_CONFIRM"
-msgstr "DECK CODE DETECTED.\n"
+msgstr ""
+"DECK CODE DETECTED.\n"
 "CONTINUE TO DECK BUILDER?"
 
 #: Scripts/Multiplayer.gd
 msgid "DECK_AUTOLOAD_CONFIRM_INFO"
-msgstr "The game has detected that you have imported a valid deck.\n"
+msgstr ""
+"The game has detected that you have imported a valid deck.\n"
 "If you want to see it, click 'Yes' to proceed to the deck creator screen."
+
+#: Scripts/Multiplayer.gd
+msgid "UPDATE_MENU_CLIENT_UPDATEFOUND"
+msgstr "Client Update Found"
+
+#: Scripts/Multiplayer.gd
+msgid "UPDATE_MENU_CARD_UPDATEFOUND"
+msgstr "Card DB Update Found"
 
 #: Scripts/Multiplayer.gd
 msgid "LOAD_FAIL"
@@ -1113,7 +1156,8 @@ msgstr "Failed to load card data"
 
 #: Scripts/Multiplayer.gd
 msgid "LOAD_FAIL_FULL"
-msgstr "You have the cardData.zip archive, but it couldn't be loaded.\n"
+msgstr ""
+"You have the cardData.zip archive, but it couldn't be loaded.\n"
 "Please let me know if you see this, as I have no clue how this is possible."
 
 #: Scripts/Multiplayer.gd
@@ -1170,7 +1214,9 @@ msgstr "{person} sent {amount} cards from their {from} to their {to}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_BLOOM"
-msgstr "{person} bloomed ({fromZone}) {fromName} into {toName} ({fromLevel} to {toLevel})"
+msgstr ""
+"{person} bloomed ({fromZone}) {fromName} into {toName} ({fromLevel} to "
+"{toLevel})"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_STAGE_ARCHIVE"
@@ -1334,7 +1380,8 @@ msgstr "{person} put a card on top of their deck from holopower"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_TOPDECK"
-msgstr "{person} put {cardName} on top of their deck from ({fromZone}) {fromName}"
+msgstr ""
+"{person} put {cardName} on top of their deck from ({fromZone}) {fromName}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_BOTTOMDECK"
@@ -1354,7 +1401,9 @@ msgstr "{person} sent a card to the bottom of their deck from holopower"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_BOTTOMDECK"
-msgstr "{person} put {cardName} on the bottom of their deck from ({fromZone}) {fromName}"
+msgstr ""
+"{person} put {cardName} on the bottom of their deck from ({fromZone}) "
+"{fromName}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_TOPCHEERDECK"
@@ -1370,7 +1419,9 @@ msgstr "{person} put a card on top of their cheer deck from their {fromFuda}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_TOPCHEERDECK"
-msgstr "{person} put {cardName} on top of their cheer deck from ({fromZone}) {fromName}"
+msgstr ""
+"{person} put {cardName} on top of their cheer deck from ({fromZone}) "
+"{fromName}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
@@ -1386,7 +1437,9 @@ msgstr "{person} sent a card to bottom of cheer deck from their {fromFuda}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_BOTTOMCHEERDECK"
-msgstr "{person} sent {cardName} to the bottom of their cheer deck from ({fromZone}) {fromName}"
+msgstr ""
+"{person} sent {cardName} to the bottom of their cheer deck from ({fromZone}) "
+"{fromName}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_FUDA_ARCHIVE"
@@ -1414,7 +1467,9 @@ msgstr "{person} put {cardName} in holopower from ({fromZone}) {fromName}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ARTS_DAMAGE"
-msgstr "{person} had ({fromZone}) {fromName} perform \"{artName}\", dealing {damage} damage to ({toZone}) {toName}"
+msgstr ""
+"{person} had ({fromZone}) {fromName} perform \"{artName}\", dealing {damage} "
+"damage to ({toZone}) {toName}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DECK_LOOKATX"
@@ -1430,7 +1485,9 @@ msgstr "{person} moved ({fromZone}) {fromName} to the back"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CARD_BATONPASS"
-msgstr "{person} baton passed, switching ({fromZone}) {fromName} with ({toZone}) {toName}"
+msgstr ""
+"{person} baton passed, switching ({fromZone}) {fromName} with ({toZone}) "
+"{toName}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_CARD_SWITCH"
@@ -1470,7 +1527,9 @@ msgstr "{person} attached {attachName} to ({toZone}) {toName} from archive"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ATTACHED_CHEER_ATTACH"
-msgstr "{person} attached {attachName} to ({toZone}) {toName} from ({fromZone}) {fromName}"
+msgstr ""
+"{person} attached {attachName} to ({toZone}) {toName} from ({fromZone}) "
+"{fromName}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ENDTURN"
@@ -1506,7 +1565,8 @@ msgstr "You sent {amount} cards from your {from} to your {to}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_BLOOM"
-msgstr "You bloomed ({fromZone}) {fromName} into {toName} ({fromLevel} to {toLevel})"
+msgstr ""
+"You bloomed ({fromZone}) {fromName} into {toName} ({fromLevel} to {toLevel})"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_STAGE_ARCHIVE"
@@ -1690,7 +1750,8 @@ msgstr "You sent a card to the bottom of your deck from holopower"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ATTACHED_BOTTOMDECK"
-msgstr "You put {cardName} on the bottom of your deck from ({fromZone}) {fromName}"
+msgstr ""
+"You put {cardName} on the bottom of your deck from ({fromZone}) {fromName}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_TOPCHEERDECK"
@@ -1706,7 +1767,8 @@ msgstr "You put a card on top of the cheer deck from your {fromFuda}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ATTACHED_TOPCHEERDECK"
-msgstr "You put {cardName} on top of your cheer deck from ({fromZone}) {fromName}"
+msgstr ""
+"You put {cardName} on top of your cheer deck from ({fromZone}) {fromName}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
@@ -1722,7 +1784,9 @@ msgstr "You sent a card to the bottom of the cheer deck from your {fromFuda}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ATTACHED_BOTTOMCHEERDECK"
-msgstr "You sent {cardName} to the bottom of your cheer deck from ({fromZone}) {fromName}"
+msgstr ""
+"You sent {cardName} to the bottom of your cheer deck from ({fromZone}) "
+"{fromName}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_FUDA_ARCHIVE"
@@ -1750,7 +1814,9 @@ msgstr "You put {cardName} in Holopower from ({fromZone}) {fromName}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ARTS_DAMAGE"
-msgstr "You had ({fromZone}) {fromName} perform \"{artName}\", dealing {damage} damage to ({toZone}) {toName}"
+msgstr ""
+"You had ({fromZone}) {fromName} perform \"{artName}\", dealing {damage} "
+"damage to ({toZone}) {toName}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_DECK_LOOKATX"
@@ -1766,7 +1832,8 @@ msgstr "You moved ({fromZone}) {fromName} to the back"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_CARD_BATONPASS"
-msgstr "You baton passed, switching ({fromZone}) {fromName} with ({toZone}) {toName}"
+msgstr ""
+"You baton passed, switching ({fromZone}) {fromName} with ({toZone}) {toName}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_CARD_SWITCH"
@@ -1806,7 +1873,8 @@ msgstr "You attached {attachName} to ({toZone}) {toName} from archive"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ATTACHED_CHEER_ATTACH"
-msgstr "You attached {attachName} to ({toZone}) {toName} from ({fromZone}) {fromName}"
+msgstr ""
+"You attached {attachName} to ({toZone}) {toName} from ({fromZone}) {fromName}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ENDTURN"
@@ -1826,17 +1894,20 @@ msgstr "Do you really forfeit?"
 
 #: Scripts/Multiplayer.gd
 msgid "WINCONSENT_DECKOUT"
-msgstr "Your turn has started with an empty deck.\n"
+msgstr ""
+"Your turn has started with an empty deck.\n"
 "Do you lose to deckout?"
 
 #: Scripts/Multiplayer.gd
 msgid "WINCONSENT_LIFE"
-msgstr "You have no cards in life.\n"
+msgstr ""
+"You have no cards in life.\n"
 "Do you lose to running out of life?"
 
 #: Scripts/Multiplayer.gd
 msgid "WINCONSENT_EMPTYSTAGE"
-msgstr "You have no holomems on stage.\n"
+msgstr ""
+"You have no holomems on stage.\n"
 "Do you lose to an empty stage?"
 
 #: Scripts/Multiplayer.gd
@@ -1905,7 +1976,8 @@ msgstr "buzz!"
 
 #: Scripts/card.gd
 msgid "INFO_OSHI"
-msgstr "{colorText} Oshi Holomem\n"
+msgstr ""
+"{colorText} Oshi Holomem\n"
 "Life: {life}{tagsText}"
 
 #: Scripts/card.gd
@@ -1938,7 +2010,8 @@ msgstr "Buzz "
 
 #: Scripts/card.gd
 msgid "INFO_HOLOMEM_1"
-msgstr "{colorText} {levelText} {buzzText}Holomem\n"
+msgstr ""
+"{colorText} {levelText} {buzzText}Holomem\n"
 "HP: {hpText}\n"
 "Tags: {tagsText}"
 
@@ -1957,4 +2030,3 @@ msgstr "{supportText} ({typeText}){tagsText}"
 #: Scripts/card.gd
 msgid "INFO_LIMITED"
 msgstr "LIMITED: Only one can be used per turn."
-

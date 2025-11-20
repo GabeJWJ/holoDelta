@@ -932,6 +932,7 @@ func _on_paste_lobby_code_button_pressed() -> void:
 
 	# Lobby code is 10 characters long.
 	lobby_list_code.text = filtered_text.substr(0, 10)
+	update_join_from_code_button(lobby_list_code.text)
 
 func update_join_from_code_button(current_string:String) -> void:
 	lobby_list_code_button.disabled = (current_string == "")

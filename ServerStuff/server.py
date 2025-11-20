@@ -42,8 +42,8 @@ def index():
 BOUNTY -
 This is the place where the zip gets fed through.
 I have it sent as a downloadstream because I want to avoid downloading the full file and keeping it in memory when passing it
-This exact thing MIGHT be fine to keep as a local file that gets returned, but later things I want to do NEED to use Blob Storage, so...
-Said later applications probably also need it to be asynchronous, but let me know if I'm misinterpreting something.
+This exact thing MIGHT be fine to keep as a local file that gets returned, but the cosmetics NEED to use Blob Storage, so...
+Cosmetics sharing probably also need it to be asynchronous, but let me know if I'm misinterpreting something.
 
 Check utils/azure_blob_storage.py and the Setup region of Multiplayer.gd for context
 

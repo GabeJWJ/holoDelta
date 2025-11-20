@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-09-22 00:12\n"
+"PO-Revision-Date: 2025-11-20 01:00\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Quand cet Holomem est Inconscient, perdez 2 VIE"
@@ -4829,13 +4829,13 @@ msgid "hBP03-072_ART_0_NAME"
 msgstr "La fièvre nocturne de Watame !"
 
 msgid "hBP03-072_ART_0_EFFECT"
-msgstr "(Position Centrale uniquement) Si cet holomème a 6 Cheers ou plus attachés, l'Art de vos holomems Central et Collab gagne +100 dégâts jusqu'à la fin de ce tour."
+msgstr "(Position Centrale uniquement) Si cet Holomeme a 6 Cheers ou plus attachés, l'Art de vos holomems Central et Collab gagne +100 dégâts jusqu'à la fin de ce tour."
 
 msgid "hBP03-072_GIFT_NAME"
 msgstr "Nous n'avons pas encore terminé !"
 
 msgid "hBP03-072_GIFT_EFFECT"
-msgstr "Lorsque cet holomem mis inconscient, vous pouvez déplacer 1 Cheer de cet holomem vers l'un de vos holomems nommé Tsunomaki Watame."
+msgstr "Lorsque cet holomem est mis inconscient, vous pouvez déplacer 1 Cheer de cet holomem vers l'un de vos holomems nommé Tsunomaki Watame."
 
 msgid "hBP03-073_NAME"
 msgstr "Ayunda Risu"
@@ -7514,16 +7514,16 @@ msgid "hBP05-060_NAME"
 msgstr "Nerissa Ravencroft"
 
 msgid "hBP05-060_ART_0_NAME"
-msgstr "Claire de Lune"
-
-msgid "hBP05-060_ART_0_EFFECT"
-msgstr "Révélez depuis votre Deck 1 Staff de Nerissa ou 1 Jailbird, mettez la dans votre main. Puis mélangez votre Deck."
-
-msgid "hBP05-060_BLOOM_NAME"
 msgstr "Un banquet Glamour"
 
-msgid "hBP05-060_BLOOM_EFFECT"
+msgid "hBP05-060_ART_0_EFFECT"
 msgstr "Archivez une carte de votre main pour l'effet suivant : infligez 20 dégâts spéciaux à l'Holomem Central ou Collab de votre adversaire."
+
+msgid "hBP05-060_BLOOM_NAME"
+msgstr "Claire de Lune"
+
+msgid "hBP05-060_BLOOM_EFFECT"
+msgstr "Révélez depuis votre Deck 1 Staff de Nerissa ou 1 Jailbird, mettez la dans votre main. Puis mélangez votre Deck."
 
 msgid "hBP05-080_NAME"
 msgstr "Célébration de SorAZ"
@@ -8826,10 +8826,11 @@ msgstr "L'Holomem avec cette Mascotte attachée gagne +10 PV.\n\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP05-077_NAME"
-msgstr ""
+msgstr "Cirque Bakatare"
 
 msgid "hBP05-077_EFFECT"
-msgstr ""
+msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n"
+"Regardez les quatre premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles qui sont des Holomems nommés ⟨Omaru Polka⟩, ⟨Tsunomaki Watame⟩, ⟨Shirakami Fubuki⟩ ou ⟨Shiranui Flare⟩ et mettez-les dans votre main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hY01-008_NAME"
 msgstr ""

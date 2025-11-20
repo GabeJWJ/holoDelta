@@ -145,6 +145,10 @@ msgid "LOBBY_LOBBYCODE"
 msgstr ""
 
 #: Scenes/board.tscn
+msgid "LOBBY_LOBBYCODE_PASTE"
+msgstr ""
+
+#: Scenes/board.tscn
 msgid "LOBBY_SEARCHING"
 msgstr ""
 
@@ -200,6 +204,7 @@ msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr ""
 
 #: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_UNRELEASED_EN"
 msgstr ""
@@ -331,6 +336,10 @@ msgid "LOBBY_CODE"
 msgstr ""
 
 #: Scenes/board.tscn
+msgid "LOBBY_LOBBYCODE_COPY"
+msgstr ""
+
+#: Scenes/board.tscn
 msgid "LOBBY_SELECT_OPPONENT"
 msgstr ""
 
@@ -383,6 +392,30 @@ msgstr ""
 
 #: Scenes/board.tscn
 msgid "TRYAGAIN"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU_CLIENT_UPTODATE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "DOWNLOAD_CLIENT"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU_CARD_UPTODATE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "DOWNLOAD_CARD"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "BACK"
 msgstr ""
 
 #: Scenes/deck_list.tscn
@@ -798,6 +831,14 @@ msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "CARD_HOLOMEM_EXTRABATONPASS"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REMOVEBATONPASS"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "CARD_HOLOMEM_UNBLOOM"
 msgstr ""
 
@@ -939,6 +980,14 @@ msgid "CHEERDECK_REVEAL"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "CHEERDECK_ARCHIVE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CHEERDECK_ARCHIVEX"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "CHEERDECK_LOOKX"
 msgstr ""
 
@@ -1071,6 +1120,22 @@ msgid "PROMPT_REMOVEEXTRAHP"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "PROMPT_EXTRABATONPASS"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "PROMPT_REMOVEBATONPASS"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "PROMPT_REQUESTDAMAGE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "PROMPT_REQUESTDAMAGEBACK"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "PROMPT_OSHICOST"
 msgstr ""
 
@@ -1084,6 +1149,10 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "PROMPT_LOOKATX"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "PROMPT_CHEERDECK_ARCHIVE"
 msgstr ""
 
 #: Scripts/side.gd
@@ -1102,6 +1171,14 @@ msgstr ""
 msgid "TURN_FIRST"
 msgstr ""
 
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REQUESTDAMAGE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REQUESTDAMAGEBACK"
+msgstr ""
+
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_CARDS"
 msgstr ""
@@ -1112,6 +1189,14 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "DECK_AUTOLOAD_CONFIRM_INFO"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "UPDATE_MENU_CLIENT_UPDATEFOUND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "UPDATE_MENU_CARD_UPDATEFOUND"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
@@ -1957,4 +2042,3 @@ msgstr ""
 #: Scripts/card.gd
 msgid "INFO_LIMITED"
 msgstr ""
-

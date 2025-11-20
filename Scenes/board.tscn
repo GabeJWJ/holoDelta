@@ -747,7 +747,7 @@ placeholder_text = "LOBBY_LOBBYCODE"
 [node name="PasteLobbyCodeButton" type="Button" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "PASTE LOBBY CODE"
+text = "LOBBY_LOBBYCODE_PASTE"
 
 [node name="JoinByCode" type="Button" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox"]
 unique_name_in_owner = true
@@ -1635,7 +1635,7 @@ layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
 disabled = true
-text = "COPY LOBBY CODE"
+text = "LOBBY_LOBBYCODE_COPY"
 
 [node name="SelectOpponentLabel" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
 layout_mode = 2
