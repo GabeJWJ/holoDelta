@@ -744,6 +744,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "LOBBY_LOBBYCODE"
 
+[node name="PasteLobbyCodeButton" type="Button" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "PASTE LOBBY CODE"
+
 [node name="JoinByCode" type="Button" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -1606,7 +1611,10 @@ theme_override_font_sizes/font_size = 30
 text = "LOBBY_CODE"
 horizontal_alignment = 1
 
-[node name="LobbyCode" type="RichTextLabel" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
+[node name="LobbyCodeHBoxContainer" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
+layout_mode = 2
+
+[node name="LobbyCode" type="RichTextLabel" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/LobbyCodeHBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
@@ -1620,6 +1628,14 @@ scroll_active = false
 context_menu_enabled = true
 selection_enabled = true
 deselect_on_focus_loss_enabled = false
+
+[node name="CopyLobbyCodeButton" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/LobbyCodeHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 25
+disabled = true
+text = "COPY LOBBY CODE"
 
 [node name="SelectOpponentLabel" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
 layout_mode = 2
@@ -2098,6 +2114,7 @@ one_shot = true
 [connection signal="value_changed" from="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/BGMSlider" to="." method="_on_bgm_slider_value_changed"]
 [connection signal="text_changed" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox/LobbyListCode" to="." method="update_join_from_code_button"]
 [connection signal="text_submitted" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox/LobbyListCode" to="." method="join_lobby"]
+[connection signal="pressed" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox/PasteLobbyCodeButton" to="." method="_on_paste_lobby_code_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox/JoinByCode" to="." method="join_lobby_from_code"]
 [connection signal="pressed" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox/Refresh" to="." method="find_lobbies"]
 [connection signal="pressed" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox/LobbyBack" to="." method="close_lobby_list"]
@@ -2133,6 +2150,7 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions/LobbyHostReady" to="." method="ready_lobby"]
 [connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions/JoinDeckSelect" to="." method="_on_deck_select_pressed"]
 [connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions/LobbyJoinReady" to="." method="ready_lobby"]
+[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/LobbyCodeHBoxContainer/CopyLobbyCodeButton" to="." method="_on_copy_lobby_code_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox/StartGame" to="." method="start_game"]
 [connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox/LobbyExit" to="." method="exit_lobby"]
 [connection signal="pressed" from="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox/HBoxContainer/OK" to="." method="close_deckerror"]

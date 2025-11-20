@@ -23,6 +23,10 @@ var spectatedSides = {}
 var inGame = false
 var rps = false
 
+# Lobby code only supports a-z, 0-9.
+var valid_lobby_code_regex_pattern := "[^a-z0-9]"
+var lobby_code_regex := RegEx.new()
+
 #Lobby stuff
 @onready var lobby_banlist = %LobbyBanlist
 @onready var lobby_private = %LobbyPrivateButton
@@ -49,6 +53,7 @@ var rps = false
 @onready var lobby_chosen_deck_select = %JoinDeckSelect
 @onready var lobby_waiting = %WaitingPlayersVBox
 @onready var lobby_code = %LobbyCode
+@onready var copy_lobby_code_button = %CopyLobbyCodeButton
 @onready var lobby_game_start = %StartGame
 @onready var lobby_deckerror = %DeckErrors
 @onready var lobby_deckerrorlist = %DeckErrorList
@@ -75,6 +80,8 @@ func _ready():
 	
 	randomize()
 	
+	lobby_code_regex.compile(valid_lobby_code_regex_pattern)
+
 	#Intialize Decks folder and starter decks
 	if !DirAccess.dir_exists_absolute("user://Decks"):
 		DirAccess.make_dir_absolute("user://Decks")
@@ -919,6 +926,13 @@ func join_lobby_from_code() -> void:
 	if lobby_list_code.text != "":
 		join_lobby(lobby_list_code.text)
 
+func _on_paste_lobby_code_button_pressed() -> void:
+	var clipboard_contents: String = DisplayServer.clipboard_get()
+	var filtered_text: String = lobby_code_regex.sub(clipboard_contents, "", true)
+
+	# Lobby code is 10 characters long.
+	lobby_list_code.text = filtered_text.substr(0, 10)
+
 func update_join_from_code_button(current_string:String) -> void:
 	lobby_list_code_button.disabled = (current_string == "")
 
@@ -1009,9 +1023,13 @@ func update_lobby(lobby_id:String, waiting:Dictionary, chosen, you_are_chosen:bo
 		lobby_chosen_ready_text.visible = chosen_ready
 		
 		lobby_code.text = "[center]" + current_lobby + "[/center]"
+		copy_lobby_code_button.disabled = false
 		
 		if lobby_you_are_host and host_ready and chosen_ready:
 			lobby_game_start.visible = true
+
+func _on_copy_lobby_code_button_pressed() -> void:
+	DisplayServer.clipboard_set(current_lobby)
 
 func choose_opponent(player_id):
 	send_command("Lobby","Choose Opponent",{"chosen":player_id})
@@ -1079,6 +1097,7 @@ func clear_lobby_menu() -> void:
 	lobby_host_ready_text.visible = false
 	lobby_host_options.visible = false
 	current_lobby = null
+	copy_lobby_code_button.disabled = true
 	lobby_you_are_host = false
 	%LobbyButtons.visible = false
 

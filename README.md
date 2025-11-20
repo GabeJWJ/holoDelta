@@ -1,56 +1,25 @@
 # holoDelta
-An unofficial Hololive TCG simulator, worked on in my spare time
+An unofficial Hololive TCG simulator, worked on in my spare time.
 
-# I AM COMMITTED TO ACCEPTING AND ENCOURAGING COMMUNITY CONTRIBUTIONS
+## Quick start
 
-The code is a mess. I am sure it is needlessly confusing and wildly inconsistent in style and format.
+Try the game now at https://holodelta.azurewebsites.net/game/index.html!
 
-If you are interested in contributing but are confused by the code, please contact me. I can try to explain over text, or we could get on a discord call.
+To setup and run the web server locally:
+```bash
+git clone https://github.com/GabeJWJ/holoDelta.git
+cd holoDelta/ServerStuff
+python -m pip install -r requirements.txt
+uvicorn server:app --reload
+```
 
-Uses Godot 4.3
+Notes for setting up:
+- For running your own version of the server, all you need is in the "ServerStuff" folder, with the exception of a "holodelta_web" folder containing a web export of the project. DO NOT EXPORT WITH DEBUG.
+- Change the "websocketURL" in server.gd to wherever you're running your local server.
+- You may need to set "WebSocket" in "board" to not use WSS.
 
-Notably, for running your own version of the server, all you need is in the "ServerStuff" folder, with the exception of a "holodelta_web" folder that would contain a web export of the sim. DO NOT EXPORT WITH DEBUG. Then the console command "uvicorn server:app --reload" will launch the server. You will need to change the "websocketURL" in server.gd to wherever your local server is being ran and may need to set "WebSocket" in "board" to not use wss.
+## Contributing
 
-In terms of what to contribute, the only thing that is fully off limits is automation. That is something I want to do myself at some point. To that end, the standard is "not implementing anything that depends on the specific text of a card."
+See [CONTRIBUTING.md](CONTRIBUTING.md). **I am committed to accepting and encouraging community contributions!** The code is a mess. I am sure it is needlessly confusing and wildly inconsistent in style and format.
 
-There are some simpler things you can do that might be good entry-level tasks to just get used to Godot and holoDelta in particular.
-
-> Add the ability to delete decks - the main apprehension I've had to doing it is finding a good GUI implementation; it's mechanically quite easy
-> 
-> More shortcuts - most notably one to reveal the top card of your cheer deck and go into the attaching menu. Make sure to include rebinding support!
-> 
-> Add the ability to rematch after a game ends - once again, implementation is the issue here. Does it use the same decks? If not, how is that dealt with? Is it the same banlist? Depending on how in depth you wanna get, this could baloon into a larger task.
-> 
-> Add the ability to reorder cards in hand. You literally just need to reorder the hand array and then call update_hand(). Implementation is once again the issue.
-> 
-> More scalable GUIs - when I first made the sim, I wasn't aware of HBox and VBox containers, so many GUI elements are manually placed. This causes problems with different languages changing the size of text. Busy work, but it's gotta be done.
-> 
-> Speaking of other languages messing up the GUI, I've got a bit of code in "Multiplayer.gd" and "deck_creation.gd" called "fix_font_size()" (that relies on "fix_font_tool.gd") that tries to change the font size of various text elements to fit the size allotted. It is a mess that barely works and I don't understand it. Everytime I try to make it more understandable, it gets far worse. Please help.
-> 
-> If you know things about servers and Azure App Service in particular - please tell me what you know to make it go smoother
-> 
-> Generally any tiny bug you notice is probably not a huge fix
-
-What follows is a list of other things I would like to implement. If you are a collaborator who has become familiar with the system, feel free to look here for inspiration. You can also do whatever you feel like is important (except automation). For non-contributors, you can treat it as a list of things I am aware of and would also like to get to. Something appearing here is not a promise that I will do it; there's too many I literally can't.
-
-> Playfab integration to have accounts consistent across devices. Would also allow some kind of moderation system.
-> 
-> The ability to modify the delta card info through the website so collaborators can do that instead of just me. Would probably require Playfab integration to ensure only trusted people can make changes.
-> 
-> Better solo play. Shouldn't be awful to make a custom game where you have no opponent and can just test combo lines or one where you switch between playing both sides when you hit "end turn"
-> 
-> Replays. Moving to being server authoritative already made the game action-based, we would just need to save these actions and play them back in some custom game.
-> 
-> Import decks from Bushiroad decklog. I have no idea how, but I feel like it's not awful. Probably steal a couple pages from Qrimpuff's deck converter. The deckbuilder is getting crowded.
-> 
-> Better deck selection. A search function, filter based on what cards are in it, stuff like that
-> 
-> Better chat. Something like having each new message pop up briefly on screen? Text to speech? Just something to make it easier to use while still looking at the info panel.
-> 
-> Obviously getting cosmetics back in. The issue is the file would have to be stored somewhere and I'm not sure how best to do that. Maybe something like azure blob storage?
-> 
-> Custom card support. Moving on to cardData.json allows for the card info to be done pretty easily, the issue is once again that the images have to be stored somewhere. And this could easily blow up much larger than the cosmetics would.
-> 
-> As a sub-task of that one: the ability to make custom cards through delta.
-> 
-> Multi-select cards in lists. Mainly for that Chloe effect that puts all holomems in archive to deck. Lots of systems would need to be built up.
+If you are interested in contributing but are confused by the code, please message me on Discord. I can be found on the [Hololive OCG Fan Server](https://discord.com/invite/dDCpFMMENM).
