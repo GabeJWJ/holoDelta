@@ -6,8 +6,6 @@ In terms of what to contribute, the only thing that is fully off limits is autom
 ---
 
 There are some simpler things you can do that might be good entry-level tasks to just get used to Godot and holoDelta in particular:
-- [ ] **Add the ability to delete decks** - the main apprehension I've had to doing it is finding a good GUI implementation; it's mechanically quite easy
-- [ ] **More shortcuts** - most notably one to reveal the top card of your cheer deck and go into the attaching menu. Make sure to include rebinding support!
 - [ ] **Add the ability to rematch after a game ends** - once again, implementation is the issue here. Does it use the same decks? If not, how is that dealt with? Is it the same banlist? Depending on how in depth you wanna get, this could baloon into a larger task.
 - [ ] **Add the ability to reorder cards in hand.** You literally just need to reorder the hand array and then call update_hand(). Implementation is once again the issue.
 - [ ] **More scalable GUIs** - when I first made the sim, I wasn't aware of HBox and VBox containers, so many GUI elements are manually placed. This causes problems with different languages changing the size of text. Busy work, but it's gotta be done.
