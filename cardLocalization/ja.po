@@ -8647,3 +8647,258 @@ msgstr "このカードは、自分の手札がこのカードを6枚以下で�
 msgid "hY01-008_NAME"
 msgstr "白エール"
 
+msgid "hSD10-001_NAME"
+msgstr "輪堂千速"
+
+msgid "hSD10-001_SKILL_NAME"
+msgstr "エンジン全開！レッツゴー！"
+
+msgid "hSD10-001_SKILL_EFFECT"
+msgstr "[ターンに1回]このターンに自分のホロメンがBloomしていたなら、このターンの間、自分のステージの#FLOW GLOWを持つホロメン1人のアーツ+30。"
+
+msgid "hSD10-001_SPSKILL_NAME"
+msgstr "向こう側の景色を見に行かない？"
+
+msgid "hSD10-001_SPSKILL_EFFECT"
+msgstr "[ゲームに1回]自分のエールデッキの上から1枚を自分のホロメンに送る。その後、自分の#FLOW GLOWを持つホロメン1人を選ぶ。このターンの間、選んだホロメンのエール1枚につき、選んだホロメンのアーツ+20"
+
+msgid "hSD10-002_NAME"
+msgstr "輪堂千速"
+
+msgid "hSD10-002_ART_0_NAME"
+msgstr "はじまりんど～～～！"
+
+msgid "hSD10-003_NAME"
+msgstr "輪堂千速"
+
+msgid "hSD10-003_ART_0_NAME"
+msgstr "エンジン全開 演じない自然体"
+
+msgid "hSD10-003_ART_1_NAME"
+msgstr "全身全霊 越えてく限界"
+
+msgid "hSD10-004_NAME"
+msgstr "輪堂千速"
+
+msgid "hSD10-004_ART_0_NAME"
+msgstr "パワフルな運転手だよ！"
+
+msgid "hSD10-004_ART_0_EFFECT"
+msgstr "自分のステージに#FLOW GLOWを持つホロメンが3人以上いるなら、自分のエールデッキの上から1枚を自分のバックホロメンに送れる。"
+
+msgid "hSD10-004_GIFT_NAME"
+msgstr "300馬力だよ！"
+
+msgid "hSD10-004_GIFT_EFFECT"
+msgstr "自分の推しホロメンが〈輪堂千速〉で、相手のステージに1stホロメンがいるなら、このターンにBloomしたこのホロメンは、自分の手札の2ndホロメンを使ってもう1回Bloomできる。"
+
+msgid "hSD10-005_NAME"
+msgstr "輪堂千速"
+
+msgid "hSD10-005_ART_0_NAME"
+msgstr "行きます！！！！"
+
+msgid "hSD10-005_ART_0_EFFECT"
+msgstr "このターンに自分のホロメンがBloomしていたなら、このターンの間、自分のステージの〈輪堂千速〉1人のアーツ+20。"
+
+msgid "hSD10-005_COLLAB_NAME"
+msgstr "FLOW GLOWのDJ兼運転手担当"
+
+msgid "hSD10-005_COLLAB_EFFECT"
+msgstr "自分のアーカイブの#FLOW GLOWを持つホロメン1～3枚を好きな順でデッキの下に戻せる。ホロメン3枚をデッキに戻したなら、自分のエールデッキの上から1枚を自分のホロメンに送れる。"
+
+msgid "hSD10-006_NAME"
+msgstr "輪堂千速"
+
+msgid "hSD10-006_ART_0_NAME"
+msgstr "鼓動の操縦者"
+
+msgid "hSD10-006_ART_0_EFFECT"
+msgstr "このターンに自分のホロメンがBloomしていたなら、このアーツ+50。"
+
+msgid "hSD10-006_ART_1_NAME"
+msgstr "アクセラビートブレイズ"
+
+msgid "hSD10-006_ART_1_EFFECT"
+msgstr "このアーツで相手のセンターホロメンをダウンさせた時、与えたダメージが残りHPをオーバーしていたなら、オーバーしたダメージ30につき、自分のエールデッキの上から1枚を自分のバックホロメン1人に送る。"
+
+msgid "hSD10-007_NAME"
+msgstr "綺々羅々ヴィヴィ"
+
+msgid "hSD10-007_ART_0_NAME"
+msgstr "ん〜〜〜〜〜ッヴィヴィ〜！"
+
+msgid "hSD10-008_NAME"
+msgstr "綺々羅々ヴィヴィ"
+
+msgid "hSD10-008_ART_0_NAME"
+msgstr "そこに愛はあるんや！"
+
+msgid "hSD10-008_COLLAB_NAME"
+msgstr "FLOW GLOWのメイク担当"
+
+msgid "hSD10-008_COLLAB_EFFECT"
+msgstr "相手の手札すべてを見る。その中にサポートカードがあるなら、自分のデッキを1枚引く。"
+
+msgid "hSD10-009_NAME"
+msgstr "綺々羅々ヴィヴィ"
+
+msgid "hSD10-009_ART_0_NAME"
+msgstr "ヴィジランスヴィーナス"
+
+msgid "hSD10-009_ART_0_EFFECT"
+msgstr "相手の手札1枚につき、このアーツ+10"
+
+msgid "hSD10-009_COLLAB_NAME"
+msgstr "美の求道者"
+
+msgid "hSD10-009_COLLAB_EFFECT"
+msgstr "自分のデッキの上から、相手の手札と同じ枚数を見る。その中から、カード1枚を手札に加える。そして残ったカードをデッキに戻してシャッフルする。"
+
+msgid "hSD10-010_NAME"
+msgstr "響咲リオナ"
+
+msgid "hSD10-010_ART_0_NAME"
+msgstr "RIONA IN DA HOUSE~!"
+
+msgid "hSD10-010_ART_0_EFFECT"
+msgstr "自分のステージに#FLOW GLOWを持つ2nd以上のホロメンがいるなら、このアーツ+30。"
+
+msgid "hSD10-010_COLLAB_NAME"
+msgstr "私の元においで～っ"
+
+msgid "hSD10-010_COLLAB_EFFECT"
+msgstr "自分の手札1枚をアーカイブできる：自分のデッキから、[コラボエフェクトと#FLOW GLOWを持つホロメン]1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hSD10-011_NAME"
+msgstr "WHAT'S UP!!!!! KEEEEEP GROWING!!!!!"
+
+msgid "hSD10-011_EFFECT"
+msgstr "このカードは、自分のステージのホロメン全員が#FLOW GLOWを持つホロメンでなければ使えない。\n\n自分のアーカイブのエール3枚を選び、自分のセンターホロメンとコラボホロメンに割り振って送る。ただし、ホロメン1人に送る枚数は2枚まで。"
+
+msgid "hSD10-012_NAME"
+msgstr "FLOW GLOW"
+
+msgid "hSD10-012_EFFECT"
+msgstr "このカードは、自分の手札がこのカードを含まずに6枚以下でなければ使えない。\n\n自分のデッキの上から4枚を見る。その中から、#FLOW GLOWを持つホロメンを好きな枚数公開し、公開したホロメンを手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hSD10-013_NAME"
+msgstr "ふぐ太郎"
+
+msgid "hSD10-013_EFFECT"
+msgstr "このツールが付いている#FLOW GLOWを持つホロメンのアーツ+10。\n\n◆#FLOW GLOWを持つホロメンに付いていたら能力追加\n自分のエンドステップが開始する時、このターンにこのツールが付いているホロメンがアーツを使っていたなら使える：自分のデッキから、#FLOW GLOWを持つ[DebutホロメンかSpotホロメン]1枚を公開し、ステージに出す。そしてデッキをシャッフルする。その後、このツールをデッキの下に戻す。\n\nツールは、自分のホロメン1人につき1枚だけ付けられる"
+
+msgid "hSD11-001_NAME"
+msgstr "虎金妃笑虎"
+
+msgid "hSD11-001_SKILL_NAME"
+msgstr "虎視眈々"
+
+msgid "hSD11-001_SKILL_EFFECT"
+msgstr "[ターンに1回]自分のアーカイブのエール1～2枚を自分のエールが付いていない#FLOW GLOWを持つホロメン1人に送る。"
+
+msgid "hSD11-001_SPSKILL_NAME"
+msgstr "ニコたんの名を呼ぶがいいさ！"
+
+msgid "hSD11-001_SPSKILL_EFFECT"
+msgstr "[ゲームに1回]自分の#FLOW GLOWを持つホロメンの能力でエールをアーカイブした時に使える：相手のセンターホロメンかコラボホロメンどちらかに、アーカイブしたエール1枚につき、特殊ダメージ30を与える。"
+
+msgid "hSD11-002_NAME"
+msgstr "虎金妃笑虎"
+
+msgid "hSD11-002_ART_0_NAME"
+msgstr "ニコたんが～来たァー！"
+
+msgid "hSD11-003_NAME"
+msgstr "虎金妃笑虎"
+
+msgid "hSD11-003_ART_0_NAME"
+msgstr "にこと出会えたの何かのキセキ"
+
+msgid "hSD11-003_ART_1_NAME"
+msgstr "期待せよ 牙で噛まれちゃうシゲキ"
+
+msgid "hSD11-004_NAME"
+msgstr "虎金妃笑虎"
+
+msgid "hSD11-004_ART_0_NAME"
+msgstr "自分の人生すらも捧げられる"
+
+msgid "hSD11-004_ART_0_EFFECT"
+msgstr "自分のエールデッキの上から1枚を自分の〈虎金妃笑虎〉に送れる。"
+
+msgid "hSD11-004_BLOOM_NAME"
+msgstr "人を笑顔にするためならば"
+
+msgid "hSD11-004_BLOOM_EFFECT"
+msgstr "自分のステージのエール2枚をアーカイブできる：自分のアーカイブの〈虎金妃笑虎〉1枚を手札に戻す。"
+
+msgid "hSD11-005_NAME"
+msgstr "虎金妃笑虎"
+
+msgid "hSD11-005_ART_0_NAME"
+msgstr "百折不撓"
+
+msgid "hSD11-005_ART_0_EFFECT"
+msgstr "自分のステージにエールが5枚以上あるなら、このアーツ+20。"
+
+msgid "hSD11-005_COLLAB_NAME"
+msgstr "FLOW GLOWのお笑い担当"
+
+msgid "hSD11-005_COLLAB_EFFECT"
+msgstr "自分のアーカイブのエール1枚を自分の#FLOW GLOWを持つバックホロメンに送れる。"
+
+msgid "hSD11-006_NAME"
+msgstr "虎金妃笑虎"
+
+msgid "hSD11-006_ART_0_NAME"
+msgstr "虎嘯風生"
+
+msgid "hSD11-006_ART_0_EFFECT"
+msgstr "このホロメンのエールを好きな枚数アーカイブできる：アーカイブしたエール1枚につき、このアーツ+40。"
+
+msgid "hSD11-006_GIFT_NAME"
+msgstr "戯笑の使者"
+
+msgid "hSD11-006_GIFT_EFFECT"
+msgstr "自分のパフォーマンスステップが開始する時、自分の手札の#FLOW GLOWを持つホロメン1枚をアーカイブできる：自分のアーカイブの黄エール1枚を自分の〈虎金妃笑虎〉に送る。"
+
+msgid "hSD11-007_NAME"
+msgstr "水宮枢"
+
+msgid "hSD11-007_ART_0_NAME"
+msgstr "しゅぴしゅわー"
+
+msgid "hSD11-007_ART_0_EFFECT"
+msgstr "相手のセンターポジションのホロメン1人は、次の相手のターンが終了するまでバトンタッチに必要な◇+1。"
+
+msgid "hSD11-008_NAME"
+msgstr "水宮枢"
+
+msgid "hSD11-008_ART_0_NAME"
+msgstr "愛は時間ですよ"
+
+msgid "hSD11-008_ART_0_EFFECT"
+msgstr "このアーツの対象が相手のバトンタッチに必要な◇が2つ以上のホロメンなら、自分のエールデッキの上から1枚を自分のバックホロメンに送る。"
+
+msgid "hSD11-008_COLLAB_NAME"
+msgstr "FLOW GLOWのえらい宣伝担当"
+
+msgid "hSD11-008_COLLAB_EFFECT"
+msgstr "相手のセンターポジションのホロメン1人は、次の相手のターンが終了するまでバトンタッチに必要な◇+1。"
+
+msgid "hSD11-009_NAME"
+msgstr "水宮枢"
+
+msgid "hSD11-009_ART_0_NAME"
+msgstr "スゥイートオブセッション"
+
+msgid "hSD11-009_ART_0_EFFECT"
+msgstr "このアーツの対象のホロメンに、そのホロメンのバトンタッチに必要な◇1つにつき、特殊ダメージ10を与える"
+
+msgid "hSD11-009_COLLAB_NAME"
+msgstr "感情の伝令者"
+
+msgid "hSD11-009_COLLAB_EFFECT"
+msgstr "相手のセンターポジションのホロメン1人は、次の相手のターンが終了するまでバトンタッチに必要な◇+3"
+
