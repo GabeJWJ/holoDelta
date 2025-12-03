@@ -116,6 +116,7 @@ func get_language() -> String :
 		if possible[0] == settings.Language:
 			return possible[1]
 	
+	settings.Language = languages[0][0]
 	return "???"
 
 func _connect_local(callback = null) -> void:
