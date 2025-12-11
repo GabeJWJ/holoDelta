@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var popup = $PopupMenu
 @onready var prompt = $CanvasLayer/Prompt
+@onready var text_prompt = $CanvasLayer/PromptText
 @onready var lookAt = $CanvasLayer/ScrollContainer
 @onready var lookAtList = $CanvasLayer/ScrollContainer/LookAt
 @onready var cancel = $CanvasLayer/Cancel
@@ -67,6 +68,7 @@ var fuda_opponent_looking_at = null
 var first_turn = true
 var player1 = false
 @export var step = 1
+var turn = 0
 var collabed = false
 var used_limited = false
 var used_baton_pass = false
@@ -77,6 +79,13 @@ var can_undo_shuffle_hand = null
 @export var is_your_side = false
 @export var player_id : String
 @export var player_name : String
+@export var game_id : String
+@export var download_url : String
+@export var passcode : String
+var found_cosmetics = []
+@export var is_goldfishing := false
+@export var stripped_bare := false
+var zone_to_deal_damage_to
 
 @export var is_front = false
 @export var side_info = {}
@@ -103,6 +112,9 @@ func _ready():
 	tr("HOLOPOWER")
 	# for POT generation
 	
+	if OS.has_feature("web"):
+		%HTTPManager.accept_gzip = false
+	
 	if is_your_side or is_front:
 		holopower.count.position += Vector3(0.3,0,4.6)
 		holopower.looking.position += Vector3(3,0,0)
@@ -121,156 +133,182 @@ func _ready():
 		holopower.count.position += Vector3(-3,0,0)
 		holopower.looking.position += Vector3(0,0,4.6)
 	
-	if is_your_side:
-		var deckInfo = get_parent().deckInfo
-		oshi = deckInfo.oshi
-		deckList = deckInfo.deck
-		cheerDeckList = deckInfo.cheerDeck
-		if deckInfo.has("sleeve"):
-			mainSleeve = deckInfo.sleeve
-		if deckInfo.has("cheerSleeve"):
-			cheerSleeve = deckInfo.cheerSleeve
-		if deckInfo.has("oshiSleeve"):
-			oshiSleeve = deckInfo.oshiSleeve
-		if get_parent().playmat:
-			playmatBuffer = get_parent().playmat.save_webp_to_buffer(true)
-			$gradient.texture = ImageTexture.create_from_image(get_parent().playmat)
-		if get_parent().dice:
-			diceBuffer = get_parent().dice.save_webp_to_buffer(true)
-			$SubViewportContainer/SubViewport/Node3D/Die.new_texture(get_parent().dice)
-	else:
-		if playmatBuffer and !playmatBuffer.is_empty():
-			var image = Image.new()
-			image.load_webp_from_buffer(playmatBuffer)
-			$gradient.texture = ImageTexture.create_from_image(image)
-		if diceBuffer and !diceBuffer.is_empty():
-			var image = Image.new()
-			image.load_webp_from_buffer(diceBuffer)
-			$SubViewportContainer/SubViewport/Node3D/Die.new_texture(image)
-	
-	if oshiSleeve.is_empty():
+	if !stripped_bare:
+		if is_your_side:
+			var deckInfo = get_parent().deckInfo
+			oshi = deckInfo.oshi
+			deckList = deckInfo.deck
+			cheerDeckList = deckInfo.cheerDeck
+			
+			if deckInfo.has("sleeve"):
+				mainSleeve = deckInfo.sleeve
+				found_cosmetics.append("sleeve")
+			if deckInfo.has("cheerSleeve"):
+				cheerSleeve = deckInfo.cheerSleeve
+				found_cosmetics.append("cheerSleeve")
+			if get_parent().playmat:
+				playmatBuffer = get_parent().playmat.save_webp_to_buffer(true,0.6)
+				$gradient.texture = ImageTexture.create_from_image(get_parent().playmat)
+				found_cosmetics.append("playmat")
+			if get_parent().dice:
+				diceBuffer = get_parent().dice.save_webp_to_buffer(true,0.6)
+				$SubViewportContainer/SubViewport/Node3D/Die.new_texture(get_parent().dice)
+				found_cosmetics.append("dice")
+		else:
+			if playmatBuffer and !playmatBuffer.is_empty():
+				var image = Image.new()
+				image.load_webp_from_buffer(playmatBuffer)
+				$gradient.texture = ImageTexture.create_from_image(image)
+			if diceBuffer and !diceBuffer.is_empty():
+				var image = Image.new()
+				image.load_webp_from_buffer(diceBuffer)
+				$SubViewportContainer/SubViewport/Node3D/Die.new_texture(image)
+		
 		oshiBack = defaultCheer.get_image()
-	else:
-		var image = Image.new()
-		image.load_webp_from_buffer(oshiSleeve)
-		oshiBack = image
-	if is_your_side:
-		oshiCard = create_card(oshi[0],oshi[1],oshiBack)
-	elif ("oshi" in side_info and side_info["oshi"]):
-		oshiCard = get_real_card(side_info["oshi"], oshiBack)
-	else:
-		oshiCard = create_fake_card(oshiBack)
-		oshiCard.flipDown()
-	oshiCard.position = Vector2(430,-223)
-	
-	if mainSleeve.is_empty():
-		mainBack = defaultMain.get_image()
-	else:
-		var image = Image.new()
-		image.load_webp_from_buffer(mainSleeve)
-		mainBack = image
-	if is_your_side:
-		for info in deckList:
-			for i in range(info[1]):
-				var newCard1 = create_card(info[0],info[2],mainBack)
+		if ("oshi" in side_info and side_info["oshi"]):
+			oshiCard = get_real_card(side_info["oshi"], oshiBack)
+		else:
+			oshiCard = create_card(oshi[0],oshi[1],oshiBack)
+		oshiCard.position = Vector2(430,-223)
+		
+		if mainSleeve.is_empty():
+			mainBack = defaultMain.get_image()
+		else:
+			var image = Image.new()
+			image.load_webp_from_buffer(mainSleeve)
+			mainBack = image
+		if is_your_side:
+			for info in deckList:
+				for i in range(info[1]):
+					var newCard1 = create_card(info[0],info[2],mainBack)
+					deck.cardList.append(newCard1)
+					newCard1.visible = false
+					newCard1.z_index = 1
+		else:
+			var total_main = 50
+			if "deck" in side_info:
+				total_main = int(side_info["deck"])
+			for i in range(total_main):
+				var newCard1 = create_fake_card(mainBack)
 				deck.cardList.append(newCard1)
 				newCard1.visible = false
-				newCard1.z_index = 1
-	else:
-		var total_main = 50
-		if "deck" in side_info:
-			total_main = int(side_info["deck"])
-		for i in range(total_main):
-			var newCard1 = create_fake_card(mainBack)
-			deck.cardList.append(newCard1)
-			newCard1.visible = false
-	
-	if cheerSleeve.is_empty():
-		cheerBack = defaultCheer.get_image()
-	else:
-		var image = Image.new()
-		image.load_webp_from_buffer(cheerSleeve)
-		cheerBack = image
-	if is_your_side:
-		for info in cheerDeckList:
-			for i in range(info[1]):
-				var newCard1 = create_card(info[0],info[2],cheerBack)
+		
+		if cheerSleeve.is_empty():
+			cheerBack = defaultCheer.get_image()
+		else:
+			var image = Image.new()
+			image.load_webp_from_buffer(cheerSleeve)
+			cheerBack = image
+		if is_your_side:
+			for info in cheerDeckList:
+				for i in range(info[1]):
+					var newCard1 = create_card(info[0],info[2],cheerBack)
+					cheerDeck.cardList.append(newCard1)
+					newCard1.visible = false
+		else:
+			var total_cheer = 20
+			if "cheerDeck" in side_info:
+				total_cheer = int(side_info["cheerDeck"])
+			for i in range(total_cheer):
+				var newCard1 = create_fake_card(cheerBack)
 				cheerDeck.cardList.append(newCard1)
 				newCard1.visible = false
+		
+		if "holopower" in side_info:
+			for i in range(int(side_info["holopower"])):
+				var newCard1 = create_fake_card(cheerBack)
+				holopower.cardList.append(newCard1)
+				newCard1.visible = false
+		if "archive" in side_info:
+			for card_info in side_info["archive"]:
+				add_fake_to_fuda(archive,card_info)
+		if "life" in side_info:
+			for index in range(int(side_info["life"])):
+				var newLife = create_fake_card(cheerBack)
+				life.append(newLife)
+				if index > 0:
+					move_behind(newLife,life[index-1])
+				newLife.trulyHide()
+				newLife.position = Vector2(-960,-145-(53*(6-int(side_info["life"])+index)))
+				newLife.rest()
+				newLife.visible = true
+		if "hand" in side_info:
+			for index in range(int(side_info["hand"])):
+				add_fake_to_hand()
+		if "zones" in side_info:
+			$Timer.start()
+			for zone in side_info["zones"]:
+				if side_info["zones"][zone]:
+					preliminary_phase = false
+					var temp_new_card = get_real_card(side_info["zones"][zone], mainBack)
+					var temp_on_top_of = []
+					for oto in side_info["zones"][zone]["onTopOf"]:
+						temp_on_top_of.append(get_real_card(oto, mainBack))
+					temp_on_top_of.reverse()
+					for oto_index in range(temp_on_top_of.size()):
+						if oto_index + 1 == temp_on_top_of.size():
+							temp_new_card.playOnTopOf(temp_on_top_of[oto_index])
+						else:
+							temp_on_top_of[oto_index+1].playOnTopOf(temp_on_top_of[oto_index])
+					for att in side_info["zones"][zone]["attached"]:
+						attach_fake_card(att, side_info["zones"][zone])
+				move_fake_card_to_zone(side_info["zones"][zone], $Zones.get_node(zone), side_info["zones"][zone]==null)
+				
+				
+		if "revealed" in side_info:
+			for card_to_reveal in side_info["revealed"]:
+				reveal_fake_card(card_to_reveal)
+		if "playing" in side_info and side_info["playing"]:
+			play_fake_card(side_info["playing"])
+		
+		deck.update_size()
+		deck.update_back(mainBack)
+		cheerDeck.update_size()
+		cheerDeck.update_back(cheerBack)
+		archive.update_size()
+		holopower.update_size()
+		holopower.update_back(mainBack)
+		
+		if side_info == {}:
+			deck.shuffle()
+			cheerDeck.shuffle()
+		
+		if !is_goldfishing:
+			if is_your_side:
+				$CanvasLayer/Question.visible = true
+			if is_front or is_your_side:
+				%CosmeticsTimer.start()
+		else:
+			$CanvasLayer/Question/RPS.visible = false
+			_show_turn_choice()
+		
+		if is_your_side:
+			$SubViewportContainer/SubViewport/Node3D/Die.is_your_die = true
 	else:
-		var total_cheer = 20
-		if "cheerDeck" in side_info:
-			total_cheer = int(side_info["cheerDeck"])
-		for i in range(total_cheer):
-			var newCard1 = create_fake_card(cheerBack)
-			cheerDeck.cardList.append(newCard1)
-			newCard1.visible = false
-	
-	if "holopower" in side_info:
-		#print(side_info)
-		for i in range(int(side_info["holopower"])):
-			var newCard1 = create_fake_card(cheerBack)
-			holopower.cardList.append(newCard1)
-			newCard1.visible = false
-	if "archive" in side_info:
-		for card_info in side_info["archive"]:
-			add_fake_to_fuda(archive,card_info)
-	if "life" in side_info:
-		for index in range(int(side_info["life"])):
-			var newLife = create_fake_card(cheerBack)
-			life.append(newLife)
-			if index > 0:
-				move_behind(newLife,life[index-1])
-			newLife.trulyHide()
-			newLife.position = Vector2(-960,-145-(53*(6-int(side_info["life"])+index)))
-			newLife.rest()
-			newLife.visible = true
-	if "hand" in side_info:
-		for index in range(int(side_info["hand"])):
-			add_fake_to_hand()
-	if "zones" in side_info:
-		$Timer.start()
-		for zone in side_info["zones"]:
-			if side_info["zones"][zone]:
-				preliminary_phase = false
-				var temp_new_card = get_real_card(side_info["zones"][zone], mainBack)
-				var temp_on_top_of = []
-				for oto in side_info["zones"][zone]["onTopOf"]:
-					temp_on_top_of.append(get_real_card(oto, mainBack))
-				temp_on_top_of.reverse()
-				for oto_index in range(temp_on_top_of.size()):
-					if oto_index + 1 == temp_on_top_of.size():
-						temp_new_card.playOnTopOf(temp_on_top_of[oto_index])
-					else:
-						temp_on_top_of[oto_index+1].playOnTopOf(temp_on_top_of[oto_index])
-				for att in side_info["zones"][zone]["attached"]:
-					attach_fake_card(att, side_info["zones"][zone])
-			move_fake_card_to_zone(side_info["zones"][zone], $Zones.get_node(zone), side_info["zones"][zone]==null)
-			
-			
-	if "revealed" in side_info:
-		for card_to_reveal in side_info["revealed"]:
-			reveal_fake_card(card_to_reveal)
-	if "playing" in side_info and side_info["playing"]:
-		play_fake_card(side_info["playing"])
-	
-	deck.update_size()
-	deck.update_back(mainBack)
-	cheerDeck.update_size()
-	cheerDeck.update_back(cheerBack)
-	archive.update_size()
-	holopower.update_size()
-	holopower.update_back(mainBack)
-	
-	if side_info == {}:
-		deck.shuffle()
-		cheerDeck.shuffle()
+		$SubViewportContainer.visible = false
 	
 	move_child($Zones,-1)
-	
+
+func upload_cosmetics():
 	if is_your_side:
-		$CanvasLayer/Question.visible = true
-		$SubViewportContainer/SubViewport/Node3D/Die.is_your_die = true
+		if "sleeve" in found_cosmetics:
+			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
+				"game_id": game_id, "player_id": player_id, "cosmetics_type":"sleeve", "passcode":passcode
+			}).add_post_buffer("file", mainSleeve, "image/webp", "sleeve.webp").on_success(_upload_cosmetics_suceeded.bind("sleeve")).fetch()
+		if "cheerSleeve" in found_cosmetics:
+			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
+				"game_id": game_id, "player_id": player_id, "cosmetics_type":"cheerSleeve", "passcode":passcode
+			}).add_post_buffer("file", cheerSleeve, "image/webp", "cheerSleeve.webp").on_success(_upload_cosmetics_suceeded.bind("cheerSleeve")).fetch()
+		if "playmat" in found_cosmetics:
+			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
+				"game_id": game_id, "player_id": player_id, "cosmetics_type":"playmat", "passcode":passcode
+			}).add_post_buffer("file", playmatBuffer, "image/webp", "playmat.webp").on_success(_upload_cosmetics_suceeded.bind("playmat")).fetch()
+		if "dice" in found_cosmetics:
+			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
+				"game_id": game_id, "player_id": player_id, "cosmetics_type":"dice", "passcode":passcode
+			}).add_post_buffer("file", diceBuffer, "image/webp", "dice.webp").on_success(_upload_cosmetics_suceeded.bind("dice")).fetch()
+	else:
+		get_parent().send_command("Server", "Get Cosmetics", {"game":game_id})
 
 func finish_starting_spectate():
 	# Really hacky workaround for a bizzare issue when spectating a game in progress.
@@ -321,6 +359,8 @@ func _made_turn_choice(choice:bool):
 	$"CanvasLayer/Go First".visible = false
 	$"CanvasLayer/Go Second".visible = false
 	emit_signal("made_turn_choice",choice)
+	if is_goldfishing:
+		player1 = choice
 
 func _show_turn_choice():
 	$"CanvasLayer/Go First".visible = true
@@ -393,7 +433,11 @@ func specialStart4(life_info,ist):
 	preliminary_phase = false
 	$CanvasLayer/Ready.visible = false
 	$CanvasLayer/OpponentLabel.visible = false
+	is_turn = ist
 	$"CanvasLayer/End Turn".visible = is_turn
+	turn = 1
+	%TurnCount.text = tr("TURN_COUNT").format({"turn": turn})
+	%TurnCount.visible = true
 	
 	for index in range(len(life_info)):
 		var newLife = all_cards[int(life_info[index])]
@@ -413,11 +457,13 @@ func specialStart4(life_info,ist):
 		get_parent().toggle_step_mouse_filters(true)
 	else:
 		get_parent().toggle_step_mouse_filters(false)
-func specialStart4_fake(oshi_info, zone_info):
-	oshiCard.queue_free()
-	oshiCard = get_real_card(oshi_info, oshiBack)
-	oshiCard.position = Vector2(430,-223)
 	
+	if is_goldfishing:
+		for zone_info in get_parent().opponentSide.zones:
+			zone_info[0].show_damage()
+
+
+func specialStart4_fake(zone_info):
 	for fake in fake_cards_on_stage:
 		fake.queue_free()
 	
@@ -430,7 +476,8 @@ func specialStart4_fake(oshi_info, zone_info):
 	$CanvasLayer/OpponentLabel.visible = false
 	
 	for i in range(oshiCard.life):
-		var newLife = cheerDeck.cardList.pop_front()
+		cheerDeck.cardList.pop_front()
+		var newLife = create_fake_card(cheerBack)
 		life.append(newLife)
 		if i > 0:
 			move_behind(newLife,life[i-1])
@@ -949,6 +996,19 @@ func remove_prompt():
 	currentAttacking = ["",""]
 	cancel.visible = false
 
+func set_text_prompt(promptText, placeholder):
+	text_prompt.get_node("Input").text = promptText
+	text_prompt.get_node("Input/TextEdit").placeholder_text = placeholder
+	text_prompt.visible = true
+	text_prompt.get_node("Input/TextEdit").grab_focus()
+	cancel.visible = true
+
+func remove_text_prompt():
+	text_prompt.visible = false
+	text_prompt.get_node("Input/TextEdit").text = ""
+	currentPrompt = -1
+	cancel.visible = false
+
 func showLookAt(list_of_cards):
 	for i in range(list_of_cards.size()):
 		var actualCard = list_of_cards[i]
@@ -1051,18 +1111,29 @@ func _on_cancel_pressed():
 	if yourSide:
 		yourSide.hideLookAt()
 		yourSide.remove_prompt()
+		yourSide.remove_text_prompt()
 		yourSide.hideZoneSelection()
 	hideLookAt()
 	remove_prompt()
+	remove_text_prompt()
 	hideZoneSelection()
 	$CanvasLayer/Question.visible = false
 
 func _hide_cosmetics():
 	for cardB in all_cards:
-		if cardB.cardType in ["Cheer","Oshi"]:
-			cardB.updateBack(defaultCheer)
-		else:
-			cardB.updateBack(defaultMain)
+		if all_cards[cardB].cardType == "Cheer":
+			all_cards[cardB].updateBack(defaultCheer)
+		elif all_cards[cardB].cardType != "Oshi":
+			all_cards[cardB].updateBack(defaultMain)
+	
+	for hand_card in hand:
+		hand_card.updateBack(defaultMain)
+	for life_card in life:
+		life_card.updateBack(defaultCheer)
+	for fake_card in fake_cards_on_stage:
+		if fake_card:
+			fake_card.updateBack(defaultMain)
+	
 	deck.update_back(defaultMain.get_image())
 	holopower.update_back(defaultMain.get_image())
 	cheerDeck.update_back(defaultCheer.get_image())
@@ -1071,32 +1142,28 @@ func _hide_cosmetics():
 	$SubViewportContainer/SubViewport/Node3D/Die.new_texture(get_parent().default_dice)
 
 func _redo_cosmetics():
-	var updated_cheer = false
-	var updated_main = false
+	cheerDeck.update_back(cheerBack)
+	for life_card in life:
+		life_card.updateBack(cheerBack)
+	
+	deck.update_back(mainBack)
+	holopower.update_back(mainBack)
+	for hand_card in hand:
+		hand_card.updateBack(mainBack)
+	for fake_card in fake_cards_on_stage:
+		if fake_card:
+			fake_card.updateBack(mainBack)
+	
 	for cardB in all_cards:
-		match cardB.cardType:
+		match all_cards[cardB].cardType:
 			"Oshi":
-				if !oshiSleeve.is_empty():
-					var image = Image.new()
-					image.load_webp_from_buffer(oshiSleeve)
-					cardB.updateBack(ImageTexture.create_from_image(image))
+				pass
 			"Cheer":
 				if !cheerSleeve.is_empty():
-					var image = Image.new()
-					image.load_webp_from_buffer(cheerSleeve)
-					cardB.updateBack(ImageTexture.create_from_image(image))
-					if !updated_cheer:
-						cheerDeck.update_back(image)
-						updated_cheer = true
+					all_cards[cardB].updateBack(ImageTexture.create_from_image(cheerBack))
 			_:
 				if !mainSleeve.is_empty():
-					var image = Image.new()
-					image.load_webp_from_buffer(mainSleeve)
-					cardB.updateBack(ImageTexture.create_from_image(image))
-					if !updated_main:
-						deck.update_back(image)
-						holopower.update_back(image)
-						updated_main = true
+					all_cards[cardB].updateBack(ImageTexture.create_from_image(mainBack))
 	if !playmatBuffer.is_empty():
 		var image = Image.new()
 		image.load_webp_from_buffer(playmatBuffer)
@@ -1160,7 +1227,7 @@ func _on_card_clicked(card_id : int) -> void:
 		var currentZone = find_what_zone(currentCard)
 		if currentZone:
 			popup.add_item("CARD_HOLOMEM_REQUESTDAMAGE", 53)
-			if currentZone not in [centerZone, collabZone]:
+			if currentZone not in [centerZone, collabZone] and len(all_occupied_zones(true)) > 1:
 				popup.add_item("CARD_HOLOMEM_REQUESTDAMAGEBACK", 54)
 			
 			if actualCard.attached.size() > 0 or actualCard.onTopOf.size() > 0:
@@ -1196,7 +1263,7 @@ func _on_card_clicked(card_id : int) -> void:
 							popup.add_item(tr("CARD_HOLOMEM_BLOOM_FAST"),105)
 				elif currentZone:
 					if is_turn:
-						if !actualCard.rested and currentZone in [centerZone, collabZone] and !(first_turn and player1):
+						if !actualCard.rested and currentZone in [centerZone, collabZone] and !(first_turn and player1) and !is_goldfishing:
 							for art in actualCard.holomem_arts:
 								popup.add_item(Settings.trans("%s_ART_%s_NAME" % [actualCard.cardNumber, art[0]]), 80+art[0])
 							popup.add_separator()
@@ -1287,6 +1354,8 @@ func _on_card_clicked(card_id : int) -> void:
 				popup.add_item(tr("CARD_HAND_ARCHIVE"),112)
 				popup.add_item(tr("CARD_HAND_HOLOPOWER"),113)
 				popup.add_item(tr("CARD_HAND_REVEAL"),114)
+				popup.add_separator()
+				popup.add_item(tr("CARD_HAND_REVEALALL"),115)
 			elif find_what_zone(currentCard):
 				popup.add_item(tr("CARD_STAGE_ARCHIVE"),2)
 				if actualCard.attached.size() == 0:
@@ -1313,11 +1382,11 @@ func _on_card_right_clicked(card_id):
 		return
 	
 	if is_your_side and can_do_things and find_what_zone(card_id):
-		var actualCard = all_cards[card_id]
-		if actualCard.rested:
-			send_command("Popup Command", {"currentCard":card_id, "command_id":1})
-		else:
-			send_command("Popup Command", {"currentCard":card_id, "command_id":0})
+			var actualCard = all_cards[card_id]
+			if actualCard.rested:
+				send_command("Popup Command", {"currentCard":card_id, "command_id":1})
+			else:
+				send_command("Popup Command", {"currentCard":card_id, "command_id":0})
 
 func _on_deck_clicked():
 	reset_popup()
@@ -1695,6 +1764,19 @@ func _on_popup_menu_id_pressed(id):
 			showZoneSelection(possibleZones)
 			currentPrompt = 622
 		
+		901: #Goldfish Zone Damage
+			set_prompt("PROMPT_DAMAGE", 20, 3)
+			currentPrompt = 901
+		902: #Goldfish Zone Damage Remove
+			set_prompt("PROMPT_DAMAGE_REMOVE", 20, 3)
+			currentPrompt = 902
+		903: #Goldfish Zone Damage All
+			set_prompt("PROMPT_DAMAGE_ALL", 20, 3)
+			currentPrompt = 903
+		910: #Goldfish Zone Note
+			set_text_prompt(tr("PROMPT_NOTE"), tr("PROMPT_NOTE_PLACEHOLDER"))
+			currentPrompt = 910
+		
 		999: #Forfeit
 			_show_loss_consent("FORFEIT")
 			
@@ -1707,40 +1789,74 @@ func _on_line_edit_text_submitted(new_text):
 	
 	var input = new_text.to_int()
 	if new_text.is_valid_int() and input > 0:
-		send_command("Prompt Command", {"command_id":currentPrompt, "input":input, "currentCard":currentCard, "currentAttacking":currentAttacking})
-	
-		match currentPrompt:
-			70:
-				used_oshi_skill = true
-				currentCard = -1
-			71:
-				used_sp_oshi_skill = true
-				flipSPdown()
-				currentCard = -1
-			80,81: #Holomem Arts Damage
-				var actualCard = all_cards[currentCard]
-				var oppSide = get_parent().opponentSide
-				var attacking = oppSide.all_cards[currentAttacking]
-				var attackPos = attacking.position.rotated(-oppSide.rotation) + oppSide.position - get_parent().yourSide.position
-				_move_sfx()
-				actualCard.hitAndBack(attackPos)
+		if currentPrompt in [901,902,903,910] and is_goldfishing:
+			var actualZoneInfo = get_parent().opponentSide.zones[zone_to_deal_damage_to]
+			match currentPrompt:
+				901:
+					actualZoneInfo[0].add_damage(input)
+				902:
+					actualZoneInfo[0].add_damage(-input)
+				903:
+					for zoneInfo in get_parent().opponentSide.zones:
+						if zoneInfo[0].zoneID > 1:
+							zoneInfo[0].add_damage(input)
+			zone_to_deal_damage_to = null
+		else:
+			send_command("Prompt Command", {"command_id":currentPrompt, "input":input, "currentCard":currentCard, "currentAttacking":currentAttacking})
+		
+			match currentPrompt:
+				70:
+					used_oshi_skill = true
+					currentCard = -1
+				71:
+					used_sp_oshi_skill = true
+					flipSPdown()
+					currentCard = -1
+				80,81: #Holomem Arts Damage
+					var actualCard = all_cards[currentCard]
+					var oppSide = get_parent().opponentSide
+					var attacking = oppSide.all_cards[currentAttacking]
+					var attackPos = attacking.position.rotated(-oppSide.rotation) + oppSide.position - get_parent().yourSide.position
+					_move_sfx()
+					actualCard.hitAndBack(attackPos)
 	
 	remove_prompt()
+
+func _on_text_edit_text_set() -> void:
+	var new_text = text_prompt.get_node("Input/TextEdit").text
+	if new_text != "":
+		match currentPrompt:
+			910: #Goldfish Zone Note
+				if is_goldfishing:
+					var actualZoneInfo = get_parent().opponentSide.zones[zone_to_deal_damage_to]
+					actualZoneInfo[0].add_note(new_text)
+	remove_text_prompt()
 
 func _on_zone_clicked(zone_id):
 	var actualZoneInfo = zones[zone_id]
 	
-	if is_your_side:
-		send_command("Zone Command",{"command_id":currentPrompt, "currentCard":currentCard,"chosenZone":actualZoneInfo[0].name,"currentAttached":currentAttached.cardID if currentAttached else null})
+	if actualZoneInfo[0].goldfish_mode:
+		var yourSide = get_parent().yourSide
+		yourSide.reset_popup()
+		yourSide.zone_to_deal_damage_to = zone_id
+		yourSide.popup.add_item("GOLDFISH_ZONEDAMAGE", 901)
+		yourSide.popup.add_item("GOLDFISH_ZONEDAMAGEREMOVE", 902)
+		if zone_id > 1:
+			yourSide.popup.add_item("GOLDFISH_ZONEDAMAGEALL", 903)
+		yourSide.popup.add_item("GOLDFISH_ZONENOTE", 910)
+		yourSide.show_popup()
+	else:
+		if is_your_side:
+			send_command("Zone Command",{"command_id":currentPrompt, "currentCard":currentCard,"chosenZone":actualZoneInfo[0].name,"currentAttached":currentAttached.cardID if currentAttached else null})
+			
+		match currentPrompt:
+			80,81: #Holomem Arts (called on opponent's side)
+				var yourSide = get_parent().yourSide
+				yourSide.currentAttacking = find_in_zone(actualZoneInfo[0])
+				yourSide.set_prompt(tr("PROMPT_ART_DAMAGE"),20,3)
 		
-	match currentPrompt:
-		80,81: #Holomem Arts (called on opponent's side)
-			var yourSide = get_parent().yourSide
-			yourSide.currentAttacking = find_in_zone(actualZoneInfo[0])
-			yourSide.set_prompt(tr("PROMPT_ART_DAMAGE"),20,3)
-	
-	currentAttached = null
-	hideZoneSelection()
+		currentAttached = null
+		hideZoneSelection()
 
 func _show_loss_consent(reason):
 	if is_your_side:
@@ -1790,6 +1906,8 @@ func _on_submit_pressed():
 func set_is_turn(value:bool):
 	if is_your_side:
 		is_turn = value
+		turn += 1
+		%TurnCount.text = tr("TURN_COUNT").format({"turn": turn})
 		get_parent()._select_step(1)
 		if !preliminary_phase:
 			$"CanvasLayer/End Turn".visible = value
@@ -1819,10 +1937,16 @@ func end_turn():
 			if actualCard.cardType == "Holomem":
 				actualCard.bloomed_this_turn = false
 		is_turn = false
+		turn += 1
+		%TurnCount.text = tr("TURN_COUNT").format({"turn": turn})
 		$"CanvasLayer/End Turn".visible = false
 		emit_signal("ended_turn")
 		get_parent()._enable_steps(true)
 		get_parent().toggle_step_mouse_filters(false)
+		
+		if is_goldfishing:
+			for zone_info in get_parent().opponentSide.zones:
+				zone_info[0].lock_in_damage()
 
 
 func _on_fuda_shuffled():
@@ -2000,6 +2124,12 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 		"Extra Baton Pass Cost":
 			if "card_id" in data and int(data["card_id"]) in all_cards and "amount" in data:
 				all_cards[int(data["card_id"])].add_extra_baton_pass_cost(int(data["amount"]))
+		"Reveal Hand":
+			if "hand_info" in data:
+				var look_at_hand = []
+				for card_info in data["hand_info"]:
+					look_at_hand.append(get_real_card(card_info, mainBack, true))
+				showLookAt(look_at_hand)
 		
 		"Add To Hand":
 			add_fake_to_hand()
@@ -2015,9 +2145,8 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 			if "card_id" in data and "attached_id" in data:
 				remove_fake_from_attached(int(data["card_id"]),int(data["attached_id"]))
 		"All Ready":
-			if "oshi" in data and "zones" in data:
-				specialStart4_fake(data["oshi"],data["zones"])
-		
+			if "zones" in data:
+				specialStart4_fake(data["zones"])
 		
 		"Card Left Field":
 			if "card_id" in data and int(data["card_id"]) in all_cards and _is_card_onstage(data["card_id"]):
@@ -2097,5 +2226,41 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 		"Click Notification":
 			if "card_id" in data and int(data["card_id"]) in all_cards:
 				all_cards[int(data["card_id"])].showNotice()
+		
+		"Cosmetics":
+			if "cosmetics_type" in data:
+				if data["cosmetics_type"] in ["sleeve", "cheerSleeve", "playmat", "dice"]:
+					%HTTPManager.job(download_url + "/cosmetics/").add_post({
+						"game_id": game_id, "player_id": player_id, "cosmetics_type": data["cosmetics_type"]
+					}).on_success(self._download_cosmetics_suceeded.bind(data["cosmetics_type"])).fetch()
+		
 		_:
 			pass
+
+func _upload_cosmetics_suceeded(_result, cosmetic):
+	get_parent().send_command("Game", "Cosmetics", {"cosmetics": cosmetic})
+
+func _download_cosmetics_suceeded(result, cosmetic):
+	var image = Image.new()
+	image.load_webp_from_buffer(result.fetch())
+	if image and !image.is_empty():
+		match cosmetic:
+			"sleeve":
+				mainBack = image
+				deck.update_back(mainBack)
+				holopower.update_back(mainBack)
+				for hand_card in hand:
+					hand_card.updateBack(mainBack)
+				for fake in fake_cards_on_stage:
+					fake.updateBack(mainBack)
+			"cheerSleeve":
+				cheerBack = image
+				cheerDeck.update_back(cheerBack)
+				for life_card in life:
+					life_card.updateBack(cheerBack)
+			"playmat":
+				playmatBuffer = image.save_webp_to_buffer(true)
+				$gradient.texture = ImageTexture.create_from_image(image)
+			"dice":
+				diceBuffer = image.save_webp_to_buffer(true)
+				$SubViewportContainer/SubViewport/Node3D/Die.new_texture(image)

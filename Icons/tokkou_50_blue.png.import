@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmot806y76won"
-path="res://.godot/imported/tokkou_50_blue.png-d22bcb24a0bd6da682fa48d89fe51fa0.ctex"
+path.s3tc="res://.godot/imported/tokkou_50_blue.png-d22bcb24a0bd6da682fa48d89fe51fa0.s3tc.ctex"
+path.etc2="res://.godot/imported/tokkou_50_blue.png-d22bcb24a0bd6da682fa48d89fe51fa0.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Icons/tokkou_50_blue.png"
-dest_files=["res://.godot/imported/tokkou_50_blue.png-d22bcb24a0bd6da682fa48d89fe51fa0.ctex"]
+dest_files=["res://.godot/imported/tokkou_50_blue.png-d22bcb24a0bd6da682fa48d89fe51fa0.s3tc.ctex", "res://.godot/imported/tokkou_50_blue.png-d22bcb24a0bd6da682fa48d89fe51fa0.etc2.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -32,25 +32,25 @@ func _all_decks() -> void:
 	var dir = DirAccess.open(path)
 	if dir:
 		for file_name in dir.get_files():
-			if json.parse(FileAccess.get_file_as_string(path + "/" + file_name)) == 0:
+			if INTJSON.parse(FileAccess.get_file_as_string(path + "/" + file_name)) == 0:
 				if Settings.settings.OnlyEN:
 					var found_not_en = false
-					if !check_if_card_is_en(json.data.oshi[0],json.data.oshi[1]):
+					if !check_if_card_is_en(INTJSON.data.oshi[0],INTJSON.data.oshi[1]):
 						found_not_en = true
-					for card_info in json.data.deck:
+					for card_info in INTJSON.data.deck:
 						if !check_if_card_is_en(card_info[0],card_info[2]):
 							found_not_en = true
 							break
-					for card_info in json.data.cheerDeck:
+					for card_info in INTJSON.data.cheerDeck:
 						if !check_if_card_is_en(card_info[0],card_info[2]):
 							found_not_en = true
 							break
 					if found_not_en:
 						continue
 				var deckButton = deckButtonClass.instantiate()
-				deckButton.deck_info = json.data
+				deckButton.deck_info = INTJSON.data
 				deckButton.pressed.connect(_set_selected)
-				deckButton.delete_pressed.connect(_delete_deck.bind(json.data.deckName, file_name))
+				deckButton.delete_pressed.connect(_delete_deck.bind(INTJSON.data.deckName, file_name))
 				list.add_child(deckButton)
 		list.move_child(loadButton,-1) #Make sure the load button is on the bottom of the VBoxContainer
 		$ScrollContainer.scroll_vertical = 0 #Reset the bar to the top
@@ -64,26 +64,16 @@ func check_if_card_is_en(cardNumber, artNum):
 
 func _set_selected(deckInfo : Dictionary) -> void:
 	if !$Question.visible and !$LoadDialog.visible:
-		var true_deck = {}
-		if "deck" in deckInfo:
-			true_deck["deck"] = deckInfo["deck"]
-		if "cheerDeck" in deckInfo:
-			true_deck["cheerDeck"] = deckInfo["cheerDeck"]
-		if "oshi" in deckInfo:
-			true_deck["oshi"] = deckInfo["oshi"]
-		if "deckName" in deckInfo:
-			true_deck["deckName"] = deckInfo["deckName"]
-		
-		emit_signal("selected",true_deck)
+		emit_signal("selected",deckInfo)
 
 
 func _on_load_dialog_file_selected(path : String) -> void:
-	if !$Question.visible and json.parse(FileAccess.get_file_as_string(path)) == 0:
-		emit_signal("selected",json.data)
+	if !$Question.visible and INTJSON.parse(FileAccess.get_file_as_string(path)) == 0:
+		emit_signal("selected",INTJSON.data)
 
 func _on_web_load_dialog_file_selected(file_name: String, type: String, base64_data: String) -> void:
-	if !$Question.visible and json.parse(Marshalls.base64_to_utf8(base64_data)) == 0:
-		emit_signal("selected",json.data)
+	if !$Question.visible and INTJSON.parse(Marshalls.base64_to_utf8(base64_data)) == 0:
+		emit_signal("selected",INTJSON.data)
 
 
 func _on_load_pressed() -> void:

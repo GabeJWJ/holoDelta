@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://gfca1xt2vdra"]
 
-[ext_resource type="Script" path="res://Scripts/sleeveSelect.gd" id="1_06yeu"]
+[ext_resource type="Script" uid="uid://gp7a2yrwdyxw" path="res://Scripts/sleeveSelect.gd" id="1_06yeu"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="3_w64fp"]
 
 [node name="sleeveSelect" type="Node2D"]
@@ -24,7 +24,6 @@ auto_translate_mode = 2
 title = "Open a File"
 position = Vector2i(300, 300)
 size = Vector2i(392, 175)
-auto_translate = false
 ok_button_text = "Open"
 file_mode = 0
 access = 2

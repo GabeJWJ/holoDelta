@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://dflurn4efiy6y"]
 
 [ext_resource type="Script" path="res://Scenes/deck_info.gd" id="1_kyp61"]
-[ext_resource type="Texture2D" uid="uid://gxcpgcuj06xt" path="res://Sou_Desu_Ne.png" id="1_tm7v3"]
 [ext_resource type="Texture2D" uid="uid://bknptx6wuqvkd" path="res://cardover.png" id="2_8jd58"]
 [ext_resource type="Texture2D" uid="uid://vbmru3hqj3bq" path="res://ocg_logo.png" id="2_g1tfi"]
+[ext_resource type="PackedScene" uid="uid://dfjyb5e027l76" path="res://Scenes/card_front.tscn" id="3_8bm7o"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="3_mu4s5"]
 [ext_resource type="Texture2D" uid="uid://dtdiljabu5i1t" path="res://trashOff.png" id="6_d7ko2"]
 [ext_resource type="Texture2D" uid="uid://cr6lw4wloe77h" path="res://trashOn.png" id="7_141fh"]
@@ -58,16 +58,26 @@ offset_right = 630.0
 offset_bottom = 100.0
 texture = SubResource("GradientTexture2D_4n65i")
 
-[node name="Front" type="Sprite2D" parent="."]
+[node name="Front" parent="." instance=ExtResource("3_8bm7o")]
 unique_name_in_owner = true
-position = Vector2(80, 110)
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = -15.0
+grow_horizontal = 1
+grow_vertical = 1
 rotation = 0.174533
 scale = Vector2(0.55, 0.55)
-texture = ExtResource("1_tm7v3")
-region_rect = Rect2(0, 0, 300, 300)
 
 [node name="FrontCover" type="Sprite2D" parent="Front"]
 unique_name_in_owner = true
+position = Vector2(154.5, 214.5)
 texture = ExtResource("2_8jd58")
 region_rect = Rect2(0, 0, 300, 300)
 

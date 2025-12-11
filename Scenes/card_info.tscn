@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3 uid="uid://deiaqxh7hxfbf"]
+
+[ext_resource type="Script" uid="uid://cqimocijksgqx" path="res://Scripts/card_info.gd" id="1_yvv3s"]
+[ext_resource type="PackedScene" uid="uid://dfjyb5e027l76" path="res://Scenes/card_front.tscn" id="2_btmxb"]
+[ext_resource type="Texture2D" uid="uid://djuk0g87nhrhc" path="res://cardbutton.png" id="3_nl1ep"]
+[ext_resource type="Texture2D" uid="uid://ckina22q7em5y" path="res://cardbuttonhover.png" id="4_y8rgj"]
+
+[node name="CardInfo" type="Control"]
+custom_minimum_size = Vector2(309, 429)
+layout_mode = 3
+anchor_right = 0.241
+anchor_bottom = 0.596
+offset_right = 0.519989
+offset_bottom = -0.120026
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yvv3s")
+
+[node name="CollectedForScaling" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Front" parent="CollectedForScaling" instance=ExtResource("2_btmxb")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="CardButton" type="TextureButton" parent="CollectedForScaling"]
+layout_mode = 0
+offset_left = 0.75
+offset_top = 1.16699
+offset_right = 309.75
+offset_bottom = 430.167
+texture_normal = ExtResource("3_nl1ep")
+texture_hover = ExtResource("4_y8rgj")
+
+[node name="Amount" type="Label" parent="CollectedForScaling"]
+unique_name_in_owner = true
+auto_translate_mode = 2
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 257.083
+offset_top = -34.5
+offset_right = 343.083
+offset_bottom = 34.5
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 50
+text = "x10"
+
+[node name="Ban" type="Label" parent="CollectedForScaling"]
+unique_name_in_owner = true
+auto_translate_mode = 2
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = -20.5
+offset_top = -20.083
+offset_right = 101.5
+offset_bottom = 116.917
+theme_override_colors/font_color = Color(0.803922, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 100
+text = "X"
+horizontal_alignment = 1
+
+[connection signal="gui_input" from="CollectedForScaling/CardButton" to="." method="_on_card_button_gui_input"]
+[connection signal="mouse_entered" from="CollectedForScaling/CardButton" to="." method="_on_card_button_mouse_entered"]
+[connection signal="mouse_exited" from="CollectedForScaling/CardButton" to="." method="_on_card_button_mouse_exited"]
+[connection signal="pressed" from="CollectedForScaling/CardButton" to="." method="_on_card_button_pressed"]

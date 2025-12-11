@@ -7,6 +7,7 @@ from classes.game import Game
 from random import sample
 from utils.deck_validator import check_legal
 from utils.game_network_utils import update_numbers_all
+from utils.azure_blob_storage import create_cosmetics
 
 class Lobby:
     def __init__(self, host, settings = None):
@@ -128,9 +129,10 @@ class Lobby:
             case "Start Game":
                 if player_id == self.host.id and self.chosen is not None and self.host_deck is not None and self.chosen_deck is not None and self.host_ready and self.chosen_ready:
                     game = Game(self.host, self.host_deck, self.chosen, self.chosen_deck, self.settings)
+                    await create_cosmetics(game.id)
 
-                    await self.host.tell("Lobby","Game Start",{"id": game.id, "opponent_id":self.chosen.id, "name":self.chosen.name})
-                    await self.chosen.tell("Lobby","Game Start",{"id": game.id,"opponent_id":self.host.id, "name":self.host.name})
+                    await self.host.tell("Lobby","Game Start",{"id": game.id, "opponent_id":self.chosen.id, "name":self.chosen.name, "oshi":self.chosen_deck["oshi"], "passcode": game.cosmetics[self.host.id]["passcode"]})
+                    await self.chosen.tell("Lobby","Game Start",{"id": game.id,"opponent_id":self.host.id, "name":self.host.name, "oshi":self.host_deck["oshi"], "passcode": game.cosmetics[self.chosen.id]["passcode"]})
 
                     if self.allow_spectators:
                         for player in self.waiting:

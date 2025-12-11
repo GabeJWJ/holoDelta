@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btlmd875gxsio"
-path="res://.godot/imported/text box.png-58e4495ced88f02fc63f48a0ed9d5559.ctex"
+path.s3tc="res://.godot/imported/text box.png-58e4495ced88f02fc63f48a0ed9d5559.s3tc.ctex"
+path.etc2="res://.godot/imported/text box.png-58e4495ced88f02fc63f48a0ed9d5559.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://CyberAssets/Main Menu Assets/text box.png"
-dest_files=["res://.godot/imported/text box.png-58e4495ced88f02fc63f48a0ed9d5559.ctex"]
+dest_files=["res://.godot/imported/text box.png-58e4495ced88f02fc63f48a0ed9d5559.s3tc.ctex", "res://.godot/imported/text box.png-58e4495ced88f02fc63f48a0ed9d5559.etc2.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

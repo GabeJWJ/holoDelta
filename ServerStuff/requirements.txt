@@ -1,3 +1,6 @@
+python-multipart
+azure-identity[aio]
+azure-storage-blob[aio]==12.27.1
 fastapi
 uvicorn[standard]
 gunicorn

@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi8y625jyb82c"
-path="res://.godot/imported/rightArrow.png-3986ffa96d3b24e6c8bb47578d357641.ctex"
+path.s3tc="res://.godot/imported/rightArrow.png-3986ffa96d3b24e6c8bb47578d357641.s3tc.ctex"
+path.etc2="res://.godot/imported/rightArrow.png-3986ffa96d3b24e6c8bb47578d357641.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://rightArrow.png"
-dest_files=["res://.godot/imported/rightArrow.png-3986ffa96d3b24e6c8bb47578d357641.ctex"]
+dest_files=["res://.godot/imported/rightArrow.png-3986ffa96d3b24e6c8bb47578d357641.s3tc.ctex", "res://.godot/imported/rightArrow.png-3986ffa96d3b24e6c8bb47578d357641.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

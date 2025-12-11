@@ -1,6 +1,6 @@
-extends Node2D
+extends Control
 
-const card = preload("res://Scenes/card.tscn")
+const card = preload("res://Scenes/card_info.tscn")
 var all_cards = []
 var cards = []
 var current_card = 0
@@ -17,9 +17,10 @@ func addCard(number, artCode):
 	if cards.size() > 0:
 		newCard.visible = false
 	$Cards.add_child(newCard)
+	newCard.position = Vector2()
 	cards.append(newCard)
 	all_cards.append(newCard)
-	newCard.scale = Vector2(1.03,1.03)
+	newCard.scale = Vector2(0.27, 0.27)
 	newCard.card_clicked.connect(on_card_clicked)
 	newCard.card_right_clicked.connect(on_card_right_clicked)
 	newCard.card_mouse_over.connect(on_card_mouse_over)
@@ -70,6 +71,12 @@ func oshi_filter(filter_list):
 				add_to_list = false
 		
 		if filter_list.Name != null and !potential_card.has_name(filter_list.Name):
+			add_to_list = false
+		
+		if filter_list.Life != null and potential_card.life != filter_list.Life:
+			add_to_list = false
+	
+		if filter_list.Setcode != null and potential_card.cardNumber.split("-")[0] != filter_list.Setcode:
 			add_to_list = false
 		
 		if filter_list.Search != "" and !potential_card.fullText.to_lower().contains(filter_list.Search.to_lower()):

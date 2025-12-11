@@ -12,7 +12,7 @@ config_version=5
 
 config/name="holoDelta"
 run/main_scene="res://Scenes/board.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.png"
 config/macos_native_icon="res://icon.icns"
 config/windows_native_icon="res://icon.ico"
@@ -23,6 +23,7 @@ Database="*res://Scripts/database.gd"
 Settings="*res://Scripts/settings.gd"
 Server="*res://Scripts/server.gd"
 GameState="*res://Scripts/game_state.gd"
+INTJSON="*res://Scripts/INTJSON.gd"
 
 [display]
 
@@ -46,7 +47,9 @@ timers/tooltip_delay_sec=0.0
 [importer_defaults]
 
 texture={
-"compress/mode": 1
+&"compress/high_quality": true,
+&"compress/mode": 1,
+&"compress/normal_map": 2
 }
 wav={
 "compress/mode": 1
@@ -102,7 +105,7 @@ locale/translation_remaps={
 "res://Icons/gift.png": PackedStringArray("res://Icons/ENgift.png:en")
 }
 locale/translations=PackedStringArray("res://Localization/en.po", "res://Localization/ja.po", "res://Localization/es.po", "res://Localization/fr.po", "res://Localization/ko.po", "res://Localization/vi.po", "res://Localization/zh_TW.po")
-locale/translations_pot_files=PackedStringArray("res://Scenes/board.tscn", "res://Scenes/deck_list.tscn", "res://Scenes/sleeve_select.tscn", "res://Scenes/side.tscn", "res://Scenes/better_texture_button.tscn", "res://Scenes/card.tscn", "res://Scenes/die.tscn", "res://Scenes/fuda.tscn", "res://Scenes/info_panel.tscn", "res://Scenes/zone.tscn", "res://Scenes/deck_creation.tscn", "res://Scripts/RemapButton.gd", "res://Scripts/deck_creation.gd", "res://Scripts/side.gd", "res://Scripts/Multiplayer.gd", "res://Scripts/card.gd")
+locale/translations_pot_files=PackedStringArray("res://Scenes/board.tscn", "res://Scenes/deck_list.tscn", "res://Scenes/sleeve_select.tscn", "res://Scenes/side.tscn", "res://Scenes/better_texture_button.tscn", "res://Scenes/card.tscn", "res://Scenes/die.tscn", "res://Scenes/fuda.tscn", "res://Scenes/info_panel.tscn", "res://Scenes/zone.tscn", "res://Scenes/deck_creation.tscn", "res://Scripts/RemapButton.gd", "res://Scripts/deck_creation.gd", "res://Scripts/side.gd", "res://Scripts/Multiplayer.gd", "res://Scripts/card.gd", "res://Scripts/better_texture_button.gd", "res://Scripts/card_front.gd", "res://Scripts/card_info.gd", "res://Scripts/collection.gd", "res://Scripts/confirm_dialog.gd", "res://Scripts/database.gd", "res://Scripts/deck_list.gd", "res://Scripts/die.gd", "res://Scripts/fix_font_tool.gd", "res://Scripts/fuda.gd", "res://Scripts/game_state.gd", "res://Scripts/info_panel.gd", "res://Scripts/server.gd", "res://Scripts/settings.gd", "res://Scripts/sleeveSelect.gd", "res://Scripts/webUtils.gd", "res://Scripts/zone.gd", "res://Scenes/card_front.tscn", "res://Scenes/card_info.tscn")
 pseudolocalization/expansion_ratio=0.3
 
 [rendering]

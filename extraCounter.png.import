@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1x4nb22w47b5"
-path="res://.godot/imported/extraCounter.png-f13be1c3cefd0a110eb454bf16cab728.ctex"
+path.s3tc="res://.godot/imported/extraCounter.png-f13be1c3cefd0a110eb454bf16cab728.s3tc.ctex"
+path.etc2="res://.godot/imported/extraCounter.png-f13be1c3cefd0a110eb454bf16cab728.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://extraCounter.png"
-dest_files=["res://.godot/imported/extraCounter.png-f13be1c3cefd0a110eb454bf16cab728.ctex"]
+dest_files=["res://.godot/imported/extraCounter.png-f13be1c3cefd0a110eb454bf16cab728.s3tc.ctex", "res://.godot/imported/extraCounter.png-f13be1c3cefd0a110eb454bf16cab728.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

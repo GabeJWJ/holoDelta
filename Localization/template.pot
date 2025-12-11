@@ -15,6 +15,25 @@
 # res://Scripts/side.gd
 # res://Scripts/Multiplayer.gd
 # res://Scripts/card.gd
+# res://Scripts/better_texture_button.gd
+# res://Scripts/card_front.gd
+# res://Scripts/card_info.gd
+# res://Scripts/collection.gd
+# res://Scripts/confirm_dialog.gd
+# res://Scripts/database.gd
+# res://Scripts/deck_list.gd
+# res://Scripts/die.gd
+# res://Scripts/fix_font_tool.gd
+# res://Scripts/fuda.gd
+# res://Scripts/game_state.gd
+# res://Scripts/info_panel.gd
+# res://Scripts/server.gd
+# res://Scripts/settings.gd
+# res://Scripts/sleeveSelect.gd
+# res://Scripts/webUtils.gd
+# res://Scripts/zone.gd
+# res://Scenes/card_front.tscn
+# res://Scenes/card_info.tscn
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -67,6 +86,10 @@ msgstr ""
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_SPECTATE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SOLO_GOLDFISH"
 msgstr ""
 
 #: Scenes/board.tscn
@@ -210,6 +233,15 @@ msgid "LOBBY_BANLIST_UNRELEASED_EN"
 msgstr ""
 
 #: Scenes/board.tscn
+msgid "GOLDFISH_MENU"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "DECK_SELECT"
+msgstr ""
+
+#: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
 msgid "SPECTATE_PUBLIC_GAMES_FOUND"
 msgstr ""
@@ -217,6 +249,10 @@ msgstr ""
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_GAMECODE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PLAYMATDICE"
 msgstr ""
 
 #: Scenes/board.tscn
@@ -233,6 +269,10 @@ msgstr ""
 
 #: Scenes/board.tscn
 msgid "COSMETICS_D_DEFAULT"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_DEFAULTSLEEVES"
 msgstr ""
 
 #: Scenes/board.tscn
@@ -323,11 +363,6 @@ msgid "LOBBY_READY"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "DECK_SELECT"
-msgstr ""
-
-#: Scenes/board.tscn
 msgid "LOBBY_CHOSEN"
 msgstr ""
 
@@ -415,6 +450,10 @@ msgid "DOWNLOAD_CARD"
 msgstr ""
 
 #: Scenes/board.tscn
+msgid "UPDATE_NOTFOUND"
+msgstr ""
+
+#: Scenes/board.tscn
 msgid "BACK"
 msgstr ""
 
@@ -423,6 +462,7 @@ msgid "DECK_SELECT_CANCEL"
 msgstr ""
 
 #: Scenes/deck_list.tscn
+#: Scripts/deck_list.gd
 msgid "DECK_DELETE_CONFIRM"
 msgstr ""
 
@@ -455,6 +495,11 @@ msgid "END_TURN"
 msgstr ""
 
 #: Scenes/side.tscn
+#: Scripts/side.gd
+msgid "TURN_COUNT"
+msgstr ""
+
+#: Scenes/side.tscn
 msgid "START_READY"
 msgstr ""
 
@@ -479,6 +524,10 @@ msgid "TAB_OSHI"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
+msgid "SEARCH"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
 #: Scripts/deck_creation.gd
 msgid "NAME"
 msgstr ""
@@ -489,11 +538,20 @@ msgid "COLOR"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-msgid "FILTER_CLEAR"
+msgid "LIFE_5"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-msgid "SEARCH"
+msgid "LIFE_6"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "SETCODE"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+msgid "FILTER_CLEAR"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
@@ -531,11 +589,29 @@ msgid "LEVEL_SPOT"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "ADVANTAGE"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "EFFECT"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+msgid "EFFECT_ANY"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
 msgid "TAG_PLURAL"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
 msgid "BUZZ"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+msgid "NOTBUZZ"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
@@ -549,6 +625,15 @@ msgstr ""
 
 #: Scenes/deck_creation.tscn
 msgid "SUPPORT_LIMITED"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+msgid "SUPPORT_UNLIMITED"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "TAG"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
@@ -573,10 +658,6 @@ msgstr ""
 
 #: Scenes/deck_creation.tscn
 msgid "CHEER"
-msgstr ""
-
-#: Scenes/deck_creation.tscn
-msgid "OSHI"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
@@ -607,6 +688,10 @@ msgstr ""
 msgid "DECK_SAVE_CANCEL"
 msgstr ""
 
+#: Scenes/deck_creation.tscn
+msgid "LOADING"
+msgstr ""
+
 #: Scripts/RemapButton.gd
 msgid "REMAP_WAIT"
 msgstr ""
@@ -620,7 +705,27 @@ msgid "COLOR_ANY"
 msgstr ""
 
 #: Scripts/deck_creation.gd
+msgid "SETCODE_ANY"
+msgstr ""
+
+#: Scripts/deck_creation.gd
+msgid "ADVANTAGE_ANY"
+msgstr ""
+
+#: Scripts/deck_creation.gd
 msgid "SUPPORT_TYPE_ANY"
+msgstr ""
+
+#: Scripts/deck_creation.gd
+msgid "TAG_ANY"
+msgstr ""
+
+#: Scripts/deck_creation.gd
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+#: Scripts/fuda.gd
+#: Scripts/info_panel.gd
+msgid ""
 msgstr ""
 
 #: Scripts/deck_creation.gd
@@ -711,12 +816,6 @@ msgstr ""
 msgid "DECKERROR_ONLYEN"
 msgstr ""
 
-#: Scripts/deck_creation.gd
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid ""
-msgstr ""
-
 #: Scripts/side.gd
 msgid "DECK"
 msgstr ""
@@ -756,6 +855,14 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "READY_WAIT"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REQUESTDAMAGE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REQUESTDAMAGEBACK"
 msgstr ""
 
 #: Scripts/side.gd
@@ -876,6 +983,10 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "CARD_HAND_REVEAL"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_HAND_REVEALALL"
 msgstr ""
 
 #: Scripts/side.gd
@@ -1160,6 +1271,30 @@ msgid "PROMPT_HOLOPOWER_ARCHIVE"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "PROMPT_NOTE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "PROMPT_NOTE_PLACEHOLDER"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONEDAMAGE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONEDAMAGEREMOVE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONEDAMAGEALL"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONENOTE"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "PROMPT_ART_DAMAGE"
 msgstr ""
 
@@ -1169,14 +1304,6 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "TURN_FIRST"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_REQUESTDAMAGE"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_REQUESTDAMAGEBACK"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
@@ -1337,6 +1464,10 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_REVEAL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_REVEALALL"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
@@ -1676,6 +1807,10 @@ msgid "YOU_MESSAGE_HAND_REVEAL"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_REVEALALL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_HAND_SUPPORT_PLAY"
 msgstr ""
 
@@ -1971,74 +2106,74 @@ msgstr ""
 msgid "LOBBY_PUBLIC"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NOBODY"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NAMESEP"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "COLORLESS"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "COLORSEP"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NAME_BUZZ"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI_SPSKILL"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI_SKILL"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_SPOT"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_DEBUT"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_1ST"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_2ND"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_BUZZ"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_HOLOMEM_1"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_NOBATONPASSCOST"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_HOLOMEM_2"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_SUPPORT"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_LIMITED"
 msgstr ""

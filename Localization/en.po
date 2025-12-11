@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: holodelta\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-19 20:17-0500\n"
+"PO-Revision-Date: 2025-12-06 19:12-0500\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Language: en_US\n"
@@ -56,6 +56,10 @@ msgstr "Join Lobby"
 #: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_SPECTATE"
 msgstr "Spectate Game"
+
+#: Scenes/board.tscn
+msgid "SOLO_GOLDFISH"
+msgstr "Goldfish"
 
 #: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "PLAYERS_ONLINE"
@@ -181,6 +185,14 @@ msgstr "Current + Unreleased"
 msgid "LOBBY_BANLIST_UNRELEASED_EN"
 msgstr "Current + Unreleased (EN)"
 
+#: Scenes/board.tscn
+msgid "GOLDFISH_MENU"
+msgstr "Goldfishing Menu"
+
+#: Scenes/board.tscn Scripts/Multiplayer.gd
+msgid "DECK_SELECT"
+msgstr "Choose Deck"
+
 #: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "SPECTATE_PUBLIC_GAMES_FOUND"
 msgstr "{amount} Public Games Found"
@@ -188,6 +200,10 @@ msgstr "{amount} Public Games Found"
 #: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_GAMECODE"
 msgstr "Enter Game Code"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PLAYMATDICE"
+msgstr "Playmat/Dice"
 
 #: Scenes/board.tscn
 msgid "COSMETICS_PM"
@@ -204,6 +220,10 @@ msgstr "Load Die from file"
 #: Scenes/board.tscn
 msgid "COSMETICS_D_DEFAULT"
 msgstr "Die to Default"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_DEFAULTSLEEVES"
+msgstr "Default Sleeves"
 
 #: Scenes/board.tscn
 msgid "COSMETICS_CANCEL"
@@ -284,10 +304,6 @@ msgstr "No One"
 #: Scenes/board.tscn Scripts/Multiplayer.gd
 msgid "LOBBY_READY"
 msgstr "Ready"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "DECK_SELECT"
-msgstr "Choose Deck"
 
 #: Scenes/board.tscn
 msgid "LOBBY_CHOSEN"
@@ -371,6 +387,12 @@ msgid "DOWNLOAD_CARD"
 msgstr "Update Card DB"
 
 #: Scenes/board.tscn
+msgid "UPDATE_NOTFOUND"
+msgstr ""
+"Couldn't connect to server for update.\n"
+"You can continue, but only the deckbuilder will work."
+
+#: Scenes/board.tscn
 msgid "BACK"
 msgstr "Back"
 
@@ -378,7 +400,7 @@ msgstr "Back"
 msgid "DECK_SELECT_CANCEL"
 msgstr "Cancel"
 
-#: Scenes/deck_list.tscn
+#: Scenes/deck_list.tscn Scripts/deck_list.gd
 msgid "DECK_DELETE_CONFIRM"
 msgstr "Permanently Delete {deckName}?"
 
@@ -410,6 +432,10 @@ msgstr "Go second"
 msgid "END_TURN"
 msgstr "End Turn"
 
+#: Scenes/side.tscn Scripts/side.gd
+msgid "TURN_COUNT"
+msgstr "Turn {turn}"
+
 #: Scenes/side.tscn
 msgid "START_READY"
 msgstr "Ready"
@@ -434,6 +460,10 @@ msgstr "Card Information"
 msgid "TAB_OSHI"
 msgstr "Oshi"
 
+#: Scenes/deck_creation.tscn
+msgid "SEARCH"
+msgstr "Search"
+
 #: Scenes/deck_creation.tscn Scripts/deck_creation.gd
 msgid "NAME"
 msgstr "Name"
@@ -443,12 +473,20 @@ msgid "COLOR"
 msgstr "Color"
 
 #: Scenes/deck_creation.tscn
-msgid "FILTER_CLEAR"
-msgstr "Clear Filters"
+msgid "LIFE_5"
+msgstr "5 Life"
 
 #: Scenes/deck_creation.tscn
-msgid "SEARCH"
-msgstr "Search"
+msgid "LIFE_6"
+msgstr "6 Life"
+
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "SETCODE"
+msgstr "Setcode"
+
+#: Scenes/deck_creation.tscn
+msgid "FILTER_CLEAR"
+msgstr "Clear Filters"
 
 #: Scenes/deck_creation.tscn
 msgid "TAB_HOLOMEM"
@@ -478,6 +516,18 @@ msgstr "2nd"
 msgid "LEVEL_SPOT"
 msgstr "SPOT"
 
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "ADVANTAGE"
+msgstr "Advantage"
+
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "EFFECT"
+msgstr "Effect"
+
+#: Scenes/deck_creation.tscn
+msgid "EFFECT_ANY"
+msgstr "Any Effect"
+
 #: Scenes/deck_creation.tscn
 msgid "TAG_PLURAL"
 msgstr "Tags"
@@ -485,6 +535,10 @@ msgstr "Tags"
 #: Scenes/deck_creation.tscn
 msgid "BUZZ"
 msgstr "Buzz"
+
+#: Scenes/deck_creation.tscn
+msgid "NOTBUZZ"
+msgstr "Not Buzz"
 
 #: Scenes/deck_creation.tscn
 msgid "TAB_SUPPORT"
@@ -497,6 +551,14 @@ msgstr "Type"
 #: Scenes/deck_creation.tscn
 msgid "SUPPORT_LIMITED"
 msgstr "Limited"
+
+#: Scenes/deck_creation.tscn
+msgid "SUPPORT_UNLIMITED"
+msgstr "Not Limited"
+
+#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+msgid "TAG"
+msgstr "Tag"
 
 #: Scenes/deck_creation.tscn
 msgid "TAB_CHEER"
@@ -521,10 +583,6 @@ msgstr "Main Deck"
 #: Scenes/deck_creation.tscn
 msgid "CHEER"
 msgstr "Cheer"
-
-#: Scenes/deck_creation.tscn
-msgid "OSHI"
-msgstr "Oshi"
 
 #: Scenes/deck_creation.tscn
 msgid "LOAD"
@@ -554,6 +612,10 @@ msgstr "Download"
 msgid "DECK_SAVE_CANCEL"
 msgstr "Cancel"
 
+#: Scenes/deck_creation.tscn
+msgid "LOADING"
+msgstr "Loading..."
+
 #: Scripts/RemapButton.gd
 msgid "REMAP_WAIT"
 msgstr "... Waiting ..."
@@ -567,8 +629,20 @@ msgid "COLOR_ANY"
 msgstr "Any Color"
 
 #: Scripts/deck_creation.gd
+msgid "SETCODE_ANY"
+msgstr "Any Setcode"
+
+#: Scripts/deck_creation.gd
+msgid "ADVANTAGE_ANY"
+msgstr "Any Advantage"
+
+#: Scripts/deck_creation.gd
 msgid "SUPPORT_TYPE_ANY"
 msgstr "Any Type"
+
+#: Scripts/deck_creation.gd
+msgid "TAG_ANY"
+msgstr "Any Tag"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOOSHI"
@@ -707,6 +781,14 @@ msgid "READY_WAIT"
 msgstr "Waiting"
 
 #: Scripts/side.gd
+msgid "CARD_HOLOMEM_REQUESTDAMAGE"
+msgstr "Request damage"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REQUESTDAMAGEBACK"
+msgstr "Request damage to all back holomem"
+
+#: Scripts/side.gd
 msgid "CARD_HOLOMEM_LOOK_ATTACHED"
 msgstr "Look at attached"
 
@@ -825,6 +907,10 @@ msgstr "Holopower"
 #: Scripts/side.gd
 msgid "CARD_HAND_REVEAL"
 msgstr "Reveal"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_REVEALALL"
+msgstr "Reveal Hand"
 
 #: Scripts/side.gd
 msgid "CARD_STAGE_ARCHIVE"
@@ -1107,6 +1193,30 @@ msgid "PROMPT_HOLOPOWER_ARCHIVE"
 msgstr "Archive X Cards"
 
 #: Scripts/side.gd
+msgid "PROMPT_NOTE"
+msgstr "Add A Note"
+
+#: Scripts/side.gd
+msgid "PROMPT_NOTE_PLACEHOLDER"
+msgstr "Write Note Here..."
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONEDAMAGE"
+msgstr "Add damage to zone"
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONEDAMAGEREMOVE"
+msgstr "Remove damage from zone"
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONEDAMAGEALL"
+msgstr "Add damage to all back zones"
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONENOTE"
+msgstr "Leave a note on zone"
+
+#: Scripts/side.gd
 msgid "PROMPT_ART_DAMAGE"
 msgstr "Deal X Damage"
 
@@ -1117,14 +1227,6 @@ msgstr "Opponent Going Second"
 #: Scripts/side.gd
 msgid "TURN_FIRST"
 msgstr "Opponent Going First"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_REQUESTDAMAGE"
-msgstr "Request damage"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_REQUESTDAMAGEBACK"
-msgstr "Request damage to all back holomem"
 
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_CARDS"
@@ -1293,6 +1395,10 @@ msgstr "{person} put a card in holopower from hand"
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_REVEAL"
 msgstr "{person} revealed {cardName} from hand"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_REVEALALL"
+msgstr "{person} revealed entire hand to opponent."
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_SUPPORT_PLAY"
@@ -1645,6 +1751,10 @@ msgid "YOU_MESSAGE_HAND_REVEAL"
 msgstr "You revealed {cardName} from hand"
 
 #: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_REVEALALL"
+msgstr "You revealed your entire hand to your opponent"
+
+#: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_HAND_SUPPORT_PLAY"
 msgstr "You played {cardName}"
 
@@ -1954,79 +2064,82 @@ msgstr "You forfeited"
 msgid "LOBBY_PUBLIC"
 msgstr "Public"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NOBODY"
 msgstr "Nobody?"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NAMESEP"
 msgstr "/"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "COLORLESS"
 msgstr "Colorless"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "COLORSEP"
 msgstr "/"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NAME_BUZZ"
 msgstr "buzz!"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI"
 msgstr ""
 "{colorText} Oshi Holomem\n"
 "Life: {life}{tagsText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI_SPSKILL"
 msgstr "SP Oshi Skill Holopower -{costText}   \"{nameText}\""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI_SKILL"
 msgstr "Oshi Skill Holopower -{costText}   \"{nameText}\""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_SPOT"
 msgstr "SPOT"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_DEBUT"
 msgstr "Debut"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_1ST"
 msgstr "1st Bloom"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_2ND"
 msgstr "2nd Bloom"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_BUZZ"
 msgstr "Buzz "
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_HOLOMEM_1"
 msgstr ""
 "{colorText} {levelText} {buzzText}Holomem\n"
 "HP: {hpText}\n"
 "Tags: {tagsText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_NOBATONPASSCOST"
 msgstr "Free"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_HOLOMEM_2"
 msgstr "Baton Pass: {costText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_SUPPORT"
 msgstr "{supportText} ({typeText}){tagsText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_LIMITED"
 msgstr "LIMITED: Only one can be used per turn."
+
+#~ msgid "OSHI"
+#~ msgstr "Oshi"

@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ngxbbonnmuab"
-path="res://.godot/imported/Deck_Builder_BG.png-7af13507ce3e552ba1711794462a696b.ctex"
+path.s3tc="res://.godot/imported/Deck_Builder_BG.png-7af13507ce3e552ba1711794462a696b.s3tc.ctex"
+path.etc2="res://.godot/imported/Deck_Builder_BG.png-7af13507ce3e552ba1711794462a696b.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://CyberAssets/DeckBuilder/Deck_Builder_BG.png"
-dest_files=["res://.godot/imported/Deck_Builder_BG.png-7af13507ce3e552ba1711794462a696b.ctex"]
+dest_files=["res://.godot/imported/Deck_Builder_BG.png-7af13507ce3e552ba1711794462a696b.s3tc.ctex", "res://.godot/imported/Deck_Builder_BG.png-7af13507ce3e552ba1711794462a696b.etc2.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

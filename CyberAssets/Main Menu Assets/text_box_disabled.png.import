@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3fo5e4j2doqj"
-path="res://.godot/imported/text_box_disabled.png-8ec3e4c5b529960a8ae2f7a9e89aca1c.ctex"
+path.s3tc="res://.godot/imported/text_box_disabled.png-8ec3e4c5b529960a8ae2f7a9e89aca1c.s3tc.ctex"
+path.etc2="res://.godot/imported/text_box_disabled.png-8ec3e4c5b529960a8ae2f7a9e89aca1c.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://CyberAssets/Main Menu Assets/text_box_disabled.png"
-dest_files=["res://.godot/imported/text_box_disabled.png-8ec3e4c5b529960a8ae2f7a9e89aca1c.ctex"]
+dest_files=["res://.godot/imported/text_box_disabled.png-8ec3e4c5b529960a8ae2f7a9e89aca1c.s3tc.ctex", "res://.godot/imported/text_box_disabled.png-8ec3e4c5b529960a8ae2f7a9e89aca1c.etc2.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

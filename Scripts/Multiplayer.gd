@@ -9,8 +9,12 @@ var deckInfo
 
 var playmat
 var dice
+var defaultSleeve
+var defaultCheerSleeve
 var default_playmat = preload("res://playmat.jpg")
 var default_dice = preload("res://diceTexture.png").get_image()
+var playmat_file_access_web
+var dice_file_access_web
 
 var yourSide
 var opponentSide
@@ -135,6 +139,19 @@ func _ready():
 		dice = Image.new()
 		dice.load_webp_from_buffer(Settings.settings.Dice)
 		%Die.new_texture(dice)
+	if OS.has_feature("web"):
+		playmat_file_access_web = FileAccessWeb.new()
+		playmat_file_access_web.loaded.connect(_on_playmat_web_load_dialog_file_selected)
+		dice_file_access_web = FileAccessWeb.new()
+		dice_file_access_web.loaded.connect(_on_dice_web_load_dialog_file_selected)
+	if Settings.settings.has("DefaultSleeve") and Settings.settings.DefaultSleeve.size() > 0:
+		defaultSleeve = Image.new()
+		defaultSleeve.load_webp_from_buffer(Settings.settings.DefaultSleeve)
+		%defaultSleeve.new_sleeve(defaultSleeve, false)
+	if Settings.settings.has("DefaultCheerSleeve") and Settings.settings.DefaultCheerSleeve.size() > 0:
+		defaultCheerSleeve = Image.new()
+		defaultCheerSleeve.load_webp_from_buffer(Settings.settings.DefaultCheerSleeve)
+		%defaultCheerSleeve.new_sleeve(defaultCheerSleeve, false)
 	
 	%LanguageSelect.text = Settings.get_language()
 	%InfoMargins.update_word_wrap()
@@ -166,8 +183,6 @@ func _ready():
 	#Visual
 	%ClientVersionText.text += Settings.client_version
 	%DeckLocation.text += ProjectSettings.globalize_path("user://Decks")
-	if !(OS.has_feature("web") or OS.get_name() == "Web"):
-		%ClientVersionText.visible = true
 	
 	%LobbiesFoundLabel.text = tr("LOBBY_PUBLIC_LOBBIES_FOUND").format({"amount": "0"})
 	%SpectateFoundLabel.text = tr("SPECTATE_PUBLIC_GAMES_FOUND").format({"amount": "0"})
@@ -267,7 +282,7 @@ func _on_deck_creation_pressed():
 #region Setup
 
 func _attempt_download_zip():
-	%ProgressBar.max_value = 60000000 #Yeah I'm just hard-coding that it expects ~60 MB cuz getting the actual number is tricky
+	%PopupProgressBar.max_value = 60000000 #Yeah I'm just hard-coding that it expects ~60 MB cuz getting the actual number is tricky
 	%Failure.visible = false
 	%Update.visible = false
 	%Popup.visible = true
@@ -288,18 +303,11 @@ func _attempt_load_zip():
 	var success = ProjectSettings.load_resource_pack("user://cardData.zip")
 	if success:
 		_start_data()
-		#_attempt_download_version()
 	else:
 		_load_zip_failed()
 
 func _attempt_download_version():
-	%HTTPManager.job(proper_hypertext + Server.websocketURL + "/version").on_success(_download_version_succeded).on_failure(_download_version_failed).fetch()
-
-func _start_data():
-	Settings.card_version = FileAccess.get_file_as_string("res://cardLocalization/card_version.txt")
-	%CardVersionText.text = "Card Version " + Settings.card_version
-	json.parse(FileAccess.get_file_as_string("res://cardData.json"))
-	Database.setup_data(json.data, Settings._connect_local.bind(%Timer2.start))
+	%VersionHTTPManager.job(proper_hypertext + Server.websocketURL + "/version").on_success(_download_version_succeded).on_failure(_download_version_failed).fetch()
 
 func _download_version_succeded(result):
 	if FileAccess.file_exists("user://cardData.zip"):
@@ -326,6 +334,15 @@ func _download_version_succeded(result):
 	else:
 		_attempt_load_zip()
 
+func _go_to_github():
+	OS.shell_open("https://github.com/GabeJWJ/holoDelta/releases/latest")
+
+func _start_data():
+	Settings.card_version = FileAccess.get_file_as_string("res://cardLocalization/card_version.txt")
+	%CardVersionText.text = "Card Version " + Settings.card_version
+	INTJSON.parse(FileAccess.get_file_as_string("res://cardData.json"))
+	Database.setup_data(INTJSON.data, Settings._connect_local.bind(%Timer2.start))
+
 func _do_final():
 	Database.setup = true
 	%Popup.visible = false
@@ -348,8 +365,15 @@ func _load_zip_failed():
 	switch_menu("failure", false)
 
 func _download_version_failed(_result):
-	# DO NOT FORGET THIS SHOULD LOAD ZIP
-	print("Failed")
+	%UpdateTitle.visible = false
+	%UpdateClientBody.visible = false
+	%Client_Download.visible = false
+	%UpdateCardBody.visible = false
+	%Card_Download.visible = false
+	%UpdateNotFound.visible = true
+	%Popup.visible = false
+	
+	switch_menu("update", false)
 
 func _download_progress(_assigned_files, _current_files, total_bytes, current_bytes):
 	%PopupProgressBar.value = current_bytes
@@ -360,6 +384,7 @@ func _download_progress(_assigned_files, _current_files, total_bytes, current_by
 @onready var menus = {
 	"option": %OptionPanel,
 	"credits": %CreditsPanel,
+	"goldfish": %GoldfishStartMenu,
 	"create_lobby": %LobbyCreateMenu,
 	"join_lobby": %LobbyPanel,
 	"spectate_game": %SpectatePanel,
@@ -435,10 +460,16 @@ func _on_cosmetics_exit_pressed():
 	%CustomizationPanel.visible = false
 
 func _on_playmat_pressed():
-	%PlaymatLoadDialog.visible = true
+	if OS.has_feature("web"):
+		playmat_file_access_web.open(".jpg,.png,.webp")
+	else:
+		%PlaymatLoadDialog.visible = true
 
 func _on_dice_pressed():
-	%DiceLoadDialog.visible = true
+	if OS.has_feature("web"):
+		dice_file_access_web.open(".jpg,.png,.webp")
+	else:
+		%DiceLoadDialog.visible = true
 
 func _on_playmat_load_dialog_file_selected(path):
 	playmat = Image.load_from_file(path)
@@ -448,6 +479,37 @@ func _on_playmat_load_dialog_file_selected(path):
 
 func _on_dice_load_dialog_file_selected(path):
 	dice = Image.load_from_file(path)
+	%Die.new_texture(dice)
+	Settings.update_settings("Dice",Array(dice.save_webp_to_buffer(true)))
+
+func _on_playmat_web_load_dialog_file_selected(file_name: String, type: String, base64_data: String) -> void:
+	var data = Marshalls.base64_to_raw(base64_data)
+	playmat = Image.new()
+	
+	match type:
+		"image/jpeg":
+			playmat.load_jpg_from_buffer(data)
+		"image/png":
+			playmat.load_png_from_buffer(data)
+		"image/webp":
+			playmat.load_webp_from_buffer(data)
+	
+	playmat.resize(3485,1480)
+	%PlaymatTextureRect.texture = ImageTexture.create_from_image(playmat)
+	Settings.update_settings("Playmat",Array(playmat.save_webp_to_buffer(true)))
+
+func _on_dice_web_load_dialog_file_selected(file_name: String, type: String, base64_data: String) -> void:
+	var data = Marshalls.base64_to_raw(base64_data)
+	dice = Image.new()
+	
+	match type:
+		"image/jpeg":
+			dice.load_jpg_from_buffer(data)
+		"image/png":
+			dice.load_png_from_buffer(data)
+		"image/webp":
+			dice.load_webp_from_buffer(data)
+	
 	%Die.new_texture(dice)
 	Settings.update_settings("Dice",Array(dice.save_webp_to_buffer(true)))
 
@@ -461,11 +523,31 @@ func _on_dice_default_pressed():
 	%Die.new_texture(default_dice)
 	Settings.update_settings("Dice",null)
 
+func _on_default_sleeve_updated(back_to_default: bool) -> void:
+	if back_to_default:
+		Settings.update_settings("DefaultSleeve", null)
+	else:
+		Settings.update_settings("DefaultSleeve", Array(%defaultSleeve.current_sleeve.save_webp_to_buffer(true)))
+
+func _on_default_cheer_sleeve_updated(back_to_default: bool) -> void:
+	if back_to_default:
+		Settings.update_settings("DefaultCheerSleeve", null)
+	else:
+		Settings.update_settings("DefaultCheerSleeve", Array(%defaultCheerSleeve.current_sleeve.save_webp_to_buffer(true)))
+
 func _on_hide_cosmetics_toggled(toggled_on):
 	if toggled_on:
-		opponentSide._hide_cosmetics()
+		if len(spectatedSides) > 0:
+			for spectated in spectatedSides:
+				spectatedSides[spectated]._hide_cosmetics()
+		else:
+			opponentSide._hide_cosmetics()
 	else:
-		opponentSide._redo_cosmetics()
+		if len(spectatedSides) > 0:
+			for spectated in spectatedSides:
+				spectatedSides[spectated]._redo_cosmetics()
+		else:
+			opponentSide._redo_cosmetics()
 #endregion
 
 func _on_info_button_pressed():
@@ -473,6 +555,8 @@ func _on_info_button_pressed():
 
 func _on_deck_location_button_pressed():
 	%DeckLocation.visible = !%DeckLocation.visible
+	if %DeckLocation.visible and !(OS.has_feature("web") or OS.get_name() == "Web"):
+		OS.shell_open(%DeckLocation.text)
 
 #region Sidebar
 # If you want to add more tabs to the sidebar, follow these steps:
@@ -660,6 +744,7 @@ func _on_websocket_connected(url):
 	%LobbyCreate.disabled = false
 	%LobbyJoin.disabled = false
 	%GameSpectate.disabled = false
+	%Goldfish.disabled = false
 	
 	# NOTE: This section is for the dialog in main menu
 	# solely for the purpose of query param deck check
@@ -691,8 +776,8 @@ func _on_websocket_received(raw_data):
 		if index < commands.size()-1:
 			command += "}"
 			
-		json.parse(command)
-		var message = json.data
+		INTJSON.parse(command)
+		var message = INTJSON.data
 		
 		if "number" in message:
 			var new_number = int(message["number"])
@@ -762,14 +847,20 @@ func _on_websocket_received(raw_data):
 								%Error.get_parent().move_child(%Error, -1) # Make Error receive input events as well as being in front
 						"Spectate":
 							# This command is only received once when the spectator first joins
-							if "game_state" in data:
+							if "game_state" in data and "game_id" in data:
 								#_enable_steps(!data["game_state"]["firstTurn"])
 								# I have no reliable way to reenable the perf button for spectator only
 								# So I will leave it enabled from the start!
 								# The best solution is the server sends whether it is turn 1 in the step command
 								_enable_steps(true)
 								_actually_select_step(int(data["game_state"]["step"]))
-								show_spectated_game(data["game_state"]["players"])
+								show_spectated_game(data["game_state"]["players"], data["game_id"])
+						"Goldfish":
+							show_goldfish_game()
+						"Goldfish Deck Legality":
+							pass
+						"Goldfish Failed":
+							print("Failed to goldfish")
 						_:
 							pass
 				"Lobby":
@@ -828,8 +919,9 @@ func lobby_command(command:String, data:Dictionary):
 						lobby_deckerrorlist.text += tr(reason[0]).format({"cardNum":reason[1]}) + "\n"
 					lobby_deckerror.visible = true
 		"Game Start":
-			if "id" in data and "opponent_id" in data and "name" in data and !inGame:
-				show_game(data["id"],data["opponent_id"],data["name"])
+			print(data)
+			if "id" in data and "opponent_id" in data and "name" in data and "oshi" in data and "passcode" in data and !inGame:
+				show_game(data["id"],data["opponent_id"],data["name"], data["oshi"], data["passcode"])
 		"Game Start Without You":
 			if "id" in data and !gameToSpectate:
 				exit_lobby()
@@ -1043,23 +1135,25 @@ func _hide_deck_list():
 
 func _on_deck_list_selected(deckJSON):
 	deckInfo = deckJSON
-	if lobby_you_are_host:
-		lobby_host_deck_select.text = deckInfo.deckName
-		lobby_host_ready.disabled = false
+	if current_lobby:
+		if lobby_you_are_host:
+			lobby_host_deck_select.text = deckInfo.deckName
+			lobby_host_ready.disabled = false
+		else:
+			lobby_chosen_deck_select.text = deckInfo.deckName
+			lobby_chosen_ready.disabled = false
 	else:
-		lobby_chosen_deck_select.text = deckInfo.deckName
-		lobby_chosen_ready.disabled = false
+		%GoldfishDeck.text = deckInfo.deckName
+		%FinalGoldfishCreate.disabled = false
 	_hide_deck_list()
 
 func ready_lobby():
-	send_command("Lobby","Ready",{"deck":deckInfo})
+	send_command("Lobby","Ready",{"deck":{"oshi":deckInfo.oshi, "deck": deckInfo.deck, "cheerDeck":deckInfo.cheerDeck }})
 	if lobby_you_are_host:
 		lobby_host_deck_select.disabled = true
-		#lobby_host_ready.disabled = true
 		lobby_host_ready.text = tr("LOBBY_WAITING")
 	else:
 		lobby_chosen_deck_select.disabled = true
-		#lobby_chosen_ready.disabled = true
 		lobby_chosen_ready.text = tr("LOBBY_WAITING")
 
 func close_deckerror() -> void:
@@ -1104,18 +1198,29 @@ func clear_lobby_menu() -> void:
 func start_game():
 	send_command("Lobby","Start Game")
 
-func show_game(game_id:String,opponent_id:String,opponent_name:String) -> void:
+func show_game(game_id:String,opponent_id:String,opponent_name:String,opponent_oshi:Array,passcode:String) -> void:
 	inGame = true
+	
+	if "sleeve" not in deckInfo and !%defaultSleeve.is_default:
+		deckInfo["sleeve"] = %defaultSleeve.current_sleeve.save_webp_to_buffer(true)
+	if "cheerSleeve" not in deckInfo and !%defaultCheerSleeve.is_default:
+		deckInfo["cheerSleeve"] = %defaultCheerSleeve.current_sleeve.save_webp_to_buffer(true)
 	
 	yourSide = player_side.instantiate()
 	yourSide.is_your_side = true
 	yourSide.name = "yourSide"
 	yourSide.player_id = player_id
 	yourSide.player_name = player_name
+	yourSide.game_id = game_id
+	yourSide.download_url = proper_hypertext + Server.websocketURL
+	yourSide.passcode = passcode
 	opponentSide = player_side.instantiate()
 	opponentSide.name = "opponentSide"
 	opponentSide.player_id = opponent_id
 	opponentSide.player_name = opponent_name
+	opponentSide.oshi = opponent_oshi
+	opponentSide.game_id = game_id
+	opponentSide.download_url = proper_hypertext + Server.websocketURL
 	yourSide.card_info_set.connect(update_info)
 	yourSide.card_info_clear.connect(clear_info)
 	opponentSide.card_info_set.connect(update_info)
@@ -1133,7 +1238,49 @@ func show_game(game_id:String,opponent_id:String,opponent_name:String) -> void:
 	
 	fix_font_size()
 
+func _goldfish_menu() -> void:
+	switch_menu("goldfish")
+
+func _close_goldfish_menu() -> void:
+	switch_menu("goldfish", true)
+
+func _attempt_goldfish() -> void:
+	if deckInfo:
+		send_command("Server", "Start Goldfishing", {"deck_info":{"oshi":deckInfo.oshi, "deck": deckInfo.deck, "cheerDeck":deckInfo.cheerDeck }})
+
+func show_goldfish_game() -> void:
+	inGame = true
+	
+	if "sleeve" not in deckInfo and !%defaultSleeve.is_default:
+		deckInfo["sleeve"] = %defaultSleeve.current_sleeve.save_webp_to_buffer(true)
+	if "cheerSleeve" not in deckInfo and !%defaultCheerSleeve.is_default:
+		deckInfo["cheerSleeve"] = %defaultCheerSleeve.current_sleeve.save_webp_to_buffer(true)
+	
+	yourSide = player_side.instantiate()
+	yourSide.is_your_side = true
+	yourSide.name = "yourSide"
+	yourSide.is_goldfishing = true
+	yourSide.player_id = player_id
+	yourSide.player_name = player_name
+	opponentSide = player_side.instantiate()
+	opponentSide.name = "opponentSide"
+	opponentSide.stripped_bare = true
+	yourSide.card_info_set.connect(update_info)
+	yourSide.card_info_clear.connect(clear_info)
+	call_deferred("add_child",yourSide)
+	call_deferred("add_child",opponentSide)
+	
+	yourSide.ended_turn.connect(_on_end_turn)
+	yourSide.made_turn_choice.connect(_on_choice_made)
+	
+	_hide_main_menu()
+	%MainMenu.visible = true
+	%ChatHBox.visible = false
+	
+	fix_font_size()
+
 func _hide_main_menu():
+	%GoldfishStartMenu.visible = false
 	%LobbyScreen.visible = false
 	%LobbyButtons.visible = false
 	%TitleVBox.visible = false
@@ -1164,7 +1311,7 @@ func _spectate_no():
 	%SpectateConfirmPanel.visible = false
 	gameToSpectate = null
 
-func show_spectated_game(player_info:Dictionary) -> void:
+func show_spectated_game(player_info:Dictionary, game_id:String) -> void:
 	inGame = true
 	var firstPlayer = true
 	for player in player_info:
@@ -1172,6 +1319,8 @@ func show_spectated_game(player_info:Dictionary) -> void:
 		newSide.is_front = firstPlayer
 		newSide.side_info = player_info[player]["side"]
 		newSide.player_id = player
+		newSide.game_id = game_id
+		newSide.download_url = proper_hypertext + Server.websocketURL
 		newSide.player_name = player_info[player]["name"]
 		newSide.card_info_set.connect(update_info)
 		newSide.card_info_clear.connect(clear_info)
@@ -1248,6 +1397,9 @@ func game_command(command: String, data: Dictionary) -> void:
 		"Select Step":
 			if "step" in data:
 				_actually_select_step(int(data["step"]))
+		
+		"Cosmetics Issues":
+			print(data)
 		
 		"Chat":
 			if "sender" in data and "message" in data:
@@ -1387,6 +1539,7 @@ func _not_real():
 	tr("MESSAGE_HAND_ARCHIVE")
 	tr("MESSAGE_HAND_HOLOPOWER")
 	tr("MESSAGE_HAND_REVEAL")
+	tr("MESSAGE_HAND_REVEALALL")
 	tr("MESSAGE_HAND_SUPPORT_PLAY")
 	tr("MESSAGE_FUDA_REVEAL")
 	tr("MESSAGE_HOLOPOWER_REVEAL")
@@ -1471,6 +1624,7 @@ func _not_real():
 	tr("YOU_MESSAGE_HAND_ARCHIVE")
 	tr("YOU_MESSAGE_HAND_HOLOPOWER")
 	tr("YOU_MESSAGE_HAND_REVEAL")
+	tr("YOU_MESSAGE_HAND_REVEALALL")
 	tr("YOU_MESSAGE_HAND_SUPPORT_PLAY")
 	tr("YOU_MESSAGE_FUDA_REVEAL")
 	tr("YOU_MESSAGE_HOLOPOWER_REVEAL")

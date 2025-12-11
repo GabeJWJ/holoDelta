@@ -1,10 +1,11 @@
-[gd_scene load_steps=30 format=3 uid="uid://j87r323v31qv"]
+[gd_scene load_steps=32 format=3 uid="uid://j87r323v31qv"]
 
-[ext_resource type="Script" path="res://Scripts/side.gd" id="1_vy6dv"]
+[ext_resource type="Script" uid="uid://ylf18j5yu4ay" path="res://Scripts/side.gd" id="1_vy6dv"]
 [ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="2_0kggm"]
 [ext_resource type="PackedScene" uid="uid://md0n47hsxcob" path="res://Scenes/zone.tscn" id="2_a11wy"]
 [ext_resource type="PackedScene" uid="uid://hxi6y3mwpmp8" path="res://Scenes/fuda.tscn" id="3_4khac"]
 [ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="7_3wwxl"]
+[ext_resource type="FontFile" uid="uid://d1prs0o0rldol" path="res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf" id="7_exc88"]
 [ext_resource type="StyleBox" uid="uid://ilsjg8vo6p8q" path="res://side.tres" id="8_f6ll5"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="8_u8usn"]
 [ext_resource type="Texture2D" uid="uid://cxhb21jecugn" path="res://SPup.png" id="9_7k57a"]
@@ -20,6 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://n18ctlpyptml" path="res://HaruTsunXAssets/Card Shuffle 4.wav" id="20_2u3sr"]
 [ext_resource type="AudioStream" uid="uid://citw8blr274yn" path="res://HaruTsunXAssets/Die Roll 2.wav" id="22_ptb4f"]
 [ext_resource type="AudioStream" uid="uid://cfaofku10o646" path="res://HaruTsunXAssets/Card Move 1.wav" id="23_o1mwf"]
+[ext_resource type="Script" uid="uid://dpmwhedq5ws5x" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="24_i3t2a"]
 [ext_resource type="AudioStream" uid="uid://nn13swso7n21" path="res://HaruTsunXAssets/Place Card 1.wav" id="24_q5bqm"]
 [ext_resource type="AudioStream" uid="uid://bp0x05dxnfc2o" path="res://HaruTsunXAssets/Place Card 2.wav" id="25_30rg1"]
 [ext_resource type="AudioStream" uid="uid://cxg5uowbntxl3" path="res://HaruTsunXAssets/Place Card 3.wav" id="26_u0kxe"]
@@ -206,7 +208,7 @@ anchor_bottom = 0.5
 offset_left = 102.0
 offset_top = -56.0
 offset_right = 367.0
-offset_bottom = 39.0
+offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_u8usn")
@@ -220,10 +222,10 @@ anchor_left = 0.01
 anchor_top = 0.01
 anchor_right = 0.05
 anchor_bottom = 0.01
-offset_left = 0.04
-offset_top = -0.14
-offset_right = 246.2
-offset_bottom = 91.86
+offset_left = 2.3499973
+offset_top = 1.879989
+offset_right = 248.51001
+offset_bottom = 105.87999
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/line_spacing = 20
 theme_override_font_sizes/font_size = 28
@@ -233,10 +235,10 @@ X="
 [node name="LineEdit" type="LineEdit" parent="CanvasLayer/Prompt/Input"]
 auto_translate_mode = 2
 layout_mode = 0
-offset_left = 54.0
-offset_top = 46.0
-offset_right = 241.0
-offset_bottom = 85.0
+offset_left = 54.309998
+offset_top = 48.01999
+offset_right = 241.31
+offset_bottom = 100.01999
 theme_override_font_sizes/font_size = 30
 placeholder_text = "7"
 max_length = 2
@@ -247,6 +249,57 @@ offset_left = 287.0
 offset_top = 41.0
 offset_right = 446.0
 offset_bottom = 88.0
+theme_override_font_sizes/font_size = 25
+text = "PROMPT_SUBMIT"
+
+[node name="PromptText" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 102.0
+offset_top = -56.0
+offset_right = 367.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_u8usn")
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="Input" type="Label" parent="CanvasLayer/PromptText"]
+auto_translate_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.01
+anchor_right = 0.05
+anchor_bottom = 0.01
+offset_left = 2.3499973
+offset_top = 1.4499962
+offset_right = 248.75
+offset_bottom = 38.449997
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 20
+theme_override_font_sizes/font_size = 25
+text = "PROMPT_NOTE"
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/PromptText/Input"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 39.0
+offset_right = 253.0
+offset_bottom = 146.0
+theme_override_fonts/font = ExtResource("7_exc88")
+placeholder_text = "PROMPT_NOTE_PLACEHOLDER"
+
+[node name="Submit" type="Button" parent="CanvasLayer/PromptText"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 165.0
+offset_right = 272.0
+offset_bottom = 212.0
 theme_override_font_sizes/font_size = 25
 text = "PROMPT_SUBMIT"
 
@@ -307,14 +360,28 @@ visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -208.0
+offset_left = -153.0
 offset_top = 16.0
 offset_right = -14.0
-offset_bottom = 41.0
+offset_bottom = 56.0
 grow_horizontal = 0
 theme = ExtResource("8_u8usn")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 20
 text = "END_TURN"
+
+[node name="TurnCount" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_left = 1127.0
+offset_top = 71.0
+offset_right = 1269.0
+offset_bottom = 105.0
+theme = ExtResource("8_u8usn")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "TURN_COUNT"
+horizontal_alignment = 2
 
 [node name="Ready" type="Button" parent="CanvasLayer"]
 visible = false
@@ -537,6 +604,18 @@ bus = &"SFX"
 wait_time = 0.5
 one_shot = true
 
+[node name="CosmeticsTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.5
+one_shot = true
+
+[node name="HTTPManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("24_i3t2a")
+parallel_connections_count = 10
+print_debug = true
+metadata/_custom_type_script = "uid://dpmwhedq5ws5x"
+
 [connection signal="zone_clicked" from="Zones/Center" to="." method="_on_zone_clicked"]
 [connection signal="zone_info_clear" from="Zones/Center" to="." method="clear_info"]
 [connection signal="zone_info_set" from="Zones/Center" to="." method="_on_zone_enter"]
@@ -574,6 +653,7 @@ one_shot = true
 [connection signal="rolled" from="SubViewportContainer/SubViewport/Node3D/Die" to="." method="_on_die_rolled"]
 [connection signal="text_submitted" from="CanvasLayer/Prompt/Input/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="CanvasLayer/Prompt/Submit" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="CanvasLayer/PromptText/Submit" to="." method="_on_text_edit_text_set"]
 [connection signal="pressed" from="CanvasLayer/Cancel" to="." method="_on_cancel_pressed"]
 [connection signal="pressed" from="CanvasLayer/Go First" to="." method="_go_first"]
 [connection signal="pressed" from="CanvasLayer/Go Second" to="." method="_go_second"]
@@ -588,3 +668,4 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/Question/KeepPlaying" to="." method="_on_keep_playing_pressed"]
 [connection signal="pressed" from="CanvasLayer/Question/OK" to="." method="yes_mulligan"]
 [connection signal="timeout" from="Timer" to="." method="finish_starting_spectate"]
+[connection signal="timeout" from="CosmeticsTimer" to="." method="upload_cosmetics"]

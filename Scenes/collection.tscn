@@ -4,37 +4,39 @@
 [ext_resource type="Texture2D" uid="uid://bi8y625jyb82c" path="res://rightArrow.png" id="1_ofk0v"]
 [ext_resource type="Texture2D" uid="uid://cocwa4l3oqfnr" path="res://leftArrow.png" id="2_v4h2d"]
 
-[node name="Collection" type="Node2D"]
+[node name="Collection" type="Control"]
+custom_minimum_size = Vector2(85, 135)
+layout_mode = 3
+anchor_right = 0.062
+anchor_bottom = 0.201
+offset_right = 5.64
+offset_bottom = -9.72
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_1rbjl")
 
-[node name="Cards" type="Node2D" parent="."]
+[node name="Cards" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.724
+offset_bottom = 0.0199966
 
 [node name="NextAltArt" type="TextureButton" parent="."]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 86.0
-offset_top = 190.0
-offset_right = 286.0
-offset_bottom = 490.0
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(0.4, 0.4)
+layout_mode = 0
+offset_left = 65.0
+offset_top = 105.0
+offset_right = 265.0
+offset_bottom = 405.0
+scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("1_ofk0v")
 
 [node name="LastAltArt" type="TextureButton" parent="."]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = -172.0
-offset_top = 190.0
-offset_right = 28.0
-offset_bottom = 490.0
-grow_vertical = 0
-scale = Vector2(0.4, 0.4)
+layout_mode = 0
+offset_top = 105.0
+offset_right = 200.0
+offset_bottom = 405.0
+scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("2_v4h2d")
 
-[connection signal="pressed" from="NextAltArt" to="." method="changeAltArt"]
+[connection signal="pressed" from="NextAltArt" to="." method="changeAltArt" binds= [1]]
 [connection signal="pressed" from="LastAltArt" to="." method="changeAltArt" binds= [-1]]

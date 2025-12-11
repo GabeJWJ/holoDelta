@@ -94,6 +94,3 @@ func encode_cache_info( cache_info:Dictionary ) -> String:
 		result += i+": "+cache_info[i]+"\r\n"
 	
 	return result
-
-
-

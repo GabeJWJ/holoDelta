@@ -7,10 +7,15 @@ extends Node2D
 @export var default_sleeve: CompressedTexture2D #Set up so you can drag and drop a default from editor
 var current_sleeve: Image
 var file_access_web : FileAccessWeb
+var is_default : bool:
+	get:
+		return $Default.disabled
+
+signal updated_sleeve(back_to_default: bool)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	new_sleeve()
+	new_sleeve(null, false)
 	if OS.has_feature("web"):
 		file_access_web = FileAccessWeb.new()
 		file_access_web.loaded.connect(_on_web_load_dialog_file_selected)
@@ -44,7 +49,7 @@ func _on_web_load_dialog_file_selected(file_name: String, type: String, base64_d
 		_:
 			new_sleeve()
 
-func new_sleeve(image=null) -> void:
+func new_sleeve(image=null, emitsignal=true) -> void:
 	#Actually sets the sleeve image
 	#Passing a null value resets to default
 	#image : Image - the new sleeve (or null)
@@ -53,9 +58,13 @@ func new_sleeve(image=null) -> void:
 	if image == null:
 		image = default_sleeve.get_image()
 		$Default.disabled = true
+		if emitsignal:
+			emit_signal("updated_sleeve", true)
 	else:
 		$Default.disabled = false
 		image.resize(309,429)
 		current_sleeve = image
+		if emitsignal:
+			emit_signal("updated_sleeve", false)
 	
 	$Preview.texture = ImageTexture.create_from_image(image)

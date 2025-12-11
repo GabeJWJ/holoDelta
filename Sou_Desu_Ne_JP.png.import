@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mjh73yjpldk6"
-path="res://.godot/imported/Sou_Desu_Ne_JP.png-78041384e858d052487b9b2a799764a5.ctex"
+path.s3tc="res://.godot/imported/Sou_Desu_Ne_JP.png-78041384e858d052487b9b2a799764a5.s3tc.ctex"
+path.etc2="res://.godot/imported/Sou_Desu_Ne_JP.png-78041384e858d052487b9b2a799764a5.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sou_Desu_Ne_JP.png"
-dest_files=["res://.godot/imported/Sou_Desu_Ne_JP.png-78041384e858d052487b9b2a799764a5.ctex"]
+dest_files=["res://.godot/imported/Sou_Desu_Ne_JP.png-78041384e858d052487b9b2a799764a5.s3tc.ctex", "res://.godot/imported/Sou_Desu_Ne_JP.png-78041384e858d052487b9b2a799764a5.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

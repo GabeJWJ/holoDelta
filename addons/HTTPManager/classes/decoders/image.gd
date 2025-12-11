@@ -29,4 +29,3 @@ func as_image( mime ):
 				return img
 	
 	return null
-

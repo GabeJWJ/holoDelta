@@ -1,5 +1,6 @@
 import json
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from os import fstat
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, UploadFile, HTTPException, Form, File
 from fastapi.responses import RedirectResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.gzip import GZipMiddleware
@@ -8,7 +9,7 @@ from classes.connection_manager import ConnectionManager
 from classes.player import Player
 from utils.card_utils import card_info
 from globals.data import initialize, get_data
-from globals.live_data import get_all_players, get_manager, initialize_manager
+from globals.live_data import get_all_players, get_manager, initialize_manager, get_all_games, get_game
 from utils.game_network_utils import update_numbers_all
 from utils.game_utils import call_command
 import utils.azure_blob_storage as azb
@@ -32,7 +33,7 @@ initialize_manager(ConnectionManager())
 
 app = FastAPI()
 app.mount("/game", StaticFiles(directory="Holodelta_web"), name="game")
-app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=9)
+app.add_middleware(GZipMiddleware, minimum_size=2000000, compresslevel=7)
 
 @app.get("/")
 def index():
@@ -41,7 +42,6 @@ def index():
 @app.get("/cardData.zip")
 async def get_card_data_archive():
     return StreamingResponse(await azb.get_card_data(), media_type="application/zip")
-
 
 @app.get("/version")
 def get_current_version():
@@ -58,6 +58,28 @@ def get_cards():
 @app.get("/check")
 def check_connection():
     return {"Success"}
+
+@app.post("/cosmetics/")
+async def download_cosmetics_file(game_id : str = Form(...), player_id : str = Form(...), cosmetics_type : str = Form(...)):
+    return StreamingResponse(await azb.download_cosmetics(game_id, player_id, cosmetics_type))
+
+@app.post("/uploadcosmetics/")
+async def upload_cosmetics_file(game_id : str = Form(...), player_id : str = Form(...), cosmetics_type : str = Form(...), passcode : str = Form(...), file : UploadFile = File(...) ):
+    #The passcode is for a very minor security concern
+    #So don't worry about it being sent in plaintext
+
+    if fstat(file.file.fileno()).st_size > 1000000:
+        raise HTTPException(status_code=413, detail="File must be under 1MB")
+    if file.content_type != "image/webp":
+        raise HTTPException(status_code=415, detail="File must be webp")
+    if game_id not in get_all_games() or player_id not in get_game(game_id).players:
+        raise HTTPException(status_code=400, detail="This game/player pair does not exist")
+    if passcode != get_game(game_id).cosmetics[player_id]["passcode"]:
+        raise HTTPException(status_code=401, detail="Incorrect passcode")
+    if cosmetics_type not in ["sleeve", "cheerSleeve", "playmat", "dice"]:
+        raise HTTPException(status_code=400, detail="Not a valid cosmetic type")
+    await azb.upload_cosmetics(game_id, player_id, cosmetics_type, await file.read())
+    return
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):

@@ -6,18 +6,17 @@
 #YourStuff has 3 tabs - Deck, Analytics, and Sleeves
 #Deck shows what the deck you're bulding currently looks like
 #Analytics has some stats of the deck
-#Sleeves has 3 SleeveSelects for main deck, cheer deck, and oshi
+#Sleeves has 2 SleeveSelects for main deck and cheer deck
 
 extends Node2D
 
 #region Variables
 
-const card = preload("res://Scenes/card.tscn")
+const card = preload("res://Scenes/card_info.tscn")
 const collection = preload("res://Scenes/collection.tscn")
 const collection_type = preload("res://Scripts/collection.gd")
 const default_sleeve = preload("res://holoBack.png")
 const default_cheer_sleeve = preload("res://cheerBack.png")
-const default_oshi_sleeve = preload("res://cheerBack.png")
 
 var all_cards = [] #Holds all cards, both in the right panel and your deck
 var collections = {} #Holds all normal collections in the right panel
@@ -37,7 +36,6 @@ var oshiCard #Actually the card object itself... for some reason
 var in_deck_dictionary = {}
 var sleeve = default_sleeve
 var cheer_sleeve = default_cheer_sleeve
-var oshi_sleeve = default_oshi_sleeve
 
 #Variables for analytics
 var total_main = 0
@@ -60,48 +58,65 @@ var tag_order = ["JP", "ID", "EN", "DEV_IS",
 	"Myth", "Council", "Promise", "Advent", "Justice",
 	"ReGloss", "FLOWGLOW",
 	"AnimalEars", "Art", "Bird", "Cooking", "Food", "HalfElf", "HoloWitch", "Kaela'sArms",
-	"Languages", "Magic", "Sea", "ShirakamiCharacter", "Shooter", "Song", "Baby", "Alcohol", "Summer"]
+	"Languages", "Magic", "Sea", "ShirakamiCharacter", "Shooter", "Song", "Baby", "Alcohol", "Summer", "BuzzMerch"]
 
 #Constants filled up at runtime. So the name select isn't giving you options that aren't in the game
 var oshi_colors = []
 var oshi_names = []
+var oshi_setcodes = []
 var holomem_colors = []
 var holomem_names = []
-var holomem_tags = tag_order
+var holomem_setcodes = []
+var holomem_effects = ["Bloom Effect", "Collab Effect", "Gift"]
+var holomem_tags = []
 var support_types = support_order
+var support_setcodes = []
+var support_tags = []
 
 #Filter Buttons/LineEdits
-@onready var oshi_name_select = $CanvasLayer/PossibleCards/TAB_OSHI/NameSelect
-@onready var oshi_color_select = $CanvasLayer/PossibleCards/TAB_OSHI/ColorSelect
-@onready var oshi_search = $CanvasLayer/PossibleCards/TAB_OSHI/Search
+@onready var oshi_name_select = $CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1/NameSelect
+@onready var oshi_color_select = $CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1/ColorSelect
+@onready var oshi_life5_select = $"CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1/5LifeSelect"
+@onready var oshi_life6_select = $"CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1/6LifeSelect"
+@onready var oshi_setcode_select = $CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters2/SetcodeSelect
+@onready var oshi_search = $CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/Search
 
-@onready var holomem_name_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/NameSelect
-@onready var holomem_color_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/ColorSelect
-@onready var holomem_level_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/LevelSelect
-@onready var holomem_buzz_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/BuzzSelect
-@onready var holomem_tag_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/TagSelect
-@onready var holomem_search = $CanvasLayer/PossibleCards/TAB_HOLOMEM/Search
+@onready var holomem_name_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters1/NameSelect
+@onready var holomem_color_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters1/ColorSelect
+@onready var holomem_level_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters1/LevelSelect
+@onready var holomem_hp_compare_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2/HPCompareSelect
+@onready var holomem_hp_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2/HPSelect
+@onready var holomem_advantage_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2/AdvantageSelect
+@onready var holomem_effect_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2/EffectSelect
+@onready var holomem_tag_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2/TagSelect
+@onready var holomem_buzz_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3/BuzzSelect
+@onready var holomem_notbuzz_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3/NotBuzzSelect
+@onready var holomem_setcode_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3/SetcodeSelect
+@onready var holomem_search = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/Search
 
-@onready var support_type_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/TypeSelect
-@onready var support_limited_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/LimitedSelect
-@onready var support_search = $CanvasLayer/PossibleCards/TAB_SUPPORT/Search
+@onready var support_type_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters1/TypeSelect
+@onready var support_limited_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters1/LimitedSelect
+@onready var support_unlimited_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters1/UnlimitedSelect
+@onready var support_setcode_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters2/SetcodeSelect
+@onready var support_tag_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters2/TagSelect
+@onready var support_search = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/Search
 
 #Filter dictionaries
-var oshi_filter = {"Color":null,"Name":null,"Search":""}
-var holomem_filter = {"Color":null,"Name":null,"Level":null,"Buzz":null,"Tag":[],"Search":""}
-var support_filter = {"Type":null,"Limited":null,"Search":""}
+var oshi_filter = {"Color":null,"Name":null,"Life":null,"Setcode":null,"Search":""}
+var holomem_filter = {"Color":null,"Name":null,"Level":null,"HPCompare":0,"HP":null,"Advantage":null,"Effect":null,"Buzz":null,"Tag":[],"Setcode":null,"Search":""}
+var support_filter = {"Type":null,"Limited":null,"Tag":null,"Setcode":null,"Search":""}
 
 #The ability to add/remove multiples of cheer at once
 @onready var cheer_multiple_label = $CanvasLayer/PossibleCards/TAB_CHEER/Multiple
 var cheer_multiple = 1
 
 #Various containers/objects we'll need
-@onready var oshi_tab = $CanvasLayer/PossibleCards/TAB_OSHI/ScrollContainer/ColorRect
-@onready var holomem_tab = $CanvasLayer/PossibleCards/TAB_HOLOMEM/ScrollContainer/ColorRect
-@onready var support_tab = $CanvasLayer/PossibleCards/TAB_SUPPORT/ScrollContainer/ColorRect
-@onready var cheer_tab = $CanvasLayer/PossibleCards/TAB_CHEER/ScrollContainer/ColorRect
-@onready var main_deck = $CanvasLayer/YourStuff/TAB_DECK/MainDeck/ColorRect
-@onready var cheer_deck = $CanvasLayer/YourStuff/TAB_DECK/CheerDeck/ColorRect
+@onready var oshi_tab = $CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer/MarginContainer/GridContainer
+@onready var holomem_tab = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer/MarginContainer/GridContainer
+@onready var support_tab = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer/MarginContainer/GridContainer
+@onready var cheer_tab = $CanvasLayer/PossibleCards/TAB_CHEER/ScrollContainer/MarginContainer/GridContainer
+@onready var main_deck = $CanvasLayer/YourStuff/TAB_DECK/MainDeck/MarginContainer/GridContainer
+@onready var cheer_deck = $CanvasLayer/YourStuff/TAB_DECK/CheerDeck/MarginContainer/HBoxContainer
 @onready var main_count = $CanvasLayer/YourStuff/TAB_DECK/MainCount
 @onready var cheer_count = $CanvasLayer/YourStuff/TAB_DECK/CheerCount
 @onready var analytics = $CanvasLayer/YourStuff/TAB_ANALYTICS/ScrollContainer/Stats
@@ -110,7 +125,6 @@ var cheer_multiple = 1
 #Those aforementioned SleeveSelects
 @onready var mainSleeveSelect = $CanvasLayer/YourStuff/TAB_SLEEVES/Main
 @onready var cheerSleeveSelect = $CanvasLayer/YourStuff/TAB_SLEEVES/Cheer
-@onready var oshiSleeveSelect = $CanvasLayer/YourStuff/TAB_SLEEVES/Oshi
 
 var banlist = Database.en_current_banlist if Settings.settings.OnlyEN else Database.current_banlist
 
@@ -141,6 +155,10 @@ func _ready() -> void:
 	if Settings.settings.OnlyEN:
 		$CanvasLayer/BanlistChoice.selected = 2
 	
+	%Loading.visible = true
+	
+	await get_tree().process_frame
+	
 	for cardNumber in Database.cardData:
 		if cardNumber in Database.cardArts:
 			var newCardButton
@@ -163,6 +181,9 @@ func _ready() -> void:
 					for new_name in newCardButton.oshi_name:
 						if new_name not in oshi_names:
 							oshi_names.append(new_name)
+					var new_setcode = newCardButton.cardNumber.split("-")[0]
+					if new_setcode not in oshi_setcodes:
+						oshi_setcodes.append(new_setcode)
 				"Holomem":
 					for new_color in newCardButton.holomem_color:
 						if new_color not in holomem_colors:
@@ -173,17 +194,41 @@ func _ready() -> void:
 					for new_tag in newCardButton.tags:
 						if new_tag not in holomem_tags:
 							holomem_tags.append(new_tag)
+					var new_setcode = newCardButton.cardNumber.split("-")[0]
+					if new_setcode not in holomem_setcodes:
+						holomem_setcodes.append(new_setcode)
 				"Support":
 					if newCardButton.supportType not in support_types:
 						support_types.append(newCardButton.supportType)
+					for new_tag in newCardButton.tags:
+						if new_tag not in support_tags:
+							support_tags.append(new_tag)
+					var new_setcode = newCardButton.cardNumber.split("-")[0]
+					if new_setcode not in support_setcodes:
+						support_setcodes.append(new_setcode)
+	
+	#Manually sorting the holomem tags list
+	var temp_holomem_tags = []
+	for possible_tag in tag_order:
+		if possible_tag in holomem_tags:
+			temp_holomem_tags.append(possible_tag)
+	for possible_tag in holomem_tags:
+		if possible_tag not in temp_holomem_tags:
+			temp_holomem_tags.append(possible_tag)
+	holomem_tags = temp_holomem_tags
 	
 	#Sort the cards in the selection menus
-	holomem_cards = holomem_tab.get_children().duplicate()
 	holomem_cards.sort_custom(custom_holomem_sort)
-	oshi_cards = oshi_tab.get_children().duplicate()
 	oshi_cards.sort_custom(custom_oshi_sort)
-	support_cards = support_tab.get_children().duplicate()
 	support_cards.sort_custom(custom_support_sort)
+	
+	for holomem_collection in holomem_cards:
+		holomem_tab.add_child(holomem_collection)
+	for oshi_collection in oshi_cards:
+		oshi_tab.add_child(oshi_collection)
+	for support_collection in support_cards:
+		support_tab.add_child(support_collection)
+	
 	_update_tabs()
 	
 	#Set up filter PopupMenus
@@ -198,6 +243,11 @@ func _ready() -> void:
 		oshi_color_select.get_popup().add_item(Settings.trans(oshi_color))
 	oshi_color_select.get_popup().index_pressed.connect(_on_oshi_color_select)
 	
+	oshi_setcode_select.get_popup().add_item(tr("SETCODE_ANY"))
+	for oshi_setcode in oshi_setcodes:
+		oshi_setcode_select.get_popup().add_item(oshi_setcode)
+	oshi_setcode_select.get_popup().index_pressed.connect(_on_oshi_setcode_select)
+	
 	holomem_name_select.get_popup().add_item(tr("NAME_ANY"))
 	holomem_names.sort()
 	for holomem_name in holomem_names:
@@ -211,6 +261,22 @@ func _ready() -> void:
 	
 	holomem_level_select.get_popup().index_pressed.connect(_on_holomem_level_select)
 	
+	holomem_hp_compare_select.get_popup().index_pressed.connect(_on_holomem_HP_compare_select)
+	
+	holomem_advantage_select.get_popup().add_item(tr("ADVANTAGE_ANY"))
+	for holomem_advantage in holomem_colors:
+		holomem_advantage_select.get_popup().add_item(Settings.trans(holomem_advantage))
+	holomem_advantage_select.get_popup().index_pressed.connect(_on_holomem_advantage_select)
+	
+	for holomem_effect in holomem_effects:
+		holomem_effect_select.get_popup().add_item(Settings.trans(holomem_effect))
+	holomem_effect_select.get_popup().index_pressed.connect(_on_holomem_effect_select)
+	
+	holomem_setcode_select.get_popup().add_item(tr("SETCODE_ANY"))
+	for holomem_setcode in holomem_setcodes:
+		holomem_setcode_select.get_popup().add_item(holomem_setcode)
+	holomem_setcode_select.get_popup().index_pressed.connect(_on_holomem_setcode_select)
+	
 	for tag in holomem_tags:
 		holomem_tag_select.get_popup().add_check_item(Settings.trans(tag))
 	holomem_tag_select.get_popup().index_pressed.connect(_on_holomem_tag_select)
@@ -220,6 +286,16 @@ func _ready() -> void:
 	for support_type in support_types:
 		support_type_select.get_popup().add_item(Settings.trans(support_type))
 	support_type_select.get_popup().index_pressed.connect(_on_support_type_select)
+	
+	support_setcode_select.get_popup().add_item(tr("SETCODE_ANY"))
+	for support_setcode in support_setcodes:
+		support_setcode_select.get_popup().add_item(support_setcode)
+	support_setcode_select.get_popup().index_pressed.connect(_on_support_setcode_select)
+	
+	support_tag_select.get_popup().add_item(tr("TAG_ANY"))
+	for support_tag in support_tags:
+		support_tag_select.get_popup().add_item(Settings.trans(support_tag))
+	support_tag_select.get_popup().index_pressed.connect(_on_support_tag_select)
 	
 	#Last minute initializations
 	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
@@ -238,6 +314,8 @@ func _ready() -> void:
 		# And empty the paylaod
 		GameState.deck_to_import = null
 		pass
+	
+	%Loading.visible = false
 
 #region Filter And Sort
 
@@ -256,6 +334,12 @@ func _oshi_filter(oshi_to_check) -> bool:
 	if oshi_filter.Name != null and !oshi_to_check.has_name(oshi_filter.Name):
 		return false
 	
+	if oshi_filter.Life != null and oshi_to_check.life != oshi_filter.Life:
+		return false
+	
+	if oshi_filter.Setcode != null and oshi_to_check.cardNumber.split("-")[0] != oshi_filter.Setcode:
+		return false
+	
 	if oshi_filter.Search != "" and !oshi_to_check.fullText.to_lower().contains(oshi_filter.Search.to_lower()):
 		return false
 	
@@ -268,9 +352,8 @@ func _holomem_filter(holomem_to_check) -> bool:
 	if holomem_to_check is collection_type:
 		holomem_to_check = holomem_to_check.cards[0]
 	
-	if holomem_filter.Color != null:
-		if !holomem_to_check.is_color(holomem_filter.Color):
-			return false
+	if holomem_filter.Color != null and !holomem_to_check.is_color(holomem_filter.Color):
+		return false
 	
 	if holomem_filter.Name != null and !holomem_to_check.has_name(holomem_filter.Name):
 		return false
@@ -278,10 +361,37 @@ func _holomem_filter(holomem_to_check) -> bool:
 	if holomem_filter.Level != null and holomem_to_check.level != holomem_filter.Level:
 		return false
 	
+	if holomem_filter.HP != null:
+		match holomem_filter.HPCompare:
+			0: #>=
+				if holomem_to_check.hp < holomem_filter.HP:
+					return false
+			1: # ==
+				if holomem_to_check.hp != holomem_filter.HP:
+					return false
+			2: # <=
+				if holomem_to_check.hp > holomem_filter.HP:
+					return false
+	
+	if holomem_filter.Advantage != null:
+		var found_art_with_correct_advantage = false
+		for possible_art in holomem_to_check.holomem_arts:
+			if possible_art[-1] == holomem_filter.Advantage:
+				found_art_with_correct_advantage = true
+				break
+		if !found_art_with_correct_advantage:
+			return false
+	
+	if holomem_filter.Effect != null and holomem_filter.Effect not in holomem_to_check.holomem_effects:
+		return false
+	
 	if holomem_filter.Buzz != null and holomem_to_check.buzz != holomem_filter.Buzz:
 		return false
 	
 	if !holomem_filter.Tag.all(holomem_to_check.has_tag):
+		return false
+	
+	if holomem_filter.Setcode != null and holomem_to_check.cardNumber.split("-")[0] != holomem_filter.Setcode:
 		return false
 	
 	if holomem_filter.Search != "" and !holomem_to_check.fullText.to_lower().contains(holomem_filter.Search.to_lower()):
@@ -302,6 +412,12 @@ func _support_filter(support_to_check) -> bool:
 	if support_filter.Limited != null and support_to_check.limited != support_filter.Limited:
 		return false
 	
+	if support_filter.Setcode != null and support_to_check.cardNumber.split("-")[0] != support_filter.Setcode:
+		return false
+	
+	if support_filter.Tag != null and support_filter.Tag not in support_to_check.tags:
+		return false
+	
 	if support_filter.Search != "" and !support_to_check.fullText.to_lower().contains(support_filter.Search.to_lower()):
 		return false
 	
@@ -316,45 +432,28 @@ func _update_tabs() -> void:
 	var temp_support_cards = support_cards.filter(_support_filter)
 	
 	#Display/hide oshis
-	var index = 0
-	for oshi_card in oshi_cards:
+	for oshi_card in oshi_tab.get_children():
 		if oshi_card not in temp_oshi_cards:
 			oshi_card.visible = false
 			continue
-		oshi_card.position = Vector2(42 + 75*(index % 5), 60 + 125*(index / 5))
 		oshi_card.visible = true
-		index += 1
-	$CanvasLayer/PossibleCards/TAB_OSHI/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
+	$CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 	
 	#Display/hide holomems
-	index = 0
-	for holomem_card in holomem_cards:
+	for holomem_card in holomem_tab.get_children():
 		if holomem_card not in temp_holomem_cards:
 			holomem_card.visible = false
 			continue
-		holomem_card.position = Vector2(42 + 75*(index % 5), 60 + 125*(index / 5))
 		holomem_card.visible = true
-		index += 1
-	$CanvasLayer/PossibleCards/TAB_HOLOMEM/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
+	$CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 	
 	#Display/hide supports
-	index = 0
-	for support_card in support_cards:
+	for support_card in support_tab.get_children():
 		if support_card not in temp_support_cards:
 			support_card.visible = false
 			continue
-		support_card.position = Vector2(42 + 75*(index % 5), 60 + 125*(index / 5))
 		support_card.visible = true
-		index += 1
-	$CanvasLayer/PossibleCards/TAB_SUPPORT/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
-	
-	#If I were able to use proper GridContainers, this would be unnecessary.
-	#Unfortunately, Cards are Node2Ds instead of Controls.
-	#So I have to make sure that the tabs are large enough to see all of the cards
-	oshi_tab.custom_minimum_size = Vector2(0, (oshi_tab.get_child_count() / 5)*125 + 130)
-	holomem_tab.custom_minimum_size = Vector2(0, (holomem_tab.get_child_count()/5)*125 + 130)
-	support_tab.custom_minimum_size = Vector2(0, (support_tab.get_child_count()/5)*125 + 130)
-	cheer_tab.custom_minimum_size = Vector2(0, (cheer_tab.get_child_count()/5)*100 + 120)
+	$CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 
 func _on_oshi_name_select(selected_index) -> void:
 	var selected_name = oshi_names[selected_index-1]
@@ -378,14 +477,35 @@ func _on_oshi_color_select(selected_index) -> void:
 		oshi_filter.Color = selected_color
 	_update_tabs()
 
+func _on_oshi_life_select(toggle:bool, selected_value:int) -> void:
+	if toggle and oshi_filter.Life != selected_value:
+		oshi_filter.Life = selected_value
+	elif !toggle and oshi_filter.Life == selected_value:
+		oshi_filter.Life = null
+	_update_tabs()
+
+func _on_oshi_setcode_select(selected_index) -> void:
+	var selected_setcode = oshi_setcodes[selected_index-1]
+	
+	if selected_index == 0:
+		oshi_setcode_select.text = tr("SETCODE")
+		oshi_filter.Setcode = null
+	else:
+		oshi_setcode_select.text = selected_setcode
+		oshi_filter.Setcode = selected_setcode
+	_update_tabs()
+
 func _on_oshi_search(search_text) -> void:
 	oshi_filter.Search = search_text
 	_update_tabs()
 
 func _on_oshi_clear_filters_pressed() -> void:
-	oshi_filter = {"Color":null,"Name":null,"Search":""}
+	oshi_filter = {"Color":null,"Name":null,"Life":null,"Setcode":null,"Search":""}
 	oshi_color_select.text = tr("COLOR")
 	oshi_name_select.text = tr("NAME")
+	oshi_setcode_select.text = tr("SETCODE")
+	oshi_life5_select.button_pressed = false
+	oshi_life6_select.button_pressed = false
 	oshi_search.text = ""
 	_update_tabs()
 
@@ -430,10 +550,46 @@ func _on_holomem_level_select(selected_index) -> void:
 			holomem_level_select.text = tr("LEVEL")
 	_update_tabs()
 
-func _on_holomem_buzz_select(is_buzz) -> void:
-	if is_buzz:
-		holomem_filter.Buzz = true
+func _on_holomem_HP_compare_select(selected_index) -> void:
+	var selected_compare = holomem_hp_compare_select.get_popup().get_item_text(selected_index)
+	
+	holomem_hp_compare_select.text = selected_compare
+	holomem_filter.HPCompare = selected_index
+	_update_tabs()
+
+func _on_holomem_HP_select(selected_value):
+	if selected_value == 0:
+		holomem_filter.HP = null
 	else:
+		holomem_filter.HP = selected_value
+	_update_tabs()
+
+func _on_holomem_advantage_select(selected_index) -> void:
+	var selected_advantage = holomem_colors[selected_index-1]
+	
+	if selected_index == 0:
+		holomem_advantage_select.text = tr("COLOR")
+		holomem_filter.Advantage = null
+	else:
+		holomem_advantage_select.text = Settings.trans(selected_advantage)
+		holomem_filter.Advantage = selected_advantage
+	_update_tabs()
+
+func _on_holomem_effect_select(selected_index) -> void:
+	var selected_effect = holomem_effects[selected_index-1]
+	
+	if selected_index == 0:
+		holomem_effect_select.text = tr("EFFECT")
+		holomem_filter.Effect = null
+	else:
+		holomem_effect_select.text = Settings.trans(selected_effect)
+		holomem_filter.Effect = selected_effect
+	_update_tabs()
+
+func _on_holomem_buzz_select(toggled:bool, is_buzz:bool) -> void:
+	if toggled and holomem_filter.Buzz != is_buzz:
+		holomem_filter.Buzz = is_buzz
+	elif !toggled and holomem_filter.Buzz == is_buzz:
 		holomem_filter.Buzz = null
 	_update_tabs()
 
@@ -447,16 +603,32 @@ func _on_holomem_tag_select(selected_index) -> void:
 		holomem_filter.Tag.erase(selected_tag)
 	_update_tabs()
 
+func _on_holomem_setcode_select(selected_index) -> void:
+	var selected_setcode = holomem_setcodes[selected_index-1]
+	
+	if selected_index == 0:
+		holomem_setcode_select.text = tr("SETCODE")
+		holomem_filter.Setcode = null
+	else:
+		holomem_setcode_select.text = selected_setcode
+		holomem_filter.Setcode = selected_setcode
+	_update_tabs()
+
 func _on_holomem_search(search_text) -> void:
 	holomem_filter.Search = search_text
 	_update_tabs()
 
 func _on_holomem_clear_filters_pressed() -> void:
-	holomem_filter = {"Color":null,"Name":null,"Level":null,"Buzz":null,"Tag":[],"Search":""}
+	holomem_filter = {"Color":null,"Name":null,"Level":null,"HP":null,"Advantage":null,"Effect":null,"Buzz":null,"Tag":[],"Setcode":null,"Search":""}
 	holomem_buzz_select.button_pressed = false
+	holomem_notbuzz_select.button_pressed = false
 	holomem_color_select.text = tr("COLOR")
 	holomem_name_select.text = tr("NAME")
 	holomem_level_select.text = tr("LEVEL")
+	holomem_advantage_select.text = tr("ADVANTAGE")
+	holomem_effect_select.text = tr("EFFECT")
+	holomem_setcode_select.text = tr("SETCODE")
+	holomem_hp_select.value = 0
 	for index in range(holomem_tag_select.get_popup().item_count):
 		holomem_tag_select.get_popup().set_item_checked(index,false)
 	holomem_search.text = ""
@@ -474,11 +646,33 @@ func _on_support_type_select(selected_index) -> void:
 		support_filter.Type = selected_type
 	_update_tabs()
 
-func _on_support_limited_select(is_limited) -> void:
-	if is_limited:
-		support_filter.Limited = true
-	else:
+func _on_support_limited_select(toggled:bool, is_limited:bool) -> void:
+	if toggled and support_filter.Limited != is_limited:
+		support_filter.Limited = is_limited
+	elif !toggled and support_filter.Limited == is_limited:
 		support_filter.Limited = null
+	_update_tabs()
+
+func _on_support_setcode_select(selected_index) -> void:
+	var selected_setcode = support_setcodes[selected_index-1]
+	
+	if selected_index == 0:
+		support_setcode_select.text = tr("SETCODE")
+		support_filter.Setcode = null
+	else:
+		support_setcode_select.text = selected_setcode
+		support_filter.Setcode = selected_setcode
+	_update_tabs()
+
+func _on_support_tag_select(selected_index) -> void:
+	var selected_tag = support_tags[selected_index-1]
+	
+	if selected_index == 0:
+		support_tag_select.text = tr("TAG")
+		support_filter.Tag = null
+	else:
+		support_tag_select.text = Settings.trans(selected_tag)
+		support_filter.Tag = selected_tag
 	_update_tabs()
 
 func _on_support_search(search_text):
@@ -486,9 +680,12 @@ func _on_support_search(search_text):
 	_update_tabs()
 
 func _on_support_clear_filters_pressed() -> void:
-	support_filter = {"Type":null,"Limited":null,"Search":""}
+	support_filter = {"Type":null,"Limited":null,"Tag":null,"Setcode":null,"Search":""}
 	support_limited_select.button_pressed = false
+	support_unlimited_select.button_pressed = false
 	support_type_select.text = tr("SUPPORT_TYPE")
+	support_setcode_select.text = tr("SETCODE")
+	support_tag_select.text = tr("TAG")
 	support_search.text = ""
 	_update_tabs()
 
@@ -637,12 +834,6 @@ func load_from_deck_info(deck_info : Dictionary) -> void:
 		cheerSleeveSelect.new_sleeve(image)
 	else:
 		cheerSleeveSelect.new_sleeve()
-	if deck_info.has("oshiSleeve"):
-		var image = Image.new()
-		image.load_webp_from_buffer(deck_info.oshiSleeve)
-		oshiSleeveSelect.new_sleeve(image)
-	else:
-		oshiSleeveSelect.new_sleeve()
 	
 	
 	#Visual stuff
@@ -696,7 +887,7 @@ func add_to_collection(number : String, art_code : int):
 			newCollection.card_right_clicked.connect(_on_menu_card_right_clicked)
 			newCollection.card_mouse_over.connect(update_info)
 			bd_collections[color] = newCollection
-			oshi_tab.add_child(newCollection)
+			oshi_cards.append(newCollection)
 	elif number in collections:
 		newCollection = collections[number]
 	else:
@@ -707,20 +898,14 @@ func add_to_collection(number : String, art_code : int):
 		collections[number] = newCollection
 		match Database.cardData[number]["cardType"]:
 			"Oshi":
-				oshi_tab.add_child(newCollection)
+				oshi_cards.append(newCollection)
 			"Holomem":
-				holomem_tab.add_child(newCollection)
+				holomem_cards.append(newCollection)
 			"Support":
-				support_tab.add_child(newCollection)
+				support_cards.append(newCollection)
 			"Cheer":
 				cheer_tab.add_child(newCollection)
 	
-	#The cards are Node2Ds instead of Controls, so they can't go in a GridContainer
-	#Instead I have to figure out where they should go manually
-	#Very finnicky
-	var index = newCollection.get_index()
-	newCollection.position = Vector2(42 + 75*(index % 5), 60 + 100*(index / 5))
-	newCollection.scale = Vector2(0.22,0.22)
 	
 	var new_id = all_cards.size()
 	newCollection.addCard(number, art_code)
@@ -755,14 +940,14 @@ func create_oshi(number : String, art_code : int) -> void:
 	#Creates the oshi card for your deck
 	
 	oshiCard = create_card_button(number,art_code)
-	oshiCard.position = Vector2(65,500)
-	oshiCard.scale = Vector2(0.38,0.38)
+	oshiCard.position = Vector2(7,422)
+	oshiCard._scale(0.37)
 	$CanvasLayer/YourStuff/TAB_DECK.add_child(oshiCard)
 
 func create_main_deck_card(number : String, art_code : int, amount = 1) -> void:
 	
 	var newCardButton = create_card_button(number,art_code)
-	newCardButton.scale = Vector2(0.28,0.28)
+	newCardButton._scale(0.26)
 	newCardButton.update_amount(amount)
 	total_main += amount
 	newCardButton.set_amount_hidden(true)
@@ -777,7 +962,7 @@ func create_main_deck_card(number : String, art_code : int, amount = 1) -> void:
 
 func create_cheer_deck_card(number,art_code,amount = 1):
 	var newCardButton = create_card_button(number,art_code)
-	newCardButton.scale = Vector2(0.31,0.31)
+	newCardButton._scale(0.31)
 	newCardButton.update_amount(amount)
 	total_cheer += amount
 	newCardButton.set_amount_hidden(true)
@@ -1095,11 +1280,9 @@ func _save_deck_to_file(path, download=false):
 	deck_info.cheerDeck = []
 	
 	if mainSleeveSelect.current_sleeve != null:
-		deck_info.sleeve = Array(mainSleeveSelect.current_sleeve.save_webp_to_buffer(true, 0.45))
+		deck_info.sleeve = Array(mainSleeveSelect.current_sleeve.save_webp_to_buffer(true, 0.6))
 	if cheerSleeveSelect.current_sleeve != null:
-		deck_info.cheerSleeve = Array(cheerSleeveSelect.current_sleeve.save_webp_to_buffer(true, 0.45))
-	if oshiSleeveSelect.current_sleeve != null:
-		deck_info.oshiSleeve = Array(oshiSleeveSelect.current_sleeve.save_webp_to_buffer(true, 0.45))
+		deck_info.cheerSleeve = Array(cheerSleeveSelect.current_sleeve.save_webp_to_buffer(true, 0.6))
 	
 	for cB in main_deck.get_children():
 		deck_info.deck.append([cB.cardNumber,cB.get_amount(),cB.artNum])
@@ -1177,6 +1360,8 @@ func _on_clear_pressed(complete=true):
 	update_cheer_deck_children()
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
+	mainSleeveSelect.new_sleeve()
+	cheerSleeveSelect.new_sleeve()
 	update_analytics()
 	
 	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()

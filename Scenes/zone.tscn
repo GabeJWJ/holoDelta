@@ -1,21 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://md0n47hsxcob"]
+[gd_scene load_steps=5 format=3 uid="uid://md0n47hsxcob"]
 
 [ext_resource type="Texture2D" uid="uid://s5m7fkn1lou3" path="res://zonebutton.png" id="1_at652"]
-[ext_resource type="Script" path="res://Scripts/zone.gd" id="1_oaxcq"]
+[ext_resource type="Script" uid="uid://dsaiwcnbeewct" path="res://Scripts/zone.gd" id="1_oaxcq"]
 [ext_resource type="Texture2D" uid="uid://dtwx3yh72x8us" path="res://zonebuttonhover.png" id="2_ao8ke"]
+[ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="4_2ev6g"]
 
 [node name="Zone" type="Node2D"]
 scale = Vector2(0.75, 0.75)
 script = ExtResource("1_oaxcq")
 
 [node name="ZoneButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
 visible = false
 offset_left = -154.0
 offset_top = -214.0
 offset_right = 155.0
 offset_bottom = 215.0
+tooltip_auto_translate_mode = 2
+theme = ExtResource("4_2ev6g")
 texture_normal = ExtResource("1_at652")
 texture_hover = ExtResource("2_ao8ke")
+
+[node name="ZoneDamage" type="Label" parent="."]
+unique_name_in_owner = true
+auto_translate_mode = 2
+visible = false
+custom_minimum_size = Vector2(300, 50)
+offset_left = 187.49332
+offset_top = 390.78223
+offset_right = 561.0267
+offset_bottom = 561.56445
+rotation = 3.1415927
+theme = ExtResource("4_2ev6g")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 75
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [connection signal="mouse_entered" from="ZoneButton" to="." method="_on_zone_button_mouse_entered"]
 [connection signal="mouse_exited" from="ZoneButton" to="." method="_on_zone_button_mouse_exited"]

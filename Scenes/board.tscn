@@ -1,7 +1,7 @@
-[gd_scene load_steps=41 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=44 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
-[ext_resource type="Script" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
+[ext_resource type="Script" uid="uid://c1po3kd3x6ln6" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
 [ext_resource type="Texture2D" uid="uid://kwq21hbtxatg" path="res://CyberAssets/Main Menu Assets/HoloDelta BG (Light Mode).svg" id="3_t0eaa"]
 [ext_resource type="Texture2D" uid="uid://chv6t7kvxgx0s" path="res://gear.png" id="4_n5n8m"]
 [ext_resource type="Texture2D" uid="uid://biy2phmp4flym" path="res://gearSelected.png" id="5_13mvd"]
@@ -16,19 +16,22 @@
 [ext_resource type="StyleBox" uid="uid://cd242umd6rlar" path="res://Themes/dark_transparent_stylebox.tres" id="11_122ys"]
 [ext_resource type="AudioStream" uid="uid://citw8blr274yn" path="res://HaruTsunXAssets/Die Roll 2.wav" id="12_lpjdh"]
 [ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="14_rk7pw"]
-[ext_resource type="Script" path="res://Scripts/RemapButton.gd" id="14_x8gke"]
+[ext_resource type="Script" uid="uid://dik3n6nv74v2i" path="res://Scripts/RemapButton.gd" id="14_x8gke"]
+[ext_resource type="PackedScene" uid="uid://gfca1xt2vdra" path="res://Scenes/sleeve_select.tscn" id="15_gbx47"]
 [ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="15_ycoxv"]
+[ext_resource type="Texture2D" uid="uid://bnsmsduvikadg" path="res://holoBack.png" id="16_emfff"]
+[ext_resource type="Texture2D" uid="uid://bcans1dkc8eyo" path="res://cheerBack.png" id="17_6ha0t"]
 [ext_resource type="StyleBox" uid="uid://damybw7gv0yg7" path="res://Themes/button_active_shrink_margins.tres" id="17_m66xg"]
 [ext_resource type="Texture2D" uid="uid://3f3xq8idq8m7" path="res://CloseError.png" id="18_b7won"]
 [ext_resource type="ButtonGroup" uid="uid://c2qh82lsaycto" path="res://UI/sidebar_tab_button_group.tres" id="18_isnxy"]
-[ext_resource type="Script" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="18_n8kk3"]
+[ext_resource type="Script" uid="uid://dpmwhedq5ws5x" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="18_n8kk3"]
 [ext_resource type="PackedScene" uid="uid://dyqgt6khk244r" path="res://Scenes/confirm_dialog.tscn" id="19_ogfn8"]
 [ext_resource type="AudioStream" uid="uid://dx0hyqv3whb28" path="res://ChikuTaku The Game VGM Menu Select Watson Amelia WUNDER RiKU ✨ チクタク オリジナル曲.mp3" id="19_vg3fm"]
 [ext_resource type="Texture2D" uid="uid://vxfe3fkfuq14" path="res://UI/chat.png" id="20_cu85v"]
 [ext_resource type="LabelSettings" uid="uid://dhdlni742no3g" path="res://Themes/white_text.tres" id="20_dcvur"]
 [ext_resource type="Texture2D" uid="uid://cy6rk1ewblrkk" path="res://UI/information.png" id="20_f4c3e"]
 [ext_resource type="StyleBox" uid="uid://bu0x76epm4jgt" path="res://Themes/red_transparent_stylebox.tres" id="20_poi5y"]
-[ext_resource type="Script" path="res://addons/websocket/WebSocket.gd" id="20_v32ia"]
+[ext_resource type="Script" uid="uid://4powcmh241im" path="res://addons/websocket/WebSocket.gd" id="20_v32ia"]
 [ext_resource type="Texture2D" uid="uid://cr17emtr7b78o" path="res://UI/settings.png" id="22_b5lix"]
 [ext_resource type="ButtonGroup" uid="uid://cg04rurq5f5al" path="res://UI/turn_steps_button_group.tres" id="23_r3vn8"]
 [ext_resource type="PackedScene" uid="uid://chrab4uqxsh2s" path="res://Scenes/info_panel.tscn" id="24_jpb5x"]
@@ -154,7 +157,6 @@ layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
-disabled = true
 text = "COSMETICS"
 
 [node name="OnlyEN" type="CheckButton" parent="CanvasLayer/LeftBarMargins/LeftBarVBox"]
@@ -175,6 +177,7 @@ text = "English"
 flat = false
 item_count = 7
 popup/item_0/text = "English"
+popup/item_0/id = 0
 popup/item_1/text = "日本語"
 popup/item_1/id = 1
 popup/item_2/text = "한글"
@@ -220,12 +223,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -124.5
-offset_top = -100.0
+offset_top = -135.0
 offset_right = 124.5
-offset_bottom = 243.0
+offset_bottom = 318.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 45
 alignment = 1
 
 [node name="PlayerName" type="LineEdit" parent="CanvasLayer/LobbyButtons"]
@@ -259,6 +262,14 @@ theme_override_font_sizes/font_size = 20
 disabled = true
 text = "LOBBY_SPECTATE"
 
+[node name="Goldfish" type="Button" parent="CanvasLayer/LobbyButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
+disabled = true
+text = "SOLO_GOLDFISH"
+
 [node name="PlayerCount" type="Label" parent="CanvasLayer/LobbyButtons"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -270,7 +281,6 @@ horizontal_alignment = 1
 [node name="ClientVersionText" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
 auto_translate_mode = 2
-visible = false
 offset_left = 991.0
 offset_top = 656.0
 offset_right = 1271.0
@@ -351,12 +361,12 @@ text = "Special thanks to:
 - Weiss and Chill for the EN proxies and the visibility he's brought to this project
 - AshiNoMegami for the Spanish translation
 - M rick and Tarko for the French translation
-- 문정동호빵명인 and others for the Korean translation
+- dcinside Holive OCG minor gallery for the Korean translation
 - Diego (TASI) for the Traditional Chinese translation
+- Treevan, Nanaca, and FrozenFyre for cardData updates
 - HaruTsunX for helping with the sound design
 - WunderRiku for the BGM
-- 星谷あさき and DT for advice with the server stuff
-- Saum for mirroring when this site was down
+- 星谷あさき, DT, and Saum for advice with the server stuff
 - MagnaDrake for helping with the Mac release
 - よるみ for helping with the Japanese option
 
@@ -830,6 +840,7 @@ alignment = 1
 selected = 1
 item_count = 5
 popup/item_0/text = "LOBBY_BANLIST_NONE"
+popup/item_0/id = 0
 popup/item_1/text = "LOBBY_BANLIST_CURRENT"
 popup/item_1/id = 1
 popup/item_2/text = "LOBBY_BANLIST_CURRENT_EN"
@@ -848,6 +859,49 @@ size_flags_vertical = 10
 text = "LOBBY_CREATE"
 
 [node name="CreateBack" type="Button" parent="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "LOBBY_BACK"
+
+[node name="GoldfishStartMenu" type="PanelContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_left = 481.0
+offset_top = 200.0
+offset_right = 815.0
+offset_bottom = 608.0
+theme = ExtResource("5_fdkx6")
+theme_override_styles/panel = ExtResource("11_122ys")
+
+[node name="LobbyCreateMargins" type="MarginContainer" parent="CanvasLayer/GoldfishStartMenu"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="LobbyCreateVBox" type="VBoxContainer" parent="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins"]
+layout_mode = 2
+
+[node name="GoldfishLabel" type="Label" parent="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox"]
+layout_mode = 2
+text = "GOLDFISH_MENU"
+horizontal_alignment = 1
+
+[node name="GoldfishDeck" type="Button" parent="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10
+text = "DECK_SELECT"
+
+[node name="FinalGoldfishCreate" type="Button" parent="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10
+disabled = true
+text = "SOLO_GOLDFISH"
+
+[node name="CreateBack" type="Button" parent="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox"]
 layout_mode = 2
 size_flags_vertical = 8
 text = "LOBBY_BACK"
@@ -952,15 +1006,24 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("7_sgknu")
 
-[node name="PlaymatMargins" type="MarginContainer" parent="CanvasLayer/CustomizationPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CustomizationPanel"]
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+
+[node name="COSMETICS_PLAYMATDICE" type="MarginContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 15
+metadata/_tab_index = 0
 
-[node name="CustomizationVBox" type="VBoxContainer" parent="CanvasLayer/CustomizationPanel/PlaymatMargins"]
+[node name="CustomizationVBox" type="VBoxContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE"]
 layout_mode = 2
 alignment = 1
 
-[node name="PlaymatTextureRect" type="TextureRect" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox"]
+[node name="PlaymatTextureRect" type="TextureRect" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -968,7 +1031,7 @@ texture = ExtResource("14_rk7pw")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="DieSubviewportContainer" type="SubViewportContainer" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/PlaymatTextureRect"]
+[node name="DieSubviewportContainer" type="SubViewportContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -983,54 +1046,54 @@ grow_horizontal = 2
 grow_vertical = 2
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer"]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(384, 422)
 render_target_update_mode = 0
 
-[node name="Die" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport" instance=ExtResource("15_ycoxv")]
+[node name="Die" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport" instance=ExtResource("15_ycoxv")]
 unique_name_in_owner = true
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 200, -50, 0)
 
-[node name="Camera3D" type="Camera3D" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport"]
+[node name="Camera3D" type="Camera3D" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport"]
 transform = Transform3D(0.598005, -0.466652, 0.651633, -0.125598, 0.748419, 0.651225, -0.79159, -0.47128, 0.388948, 201.31, -48.3055, 1.06256)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport"]
+[node name="SpotLight3D" type="SpotLight3D" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 0.979879, 0.19959, 0, -0.19959, 0.979879, 201.193, -47.9198, 4.06729)
 light_energy = 4.173
 spot_range = 8.92789
 spot_angle = 42.239
 
-[node name="ButtonMargins" type="MarginContainer" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox"]
+[node name="ButtonMargins" type="MarginContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox"]
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="CustomizationButtonVBox" type="VBoxContainer" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins"]
+[node name="CustomizationButtonVBox" type="VBoxContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins"]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="PlaymatHBox" type="HBoxContainer" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox"]
+[node name="PlaymatHBox" type="HBoxContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox"]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Playmat" type="Button" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox"]
+[node name="Playmat" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox"]
+custom_minimum_size = Vector2(600, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 30
 text = "COSMETICS_PM"
 
-[node name="PlaymatLoadDialog" type="FileDialog" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat"]
+[node name="PlaymatLoadDialog" type="FileDialog" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat"]
 unique_name_in_owner = true
 auto_translate_mode = 2
 title = "Open a File"
 position = Vector2i(300, 300)
 size = Vector2i(751, 258)
-auto_translate = false
 ok_button_text = "Open"
 file_mode = 0
 access = 2
@@ -1038,31 +1101,32 @@ filters = PackedStringArray("*.jpg,*.webp")
 show_hidden_files = true
 use_native_dialog = true
 
-[node name="PlaymatDefault" type="Button" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox"]
+[node name="PlaymatDefault" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox"]
+custom_minimum_size = Vector2(600, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
 text = "COSMETICS_PM_DEFAULT"
 
-[node name="DieHBox" type="HBoxContainer" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox"]
+[node name="DieHBox" type="HBoxContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox"]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Dice" type="Button" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox"]
+[node name="Dice" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox"]
+custom_minimum_size = Vector2(600, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 30
 text = "COSMETICS_D"
 
-[node name="DiceLoadDialog" type="FileDialog" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice"]
+[node name="DiceLoadDialog" type="FileDialog" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice"]
 unique_name_in_owner = true
 auto_translate_mode = 2
 title = "Open a File"
 position = Vector2i(300, 300)
 size = Vector2i(392, 175)
-auto_translate = false
 ok_button_text = "Open"
 file_mode = 0
 access = 2
@@ -1070,14 +1134,38 @@ filters = PackedStringArray("*.png,*.webp")
 show_hidden_files = true
 use_native_dialog = true
 
-[node name="DiceDefault" type="Button" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox"]
+[node name="DiceDefault" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox"]
+custom_minimum_size = Vector2(600, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
 text = "COSMETICS_D_DEFAULT"
 
-[node name="Exit" type="Button" parent="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox"]
+[node name="COSMETICS_DEFAULTSLEEVES" type="Control" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="defaultSleeve" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES" instance=ExtResource("15_gbx47")]
+unique_name_in_owner = true
+position = Vector2(100, 50)
+default_sleeve = ExtResource("16_emfff")
+
+[node name="defaultCheerSleeve" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES" instance=ExtResource("15_gbx47")]
+unique_name_in_owner = true
+position = Vector2(750, 50)
+default_sleeve = ExtResource("17_6ha0t")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Exit" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(1000, 50)
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 30
@@ -1348,11 +1436,11 @@ custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 focus_mode = 2
 theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
 theme_override_font_sizes/bold_italics_font_size = 20
 theme_override_font_sizes/italics_font_size = 20
 theme_override_font_sizes/mono_font_size = 20
-theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true
 fit_content = true
 context_menu_enabled = true
@@ -1392,18 +1480,24 @@ tick_count = 11
 ticks_on_borders = true
 
 [node name="Unrevealed" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
-visible = false
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "OPTION_COSMETICS_HIDE"
 
-[node name="HideCosmetics" type="TextureButton" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
-visible = false
+[node name="Control" type="Control" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
 layout_mode = 2
+
+[node name="HideCosmetics" type="TextureButton" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/Control"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
 toggle_mode = true
 texture_normal = ExtResource("6_1x0cl")
 texture_pressed = ExtResource("7_n8awk")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="QuestionRPS" type="PanelContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
@@ -1961,10 +2055,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -171.0
-offset_top = -211.0
-offset_right = 171.0
-offset_bottom = 221.0
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -2021,6 +2115,15 @@ theme_override_font_sizes/font_size = 30
 disabled = true
 text = "DOWNLOAD_CARD"
 
+[node name="UpdateNotFound" type="Label" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "UPDATE_NOTFOUND"
+horizontal_alignment = 1
+
 [node name="UpdateBack" type="Button" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
@@ -2071,6 +2174,14 @@ script = ExtResource("18_n8kk3")
 parallel_connections_count = 15
 print_debug = true
 
+[node name="VersionHTTPManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("18_n8kk3")
+parallel_connections_count = 1
+timeout = 10.0
+max_retries = 1
+print_debug = true
+
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_vg3fm")
 volume_db = -15.0
@@ -2103,6 +2214,7 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/LobbyButtons/LobbyCreate" to="." method="create_lobby_options"]
 [connection signal="pressed" from="CanvasLayer/LobbyButtons/LobbyJoin" to="." method="find_lobbies"]
 [connection signal="pressed" from="CanvasLayer/LobbyButtons/GameSpectate" to="." method="find_games"]
+[connection signal="pressed" from="CanvasLayer/LobbyButtons/Goldfish" to="." method="_goldfish_menu"]
 [connection signal="pressed" from="CanvasLayer/CreditsPanel/InfoMargins/InfoVBox/HBoxContainer/DeckLocationButton" to="." method="_on_deck_location_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/CreditsPanel/InfoMargins/InfoVBox/HBoxContainer/Close" to="." method="_on_info_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer/CheckUnrevealed" to="." method="_on_check_unrevealed_pressed"]
@@ -2120,18 +2232,23 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox/LobbyBack" to="." method="close_lobby_list"]
 [connection signal="pressed" from="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox/FinalCreate" to="." method="create_lobby"]
 [connection signal="pressed" from="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox/CreateBack" to="." method="hide_lobby_options"]
+[connection signal="pressed" from="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox/GoldfishDeck" to="." method="_on_deck_select_pressed"]
+[connection signal="pressed" from="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox/FinalGoldfishCreate" to="." method="_attempt_goldfish"]
+[connection signal="pressed" from="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox/CreateBack" to="." method="_close_goldfish_menu"]
 [connection signal="text_changed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/SpectateListCode" to="." method="update_spectate_from_code_button"]
 [connection signal="text_submitted" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/SpectateListCode" to="." method="spectate_game"]
 [connection signal="pressed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/SpectateByCode" to="." method="spectate_game_from_code"]
 [connection signal="pressed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer/Refresh" to="." method="find_games"]
 [connection signal="pressed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer/SpectateBack" to="." method="close_game_list"]
-[connection signal="pressed" from="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat" to="." method="_on_playmat_pressed"]
-[connection signal="file_selected" from="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat/PlaymatLoadDialog" to="." method="_on_playmat_load_dialog_file_selected"]
-[connection signal="pressed" from="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/PlaymatDefault" to="." method="_on_playmat_default_pressed"]
-[connection signal="pressed" from="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice" to="." method="_on_dice_pressed"]
-[connection signal="file_selected" from="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice/DiceLoadDialog" to="." method="_on_dice_load_dialog_file_selected"]
-[connection signal="pressed" from="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/DiceDefault" to="." method="_on_dice_default_pressed"]
-[connection signal="pressed" from="CanvasLayer/CustomizationPanel/PlaymatMargins/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/Exit" to="." method="_on_cosmetics_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat" to="." method="_on_playmat_pressed"]
+[connection signal="file_selected" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat/PlaymatLoadDialog" to="." method="_on_playmat_load_dialog_file_selected"]
+[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/PlaymatDefault" to="." method="_on_playmat_default_pressed"]
+[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice" to="." method="_on_dice_pressed"]
+[connection signal="file_selected" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice/DiceLoadDialog" to="." method="_on_dice_load_dialog_file_selected"]
+[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/DiceDefault" to="." method="_on_dice_default_pressed"]
+[connection signal="updated_sleeve" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES/defaultSleeve" to="." method="_on_default_sleeve_updated"]
+[connection signal="updated_sleeve" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES/defaultCheerSleeve" to="." method="_on_default_cheer_sleeve_updated"]
+[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/MarginContainer/Exit" to="." method="_on_cosmetics_exit_pressed"]
 [connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons/InfoTabButton" to="." method="_on_card_info_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons/ChatTabButton" to="." method="_on_chat_pressed"]
@@ -2142,7 +2259,7 @@ one_shot = true
 [connection signal="drag_started" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="value_changed" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="value_changed" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameBGMSlider" to="." method="_on_bgm_slider_value_changed"]
-[connection signal="toggled" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/HideCosmetics" to="." method="_on_hide_cosmetics_toggled"]
+[connection signal="toggled" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/Control/HideCosmetics" to="." method="_on_hide_cosmetics_toggled"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Rock" to="." method="_rps_rock"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Paper" to="." method="_rps_paper"]
 [connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Scissors" to="." method="_rps_scissors"]
@@ -2164,6 +2281,7 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/Failure/FailureMargins/FailureVBox/TryAgain_Download" to="." method="_attempt_download_zip"]
 [connection signal="pressed" from="CanvasLayer/Failure/FailureMargins/FailureVBox/TryAgain_Import" to="." method="_attempt_load_zip"]
+[connection signal="pressed" from="CanvasLayer/Update/UpdateMargins/UpdateVBox/Client_Download" to="." method="_go_to_github"]
 [connection signal="pressed" from="CanvasLayer/Update/UpdateMargins/UpdateVBox/Card_Download" to="." method="_attempt_download_zip"]
 [connection signal="pressed" from="CanvasLayer/Update/UpdateMargins/UpdateVBox/UpdateBack" to="." method="_attempt_load_zip"]
 [connection signal="pressed" from="CanvasLayer/Error/ErrorMargins/ErrorHBox/CloseError" to="." method="_on_close_error_pressed"]

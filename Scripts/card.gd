@@ -3,17 +3,45 @@
 
 extends Node2D
 
-@export var cardID:int
-@export var cardNumber:String
-@export_enum("Oshi","Holomem","Cheer","Support") var cardType:String
+@export var cardID:int:
+	get:
+		return %CardInfo.cardID
+	set(value):
+		%CardInfo.cardID = value
+@export var cardNumber:String:
+	get:
+		return %CardInfo.cardNumber
+	set(value):
+		%CardInfo.cardNumber = value
+@export_enum("Oshi","Holomem","Cheer","Support") var cardType:String:
+	get:
+		return %CardInfo.cardType
+	set(value):
+		%CardInfo.cardType = value
 @export var rested = false
-@export var faceDown = false
-@export var trulyHidden = false
-@export var onstage = false
+@export var faceDown = false:
+	get:
+		return %CardInfo.faceDown
+	set(value):
+		%CardInfo.faceDown = value
+@export var trulyHidden = false:
+	get:
+		return %CardInfo.trulyHidden
+	set(value):
+		%CardInfo.trulyHidden = value
+@export var onstage = false:
+	get:
+		return %CardInfo.onstage
+	set(value):
+		%CardInfo.onstage = value
 @export var fake_card = false
 @export var temporary = false
 
-var notFound = false
+var notFound = false:
+	get:
+		return %CardInfo.notFound
+	set(value):
+		%CardInfo.notFound = value
 
 @onready var damageCounter = $DamageCounter
 @onready var damageCounterText = $DamageCounter/Label
@@ -28,383 +56,205 @@ signal move_behind_request(id1,id2)
 signal accept_damage(card_id)
 signal reject_damage(card_id)
 
-var cardFront
-var cardBack
-var fullText = ""
-@export var artNum:int
-@export var inEditor := false
+var cardFront:
+	get:
+		return %CardInfo.cardFront
+	set(value):
+		%CardInfo.cardFront = value
+var cardBack:
+	get:
+		return %CardInfo.cardBack
+	set(value):
+		%CardInfo.cardBack = value
+var fullText = "":
+	get:
+		return %CardInfo.fullText
+	set(value):
+		%CardInfo.fullText = value
+@export var artNum:int:
+	get:
+		return %CardInfo.artNum
+	set(value):
+		%CardInfo.artNum = value
 
 var onTopOf = []
 var attached = []
 @export var attachedTo = -1
 
 #Holomem Variables - Should be null otherwise
-@export var level:int
-@export var hp:int
-@export var damage:int = 0
-@export var offered_damage:int
-@export var extra_hp:int
-@export var baton_pass_cost:int
-@export var default_baton_pass_cost:int
-@export var unlimited:bool
-@export var buzz:bool
-@export var holomem_color:Array
-@export var holomem_name:Array
-@export var tags:Array = []
-@export var bloomed_this_turn: bool
-@export var holomem_arts: Array
-@export var holomem_effects: Array
+@export var level:int:
+	get:
+		return %CardInfo.level
+	set(value):
+		%CardInfo.level = value
+@export var hp:int:
+	get:
+		return %CardInfo.hp
+	set(value):
+		%CardInfo.hp = value
+@export var damage:int = 0:
+	get:
+		return %CardInfo.damage
+	set(value):
+		%CardInfo.damage = value
+@export var offered_damage:int:
+	get:
+		return %CardInfo.offered_damage
+	set(value):
+		%CardInfo.offered_damage = value
+@export var extra_hp:int:
+	get:
+		return %CardInfo.extra_hp
+	set(value):
+		%CardInfo.extra_hp = value
+@export var baton_pass_cost:int:
+	get:
+		return %CardInfo.baton_pass_cost
+	set(value):
+		%CardInfo.baton_pass_cost = value
+@export var default_baton_pass_cost:int:
+	get:
+		return %CardInfo.default_baton_pass_cost
+	set(value):
+		%CardInfo.default_baton_pass_cost = value
+@export var unlimited:bool:
+	get:
+		return %CardInfo.unlimited
+	set(value):
+		%CardInfo.unlimited = value
+@export var buzz:bool:
+	get:
+		return %CardInfo.buzz
+	set(value):
+		%CardInfo.buzz = value
+@export var holomem_color:Array:
+	get:
+		return %CardInfo.holomem_color
+	set(value):
+		%CardInfo.holomem_color = value
+@export var holomem_name:Array:
+	get:
+		return %CardInfo.holomem_name
+	set(value):
+		%CardInfo.holomem_name = value
+@export var tags:Array = []:
+	get:
+		return %CardInfo.tags
+	set(value):
+		%CardInfo.tags = value
+@export var bloomed_this_turn: bool:
+	get:
+		return %CardInfo.bloomed_this_turn
+	set(value):
+		%CardInfo.bloomed_this_turn = value
+@export var holomem_arts: Array:
+	get:
+		return %CardInfo.holomem_arts
+	set(value):
+		%CardInfo.holomem_arts = value
+@export var holomem_effects: Array:
+	get:
+		return %CardInfo.holomem_effects
+	set(value):
+		%CardInfo.holomem_effects = value
 
 #Oshi variables - Should be null otherwise
-@export var life:int
-@export var oshi_color:Array
-@export var oshi_name:Array
-@export var oshi_skills:Array
+@export var life:int:
+	get:
+		return %CardInfo.life
+	set(value):
+		%CardInfo.life = value
+@export var oshi_color:Array:
+	get:
+		return %CardInfo.oshi_color
+	set(value):
+		%CardInfo.oshi_color = value
+@export var oshi_name:Array:
+	get:
+		return %CardInfo.oshi_name
+	set(value):
+		%CardInfo.oshi_name = value
+@export var oshi_skills:Array:
+	get:
+		return %CardInfo.oshi_skills
+	set(value):
+		%CardInfo.oshi_skills = value
 
 #Support variables
-@export var limited:bool
-@export_enum("Staff","Item","Event","Tool","Mascot","Fan") var supportType:String
+@export var limited:bool:
+	get:
+		return %CardInfo.limited
+	set(value):
+		%CardInfo.limited = value
+@export_enum("Staff","Item","Event","Tool","Mascot","Fan") var supportType:String:
+	get:
+		return %CardInfo.supportType
+	set(value):
+		%CardInfo.supportType = value
 
 #Cheer variables
-@export var cheer_color:String
+@export var cheer_color:String:
+	get:
+		return %CardInfo.cheer_color
+	set(value):
+		%CardInfo.cheer_color = value
 
-@export var extraNames:Array = []
+@export var extraNames:Array = []:
+	get:
+		return %CardInfo.extraNames
+	set(value):
+		%CardInfo.extraNames = value
 
 
 func setup_info(number,art_code,back=null):
-	cardNumber = number
-	artNum = art_code
-	
-	if back:
-		cardBack = ImageTexture.create_from_image(back)
-	
-	var card_data = Database.cardData[cardNumber]
-	
-	if card_data.is_empty():
-		notFound = true
-		match Settings.settings.Language:
-			"ja":
-				cardFront = load("res://Sou_Desu_Ne_JP.png")
-			_:
-				cardFront = load("res://Sou_Desu_Ne.png")
-		$Front.texture = cardFront
-		return
-	elif "ja" in card_data.cardArt[str(artNum)] and card_data.cardArt[str(artNum)].ja.unrevealed and !Settings.settings.AllowUnrevealed:
-		notFound = true
-		cardFront = load("res://spoilers.png")
-		$Front.texture = cardFront
-		return
-	cardType = card_data.cardType
-	unlimited = card_data.cardLimit == -1
-	
-	#IF YOU CHANGE THIS CODE ALSO CHANGE IT IN DECK_INFO
-	var lang_code = "ja" if "ja" in card_data.cardArt[str(artNum)] else "en"
-	if 'en' in card_data.cardArt[str(artNum)] and Settings.settings.OnlyEN:
-		lang_code = 'en'
-	else:
-		for lang in card_data.cardArt[str(artNum)]:
-			if Settings.settings.UseCardLanguage and lang == Settings.settings.Language and (Settings.settings.AllowProxies or !bool(card_data.cardArt[str(artNum)][lang].proxy)):
-				lang_code = lang
-	
-	if cardNumber in Database.cardArts and int(artNum) in Database.cardArts[cardNumber] and lang_code in Database.cardArts[cardNumber][int(artNum)]:
-		cardFront = Database.cardArts[cardNumber][int(artNum)][lang_code]
-		$Front.texture = cardFront
-	else:
-		print(cardNumber, " ", artNum, " ", lang_code)
-	#YES I SHOULDN'T JUST COPY-PASTE CODE - THIS ONE WAS TRICKY TO SEPARATE INTO ITS OWN THING
-	
-	if card_data.has("tags"):
-		for tag in card_data.tags:
-			tags.append(tag)
-	
-	if card_data.has("extraNames"):
-		for extraName in card_data.extraNames:
-			extraNames.append(extraName)
-	
-	match cardType:
-		"Oshi":
-			life = card_data.life
-			oshi_color = []
-			for color in card_data.color:
-				oshi_color.append(color)
-			oshi_name = []
-			for name in card_data.name:
-				oshi_name.append(name)
-			oshi_skills = []
-			for skill in card_data.skills:
-				if bool(skill.sp):
-					oshi_skills.append(["%s_SPSKILL_NAME" % cardNumber,skill.cost,bool(skill.sp)])
-				else:
-					oshi_skills.append(["%s_SKILL_NAME" % cardNumber,skill.cost,bool(skill.sp)])
-				
-		"Holomem":
-			bloomed_this_turn = false
-			level = card_data.level
-			buzz = bool(card_data.buzz)
-			hp = card_data.hp
-			damage = 0
-			offered_damage = 0
-			extra_hp = 0
-			baton_pass_cost = card_data.batonPassCost
-			default_baton_pass_cost = card_data.batonPassCost
-			holomem_color = []
-			for color in card_data.color:
-				holomem_color.append(color)
-			holomem_name = []
-			for name in card_data.name:
-				holomem_name.append(name)
-			holomem_arts = []
-			for art in card_data.arts:
-				var cost_dict = {"White": 0, "Green": 0, "Red": 0, "Blue": 0, "Purple": 0, "Yellow": 0, "Any" : 0}
-				for chr in art.cost:
-					match chr:
-						"W":
-							cost_dict.White += 1
-						"G":
-							cost_dict.Green += 1
-						"R":
-							cost_dict.Red += 1
-						"B":
-							cost_dict.Blue += 1
-						"P":
-							cost_dict.Purple += 1
-						"Y":
-							cost_dict.Yellow += 1
-						"N":
-							cost_dict.Any += 1
-				holomem_arts.append([art.artIndex,cost_dict,art.damage,bool(art.hasPlus),bool(art.hasEffect),null if !art.has("advantage") else art.advantage])
-			holomem_arts.sort_custom(func(a,b): return a[0] < b[0]) #Order arts by index
-			holomem_effects = []
-			if card_data.has("effect"):
-				holomem_effects.append(card_data.effect)
-		"Support":
-			limited = bool(card_data.limited)
-			supportType = card_data.supportType
-		"Cheer":
-			if card_data.has("color"):
-				cheer_color = card_data.color
-			else:
-				cheer_color = "COLORLESS"
-	
-	fullText = full_desc()
+	%CardInfo.setup_info(number, art_code, back)
+
 
 func set_ban(num: int):
-	if num < 0:
-		$Ban.visible = false
-	elif num == 0:
-		$Ban.text = "X"
-		$Ban.visible = true
-	else:
-		$Ban.text = str(num)
-		$Ban.visible = true
+	%CardInfo.set_ban(num)
 
 func getNamesAsText():
-	match cardType:
-		"Oshi":
-			if oshi_name.size() == 0:
-				return tr("NOBODY")
-			else:
-				return tr("NAMESEP").join(oshi_name.map(Settings.trans))
-		"Holomem":
-			if holomem_name.size() == 0:
-				return tr("NOBODY")
-			else:
-				return tr("NAMESEP").join(holomem_name.map(Settings.trans))
-	
-	return "idk"
+	return %CardInfo.getNamesAsText()
 
 func getColorsAsText():
-	match cardType:
-		"Oshi":
-			if oshi_color.size() == 0:
-				return tr("COLORLESS")
-			else:
-				return tr("COLORSEP").join(oshi_color.map(Settings.trans))
-		"Holomem":
-			if holomem_color.size() == 0:
-				return tr("COLORLESS")
-			else:
-				return tr("COLORSEP").join(holomem_color.map(Settings.trans))
-				
-	
-	return "idk"
+	return %CardInfo.getColorsAsText()
 
-#Shoutout to whamer for the idea to add powers of 2
 func getColorOrder():
-	var colorToNum = {"White":1,"Green":2,"Red":3,"Blue":4,"Purple":5,"Yellow":6}
-	match cardType:
-		"Oshi":
-			var result = 0.0
-			for index in range(oshi_color.size()):
-				result += colorToNum[oshi_color[index]] * pow(7, -index)
-			return result
-		"Holomem":
-			var result = 0.0
-			for index in range(holomem_color.size()):
-				result += colorToNum[holomem_color[index]] * pow(7, -index)
-			return result
-	return 0
+	return %CardInfo.getColorOrder()
 
 func getTagsAsText():
-	if tags.size() == 0:
-		return ""
-	else:
-		return "#" + " #".join(tags.map(Settings.trans))
+	return %CardInfo.getTagsAsText()
 
 
 func full_desc():
-	var result = Settings.trans("%s_NAME" % cardNumber)
-	if cardType in ["Holomem", "Oshi"]:
-		var namesText = getNamesAsText()
-		if result != namesText:
-			result += " (%s)" % namesText
-		if cardType == "Holomem" and buzz:
-			result += " " + tr("NAME_BUZZ")
-	result += "\n" + cardNumber + "\n\n"
-	
-	match cardType:
-		"Oshi":
-			result += tr("INFO_OSHI").format({colorText = getColorsAsText(), life = life, tagsText = "\n" + getTagsAsText()})
-			var skillText = ""
-			var spSkillText = ""
-			for skill in oshi_skills:
-				var costText = str(skill[1])
-				if skill[1] == -1:
-					costText = "X"
-				if skill[2]:
-					spSkillText += "\n\n" + tr("INFO_OSHI_SPSKILL").format({costText = costText, nameText = Settings.trans(skill[0])})
-					spSkillText += "\n\n" + Settings.trans("%s_SPSKILL_EFFECT" % cardNumber)
-				else:
-					skillText += "\n\n" + tr("INFO_OSHI_SKILL").format({costText = costText, nameText = Settings.trans(skill[0])})
-					skillText += "\n\n" + Settings.trans("%s_SKILL_EFFECT" % cardNumber)
-			
-			result += skillText
-			result += spSkillText
-				
-		"Holomem":
-			var infoLevels = {-1: tr("INFO_SPOT"), 0: tr("INFO_DEBUT"), 1: tr("INFO_1ST"), 2: tr("INFO_2ND")}[level]
-			var infoBuzz = tr("INFO_BUZZ") if buzz else ""
-			var infoHP = (str(hp + extra_hp - damage) + "/" if onstage else "") + str(hp + extra_hp) + (" (+" + str(extra_hp) + ")" if extra_hp > 0 else "")
-			
-			result += tr("INFO_HOLOMEM_1").format({colorText = getColorsAsText(), levelText = infoLevels, buzzText = infoBuzz, hpText = infoHP, tagsText = getTagsAsText()})
-			for effect in holomem_effects:
-				var effectKey = effect
-				result += "\n\n[center]"
-				match effect:
-					"Gift":
-						result += "[img=60]Icons/gift.png[/img]"
-					"Bloom Effect":
-						effectKey = "Bloom"
-						result += "[img=80]Icons/bloomEF.png[/img]"
-					"Collab Effect":
-						effectKey = "Collab"
-						result += "[img=80]Icons/collabEF.png[/img]"
-				
-				result += " " + Settings.trans("%s_%s_NAME" % [cardNumber, effectKey.to_upper()]) + "[/center]"
-				result += "\n\n" + Settings.trans("%s_%s_EFFECT" % [cardNumber, effectKey.to_upper()])
-			
-			result += "\n"
-			
-			for art in holomem_arts:
-				result += "\n\n[center]"
-				for i in range(art[1].White):
-					result += "[img=18]res://CheerIcons/WhiteArts.webp[/img]"
-				for i in range(art[1].Green):
-					result += "[img=18]res://CheerIcons/GreenArts.webp[/img]"
-				for i in range(art[1].Red):
-					result += "[img=18]res://CheerIcons/RedArts.webp[/img]"
-				for i in range(art[1].Blue):
-					result += "[img=18]res://CheerIcons/BlueArts.webp[/img]"
-				for i in range(art[1].Purple):
-					result += "[img=18]res://CheerIcons/PurpleArts.webp[/img]"
-				for i in range(art[1].Yellow):
-					result += "[img=18]res://CheerIcons/YellowArts.webp[/img]"
-				for i in range(art[1].Any):
-					result += "[img=18]res://CheerIcons/ColorlessArts.webp[/img]"
-				result += " " + Settings.trans("%s_ART_%s_NAME" % [cardNumber, art[0]])
-				result += " " + str(art[2]) + ("+" if art[3] else "")
-				if art[5] != null:
-					result += " [img=40]res://Icons/tokkou_50_%s.png[/img]" % art[5].to_lower()
-				result += "[/center]"
-				if art[4]:
-					result += "\n\n" + Settings.trans("%s_ART_%s_EFFECT" % [cardNumber, art[0]])
-			
-			var costText = ""
-			for i in range(default_baton_pass_cost):
-				costText += "[img=18" + (" color=ffffff70" if i >= baton_pass_cost else "") + "]res://CheerIcons/ColorlessArts.webp[/img]"
-			if default_baton_pass_cost < baton_pass_cost:
-				costText += " [lb]"
-				for i in range(baton_pass_cost - default_baton_pass_cost):
-					costText += "[img=18]res://CheerIcons/ColorlessArts.webp[/img]"
-				costText += "[rb]"
-			if costText == "":
-				costText = tr("INFO_NOBATONPASSCOST")
-			result += "\n\n" + tr("INFO_HOLOMEM_2").format({costText = costText})
-			
-			if unlimited:
-				result += "\n\nEXTRA: " + Settings.trans("EXTRA_UNLIM")
-			if level == -1:
-				result += "\n\nEXTRA: " + Settings.trans("EXTRA_SPOT")
-			if buzz:
-				result += "\n\nEXTRA: " + Settings.trans("EXTRA_BUZZ")
-			if holomem_name.size() == 2:
-				result += "\n\nEXTRA: " + Settings.trans("EXTRA_DUO").format({firstName = holomem_name[0], secondName = holomem_name[1]})
-		"Support":
-			result += tr("INFO_SUPPORT").format({supportText = Settings.trans("Support"), typeText = Settings.trans(supportType), tagsText = "\n" + getTagsAsText()})
-			if limited:
-				result += "\n\n" + tr("INFO_LIMITED")
-			result += "\n\n" + Settings.trans("%s_EFFECT" % cardNumber)
-	
-	if extraNames.size() == 1:
-		result += "\n\nEXTRA: " + Settings.trans("EXTRA_EXTRANAME").format({
-						cardType = Settings.trans(supportType if cardType == "Support" else cardType), extraName = Settings.trans(extraNames[0] + "_NAME") })
-	
-	return result
+	return %CardInfo.full_desc()
+
 
 func get_card_name():
-	return Settings.trans("%s_NAME" % cardNumber)
+	return %CardInfo.get_card_name()
 
 
 func is_color(color):
-	match cardType:
-		"Oshi":
-			return color in oshi_color
-		"Holomem":
-			return color in holomem_color
-	return false
+	return %CardInfo.is_color(color)
 
 func is_colorless():
-	match cardType:
-		"Oshi":
-			return oshi_color.size() == 0
-		"Holomem":
-			return holomem_color.size() == 0
-	return false
+	return %CardInfo.is_colorless()
 
 func has_name(name_check):
-	match cardType:
-		"Oshi":
-			return name_check in oshi_name
-		"Holomem":
-			return name_check in holomem_name
-	return false
+	return %CardInfo.has_name(name_check)
 
 func has_tag(tag_check):
-	return tag_check in tags
+	return %CardInfo.has_tag(tag_check)
 
 
 func update_amount(new_amount):
-	if new_amount <= 0:
-		$Amount.visible = false
-	else:
-		$Amount.visible = true
-	$Amount.text = "x" + str(new_amount)
+	%CardInfo.update_amount(new_amount)
 
 func set_amount_hidden(value : bool):
-	$Amount.visible = value
+	%CardInfo.set_amount_hidden(value)
 
 func get_amount():
-	return $Amount.text.substr(1).to_int()
+	return %CardInfo.get_amount()
 
 
 func update_damage():
@@ -420,35 +270,23 @@ func update_damage():
 		extraCounter.visible = true
 
 func add_damage(amount):
-	damage += amount
-	if damage < 0:
-		damage = 0
-	if damage > 999:
-		damage = 999
+	%CardInfo.add_damage(amount)
 	update_damage()
 
 func clear_damage():
-	damage = 0
+	%CardInfo.clear_damage()
 	update_damage()
 
 func add_extra_hp(amount):
-	extra_hp += amount
-	if extra_hp < 0:
-		extra_hp = 0
-	if extra_hp > 999:
-		extra_hp = 999
+	%CardInfo.add_extra_hp(amount)
 	update_damage()
 
 func clear_extra_hp():
-	extra_hp = 0
+	%CardInfo.clear_extra_hp()
 	update_damage()
 
 func add_extra_baton_pass_cost(amount):
-	baton_pass_cost += amount
-	if baton_pass_cost < 0:
-		baton_pass_cost = 0
-	if baton_pass_cost > 99:
-		baton_pass_cost = 99
+	%CardInfo.add_extra_baton_pass_cost(amount)
 
 func update_attached():
 	var cheer_i = 0
@@ -596,35 +434,17 @@ func attach(other_card):
 
 
 func flipDown():
-	if faceDown:
-		pass
-	else:
-		$Front.texture = cardBack
-		faceDown = true
+	%CardInfo.flipDown()
 
 func flipUp():
-	if !faceDown:
-		pass
-	else:
-		$Front.texture = cardFront
-		faceDown = false
-		trulyHidden = false
+	%CardInfo.flipUp()
 
 func trulyHide():
-	if trulyHidden:
-		pass
-	else:
-		flipDown()
-		trulyHidden = true
+	%CardInfo.trulyHide()
 
 func updateBack(newBack):
-	cardBack = newBack
-	if faceDown:
-		$Front.texture = cardBack
+	%CardInfo.updateBack(newBack)
 
-
-func _on_card_button_pressed():
-	emit_signal("card_clicked",cardID)
 
 func showNotice():
 	var tween = get_tree().create_tween()
@@ -643,18 +463,17 @@ func hitAndBack(hitPos):
 	tween.tween_callback(set_z_index.bind(z_index))
 	z_index = 5
 
+func _on_card_info_pressed(_id):
+	emit_signal("card_clicked",cardID)
 
-func _on_card_button_mouse_entered():
+func _on_card_info_mouse_entered(_id):
 	emit_signal("card_mouse_over",cardID)
 
-
-func _on_card_button_mouse_exited():
+func _on_card_info_mouse_exited():
 	emit_signal("card_mouse_left")
 
-
-func _on_card_button_gui_input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == 2:
-		emit_signal("card_right_clicked",cardID)
+func _on_card_info_gui_input(_id):
+	emit_signal("card_right_clicked",cardID)
 
 
 func offer_damage(newDamage):

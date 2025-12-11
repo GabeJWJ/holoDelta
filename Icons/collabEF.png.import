@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6qawumi4sj35"
-path="res://.godot/imported/collabEF.png-3d5bcd893201111a9beb8ac7f67a0218.ctex"
+path.s3tc="res://.godot/imported/collabEF.png-3d5bcd893201111a9beb8ac7f67a0218.s3tc.ctex"
+path.etc2="res://.godot/imported/collabEF.png-3d5bcd893201111a9beb8ac7f67a0218.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Icons/collabEF.png"
-dest_files=["res://.godot/imported/collabEF.png-3d5bcd893201111a9beb8ac7f67a0218.ctex"]
+dest_files=["res://.godot/imported/collabEF.png-3d5bcd893201111a9beb8ac7f67a0218.s3tc.ctex", "res://.godot/imported/collabEF.png-3d5bcd893201111a9beb8ac7f67a0218.etc2.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

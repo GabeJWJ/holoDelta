@@ -1,6 +1,9 @@
 from globals.live_data import get_player, get_all_lobbies, get_all_games
 from classes.lobby import Lobby
+from classes.player import Player
+from classes.game import Game
 from utils.game_network_utils import update_numbers_all
+from utils.deck_validator import check_legal
 
 
 
@@ -41,11 +44,34 @@ async def call_command(player_id,command, data):
                 try:
                     game_to_spectate.spectating.append(player)
                     player.game = game_to_spectate
-                    await player.tell("Server","Spectate",{"game_state":await game_to_spectate.to_dict()})
+                    await player.tell("Server","Spectate",{"game_state":await game_to_spectate.to_dict(), "game_id":game_to_spectate.id})
                 except:
                     await player.tell("Server","Spectate Game Failed")
             else:
                 await player.tell("Server","Spectate Game Failed")
+        
+        case "Get Cosmetics":
+            if "game" in data and data["game"] in games and player.lobby is None and player in games[data["game"]].spectating:
+                game_to_spectate = games[data["game"]]
+                for game_player in game_to_spectate.cosmetics:
+                        for cosmetics_type in game_to_spectate.cosmetics[game_player]:
+                            if cosmetics_type != "passcode" and game_to_spectate.cosmetics[game_player][cosmetics_type]:
+                                await player.tell("Spectate Side", "Cosmetics", {"player":game_player, "cosmetics_type":cosmetics_type})
+        
+        case "Start Goldfishing":
+            if "deck_info" in data and player.lobby is None and player.game is None:
+                try:
+                    deck, deck_legality = check_legal(data["deck_info"], {})
+                    if deck_legality["legal"]:
+                        goldfish_game = Game(player, deck, Player(), {})
+                        player.game = goldfish_game
+                        await player.tell("Server", "Goldfish")
+                    else:
+                        await player.tell("Server", "Goldfish Deck Legality", deck_legality["reasons"])
+                except:
+                    await player.tell("Server", "Goldfish Failed")
+            else:
+                await player.tell("Server", "Goldfish Failed")
         
         case "Name Change":
             if "new_name" in data and isinstance(data["new_name"],str):

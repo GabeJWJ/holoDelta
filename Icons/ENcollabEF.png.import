@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwdjqnur5fav0"
-path="res://.godot/imported/ENcollabEF.png-4b268aa48618d46ffbbf8e14d5968cf3.ctex"
+path.s3tc="res://.godot/imported/ENcollabEF.png-4b268aa48618d46ffbbf8e14d5968cf3.s3tc.ctex"
+path.etc2="res://.godot/imported/ENcollabEF.png-4b268aa48618d46ffbbf8e14d5968cf3.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Icons/ENcollabEF.png"
-dest_files=["res://.godot/imported/ENcollabEF.png-4b268aa48618d46ffbbf8e14d5968cf3.ctex"]
+dest_files=["res://.godot/imported/ENcollabEF.png-4b268aa48618d46ffbbf8e14d5968cf3.s3tc.ctex", "res://.godot/imported/ENcollabEF.png-4b268aa48618d46ffbbf8e14d5968cf3.etc2.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

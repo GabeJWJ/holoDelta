@@ -33,9 +33,9 @@ func setup_data(result, callback = null, progress = null):
 					if int(art_code) not in cardArts[cardNumber]:
 						cardArts[cardNumber][int(art_code)] = {}
 					if lang not in cardArts[cardNumber][int(art_code)]:
-						var image = load(path).get_image()
-						image.resize(309,429)
-						cardArts[cardNumber][int(art_code)][lang] = ImageTexture.create_from_image(image)
+						#Was loading the texture, grabbing the image, and creating an ImageTexture from it
+						#Not sure why; this has less juggling
+						cardArts[cardNumber][int(art_code)][lang] = path
 				else:
 					print(path)
 		current += 1

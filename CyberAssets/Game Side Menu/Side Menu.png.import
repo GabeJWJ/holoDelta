@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx76tmf8royup"
-path="res://.godot/imported/Side Menu.png-fadf13262724f0349f3983bc5226b9e3.ctex"
+path.s3tc="res://.godot/imported/Side Menu.png-fadf13262724f0349f3983bc5226b9e3.s3tc.ctex"
+path.etc2="res://.godot/imported/Side Menu.png-fadf13262724f0349f3983bc5226b9e3.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://CyberAssets/Game Side Menu/Side Menu.png"
-dest_files=["res://.godot/imported/Side Menu.png-fadf13262724f0349f3983bc5226b9e3.ctex"]
+dest_files=["res://.godot/imported/Side Menu.png-fadf13262724f0349f3983bc5226b9e3.s3tc.ctex", "res://.godot/imported/Side Menu.png-fadf13262724f0349f3983bc5226b9e3.etc2.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

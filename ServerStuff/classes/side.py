@@ -4,7 +4,6 @@ from random import shuffle, randrange
 from classes.card import Card
 
 
-
 class Side:
     def __init__(self, deck, game, player, opponent):
         self.game = game
@@ -62,7 +61,7 @@ class Side:
         await self.tell_player("Mulligan",{"forced":not await self.hasLegalHand()})
 
     async def yes_mulligan(self):
-        await self.game._send_message(self.player,"MESSAGE_MULLIGAN")
+        await self.send_message(self.player,"MESSAGE_MULLIGAN")
         
         list_of_ids = []
         for hand_card in self.hand:
@@ -93,16 +92,14 @@ class Side:
         await self.game._mulligan(self.player.id)
 
     async def specialStart3(self):
-        forced_mulligan_cards = self.game.playing[self.opponent.id].forced_mulligan_cards
+        forced_mulligan_cards = {}
+        if not self.game.goldfish:
+            forced_mulligan_cards = self.game.playing[self.opponent.id].forced_mulligan_cards
         await self.tell_player("Mulligan Done", {"forced_mulligan_cards":forced_mulligan_cards})
         self.can_do_things = True
         self.in_mulligans = False
 
     async def specialStart4(self):
-        await self.oshi.flipUp()
-
-        oshi_info = await self.oshi.to_dict()
-
         zone_info = {}
         
         for zone in self.zones:
@@ -121,7 +118,8 @@ class Side:
         life_info = [lif.id for lif in self.life]
         
         await self.tell_player("All Ready",{"life":life_info,"is_turn":self.is_turn})
-        await self.tell_others("All Ready",{"oshi":oshi_info,"zones":zone_info})
+        await self.tell_others("All Ready",{"zones":zone_info})
+
 
     async def hasLegalHand(self):
         for actualCard in self.hand:
@@ -136,9 +134,9 @@ class Side:
             await self.add_to_hand(new_card)
         
         if x == 1:
-            await self.game._send_message(self.player,"MESSAGE_DRAW")
+            await self.send_message(self.player,"MESSAGE_DRAW")
         else:
-            await self.game._send_message(self.player,"MESSAGE_DRAWX",{},{"amount":x})
+            await self.send_message(self.player,"MESSAGE_DRAWX",{},{"amount":x})
 
     async def mill(self, from_fuda,to_fuda,x=1):
         fudas = get_data("fudas")
@@ -160,9 +158,9 @@ class Side:
             await self.add_to_fuda(new_card,to_fuda)
         
         if x == 1:
-            await self.game._send_message(self.player,"MESSAGE_MILL",{"from":fudas[int(from_fuda)],"to":fudas[int(to_fuda)]})
+            await self.send_message(self.player,"MESSAGE_MILL",{"from":fudas[int(from_fuda)],"to":fudas[int(to_fuda)]})
         else:
-            await self.game._send_message(self.player,"MESSAGE_MILLX",{"from":fudas[int(from_fuda)],"to":fudas[int(to_fuda)]},{"amount":x})
+            await self.send_message(self.player,"MESSAGE_MILLX",{"from":fudas[int(from_fuda)],"to":fudas[int(to_fuda)]},{"amount":x})
 
     async def find_what_zone(self, card_id):
         for possible_zone in self.zones:
@@ -366,7 +364,7 @@ class Side:
         await self.tell_player("Bloom",{"card_to_bloom":card_to_bloom.id, "zone_to_bloom":zone_to_bloom})
         await self.tell_others("Bloom", {"card":await card_to_bloom.to_dict(), "zone_to_bloom":zone_to_bloom})
 
-        await self.game._send_message(self.player,"MESSAGE_BLOOM",{"fromName":bloomee.number + "_NAME","fromLevel":bloom_levels[bloomee.level],
+        await self.send_message(self.player,"MESSAGE_BLOOM",{"fromName":bloomee.number + "_NAME","fromLevel":bloom_levels[bloomee.level],
                                                             "toName":card_to_bloom.number + "_NAME","toLevel":bloom_levels[card_to_bloom.level]},{"fromZone":zone_to_bloom})
     
     async def end_turn(self):
@@ -395,7 +393,7 @@ class Side:
             case 2: #Archive
                 if currentCard is not None:
                     actualCard = self.cards[currentCard]
-                    await self.game._send_message(self.player,"MESSAGE_STAGE_ARCHIVE",{"fromName":actualCard.number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
+                    await self.send_message(self.player,"MESSAGE_STAGE_ARCHIVE",{"fromName":actualCard.number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
                     await self.add_to_fuda(currentCard,Fuda.archive)
                     await self.remove_old_card(currentCard,True)
                     if self.playing == currentCard:
@@ -403,7 +401,7 @@ class Side:
             case 3: #Return to Hand
                 if currentCard is not None:
                     actualCard = self.cards[currentCard]
-                    await self.game._send_message(self.player,"MESSAGE_STAGE_HAND",{"fromName":actualCard.number+"_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
+                    await self.send_message(self.player,"MESSAGE_STAGE_HAND",{"fromName":actualCard.number+"_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
                     await actualCard.clear_damage()
                     await actualCard.clear_extra_hp()
                     await actualCard.unrest()
@@ -411,11 +409,11 @@ class Side:
                     await self.remove_old_card(currentCard,True)
             case 4: #Move to Center
                 if currentCard is not None:
-                    await self.game._send_message(self.player,"MESSAGE_STAGE_CENTER",{"fromName":self.cards[currentCard].number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
+                    await self.send_message(self.player,"MESSAGE_STAGE_CENTER",{"fromName":self.cards[currentCard].number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
                     await self.move_card_to_zone(currentCard,"Center")
             case 6: #Collab
                 if currentCard is not None:
-                    await self.game._send_message(self.player,"MESSAGE_STAGE_COLLAB",{"fromName":self.cards[currentCard].number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
+                    await self.send_message(self.player,"MESSAGE_STAGE_COLLAB",{"fromName":self.cards[currentCard].number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
                     await self.move_card_to_zone(currentCard,"Collab")
                     if len(self.deck) > 0:
                         await self.mill(Fuda.deck,Fuda.holopower)
@@ -423,14 +421,14 @@ class Side:
                     await self.tell_player("Collab")
             case 9: #Move to Collab
                 if currentCard is not None:
-                    await self.game._send_message(self.player,"MESSAGE_STAGE_MOVECOLLAB",{"fromName":self.cards[currentCard].number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
+                    await self.send_message(self.player,"MESSAGE_STAGE_MOVECOLLAB",{"fromName":self.cards[currentCard].number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
                     await self.move_card_to_zone(currentCard,"Collab")
             case 15: #Unbloom
                 if currentCard is not None:
                     await self.tell_all("Unbloom",{"card_to_unbloom":currentCard})
                     actualCard = self.cards[currentCard]
                     newCard = actualCard.onTopOf[0]
-                    await self.game._send_message(self.player,"MESSAGE_STAGE_UNBLOOM",{"fromName":actualCard.number + "_NAME","toName":newCard.number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
+                    await self.send_message(self.player,"MESSAGE_STAGE_UNBLOOM",{"fromName":actualCard.number + "_NAME","toName":newCard.number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
                     await actualCard.unbloom()
                     for zone in self.zones:
                         if self.zones[zone] == currentCard:
@@ -444,27 +442,27 @@ class Side:
                     self.playing = None
             case 21: #Add Revealed Card to Hand
                 if currentCard is not None:
-                    await self.game._send_message(self.player,"MESSAGE_REVEALED_HAND",{"cardName":self.cards[currentCard].number + "_NAME"})
+                    await self.send_message(self.player,"MESSAGE_REVEALED_HAND",{"cardName":self.cards[currentCard].number + "_NAME"})
                     await self.remove_old_card(currentCard,True)
                     await self.add_to_hand(currentCard)
             case 23: #Send Revealed Card to Top of Deck
                 if currentCard is not None:
-                    await self.game._send_message(self.player,"MESSAGE_REVEALED_TOPDECK",{"cardName":self.cards[currentCard].number + "_NAME"})
+                    await self.send_message(self.player,"MESSAGE_REVEALED_TOPDECK",{"cardName":self.cards[currentCard].number + "_NAME"})
                     await self.remove_old_card(currentCard,True)
                     await self.add_to_fuda(currentCard, Fuda.deck)
             case 24: #Send Revealed Card to Bottom of Deck
                 if currentCard is not None:
-                    await self.game._send_message(self.player,"MESSAGE_REVEALED_BOTTOMDECK",{"cardName":self.cards[currentCard].number + "_NAME"})
+                    await self.send_message(self.player,"MESSAGE_REVEALED_BOTTOMDECK",{"cardName":self.cards[currentCard].number + "_NAME"})
                     await self.remove_old_card(currentCard,True)
                     await self.add_to_fuda(currentCard, Fuda.deck, True)
             case 25: #Send Revealed Card to Archive
                 if currentCard is not None:
-                    await self.game._send_message(self.player,"MESSAGE_REVEALED_ARCHIVE",{"cardName":self.cards[currentCard].number + "_NAME"})
+                    await self.send_message(self.player,"MESSAGE_REVEALED_ARCHIVE",{"cardName":self.cards[currentCard].number + "_NAME"})
                     await self.remove_old_card(currentCard,True)
                     await self.add_to_fuda(currentCard, Fuda.archive)
             case 26: #Send Revealed Card to Holopower
                 if currentCard is not None:
-                    await self.game._send_message(self.player,"MESSAGE_REVEALED_HOLOPOWER",{"cardName":self.cards[currentCard].number + "_NAME"})
+                    await self.send_message(self.player,"MESSAGE_REVEALED_HOLOPOWER",{"cardName":self.cards[currentCard].number + "_NAME"})
                     await self.remove_old_card(currentCard,True)
                     await self.add_to_fuda(currentCard, Fuda.holopower)
             case 30: #Reveal and Attach Life
@@ -478,13 +476,13 @@ class Side:
             case 70: #Oshi Skill
                 if currentCard is not None and self.cards[currentCard].skill_cost >= 0:
                     self.used_oshi_skill = True
-                    await self.game._send_message(self.player,"MESSAGE_OSHISKILL",{"skillName":self.cards[currentCard].number + "_SKILL_NAME"})
+                    await self.send_message(self.player,"MESSAGE_OSHISKILL",{"skillName":self.cards[currentCard].number + "_SKILL_NAME"})
                     await self.mill(Fuda.holopower,Fuda.archive,self.cards[currentCard].skill_cost)
             case 71: #SP Oshi Skill
                 if currentCard is not None and self.cards[currentCard].spskill_cost >= 0:
                     self.used_sp_oshi_skill = True
                     await self.tell_others("Used SP Skill")
-                    await self.game._send_message(self.player,"MESSAGE_OSHISKILL_SP",{"skillName":self.cards[currentCard].number + "_SPSKILL_NAME"})
+                    await self.send_message(self.player,"MESSAGE_OSHISKILL_SP",{"skillName":self.cards[currentCard].number + "_SPSKILL_NAME"})
                     await self.mill(Fuda.holopower,Fuda.archive,self.cards[currentCard].spskill_cost)
             
             case 102: #Play Hidden to Center
@@ -494,39 +492,44 @@ class Side:
                     self.preliminary_holomem_in_center = True
             case 110: #Return to top of deck
                 if currentCard is not None:
-                    await self.game._send_message(self.player,"MESSAGE_HAND_TOPDECK")
+                    await self.send_message(self.player,"MESSAGE_HAND_TOPDECK")
                     await self.add_to_fuda(currentCard,Fuda.deck)
                     await self.remove_from_hand(currentCard)
                     self.can_undo_shuffle_hand = None
             case 111: #Return to bottom of deck
                 if currentCard is not None:
-                    await self.game._send_message(self.player,"MESSAGE_HAND_BOTTOMDECK")
+                    await self.send_message(self.player,"MESSAGE_HAND_BOTTOMDECK")
                     await self.add_to_fuda(currentCard,Fuda.deck,-1)
                     await self.remove_from_hand(currentCard)
                     self.can_undo_shuffle_hand = None
             case 112: #Archive
                 if currentCard is not None:
-                    await self.game._send_message(self.player,"MESSAGE_HAND_ARCHIVE",{"cardName":self.cards[currentCard].number + "_NAME"})
+                    await self.send_message(self.player,"MESSAGE_HAND_ARCHIVE",{"cardName":self.cards[currentCard].number + "_NAME"})
                     await self.add_to_fuda(currentCard,Fuda.archive)
                     await self.remove_from_hand(currentCard)
             case 113: #Holopower
                 if currentCard is not None:
-                    await self.game._send_message(self.player,"MESSAGE_HAND_HOLOPOWER")
+                    await self.send_message(self.player,"MESSAGE_HAND_HOLOPOWER")
                     await self.add_to_fuda(currentCard,Fuda.holopower)
                     await self.remove_from_hand(currentCard)
             case 114: #Reveal from Hand
                 if currentCard is not None:
                     actualCard = self.cards[currentCard]
-                    await self.game._send_message(self.player,"MESSAGE_HAND_REVEAL",{"cardName":actualCard.number + "_NAME"})
+                    await self.send_message(self.player,"MESSAGE_HAND_REVEAL",{"cardName":actualCard.number + "_NAME"})
 
                     self.revealed.append(currentCard)
                     await self.remove_from_hand(currentCard)
                     await self.tell_player("Reveal",{"card_id":currentCard})
                     await self.tell_others("Reveal",{"card":await actualCard.to_dict()})
+            case 115: #Reveal Entire Hand
+                hand_info = [await hcard.to_dict() for hcard in self.hand]
+
+                await self.send_message(self.player,"MESSAGE_HAND_REVEALALL")
+                await self.opponent.tell("Opponent Side", "Reveal Hand", {"hand_info": hand_info})
             case 120: #Play Support
                 if currentCard is not None:
                     actualCard = self.cards[currentCard]
-                    await self.game._send_message(self.player,"MESSAGE_HAND_SUPPORT_PLAY",{"cardName":actualCard.number + "_NAME"})
+                    await self.send_message(self.player,"MESSAGE_HAND_SUPPORT_PLAY",{"cardName":actualCard.number + "_NAME"})
                     if actualCard.limited:
                         self.used_limited = True
                     await self.remove_from_hand(currentCard)
@@ -548,7 +551,7 @@ class Side:
             case 205: #Reveal Top Card From Deck
                 actualCard = self.deck[0]
                 currentCard = actualCard.id
-                await self.game._send_message(self.player,"MESSAGE_FUDA_REVEAL",{"cardName":actualCard.number + "_NAME","fromFuda":"DECK"})
+                await self.send_message(self.player,"MESSAGE_FUDA_REVEAL",{"cardName":actualCard.number + "_NAME","fromFuda":"DECK"})
                 await self.remove_from_fuda(currentCard,Fuda.deck)
 
                 self.revealed.append(currentCard)
@@ -556,7 +559,7 @@ class Side:
                 await self.tell_player("Reveal",{"card_id":currentCard})
                 await self.tell_others("Reveal",{"card":await actualCard.to_dict()})
             case 250: #Shuffle Hand Into Deck
-                await self.game._send_message(self.player,"MESSAGE_DECK_MULLIGAN")
+                await self.send_message(self.player,"MESSAGE_DECK_MULLIGAN")
                 list_of_ids = []
                 for hand_card in self.hand:
                     list_of_ids.append(hand_card.id)
@@ -569,17 +572,17 @@ class Side:
 
                 shuffle(self.deck)
             case 251: #Unshuffle Hand Into Deck
-                await self.game._send_message(self.player,"MESSAGE_DECK_UNDOMULLIGAN")
+                await self.send_message(self.player,"MESSAGE_DECK_UNDOMULLIGAN")
                 for hand_id in self.can_undo_shuffle_hand:
                     await self.add_to_hand(hand_id)
                     await self.remove_from_fuda(hand_id,Fuda.deck)
             case 296: #Start RPS
                 await self.game._start_rps()
             case 298: #Search Deck
-                await self.game._send_message(self.player,"MESSAGE_DECK_SEARCH")
+                await self.send_message(self.player,"MESSAGE_DECK_SEARCH")
                 await self.tell_others("Look At",{"fuda":int(Fuda.deck)})
             case 299: #Shuffle
-                await self.game._send_message(self.player,"MESSAGE_DECK_SHUFFLE")
+                await self.send_message(self.player,"MESSAGE_DECK_SHUFFLE")
 
                 await self.tell_all("Shuffle Fuda", {"fuda":int(Fuda.deck)})
 
@@ -594,17 +597,17 @@ class Side:
             case 302: #Mill from Cheer Deck
                 await self.mill(Fuda.cheerDeck,Fuda.archive)
             case 398: #Search Cheer Deck
-                await self.game._send_message(self.player,"MESSAGE_CHEERDECK_SEARCH")
+                await self.send_message(self.player,"MESSAGE_CHEERDECK_SEARCH")
                 await self.tell_others("Look At",{"fuda":int(Fuda.cheerDeck)})
             case 399: #Shuffle
-                await self.game._send_message(self.player,"MESSAGE_CHEERDECK_SHUFFLE")
+                await self.send_message(self.player,"MESSAGE_CHEERDECK_SHUFFLE")
 
                 await self.tell_all("Shuffle Fuda", {"fuda":int(Fuda.cheerDeck)})
 
                 shuffle(self.cheer_deck)
             
             case 410: #Archive Hand
-                await self.game._send_message(self.player,"MESSAGE_ARCHIVE_HAND_ALL")
+                await self.send_message(self.player,"MESSAGE_ARCHIVE_HAND_ALL")
 
                 for potentialCard in self.hand.copy():
                     await self.add_to_fuda(potentialCard.id,Fuda.archive)
@@ -615,7 +618,7 @@ class Side:
             case 505: #Reveal Top Card From Holopower
                 actualCard = self.holopower[0]
                 currentCard = actualCard.id
-                await self.game._send_message(self.player,"MESSAGE_HOLOPOWER_REVEAL",{"cardName":actualCard.number + "_NAME"})
+                await self.send_message(self.player,"MESSAGE_HOLOPOWER_REVEAL",{"cardName":actualCard.number + "_NAME"})
                 await self.remove_from_fuda(currentCard,Fuda.holopower)
 
                 self.revealed.append(currentCard)
@@ -624,10 +627,10 @@ class Side:
             case 510: #Holopower to top of deck
                 await self.mill(Fuda.holopower,Fuda.deck)
             case 598: #Search Holopower
-                await self.game._send_message(self.player,"MESSAGE_HOLOPOWER_SEARCH")
+                await self.send_message(self.player,"MESSAGE_HOLOPOWER_SEARCH")
                 await self.tell_others("Look At",{"fuda":int(Fuda.holopower)})
             case 599: #Shuffle
-                await self.game._send_message(self.player,"MESSAGE_HOLOPOWER_SHUFFLE")
+                await self.send_message(self.player,"MESSAGE_HOLOPOWER_SHUFFLE")
 
                 await self.tell_all("Shuffle Fuda", {"fuda":int(Fuda.holopower)})
 
@@ -644,7 +647,7 @@ class Side:
             case 603: #To Life
                 actualCard = self.cards[currentCard]
                 if len(self.life) < 6 and actualCard.cardType == "Cheer":
-                    await self.game._send_message(self.player,"MESSAGE_FUDA_LIFE",{"fromFuda":fudas[int(currentFuda)]})
+                    await self.send_message(self.player,"MESSAGE_FUDA_LIFE",{"fromFuda":fudas[int(currentFuda)]})
                     await self.remove_from_fuda(currentCard,currentFuda)
                     
                     self.life.insert(0, actualCard)
@@ -658,9 +661,9 @@ class Side:
             case 630: #Reveal Card From Fuda
                 actualCard = self.cards[currentCard]
                 if currentFuda == Fuda.holopower:
-                    await self.game._send_message(self.player,"MESSAGE_HOLOPOWER_REVEAL",{"cardName":actualCard.number + "_NAME"})
+                    await self.send_message(self.player,"MESSAGE_HOLOPOWER_REVEAL",{"cardName":actualCard.number + "_NAME"})
                 else:
-                    await self.game._send_message(self.player,"MESSAGE_FUDA_REVEAL",{"cardName":actualCard.number + "_NAME","fromFuda":fudas[int(currentFuda)]})
+                    await self.send_message(self.player,"MESSAGE_FUDA_REVEAL",{"cardName":actualCard.number + "_NAME","fromFuda":fudas[int(currentFuda)]})
                 await self.remove_from_fuda(currentCard,currentFuda)
                 self.revealed.append(currentCard)
                 await self.tell_player("Reveal",{"card_id":currentCard})
@@ -672,11 +675,11 @@ class Side:
 
             case 650: #Add to Hand
                 if currentFuda == Fuda.archive:
-                    await self.game._send_message(self.player,"MESSAGE_ARCHIVE_HAND",{"cardName":self.cards[currentCard].number + "_NAME"})
+                    await self.send_message(self.player,"MESSAGE_ARCHIVE_HAND",{"cardName":self.cards[currentCard].number + "_NAME"})
                 elif currentFuda == Fuda.holopower:
-                    await self.game._send_message(self.player,"MESSAGE_HOLOPOWER_HAND")
+                    await self.send_message(self.player,"MESSAGE_HOLOPOWER_HAND")
                 else:
-                    await self.game._send_message(self.player,"MESSAGE_FUDA_HAND",{"fromFuda":fudas[int(currentFuda)]})
+                    await self.send_message(self.player,"MESSAGE_FUDA_HAND",{"fromFuda":fudas[int(currentFuda)]})
                 
                 await self.remove_from_fuda(currentCard,currentFuda)
                 await self.cards[currentCard].unrest()
@@ -690,13 +693,13 @@ class Side:
 
                 match currentFuda:
                     case Fuda.archive:
-                        await self.game._send_message(self.player,"MESSAGE_ARCHIVE_TOPDECK",{"cardName":self.cards[currentCard].number + "_NAME"})
+                        await self.send_message(self.player,"MESSAGE_ARCHIVE_TOPDECK",{"cardName":self.cards[currentCard].number + "_NAME"})
                     case Fuda.deck:
-                        await self.game._send_message(self.player,"MESSAGE_DECK_TOPDECK")
+                        await self.send_message(self.player,"MESSAGE_DECK_TOPDECK")
                     case Fuda.holopower:
-                        await self.game._send_message(self.player,"MESSAGE_HOLOPOWER_TOPDECK")
+                        await self.send_message(self.player,"MESSAGE_HOLOPOWER_TOPDECK")
                     case _:
-                        await self.game._send_message(self.player,"MESSAGE_FUDA_TOPDECK",{"fromFuda":fudas[int(currentFuda)]})
+                        await self.send_message(self.player,"MESSAGE_FUDA_TOPDECK",{"fromFuda":fudas[int(currentFuda)]})
 
                 await self.remove_from_fuda(currentCard,currentFuda)
                 await self.cards[currentCard].unrest()
@@ -710,13 +713,13 @@ class Side:
                 
                 match currentFuda:
                     case Fuda.archive:
-                        await self.game._send_message(self.player,"MESSAGE_ARCHIVE_BOTTOMDECK",{"cardName":self.cards[currentCard].number + "_NAME"})
+                        await self.send_message(self.player,"MESSAGE_ARCHIVE_BOTTOMDECK",{"cardName":self.cards[currentCard].number + "_NAME"})
                     case Fuda.deck:
-                        await self.game._send_message(self.player,"MESSAGE_DECK_BOTTOMDECK")
+                        await self.send_message(self.player,"MESSAGE_DECK_BOTTOMDECK")
                     case Fuda.holopower:
-                        await self.game._send_message(self.player,"MESSAGE_HOLOPOWER_BOTTOMDECK")
+                        await self.send_message(self.player,"MESSAGE_HOLOPOWER_BOTTOMDECK")
                     case _:
-                        await self.game._send_message(self.player,"MESSAGE_FUDA_BOTTOMDECK",{"fromFuda":fudas[int(currentFuda)]})
+                        await self.send_message(self.player,"MESSAGE_FUDA_BOTTOMDECK",{"fromFuda":fudas[int(currentFuda)]})
 
                 await self.remove_from_fuda(currentCard,currentFuda)
                 await self.cards[currentCard].unrest()
@@ -729,11 +732,11 @@ class Side:
                 
                 match currentFuda:
                     case Fuda.archive:
-                        await self.game._send_message(self.player,"MESSAGE_ARCHIVE_TOPCHEERDECK",{"cardName":self.cards[currentCard].number + "_NAME"})
+                        await self.send_message(self.player,"MESSAGE_ARCHIVE_TOPCHEERDECK",{"cardName":self.cards[currentCard].number + "_NAME"})
                     case Fuda.cheerDeck:
-                        await self.game._send_message(self.player,"MESSAGE_CHEERDECK_TOPCHEERDECK")
+                        await self.send_message(self.player,"MESSAGE_CHEERDECK_TOPCHEERDECK")
                     case _:
-                        await self.game._send_message(self.player,"MESSAGE_FUDA_TOPCHEERDECK",{"fromFuda":fudas[int(currentFuda)]})
+                        await self.send_message(self.player,"MESSAGE_FUDA_TOPCHEERDECK",{"fromFuda":fudas[int(currentFuda)]})
 
                 await self.remove_from_fuda(currentCard,currentFuda)
                 await self.cards[currentCard].unrest()
@@ -745,11 +748,11 @@ class Side:
                 
                 match currentFuda:
                     case Fuda.archive:
-                        await self.game._send_message(self.player,"MESSAGE_ARCHIVE_BOTTOMCHEERDECK",{"cardName":self.cards[currentCard].number + "_NAME"})
+                        await self.send_message(self.player,"MESSAGE_ARCHIVE_BOTTOMCHEERDECK",{"cardName":self.cards[currentCard].number + "_NAME"})
                     case Fuda.cheerDeck:
-                        await self.game._send_message(self.player,"MESSAGE_CHEERDECK_BOTTOMCHEERDECK")
+                        await self.send_message(self.player,"MESSAGE_CHEERDECK_BOTTOMCHEERDECK")
                     case _:
-                        await self.game._send_message(self.player,"MESSAGE_FUDA_BOTTOMCHEERDECK",{"fromFuda":fudas[int(currentFuda)]})
+                        await self.send_message(self.player,"MESSAGE_FUDA_BOTTOMCHEERDECK",{"fromFuda":fudas[int(currentFuda)]})
                 
                 await self.remove_from_fuda(currentCard,currentFuda)
                 await self.cards[currentCard].unrest()
@@ -759,9 +762,9 @@ class Side:
 
             case 655: #Archive
                 if currentFuda == Fuda.holopower:
-                    await self.game._send_message(self.player,"MESSAGE_HOLOPOWER_ARCHIVE",{"cardName":self.cards[currentCard].number+"_NAME"})
+                    await self.send_message(self.player,"MESSAGE_HOLOPOWER_ARCHIVE",{"cardName":self.cards[currentCard].number+"_NAME"})
                 else:
-                    await self.game._send_message(self.player,"MESSAGE_FUDA_ARCHIVE",{"fromFuda":fudas[int(currentFuda)],"cardName":self.cards[currentCard].number+"_NAME"})
+                    await self.send_message(self.player,"MESSAGE_FUDA_ARCHIVE",{"fromFuda":fudas[int(currentFuda)],"cardName":self.cards[currentCard].number+"_NAME"})
                 await self.remove_from_fuda(currentCard,currentFuda)
                 await self.cards[currentCard].unrest()
                 await self.add_to_fuda(currentCard,Fuda.archive)
@@ -771,9 +774,9 @@ class Side:
             case 656: #Holopower
 
                 if currentFuda == Fuda.archive:
-                    await self.game._send_message(self.player,"MESSAGE_ARCHIVE_HOLOPOWER",{"cardName":self.cards[currentCard].number + "_NAME"})
+                    await self.send_message(self.player,"MESSAGE_ARCHIVE_HOLOPOWER",{"cardName":self.cards[currentCard].number + "_NAME"})
                 else:
-                    await self.game._send_message(self.player,"MESSAGE_FUDA_HOLOPOWER",{"fromFuda":fudas[int(currentFuda)]})
+                    await self.send_message(self.player,"MESSAGE_FUDA_HOLOPOWER",{"fromFuda":fudas[int(currentFuda)]})
 
                 await self.remove_from_fuda(currentCard,currentFuda)
                 await self.cards[currentCard].unrest()
@@ -796,7 +799,7 @@ class Side:
         match command_id:
             case 603: #To Life
                 if len(self.life) < 6 and actualCard.cardType == "Cheer":
-                    await self.game._send_message(self.player,"MESSAGE_ATTACHED_LIFE",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
+                    await self.send_message(self.player,"MESSAGE_ATTACHED_LIFE",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                     await self.remove_from_attached(currentCard,currentAttached)
                     
                     self.life.insert(0, actualCard)
@@ -807,7 +810,7 @@ class Side:
                     await self.tell_player("To Life",{"card_id":currentCard})
                     await self.tell_others("To Life")
             case 650: #Add to Hand
-                await self.game._send_message(self.player,"MESSAGE_ATTACHED_HAND",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
+                await self.send_message(self.player,"MESSAGE_ATTACHED_HAND",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 await self.remove_from_attached(currentCard,currentAttached)
                 await actualCard.unrest()
                 await self.add_to_hand(currentCard)
@@ -815,7 +818,7 @@ class Side:
                 self.can_undo_shuffle_hand = None
                 
             case 651: #Return to top of deck
-                await self.game._send_message(self.player,"MESSAGE_ATTACHED_TOPDECK",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
+                await self.send_message(self.player,"MESSAGE_ATTACHED_TOPDECK",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 
                 await self.remove_from_attached(currentCard,currentAttached)
                 await actualCard.unrest()
@@ -823,7 +826,7 @@ class Side:
                 await self.tell_player("Remove From List",{"card_id":currentCard})
                 self.can_undo_shuffle_hand = None
             case 652: #Return to bottom of deck
-                await self.game._send_message(self.player,"MESSAGE_ATTACHED_BOTTOMDECK",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
+                await self.send_message(self.player,"MESSAGE_ATTACHED_BOTTOMDECK",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 
                 await self.remove_from_attached(currentCard,currentAttached)
                 await actualCard.unrest()
@@ -831,28 +834,28 @@ class Side:
                 await self.tell_player("Remove From List",{"card_id":currentCard})
                 self.can_undo_shuffle_hand = None
             case 653: #Return to top of cheer deck
-                await self.game._send_message(self.player,"MESSAGE_ATTACHED_TOPCHEERDECK",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
+                await self.send_message(self.player,"MESSAGE_ATTACHED_TOPCHEERDECK",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 
                 await self.remove_from_attached(currentCard,currentAttached)
                 await actualCard.unrest()
                 await self.add_to_fuda(currentCard,Fuda.cheerDeck)
                 await self.tell_player("Remove From List",{"card_id":currentCard})
             case 654: #Return to bottom of cheer deck
-                await self.game._send_message(self.player,"MESSAGE_ATTACHED_BOTTOMCHEERDECK",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
+                await self.send_message(self.player,"MESSAGE_ATTACHED_BOTTOMCHEERDECK",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 
                 await self.remove_from_attached(currentCard,currentAttached)
                 await actualCard.unrest()
                 await self.add_to_fuda(currentCard,Fuda.cheerDeck,True)
                 await self.tell_player("Remove From List",{"card_id":currentCard})
             case 655: #Archive
-                await self.game._send_message(self.player,"MESSAGE_ATTACHED_ARCHIVE",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
+                await self.send_message(self.player,"MESSAGE_ATTACHED_ARCHIVE",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 
                 await self.remove_from_attached(currentCard,currentAttached)
                 await actualCard.unrest()
                 await self.add_to_fuda(currentCard,Fuda.archive)
                 await self.tell_player("Remove From List",{"card_id":currentCard})
             case 656: #Holopower
-                await self.game._send_message(self.player,"MESSAGE_ATTACHED_HOLOPOWER",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
+                await self.send_message(self.player,"MESSAGE_ATTACHED_HOLOPOWER",{"cardName":actualCard.number + "_NAME","fromZone":await self.find_what_zone(currentAttached.id),"fromName":currentAttached.number+"_NAME"})
                 
                 await self.remove_from_attached(currentCard,currentAttached)
                 await actualCard.unrest()
@@ -914,13 +917,13 @@ class Side:
             case 70: #Oshi Skill X Cost
                 if currentCard is not None:
                     self.used_oshi_skill = True
-                    await self.game._send_message(self.player,"MESSAGE_OSHISKILL",{"skillName":self.cards[currentCard].number + "_SKILL_NAME"})
+                    await self.send_message(self.player,"MESSAGE_OSHISKILL",{"skillName":self.cards[currentCard].number + "_SKILL_NAME"})
                     await self.mill(Fuda.holopower,Fuda.archive,input)
             case 71: #SP Oshi Skill X Cost
                 if currentCard is not None:
                     self.used_sp_oshi_skill = True
                     await self.tell_others("Used SP Skill")
-                    await self.game._send_message(self.player,"MESSAGE_OSHISKILL_SP",{"skillName":self.cards[currentCard].number + "_SPSKILL_NAME"})
+                    await self.send_message(self.player,"MESSAGE_OSHISKILL_SP",{"skillName":self.cards[currentCard].number + "_SPSKILL_NAME"})
                     await self.mill(Fuda.holopower,Fuda.archive,input)
                     
             case 80 | 81: #Holomem Arts Damage
@@ -931,7 +934,7 @@ class Side:
                     actualAttacking.offered_damage += input
                     await opponentSide.tell_player("Offered Damage",{"card_id":currentAttacking,"amount":input})
                     await self.tell_others("Attack",{"attacker":currentCard,"attacked":currentAttacking})
-                    await self.game._send_message(self.player,"MESSAGE_ARTS_DAMAGE",{"fromName":actualCard.number+"_NAME",
+                    await self.send_message(self.player,"MESSAGE_ARTS_DAMAGE",{"fromName":actualCard.number+"_NAME",
                                                                                 "artName":actualCard.number+"_ART_"+str(command_id-80)+"_NAME",
                                                                                 "toName":actualAttacking.number+"_NAME"},
                                                                                 {"damage":input,"fromZone":await self.find_what_zone(currentCard),
@@ -947,7 +950,7 @@ class Side:
                     self.can_undo_shuffle_hand = None
             case 297: #Look At X
                 if input <= len(self.deck):
-                    await self.game._send_message(self.player,"MESSAGE_DECK_LOOKATX",{},{"amount":input})
+                    await self.send_message(self.player,"MESSAGE_DECK_LOOKATX",{},{"amount":input})
                     await self.tell_player("Look At X",{"fuda":Fuda.deck, "ids":[card.id for card in self.deck[:input]]})
                     await self.tell_others("Look At X",{"fuda":Fuda.deck,"X":input})
 
@@ -956,7 +959,7 @@ class Side:
                     await self.mill(Fuda.cheerDeck,Fuda.archive,input)
             case 397: #Look At X Cheer Deck
                 if input <= len(self.cheer_deck):
-                    await self.game._send_message(self.player,"MESSAGE_CHEERDECK_LOOKATX",{},{"amount":input})
+                    await self.send_message(self.player,"MESSAGE_CHEERDECK_LOOKATX",{},{"amount":input})
                     await self.tell_player("Look At X",{"fuda":Fuda.cheerDeck, "ids":[card.id for card in self.cheer_deck[:input]]})
                     await self.tell_others("Look At X",{"fuda":Fuda.cheerDeck,"X":input})
             
@@ -971,22 +974,22 @@ class Side:
         chosenZone = data["chosenZone"]
         match command_id:
             case 5: #Move to Back
-                await self.game._send_message(self.player,"MESSAGE_CARD_BACK",{"fromName":self.cards[currentCard].number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
+                await self.send_message(self.player,"MESSAGE_CARD_BACK",{"fromName":self.cards[currentCard].number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
                 await self.move_card_to_zone(currentCard,chosenZone)
             case 7: #Baton Pass
-                await self.game._send_message(self.player,"MESSAGE_CARD_BATONPASS",{"fromName":self.cards[currentCard].number+"_NAME","toName":self.cards[self.zones[chosenZone]].number+"_NAME"},
+                await self.send_message(self.player,"MESSAGE_CARD_BATONPASS",{"fromName":self.cards[currentCard].number+"_NAME","toName":self.cards[self.zones[chosenZone]].number+"_NAME"},
                                                                             {"fromZone":await self.find_what_zone(currentCard),"toZone":chosenZone})
                 await self.switch_cards_in_zones("Center",chosenZone)
                 self.used_baton_pass = True
                 await self.tell_player("Baton Pass")
             case 8: #Switch to Back
-                await self.game._send_message(self.player,"MESSAGE_CARD_SWITCH",{"fromName":self.cards[currentCard].number+"_NAME","toName":self.cards[self.zones[chosenZone]].number+"_NAME"},
+                await self.send_message(self.player,"MESSAGE_CARD_SWITCH",{"fromName":self.cards[currentCard].number+"_NAME","toName":self.cards[self.zones[chosenZone]].number+"_NAME"},
                                                                             {"fromZone":await self.find_what_zone(currentCard),"toZone":chosenZone})
                 await self.switch_cards_in_zones("Center",chosenZone)
             case 22: #Attach Revealed Support
                 actualCard = self.cards[currentCard]
                 attachTo = self.cards[self.zones[chosenZone]]
-                await self.game._send_message(self.player,"MESSAGE_SUPPORT_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
+                await self.send_message(self.player,"MESSAGE_SUPPORT_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
                 self.revealed.remove(currentCard)
                 await attachTo.attach(actualCard)
 
@@ -996,14 +999,14 @@ class Side:
             case 30: #Attach Life
                 actualCard = self.cards[currentCard]
                 attachTo = self.cards[self.zones[chosenZone]]
-                await self.game._send_message(self.player,"MESSAGE_CHEER_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
+                await self.send_message(self.player,"MESSAGE_CHEER_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
                 await attachTo.attach(actualCard)
 
                 await self.tell_player("Attach Card", {"attachee" : actualCard.id, "attach_to": attachTo.id})
                 await self.tell_others("Attach Card", {"attachee_info" : await actualCard.to_dict(), "attach_to_info": await attachTo.to_dict()})
             
             case 100: #Play
-                await self.game._send_message(self.player,"MESSAGE_HOLOMEM_PLAY",{"cardName":self.cards[currentCard].number + "_NAME"})
+                await self.send_message(self.player,"MESSAGE_HOLOMEM_PLAY",{"cardName":self.cards[currentCard].number + "_NAME"})
                 await self.move_card_to_zone(currentCard,chosenZone)
                 await self.remove_from_hand(currentCard)
                 self.cards[currentCard].bloomed_this_turn = True
@@ -1018,7 +1021,7 @@ class Side:
             case 121: #Attach Support
                 actualCard = self.cards[currentCard]
                 attachTo = self.cards[self.zones[chosenZone]]
-                await self.game._send_message(self.player,"MESSAGE_SUPPORT_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
+                await self.send_message(self.player,"MESSAGE_SUPPORT_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
                 await self.remove_from_hand(currentCard)
                 await attachTo.attach(actualCard)
 
@@ -1028,7 +1031,7 @@ class Side:
             case 300: #Attach Cheer
                 actualCard = self.cards[currentCard]
                 attachTo = self.cards[self.zones[chosenZone]]
-                await self.game._send_message(self.player,"MESSAGE_CHEER_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
+                await self.send_message(self.player,"MESSAGE_CHEER_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
                 
                 await attachTo.attach(actualCard)
 
@@ -1036,7 +1039,7 @@ class Side:
                 await self.tell_others("Attach Card", {"attachee_info" : await actualCard.to_dict(), "attach_to_info": await attachTo.to_dict()})
             
             case 600: #Play From Deck
-                await self.game._send_message(self.player,"MESSAGE_DECK_HOLOMEM_PLAY",{"cardName":self.cards[currentCard].number + "_NAME"})
+                await self.send_message(self.player,"MESSAGE_DECK_HOLOMEM_PLAY",{"cardName":self.cards[currentCard].number + "_NAME"})
                 await self.remove_from_fuda(currentCard,Fuda.deck)
                 await self.move_card_to_zone(currentCard,chosenZone)
                 self.cards[currentCard].bloomed_this_turn = True
@@ -1050,12 +1053,12 @@ class Side:
                 await self.remove_from_fuda(currentCard,Fuda.cheerDeck)
                 actualCard = self.cards[currentCard]
                 attachTo = self.cards[self.zones[chosenZone]]
-                await self.game._send_message(self.player,"MESSAGE_CHEERDECK_CHEER_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
+                await self.send_message(self.player,"MESSAGE_CHEERDECK_CHEER_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
                 await attachTo.attach(actualCard)
                 await self.tell_player("Attach Card", {"attachee" : actualCard.id, "attach_to": attachTo.id})
                 await self.tell_others("Attach Card", {"attachee_info" : await actualCard.to_dict(), "attach_to_info": await attachTo.to_dict()})
             case 610: #Play From Archive
-                await self.game._send_message(self.player,"MESSAGE_ARCHIVE_HOLOMEM_PLAY",{"cardName":self.cards[currentCard].number + "_NAME"})
+                await self.send_message(self.player,"MESSAGE_ARCHIVE_HOLOMEM_PLAY",{"cardName":self.cards[currentCard].number + "_NAME"})
                 await self.remove_from_fuda(currentCard,Fuda.archive)
                 await self.move_card_to_zone(currentCard,chosenZone)
                 self.cards[currentCard].bloomed_this_turn = True
@@ -1067,7 +1070,7 @@ class Side:
                 await self.remove_from_fuda(currentCard,Fuda.archive)
                 actualCard = self.cards[currentCard]
                 attachTo = self.cards[self.zones[chosenZone]]
-                await self.game._send_message(self.player,"MESSAGE_ARCHIVE_CHEER_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
+                await self.send_message(self.player,"MESSAGE_ARCHIVE_CHEER_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
                 await attachTo.attach(actualCard)
                 await self.tell_player("Attach Card", {"attachee" : actualCard.id, "attach_to": attachTo.id})
                 await self.tell_others("Attach Card", {"attachee_info" : await actualCard.to_dict(), "attach_to_info": await attachTo.to_dict()})
@@ -1078,7 +1081,7 @@ class Side:
                     await self.remove_from_attached(currentCard,currentAttached)
                     actualCard = self.cards[currentCard]
                     attachTo = self.cards[self.zones[chosenZone]]
-                    await self.game._send_message(self.player,"MESSAGE_ATTACHED_CHEER_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME","fromName":currentAttached.number + "_NAME"},
+                    await self.send_message(self.player,"MESSAGE_ATTACHED_CHEER_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME","fromName":currentAttached.number + "_NAME"},
                                                                                         {"toZone":chosenZone,"fromZone":await self.find_what_zone(currentAttached.id)})
                     await attachTo.attach(actualCard)
                     await self.tell_player("Attach Card", {"attachee" : actualCard.id, "attach_to": attachTo.id})
@@ -1118,7 +1121,7 @@ class Side:
                 case "Roll Die":
                     rolled = randrange(1,7)
                     await self.tell_all("Roll Die",{"result":rolled})
-                    await self.game._send_message(self.player,"MESSAGE_DIERESULT",{},{"amount":rolled})
+                    await self.send_message(self.player,"MESSAGE_DIERESULT",{},{"amount":rolled})
                 case "Stop Look At":
                     await self.tell_others("Stop Look At")
                 case "Accept Damage":
@@ -1133,7 +1136,7 @@ class Side:
                         actualCard = self.cards[data["card_id"]]
                         actualCard.offered_damage = 0
                 case "Click Notification":
-                    if "player_id" in data and "card_id" in data:
+                    if "player_id" in data and "card_id" in data and not self.game.goldfish:
                         if data["player_id"] == player_id:
                             await self.tell_others("Click Notification",{"card_id":data["card_id"]})
                         else:
@@ -1145,13 +1148,17 @@ class Side:
         await self.player.tell("Your Side", command, data)
     
     async def tell_others(self, command, data=None):
-        await self.opponent.tell("Opponent Side", command, data)
+        if not self.game.goldfish:
+            await self.opponent.tell("Opponent Side", command, data)
 
-        await self.game.tell_spectators(self, command, data)
+            await self.game.tell_spectators(self, command, data)
     
     async def tell_all(self, command, data=None):
         await self.tell_player(command, data)
         await self.tell_others(command, data)
+    
+    async def send_message(self, sender, message_code, translated=None, untranslated=None):
+        await self.game._send_message(sender, message_code, translated, untranslated)
     
     async def to_dict(self):
         result = {"deck":len(self.deck),"cheerDeck":len(self.cheer_deck),"holopower":len(self.holopower),"life":len(self.life),"hand":len(self.hand),"archive":[],"zones":{},"revealed":[]}
@@ -1163,10 +1170,7 @@ class Side:
                     result["zones"][zone] = None
                 else:
                     result["zones"][zone] = await self.cards[self.zones[zone]].to_dict()
-        if self.preliminary_phase:
-            result["oshi"] = None
-        else:
-            result["oshi"] = await self.oshi.to_dict()
+        result["oshi"] = await self.oshi.to_dict()
         
         for revealed in self.revealed:
             result["revealed"].append(await self.cards[revealed].to_dict())

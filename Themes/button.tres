@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=13 format=3 uid="uid://c2xsywtxro80x"]
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://c2xsywtxro80x"]
 
 [ext_resource type="FontFile" uid="uid://d1prs0o0rldol" path="res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf" id="1_qct6y"]
 [ext_resource type="StyleBox" uid="uid://bplqhqtagmis2" path="res://Themes/button_disabled.tres" id="2_4c404"]
@@ -103,6 +103,18 @@ border_width_right = 1
 border_color = Color(0.175, 0.175, 0.175, 1)
 corner_detail = 1
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gv6e5"]
+content_margin_left = 8.0
+content_margin_top = 2.0
+content_margin_right = 8.0
+content_margin_bottom = 2.0
+bg_color = Color(0, 0, 0, 0.78431374)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [resource]
 BoxContainer/constants/separation = 30
 Button/colors/font_color = Color(0.384314, 0.356863, 0.576471, 1)
@@ -120,6 +132,7 @@ CheckButton/styles/pressed = ExtResource("4_crgbj")
 HSlider/styles/slider = SubResource("StyleBoxFlat_7jdwb")
 Label/colors/font_color = Color(0.384314, 0.356863, 0.576471, 1)
 Label/fonts/font = ExtResource("1_qct6y")
+LineEdit/font_sizes/font_size = 14
 LineEdit/fonts/font = ExtResource("1_qct6y")
 MarginContainer/constants/margin_bottom = 15
 MarginContainer/constants/margin_left = 15
@@ -145,3 +158,4 @@ TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_0imip")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_ledp1")
 TooltipLabel/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 TooltipLabel/fonts/font = ExtResource("1_qct6y")
+TooltipPanel/styles/panel = SubResource("StyleBoxFlat_gv6e5")

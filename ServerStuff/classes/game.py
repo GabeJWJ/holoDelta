@@ -2,17 +2,28 @@ from fastapi import WebSocketDisconnect
 from globals.data import get_data
 from globals.live_data import get_all_games, set_game, remove_game
 from classes.side import Side
+from classes.player import Player
 from random import sample
 from utils.game_network_utils import update_numbers_all
+from utils.azure_blob_storage import delete_cosmetics
 
 class Game:
-    def __init__(self, player1, player1deck, player2, player2deck, settings = None):
+    def __init__(self, player1: Player, player1deck: dict, player2: Player, player2deck: dict, settings : dict = None):
         random_characters = get_data("random_characters")
         self.id = ''.join(sample(random_characters, 10))
         while self.id in get_all_games():
             self.id = ''.join(sample(random_characters, 10))
-        set_game(self.id, self)
-        self.playing = {player1.id : Side(player1deck, self, player1, player2), player2.id : Side(player2deck, self, player2, player1)}
+        
+        if player2.dummy:
+            player1.goldfishing = True
+            self.playing = {player1.id : Side(player1deck, self, player1, player2)}
+            self.goldfish = True
+        else:
+            set_game(self.id, self)
+            self.playing = {player1.id : Side(player1deck, self, player1, player2), player2.id : Side(player2deck, self, player2, player1)}
+            self.goldfish = False
+        
+        self.goldfish_must_end_turn = None
         self.players = {player1.id : player1, player2.id : player2}
         player1.game = self
         player2.game = self
@@ -20,6 +31,8 @@ class Game:
         self.settings = {} if settings is None else settings
         self.only_en = self.settings["onlyEN"] if "onlyEN" in self.settings else False
         self.allow_spectators = self.settings["spectators"] if "spectators" in self.settings else False
+        self.cosmetics = {player1.id: {"passcode":''.join(sample(random_characters, 10)), "sleeve":False, "cheerSleeve":False, "playmat":False, "dice":False},
+                          player2.id: {"passcode":''.join(sample(random_characters, 10)), "sleeve":False, "cheerSleeve":False, "playmat":False, "dice":False}}
 
         self.step = 5
 
@@ -36,6 +49,8 @@ class Game:
         for player in self.players.values():
             await player.tell("Game","Close")
             player.game = None
+        
+        await delete_cosmetics(self.id)
 
         remove_game(self.id)
         await update_numbers_all()
@@ -67,22 +82,28 @@ class Game:
             self.current_turn = rps[1][0]
 
     async def _on_choice_made(self, player_id, choice):
-        if player_id == self.current_turn:
-            for player in self.playing:
+        if player_id == self.current_turn or self.goldfish:
+            for player in self.players:
                 if (player == player_id) ^ (not choice):
                     self.current_turn = player
-                    self.playing[player].is_turn = True
-                    await self.players[player].tell("Game","Set Turn 1",{"is_turn":True})
+                    if self.goldfish and self.players[player].dummy:
+                        self.goldfish_must_end_turn = player
+                    else:
+                        self.playing[player].is_turn = True
+                        await self.players[player].tell("Game","Set Turn 1",{"is_turn":True})
                 else:
-                    self.playing[player].is_turn = False
+                    if not self.goldfish or not self.players[player].dummy:
+                        self.playing[player].is_turn = False
                     await self.players[player].tell("Game","Set Turn 1",{"is_turn":False})
 
-                await self.playing[player].specialStart2()
+                if not self.goldfish or not self.players[player].dummy:
+                    await self.playing[player].specialStart2()
+
 
     async def _mulligan(self, player_id):
         self.game_start[player_id]["Mulligan"] = True
 
-        if all([start_info["Mulligan"] for start_info in self.game_start.values()]):
+        if self.goldfish or all([start_info["Mulligan"] for start_info in self.game_start.values()]):
             await self._all_mulligan()
 
     async def _all_mulligan(self):
@@ -92,12 +113,15 @@ class Game:
     async def _ready(self, player_id):
         self.game_start[player_id]["Ready"] = True
 
-        if all([start_info["Ready"] for start_info in self.game_start.values()]):
+        if self.goldfish or all([start_info["Ready"] for start_info in self.game_start.values()]):
             await self._all_ready()
 
     async def _all_ready(self):
         for side in self.playing.values():
             await side.specialStart4()
+        
+        if self.goldfish_must_end_turn is not None:
+            await self._on_end_turn(self.goldfish_must_end_turn)
 
     async def _on_end_turn(self, player_id):
         if player_id == self.current_turn:
@@ -115,6 +139,11 @@ class Game:
                     await self.playing[player].tell_player("Your Turn")
                     self.playing[player].is_turn = True
                     self.current_turn = player
+            
+            if self.goldfish and not self.players[player_id].dummy:
+                dummy_player = [p_id for p_id in self.players if p_id != player_id][0]
+                self.current_turn = dummy_player
+                await self._on_end_turn(dummy_player)
     
     async def _start_rps(self):
         if not self.in_rps:
@@ -206,6 +235,12 @@ class Game:
                     for spectator in self.spectating:
                         await spectator.tell("Game","Select Step",{"step":data["step"]})
             
+            case "Cosmetics":
+                if "cosmetics" in data and not self.goldfish:
+                    if data["cosmetics"] in self.cosmetics[player_id] and data["cosmetics"] != "passcode":
+                        self.cosmetics[player_id][data["cosmetics"]] = True
+                        await self.playing[player_id].tell_others("Cosmetics",{"cosmetics_type":data["cosmetics"]})
+            
             case "Lose":
                 if player_id in self.playing and "reason" in data:
                     await self.game_win(self.playing[player_id].opponent,data["reason"])
@@ -216,6 +251,7 @@ class Game:
                         await player.tell("Game","Chat",{"sender":player_id,"message":data["message"]})
                     for spectator in self.spectating:
                         await spectator.tell("Game","Chat",{"sender":player_id,"message":data["message"]})
+
             case _:
                 pass
     

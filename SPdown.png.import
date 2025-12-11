@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://q0ogb7fi8t2g"
-path="res://.godot/imported/SPdown.png-0b2afa7bcd38bda0e65505470352bdf4.ctex"
+path.s3tc="res://.godot/imported/SPdown.png-0b2afa7bcd38bda0e65505470352bdf4.s3tc.ctex"
+path.etc2="res://.godot/imported/SPdown.png-0b2afa7bcd38bda0e65505470352bdf4.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://SPdown.png"
-dest_files=["res://.godot/imported/SPdown.png-0b2afa7bcd38bda0e65505470352bdf4.ctex"]
+dest_files=["res://.godot/imported/SPdown.png-0b2afa7bcd38bda0e65505470352bdf4.s3tc.ctex", "res://.godot/imported/SPdown.png-0b2afa7bcd38bda0e65505470352bdf4.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

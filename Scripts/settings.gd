@@ -12,7 +12,7 @@ extends Node
 
 var settings = {}
 @onready var json = JSON.new()
-var languages = [["en","English"], ["ja","日本語"], ["ko","한글"], ["es", "Español"], ["fr","Français"], ["vi","Tiếng Việt"], ["zh_TW","繁體中文"]] #Contains both the locale code and the user-friendly text for buttons
+var languages = {"en":"English", "ja":"日本語", "ko":"한글", "es": "Español", "fr":"Français", "vi":"Tiếng Việt", "zh_TW":"繁體中文"} #Contains both the locale code and the user-friendly text for buttons
 enum bloomCode {OK,Instant,Skip,No} #OK - can bloom normally, Instant - can bloom on something played this turn, Skip - can bloom a 2nd on debut, No - can't bloom
 var client_version = FileAccess.get_file_as_string("res://client_version.txt")
 var card_version = "Not Found"
@@ -26,8 +26,8 @@ var cardText = {}
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#Try to load settings from file
-	if json.parse(FileAccess.get_file_as_string("user://settings.json")) == 0:
-		settings = json.data
+	if INTJSON.parse(FileAccess.get_file_as_string("user://settings.json")) == 0:
+		settings = INTJSON.data
 	
 	#We set each default value individually in case someone's updating from an old version
 	#They'd have some values saved, but not all
@@ -36,6 +36,21 @@ func _ready() -> void:
 	
 	if !settings.has("Language"):
 		settings["Language"] = OS.get_locale_language()
+	
+	#There was a change in 1.1.3 from storing the language as the user-friendly name to
+	#	storing the locale code
+	#This will fix that
+	match settings.Language:
+		"English":
+			TranslationServer.set_locale("en")
+			update_settings("Language", "en")
+		"日本語":
+			TranslationServer.set_locale("ja")
+			update_settings("Language", "ja")
+	
+	#Just a clean reset to default if not found
+	if settings["Language"] not in languages:
+		update_settings("Language", "en")
 	
 	if !settings.has("SFXVolume"):
 		settings["SFXVolume"] = 0
@@ -57,17 +72,6 @@ func _ready() -> void:
 	
 	if !settings.has("LoadedDecks"):
 		settings["LoadedDecks"] = []
-	
-	#There was a change in 1.1.3 from storing the language as the user-friendly name to
-	#	storing the locale code
-	#This will fix that
-	match settings.Language:
-		"English":
-			TranslationServer.set_locale("en")
-			update_settings("Language", "en")
-		"日本語":
-			TranslationServer.set_locale("ja")
-			update_settings("Language", "ja")
 	
 	locale()
 
@@ -112,9 +116,8 @@ func locale() -> void:
 func get_language() -> String :
 	#Returns the user-friendly name of the current language
 	
-	for possible in languages:
-		if possible[0] == settings.Language:
-			return possible[1]
+	if settings.Language in languages:
+		return languages[settings.Language]
 	
 	return "???"
 
@@ -122,7 +125,7 @@ func _connect_local(callback = null) -> void:
 	#Sets up the cardLocalization po files for use with trans()
 	
 	for lang in languages:
-		cardText[lang[0]] = load("res://cardLocalization/" + lang[0] + ".po") as Translation
+		cardText[lang] = load("res://cardLocalization/" + lang + ".po") as Translation
 	
 	if callback:
 		callback.call()

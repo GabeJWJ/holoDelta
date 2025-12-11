@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cvqdjg5xohy5a"]
 
-[ext_resource type="Script" path="res://Scripts/deck_list.gd" id="1_d6mnf"]
+[ext_resource type="Script" uid="uid://w2g6lli7s84e" path="res://Scripts/deck_list.gd" id="1_d6mnf"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="2_kyui4"]
 [ext_resource type="Texture2D" uid="uid://vbmru3hqj3bq" path="res://ocg_logo.png" id="3_h1un7"]
 
@@ -93,7 +93,6 @@ auto_translate_mode = 2
 title = "Open a File"
 position = Vector2i(300, 300)
 size = Vector2i(392, 175)
-auto_translate = false
 ok_button_text = "Open"
 file_mode = 0
 access = 2
