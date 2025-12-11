@@ -837,8 +837,6 @@ func load_from_deck_info(deck_info : Dictionary) -> void:
 	
 	
 	#Visual stuff
-	update_main_deck_children()
-	update_cheer_deck_children()
 	
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
@@ -996,7 +994,6 @@ func _on_menu_card_clicked(card_id):
 			var alreadyHere = find_in_deck_with_number(actualCard.cardNumber,actualCard.artNum,cheer_deck)
 			if alreadyHere == null:
 				create_cheer_deck_card(actualCard.cardNumber,actualCard.artNum,cheer_multiple)
-				update_cheer_deck_children()
 			else:
 				alreadyHere.set_amount_hidden(true)
 				alreadyHere.update_amount(alreadyHere.get_amount()+cheer_multiple)
@@ -1006,7 +1003,6 @@ func _on_menu_card_clicked(card_id):
 			var alreadyHere = find_in_deck_with_number(actualCard.cardNumber,actualCard.artNum,main_deck)
 			if alreadyHere == null:
 				create_main_deck_card(actualCard.cardNumber,actualCard.artNum)
-				update_main_deck_children()
 			else:
 				alreadyHere.set_amount_hidden(true)
 				alreadyHere.update_amount(alreadyHere.get_amount()+1)
@@ -1050,8 +1046,6 @@ func _on_menu_card_right_clicked(card_id):
 			in_deck_dictionary.erase(actualCard.cardNumber)
 		alreadyHere.name = "PleaseDelete"
 		alreadyHere.queue_free()
-		update_main_deck_children()
-		update_cheer_deck_children()
 	
 	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 	main_count.text = str(total_main) + "/50"
@@ -1072,8 +1066,6 @@ func _on_deck_card_right_clicked(card_id):
 	if actualCard.get_amount() <= 0:
 		actualCard.name = "PleaseDelete"
 		actualCard.queue_free()
-		update_main_deck_children()
-		update_cheer_deck_children()
 	if in_deck_dictionary[actualCard.cardNumber] <= 0:
 		in_deck_dictionary.erase(actualCard.cardNumber)
 	main_count.text = str(total_main) + "/50"
@@ -1167,26 +1159,6 @@ func is_deck_legal():
 			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_RESTRICTED").format({cardNum = cardNumber}) + "\n"
 	
 	return $CanvasLayer/SaveDeck.tooltip_text == ""
-
-func update_main_deck_children():
-	var main_cards = main_deck.get_children().duplicate()
-	main_cards.sort_custom(custom_main_sort)
-	var index = 0
-	for cardButton in main_cards:
-		if cardButton.name.contains("PleaseDelete"):
-			continue
-		cardButton.position = Vector2(48 + 92*(index % 6), 70 + 130*(index / 6))
-		index += 1
-	main_deck.custom_minimum_size = Vector2(0, (index / 6)*130 + 140)
-
-func update_cheer_deck_children():
-	var index = 0
-	for cardButton in cheer_deck.get_children():
-		if cardButton.name.contains("PleaseDelete"):
-			continue
-		cardButton.position = Vector2(60 + 120*index, 80)
-		index += 1
-	cheer_deck.custom_minimum_size = Vector2(index*120 + 70, 0)
 
 func update_analytics():
 	var result = ""
@@ -1356,8 +1328,6 @@ func _on_clear_pressed(complete=true):
 		oshiCard.name = "PleaseDelete"
 		oshiCard.queue_free()
 	
-	update_main_deck_children()
-	update_cheer_deck_children()
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
 	mainSleeveSelect.new_sleeve()
