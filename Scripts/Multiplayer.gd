@@ -919,7 +919,6 @@ func lobby_command(command:String, data:Dictionary):
 						lobby_deckerrorlist.text += tr(reason[0]).format({"cardNum":reason[1]}) + "\n"
 					lobby_deckerror.visible = true
 		"Game Start":
-			print(data)
 			if "id" in data and "opponent_id" in data and "name" in data and "oshi" in data and "passcode" in data and !inGame:
 				show_game(data["id"],data["opponent_id"],data["name"], data["oshi"], data["passcode"])
 		"Game Start Without You":
