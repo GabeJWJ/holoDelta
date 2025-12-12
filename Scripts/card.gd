@@ -464,7 +464,6 @@ func hitAndBack(hitPos):
 	z_index = 5
 
 func _on_card_info_pressed(_id):
-	print("short clicked")
 	emit_signal("card_clicked",cardID)
 
 func _on_card_info_mouse_entered(_id):
@@ -474,7 +473,6 @@ func _on_card_info_mouse_exited():
 	emit_signal("card_mouse_left")
 
 func _on_card_info_gui_input(_id):
-	print("long clicked")
 	emit_signal("card_right_clicked",cardID)
 
 

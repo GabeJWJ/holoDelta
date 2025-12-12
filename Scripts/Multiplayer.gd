@@ -319,7 +319,8 @@ func _download_version_succeded(result):
 	
 	var found_version = result.fetch()
 	var update_needed = false
-	if found_version.Client != Settings.client_version:
+	if found_version.Client != Settings.client_version and not OS.has_feature("android"):
+		# Android versions will not track this for now, since the export may be later/infrequent
 		%UpdateClientBody.text = tr("UPDATE_MENU_CLIENT_UPDATEFOUND").format({"current":Settings.client_version, "found":found_version.Client})
 		%Client_Download.disabled = false
 		update_needed = true
