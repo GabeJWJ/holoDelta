@@ -57,6 +57,8 @@ var fullText = ""
 var onTopOf = []
 var attached = []
 
+# Android input handling
+var android_click_handled := false
 
 func setup_info(number,art_code,back=null):
 	cardNumber = number
@@ -399,9 +401,6 @@ func add_extra_baton_pass_cost(amount):
 	if baton_pass_cost > 99:
 		baton_pass_cost = 99
 
-func _on_card_button_pressed():
-	emit_signal("card_clicked",cardID)
-
 func _on_card_button_mouse_entered():
 	emit_signal("card_mouse_over",cardID)
 
@@ -409,8 +408,25 @@ func _on_card_button_mouse_exited():
 	emit_signal("card_mouse_left")
 
 func _on_card_button_gui_input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == 2:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
+		android_click_handled = true
 		emit_signal("card_right_clicked",cardID)
+		print("Long clicked")
+	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if OS.has_feature("android"):
+			# We only care about releases on Android because of timing issues
+			return
+		emit_signal("card_clicked",cardID)
+	elif event is InputEventMouseButton and not event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if not OS.has_feature("android"):
+			return
+			# Android only handling
+		if android_click_handled:
+			return
+		else:
+			emit_signal("card_clicked",cardID)
+			print("Short clicked")
+	
 
 func flipDown():
 	if faceDown:
