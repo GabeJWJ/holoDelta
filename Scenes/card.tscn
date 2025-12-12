@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://4fkqvw0xk8ra"]
+[gd_scene load_steps=11 format=3 uid="uid://4fkqvw0xk8ra"]
 
 [ext_resource type="Script" uid="uid://dapyj3grukcxh" path="res://Scripts/card.gd" id="1_wdbwf"]
 [ext_resource type="Texture2D" uid="uid://bknptx6wuqvkd" path="res://cardover.png" id="2_7g26p"]
@@ -8,6 +8,12 @@
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="8_o7lry"]
 [ext_resource type="Texture2D" uid="uid://btg5aam80nbly" path="res://accept.png" id="9_ru47b"]
 [ext_resource type="Texture2D" uid="uid://bhmffm1trkxb3" path="res://reject.png" id="10_he2sa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5wvb"]
+bg_color = Color(0.11372549, 0.16470589, 0.22352941, 0.90588236)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mm04k"]
+bg_color = Color(0.11372549, 0.16470589, 0.22352941, 0.90588236)
 
 [node name="Card" type="Node2D"]
 scale = Vector2(0.8, 0.8)
@@ -65,7 +71,7 @@ auto_translate_mode = 2
 visible = false
 offset_left = -138.75
 offset_top = -278.245
-offset_right = -27.75
+offset_right = 78.55771
 offset_bottom = -219.245
 scale = Vector2(1.3, 1.3)
 theme = ExtResource("8_o7lry")
@@ -74,45 +80,58 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 40
 text = "20"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="PotentialDamage"]
+[node name="ColorRect" type="PanelContainer" parent="PotentialDamage"]
 z_index = -1
 layout_mode = 0
 offset_left = -8.0
-offset_right = 225.0
-offset_bottom = 53.0
-color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+offset_top = -86.926926
+offset_right = 222.0
+offset_bottom = 55.380768
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_u5wvb")
 
-[node name="Accept" type="Button" parent="PotentialDamage"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PotentialDamage/ColorRect"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PotentialDamage/ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PotentialDamageAccept" type="Button" parent="PotentialDamage/ColorRect/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.509804)
-layout_mode = 0
-offset_left = 120.0
-offset_top = -1.425
-offset_right = 186.0
-offset_bottom = 68.575
-scale = Vector2(0.75, 0.75)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
 icon = ExtResource("9_ru47b")
 flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="Reject" type="Button" parent="PotentialDamage"]
+[node name="PotentialDamageReject" type="Button" parent="PotentialDamage/ColorRect/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.509804)
-layout_mode = 0
-offset_left = 175.0
-offset_top = -1.425
-offset_right = 241.0
-offset_bottom = 68.575
-scale = Vector2(0.75, 0.75)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
 icon = ExtResource("10_he2sa")
 flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Spacer" type="Control" parent="PotentialDamage/ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 
 [node name="PotentialDamageRested" type="Label" parent="."]
 auto_translate_mode = 2
 visible = false
-offset_left = -213.75
-offset_top = 227.5
-offset_right = -102.75
-offset_bottom = 286.5
+offset_left = -248.75002
+offset_top = 221.25
+offset_right = -137.75002
+offset_bottom = 280.25
 rotation = -1.5708
 scale = Vector2(1.3, 1.3)
 theme = ExtResource("8_o7lry")
@@ -121,52 +140,63 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 40
 text = "20"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="PotentialDamageRested"]
+[node name="ColorRect" type="PanelContainer" parent="PotentialDamageRested"]
 z_index = -1
 layout_mode = 0
-offset_left = 19.0
-offset_top = -7.0
+offset_left = 18.230705
+offset_top = -24.481087
 offset_right = 329.0
-offset_bottom = 46.0
-color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+offset_bottom = 75.51891
+theme_override_styles/panel = SubResource("StyleBoxFlat_mm04k")
 
-[node name="Accept" type="Button" parent="PotentialDamageRested"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PotentialDamageRested/ColorRect"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="PotentialDamageRested/ColorRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control2" type="Control" parent="PotentialDamageRested/ColorRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PotentialDamageRestedAccept" type="Button" parent="PotentialDamageRested/ColorRect/HBoxContainer"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.509804)
-layout_mode = 0
-offset_left = 120.0
-offset_top = -3.75
-offset_right = 180.0
-offset_bottom = 56.25
-scale = Vector2(0.75, 0.75)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
 icon = ExtResource("9_ru47b")
 flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="Reject" type="Button" parent="PotentialDamageRested"]
+[node name="PotentialDamageRestedReject" type="Button" parent="PotentialDamageRested/ColorRect/HBoxContainer"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.509804)
-layout_mode = 0
-offset_left = 175.0
-offset_top = -2.5
-offset_right = 235.0
-offset_bottom = 57.5
-scale = Vector2(0.75, 0.75)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
 icon = ExtResource("10_he2sa")
 flat = true
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="card_clicked" from="CardInfo" to="." method="_on_card_info_pressed"]
 [connection signal="card_mouse_left" from="CardInfo" to="." method="_on_card_info_mouse_exited"]
 [connection signal="card_mouse_over" from="CardInfo" to="." method="_on_card_info_mouse_entered"]
 [connection signal="card_right_clicked" from="CardInfo" to="." method="_on_card_info_gui_input"]
-[connection signal="mouse_entered" from="PotentialDamage/Accept" to="." method="_on_accept_mouse_entered"]
-[connection signal="mouse_exited" from="PotentialDamage/Accept" to="." method="_on_accept_mouse_exited"]
-[connection signal="pressed" from="PotentialDamage/Accept" to="." method="_on_accept_pressed"]
-[connection signal="mouse_entered" from="PotentialDamage/Reject" to="." method="_on_reject_mouse_entered"]
-[connection signal="mouse_exited" from="PotentialDamage/Reject" to="." method="_on_reject_mouse_exited"]
-[connection signal="pressed" from="PotentialDamage/Reject" to="." method="_on_reject_pressed"]
-[connection signal="mouse_entered" from="PotentialDamageRested/Accept" to="." method="_on_accept_rested_mouse_entered"]
-[connection signal="mouse_exited" from="PotentialDamageRested/Accept" to="." method="_on_accept_rested_mouse_exited"]
-[connection signal="pressed" from="PotentialDamageRested/Accept" to="." method="_on_accept_pressed"]
-[connection signal="mouse_entered" from="PotentialDamageRested/Reject" to="." method="_on_reject_rested_mouse_entered"]
-[connection signal="mouse_exited" from="PotentialDamageRested/Reject" to="." method="_on_reject_rested_mouse_exited"]
-[connection signal="pressed" from="PotentialDamageRested/Reject" to="." method="_on_reject_pressed"]
+[connection signal="mouse_entered" from="PotentialDamage/ColorRect/VBoxContainer/HBoxContainer/PotentialDamageAccept" to="." method="_on_accept_mouse_entered"]
+[connection signal="mouse_exited" from="PotentialDamage/ColorRect/VBoxContainer/HBoxContainer/PotentialDamageAccept" to="." method="_on_accept_mouse_exited"]
+[connection signal="pressed" from="PotentialDamage/ColorRect/VBoxContainer/HBoxContainer/PotentialDamageAccept" to="." method="_on_accept_pressed"]
+[connection signal="mouse_entered" from="PotentialDamage/ColorRect/VBoxContainer/HBoxContainer/PotentialDamageReject" to="." method="_on_reject_mouse_entered"]
+[connection signal="mouse_exited" from="PotentialDamage/ColorRect/VBoxContainer/HBoxContainer/PotentialDamageReject" to="." method="_on_reject_mouse_exited"]
+[connection signal="pressed" from="PotentialDamage/ColorRect/VBoxContainer/HBoxContainer/PotentialDamageReject" to="." method="_on_reject_pressed"]
+[connection signal="mouse_entered" from="PotentialDamageRested/ColorRect/HBoxContainer/PotentialDamageRestedAccept" to="." method="_on_accept_rested_mouse_entered"]
+[connection signal="mouse_exited" from="PotentialDamageRested/ColorRect/HBoxContainer/PotentialDamageRestedAccept" to="." method="_on_accept_rested_mouse_exited"]
+[connection signal="pressed" from="PotentialDamageRested/ColorRect/HBoxContainer/PotentialDamageRestedAccept" to="." method="_on_accept_pressed"]
+[connection signal="mouse_entered" from="PotentialDamageRested/ColorRect/HBoxContainer/PotentialDamageRestedReject" to="." method="_on_reject_rested_mouse_entered"]
+[connection signal="mouse_exited" from="PotentialDamageRested/ColorRect/HBoxContainer/PotentialDamageRestedReject" to="." method="_on_reject_rested_mouse_exited"]
+[connection signal="pressed" from="PotentialDamageRested/ColorRect/HBoxContainer/PotentialDamageRestedReject" to="." method="_on_reject_pressed"]

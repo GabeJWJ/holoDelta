@@ -111,10 +111,10 @@ var support_filter = {"Type":null,"Limited":null,"Tag":null,"Setcode":null,"Sear
 var cheer_multiple = 1
 
 #Various containers/objects we'll need
-@onready var oshi_tab = $CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer/MarginContainer/GridContainer
-@onready var holomem_tab = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer/MarginContainer/GridContainer
-@onready var support_tab = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer/MarginContainer/GridContainer
-@onready var cheer_tab = $CanvasLayer/PossibleCards/TAB_CHEER/ScrollContainer/MarginContainer/GridContainer
+@onready var oshi_tab = %OshiGrid
+@onready var holomem_tab = %HolomemGrid
+@onready var support_tab = %SupportGrid
+@onready var cheer_tab = %CheerGrid
 @onready var main_deck = $CanvasLayer/YourStuff/TAB_DECK/MainDeck/MarginContainer/GridContainer
 @onready var cheer_deck = $CanvasLayer/YourStuff/TAB_DECK/CheerDeck/MarginContainer/HBoxContainer
 @onready var main_count = $CanvasLayer/YourStuff/TAB_DECK/MainCount

@@ -95,6 +95,7 @@ SwapPanels={
 
 [input_devices]
 
+pointing/android/enable_long_press_as_right_click=true
 pointing/emulate_touch_from_mouse=true
 
 [internationalization]

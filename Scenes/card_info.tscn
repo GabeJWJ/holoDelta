@@ -77,4 +77,3 @@ horizontal_alignment = 1
 [connection signal="gui_input" from="CollectedForScaling/CardButton" to="." method="_on_card_button_gui_input"]
 [connection signal="mouse_entered" from="CollectedForScaling/CardButton" to="." method="_on_card_button_mouse_entered"]
 [connection signal="mouse_exited" from="CollectedForScaling/CardButton" to="." method="_on_card_button_mouse_exited"]
-[connection signal="pressed" from="CollectedForScaling/CardButton" to="." method="_on_card_button_pressed"]
