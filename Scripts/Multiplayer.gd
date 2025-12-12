@@ -423,8 +423,10 @@ func _on_en_only_pressed() -> void:
 	send_command("Server","Update Numbers")
 
 func _on_language_selected(index_selected):
-	Settings.update_settings("Language",Settings.languages[index_selected][0])
-	%LanguageSelect.text = Settings.languages[index_selected][1]
+	# THIS IS REALLY BAD! DICTIONARY ORDER IS NOT RELIABLE!
+	var language_code = Settings.languages.keys()[index_selected]
+	Settings.update_settings("Language", language_code)
+	%LanguageSelect.text = Settings.languages[language_code]
 	%InfoMargins.update_word_wrap()
 	match Settings.settings.Language:
 		"ja":
