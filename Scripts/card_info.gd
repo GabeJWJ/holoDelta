@@ -411,7 +411,6 @@ func _on_card_button_gui_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
 		android_click_handled = true
 		emit_signal("card_right_clicked",cardID)
-		print("Long clicked")
 	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if OS.has_feature("android"):
 			# We only care about releases on Android because of timing issues
@@ -425,8 +424,6 @@ func _on_card_button_gui_input(event):
 			return
 		else:
 			emit_signal("card_clicked",cardID)
-			print("Short clicked")
-	
 
 func flipDown():
 	if faceDown:
