@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=45 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" uid="uid://c1po3kd3x6ln6" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://cr17emtr7b78o" path="res://UI/settings.png" id="22_b5lix"]
 [ext_resource type="ButtonGroup" uid="uid://cg04rurq5f5al" path="res://UI/turn_steps_button_group.tres" id="23_r3vn8"]
 [ext_resource type="PackedScene" uid="uid://chrab4uqxsh2s" path="res://Scenes/info_panel.tscn" id="24_jpb5x"]
+[ext_resource type="Script" uid="uid://dgf76yudwd033" path="res://Scenes/force_android_keyboard.gd" id="28_6ha0t"]
 
 [sub_resource type="Gradient" id="Gradient_8vfua"]
 colors = PackedColorArray(0.691703, 0.82893, 0.968311, 1, 0.989179, 0.909736, 0.929764, 1)
@@ -1397,6 +1398,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_fdkx6")
+script = ExtResource("28_6ha0t")
 
 [node name="Send" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox"]
 layout_mode = 2

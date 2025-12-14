@@ -319,7 +319,8 @@ func _download_version_succeded(result):
 	
 	var found_version = result.fetch()
 	var update_needed = false
-	if found_version.Client != Settings.client_version:
+	if found_version.Client != Settings.client_version and not OS.has_feature("android"):
+		# Android versions will not track this for now, since the export may be later/infrequent
 		%UpdateClientBody.text = tr("UPDATE_MENU_CLIENT_UPDATEFOUND").format({"current":Settings.client_version, "found":found_version.Client})
 		%Client_Download.disabled = false
 		update_needed = true
@@ -423,8 +424,10 @@ func _on_en_only_pressed() -> void:
 	send_command("Server","Update Numbers")
 
 func _on_language_selected(index_selected):
-	Settings.update_settings("Language",Settings.languages[index_selected][0])
-	%LanguageSelect.text = Settings.languages[index_selected][1]
+	# THIS IS REALLY BAD! DICTIONARY ORDER IS NOT RELIABLE!
+	var language_code = Settings.languages.keys()[index_selected]
+	Settings.update_settings("Language", language_code)
+	%LanguageSelect.text = Settings.languages[language_code]
 	%InfoMargins.update_word_wrap()
 	match Settings.settings.Language:
 		"ja":

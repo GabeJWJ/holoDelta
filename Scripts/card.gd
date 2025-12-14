@@ -486,28 +486,28 @@ func offer_damage(newDamage):
 		$PotentialDamage.visible = true
 
 func _on_accept_mouse_entered():
-	$PotentialDamage/Accept.modulate.a = 1
+	%PotentialDamageAccept.modulate.a = 1
 
 func _on_accept_mouse_exited():
-	$PotentialDamage/Accept.modulate.a = 0.5
+	%PotentialDamageAccept.modulate.a = 0.5
 
 func _on_reject_mouse_entered():
-	$PotentialDamage/Reject.modulate.a = 1
+	%PotentialDamageReject.modulate.a = 1
 
 func _on_reject_mouse_exited():
-	$PotentialDamage/Reject.modulate.a = 0.5
+	%PotentialDamageReject.modulate.a = 0.5
 
 func _on_accept_rested_mouse_entered():
-	$PotentialDamageRested/Accept.modulate.a = 1
+	%PotentialDamageRestedAccept.modulate.a = 1
 
 func _on_accept_rested_mouse_exited():
-	$PotentialDamageRested/Accept.modulate.a = 0.5
+	%PotentialDamageRestedAccept.modulate.a = 0.5
 
 func _on_reject_rested_mouse_entered():
-	$PotentialDamageRested/Reject.modulate.a = 1
+	%PotentialDamageRestedReject.modulate.a = 1
 
 func _on_reject_rested_mouse_exited():
-	$PotentialDamageRested/Reject.modulate.a = 0.5
+	%PotentialDamageRestedReject.modulate.a = 0.5
 
 
 func _on_accept_pressed():

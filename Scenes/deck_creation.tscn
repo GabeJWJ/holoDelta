@@ -123,7 +123,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="OshiGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -286,7 +287,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="HolomemGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -381,7 +383,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="SupportGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -404,7 +407,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER/ScrollContainer/MarginContainer"]
+[node name="CheerGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
