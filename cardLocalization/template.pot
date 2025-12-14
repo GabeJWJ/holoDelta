@@ -10057,3 +10057,99 @@ msgstr ""
 msgid "hBP06-095_EFFECT"
 msgstr ""
 
+msgid "hBP06-013_NAME"
+msgstr ""
+
+msgid "hBP06-013_ART_0_NAME"
+msgstr ""
+
+msgid "hBP06-013_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP06-013_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP06-013_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP06-038_NAME"
+msgstr ""
+
+msgid "hBP06-038_ART_0_NAME"
+msgstr ""
+
+msgid "hBP06-038_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP06-038_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP06-038_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP06-052_NAME"
+msgstr ""
+
+msgid "hBP06-052_ART_0_NAME"
+msgstr ""
+
+msgid "hBP06-052_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP06-052_GIFT_NAME"
+msgstr ""
+
+msgid "hBP06-052_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP06-069_NAME"
+msgstr ""
+
+msgid "hBP06-069_ART_0_NAME"
+msgstr ""
+
+msgid "hBP06-069_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP06-069_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP06-069_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP06-084_NAME"
+msgstr ""
+
+msgid "hBP06-084_ART_0_NAME"
+msgstr ""
+
+msgid "hBP06-084_GIFT_NAME"
+msgstr ""
+
+msgid "hBP06-084_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP06-096_NAME"
+msgstr ""
+
+msgid "hBP06-096_EFFECT"
+msgstr ""
+
+msgid "hY01-11_NAME"
+msgstr ""
+
+msgid "hY02-009_NAME"
+msgstr ""
+
+msgid "hY03-010_NAME"
+msgstr ""
+
+msgid "hY04-008_NAME"
+msgstr ""
+
+msgid "hY05-006_NAME"
+msgstr ""
+
+msgid "hY06-008_NAME"
+msgstr ""
+

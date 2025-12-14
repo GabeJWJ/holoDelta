@@ -239,10 +239,10 @@ func full_desc():
 					costText = "X"
 				if skill[2]:
 					spSkillText += "\n\n" + tr("INFO_OSHI_SPSKILL").format({costText = costText, nameText = Settings.trans(skill[0])})
-					spSkillText += "\n\n" + Settings.trans("%s_SPSKILL_EFFECT" % cardNumber)
+					spSkillText += "\n\n" + Settings.trans("%s_SPSKILL_EFFECT" % cardNumber).replace("[", "[lb]")
 				else:
 					skillText += "\n\n" + tr("INFO_OSHI_SKILL").format({costText = costText, nameText = Settings.trans(skill[0])})
-					skillText += "\n\n" + Settings.trans("%s_SKILL_EFFECT" % cardNumber)
+					skillText += "\n\n" + Settings.trans("%s_SKILL_EFFECT" % cardNumber).replace("[", "[lb]")
 			
 			result += skillText
 			result += spSkillText
@@ -267,7 +267,7 @@ func full_desc():
 						result += "[img=80]Icons/collabEF.png[/img]"
 				
 				result += " " + Settings.trans("%s_%s_NAME" % [cardNumber, effectKey.to_upper()]) + "[/center]"
-				result += "\n\n" + Settings.trans("%s_%s_EFFECT" % [cardNumber, effectKey.to_upper()])
+				result += "\n\n" + Settings.trans("%s_%s_EFFECT" % [cardNumber, effectKey.to_upper()]).replace("[", "[lb]")
 			
 			result += "\n"
 			
@@ -287,13 +287,13 @@ func full_desc():
 					result += "[img=18]res://CheerIcons/YellowArts.webp[/img]"
 				for i in range(art[1].Any):
 					result += "[img=18]res://CheerIcons/ColorlessArts.webp[/img]"
-				result += " " + Settings.trans("%s_ART_%s_NAME" % [cardNumber, art[0]])
+				result += " " + Settings.trans("%s_ART_%s_NAME" % [cardNumber, art[0]]).replace("[", "[lb]")
 				result += " " + str(art[2]) + ("+" if art[3] else "")
 				if art[5] != null:
 					result += " [img=40]res://Icons/tokkou_50_%s.png[/img]" % art[5].to_lower()
 				result += "[/center]"
 				if art[4]:
-					result += "\n\n" + Settings.trans("%s_ART_%s_EFFECT" % [cardNumber, art[0]])
+					result += "\n\n" + Settings.trans("%s_ART_%s_EFFECT" % [cardNumber, art[0]]).replace("[", "[lb]")
 			
 			var costText = ""
 			for i in range(default_baton_pass_cost):
@@ -319,7 +319,7 @@ func full_desc():
 			result += tr("INFO_SUPPORT").format({supportText = Settings.trans("Support"), typeText = Settings.trans(supportType), tagsText = "\n" + getTagsAsText()})
 			if limited:
 				result += "\n\n" + tr("INFO_LIMITED")
-			result += "\n\n" + Settings.trans("%s_EFFECT" % cardNumber)
+			result += "\n\n" + Settings.trans("%s_EFFECT" % cardNumber).replace("[", "[lb]")
 	
 	if extraNames.size() == 1:
 		result += "\n\nEXTRA: " + Settings.trans("EXTRA_EXTRANAME").format({
