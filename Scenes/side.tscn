@@ -609,6 +609,11 @@ unique_name_in_owner = true
 wait_time = 0.5
 one_shot = true
 
+[node name="CosmeticsTimer2" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 2.0
+one_shot = true
+
 [node name="HTTPManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("24_i3t2a")
@@ -669,3 +674,4 @@ metadata/_custom_type_script = "uid://dpmwhedq5ws5x"
 [connection signal="pressed" from="CanvasLayer/Question/OK" to="." method="yes_mulligan"]
 [connection signal="timeout" from="Timer" to="." method="finish_starting_spectate"]
 [connection signal="timeout" from="CosmeticsTimer" to="." method="upload_cosmetics"]
+[connection signal="timeout" from="CosmeticsTimer2" to="." method="_upload_all_cosmetics"]

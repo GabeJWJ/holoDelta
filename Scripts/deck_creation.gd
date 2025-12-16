@@ -455,6 +455,18 @@ func _update_tabs() -> void:
 		support_card.visible = true
 	$CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 
+func _update_deck():
+	#Just to sort the main deck/cheer deck
+	var main_deck_cards = main_deck.get_children()
+	main_deck_cards.sort_custom(custom_main_sort)
+	for mdc in main_deck_cards:
+		main_deck.move_child(mdc, -1)
+	
+	var cheer_deck_cards = cheer_deck.get_children()
+	cheer_deck_cards.sort_custom(custom_art_row_sort)
+	for cdc in cheer_deck_cards:
+		cheer_deck.move_child(cdc, -1)
+
 func _on_oshi_name_select(selected_index) -> void:
 	var selected_name = oshi_names[selected_index-1]
 	
@@ -692,9 +704,9 @@ func _on_support_clear_filters_pressed() -> void:
 func custom_art_row_sort(a,b) -> bool:
 	#The generic sort that just goes card number -> art index
 	
-	if a.cardID < b.cardID:
+	if a.cardNumber < b.cardNumber:
 		return true
-	elif a.cardID == b.cardID and a.art_index < b.art_index:
+	elif a.cardNumber == b.cardNumber and a.art_index < b.art_index:
 		return true
 	else:
 		return false
@@ -837,7 +849,7 @@ func load_from_deck_info(deck_info : Dictionary) -> void:
 	
 	
 	#Visual stuff
-	
+	_update_deck()
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
 	$CanvasLayer/DeckName.text = deck_info.deckName
@@ -1011,6 +1023,7 @@ func _on_menu_card_clicked(card_id):
 				total_main += 1
 				add_holomem_or_support(alreadyHere)
 	
+	_update_deck()
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
 	
@@ -1047,6 +1060,7 @@ func _on_menu_card_right_clicked(card_id):
 		alreadyHere.name = "PleaseDelete"
 		alreadyHere.queue_free()
 	
+	_update_deck()
 	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
@@ -1068,6 +1082,8 @@ func _on_deck_card_right_clicked(card_id):
 		actualCard.queue_free()
 	if in_deck_dictionary[actualCard.cardNumber] <= 0:
 		in_deck_dictionary.erase(actualCard.cardNumber)
+	
+	_update_deck()
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
 	
@@ -1085,6 +1101,8 @@ func _on_deck_card_clicked(card_id):
 	else:
 		total_main += 1
 		add_holomem_or_support(actualCard)
+	
+	_update_deck()
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
 	

@@ -1488,6 +1488,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "OPTION_COSMETICS_HIDE"
 
 [node name="Control" type="Control" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 
 [node name="HideCosmetics" type="TextureButton" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/Control"]

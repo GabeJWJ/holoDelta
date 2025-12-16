@@ -942,7 +942,6 @@ func update_name(new_name:String):
 func create_lobby_options() -> void:
 	switch_menu("create_lobby")
 	lobby_banlist.selected = 2 if Settings.settings.OnlyEN else 1
-	
 
 func hide_lobby_options() -> void:
 	%LobbyCreateMenu.visible = false

@@ -25,7 +25,6 @@ var cardText = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("Client Version: ", client_version)
 	#Try to load settings from file
 	if INTJSON.parse(FileAccess.get_file_as_string("user://settings.json")) == 0:
 		settings = INTJSON.data

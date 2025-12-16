@@ -83,6 +83,7 @@ var can_undo_shuffle_hand = null
 @export var download_url : String
 @export var passcode : String
 var found_cosmetics = []
+var uploaded_cosmetics = []
 @export var is_goldfishing := false
 @export var stripped_bare := false
 var zone_to_deal_damage_to
@@ -291,22 +292,7 @@ func _ready():
 
 func upload_cosmetics():
 	if is_your_side:
-		if "sleeve" in found_cosmetics:
-			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
-				"game_id": game_id, "player_id": player_id, "cosmetics_type":"sleeve", "passcode":passcode
-			}).add_post_buffer("file", mainSleeve, "image/webp", "sleeve.webp").on_success(_upload_cosmetics_suceeded.bind("sleeve")).fetch()
-		if "cheerSleeve" in found_cosmetics:
-			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
-				"game_id": game_id, "player_id": player_id, "cosmetics_type":"cheerSleeve", "passcode":passcode
-			}).add_post_buffer("file", cheerSleeve, "image/webp", "cheerSleeve.webp").on_success(_upload_cosmetics_suceeded.bind("cheerSleeve")).fetch()
-		if "playmat" in found_cosmetics:
-			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
-				"game_id": game_id, "player_id": player_id, "cosmetics_type":"playmat", "passcode":passcode
-			}).add_post_buffer("file", playmatBuffer, "image/webp", "playmat.webp").on_success(_upload_cosmetics_suceeded.bind("playmat")).fetch()
-		if "dice" in found_cosmetics:
-			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
-				"game_id": game_id, "player_id": player_id, "cosmetics_type":"dice", "passcode":passcode
-			}).add_post_buffer("file", diceBuffer, "image/webp", "dice.webp").on_success(_upload_cosmetics_suceeded.bind("dice")).fetch()
+		_upload_all_cosmetics()
 	else:
 		get_parent().send_command("Server", "Get Cosmetics", {"game":game_id})
 
@@ -1267,22 +1253,23 @@ func _on_card_clicked(card_id : int) -> void:
 							for art in actualCard.holomem_arts:
 								popup.add_item(Settings.trans("%s_ART_%s_NAME" % [actualCard.cardNumber, art[0]]), 80+art[0])
 							popup.add_separator()
-						
-						if actualCard.rested:
-							popup.add_item(tr("CARD_HOLOMEM_UNREST"), 1)
-						else:
-							popup.add_item(tr("CARD_HOLOMEM_REST"), 0)
-						
-						if find_in_zone(centerZone) == -1 and currentZone != collabZone:
-							popup.add_item(tr("CARD_HOLOMEM_MOVE_CENTER"), 4)
-						if currentZone == collabZone and first_unoccupied_back_zone():
-							popup.add_item(tr("CARD_HOLOMEM_MOVE_BACK"), 5)
+					
+					if actualCard.rested:
+						popup.add_item(tr("CARD_HOLOMEM_UNREST"), 1)
+					else:
+						popup.add_item(tr("CARD_HOLOMEM_REST"), 0)
+					
+					if is_turn:
 						if find_in_zone(collabZone) == -1 and currentZone != centerZone and !actualCard.rested and deck.cardList.size() > 0 and !collabed:
 							popup.add_item(tr("CARD_HOLOMEM_COLLAB"), 6)
 						if currentZone == centerZone and all_occupied_zones(true).size() > 0 and !used_baton_pass:
 							popup.add_item(tr("CARD_HOLOMEM_BATON"), 7)
-						
-						popup.add_separator()
+					
+					if find_in_zone(centerZone) == -1 and currentZone != collabZone:
+						popup.add_item(tr("CARD_HOLOMEM_MOVE_CENTER"), 4)
+					if currentZone in [centerZone, collabZone] and first_unoccupied_back_zone():
+						popup.add_item(tr("CARD_HOLOMEM_MOVE_BACK"), 5)
+					popup.add_separator()
 					
 					popup.add_item(tr("CARD_HOLOMEM_DAMAGE"), 10)
 					if actualCard.damage > 0:
@@ -2230,14 +2217,41 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 		"Cosmetics":
 			if "cosmetics_type" in data:
 				if data["cosmetics_type"] in ["sleeve", "cheerSleeve", "playmat", "dice"]:
-					%HTTPManager.job(download_url + "/cosmetics/").add_post({
-						"game_id": game_id, "player_id": player_id, "cosmetics_type": data["cosmetics_type"]
-					}).on_success(self._download_cosmetics_suceeded.bind(data["cosmetics_type"])).fetch()
+					_download_specific_cosmetic(data["cosmetics_type"])
 		
 		_:
 			pass
 
+func _download_specific_cosmetic(cosmetic):
+	%HTTPManager.job(download_url + "/cosmetics/").add_post({
+					"game_id": game_id, "player_id": player_id, "cosmetics_type": cosmetic
+				}).on_success(self._download_cosmetics_suceeded.bind(cosmetic)).fetch()
+
+func _upload_all_cosmetics():
+	if is_your_side:
+		if "sleeve" in found_cosmetics and "sleeve" not in uploaded_cosmetics:
+			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
+				"game_id": game_id, "player_id": player_id, "cosmetics_type":"sleeve", "passcode":passcode
+			}).add_post_buffer("file", mainSleeve, "image/webp", "sleeve.webp").on_success(_upload_cosmetics_suceeded.bind("sleeve")).fetch()
+		if "cheerSleeve" in found_cosmetics and "cheerSleeve" not in uploaded_cosmetics:
+			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
+				"game_id": game_id, "player_id": player_id, "cosmetics_type":"cheerSleeve", "passcode":passcode
+			}).add_post_buffer("file", cheerSleeve, "image/webp", "cheerSleeve.webp").on_success(_upload_cosmetics_suceeded.bind("cheerSleeve")).fetch()
+		if "playmat" in found_cosmetics and "playmat" not in uploaded_cosmetics:
+			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
+				"game_id": game_id, "player_id": player_id, "cosmetics_type":"playmat", "passcode":passcode
+			}).add_post_buffer("file", playmatBuffer, "image/webp", "playmat.webp").on_success(_upload_cosmetics_suceeded.bind("playmat")).fetch()
+		if "dice" in found_cosmetics and "dice" not in uploaded_cosmetics:
+			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
+				"game_id": game_id, "player_id": player_id, "cosmetics_type":"dice", "passcode":passcode
+			}).add_post_buffer("file", diceBuffer, "image/webp", "dice.webp").on_success(_upload_cosmetics_suceeded.bind("dice")).fetch()
+
 func _upload_cosmetics_suceeded(_result, cosmetic):
+	uploaded_cosmetics.append(cosmetic)
+	if found_cosmetics != uploaded_cosmetics:
+		%CosmeticsTimer2.start()
+	else:
+		%CosmeticsTimer2.stop()
 	get_parent().send_command("Game", "Cosmetics", {"cosmetics": cosmetic})
 
 func _download_cosmetics_suceeded(result, cosmetic):
