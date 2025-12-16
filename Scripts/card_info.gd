@@ -407,23 +407,23 @@ func _on_card_button_mouse_entered():
 func _on_card_button_mouse_exited():
 	emit_signal("card_mouse_left")
 
+func _on_card_button_pressed() -> void:
+	emit_signal("card_clicked",cardID)
+
 func _on_card_button_gui_input(event):
+	# Right click pressed
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
 		android_click_handled = true
 		emit_signal("card_right_clicked",cardID)
-	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if OS.has_feature("android"):
-			# We only care about releases on Android because of timing issues
-			return
-		emit_signal("card_clicked",cardID)
+	# Left click released (only handled on android)
 	elif event is InputEventMouseButton and not event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if not OS.has_feature("android"):
 			return
-			# Android only handling
 		if android_click_handled:
 			return
 		else:
 			emit_signal("card_clicked",cardID)
+	# Left click pressed is handled in _on_card_button_pressed because of timing issues
 
 func flipDown():
 	if faceDown:

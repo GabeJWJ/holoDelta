@@ -950,9 +950,8 @@ func create_oshi(number : String, art_code : int) -> void:
 	#Creates the oshi card for your deck
 	
 	oshiCard = create_card_button(number,art_code)
-	oshiCard.position = Vector2(7,422)
 	oshiCard._scale(0.37)
-	$CanvasLayer/YourStuff/TAB_DECK.add_child(oshiCard)
+	$CanvasLayer/YourStuff/TAB_DECK/OshiPlace.add_child(oshiCard)
 
 func create_main_deck_card(number : String, art_code : int, amount = 1) -> void:
 	

@@ -476,6 +476,13 @@ theme = ExtResource("3_da1xd")
 color = Color(0.113725, 0.164706, 0.223529, 0)
 metadata/_tab_index = 0
 
+[node name="OshiPlace" type="CenterContainer" parent="CanvasLayer/YourStuff/TAB_DECK"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 422.0
+offset_right = 123.0
+offset_bottom = 585.0
+
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/YourStuff/TAB_DECK"]
 layout_mode = 0
 offset_left = 7.0

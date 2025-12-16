@@ -1226,8 +1226,8 @@ func show_game(game_id:String,opponent_id:String,opponent_name:String,opponent_o
 	yourSide.card_info_clear.connect(clear_info)
 	opponentSide.card_info_set.connect(update_info)
 	opponentSide.card_info_clear.connect(clear_info)
-	call_deferred("add_child",yourSide)
 	call_deferred("add_child",opponentSide)
+	call_deferred("add_child",yourSide)
 	
 	yourSide.ended_turn.connect(_on_end_turn)
 	yourSide.made_turn_choice.connect(_on_choice_made)
