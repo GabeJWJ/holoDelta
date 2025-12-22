@@ -12,51 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-08-30 02:34\n"
-
-#: Scenes/board.tscn
-msgid "SEND_CHAT"
-msgstr "Envoyer"
-
-#: Scenes/board.tscn
-msgid "OPTION_COSMETICS_HIDE"
-msgstr "Masquer les cosmétiques adverses"
-
-#: Scenes/board.tscn
-msgid "TAB_INFO"
-msgstr "Info"
-
-#: Scenes/board.tscn
-msgid "TAB_CHAT"
-msgstr "Chat"
-
-#: Scenes/board.tscn
-msgid "TAB_SETTINGS"
-msgstr "Parm."
-
-#: Scenes/board.tscn
-msgid "STEP1"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "STEP2"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "STEP3"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "STEP4"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "STEP5"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "STEP6"
-msgstr ""
+"PO-Revision-Date: 2025-12-22 19:33\n"
 
 #: Scenes/board.tscn
 msgid "TITLE"
@@ -67,42 +23,29 @@ msgid "SUBTITLE"
 msgstr "Un simulateur non officiel de Hololive OCG"
 
 #: Scenes/board.tscn
-#: Scenes/side.tscn
-msgid "RPS_ROCK"
-msgstr "Pierre"
-
-#: Scenes/board.tscn
-#: Scenes/side.tscn
-msgid "RPS_PAPER"
-msgstr "Papier"
-
-#: Scenes/board.tscn
-#: Scenes/side.tscn
-msgid "RPS_SCISSORS"
-msgstr "Ciseaux"
-
-#: Scenes/board.tscn
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid "RPS_WAIT"
-msgstr "En attente de l'adversaire..."
+msgid "DEBUG"
+msgstr "Actualiser"
 
 #: Scenes/board.tscn
 msgid "DECK_CREATE"
 msgstr "Créer / Modifier un deck"
 
 #: Scenes/board.tscn
-msgid "DEBUG"
-msgstr "Actualiser"
+msgid "COSMETICS"
+msgstr "Cosmétiques"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "OPTION_EN"
+msgstr "Cartes EN"
+
+#: Scenes/board.tscn
+msgid "INFO"
+msgstr "Info"
 
 #: Scenes/board.tscn
 msgid "LOBBY_CREATE"
 msgstr "Créer un Lobby"
-
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "PLAYERS_ONLINE"
-msgstr "{amount} joueurs en ligne"
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
@@ -115,56 +58,25 @@ msgid "LOBBY_SPECTATE"
 msgstr "Regarder la partie"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_PRIVATE"
-msgstr "Privé"
+msgid "SOLO_GOLDFISH"
+msgstr "Entraînement"
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
-msgid "LOBBY_ALLOWSPECTATORS"
-msgstr "Spectateurs autorisés"
+msgid "PLAYERS_ONLINE"
+msgstr "{amount} joueurs en ligne"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST"
-msgstr "Banlist"
+msgid "INFO_DLOC"
+msgstr "Emplacement des decks"
 
 #: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_NONE"
-msgstr "Sans Banlist"
-
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_CURRENT"
-msgstr "Actuel"
-
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_CURRENT_EN"
-msgstr ""
-
-#: Scenes/board.tscn
-#: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_UNRELEASED"
-msgstr "Actuel + Non sorti"
-
-#: Scenes/board.tscn
-msgid "LOBBY_BACK"
+msgid "INFO_CANCEL"
 msgstr "Retour"
 
 #: Scenes/board.tscn
-msgid "EXIT"
-msgstr "Quitter"
-
-#: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "OPTION_EN"
-msgstr ""
+msgid "SETTINGS_GAME_OPTIONS"
+msgstr "Options de jeu"
 
 #: Scenes/board.tscn
 msgid "OPTION_UNREVEALED"
@@ -172,11 +84,19 @@ msgstr "Accepte les cartes non dévoilées"
 
 #: Scenes/board.tscn
 msgid "OPTION_LANGUAGE"
-msgstr ""
+msgstr "Faire correspondre les langues"
 
 #: Scenes/board.tscn
 msgid "OPTION_PROXY"
 msgstr "Accepte les cartes proxy"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_AUDIO_OPTIONS"
+msgstr "Options audio"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_KEYBINDINGS"
+msgstr "Raccourcis"
 
 #: Scenes/board.tscn
 msgid "ACTION_DRAW"
@@ -207,33 +127,18 @@ msgid "ACTION_NSTEP"
 msgstr "Prochaine Phase "
 
 #: Scenes/board.tscn
-msgid "COSMETICS"
-msgstr "Cosmétiques"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_CANCEL"
-msgstr "Retour"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_PM"
-msgstr "Ajouter un Tapis depuis un fichier"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_D"
-msgstr "Ajouter un Dé depuis un fichier"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_PM_DEFAULT"
-msgstr "Tapis par défaut"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_D_DEFAULT"
-msgstr "Dé par défaut"
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_PUBLIC_LOBBIES_FOUND"
+msgstr "{amount} Lobbys publiques trouvés"
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_LOBBYCODE"
 msgstr "Entrer le code du lobby"
+
+#: Scenes/board.tscn
+msgid "LOBBY_LOBBYCODE_PASTE"
+msgstr "Coller code du Lobby"
 
 #: Scenes/board.tscn
 msgid "LOBBY_SEARCHING"
@@ -244,9 +149,173 @@ msgid "LOBBY_REFRESH"
 msgstr "Rafraichir"
 
 #: Scenes/board.tscn
+msgid "LOBBY_BACK"
+msgstr "Retour"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SETTINGS"
+msgstr "Options du Lobby"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_PRIVATE"
+msgstr "Privé"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_ALLOWSPECTATORS"
+msgstr "Spectateurs autorisés"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST"
+msgstr "Banlist"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_NONE"
+msgstr "Sans Banlist"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT"
+msgstr "Officielle"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT_EN"
+msgstr "Officielle (En)"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_UNRELEASED"
+msgstr "Officielle + Non sortie"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_UNRELEASED_EN"
+msgstr "Officielle + Non sortie (En)"
+
+#: Scenes/board.tscn
+msgid "GOLDFISH_MENU"
+msgstr "Menu d'entraînement"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "DECK_SELECT"
+msgstr "Choisir un deck"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "SPECTATE_PUBLIC_GAMES_FOUND"
+msgstr "{amount} Lobby public trouver"
+
+#: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_GAMECODE"
 msgstr "Entrer le code de la partie"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PLAYMATDICE"
+msgstr "Tapis/Dé"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM"
+msgstr "Ajouter un Tapis depuis un fichier"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM_DEFAULT"
+msgstr "Tapis par défaut"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D"
+msgstr "Ajouter un Dé depuis un fichier"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D_DEFAULT"
+msgstr "Dé par défaut"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_DEFAULTSLEEVES"
+msgstr "Sleeves par défaut"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_CANCEL"
+msgstr "Retour"
+
+#: Scenes/board.tscn
+msgid "EXIT"
+msgstr "Quitter"
+
+#: Scenes/board.tscn
+msgid "STEP1"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "STEP2"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "STEP3"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "STEP4"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "STEP5"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "STEP6"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_CHAT"
+msgstr "Discussion"
+
+#: Scenes/board.tscn
+msgid "SEND_CHAT"
+msgstr "Envoyer"
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_OPTIONS"
+msgstr "Options de jeu"
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_GAME_CODE"
+msgstr "Code de la Partie"
+
+#: Scenes/board.tscn
+msgid "OPTION_COSMETICS_HIDE"
+msgstr "Masquer les cosmétiques adverses"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_ROCK"
+msgstr "Pierre"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_PAPER"
+msgstr "Papier"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_SCISSORS"
+msgstr "Ciseaux"
+
+#: Scenes/board.tscn
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "RPS_WAIT"
+msgstr "En attente de l'adversaire..."
 
 #: Scenes/board.tscn
 msgid "LOBBY_HOST"
@@ -263,13 +332,20 @@ msgid "LOBBY_READY"
 msgstr "Prêt"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "DECK_SELECT"
-msgstr "Choisir un deck"
-
-#: Scenes/board.tscn
 msgid "LOBBY_CHOSEN"
 msgstr "Choisi"
+
+#: Scenes/board.tscn
+msgid "LOBBY_CODE"
+msgstr "Code du Lobby :"
+
+#: Scenes/board.tscn
+msgid "LOBBY_LOBBYCODE_COPY"
+msgstr "Copier code du Lobby"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SELECT_OPPONENT"
+msgstr "Choisir un adversaire"
 
 #: Scenes/board.tscn
 msgid "LOBBY_STARTGAME"
@@ -279,18 +355,6 @@ msgstr "Commencer "
 #: Scenes/side.tscn
 msgid "OK"
 msgstr "OK"
-
-#: Scenes/board.tscn
-msgid "INFO"
-msgstr "Info"
-
-#: Scenes/board.tscn
-msgid "INFO_DLOC"
-msgstr "Emplacement des decks"
-
-#: Scenes/board.tscn
-msgid "INFO_CANCEL"
-msgstr "Retour"
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
@@ -318,20 +382,50 @@ msgstr "Menu principal"
 
 #: Scenes/board.tscn
 msgid "MENU_PROMPT"
-msgstr "Voulez-vous vraiment retourner au menu principal ?"
+msgstr "Voulez-vous retourner au menu principal ?"
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_FAIL"
-msgstr ""
+msgstr "Erreur dans le téléchargement des cartes"
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
 msgid "DOWNLOAD_FAIL_FULL"
-msgstr ""
+msgstr "Erreur dans le téléchargement du dossier cardData.Zip.\n"
+"Il existe de nombreuses raisons pouvant expliquer ce phénomène, et je ne sais pas laquelle s'applique ici."
 
 #: Scenes/board.tscn
 msgid "TRYAGAIN"
+msgstr "Réessayer"
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU"
+msgstr "Mettre à jour le menu"
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU_CLIENT_UPTODATE"
+msgstr "Version à jour"
+
+#: Scenes/board.tscn
+msgid "DOWNLOAD_CLIENT"
+msgstr "Mise à jour client"
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU_CARD_UPTODATE"
+msgstr "Carte à jour"
+
+#: Scenes/board.tscn
+msgid "DOWNLOAD_CARD"
+msgstr "Mettre à jour"
+
+#: Scenes/board.tscn
+msgid "UPDATE_NOTFOUND"
+msgstr "Impossible de se connecter au serveur pour la mise à jour.\n"
+"Vous pouvez continuer, vous ne pourrez qu'éditer vos Decks."
+
+#: Scenes/board.tscn
+msgid "BACK"
 msgstr ""
 
 #: Scenes/deck_list.tscn
@@ -339,6 +433,7 @@ msgid "DECK_SELECT_CANCEL"
 msgstr "Retour"
 
 #: Scenes/deck_list.tscn
+#: Scripts/deck_list.gd
 msgid "DECK_DELETE_CONFIRM"
 msgstr "Supprimer définitivement {deckName} ?"
 
@@ -371,6 +466,11 @@ msgid "END_TURN"
 msgstr "Fin de Tour"
 
 #: Scenes/side.tscn
+#: Scripts/side.gd
+msgid "TURN_COUNT"
+msgstr "Tour {turn}"
+
+#: Scenes/side.tscn
 msgid "START_READY"
 msgstr "Prêt"
 
@@ -386,9 +486,17 @@ msgstr "Adversaire"
 msgid "MULLIGAN_TEXT"
 msgstr "Vu des mulligans adverse"
 
+#: Scenes/info_panel.tscn
+msgid "SIDEBAR_INFO"
+msgstr "Informations sur la carte"
+
 #: Scenes/deck_creation.tscn
 msgid "TAB_OSHI"
 msgstr ""
+
+#: Scenes/deck_creation.tscn
+msgid "SEARCH"
+msgstr "Recherche"
 
 #: Scenes/deck_creation.tscn
 #: Scripts/deck_creation.gd
@@ -401,12 +509,21 @@ msgid "COLOR"
 msgstr "Couleur"
 
 #: Scenes/deck_creation.tscn
-msgid "FILTER_CLEAR"
-msgstr "Réinitialiser"
+msgid "LIFE_5"
+msgstr "5 VIES"
 
 #: Scenes/deck_creation.tscn
-msgid "SEARCH"
-msgstr "Recherche"
+msgid "LIFE_6"
+msgstr "6 VIES"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "SETCODE"
+msgstr "Set/SD"
+
+#: Scenes/deck_creation.tscn
+msgid "FILTER_CLEAR"
+msgstr "Réinitialiser"
 
 #: Scenes/deck_creation.tscn
 msgid "TAB_HOLOMEM"
@@ -443,12 +560,30 @@ msgid "LEVEL_SPOT"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "ADVANTAGE"
+msgstr "Avantage"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "EFFECT"
+msgstr "Effet"
+
+#: Scenes/deck_creation.tscn
+msgid "EFFECT_ANY"
+msgstr "Tous les effets"
+
+#: Scenes/deck_creation.tscn
 msgid "TAG_PLURAL"
 msgstr "Tags"
 
 #: Scenes/deck_creation.tscn
 msgid "BUZZ"
 msgstr "Buzz"
+
+#: Scenes/deck_creation.tscn
+msgid "NOTBUZZ"
+msgstr "Non Buzz"
 
 #: Scenes/deck_creation.tscn
 msgid "TAB_SUPPORT"
@@ -462,6 +597,15 @@ msgstr "Type"
 #: Scenes/deck_creation.tscn
 msgid "SUPPORT_LIMITED"
 msgstr "Limité"
+
+#: Scenes/deck_creation.tscn
+msgid "SUPPORT_UNLIMITED"
+msgstr "Non Limité"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "TAG"
+msgstr "Tag"
 
 #: Scenes/deck_creation.tscn
 msgid "TAB_CHEER"
@@ -486,10 +630,6 @@ msgstr "Deck principal"
 #: Scenes/deck_creation.tscn
 msgid "CHEER"
 msgstr "Cheer"
-
-#: Scenes/deck_creation.tscn
-msgid "OSHI"
-msgstr "Oshi"
 
 #: Scenes/deck_creation.tscn
 msgid "LOAD"
@@ -519,6 +659,10 @@ msgstr "Télécharger"
 msgid "DECK_SAVE_CANCEL"
 msgstr "Retour"
 
+#: Scenes/deck_creation.tscn
+msgid "LOADING"
+msgstr "Chargement ..."
+
 #: Scripts/RemapButton.gd
 msgid "REMAP_WAIT"
 msgstr "... En attente ..."
@@ -532,8 +676,28 @@ msgid "COLOR_ANY"
 msgstr "Toutes les couleurs"
 
 #: Scripts/deck_creation.gd
+msgid "SETCODE_ANY"
+msgstr "Tous les Sets"
+
+#: Scripts/deck_creation.gd
+msgid "ADVANTAGE_ANY"
+msgstr "Tous les avantages"
+
+#: Scripts/deck_creation.gd
 msgid "SUPPORT_TYPE_ANY"
 msgstr "Tous les types"
+
+#: Scripts/deck_creation.gd
+msgid "TAG_ANY"
+msgstr "Tous les tags"
+
+#: Scripts/deck_creation.gd
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+#: Scripts/fuda.gd
+#: Scripts/info_panel.gd
+msgid ""
+msgstr ""
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOOSHI"
@@ -621,13 +785,7 @@ msgstr "Il n'y a pas de deck de cheers principal."
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_ONLYEN"
-msgstr ""
-
-#: Scripts/deck_creation.gd
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid ""
-msgstr ""
+msgstr "{cardNum} (ou l'art choisi) n'est pas disponible en anglais."
 
 #: Scripts/side.gd
 msgid "DECK"
@@ -672,12 +830,20 @@ msgid "READY_WAIT"
 msgstr "En attente ..."
 
 #: Scripts/side.gd
+msgid "CARD_HOLOMEM_REQUESTDAMAGE"
+msgstr "Ajouter des dégâts à l'Holomem"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REQUESTDAMAGEBACK"
+msgstr "Ajouter des dégâts à tous les Holomems en Arrière"
+
+#: Scripts/side.gd
 msgid "CARD_HOLOMEM_LOOK_ATTACHED"
 msgstr "Regarder les cartes attachées"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_LOOK_PAST"
-msgstr "Regarder les holomems attachés"
+msgstr "Regarder les Holomems attachés"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_PLAY_CENTERHIDDEN"
@@ -744,6 +910,14 @@ msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
 msgstr "Retirer des HP supplémentaires"
 
 #: Scripts/side.gd
+msgid "CARD_HOLOMEM_EXTRABATONPASS"
+msgstr "Augmenter le coût de Relais"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REMOVEBATONPASS"
+msgstr "Réduire le coût de Relais"
+
+#: Scripts/side.gd
 msgid "CARD_HOLOMEM_UNBLOOM"
 msgstr "Annuler un Bloom"
 
@@ -784,6 +958,10 @@ msgid "CARD_HAND_REVEAL"
 msgstr "Révéler"
 
 #: Scripts/side.gd
+msgid "CARD_HAND_REVEALALL"
+msgstr "Révélez la Main"
+
+#: Scripts/side.gd
 msgid "CARD_STAGE_ARCHIVE"
 msgstr "Archiver"
 
@@ -821,11 +999,11 @@ msgstr "Envoyer dans Archive"
 
 #: Scripts/side.gd
 msgid "CARD_REVEALED_HOLOPOWER"
-msgstr ""
+msgstr "Mettre au-dessus des Holopowers"
 
 #: Scripts/side.gd
 msgid "CARD_REVEALED_BOTTOMHOLOPOWER"
-msgstr ""
+msgstr "Mettre au-dessous des Holopowers"
 
 #: Scripts/side.gd
 msgid "DECK_DRAW"
@@ -883,6 +1061,14 @@ msgstr "Abandon"
 #: Scripts/side.gd
 msgid "CHEERDECK_REVEAL"
 msgstr "Révéler et attacher"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_ARCHIVE"
+msgstr "Archiver la première carte"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_ARCHIVEX"
+msgstr "Archivez les X premières cartes"
 
 #: Scripts/side.gd
 msgid "CHEERDECK_LOOKX"
@@ -1017,6 +1203,22 @@ msgid "PROMPT_REMOVEEXTRAHP"
 msgstr "Retirer X HP supplémentaires"
 
 #: Scripts/side.gd
+msgid "PROMPT_EXTRABATONPASS"
+msgstr "Augmenter le coût de Relais de X"
+
+#: Scripts/side.gd
+msgid "PROMPT_REMOVEBATONPASS"
+msgstr "Réduire le coût de Relais de X"
+
+#: Scripts/side.gd
+msgid "PROMPT_REQUESTDAMAGE"
+msgstr "Ajouter X dégâts"
+
+#: Scripts/side.gd
+msgid "PROMPT_REQUESTDAMAGEBACK"
+msgstr "Ajouter X dégâts"
+
+#: Scripts/side.gd
 msgid "PROMPT_OSHICOST"
 msgstr "Archiver X cartes"
 
@@ -1033,8 +1235,36 @@ msgid "PROMPT_LOOKATX"
 msgstr "Regarder X :"
 
 #: Scripts/side.gd
+msgid "PROMPT_CHEERDECK_ARCHIVE"
+msgstr "Archivez X cartes"
+
+#: Scripts/side.gd
 msgid "PROMPT_HOLOPOWER_ARCHIVE"
 msgstr "Archiver X cartes"
+
+#: Scripts/side.gd
+msgid "PROMPT_NOTE"
+msgstr "Ajouter une note"
+
+#: Scripts/side.gd
+msgid "PROMPT_NOTE_PLACEHOLDER"
+msgstr "Écrivez la note ici..."
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONEDAMAGE"
+msgstr "Ajouter des dégâts à la Zone"
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONEDAMAGEREMOVE"
+msgstr "Retirer des dégâts à la Zone"
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONEDAMAGEALL"
+msgstr "Ajouter des dégâts à toute la Zone Arrière"
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONENOTE"
+msgstr "Ajouter une note à la Zone"
 
 #: Scripts/side.gd
 msgid "PROMPT_ART_DAMAGE"
@@ -1054,19 +1284,30 @@ msgstr "Téléchargement des cartes, veuillez patienter..."
 
 #: Scripts/Multiplayer.gd
 msgid "DECK_AUTOLOAD_CONFIRM"
-msgstr ""
+msgstr "CODE DE DECK DÉTECTÉ.\n"
+"CONTINUER VERS L'ÉDITEUR DE DECK ?"
 
 #: Scripts/Multiplayer.gd
 msgid "DECK_AUTOLOAD_CONFIRM_INFO"
-msgstr ""
+msgstr "Le jeu a détecté que vous avez importé un Deck valide.\n"
+"Si vous souhaitez le voir, cliquez sur « Oui » pour accéder à l'éditeur de Deck."
+
+#: Scripts/Multiplayer.gd
+msgid "UPDATE_MENU_CLIENT_UPDATEFOUND"
+msgstr "Mise à jour trouvée"
+
+#: Scripts/Multiplayer.gd
+msgid "UPDATE_MENU_CARD_UPDATEFOUND"
+msgstr "Nouvelle carte trouvée"
 
 #: Scripts/Multiplayer.gd
 msgid "LOAD_FAIL"
-msgstr ""
+msgstr "Erreur dans le chargement des cartes"
 
 #: Scripts/Multiplayer.gd
 msgid "LOAD_FAIL_FULL"
-msgstr ""
+msgstr "Vous disposez de l'archive cardData.zip, mais elle n'a pas pu être chargée.\n"
+"Veuillez m'informer si vous voyez ce message, car je ne comprends pas comment cela a pu se produire."
 
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_BANLIST_CUSTOM"
@@ -1170,7 +1411,7 @@ msgstr "{person} a ajouté {cardName} à ces Holopower"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_REVEALED_BOTTOMHOLOPOWER"
-msgstr ""
+msgstr "{person} a ajouté {cardName} au-dessous de ces Holopowers"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_OSHISKILL_SP"
@@ -1199,6 +1440,10 @@ msgstr "{person} a mis une carte en Holopower depuis sa main"
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_REVEAL"
 msgstr "{person} a révélé {cardName} depuis sa main"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_REVEALALL"
+msgstr "{person} a révélé sa main."
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_SUPPORT_PLAY"
@@ -1506,7 +1751,7 @@ msgstr "Vous avez ajouté {cardName} à vos Holopower"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_REVEALED_BOTTOMHOLOPOWER"
-msgstr ""
+msgstr "Vous avez ajouté {cardName} au-dessous de vos Holopowers"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_OSHISKILL_SP"
@@ -1535,6 +1780,10 @@ msgstr "Vous avez mis une carte en Holopower depuis votre main"
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_HAND_REVEAL"
 msgstr "Vous avez révélé {cardName} depuis votre main"
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_REVEALALL"
+msgstr "Vous avez révélé votre main."
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_HAND_SUPPORT_PLAY"
@@ -1835,78 +2084,78 @@ msgstr "Vous avez abandonné."
 msgid "LOBBY_PUBLIC"
 msgstr "Public"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NOBODY"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NAMESEP"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "COLORLESS"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "COLORSEP"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NAME_BUZZ"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI"
 msgstr "{colorText} Oshi Holomem\n"
 "Vie : {life}{tagsText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI_SPSKILL"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI_SKILL"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_SPOT"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_DEBUT"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_1ST"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_2ND"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_BUZZ"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_HOLOMEM_1"
 msgstr "{colorText} {levelText} {buzzText}Holomem\n"
 "PV: {hpText}\n"
 "Tags: {tagsText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_NOBATONPASSCOST"
 msgstr "Gratuit"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_HOLOMEM_2"
 msgstr "Relais : {costText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_SUPPORT"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_LIMITED"
 msgstr "LIMITÉ : Seule une carte ne peut être jouée par tour."
 

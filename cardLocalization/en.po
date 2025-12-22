@@ -10153,3 +10153,21 @@ msgstr "Purple Cheer"
 msgid "hY06-008_NAME"
 msgstr "Yellow Cheer"
 
+msgid "hY01-010_NAME"
+msgstr "White Cheer"
+
+msgid "hY02-008_NAME"
+msgstr "Green Cheer"
+
+msgid "hY03-013_NAME"
+msgstr "Red Cheer"
+
+msgid "hY04-010_NAME"
+msgstr "Blue Cheer"
+
+msgid "hY05-008_NAME"
+msgstr "Purple Cheer"
+
+msgid "hY06-007_NAME"
+msgstr "Yellow Cheer"
+

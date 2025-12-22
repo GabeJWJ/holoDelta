@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-10-06 01:26\n"
+"PO-Revision-Date: 2025-12-22 19:33\n"
 
 #: Scenes/board.tscn
 msgid "TITLE"
@@ -58,6 +58,10 @@ msgstr "로비 참여"
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_SPECTATE"
 msgstr "로비 관전"
+
+#: Scenes/board.tscn
+msgid "SOLO_GOLDFISH"
+msgstr ""
 
 #: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
@@ -135,6 +139,10 @@ msgid "LOBBY_LOBBYCODE"
 msgstr "로비 코드 입력"
 
 #: Scenes/board.tscn
+msgid "LOBBY_LOBBYCODE_PASTE"
+msgstr ""
+
+#: Scenes/board.tscn
 msgid "LOBBY_SEARCHING"
 msgstr "검색 중..."
 
@@ -196,6 +204,15 @@ msgid "LOBBY_BANLIST_UNRELEASED_EN"
 msgstr ""
 
 #: Scenes/board.tscn
+msgid "GOLDFISH_MENU"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "DECK_SELECT"
+msgstr "덱 선택"
+
+#: Scenes/board.tscn
 #: Scripts/Multiplayer.gd
 msgid "SPECTATE_PUBLIC_GAMES_FOUND"
 msgstr ""
@@ -204,6 +221,10 @@ msgstr ""
 #: Scripts/Multiplayer.gd
 msgid "LOBBY_GAMECODE"
 msgstr "게임 코드 입력"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PLAYMATDICE"
+msgstr ""
 
 #: Scenes/board.tscn
 msgid "COSMETICS_PM"
@@ -220,6 +241,10 @@ msgstr "주사위 이미지 불러오기"
 #: Scenes/board.tscn
 msgid "COSMETICS_D_DEFAULT"
 msgstr "주사위 초기화"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_DEFAULTSLEEVES"
+msgstr ""
 
 #: Scenes/board.tscn
 msgid "COSMETICS_CANCEL"
@@ -309,16 +334,15 @@ msgid "LOBBY_READY"
 msgstr "준비"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
-msgid "DECK_SELECT"
-msgstr "덱 선택"
-
-#: Scenes/board.tscn
 msgid "LOBBY_CHOSEN"
 msgstr "선택된 상대"
 
 #: Scenes/board.tscn
 msgid "LOBBY_CODE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "LOBBY_LOBBYCODE_COPY"
 msgstr ""
 
 #: Scenes/board.tscn
@@ -376,11 +400,40 @@ msgstr ""
 msgid "TRYAGAIN"
 msgstr ""
 
+#: Scenes/board.tscn
+msgid "UPDATE_MENU"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU_CLIENT_UPTODATE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "DOWNLOAD_CLIENT"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU_CARD_UPTODATE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "DOWNLOAD_CARD"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "UPDATE_NOTFOUND"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "BACK"
+msgstr ""
+
 #: Scenes/deck_list.tscn
 msgid "DECK_SELECT_CANCEL"
 msgstr "취소"
 
 #: Scenes/deck_list.tscn
+#: Scripts/deck_list.gd
 msgid "DECK_DELETE_CONFIRM"
 msgstr "{deckName}을(를) 삭제하시겠습니까?"
 
@@ -413,6 +466,11 @@ msgid "END_TURN"
 msgstr "턴 종료"
 
 #: Scenes/side.tscn
+#: Scripts/side.gd
+msgid "TURN_COUNT"
+msgstr ""
+
+#: Scenes/side.tscn
 msgid "START_READY"
 msgstr "준비"
 
@@ -437,6 +495,10 @@ msgid "TAB_OSHI"
 msgstr "오시"
 
 #: Scenes/deck_creation.tscn
+msgid "SEARCH"
+msgstr "검색"
+
+#: Scenes/deck_creation.tscn
 #: Scripts/deck_creation.gd
 msgid "NAME"
 msgstr "이름"
@@ -447,12 +509,21 @@ msgid "COLOR"
 msgstr "색"
 
 #: Scenes/deck_creation.tscn
-msgid "FILTER_CLEAR"
-msgstr "필터 초기화"
+msgid "LIFE_5"
+msgstr ""
 
 #: Scenes/deck_creation.tscn
-msgid "SEARCH"
-msgstr "검색"
+msgid "LIFE_6"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "SETCODE"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+msgid "FILTER_CLEAR"
+msgstr "필터 초기화"
 
 #: Scenes/deck_creation.tscn
 msgid "TAB_HOLOMEM"
@@ -489,12 +560,30 @@ msgid "LEVEL_SPOT"
 msgstr "SPOT"
 
 #: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "ADVANTAGE"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "EFFECT"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+msgid "EFFECT_ANY"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
 msgid "TAG_PLURAL"
 msgstr "태그"
 
 #: Scenes/deck_creation.tscn
 msgid "BUZZ"
 msgstr "버즈"
+
+#: Scenes/deck_creation.tscn
+msgid "NOTBUZZ"
+msgstr ""
 
 #: Scenes/deck_creation.tscn
 msgid "TAB_SUPPORT"
@@ -508,6 +597,15 @@ msgstr "타입"
 #: Scenes/deck_creation.tscn
 msgid "SUPPORT_LIMITED"
 msgstr "리미티드"
+
+#: Scenes/deck_creation.tscn
+msgid "SUPPORT_UNLIMITED"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "TAG"
+msgstr ""
 
 #: Scenes/deck_creation.tscn
 msgid "TAB_CHEER"
@@ -532,10 +630,6 @@ msgstr "메인 덱"
 #: Scenes/deck_creation.tscn
 msgid "CHEER"
 msgstr "옐"
-
-#: Scenes/deck_creation.tscn
-msgid "OSHI"
-msgstr "오시"
 
 #: Scenes/deck_creation.tscn
 msgid "LOAD"
@@ -565,6 +659,10 @@ msgstr "다운로드"
 msgid "DECK_SAVE_CANCEL"
 msgstr "취소"
 
+#: Scenes/deck_creation.tscn
+msgid "LOADING"
+msgstr ""
+
 #: Scripts/RemapButton.gd
 msgid "REMAP_WAIT"
 msgstr "기다리는 중"
@@ -578,8 +676,28 @@ msgid "COLOR_ANY"
 msgstr "아무 색"
 
 #: Scripts/deck_creation.gd
+msgid "SETCODE_ANY"
+msgstr ""
+
+#: Scripts/deck_creation.gd
+msgid "ADVANTAGE_ANY"
+msgstr ""
+
+#: Scripts/deck_creation.gd
 msgid "SUPPORT_TYPE_ANY"
 msgstr "아무 타입"
+
+#: Scripts/deck_creation.gd
+msgid "TAG_ANY"
+msgstr ""
+
+#: Scripts/deck_creation.gd
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+#: Scripts/fuda.gd
+#: Scripts/info_panel.gd
+msgid ""
+msgstr ""
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOOSHI"
@@ -669,12 +787,6 @@ msgstr "옐 덱이 비어있습니다."
 msgid "DECKERROR_ONLYEN"
 msgstr ""
 
-#: Scripts/deck_creation.gd
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-msgid ""
-msgstr ""
-
 #: Scripts/side.gd
 msgid "DECK"
 msgstr "덱"
@@ -716,6 +828,14 @@ msgstr "상대를 기다리는 중..."
 #: Scripts/side.gd
 msgid "READY_WAIT"
 msgstr "기다리는 중"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REQUESTDAMAGE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REQUESTDAMAGEBACK"
+msgstr ""
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_LOOK_ATTACHED"
@@ -790,6 +910,14 @@ msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
 msgstr "증가된 HP 제거"
 
 #: Scripts/side.gd
+msgid "CARD_HOLOMEM_EXTRABATONPASS"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REMOVEBATONPASS"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "CARD_HOLOMEM_UNBLOOM"
 msgstr "Bloom 취소"
 
@@ -828,6 +956,10 @@ msgstr "홀로파워로 보내기"
 #: Scripts/side.gd
 msgid "CARD_HAND_REVEAL"
 msgstr "공개"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_REVEALALL"
+msgstr ""
 
 #: Scripts/side.gd
 msgid "CARD_STAGE_ARCHIVE"
@@ -929,6 +1061,14 @@ msgstr "항복"
 #: Scripts/side.gd
 msgid "CHEERDECK_REVEAL"
 msgstr "공개 후 붙이기"
+
+#: Scripts/side.gd
+msgid "CHEERDECK_ARCHIVE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CHEERDECK_ARCHIVEX"
+msgstr ""
 
 #: Scripts/side.gd
 msgid "CHEERDECK_LOOKX"
@@ -1063,6 +1203,22 @@ msgid "PROMPT_REMOVEEXTRAHP"
 msgstr "HP X 제거"
 
 #: Scripts/side.gd
+msgid "PROMPT_EXTRABATONPASS"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "PROMPT_REMOVEBATONPASS"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "PROMPT_REQUESTDAMAGE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "PROMPT_REQUESTDAMAGEBACK"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "PROMPT_OSHICOST"
 msgstr "X장 아카이브"
 
@@ -1079,8 +1235,36 @@ msgid "PROMPT_LOOKATX"
 msgstr "X장 확인"
 
 #: Scripts/side.gd
+msgid "PROMPT_CHEERDECK_ARCHIVE"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "PROMPT_HOLOPOWER_ARCHIVE"
 msgstr "X장 아카이브"
+
+#: Scripts/side.gd
+msgid "PROMPT_NOTE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "PROMPT_NOTE_PLACEHOLDER"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONEDAMAGE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONEDAMAGEREMOVE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONEDAMAGEALL"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "GOLDFISH_ZONENOTE"
+msgstr ""
 
 #: Scripts/side.gd
 msgid "PROMPT_ART_DAMAGE"
@@ -1104,6 +1288,14 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "DECK_AUTOLOAD_CONFIRM_INFO"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "UPDATE_MENU_CLIENT_UPDATEFOUND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "UPDATE_MENU_CARD_UPDATEFOUND"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
@@ -1245,6 +1437,10 @@ msgstr "{person}님이 홀로파워 한 장을 패에 넣었습니다"
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_REVEAL"
 msgstr "{person}님이 패에서 {cardName}을(를) 공개했습니다"
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_REVEALALL"
+msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_HAND_SUPPORT_PLAY"
@@ -1585,6 +1781,10 @@ msgid "YOU_MESSAGE_HAND_REVEAL"
 msgstr "당신은 패에서 {cardName}을(를) 공개했습니다"
 
 #: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_REVEALALL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_HAND_SUPPORT_PLAY"
 msgstr "당신은 {cardName}을(를) 플레이했습니다"
 
@@ -1885,78 +2085,78 @@ msgstr "당신은 항복했습니다"
 msgid "LOBBY_PUBLIC"
 msgstr "공개"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NOBODY"
 msgstr "Nobody?"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NAMESEP"
 msgstr "/"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "COLORLESS"
 msgstr "무색"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "COLORSEP"
 msgstr "/"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NAME_BUZZ"
 msgstr "Buzz"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI"
 msgstr "{colorText} 오시 홀로멤\n"
 "라이프: {life}{tagsText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI_SPSKILL"
 msgstr "SP 오시 스킬 [홀로파워 -{costText}]  \"{nameText}\""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI_SKILL"
 msgstr "오시 스킬 [홀로파워 -{costText}]  \"{nameText}\""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_SPOT"
 msgstr "SPOT"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_DEBUT"
 msgstr "Debut"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_1ST"
 msgstr "1st"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_2ND"
 msgstr "2nd"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_BUZZ"
 msgstr "Buzz"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_HOLOMEM_1"
 msgstr "{colorText} {levelText} {buzzText}홀로멤\n"
 "HP: {hpText}\n"
 "태그: {tagsText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_NOBATONPASSCOST"
 msgstr "Free"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_HOLOMEM_2"
 msgstr "배턴 터치: {costText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_SUPPORT"
 msgstr "{supportText} ({typeText}){tagsText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_LIMITED"
 msgstr "LIMITED : 턴에 1번 밖에 사용할 수 없다."
 

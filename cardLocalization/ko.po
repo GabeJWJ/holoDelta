@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-12-14 16:33\n"
+"PO-Revision-Date: 2025-12-22 19:34\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "이 홀로멤이 다운됐을 때, 자신의 라이프 -2."
@@ -9144,115 +9144,115 @@ msgid "hSD11-009_COLLAB_EFFECT"
 msgstr "상대의 센터 포지션인 홀로멤 1명은, 다음 상대의 턴이 끝날 때까지, 배턴 터치에 필요한 무 +3."
 
 msgid "hBP06-053_NAME"
-msgstr ""
+msgstr "무나 호시노바"
 
 msgid "hBP06-053_ART_0_NAME"
-msgstr ""
+msgstr "Tidal Eclipse"
 
 msgid "hBP06-053_ART_0_EFFECT"
-msgstr ""
+msgstr "이 홀로멤에게 옐이 4장 이상 붙어 있다면, 상대의 센터 홀로멤이나 콜라보 홀로멤에게 특수 대미지 90을 준다."
 
 msgid "hBP06-053_COLLAB_NAME"
-msgstr ""
+msgstr "별의 운명"
 
 msgid "hBP06-053_COLLAB_EFFECT"
-msgstr ""
+msgstr "상대의 센터 홀로멤이나 콜라보 홀로멤을 고른다. 고른 홀로멤에게, 고른 홀로멤이 받고 있는 대미지와 같은 수치의 특수 대미지를 준다."
 
 msgid "hBP06-086_NAME"
-msgstr ""
+msgstr "애정 가득 드셔주세요♪"
 
 msgid "hBP06-086_EFFECT"
-msgstr ""
+msgstr "자신의 덱을 1장 드로우 한다. 그 후, 자신의 홀로멤 1명의 HP 100 회복."
 
 msgid "hBP06-014_NAME"
-msgstr ""
+msgstr "라오라 판테라"
 
 msgid "hBP06-014_ART_0_NAME"
-msgstr ""
+msgstr "색채의 리나시멘토"
 
 msgid "hBP06-014_ART_0_EFFECT"
-msgstr ""
+msgstr "[센터 포지션 한정] 이 턴 동안, 자신의 #그림을 가진 콜라보 홀로멤의 아츠 +50하고, 그 홀로멤의 아츠에 필요한 무 -1."
 
 msgid "hBP06-014_GIFT_NAME"
-msgstr ""
+msgstr "꿈을 잇는 아틀리에"
 
 msgid "hBP06-014_GIFT_EFFECT"
-msgstr ""
+msgstr "이 홀로멤이 아츠를 사용했을 때, 자신의 홀로 파워를 본다. 그중에서 1장을 공개하고, 패에 더한다. 패에 더했다면, 자신의 패 1장을 홀로 파워로 한다. 그리고 홀로 파워를 셔플 한다."
 
 msgid "hBP06-036_NAME"
-msgstr ""
+msgstr "나키리 아야메"
 
 msgid "hBP06-036_ART_0_NAME"
-msgstr ""
+msgstr "목욕 후의 행복한 시간"
 
 msgid "hBP06-036_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 옐 덱의 위에서부터 1장을 아카이브 할 수 있다 : 자신의 덱을 1장 드로우 한다."
 
 msgid "hBP06-036_COLLAB_NAME"
-msgstr ""
+msgstr "느긋하게 밤벚꽃 온천 데이트"
 
 msgid "hBP06-036_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신의 덱에서, [〈아수라&나찰〉이나 〈귀신도 「아수라」〉나 〈포요요〉] 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP06-079_NAME"
-msgstr ""
+msgstr "오오조라 스바루"
 
 msgid "hBP06-079_ART_0_NAME"
-msgstr ""
+msgstr "짠물껼 쏘리"
 
 msgid "hBP06-079_COLLAB_NAME"
-msgstr ""
+msgstr "Subaru Duck Dance"
 
 msgid "hBP06-079_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신의 아카이브의 옐 1장을 이 홀로멤에게 보낼 수 있다."
 
 msgid "hBP06-063_NAME"
-msgstr ""
+msgstr "로보코 씨"
 
 msgid "hBP06-063_ART_0_NAME"
-msgstr ""
+msgstr "음——— 맛있어[๑´ ڡ `๑]♡"
 
 msgid "hBP06-063_ART_0_EFFECT"
-msgstr ""
+msgstr "자신의 오시 홀로멤이 〈로보코 씨〉라면, 자신의 덱을 1장 드로우 한다."
 
 msgid "hBP06-063_BLOOM_NAME"
-msgstr ""
+msgstr "푸딩과 어린이 오므라이스"
 
 msgid "hBP06-063_BLOOM_EFFECT"
-msgstr ""
+msgstr "자신의 〈로보사〉가 붙어 있는 홀로멤이 있다면, 상대의 센터 홀로멤에게 특수 대미지 20을 준다."
 
 msgid "hBP06-090_NAME"
-msgstr ""
+msgstr "블룸 스테이지"
 
 msgid "hBP06-090_EFFECT"
-msgstr ""
+msgstr "자신의 덱을 2장 드로우 한다. 그 후, 자신의 라이프가 4 이하라면, 자신의 이 턴에 Debut 홀로멤에서 Bloom 한 1st 홀로멤 1명을, 자신의 패의 홀로멤을 사용해 다시 1번 Bloom 할 수 있다."
 
 msgid "hBP06-076_NAME"
-msgstr ""
+msgstr "나츠이로 마츠리"
 
 msgid "hBP06-076_ART_0_NAME"
-msgstr ""
+msgstr "마츠리 쨩에게 해롱해롱 하라구♥"
 
 msgid "hBP06-076_ART_0_EFFECT"
-msgstr ""
+msgstr "이 아츠의 대상이 상대의 2nd 홀로멤이고, 이 턴에 자신이 LIMITED인 서포트 카드를 사용하고 있다면, 이 아츠 +70."
 
 msgid "hBP06-076_BLOOM_NAME"
-msgstr ""
+msgstr "렛츠 퍼포밍"
 
 msgid "hBP06-076_BLOOM_EFFECT"
-msgstr ""
+msgstr "자신의 덱에서, [〈에비후라이온〉이나 〈마츠리스〉] 1장을 공개하고, 패에 더한다. 그리고 덱을 셔플 한다."
 
 msgid "hBP06-049_NAME"
-msgstr ""
+msgstr "무나 호시노바"
 
 msgid "hBP06-049_ART_0_NAME"
-msgstr ""
+msgstr "별들의 춤"
 
 msgid "hBP06-049_COLLAB_NAME"
-msgstr ""
+msgstr "푸른 호박"
 
 msgid "hBP06-049_COLLAB_EFFECT"
-msgstr ""
+msgstr "자신이 후공이고 최초의 턴이라면, 자신의 옐 덱에서, 청 옐 1장을 공개하고, 자신의 〈무나 호시노바〉에게 보낸다. 그리고 옐 덱을 셔플 한다."
 
 msgid "hBP06-089_NAME"
 msgstr ""
@@ -10287,5 +10287,101 @@ msgid "hBP06-095_NAME"
 msgstr ""
 
 msgid "hBP06-095_EFFECT"
+msgstr ""
+
+msgid "hBP06-013_NAME"
+msgstr ""
+
+msgid "hBP06-013_ART_0_NAME"
+msgstr ""
+
+msgid "hBP06-013_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP06-013_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP06-013_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP06-038_NAME"
+msgstr ""
+
+msgid "hBP06-038_ART_0_NAME"
+msgstr ""
+
+msgid "hBP06-038_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP06-038_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP06-038_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP06-052_NAME"
+msgstr ""
+
+msgid "hBP06-052_ART_0_NAME"
+msgstr ""
+
+msgid "hBP06-052_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP06-052_GIFT_NAME"
+msgstr ""
+
+msgid "hBP06-052_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP06-069_NAME"
+msgstr ""
+
+msgid "hBP06-069_ART_0_NAME"
+msgstr ""
+
+msgid "hBP06-069_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP06-069_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP06-069_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP06-084_NAME"
+msgstr ""
+
+msgid "hBP06-084_ART_0_NAME"
+msgstr ""
+
+msgid "hBP06-084_GIFT_NAME"
+msgstr ""
+
+msgid "hBP06-084_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP06-096_NAME"
+msgstr ""
+
+msgid "hBP06-096_EFFECT"
+msgstr ""
+
+msgid "hY01-11_NAME"
+msgstr ""
+
+msgid "hY02-009_NAME"
+msgstr ""
+
+msgid "hY03-010_NAME"
+msgstr ""
+
+msgid "hY04-008_NAME"
+msgstr ""
+
+msgid "hY05-006_NAME"
+msgstr ""
+
+msgid "hY06-008_NAME"
 msgstr ""
 

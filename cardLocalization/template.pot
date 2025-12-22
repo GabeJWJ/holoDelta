@@ -10153,3 +10153,21 @@ msgstr ""
 msgid "hY06-008_NAME"
 msgstr ""
 
+msgid "hY01-010_NAME"
+msgstr ""
+
+msgid "hY02-008_NAME"
+msgstr ""
+
+msgid "hY03-013_NAME"
+msgstr ""
+
+msgid "hY04-010_NAME"
+msgstr ""
+
+msgid "hY05-008_NAME"
+msgstr ""
+
+msgid "hY06-007_NAME"
+msgstr ""
+

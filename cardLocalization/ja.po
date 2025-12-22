@@ -10153,3 +10153,21 @@ msgstr "紫エール"
 msgid "hY06-008_NAME"
 msgstr "黄エール"
 
+msgid "hY01-010_NAME"
+msgstr "白エール"
+
+msgid "hY02-008_NAME"
+msgstr "緑エール"
+
+msgid "hY03-013_NAME"
+msgstr "赤エール"
+
+msgid "hY04-010_NAME"
+msgstr "青エール"
+
+msgid "hY05-008_NAME"
+msgstr "紫エール"
+
+msgid "hY06-007_NAME"
+msgstr "黄エール"
+
