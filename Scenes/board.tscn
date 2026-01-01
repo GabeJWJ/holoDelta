@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=46 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" uid="uid://c1po3kd3x6ln6" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="14_rk7pw"]
 [ext_resource type="Script" uid="uid://dik3n6nv74v2i" path="res://Scripts/RemapButton.gd" id="14_x8gke"]
 [ext_resource type="PackedScene" uid="uid://gfca1xt2vdra" path="res://Scenes/sleeve_select.tscn" id="15_gbx47"]
+[ext_resource type="Texture2D" uid="uid://dbtec4tw8uhta" path="res://SPmarker.webp" id="15_otiia"]
 [ext_resource type="PackedScene" uid="uid://75okrvwhh5cf" path="res://Scenes/die.tscn" id="15_ycoxv"]
 [ext_resource type="Texture2D" uid="uid://bnsmsduvikadg" path="res://holoBack.png" id="16_emfff"]
 [ext_resource type="Texture2D" uid="uid://bcans1dkc8eyo" path="res://cheerBack.png" id="17_6ha0t"]
@@ -1039,10 +1040,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 233.0
-offset_top = -126.0
-offset_right = 617.0
-offset_bottom = 296.0
+offset_left = 172.0
+offset_top = -109.0
+offset_right = 465.0
+offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch = true
@@ -1050,7 +1051,7 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer"]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(384, 422)
+size = Vector2i(293, 334)
 render_target_update_mode = 0
 
 [node name="Die" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport" instance=ExtResource("15_ycoxv")]
@@ -1065,6 +1066,15 @@ transform = Transform3D(1, 0, 0, 0, 0.979879, 0.19959, 0, -0.19959, 0.979879, 20
 light_energy = 4.173
 spot_range = 8.92789
 spot_angle = 42.239
+
+[node name="SPPreview" type="TextureRect" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 220.0
+offset_top = 125.0
+offset_right = 420.0
+offset_bottom = 365.0
+texture = ExtResource("15_otiia")
 
 [node name="ButtonMargins" type="MarginContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox"]
 layout_mode = 2
@@ -1098,7 +1108,7 @@ size = Vector2i(751, 258)
 ok_button_text = "Open"
 file_mode = 0
 access = 2
-filters = PackedStringArray("*.jpg,*.webp")
+filters = PackedStringArray("*.jpg,*.webp,*.png")
 show_hidden_files = true
 use_native_dialog = true
 
@@ -1131,7 +1141,7 @@ size = Vector2i(392, 175)
 ok_button_text = "Open"
 file_mode = 0
 access = 2
-filters = PackedStringArray("*.png,*.webp")
+filters = PackedStringArray("*.png,*.webp,*.jpg")
 show_hidden_files = true
 use_native_dialog = true
 
@@ -1142,6 +1152,39 @@ size_flags_horizontal = 3
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
 text = "COSMETICS_D_DEFAULT"
+
+[node name="SPHBox" type="HBoxContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="SP" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox"]
+custom_minimum_size = Vector2(600, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 30
+text = "COSMETICS_SP"
+
+[node name="SPLoadDialog" type="FileDialog" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox/SP"]
+unique_name_in_owner = true
+auto_translate_mode = 2
+title = "Open a File"
+position = Vector2i(300, 300)
+size = Vector2i(392, 175)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png,*.webp")
+show_hidden_files = true
+use_native_dialog = true
+
+[node name="SPDefault" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox"]
+custom_minimum_size = Vector2(600, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 25
+text = "COSMETICS_SP_DEFAULT"
 
 [node name="COSMETICS_DEFAULTSLEEVES" type="Control" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer"]
 visible = false
@@ -1367,23 +1410,12 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="ChatScroll" type="ScrollContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatPanelContainer/ChatMargins"]
+[node name="Chat" type="RichTextLabel" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatPanelContainer/ChatMargins"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("5_fdkx6")
-horizontal_scroll_mode = 0
-
-[node name="Chat" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatPanelContainer/ChatMargins/ChatScroll"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 0
-autowrap_mode = 3
+focus_mode = 2
+scroll_following = true
+selection_enabled = true
 
 [node name="ChatHBox" type="HBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox"]
 unique_name_in_owner = true
@@ -2249,6 +2281,9 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice" to="." method="_on_dice_pressed"]
 [connection signal="file_selected" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice/DiceLoadDialog" to="." method="_on_dice_load_dialog_file_selected"]
 [connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/DiceDefault" to="." method="_on_dice_default_pressed"]
+[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox/SP" to="." method="_on_sp_pressed"]
+[connection signal="file_selected" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox/SP/SPLoadDialog" to="." method="_on_sp_load_dialog_file_selected"]
+[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox/SPDefault" to="." method="_on_sp_default_pressed"]
 [connection signal="updated_sleeve" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES/defaultSleeve" to="." method="_on_default_sleeve_updated"]
 [connection signal="updated_sleeve" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES/defaultCheerSleeve" to="." method="_on_default_cheer_sleeve_updated"]
 [connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/MarginContainer/Exit" to="." method="_on_cosmetics_exit_pressed"]

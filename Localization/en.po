@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: holodelta\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-12-06 19:12-0500\n"
+"PO-Revision-Date: 2026-01-01 16:54-0500\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Language: en_US\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Crowdin-Language: en\n"
 "X-Crowdin-File: template.pot\n"
 "X-Crowdin-File-ID: 6\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #: Scenes/board.tscn
 msgid "TITLE"
@@ -220,6 +220,14 @@ msgstr "Load Die from file"
 #: Scenes/board.tscn
 msgid "COSMETICS_D_DEFAULT"
 msgstr "Die to Default"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_SP"
+msgstr "Load SP Marker from file"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_SP_DEFAULT"
+msgstr "SP Marker to Default"
 
 #: Scenes/board.tscn
 msgid "COSMETICS_DEFAULTSLEEVES"
@@ -809,6 +817,10 @@ msgid "CARD_HOLOMEM_PLAY"
 msgstr "Play"
 
 #: Scripts/side.gd
+msgid "CARD_HOLOMEM_PLAY_DIRECT"
+msgstr "Play Directly"
+
+#: Scripts/side.gd
 msgid "CARD_HOLOMEM_BLOOM"
 msgstr "Bloom"
 
@@ -829,20 +841,24 @@ msgid "CARD_HOLOMEM_REST"
 msgstr "Rest"
 
 #: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_CENTER"
-msgstr "Move to center"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_BACK"
-msgstr "Move to back"
-
-#: Scripts/side.gd
 msgid "CARD_HOLOMEM_COLLAB"
 msgstr "Collab"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_BATON"
 msgstr "Baton Pass"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_CENTERCOLLABSWAP"
+msgstr "Switch center and collab"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_CENTER"
+msgstr "Move to center"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_BACK"
+msgstr "Move to back"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_DAMAGE"
@@ -1071,6 +1087,14 @@ msgstr "Play"
 #: Scripts/side.gd
 msgid "LIST_ARCHIVE_HOLOMEM_PLAY"
 msgstr "Play"
+
+#: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_PLAY_DIRECT"
+msgstr "Play Directly"
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_PLAY_DIRECT"
+msgstr "Play Directly"
 
 #: Scripts/side.gd
 msgid "LIST_DECK_HOLOMEM_BLOOM"
@@ -1639,7 +1663,12 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_ENDTURN"
-msgstr "{person} ended their turn"
+msgstr ""
+"{person} ended their turn\n"
+"\n"
+"\n"
+"\n"
+"Begin turn {turn_count}"
 
 #: Scripts/Multiplayer.gd
 msgid "MESSAGE_DIERESULT"
@@ -1988,7 +2017,12 @@ msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_ENDTURN"
-msgstr "You ended your turn"
+msgstr ""
+"You ended your turn\n"
+"\n"
+"\n"
+"\n"
+"Begin turn {turn_count}"
 
 #: Scripts/Multiplayer.gd
 msgid "YOU_MESSAGE_DIERESULT"

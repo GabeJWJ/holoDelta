@@ -9,12 +9,15 @@ var deckInfo
 
 var playmat
 var dice
+var spMarker
 var defaultSleeve
 var defaultCheerSleeve
 var default_playmat = preload("res://playmat.jpg")
+var default_SP = preload("res://SPmarker.webp")
 var default_dice = preload("res://diceTexture.png").get_image()
 var playmat_file_access_web
 var dice_file_access_web
+var SP_file_access_web
 
 var yourSide
 var opponentSide
@@ -139,11 +142,17 @@ func _ready():
 		dice = Image.new()
 		dice.load_webp_from_buffer(Settings.settings.Dice)
 		%Die.new_texture(dice)
+	if Settings.settings.has("SPMarker") and Settings.settings.SPMarker.size() > 0:
+		spMarker = Image.new()
+		spMarker.load_webp_from_buffer(Settings.settings.SPMarker)
+		%SPPreview.texture = ImageTexture.create_from_image(spMarker)
 	if OS.has_feature("web"):
 		playmat_file_access_web = FileAccessWeb.new()
 		playmat_file_access_web.loaded.connect(_on_playmat_web_load_dialog_file_selected)
 		dice_file_access_web = FileAccessWeb.new()
 		dice_file_access_web.loaded.connect(_on_dice_web_load_dialog_file_selected)
+		SP_file_access_web = FileAccessWeb.new()
+		SP_file_access_web.loaded.connect(_on_SP_web_load_dialog_file_selected)
 	if Settings.settings.has("DefaultSleeve") and Settings.settings.DefaultSleeve.size() > 0:
 		defaultSleeve = Image.new()
 		defaultSleeve.load_webp_from_buffer(Settings.settings.DefaultSleeve)
@@ -260,7 +269,7 @@ func update_info(topCard, card):
 func clear_info():
 	%InfoMargins._clear_showing()
 
-func _restart(id=null):
+func _restart(_id=null):
 	if get_tree():
 		get_tree().reload_current_scene()
 
@@ -376,7 +385,7 @@ func _download_version_failed(_result):
 	
 	switch_menu("update", false)
 
-func _download_progress(_assigned_files, _current_files, total_bytes, current_bytes):
+func _download_progress(_assigned_files, _current_files, _total_bytes, current_bytes):
 	%PopupProgressBar.value = current_bytes
 
 #endregion
@@ -437,7 +446,7 @@ func _on_language_selected(index_selected):
 	fix_font_size()
 	_restart()
 
-func _on_sfx_slider_drag_ended(value_changed=null):
+func _on_sfx_slider_drag_ended(_value_changed=null):
 	%SFXTestAudio.play()
 
 func _on_sfx_slider_value_changed(value):
@@ -474,6 +483,12 @@ func _on_dice_pressed():
 	else:
 		%DiceLoadDialog.visible = true
 
+func _on_sp_pressed() -> void:
+	if OS.has_feature("web"):
+		SP_file_access_web.open(".png,.webp")
+	else:
+		%SPLoadDialog.visible = true
+
 func _on_playmat_load_dialog_file_selected(path):
 	playmat = Image.load_from_file(path)
 	playmat.resize(3485,1480)
@@ -485,7 +500,13 @@ func _on_dice_load_dialog_file_selected(path):
 	%Die.new_texture(dice)
 	Settings.update_settings("Dice",Array(dice.save_webp_to_buffer(true)))
 
-func _on_playmat_web_load_dialog_file_selected(file_name: String, type: String, base64_data: String) -> void:
+func _on_sp_load_dialog_file_selected(path: String) -> void:
+	spMarker = Image.load_from_file(path)
+	spMarker.resize(200,240)
+	%SPPreview.texture = ImageTexture.create_from_image(spMarker)
+	Settings.update_settings("SPMarker",Array(spMarker.save_webp_to_buffer(true)))
+
+func _on_playmat_web_load_dialog_file_selected(_file_name: String, type: String, base64_data: String) -> void:
 	var data = Marshalls.base64_to_raw(base64_data)
 	playmat = Image.new()
 	
@@ -501,7 +522,7 @@ func _on_playmat_web_load_dialog_file_selected(file_name: String, type: String, 
 	%PlaymatTextureRect.texture = ImageTexture.create_from_image(playmat)
 	Settings.update_settings("Playmat",Array(playmat.save_webp_to_buffer(true)))
 
-func _on_dice_web_load_dialog_file_selected(file_name: String, type: String, base64_data: String) -> void:
+func _on_dice_web_load_dialog_file_selected(_file_name: String, type: String, base64_data: String) -> void:
 	var data = Marshalls.base64_to_raw(base64_data)
 	dice = Image.new()
 	
@@ -516,6 +537,20 @@ func _on_dice_web_load_dialog_file_selected(file_name: String, type: String, bas
 	%Die.new_texture(dice)
 	Settings.update_settings("Dice",Array(dice.save_webp_to_buffer(true)))
 
+func _on_SP_web_load_dialog_file_selected(_file_name: String, type: String, base64_data: String) -> void:
+	var data = Marshalls.base64_to_raw(base64_data)
+	spMarker = Image.new()
+	
+	match type:
+		"image/png":
+			spMarker.load_png_from_buffer(data)
+		"image/webp":
+			spMarker.load_webp_from_buffer(data)
+	
+	spMarker.resize(200, 240)
+	%SPPreview.texture = ImageTexture.create_from_image(spMarker)
+	Settings.update_settings("SPMarker",Array(spMarker.save_webp_to_buffer(true)))
+
 func _on_playmat_default_pressed():
 	playmat = null
 	%PlaymatTextureRect.texture = default_playmat
@@ -525,6 +560,11 @@ func _on_dice_default_pressed():
 	dice = null
 	%Die.new_texture(default_dice)
 	Settings.update_settings("Dice",null)
+
+func _on_sp_default_pressed() -> void:
+	spMarker = null
+	%SPPreview.texture = default_SP
+	Settings.update_settings("SPMarker",null)
 
 func _on_default_sleeve_updated(back_to_default: bool) -> void:
 	if back_to_default:
@@ -743,7 +783,7 @@ func send_command(supertype:String, command:String, data=null) -> void:
 		data = {}
 	%WebSocket.send_dict({"supertype":supertype, "command":command, "data":data})
 
-func _on_websocket_connected(url):
+func _on_websocket_connected(_url):
 	%LobbyCreate.disabled = false
 	%LobbyJoin.disabled = false
 	%GameSpectate.disabled = false
@@ -1318,6 +1358,7 @@ func show_spectated_game(player_info:Dictionary, game_id:String) -> void:
 	for player in player_info:
 		var newSide = player_side.instantiate()
 		newSide.is_front = firstPlayer
+		newSide.is_spectating = true
 		newSide.side_info = player_info[player]["side"]
 		newSide.player_id = player
 		newSide.game_id = game_id
@@ -1414,7 +1455,6 @@ func game_command(command: String, data: Dictionary) -> void:
 						sender_name = spectatedSides[data["sender"]].player_name
 					chat.text += "\n\n" + sender_name + ": " + data["message"]
 					%Notification.visible = !%ChatVBoxMargins.visible
-				%ChatScroll.scroll_vertical = %ChatScroll.get_v_scroll_bar().max_value
 		"Game Message":
 			if "sender" in data and "message_code" in data and "untranslated" in data and "translated" in data:
 				var format_info = data["untranslated"]
@@ -1436,7 +1476,6 @@ func game_command(command: String, data: Dictionary) -> void:
 					elif data["sender"] in spectatedSides:
 						format_info["person"] = spectatedSides[data["sender"]].player_name
 					chat.text += "\n" + tr(data["message_code"]).format(format_info)
-				%ChatScroll.scroll_vertical = %ChatScroll.get_v_scroll_bar().max_value
 		"Game Win":
 			if "winner" in data and "reason" in data:
 				if data["winner"] == player_id:
@@ -1462,7 +1501,6 @@ func game_command(command: String, data: Dictionary) -> void:
 				%SpectateMainMenu.visible = true
 				%SpectateNo.visible = false
 				%SpectateYes.visible = false
-				#$CanvasLayer/Question.position = Vector2(422,194)
 				%SpectateConfirmPanel.visible = true
 		"Close":
 			if inGame and !%SpectateConfirmPanel.visible:

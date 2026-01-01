@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://d1prs0o0rldol" path="res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf" id="7_exc88"]
 [ext_resource type="StyleBox" uid="uid://ilsjg8vo6p8q" path="res://side.tres" id="8_f6ll5"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="8_u8usn"]
-[ext_resource type="Texture2D" uid="uid://cxhb21jecugn" path="res://SPup.png" id="9_7k57a"]
+[ext_resource type="Texture2D" uid="uid://dbtec4tw8uhta" path="res://SPmarker.webp" id="9_exc88"]
 [ext_resource type="AudioStream" uid="uid://byvrlx4gp0oh6" path="res://HaruTsunXAssets/Draw Card 1.wav" id="11_jlv7i"]
 [ext_resource type="AudioStream" uid="uid://d1gc0wj65aaim" path="res://HaruTsunXAssets/Draw Card 2.wav" id="12_r7y3m"]
 [ext_resource type="AudioStream" uid="uid://dk6835owvl36j" path="res://HaruTsunXAssets/Draw Card 3.wav" id="13_062vp"]
@@ -571,7 +571,9 @@ text = "MULLIGAN_TEXT"
 [node name="SPmarker" type="Sprite2D" parent="."]
 z_index = 4
 position = Vector2(533, -448)
-texture = ExtResource("9_7k57a")
+texture = ExtResource("9_exc88")
+region_enabled = true
+region_rect = Rect2(0, 0, 200, 120)
 
 [node name="Audio" type="Node2D" parent="."]
 

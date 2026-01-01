@@ -272,6 +272,14 @@ msgid "COSMETICS_D_DEFAULT"
 msgstr ""
 
 #: Scenes/board.tscn
+msgid "COSMETICS_SP"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_SP_DEFAULT"
+msgstr ""
+
+#: Scenes/board.tscn
 msgid "COSMETICS_DEFAULTSLEEVES"
 msgstr ""
 
@@ -886,6 +894,10 @@ msgid "CARD_HOLOMEM_PLAY"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "CARD_HOLOMEM_PLAY_DIRECT"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "CARD_HOLOMEM_BLOOM"
 msgstr ""
 
@@ -906,19 +918,23 @@ msgid "CARD_HOLOMEM_REST"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_CENTER"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_BACK"
-msgstr ""
-
-#: Scripts/side.gd
 msgid "CARD_HOLOMEM_COLLAB"
 msgstr ""
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_BATON"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_CENTERCOLLABSWAP"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_CENTER"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_BACK"
 msgstr ""
 
 #: Scripts/side.gd
@@ -1148,6 +1164,14 @@ msgstr ""
 
 #: Scripts/side.gd
 msgid "LIST_ARCHIVE_HOLOMEM_PLAY"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_PLAY_DIRECT"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_PLAY_DIRECT"
 msgstr ""
 
 #: Scripts/side.gd

@@ -57,6 +57,7 @@ var cheerBack
 var oshiBack
 @export var playmatBuffer:PackedByteArray
 @export var diceBuffer:PackedByteArray
+@export var SPBuffer:PackedByteArray
 
 @export var preliminary_phase = true
 var preliminary_holomem_in_center = false
@@ -77,6 +78,7 @@ var used_sp_oshi_skill = false
 var can_undo_shuffle_hand = null
 
 @export var is_your_side = false
+@export var is_spectated = false
 @export var player_id : String
 @export var player_name : String
 @export var game_id : String
@@ -155,6 +157,10 @@ func _ready():
 				diceBuffer = get_parent().dice.save_webp_to_buffer(true,0.6)
 				$SubViewportContainer/SubViewport/Node3D/Die.new_texture(get_parent().dice)
 				found_cosmetics.append("dice")
+			if get_parent().spMarker:
+				SPBuffer = get_parent().spMarker.save_webp_to_buffer(true,0.6)
+				spMarker.texture = ImageTexture.create_from_image(get_parent().spMarker)
+				found_cosmetics.append("SPMarker")
 		else:
 			if playmatBuffer and !playmatBuffer.is_empty():
 				var image = Image.new()
@@ -164,6 +170,10 @@ func _ready():
 				var image = Image.new()
 				image.load_webp_from_buffer(diceBuffer)
 				$SubViewportContainer/SubViewport/Node3D/Die.new_texture(image)
+			if SPBuffer and !SPBuffer.is_empty():
+				var image = Image.new()
+				image.load_webp_from_buffer(SPBuffer)
+				spMarker.texture = ImageTexture.create_from_image(image)
 		
 		oshiBack = defaultCheer.get_image()
 		if ("oshi" in side_info and side_info["oshi"]):
@@ -902,7 +912,7 @@ func switch_cards_in_zones(zone_1,zone_2):
 	var card1 = all_cards[find_in_zone(zone_1)]
 	var card2 = all_cards[find_in_zone(zone_2)]
 	var pos2 = zone_2.position
-	if card2.rested:
+	if zone_1 not in [centerZone, collabZone] and card2.rested:
 		#For some reason, there's a weird offset when switching a center holomem with a rested back holomem - but not the other way around. This gets around it in a hacky way.
 		pos2 -= Vector2(50,50)
 	card1.move_to(pos2)
@@ -1069,7 +1079,7 @@ func hideLookAt(endOfAction=true):
 		currentAttached = null
 
 func flipSPdown():
-	spMarker.texture = load("res://SPdown.png")
+	spMarker.region_rect = Rect2(0,120,200,120)
 
 func showZoneSelection(zones_list,show_cancel=true):
 	for zone in zones_list:
@@ -1126,6 +1136,7 @@ func _hide_cosmetics():
 	
 	$gradient.texture = get_parent().default_playmat
 	$SubViewportContainer/SubViewport/Node3D/Die.new_texture(get_parent().default_dice)
+	spMarker.texture = get_parent().default_SP
 
 func _redo_cosmetics():
 	cheerDeck.update_back(cheerBack)
@@ -1158,6 +1169,10 @@ func _redo_cosmetics():
 		var image = Image.new()
 		image.load_webp_from_buffer(diceBuffer)
 		$SubViewportContainer/SubViewport/Node3D/Die.new_texture(image)
+	if !SPBuffer.is_empty():
+		var image = Image.new()
+		image.load_webp_from_buffer(SPBuffer)
+		spMarker.texture = ImageTexture.create_from_image(image)
 
 
 func _on_zone_enter(zone_id):
@@ -1211,7 +1226,7 @@ func _on_card_clicked(card_id : int) -> void:
 	
 	if !is_your_side:
 		var currentZone = find_what_zone(currentCard)
-		if currentZone:
+		if currentZone and !is_spectated:
 			popup.add_item("CARD_HOLOMEM_REQUESTDAMAGE", 53)
 			if currentZone not in [centerZone, collabZone] and len(all_occupied_zones(true)) > 1:
 				popup.add_item("CARD_HOLOMEM_REQUESTDAMAGEBACK", 54)
@@ -1237,8 +1252,11 @@ func _on_card_clicked(card_id : int) -> void:
 			"Holomem":
 				var currentZone = find_what_zone(currentCard)
 				if actualCard in hand and is_turn:
-					if first_unoccupied_back_zone() and actualCard.level < 1 and all_occupied_zones().size() < 6:
-						popup.add_item(tr("CARD_HOLOMEM_PLAY"),100)
+					if first_unoccupied_back_zone() and all_occupied_zones().size() < 6:
+						if actualCard.level < 1:
+							popup.add_item(tr("CARD_HOLOMEM_PLAY"),100)
+						else:
+							popup.add_item(tr("CARD_HOLOMEM_PLAY_DIRECT"),100)
 					if !first_turn:
 						var bloomable = all_bloomable_zones(actualCard)
 						if bloomable[Settings.bloomCode.OK].size() > 0:
@@ -1264,6 +1282,8 @@ func _on_card_clicked(card_id : int) -> void:
 							popup.add_item(tr("CARD_HOLOMEM_COLLAB"), 6)
 						if currentZone == centerZone and all_occupied_zones(true).size() > 0 and !used_baton_pass:
 							popup.add_item(tr("CARD_HOLOMEM_BATON"), 7)
+						if (currentZone == centerZone and find_in_zone(collabZone) != -1) or (currentZone == collabZone and find_in_zone(centerZone) != -1):
+							popup.add_item(tr("CARD_HOLOMEM_CENTERCOLLABSWAP"), 18)
 					
 					if find_in_zone(centerZone) == -1 and currentZone != collabZone:
 						popup.add_item(tr("CARD_HOLOMEM_MOVE_CENTER"), 4)
@@ -1487,11 +1507,17 @@ func _on_list_card_clicked(card_id):
 	#Requires zone target and thus must be broken up by fuda
 	match actualCard.cardType:
 		"Holomem":
-			if first_unoccupied_back_zone() and actualCard.level < 1 and is_turn and all_occupied_zones().size() < 6:
-				if currentFuda == deck:
-					popup.add_item(tr("LIST_DECK_HOLOMEM_PLAY"),600)
-				elif currentFuda == archive:
-					popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_PLAY"),610)
+			if first_unoccupied_back_zone() and is_turn and all_occupied_zones().size() < 6:
+				if actualCard.level < 1:
+					if currentFuda == deck:
+						popup.add_item(tr("LIST_DECK_HOLOMEM_PLAY"),600)
+					elif currentFuda == archive:
+						popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_PLAY"),610)
+				else:
+					if currentFuda == deck:
+						popup.add_item(tr("LIST_DECK_HOLOMEM_PLAY_DIRECT"),600)
+					elif currentFuda == archive:
+						popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_PLAY_DIRECT"),610)
 			if is_turn and !first_turn:
 				var bloomable = all_bloomable_zones(actualCard)
 				if bloomable[Settings.bloomCode.OK].size() > 0:
@@ -2084,7 +2110,6 @@ func side_command(command: String, data: Dictionary) -> void:
 				fuda_list[int(data["fuda"])].shuffle()
 		"Roll Die":
 			if "result" in data:
-				#emit_signal("sent_game_message",tr("MESSAGE_DIERESULT").format({amount = num}))
 				die.roll(int(data["result"]))
 				_die_sfx()
 		"Click Notification":
@@ -2216,7 +2241,7 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 		
 		"Cosmetics":
 			if "cosmetics_type" in data:
-				if data["cosmetics_type"] in ["sleeve", "cheerSleeve", "playmat", "dice"]:
+				if data["cosmetics_type"] in ["sleeve", "cheerSleeve", "playmat", "dice", "SPMarker"]:
 					_download_specific_cosmetic(data["cosmetics_type"])
 		
 		_:
@@ -2229,22 +2254,24 @@ func _download_specific_cosmetic(cosmetic):
 
 func _upload_all_cosmetics():
 	if is_your_side:
-		if "sleeve" in found_cosmetics and "sleeve" not in uploaded_cosmetics:
-			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
-				"game_id": game_id, "player_id": player_id, "cosmetics_type":"sleeve", "passcode":passcode
-			}).add_post_buffer("file", mainSleeve, "image/webp", "sleeve.webp").on_success(_upload_cosmetics_suceeded.bind("sleeve")).fetch()
-		if "cheerSleeve" in found_cosmetics and "cheerSleeve" not in uploaded_cosmetics:
-			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
-				"game_id": game_id, "player_id": player_id, "cosmetics_type":"cheerSleeve", "passcode":passcode
-			}).add_post_buffer("file", cheerSleeve, "image/webp", "cheerSleeve.webp").on_success(_upload_cosmetics_suceeded.bind("cheerSleeve")).fetch()
-		if "playmat" in found_cosmetics and "playmat" not in uploaded_cosmetics:
-			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
-				"game_id": game_id, "player_id": player_id, "cosmetics_type":"playmat", "passcode":passcode
-			}).add_post_buffer("file", playmatBuffer, "image/webp", "playmat.webp").on_success(_upload_cosmetics_suceeded.bind("playmat")).fetch()
-		if "dice" in found_cosmetics and "dice" not in uploaded_cosmetics:
-			%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
-				"game_id": game_id, "player_id": player_id, "cosmetics_type":"dice", "passcode":passcode
-			}).add_post_buffer("file", diceBuffer, "image/webp", "dice.webp").on_success(_upload_cosmetics_suceeded.bind("dice")).fetch()
+		for cosmetics_type in found_cosmetics:
+			if cosmetics_type not in uploaded_cosmetics:
+				var upload_buffer
+				match cosmetics_type:
+					"sleeve":
+						upload_buffer = mainSleeve
+					"cheerSleeve":
+						upload_buffer = cheerSleeve
+					"playmat":
+						upload_buffer = playmatBuffer
+					"dice":
+						upload_buffer = diceBuffer
+					"SPMarker":
+						upload_buffer = SPBuffer
+				if upload_buffer:
+					%HTTPManager.job(download_url + "/uploadcosmetics/").add_post({
+						"game_id": game_id, "player_id": player_id, "cosmetics_type":cosmetics_type, "passcode":passcode
+					}).add_post_buffer("file", upload_buffer, "image/webp", cosmetics_type + ".webp").on_success(_upload_cosmetics_suceeded.bind(cosmetics_type)).fetch()
 
 func _upload_cosmetics_suceeded(_result, cosmetic):
 	uploaded_cosmetics.append(cosmetic)
@@ -2278,3 +2305,6 @@ func _download_cosmetics_suceeded(result, cosmetic):
 			"dice":
 				diceBuffer = image.save_webp_to_buffer(true)
 				$SubViewportContainer/SubViewport/Node3D/Die.new_texture(image)
+			"SPMarker":
+				SPBuffer = image.save_webp_to_buffer(true)
+				spMarker.texture = ImageTexture.create_from_image(image)
