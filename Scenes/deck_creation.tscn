@@ -113,17 +113,18 @@ text = "FILTER_CLEAR"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer"]
+[node name="OshiScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="OshiGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="OshiGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiScrollContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -277,17 +278,18 @@ text = "FILTER_CLEAR"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer"]
+[node name="HolomemScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HolomemGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="HolomemGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemScrollContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -373,17 +375,18 @@ text = "FILTER_CLEAR"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer"]
+[node name="SupportScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="SupportGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="SupportGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportScrollContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -395,19 +398,20 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 3
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER"]
+[node name="CheerScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER"]
+unique_name_in_owner = true
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 47.0
 horizontal_scroll_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER/CheerScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="CheerGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER/ScrollContainer/MarginContainer"]
+[node name="CheerGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER/CheerScrollContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

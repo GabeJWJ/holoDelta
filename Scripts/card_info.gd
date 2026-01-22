@@ -61,6 +61,7 @@ var attached = []
 var touch_start_time := 0
 # Measured in ms (1000ms = 1 s)
 var android_long_press_threshold := 300
+var is_dragging: bool
 
 func setup_info(number,art_code,back=null):
 	cardNumber = number
@@ -419,9 +420,17 @@ func _on_card_button_gui_input(event):
 			emit_signal("card_clicked",cardID)
 	else:
 		# Android only touch handling
+		if event is InputEventScreenDrag:
+			Log.logv(1, "Drag detected")
+			is_dragging = true
 		if event is InputEventScreenTouch and event.pressed:
+			Log.logv(1, "Touch started")
 			touch_start_time = Time.get_ticks_msec()
-		elif event is InputEventScreenTouch and not event.pressed:
+			is_dragging = false
+		elif event is InputEventScreenTouch and not event.pressed and not event.canceled:
+			Log.logv(1, "Touch ended")
+			if is_dragging:
+				return
 			var touch_duration = Time.get_ticks_msec() - touch_start_time
 			if touch_duration < android_long_press_threshold:
 				# Short tap

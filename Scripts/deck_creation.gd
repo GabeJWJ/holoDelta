@@ -157,6 +157,13 @@ func _ready() -> void:
 	
 	%Loading.visible = true
 	
+	if OS.has_feature("android"):
+		# Disable the tiny scroll bar on Android
+		%OshiScrollContainer.set_vertical_scroll_mode(ScrollContainer.SCROLL_MODE_SHOW_NEVER)
+		%HolomemScrollContainer.set_vertical_scroll_mode(ScrollContainer.SCROLL_MODE_SHOW_NEVER)
+		%SupportScrollContainer.set_vertical_scroll_mode(ScrollContainer.SCROLL_MODE_SHOW_NEVER)
+		%CheerScrollContainer.set_vertical_scroll_mode(ScrollContainer.SCROLL_MODE_SHOW_NEVER)
+	
 	await get_tree().process_frame
 	
 	for cardNumber in Database.cardData:
@@ -437,7 +444,7 @@ func _update_tabs() -> void:
 			oshi_card.visible = false
 			continue
 		oshi_card.visible = true
-	$CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
+	%OshiScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 	
 	#Display/hide holomems
 	for holomem_card in holomem_tab.get_children():
@@ -445,7 +452,7 @@ func _update_tabs() -> void:
 			holomem_card.visible = false
 			continue
 		holomem_card.visible = true
-	$CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
+	%HolomemScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 	
 	#Display/hide supports
 	for support_card in support_tab.get_children():
@@ -453,7 +460,7 @@ func _update_tabs() -> void:
 			support_card.visible = false
 			continue
 		support_card.visible = true
-	$CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
+	%SupportScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 
 func _update_deck():
 	#Just to sort the main deck/cheer deck
