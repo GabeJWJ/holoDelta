@@ -667,63 +667,38 @@ theme_override_font_sizes/font_size = 50
 text = "CHEER"
 horizontal_alignment = 1
 
-[node name="LoadDeck" type="Button" parent="CanvasLayer"]
-offset_left = 313.0
-offset_top = 639.0
-offset_right = 469.0
-offset_bottom = 664.0
-theme = ExtResource("3_da1xd")
-theme_override_font_sizes/font_size = 20
-text = "LOAD"
-text_overrun_behavior = 3
-clip_text = true
+[node name="ButtonMargins" type="MarginContainer" parent="CanvasLayer"]
+offset_left = 304.0
+offset_top = 626.0
+offset_right = 884.0
+offset_bottom = 720.0
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
 
-[node name="SaveDeck" type="Button" parent="CanvasLayer"]
-unique_name_in_owner = true
-offset_left = 798.0
-offset_top = 640.0
-offset_right = 874.0
-offset_bottom = 661.0
-theme = ExtResource("3_da1xd")
-theme_override_font_sizes/font_size = 20
-text = "DECK_SAVE"
-text_overrun_behavior = 3
-clip_text = true
+[node name="ButtonVBox" type="VBoxContainer" parent="CanvasLayer/ButtonMargins"]
+layout_mode = 2
+theme_override_constants/separation = 12
 
-[node name="DeckList" parent="CanvasLayer" instance=ExtResource("4_lmglq")]
-unique_name_in_owner = true
-visible = false
-z_index = 4
+[node name="DeckEditButtons" type="HBoxContainer" parent="CanvasLayer/ButtonMargins/ButtonVBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
 
-[node name="MainMenu" type="Button" parent="CanvasLayer"]
-offset_left = 400.0
-offset_top = 689.0
-offset_right = 470.0
-offset_bottom = 714.0
+[node name="Clear" type="Button" parent="CanvasLayer/ButtonMargins/ButtonVBox/DeckEditButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
 theme = ExtResource("3_da1xd")
-theme_override_font_sizes/font_size = 8
-text = "MENU"
-text_overrun_behavior = 3
-clip_text = true
-
-[node name="Clear" type="Button" parent="CanvasLayer"]
-offset_left = 313.0
-offset_top = 689.0
-offset_right = 387.0
-offset_bottom = 714.0
-theme = ExtResource("3_da1xd")
-theme_override_font_sizes/font_size = 8
 text = "DECK_CLEAR"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="BanlistChoice" type="OptionButton" parent="CanvasLayer"]
+[node name="BanlistChoice" type="OptionButton" parent="CanvasLayer/ButtonMargins/ButtonVBox/DeckEditButtons"]
 unique_name_in_owner = true
-offset_left = 518.0
-offset_top = 684.0
-offset_right = 764.0
-offset_bottom = 704.0
+layout_mode = 2
+size_flags_horizontal = 3
 theme = ExtResource("3_da1xd")
+alignment = 1
 selected = 1
 item_count = 5
 popup/item_0/text = "LOBBY_BANLIST_NONE"
@@ -737,113 +712,163 @@ popup/item_3/id = 3
 popup/item_4/text = "LOBBY_BANLIST_UNRELEASED_EN"
 popup/item_4/id = 4
 
+[node name="ControlFlowButtons" type="HBoxContainer" parent="CanvasLayer/ButtonMargins/ButtonVBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MainMenu" type="Button" parent="CanvasLayer/ButtonMargins/ButtonVBox/ControlFlowButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_da1xd")
+text = "MENU"
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="LoadDeck" type="Button" parent="CanvasLayer/ButtonMargins/ButtonVBox/ControlFlowButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_da1xd")
+text = "LOAD"
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="SaveDeck" type="Button" parent="CanvasLayer/ButtonMargins/ButtonVBox/ControlFlowButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_da1xd")
+text = "DECK_SAVE"
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="DeckList" parent="CanvasLayer" instance=ExtResource("4_lmglq")]
+unique_name_in_owner = true
+visible = false
+z_index = 4
+
 [node name="SavePrompt" type="ColorRect" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
 z_index = 3
-offset_left = 470.0
-offset_top = 63.0
-offset_right = 907.0
-offset_bottom = 681.0
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -388.0
+offset_right = 276.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[node name="OverwriteVBox" type="VBoxContainer" parent="CanvasLayer/SavePrompt"]
-unique_name_in_owner = true
+[node name="SaveMargins" type="MarginContainer" parent="CanvasLayer/SavePrompt"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="SaveVBox" type="VBoxContainer" parent="CanvasLayer/SavePrompt/SaveMargins"]
+unique_name_in_owner = true
+layout_mode = 2
 theme_override_constants/separation = 14
 
-[node name="OverwriteScroll" type="ScrollContainer" parent="CanvasLayer/SavePrompt/OverwriteVBox"]
+[node name="OverwriteScroll" type="ScrollContainer" parent="CanvasLayer/SavePrompt/SaveMargins/SaveVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_da1xd")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SavePrompt/OverwriteVBox/OverwriteScroll"]
+[node name="OverwriteVBox" type="VBoxContainer" parent="CanvasLayer/SavePrompt/SaveMargins/SaveVBox/OverwriteScroll"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="FileName" type="LineEdit" parent="CanvasLayer/SavePrompt/OverwriteVBox"]
+[node name="FileName" type="LineEdit" parent="CanvasLayer/SavePrompt/SaveMargins/SaveVBox"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 8
 tooltip_text = "The filename of your deck on your computer"
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 20
 placeholder_text = "DEFAULT_DECK_FILE"
 
-[node name="DeckName" type="LineEdit" parent="CanvasLayer/SavePrompt/OverwriteVBox"]
+[node name="DeckName" type="LineEdit" parent="CanvasLayer/SavePrompt/SaveMargins/SaveVBox"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 8
 tooltip_text = "The name of your deck in the selector"
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 20
 placeholder_text = "DEFAULT_DECK_NAME"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/SavePrompt/OverwriteVBox"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/SavePrompt/SaveMargins/SaveVBox"]
 layout_mode = 2
+size_flags_vertical = 8
 theme_override_constants/separation = 16
 
-[node name="Cancel" type="Button" parent="CanvasLayer/SavePrompt/OverwriteVBox/HBoxContainer"]
+[node name="Cancel" type="Button" parent="CanvasLayer/SavePrompt/SaveMargins/SaveVBox/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 20
 text = "DECK_SAVE_CANCEL"
 
-[node name="Save" type="Button" parent="CanvasLayer/SavePrompt/OverwriteVBox/HBoxContainer"]
+[node name="Save" type="Button" parent="CanvasLayer/SavePrompt/SaveMargins/SaveVBox/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 20
 text = "DECK_SAVE"
 
-[node name="Download" type="Button" parent="CanvasLayer/SavePrompt/OverwriteVBox"]
+[node name="Download" type="Button" parent="CanvasLayer/SavePrompt/SaveMargins/SaveVBox"]
 visible = false
 layout_mode = 2
+size_flags_vertical = 8
 theme_override_font_sizes/font_size = 20
 text = "DECK_DOWNLOAD"
 
-[node name="OverwriteConfirm" type="ColorRect" parent="CanvasLayer/SavePrompt/OverwriteVBox"]
+[node name="OverwriteConfirm" type="ColorRect" parent="CanvasLayer/SavePrompt/SaveMargins/SaveVBox"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme = ExtResource("3_da1xd")
 color = Color(0.113725, 0.164706, 0.223529, 1)
 
-[node name="OverwriteConfirmLabel" type="Label" parent="CanvasLayer/SavePrompt/OverwriteVBox/OverwriteConfirm"]
+[node name="OverwriteConfirmLabel" type="Label" parent="CanvasLayer/SavePrompt/SaveMargins/SaveVBox/OverwriteConfirm"]
 unique_name_in_owner = true
 auto_translate_mode = 2
 layout_mode = 0
-offset_left = 12.0
-offset_top = 18.0
-offset_right = 1039.0
-offset_bottom = 171.0
+offset_left = 658.0
+offset_top = -152.0
+offset_right = 1019.0
+offset_bottom = 1.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 40
 text = "Overwrite ?"
 horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="Yes" type="Button" parent="CanvasLayer/SavePrompt/OverwriteVBox/OverwriteConfirm"]
+[node name="Yes" type="Button" parent="CanvasLayer/SavePrompt/SaveMargins/SaveVBox/OverwriteConfirm"]
 layout_mode = 0
-offset_left = 228.0
-offset_top = 353.0
-offset_right = 363.0
-offset_bottom = 394.0
+offset_left = 691.0
+offset_top = -84.0
+offset_right = 826.0
+offset_bottom = -15.0
 theme_override_font_sizes/font_size = 40
 text = "YES"
 
-[node name="No" type="Button" parent="CanvasLayer/SavePrompt/OverwriteVBox/OverwriteConfirm"]
+[node name="No" type="Button" parent="CanvasLayer/SavePrompt/SaveMargins/SaveVBox/OverwriteConfirm"]
 layout_mode = 0
-offset_left = 667.0
-offset_top = 355.0
-offset_right = 802.0
-offset_bottom = 396.0
+offset_left = 864.0
+offset_top = -82.0
+offset_right = 999.0
+offset_bottom = -13.0
 theme_override_font_sizes/font_size = 40
 text = "NO"
 
@@ -893,15 +918,15 @@ print_debug = true
 [connection signal="pressed" from="CanvasLayer/PossibleCards/TAB_CHEER/FiveMultiple" to="." method="_five_multiple"]
 [connection signal="pressed" from="CanvasLayer/PossibleCards/TAB_CHEER/TenMultiple" to="." method="_ten_multiple"]
 [connection signal="pressed" from="CanvasLayer/PossibleCards/TAB_CHEER/TwentyMultiple" to="." method="_twenty_multiple"]
-[connection signal="pressed" from="CanvasLayer/LoadDeck" to="." method="_on_load_deck_pressed"]
-[connection signal="pressed" from="CanvasLayer/SaveDeck" to="." method="_on_save_deck_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonMargins/ButtonVBox/DeckEditButtons/Clear" to="." method="_on_clear_pressed"]
+[connection signal="item_selected" from="CanvasLayer/ButtonMargins/ButtonVBox/DeckEditButtons/BanlistChoice" to="." method="_on_banlist_choice_item_selected"]
+[connection signal="pressed" from="CanvasLayer/ButtonMargins/ButtonVBox/ControlFlowButtons/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonMargins/ButtonVBox/ControlFlowButtons/LoadDeck" to="." method="_on_load_deck_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonMargins/ButtonVBox/ControlFlowButtons/SaveDeck" to="." method="_on_save_deck_pressed"]
 [connection signal="cancel" from="CanvasLayer/DeckList" to="." method="_hide_deck_list"]
 [connection signal="selected" from="CanvasLayer/DeckList" to="." method="load_from_deck_info"]
-[connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
-[connection signal="pressed" from="CanvasLayer/Clear" to="." method="_on_clear_pressed"]
-[connection signal="item_selected" from="CanvasLayer/BanlistChoice" to="." method="_on_banlist_choice_item_selected"]
-[connection signal="text_submitted" from="CanvasLayer/SavePrompt/OverwriteVBox/FileName" to="." method="_on_save_pressed"]
-[connection signal="pressed" from="CanvasLayer/SavePrompt/OverwriteVBox/HBoxContainer/Cancel" to="." method="_hide_save_prompt"]
-[connection signal="pressed" from="CanvasLayer/SavePrompt/OverwriteVBox/HBoxContainer/Save" to="." method="_on_save_pressed"]
-[connection signal="pressed" from="CanvasLayer/SavePrompt/OverwriteVBox/Download" to="." method="_on_download_pressed"]
-[connection signal="pressed" from="CanvasLayer/SavePrompt/OverwriteVBox/OverwriteConfirm/No" to="." method="_hide_save_prompt"]
+[connection signal="text_submitted" from="CanvasLayer/SavePrompt/SaveMargins/SaveVBox/FileName" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="CanvasLayer/SavePrompt/SaveMargins/SaveVBox/HBoxContainer/Cancel" to="." method="_hide_save_prompt"]
+[connection signal="pressed" from="CanvasLayer/SavePrompt/SaveMargins/SaveVBox/HBoxContainer/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="CanvasLayer/SavePrompt/SaveMargins/SaveVBox/Download" to="." method="_on_download_pressed"]
+[connection signal="pressed" from="CanvasLayer/SavePrompt/SaveMargins/SaveVBox/OverwriteConfirm/No" to="." method="_hide_save_prompt"]
