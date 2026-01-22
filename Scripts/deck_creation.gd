@@ -1010,7 +1010,7 @@ func _on_menu_card_clicked(card_id):
 				alreadyHere.update_amount(alreadyHere.get_amount()+cheer_multiple)
 				in_deck_dictionary[actualCard.cardNumber] += cheer_multiple
 				total_cheer += cheer_multiple
-		_:
+		_: # If cardType has a value for non-oshi non-cheer cards, you should probably use it instead of the catchall
 			var alreadyHere = find_in_deck_with_number(actualCard.cardNumber,actualCard.artNum,main_deck)
 			if alreadyHere == null:
 				create_main_deck_card(actualCard.cardNumber,actualCard.artNum)
