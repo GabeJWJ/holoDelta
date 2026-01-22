@@ -73,6 +73,12 @@ func _ready() -> void:
 	if !settings.has("LoadedDecks"):
 		settings["LoadedDecks"] = []
 	
+	if !settings.has("AndroidAutoDetectSafeArea"):
+		settings["AndroidAutoDetectSafeArea"] = false
+	
+	if !settings.has("AndroidCustomMargins"):
+		settings["AndroidCustomMargins"] = [0, 0, 0, 0]
+	
 	locale()
 
 func update_settings(key, value) -> void:

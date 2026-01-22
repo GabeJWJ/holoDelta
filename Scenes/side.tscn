@@ -132,6 +132,7 @@ position = Vector2(800, 380)
 zoneID = 7
 
 [node name="PopupMenu" type="PopupMenu" parent="."]
+oversampling_override = 1.0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 20
 

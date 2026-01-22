@@ -82,6 +82,7 @@ func findByClass(node: Node, className : String, result : Array) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	proper_hypertext = "https://" if %WebSocket.use_WSS else "http://"
 	%WebSocket.host = Server.websocketURL
 	
@@ -225,6 +226,28 @@ func _ready():
 					%ConfirmDialog.dialogContent = tr("DECK_AUTOLOAD_CONFIRM_INFO")
 					%ConfirmDialog.confirmed.connect(_on_deck_import_confirmed)
 					%ConfirmDialog.cancelled.connect(_on_deck_import_cancelled)
+	
+	# Android specific UI changes
+	# Turn off the scroll bar (Using finger swipe)
+	if OS.has_feature("android"):
+		%OptionScrollContainer.set_vertical_scroll_mode(ScrollContainer.SCROLL_MODE_SHOW_NEVER)
+		# Make android specific options visible
+		%AndroidLabel.visible = true
+		%AndroidOptionsGridContainer.visible = true
+		# Set android settings to values from settings autoload
+		var margins = Settings.settings["AndroidCustomMargins"]
+		%MarginLeft.value = margins[0]
+		%MarginTop.value = margins[1]
+		%MarginRight.value = margins[2]
+		%MarginBottom.value = margins[3]
+		var autodetect:bool = Settings.settings["AndroidAutoDetectSafeArea"]
+		%AndroidAutoDetectSafeAreaButton.button_pressed = autodetect
+		if autodetect:
+			%MarginLeft.editable = false
+			%MarginRight.editable = false
+			%MarginTop.editable = false
+			%MarginBottom.editable = false
+		# Disable spinboxes
 
 func _on_deck_import_cancelled():
 	# Cancel the deck import process also
@@ -391,6 +414,8 @@ func _download_progress(_assigned_files, _current_files, _total_bytes, current_b
 #endregion
 
 #region Settings
+# Instead of a region in this massive script, I suggest we move this to its own script
+
 @onready var menus = {
 	"option": %OptionPanel,
 	"credits": %CreditsPanel,
@@ -591,6 +616,46 @@ func _on_hide_cosmetics_toggled(toggled_on):
 				spectatedSides[spectated]._redo_cosmetics()
 		else:
 			opponentSide._redo_cosmetics()
+	
+func _on_android_auto_detect_safe_area_button_toggled(toggled_on: bool) -> void:
+	Settings.update_settings("AndroidAutoDetectSafeArea", toggled_on)
+	if toggled_on:
+		%MobileSafeArea.apply_safe_area()
+		%MarginLeft.editable = false
+		%MarginRight.editable = false
+		%MarginTop.editable = false
+		%MarginBottom.editable = false
+	else:
+		%MobileSafeArea.apply_margins_from_settings()
+		%MarginLeft.editable = true
+		%MarginRight.editable = true
+		%MarginTop.editable = true
+		%MarginBottom.editable = true
+
+func _on_margin_left_value_changed(value: float):
+	var old_margins = Settings.settings["AndroidCustomMargins"] #LTRB
+	old_margins[0] = int(value)
+	Settings.update_settings("AndroidCustomMargins", old_margins)
+	%MobileSafeArea.apply_margins_from_settings()
+
+func _on_margin_top_value_changed(value: float):
+	var old_margins = Settings.settings["AndroidCustomMargins"] #LTRB
+	old_margins[1] = int(value)
+	Settings.update_settings("AndroidCustomMargins", old_margins)
+	%MobileSafeArea.apply_margins_from_settings()
+
+func _on_margin_right_value_changed(value: float):
+	var old_margins = Settings.settings["AndroidCustomMargins"] #LTRB
+	old_margins[2] = int(value)
+	Settings.update_settings("AndroidCustomMargins", old_margins)
+	%MobileSafeArea.apply_margins_from_settings()
+
+func _on_margin_bottom_value_changed(value: float):
+	var old_margins = Settings.settings["AndroidCustomMargins"] #LTRB
+	old_margins[3] = int(value)
+	Settings.update_settings("AndroidCustomMargins", old_margins)
+	%MobileSafeArea.apply_margins_from_settings()
+
 #endregion
 
 func _on_info_button_pressed():
