@@ -491,7 +491,11 @@ func _on_bgm_slider_value_changed(value):
 		AudioServer.set_bus_mute(Settings.bgm_bus_index, false)
 
 func _on_playmat_dice_custom_pressed():
-	switch_menu("customization")
+	if OS.has_feature("android"):
+		OS.request_permission("android.permission.READ_MEDIA_IMAGES")
+		switch_menu("customization")
+	else:
+		switch_menu("customization")
 
 func _on_cosmetics_exit_pressed():
 	%CustomizationPanel.visible = false
