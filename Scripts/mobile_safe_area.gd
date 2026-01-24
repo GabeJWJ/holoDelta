@@ -1,4 +1,10 @@
 extends Control
+# This script attaches to a default control node. It adjusts its offsets based
+# on the Android safe area API or user specified offsets.
+
+# This is quite janky unless the UI was designed with it in mind! Only use for
+# simple menues, otherwise attach the adaptive_canvas_scaling.gd script to the
+# scene's CanvasLayer. This is much more reliable.
 
 func _ready():
 	if OS.has_feature("android"):
@@ -7,6 +13,7 @@ func _ready():
 		else:
 			apply_margins_from_settings()
 
+# Adjusts
 func apply_safe_area():
 	# Reset to full screen
 	offset_left = 0

@@ -624,13 +624,13 @@ func _on_hide_cosmetics_toggled(toggled_on):
 func _on_android_auto_detect_safe_area_button_toggled(toggled_on: bool) -> void:
 	Settings.update_settings("AndroidAutoDetectSafeArea", toggled_on)
 	if toggled_on:
-		%MobileSafeArea.apply_safe_area()
+		%CanvasLayer.apply_safe_area()
 		%MarginLeft.editable = false
 		%MarginRight.editable = false
 		%MarginTop.editable = false
 		%MarginBottom.editable = false
 	else:
-		%MobileSafeArea.apply_margins_from_settings()
+		%CanvasLayer.apply_margins_from_settings()
 		%MarginLeft.editable = true
 		%MarginRight.editable = true
 		%MarginTop.editable = true
@@ -640,25 +640,25 @@ func _on_margin_left_value_changed(value: float):
 	var old_margins = Settings.settings["AndroidCustomMargins"] #LTRB
 	old_margins[0] = int(value)
 	Settings.update_settings("AndroidCustomMargins", old_margins)
-	%MobileSafeArea.apply_margins_from_settings()
+	%CanvasLayer.apply_margins_from_settings()
 
 func _on_margin_top_value_changed(value: float):
 	var old_margins = Settings.settings["AndroidCustomMargins"] #LTRB
 	old_margins[1] = int(value)
 	Settings.update_settings("AndroidCustomMargins", old_margins)
-	%MobileSafeArea.apply_margins_from_settings()
+	%CanvasLayer.apply_margins_from_settings()
 
 func _on_margin_right_value_changed(value: float):
 	var old_margins = Settings.settings["AndroidCustomMargins"] #LTRB
 	old_margins[2] = int(value)
 	Settings.update_settings("AndroidCustomMargins", old_margins)
-	%MobileSafeArea.apply_margins_from_settings()
+	%CanvasLayer.apply_margins_from_settings()
 
 func _on_margin_bottom_value_changed(value: float):
 	var old_margins = Settings.settings["AndroidCustomMargins"] #LTRB
 	old_margins[3] = int(value)
 	Settings.update_settings("AndroidCustomMargins", old_margins)
-	%MobileSafeArea.apply_margins_from_settings()
+	%CanvasLayer.apply_margins_from_settings()
 
 #endregion
 

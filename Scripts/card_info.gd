@@ -421,14 +421,14 @@ func _on_card_button_gui_input(event):
 	else:
 		# Android only touch handling
 		if event is InputEventScreenDrag:
-			Log.logv(1, "Drag detected")
+			Log.logv(4, "Drag detected")
 			is_dragging = true
 		if event is InputEventScreenTouch and event.pressed:
-			Log.logv(1, "Touch started")
+			Log.logv(4, "Touch started")
 			touch_start_time = Time.get_ticks_msec()
 			is_dragging = false
 		elif event is InputEventScreenTouch and not event.pressed and not event.canceled:
-			Log.logv(1, "Touch ended")
+			Log.logv(4, "Touch ended")
 			if is_dragging:
 				return
 			var touch_duration = Time.get_ticks_msec() - touch_start_time

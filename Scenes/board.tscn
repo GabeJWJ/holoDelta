@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" uid="uid://c1po3kd3x6ln6" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
+[ext_resource type="Script" uid="uid://xg6hfi2a0gir" path="res://Scripts/adaptive_canvas_scaling.gd" id="3_hih85"]
 [ext_resource type="Texture2D" uid="uid://kwq21hbtxatg" path="res://CyberAssets/Main Menu Assets/HoloDelta BG (Light Mode).svg" id="3_t0eaa"]
-[ext_resource type="Script" uid="uid://d1sc0x4bydadi" path="res://Scripts/mobile_safe_area.gd" id="4_hih85"]
 [ext_resource type="Texture2D" uid="uid://chv6t7kvxgx0s" path="res://gear.png" id="4_n5n8m"]
 [ext_resource type="Texture2D" uid="uid://biy2phmp4flym" path="res://gearSelected.png" id="5_13mvd"]
 [ext_resource type="Texture2D" uid="uid://cx76tmf8royup" path="res://CyberAssets/Game Side Menu/Side Menu.png" id="5_ct7jt"]
@@ -72,6 +72,8 @@ script = ExtResource("3_0fpdy")
 player_side = ExtResource("1_ima0g")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_hih85")
 
 [node name="gradient" type="Sprite2D" parent="CanvasLayer"]
 unique_name_in_owner = true
@@ -93,7 +95,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 mouse_filter = 2
-script = ExtResource("4_hih85")
 metadata/_edit_use_anchors_ = true
 
 [node name="TitleVBox" type="VBoxContainer" parent="CanvasLayer/MobileSafeArea"]
@@ -458,7 +459,6 @@ theme_override_constants/margin_bottom = 10
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-scroll_vertical = 54
 horizontal_scroll_mode = 0
 
 [node name="OptionsVBox" type="VBoxContainer" parent="CanvasLayer/MobileSafeArea/OptionPanel/OptionMargins/OptionScrollContainer"]
