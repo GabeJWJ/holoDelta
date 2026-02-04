@@ -1,7 +1,4 @@
 extends Node2D
-
-@onready var main_menu: Button = %MainMenu
-
 @onready var canvas = %CanvasLayer
 
 @onready var popup = %PopupMenu
