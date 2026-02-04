@@ -9,7 +9,7 @@ var enabled: bool = true
 # Set to true to print what line of code the log is calling from
 var show_location: bool = true
 # Set to true to print a timestamp at the end of the line
-var add_timestamp: bool = true
+var add_timestamp: bool = false
 # Global verbosity level (suggestions):
 # 0 = silent
 # 1 = errors
@@ -18,7 +18,7 @@ var add_timestamp: bool = true
 # 4 = debug
 # If the verbosity level provided to the logv function is more than
 # this number, it will not print.
-var verbosity: int = 4
+var verbosity: int = 0
 
 # Usage: logv(verbosity level, args)
 func logv(level: int, ...args):

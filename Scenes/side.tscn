@@ -85,58 +85,64 @@ stream_2/stream = ExtResource("26_u0kxe")
 script = ExtResource("1_vy6dv")
 
 [node name="gradient" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 z_index = -2
 position = Vector2(-1758, -532)
 texture = ExtResource("2_0kggm")
 centered = false
 
 [node name="Zones" type="Node2D" parent="."]
+unique_name_in_owner = true
 
 [node name="Center" parent="Zones" instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(0, -223)
 
 [node name="Collab" parent="Zones" instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(-430, -223)
 zoneID = 1
 
 [node name="Back1" parent="Zones" instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(-950, 380)
 zoneID = 2
 
 [node name="Back2" parent="Zones" instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(-600, 380)
 zoneID = 3
 
 [node name="Back3" parent="Zones" instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(-250, 380)
 zoneID = 4
 
 [node name="Back4" parent="Zones" instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(100, 380)
 zoneID = 5
 
 [node name="Back5" parent="Zones" instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(450, 380)
 zoneID = 6
 
 [node name="Back6" parent="Zones" instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(800, 380)
 zoneID = 7
 
-[node name="PopupMenu" type="PopupMenu" parent="."]
-oversampling_override = 1.0
-theme = ExtResource("8_u8usn")
-theme_override_font_sizes/font_size = 20
-
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+unique_name_in_owner = true
 clip_contents = true
 offset_left = -1690.0
 offset_top = -530.0
@@ -152,21 +158,27 @@ size = Vector2i(2040, 1044)
 render_target_update_mode = 4
 
 [node name="Node3D" type="Node3D" parent="SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
 
 [node name="DECK" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+unique_name_in_owner = true
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 16.5929, 0, -0.627)
 
 [node name="CHEERDECK" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+unique_name_in_owner = true
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -16.6171, 0, -0.627)
 
 [node name="ARCHIVE" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+unique_name_in_owner = true
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 21.2319, 0, -0.627)
 archive = true
 
 [node name="HOLOPOWER" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+unique_name_in_owner = true
 transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 15.9969, 0, -5.674)
 
 [node name="Die" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("7_3wwxl")]
+unique_name_in_owner = true
 transform = Transform3D(0.944325, 0, -0.329015, 0, 1, 0, 0.329015, 0, 0.944325, 13.2699, 0, -0.02)
 
 [node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/Node3D"]
@@ -190,28 +202,65 @@ spot_angle = 48.0811
 [node name="Cards" type="Node2D" parent="."]
 
 [node name="Cheer" type="Node2D" parent="Cards"]
+unique_name_in_owner = true
 
 [node name="Attached" type="Node2D" parent="Cards"]
+unique_name_in_owner = true
 
 [node name="Main" type="Node2D" parent="Cards"]
+unique_name_in_owner = true
 
 [node name="Above" type="Node2D" parent="Cards"]
+unique_name_in_owner = true
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+unique_name_in_owner = true
+oversampling_override = 1.0
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 20
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 2
+
+[node name="PlayerOrderButtonVBox" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -297.0
+offset_top = 332.0
+offset_right = -32.0
+offset_bottom = 446.0
+grow_horizontal = 0
+theme_override_constants/separation = 20
+
+[node name="Go First" type="Button" parent="CanvasLayer/PlayerOrderButtonVBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 25
+text = "CHOICE_FIRST"
+
+[node name="Go Second" type="Button" parent="CanvasLayer/PlayerOrderButtonVBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 25
+text = "CHOICE_SECOND"
 
 [node name="Prompt" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
 visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 102.0
-offset_top = -56.0
-offset_right = 367.0
-offset_bottom = 56.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -551.0
+offset_top = 327.0
+offset_right = -286.0
+offset_bottom = 439.0
+grow_horizontal = 0
 theme = ExtResource("8_u8usn")
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
@@ -254,16 +303,17 @@ theme_override_font_sizes/font_size = 25
 text = "PROMPT_SUBMIT"
 
 [node name="PromptText" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 102.0
-offset_top = -56.0
-offset_right = 367.0
-offset_bottom = 99.0
+offset_left = -140.0
+offset_top = -101.0
+offset_right = 125.0
+offset_bottom = 54.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_u8usn")
@@ -305,58 +355,49 @@ theme_override_font_sizes/font_size = 25
 text = "PROMPT_SUBMIT"
 
 [node name="Cancel" type="Button" parent="CanvasLayer"]
+unique_name_in_owner = true
 visible = false
-offset_left = 1130.0
-offset_top = 559.0
-offset_right = 1264.0
-offset_bottom = 584.0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -122.0
+offset_right = -12.0
+offset_bottom = -75.0
+grow_horizontal = 0
+grow_vertical = 0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
 text = "PROMPT_CANCEL"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
 visible = false
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -223.0
-offset_top = -130.0
-offset_right = 610.0
-offset_bottom = 152.0
-grow_horizontal = 2
+offset_left = -869.0
+offset_top = -87.0
+offset_right = -36.0
+offset_bottom = 195.0
+grow_horizontal = 0
 grow_vertical = 2
 theme = SubResource("Theme_y8s1y")
 vertical_scroll_mode = 0
 
 [node name="LookAt" type="ColorRect" parent="CanvasLayer/ScrollContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[node name="Go First" type="Button" parent="CanvasLayer"]
-visible = false
-offset_left = 765.0
-offset_top = 286.0
-offset_right = 960.0
-offset_bottom = 324.0
-theme = ExtResource("8_u8usn")
-theme_override_font_sizes/font_size = 25
-text = "CHOICE_FIRST"
-
-[node name="Go Second" type="Button" parent="CanvasLayer"]
-visible = false
-offset_left = 766.0
-offset_top = 354.0
-offset_right = 961.0
-offset_bottom = 392.0
-theme = ExtResource("8_u8usn")
-theme_override_font_sizes/font_size = 25
-text = "CHOICE_SECOND"
-
 [node name="End Turn" type="Button" parent="CanvasLayer"]
+unique_name_in_owner = true
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
@@ -373,10 +414,14 @@ text = "END_TURN"
 [node name="TurnCount" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
-offset_left = 1127.0
-offset_top = 71.0
-offset_right = 1269.0
-offset_bottom = 105.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -151.0
+offset_top = 61.0
+offset_right = -9.0
+offset_bottom = 95.0
+grow_horizontal = 0
 theme = ExtResource("8_u8usn")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -385,14 +430,15 @@ text = "TURN_COUNT"
 horizontal_alignment = 2
 
 [node name="Ready" type="Button" parent="CanvasLayer"]
+unique_name_in_owner = true
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -230.0
+offset_left = -243.0
 offset_top = 100.0
-offset_right = -8.0
-offset_bottom = 133.0
+offset_right = -15.0
+offset_bottom = 147.0
 grow_horizontal = 0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
@@ -400,16 +446,25 @@ disabled = true
 text = "START_READY"
 
 [node name="Question" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
 visible = false
 z_index = 10
-offset_left = 399.0
-offset_top = 130.0
-offset_right = 1246.0
-offset_bottom = 400.0
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -874.0
+offset_top = -141.0
+offset_right = -27.0
+offset_bottom = 129.0
+grow_horizontal = 0
+grow_vertical = 2
 theme = ExtResource("8_u8usn")
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
 [node name="Label" type="Label" parent="CanvasLayer/Question"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -427,6 +482,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="RPS" type="HBoxContainer" parent="CanvasLayer/Question"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 49.0
 offset_top = 153.0
@@ -435,6 +491,7 @@ offset_bottom = 193.0
 alignment = 1
 
 [node name="Rock" type="Button" parent="CanvasLayer/Question/RPS"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RPS_ROCK"
@@ -443,6 +500,7 @@ text = "RPS_ROCK"
 layout_mode = 2
 
 [node name="Paper" type="Button" parent="CanvasLayer/Question/RPS"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RPS_PAPER"
@@ -451,11 +509,13 @@ text = "RPS_PAPER"
 layout_mode = 2
 
 [node name="Scissors" type="Button" parent="CanvasLayer/Question/RPS"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RPS_SCISSORS"
 
 [node name="Yes" type="Button" parent="CanvasLayer/Question"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 236.0
@@ -466,6 +526,7 @@ theme_override_font_sizes/font_size = 40
 text = "YES"
 
 [node name="No" type="Button" parent="CanvasLayer/Question"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 472.0
@@ -476,6 +537,7 @@ theme_override_font_sizes/font_size = 40
 text = "NO"
 
 [node name="Lose" type="Button" parent="CanvasLayer/Question"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 236.0
@@ -486,6 +548,7 @@ theme_override_font_sizes/font_size = 40
 text = "YES"
 
 [node name="KeepPlaying" type="Button" parent="CanvasLayer/Question"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 472.0
@@ -496,6 +559,7 @@ theme_override_font_sizes/font_size = 40
 text = "NO"
 
 [node name="OK" type="Button" parent="CanvasLayer/Question"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 344.0
@@ -505,20 +569,22 @@ offset_bottom = 219.0
 theme_override_font_sizes/font_size = 40
 text = "OK"
 
-[node name="OpponentLabel" type="ColorRect" parent="CanvasLayer"]
+[node name="OpponentLabelBackground" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
 visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -241.0
-offset_top = 10.0
-offset_right = 606.0
-offset_bottom = 58.0
+offset_left = -423.5
+offset_top = 5.0
+offset_right = 423.5
+offset_bottom = 53.0
 grow_horizontal = 2
 theme = ExtResource("8_u8usn")
 color = Color(0.180392, 0.32549, 0.45098, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/OpponentLabel"]
+[node name="OpponentLabel" type="Label" parent="CanvasLayer/OpponentLabelBackground"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -538,7 +604,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="MulliganWarning" type="ColorRect" parent="CanvasLayer/OpponentLabel"]
+[node name="MulliganWarning" type="ColorRect" parent="CanvasLayer/OpponentLabelBackground"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = 5
@@ -552,7 +619,7 @@ grow_horizontal = 2
 theme = ExtResource("8_u8usn")
 color = Color(0.180392, 0.32549, 0.45098, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/OpponentLabel/MulliganWarning"]
+[node name="Label" type="Label" parent="CanvasLayer/OpponentLabelBackground/MulliganWarning"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -570,8 +637,9 @@ theme_override_font_sizes/font_size = 30
 text = "MULLIGAN_TEXT"
 
 [node name="SPmarker" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 z_index = 4
-position = Vector2(533, -448)
+position = Vector2(428, -467)
 texture = ExtResource("9_exc88")
 region_enabled = true
 region_rect = Rect2(0, 0, 200, 120)
@@ -579,31 +647,37 @@ region_rect = Rect2(0, 0, 200, 120)
 [node name="Audio" type="Node2D" parent="."]
 
 [node name="Drawing" type="AudioStreamPlayer" parent="Audio"]
+unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_dstwm")
 max_polyphony = 20
 bus = &"SFX"
 
 [node name="Shuffling" type="AudioStreamPlayer" parent="Audio"]
+unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_qmp8k")
 max_polyphony = 20
 bus = &"SFX"
 
 [node name="Rolling" type="AudioStreamPlayer" parent="Audio"]
+unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_e0j4a")
 max_polyphony = 20
 bus = &"SFX"
 
 [node name="Moving" type="AudioStreamPlayer" parent="Audio"]
+unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_4b5bi")
 max_polyphony = 20
 bus = &"SFX"
 
 [node name="Placing" type="AudioStreamPlayer" parent="Audio"]
+unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_1ol4w")
 max_polyphony = 20
 bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
 wait_time = 0.5
 one_shot = true
 
@@ -648,7 +722,6 @@ metadata/_custom_type_script = "uid://dpmwhedq5ws5x"
 [connection signal="zone_clicked" from="Zones/Back6" to="." method="_on_zone_clicked"]
 [connection signal="zone_info_clear" from="Zones/Back6" to="." method="clear_info"]
 [connection signal="zone_info_set" from="Zones/Back6" to="." method="_on_zone_enter"]
-[connection signal="id_pressed" from="PopupMenu" to="." method="_on_popup_menu_id_pressed"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/DECK" to="." method="_on_deck_clicked"]
 [connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/DECK" to="." method="_on_fuda_shuffled"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/CHEERDECK" to="." method="_on_cheer_deck_clicked"]
@@ -659,12 +732,13 @@ metadata/_custom_type_script = "uid://dpmwhedq5ws5x"
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/HOLOPOWER" to="." method="_on_holopower_clicked"]
 [connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/HOLOPOWER" to="." method="_on_fuda_shuffled"]
 [connection signal="rolled" from="SubViewportContainer/SubViewport/Node3D/Die" to="." method="_on_die_rolled"]
+[connection signal="id_pressed" from="PopupMenu" to="." method="_on_popup_menu_id_pressed"]
+[connection signal="pressed" from="CanvasLayer/PlayerOrderButtonVBox/Go First" to="." method="_go_first"]
+[connection signal="pressed" from="CanvasLayer/PlayerOrderButtonVBox/Go Second" to="." method="_go_second"]
 [connection signal="text_submitted" from="CanvasLayer/Prompt/Input/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="CanvasLayer/Prompt/Submit" to="." method="_on_submit_pressed"]
 [connection signal="pressed" from="CanvasLayer/PromptText/Submit" to="." method="_on_text_edit_text_set"]
 [connection signal="pressed" from="CanvasLayer/Cancel" to="." method="_on_cancel_pressed"]
-[connection signal="pressed" from="CanvasLayer/Go First" to="." method="_go_first"]
-[connection signal="pressed" from="CanvasLayer/Go Second" to="." method="_go_second"]
 [connection signal="pressed" from="CanvasLayer/End Turn" to="." method="end_turn"]
 [connection signal="pressed" from="CanvasLayer/Ready" to="." method="_call_ready"]
 [connection signal="pressed" from="CanvasLayer/Question/RPS/Rock" to="." method="_rps_rock"]
