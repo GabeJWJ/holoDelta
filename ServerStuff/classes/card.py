@@ -34,7 +34,7 @@ class Card:
                     self.skill_cost = 0
                     self.spskill_cost = 0
                     for skill in init_info["skills"]:
-                        if bool(skill["stageSkill"]):
+                        if not bool(skill["stageSkill"]):
                             if bool(skill["sp"]):
                                 self.spskill_cost = skill["cost"]
                             else:
