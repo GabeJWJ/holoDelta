@@ -1190,10 +1190,7 @@ func update_analytics():
 	result += "Holomems/Support\n%0*d/%0*d\n\n" % [2, total_debut+total_1st+total_2nd+total_spot, 2, total_support]
 	
 	var mulligan = mulligan_odds(7)
-	result += "Chance of forced mulligan Free/6/5/4/3/2/1/Loss\n%.2f%%" % (mulligan * 100)
-	for i in range(7,0,-1):
-		mulligan *= mulligan_odds(i)
-		result += "/%.2f%%" % (mulligan * 100)
+	result += "Chance of forced mulligan %.2f%%" % (mulligan * 100)
 	
 	analytics.text = result
 

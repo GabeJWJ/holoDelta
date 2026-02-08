@@ -66,7 +66,7 @@ msgid "COSMETICS"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1042
 msgid "OPTION_EN"
 msgstr ""
 
@@ -79,12 +79,13 @@ msgid "LOBBY_CREATE"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:884
 msgid "LOBBY_JOIN"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:885
+#: Scripts/Multiplayer.gd:1760
 msgid "LOBBY_SPECTATE"
 msgstr ""
 
@@ -93,7 +94,7 @@ msgid "SOLO_GOLDFISH"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:883
 msgid "PLAYERS_ONLINE"
 msgstr ""
 
@@ -158,12 +159,13 @@ msgid "ACTION_NSTEP"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:196
+#: Scripts/Multiplayer.gd:1047
 msgid "LOBBY_PUBLIC_LOBBIES_FOUND"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1761
 msgid "LOBBY_LOBBYCODE"
 msgstr ""
 
@@ -188,47 +190,51 @@ msgid "LOBBY_SETTINGS"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1759
 msgid "LOBBY_PRIVATE"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1763
 msgid "LOBBY_ALLOWSPECTATORS"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1027
+#: Scripts/Multiplayer.gd:1753
 msgid "LOBBY_BANLIST"
 msgstr ""
 
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1030
+#: Scripts/Multiplayer.gd:1754
 msgid "LOBBY_BANLIST_NONE"
 msgstr ""
 
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1032
+#: Scripts/Multiplayer.gd:1755
 msgid "LOBBY_BANLIST_CURRENT"
 msgstr ""
 
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1034
 msgid "LOBBY_BANLIST_CURRENT_EN"
 msgstr ""
 
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1036
+#: Scripts/Multiplayer.gd:1756
 msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr ""
 
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1038
 msgid "LOBBY_BANLIST_UNRELEASED_EN"
 msgstr ""
 
@@ -237,17 +243,19 @@ msgid "GOLDFISH_MENU"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1218
+#: Scripts/Multiplayer.gd:1219
 msgid "DECK_SELECT"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:197
+#: Scripts/Multiplayer.gd:1095
 msgid "SPECTATE_PUBLIC_GAMES_FOUND"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1762
 msgid "LOBBY_GAMECODE"
 msgstr ""
 
@@ -351,8 +359,8 @@ msgid "RPS_SCISSORS"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
+#: Scripts/side.gd:338
+#: Scripts/Multiplayer.gd:1419
 msgid "RPS_WAIT"
 msgstr ""
 
@@ -361,12 +369,17 @@ msgid "LOBBY_HOST"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1130
+#: Scripts/Multiplayer.gd:1228
+#: Scripts/Multiplayer.gd:1231
 msgid "LOBBY_NONE_CHOSEN"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:956
+#: Scripts/Multiplayer.gd:960
+#: Scripts/Multiplayer.gd:1216
+#: Scripts/Multiplayer.gd:1217
 msgid "LOBBY_READY"
 msgstr ""
 
@@ -396,7 +409,7 @@ msgid "OK"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:971
 msgid "LOBBY_GAMESTART_SPECTATE"
 msgstr ""
 
@@ -424,12 +437,12 @@ msgid "MENU_PROMPT"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:362
 msgid "DOWNLOAD_FAIL"
 msgstr ""
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:363
 msgid "DOWNLOAD_FAIL_FULL"
 msgstr ""
 
@@ -470,7 +483,7 @@ msgid "DECK_SELECT_CANCEL"
 msgstr ""
 
 #: Scenes/deck_list.tscn
-#: Scripts/deck_list.gd
+#: Scripts/deck_list.gd:89
 msgid "DECK_DELETE_CONFIRM"
 msgstr ""
 
@@ -503,7 +516,10 @@ msgid "END_TURN"
 msgstr ""
 
 #: Scenes/side.tscn
-#: Scripts/side.gd
+#: Scripts/side.gd:436
+#: Scripts/side.gd:1939
+#: Scripts/side.gd:1969
+#: Scripts/side.gd:2187
 msgid "TURN_COUNT"
 msgstr ""
 
@@ -536,12 +552,19 @@ msgid "SEARCH"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:474
+#: Scripts/deck_creation.gd:517
+#: Scripts/deck_creation.gd:529
+#: Scripts/deck_creation.gd:638
 msgid "NAME"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:485
+#: Scripts/deck_creation.gd:516
+#: Scripts/deck_creation.gd:540
+#: Scripts/deck_creation.gd:583
+#: Scripts/deck_creation.gd:637
 msgid "COLOR"
 msgstr ""
 
@@ -554,7 +577,12 @@ msgid "LIFE_6"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:503
+#: Scripts/deck_creation.gd:518
+#: Scripts/deck_creation.gd:622
+#: Scripts/deck_creation.gd:642
+#: Scripts/deck_creation.gd:672
+#: Scripts/deck_creation.gd:699
 msgid "SETCODE"
 msgstr ""
 
@@ -567,42 +595,44 @@ msgid "TAB_HOLOMEM"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:562
+#: Scripts/deck_creation.gd:639
 msgid "LEVEL"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:153
 msgid "LEVEL_ANY"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1183
 msgid "LEVEL_DEBUT"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1183
 msgid "LEVEL_1"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1183
 msgid "LEVEL_2"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1183
 msgid "LEVEL_SPOT"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:640
 msgid "ADVANTAGE"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:594
+#: Scripts/deck_creation.gd:641
 msgid "EFFECT"
 msgstr ""
 
@@ -627,7 +657,8 @@ msgid "TAB_SUPPORT"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:654
+#: Scripts/deck_creation.gd:698
 msgid "SUPPORT_TYPE"
 msgstr ""
 
@@ -640,7 +671,8 @@ msgid "SUPPORT_UNLIMITED"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:683
+#: Scripts/deck_creation.gd:700
 msgid "TAG"
 msgstr ""
 
@@ -700,1504 +732,1568 @@ msgstr ""
 msgid "LOADING"
 msgstr ""
 
-#: Scripts/RemapButton.gd
+#: Scripts/RemapButton.gd:27
 msgid "REMAP_WAIT"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:235
+#: Scripts/deck_creation.gd:251
 msgid "NAME_ANY"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:241
+#: Scripts/deck_creation.gd:257
 msgid "COLOR_ANY"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:246
+#: Scripts/deck_creation.gd:275
+#: Scripts/deck_creation.gd:290
 msgid "SETCODE_ANY"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:266
 msgid "ADVANTAGE_ANY"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:285
 msgid "SUPPORT_TYPE_ANY"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:295
 msgid "TAG_ANY"
 msgstr ""
 
-#: Scripts/deck_creation.gd
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-#: Scripts/fuda.gd
-#: Scripts/info_panel.gd
-msgid ""
-msgstr ""
-
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1131
+#: Scripts/deck_creation.gd:1375
 msgid "DECKERROR_NOOSHI"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1133
+#: Scripts/deck_creation.gd:1372
 msgid "DECKERROR_FAKEOSHI"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1135
+#: Scripts/deck_creation.gd:1156
+#: Scripts/deck_creation.gd:1167
+#: Scripts/deck_creation.gd:1370
 msgid "DECKERROR_BANNED"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1138
+#: Scripts/deck_creation.gd:1381
 msgid "DECKERROR_UNDERDECK"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1140
+#: Scripts/deck_creation.gd:1382
 msgid "DECKERROR_OVERDECK"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1142
+#: Scripts/deck_creation.gd:1386
 msgid "DECKERROR_UNDERCHEER"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1144
+#: Scripts/deck_creation.gd:1387
 msgid "DECKERROR_OVERCHEER"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1152
+#: Scripts/deck_creation.gd:1163
+#: Scripts/deck_creation.gd:1174
+#: Scripts/deck_creation.gd:1377
 msgid "DECKERROR_NEGATIVEAMOUNT"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1154
+#: Scripts/deck_creation.gd:1379
 msgid "DECKERROR_FAKEMAIN"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1159
+#: Scripts/deck_creation.gd:1380
 msgid "DECKERROR_NODEBUTS"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1165
+#: Scripts/deck_creation.gd:1385
 msgid "DECKERROR_FAKECHEER"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1172
+#: Scripts/deck_creation.gd:1378
 msgid "DECKERROR_OVERAMOUNT"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1176
+#: Scripts/deck_creation.gd:1376
 msgid "DECKERROR_RESTRICTED"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1243
 msgid "DECK_OVERWRITE"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1371
 msgid "DECKERROR_NOALTART"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1373
 msgid "DECKERROR_FAKECARD"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1374
 msgid "DECKERROR_OSHIBADFORMAT"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1383
 msgid "DECKERROR_DECKBADFORMAT"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1384
 msgid "DECKERROR_NODECK"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1388
 msgid "DECKERROR_CHEERBADFORMAT"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1389
 msgid "DECKERROR_NOCHEER"
 msgstr ""
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1390
 msgid "DECKERROR_ONLYEN"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:113
 msgid "DECK"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:114
 msgid "CHEERDECK"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:115
 msgid "ARCHIVE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:116
 msgid "HOLOPOWER"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:345
 msgid "RPS_TIED"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:368
 msgid "MULLIGAN_QUESTION"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:377
 msgid "MULLIGAN_FORCED"
 msgstr ""
 
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
+#: Scripts/side.gd:388
+#: Scripts/Multiplayer.gd:1489
+#: Scripts/Multiplayer.gd:1731
 msgid "LOSS"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:398
 msgid "MULLIGAN_WAIT"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:421
 msgid "READY_WAIT"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1231
 msgid "CARD_HOLOMEM_REQUESTDAMAGE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1233
 msgid "CARD_HOLOMEM_REQUESTDAMAGEBACK"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1239
+#: Scripts/side.gd:1352
 msgid "CARD_HOLOMEM_LOOK_ATTACHED"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1241
+#: Scripts/side.gd:1355
 msgid "CARD_HOLOMEM_LOOK_PAST"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1248
 msgid "CARD_HOLOMEM_PLAY_CENTERHIDDEN"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1250
 msgid "CARD_HOLOMEM_PLAY_BACKHIDDEN"
 msgstr ""
 
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_PLAY"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_PLAY_DIRECT"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_BLOOM"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_BLOOM_SKIP"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_BLOOM_FAST"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_UNREST"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_REST"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_COLLAB"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_BATON"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_CENTERCOLLABSWAP"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_CENTER"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_BACK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_DAMAGE"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_HEAL"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_EXTRAHP"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_EXTRABATONPASS"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_REMOVEBATONPASS"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_UNBLOOM"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_SUPPORT_ATTACH"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_SUPPORT_PLAY"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_SUPPORT_ARCHIVE"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_CHEER_LIFE_REVEAL"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HAND_TOPDECK"
-msgstr ""
-
-#: Scripts/side.gd
+#: Scripts/side.gd:1252
+#: Scripts/side.gd:1363
 msgid "CARD_HAND_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1260
+msgid "CARD_HOLOMEM_PLAY"
+msgstr ""
+
+#: Scripts/side.gd:1262
+msgid "CARD_HOLOMEM_PLAY_DIRECT"
+msgstr ""
+
+#: Scripts/side.gd:1266
+msgid "CARD_HOLOMEM_BLOOM"
+msgstr ""
+
+#: Scripts/side.gd:1268
+msgid "CARD_HOLOMEM_BLOOM_SKIP"
+msgstr ""
+
+#: Scripts/side.gd:1270
+msgid "CARD_HOLOMEM_BLOOM_FAST"
+msgstr ""
+
+#: Scripts/side.gd:1279
+msgid "CARD_HOLOMEM_UNREST"
+msgstr ""
+
+#: Scripts/side.gd:1281
+msgid "CARD_HOLOMEM_REST"
+msgstr ""
+
+#: Scripts/side.gd:1285
+msgid "CARD_HOLOMEM_COLLAB"
+msgstr ""
+
+#: Scripts/side.gd:1287
+msgid "CARD_HOLOMEM_BATON"
+msgstr ""
+
+#: Scripts/side.gd:1289
+msgid "CARD_HOLOMEM_CENTERCOLLABSWAP"
+msgstr ""
+
+#: Scripts/side.gd:1292
+msgid "CARD_HOLOMEM_MOVE_CENTER"
+msgstr ""
+
+#: Scripts/side.gd:1294
+msgid "CARD_HOLOMEM_MOVE_BACK"
+msgstr ""
+
+#: Scripts/side.gd:1297
+msgid "CARD_HOLOMEM_DAMAGE"
+msgstr ""
+
+#: Scripts/side.gd:1299
+msgid "CARD_HOLOMEM_HEAL"
+msgstr ""
+
+#: Scripts/side.gd:1300
+msgid "CARD_HOLOMEM_EXTRAHP"
+msgstr ""
+
+#: Scripts/side.gd:1302
+msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
+msgstr ""
+
+#: Scripts/side.gd:1303
+msgid "CARD_HOLOMEM_EXTRABATONPASS"
+msgstr ""
+
+#: Scripts/side.gd:1305
+msgid "CARD_HOLOMEM_REMOVEBATONPASS"
+msgstr ""
+
+#: Scripts/side.gd:1309
+msgid "CARD_HOLOMEM_UNBLOOM"
+msgstr ""
+
+#: Scripts/side.gd:1315
+msgid "CARD_SUPPORT_ATTACH"
+msgstr ""
+
+#: Scripts/side.gd:1319
+msgid "CARD_SUPPORT_PLAY"
+msgstr ""
+
+#: Scripts/side.gd:1321
+msgid "CARD_SUPPORT_ARCHIVE"
+msgstr ""
+
+#: Scripts/side.gd:1347
+msgid "CARD_CHEER_LIFE_REVEAL"
+msgstr ""
+
+#: Scripts/side.gd:1362
+msgid "CARD_HAND_TOPDECK"
+msgstr ""
+
+#: Scripts/side.gd:1364
 msgid "CARD_HAND_ARCHIVE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1365
 msgid "CARD_HAND_HOLOPOWER"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1366
 msgid "CARD_HAND_REVEAL"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1368
 msgid "CARD_HAND_REVEALALL"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1370
 msgid "CARD_STAGE_ARCHIVE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1372
 msgid "CARD_STAGE_HAND"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1373
+msgid "CARD_STAGE_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/side.gd:1375
 msgid "CARD_HOLOMEM_MOVE_COLLAB"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1377
 msgid "CARD_HOLOMEM_SWITCH"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1379
 msgid "CARD_REVEALED_HAND"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1381
 msgid "CARD_REVEALED_ATTACH"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1383
 msgid "CARD_REVEALED_TOPDECK"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1384
 msgid "CARD_REVEALED_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1385
 msgid "CARD_REVEALED_ARCHIVE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1386
 msgid "CARD_REVEALED_HOLOPOWER"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1387
 msgid "CARD_REVEALED_BOTTOMHOLOPOWER"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1410
 msgid "DECK_DRAW"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1411
 msgid "DECK_DRAWX"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1412
 msgid "DECK_ARCHIVE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1413
 msgid "DECK_ARCHIVEX"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1414
 msgid "DECK_HOLOPOWER"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1416
 msgid "DECK_REVEAL"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1417
+msgid "DECK_DRAWBOTTOM"
+msgstr ""
+
+#: Scripts/side.gd:1420
 msgid "DECK_LOOKX"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1421
 msgid "DECK_SEARCH"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1422
 msgid "DECK_SHUFFLE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1426
 msgid "DECK_MULLIGAN"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1429
 msgid "DECK_MULLIGAN_UNDO"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1433
 msgid "DECK_RPS"
 msgstr ""
 
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
+#: Scripts/side.gd:1436
+msgid "DECK_EXTRA_TURN"
+msgstr ""
+
+#: Scripts/side.gd:1439
+#: Scripts/Multiplayer.gd:1734
 msgid "FORFEIT"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1451
 msgid "CHEERDECK_REVEAL"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1454
 msgid "CHEERDECK_ARCHIVE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1455
 msgid "CHEERDECK_ARCHIVEX"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1459
 msgid "CHEERDECK_LOOKX"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1460
 msgid "CHEERDECK_SEARCH"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1461
 msgid "CHEERDECK_SHUFFLE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1471
 msgid "ARCHIVE_SEARCH"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1475
 msgid "ARCHIVE_HAND_ALL"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1486
 msgid "HOLOPOWER_ARCHIVE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1487
 msgid "HOLOPOWER_ARCHIVEX"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1490
 msgid "HOLOPOWER_REVEAL"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1494
 msgid "HOLOPOWER_DECK"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1498
 msgid "HOLOPOWER_SEARCH"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1499
 msgid "HOLOPOWER_SHUFFLE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1521
 msgid "LIST_DECK_HOLOMEM_PLAY"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1523
 msgid "LIST_ARCHIVE_HOLOMEM_PLAY"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1526
 msgid "LIST_DECK_HOLOMEM_PLAY_DIRECT"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1528
 msgid "LIST_ARCHIVE_HOLOMEM_PLAY_DIRECT"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1533
 msgid "LIST_DECK_HOLOMEM_BLOOM"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1535
 msgid "LIST_ARCHIVE_HOLOMEM_BLOOM"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1538
 msgid "LIST_DECK_HOLOMEM_BLOOM_FAST"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1540
 msgid "LIST_ARCHIVE_HOLOMEM_BLOOM_FAST"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1544
 msgid "LIST_CHEERDECK_CHEER_ATTACH"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1546
 msgid "LIST_ARCHIVE_CHEER_ATTACH"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1548
 msgid "LIST_ATTACHED_CHEER_ATTACH"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1551
 msgid "LIST_CHEER_LIFE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1554
 msgid "LIST_CARD_REVEAL"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1561
 msgid "LIST_CARD_HAND"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1564
 msgid "LIST_CARD_TOPDECK"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1565
 msgid "LIST_CARD_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1567
 msgid "LIST_CARD_TOPCHEERDECK"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1568
 msgid "LIST_CARD_BOTTOMCHEERDECK"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1570
 msgid "LIST_CARD_ARCHIVE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1572
 msgid "LIST_CARD_HOLOPOWER"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1599
 msgid "PROMPT_DAMAGE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1602
 msgid "PROMPT_HEAL"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1605
 msgid "PROMPT_EXTRAHP"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1608
 msgid "PROMPT_REMOVEEXTRAHP"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1611
 msgid "PROMPT_EXTRABATONPASS"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1614
 msgid "PROMPT_REMOVEBATONPASS"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1636
 msgid "PROMPT_REQUESTDAMAGE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1639
 msgid "PROMPT_REQUESTDAMAGEBACK"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1647
+#: Scripts/side.gd:1656
 msgid "PROMPT_OSHICOST"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1702
 msgid "PROMPT_DRAW"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1705
 msgid "PROMPT_DECK_ARCHIVE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1712
+#: Scripts/side.gd:1724
 msgid "PROMPT_LOOKATX"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1721
 msgid "PROMPT_CHEERDECK_ARCHIVE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1738
 msgid "PROMPT_HOLOPOWER_ARCHIVE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1806
 msgid "PROMPT_NOTE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1806
 msgid "PROMPT_NOTE_PLACEHOLDER"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1871
 msgid "GOLDFISH_ZONEDAMAGE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1872
 msgid "GOLDFISH_ZONEDAMAGEREMOVE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1874
 msgid "GOLDFISH_ZONEDAMAGEALL"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1875
 msgid "GOLDFISH_ZONENOTE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1885
 msgid "PROMPT_ART_DAMAGE"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1950
 msgid "TURN_SECOND"
 msgstr ""
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1953
 msgid "TURN_FIRST"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:179
+#: Scripts/Multiplayer.gd:298
+#: Scripts/Multiplayer.gd:311
 msgid "DOWNLOAD_CARDS"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:224
 msgid "DECK_AUTOLOAD_CONFIRM"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:225
 msgid "DECK_AUTOLOAD_CONFIRM_INFO"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:333
 msgid "UPDATE_MENU_CLIENT_UPDATEFOUND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:337
 msgid "UPDATE_MENU_CARD_UPDATEFOUND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:370
 msgid "LOAD_FAIL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:371
 msgid "LOAD_FAIL_FULL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1040
+#: Scripts/Multiplayer.gd:1757
 msgid "LOBBY_BANLIST_CUSTOM"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1089
+#: Scripts/Multiplayer.gd:1764
 msgid "GAME_VS"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1195
+#: Scripts/Multiplayer.gd:1198
 msgid "LOBBY_WAITING"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1429
+#: Scripts/Multiplayer.gd:1750
 msgid "INGAME_RPS_WON"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1435
+#: Scripts/Multiplayer.gd:1751
 msgid "INGAME_RPS_LOST"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1449
 msgid "YOU"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1482
+#: Scripts/Multiplayer.gd:1732
 msgid "WIN"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1500
+#: Scripts/Multiplayer.gd:1733
 msgid "SPECTATE_WIN"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1556
 msgid "MESSAGE_MULLIGAN"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1557
 msgid "MESSAGE_DRAW"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1558
 msgid "MESSAGE_DRAWX"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1559
 msgid "MESSAGE_MILL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1560
 msgid "MESSAGE_MILLX"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1561
 msgid "MESSAGE_BLOOM"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1562
 msgid "MESSAGE_STAGE_ARCHIVE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1563
+msgid "MESSAGE_DRAWBOTTOM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd:1564
+msgid "MESSAGE_STAGE_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd:1565
 msgid "MESSAGE_STAGE_HAND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1566
 msgid "MESSAGE_STAGE_CENTER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1567
 msgid "MESSAGE_STAGE_COLLAB"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1568
 msgid "MESSAGE_STAGE_MOVECOLLAB"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1569
 msgid "MESSAGE_STAGE_UNBLOOM"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1570
 msgid "MESSAGE_REVEALED_HAND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1571
 msgid "MESSAGE_REVEALED_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1572
 msgid "MESSAGE_REVEALED_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1573
 msgid "MESSAGE_REVEALED_ARCHIVE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1574
 msgid "MESSAGE_REVEALED_HOLOPOWER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1575
 msgid "MESSAGE_REVEALED_BOTTOMHOLOPOWER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1576
 msgid "MESSAGE_OSHISKILL_SP"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1577
 msgid "MESSAGE_OSHISKILL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1578
 msgid "MESSAGE_HAND_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1579
 msgid "MESSAGE_HAND_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1580
 msgid "MESSAGE_HAND_ARCHIVE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1581
 msgid "MESSAGE_HAND_HOLOPOWER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1582
 msgid "MESSAGE_HAND_REVEAL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1583
 msgid "MESSAGE_HAND_REVEALALL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1584
 msgid "MESSAGE_HAND_SUPPORT_PLAY"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1585
 msgid "MESSAGE_FUDA_REVEAL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1586
 msgid "MESSAGE_HOLOPOWER_REVEAL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1587
 msgid "MESSAGE_DECK_MULLIGAN"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1588
 msgid "MESSAGE_DECK_UNDOMULLIGAN"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1589
 msgid "MESSAGE_DECK_SEARCH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1590
 msgid "MESSAGE_DECK_SHUFFLE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1591
 msgid "MESSAGE_CHEERDECK_SEARCH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1592
 msgid "MESSAGE_CHEERDECK_SHUFFLE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1593
 msgid "MESSAGE_HOLOPOWER_SEARCH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1594
 msgid "MESSAGE_HOLOPOWER_SHUFFLE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1595
 msgid "MESSAGE_FUDA_LIFE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1596
 msgid "MESSAGE_ATTACHED_LIFE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1597
 msgid "MESSAGE_ARCHIVE_HAND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1598
 msgid "MESSAGE_FUDA_HAND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1599
 msgid "MESSAGE_HOLOPOWER_HAND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1600
 msgid "MESSAGE_ATTACHED_HAND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1601
 msgid "MESSAGE_ARCHIVE_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1602
 msgid "MESSAGE_DECK_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1603
 msgid "MESSAGE_FUDA_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1604
 msgid "MESSAGE_HOLOPOWER_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1605
 msgid "MESSAGE_ATTACHED_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1606
 msgid "MESSAGE_ARCHIVE_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1607
 msgid "MESSAGE_DECK_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1608
 msgid "MESSAGE_FUDA_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1609
 msgid "MESSAGE_HOLOPOWER_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1610
 msgid "MESSAGE_ATTACHED_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1611
 msgid "MESSAGE_ARCHIVE_TOPCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1612
 msgid "MESSAGE_CHEERDECK_TOPCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1613
 msgid "MESSAGE_FUDA_TOPCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1614
 msgid "MESSAGE_ATTACHED_TOPCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1615
 msgid "MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1616
 msgid "MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1617
 msgid "MESSAGE_FUDA_BOTTOMCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1618
 msgid "MESSAGE_ATTACHED_BOTTOMCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1619
 msgid "MESSAGE_FUDA_ARCHIVE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1620
 msgid "MESSAGE_HOLOPOWER_ARCHIVE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1621
 msgid "MESSAGE_ATTACHED_ARCHIVE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1622
 msgid "MESSAGE_ARCHIVE_HOLOPOWER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1623
 msgid "MESSAGE_FUDA_HOLOPOWER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1624
 msgid "MESSAGE_ATTACHED_HOLOPOWER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1625
 msgid "MESSAGE_ARTS_DAMAGE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1626
 msgid "MESSAGE_DECK_LOOKATX"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1627
 msgid "MESSAGE_CHEERDECK_LOOKATX"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1628
 msgid "MESSAGE_CARD_BACK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1629
 msgid "MESSAGE_CARD_BATONPASS"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1630
 msgid "MESSAGE_CARD_SWITCH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1631
 msgid "MESSAGE_SUPPORT_ATTACH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1632
 msgid "MESSAGE_CHEER_ATTACH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1633
 msgid "MESSAGE_HOLOMEM_PLAY"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1634
 msgid "MESSAGE_DECK_HOLOMEM_PLAY"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1635
 msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1636
 msgid "MESSAGE_ARCHIVE_HAND_ALL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1637
 msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1638
 msgid "MESSAGE_ARCHIVE_CHEER_ATTACH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1639
 msgid "MESSAGE_ATTACHED_CHEER_ATTACH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1640
 msgid "MESSAGE_ENDTURN"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1641
 msgid "MESSAGE_DIERESULT"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1642
 msgid "MESSAGE_RPS"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1643
 msgid "YOU_MESSAGE_MULLIGAN"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1644
 msgid "YOU_MESSAGE_DRAW"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1645
 msgid "YOU_MESSAGE_DRAWX"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1646
 msgid "YOU_MESSAGE_MILL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1647
 msgid "YOU_MESSAGE_MILLX"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1648
 msgid "YOU_MESSAGE_BLOOM"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1649
 msgid "YOU_MESSAGE_STAGE_ARCHIVE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1650
+msgid "YOU_MESSAGE_DRAWBOTTOM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd:1651
+msgid "YOU_MESSAGE_STAGE_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd:1652
 msgid "YOU_MESSAGE_STAGE_HAND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1653
 msgid "YOU_MESSAGE_STAGE_CENTER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1654
 msgid "YOU_MESSAGE_STAGE_COLLAB"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1655
 msgid "YOU_MESSAGE_STAGE_MOVECOLLAB"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1656
 msgid "YOU_MESSAGE_STAGE_UNBLOOM"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1657
 msgid "YOU_MESSAGE_REVEALED_HAND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1658
 msgid "YOU_MESSAGE_REVEALED_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1659
 msgid "YOU_MESSAGE_REVEALED_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1660
 msgid "YOU_MESSAGE_REVEALED_ARCHIVE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1661
 msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1662
 msgid "YOU_MESSAGE_REVEALED_BOTTOMHOLOPOWER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1663
 msgid "YOU_MESSAGE_OSHISKILL_SP"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1664
 msgid "YOU_MESSAGE_OSHISKILL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1665
 msgid "YOU_MESSAGE_HAND_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1666
 msgid "YOU_MESSAGE_HAND_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1667
 msgid "YOU_MESSAGE_HAND_ARCHIVE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1668
 msgid "YOU_MESSAGE_HAND_HOLOPOWER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1669
 msgid "YOU_MESSAGE_HAND_REVEAL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1670
 msgid "YOU_MESSAGE_HAND_REVEALALL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1671
 msgid "YOU_MESSAGE_HAND_SUPPORT_PLAY"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1672
 msgid "YOU_MESSAGE_FUDA_REVEAL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1673
 msgid "YOU_MESSAGE_HOLOPOWER_REVEAL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1674
 msgid "YOU_MESSAGE_DECK_MULLIGAN"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1675
 msgid "YOU_MESSAGE_DECK_UNDOMULLIGAN"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1676
 msgid "YOU_MESSAGE_DECK_SEARCH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1677
 msgid "YOU_MESSAGE_DECK_SHUFFLE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1678
 msgid "YOU_MESSAGE_CHEERDECK_SEARCH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1679
 msgid "YOU_MESSAGE_CHEERDECK_SHUFFLE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1680
 msgid "YOU_MESSAGE_HOLOPOWER_SEARCH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1681
 msgid "YOU_MESSAGE_HOLOPOWER_SHUFFLE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1682
 msgid "YOU_MESSAGE_FUDA_LIFE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1683
 msgid "YOU_MESSAGE_ATTACHED_LIFE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1684
 msgid "YOU_MESSAGE_ARCHIVE_HAND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1685
 msgid "YOU_MESSAGE_FUDA_HAND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1686
 msgid "YOU_MESSAGE_HOLOPOWER_HAND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1687
 msgid "YOU_MESSAGE_ATTACHED_HAND"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1688
 msgid "YOU_MESSAGE_ARCHIVE_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1689
 msgid "YOU_MESSAGE_DECK_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1690
 msgid "YOU_MESSAGE_FUDA_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1691
 msgid "YOU_MESSAGE_HOLOPOWER_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1692
 msgid "YOU_MESSAGE_ATTACHED_TOPDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1693
 msgid "YOU_MESSAGE_ARCHIVE_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1694
 msgid "YOU_MESSAGE_DECK_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1695
 msgid "YOU_MESSAGE_FUDA_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1696
 msgid "YOU_MESSAGE_HOLOPOWER_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1697
 msgid "YOU_MESSAGE_ATTACHED_BOTTOMDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1698
 msgid "YOU_MESSAGE_ARCHIVE_TOPCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1699
 msgid "YOU_MESSAGE_CHEERDECK_TOPCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1700
 msgid "YOU_MESSAGE_FUDA_TOPCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1701
 msgid "YOU_MESSAGE_ATTACHED_TOPCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1702
 msgid "YOU_MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1703
 msgid "YOU_MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1704
 msgid "YOU_MESSAGE_FUDA_BOTTOMCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1705
 msgid "YOU_MESSAGE_ATTACHED_BOTTOMCHEERDECK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1706
 msgid "YOU_MESSAGE_FUDA_ARCHIVE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1707
 msgid "YOU_MESSAGE_HOLOPOWER_ARCHIVE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1708
 msgid "YOU_MESSAGE_ATTACHED_ARCHIVE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1709
 msgid "YOU_MESSAGE_ARCHIVE_HOLOPOWER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1710
 msgid "YOU_MESSAGE_FUDA_HOLOPOWER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1711
 msgid "YOU_MESSAGE_ATTACHED_HOLOPOWER"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1712
 msgid "YOU_MESSAGE_ARTS_DAMAGE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1713
 msgid "YOU_MESSAGE_DECK_LOOKATX"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1714
 msgid "YOU_MESSAGE_CHEERDECK_LOOKATX"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1715
 msgid "YOU_MESSAGE_CARD_BACK"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1716
 msgid "YOU_MESSAGE_CARD_BATONPASS"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1717
 msgid "YOU_MESSAGE_CARD_SWITCH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1718
 msgid "YOU_MESSAGE_SUPPORT_ATTACH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1719
 msgid "YOU_MESSAGE_CHEER_ATTACH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1720
 msgid "YOU_MESSAGE_HOLOMEM_PLAY"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1721
 msgid "YOU_MESSAGE_DECK_HOLOMEM_PLAY"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1722
 msgid "YOU_MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1723
 msgid "YOU_MESSAGE_ARCHIVE_HAND_ALL"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1724
 msgid "YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1725
 msgid "YOU_MESSAGE_ARCHIVE_CHEER_ATTACH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1726
 msgid "YOU_MESSAGE_ATTACHED_CHEER_ATTACH"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1727
 msgid "YOU_MESSAGE_ENDTURN"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1728
 msgid "YOU_MESSAGE_DIERESULT"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1729
 msgid "YOU_MESSAGE_RPS"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1735
 msgid "WINCONSENT_FORFEIT"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1736
 msgid "WINCONSENT_DECKOUT"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1737
 msgid "WINCONSENT_LIFE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1738
 msgid "WINCONSENT_EMPTYSTAGE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1739
 msgid "WINREASON_MULLIGAN"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1740
 msgid "WINREASON_DECKOUT"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1741
 msgid "WINREASON_LIFE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1742
 msgid "WINREASON_EMPTYSTAGE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1743
 msgid "WINREASON_FORFEIT"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1744
 msgid "YOU_WINREASON_MULLIGAN"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1745
 msgid "YOU_WINREASON_DECKOUT"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1746
 msgid "YOU_WINREASON_LIFE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1747
 msgid "YOU_WINREASON_EMPTYSTAGE"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1748
 msgid "YOU_WINREASON_FORFEIT"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1758
 msgid "LOBBY_PUBLIC"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:175
+#: Scripts/card_info.gd:180
 msgid "NOBODY"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:177
+#: Scripts/card_info.gd:182
 msgid "NAMESEP"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:190
+#: Scripts/card_info.gd:195
 msgid "COLORLESS"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:192
+#: Scripts/card_info.gd:197
 msgid "COLORSEP"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:232
 msgid "NAME_BUZZ"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:237
 msgid "INFO_OSHI"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:246
 msgid "INFO_OSHI_SPSKILL"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:249
+msgid "INFO_OSHI_STAGESKILL"
+msgstr ""
+
+#: Scripts/card_info.gd:252
 msgid "INFO_OSHI_SKILL"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:260
 msgid "INFO_SPOT"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:260
 msgid "INFO_DEBUT"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:260
 msgid "INFO_1ST"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:260
 msgid "INFO_2ND"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:261
 msgid "INFO_BUZZ"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:264
 msgid "INFO_HOLOMEM_1"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:316
 msgid "INFO_NOBATONPASSCOST"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:317
 msgid "INFO_HOLOMEM_2"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:328
 msgid "INFO_SUPPORT"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:330
 msgid "INFO_LIMITED"
 msgstr ""

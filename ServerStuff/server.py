@@ -39,10 +39,6 @@ app.add_middleware(GZipMiddleware, minimum_size=2000000, compresslevel=7)
 def index():
     return RedirectResponse(url="/game/index.html")
 
-@app.get("/cardData.zip")
-async def get_card_data_archive():
-    return StreamingResponse(await azb.get_card_data(), media_type="application/zip")
-
 @app.get("/version")
 def get_current_version():
     return version
@@ -76,7 +72,7 @@ async def upload_cosmetics_file(game_id : str = Form(...), player_id : str = For
         raise HTTPException(status_code=400, detail="This game/player pair does not exist")
     if passcode != get_game(game_id).cosmetics[player_id]["passcode"]:
         raise HTTPException(status_code=401, detail="Incorrect passcode")
-    if cosmetics_type not in ["sleeve", "cheerSleeve", "playmat", "dice"]:
+    if cosmetics_type not in ["sleeve", "cheerSleeve", "playmat", "dice", "SPMarker"]:
         raise HTTPException(status_code=400, detail="Not a valid cosmetic type")
     await azb.upload_cosmetics(game_id, player_id, cosmetics_type, await file.read())
     return

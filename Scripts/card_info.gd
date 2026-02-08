@@ -96,9 +96,11 @@ func setup_info(number,art_code,back=null):
 			oshi_skills = []
 			for skill in card_data.skills:
 				if bool(skill.sp):
-					oshi_skills.append(["%s_SPSKILL_NAME" % cardNumber,skill.cost,bool(skill.sp)])
+					oshi_skills.append({"name": "%s_SPSKILL_NAME" % cardNumber,"cost": skill.cost,"sp": bool(skill.sp),"stageSkill": bool(skill.stageSkill)})
+				elif bool(skill.stageSkill):
+					oshi_skills.append({"name": "%s_STAGESKILL_NAME" % cardNumber,"cost": skill.cost,"sp": bool(skill.sp),"stageSkill": bool(skill.stageSkill)})
 				else:
-					oshi_skills.append(["%s_SKILL_NAME" % cardNumber,skill.cost,bool(skill.sp)])
+					oshi_skills.append({"name": "%s_SKILL_NAME" % cardNumber,"cost": skill.cost,"sp": bool(skill.sp),"stageSkill": bool(skill.stageSkill)})
 				
 		"Holomem":
 			bloomed_this_turn = false
@@ -233,19 +235,24 @@ func full_desc():
 	match cardType:
 		"Oshi":
 			result += tr("INFO_OSHI").format({colorText = getColorsAsText(), life = life, tagsText = "\n" + getTagsAsText()})
+			var stageSkillText = ""
 			var skillText = ""
 			var spSkillText = ""
 			for skill in oshi_skills:
-				var costText = str(skill[1])
-				if skill[1] == -1:
+				var costText = str(skill.cost)
+				if skill.cost == -1:
 					costText = "X"
-				if skill[2]:
-					spSkillText += "\n\n" + tr("INFO_OSHI_SPSKILL").format({costText = costText, nameText = Settings.trans(skill[0])})
+				if skill.sp:
+					spSkillText += "\n\n" + tr("INFO_OSHI_SPSKILL").format({costText = costText, nameText = Settings.trans(skill.name)})
 					spSkillText += "\n\n" + Settings.trans("%s_SPSKILL_EFFECT" % cardNumber).replace("[", "[lb]")
+				elif skill.stageSkill:
+					stageSkillText += "\n\n" + tr("INFO_OSHI_STAGESKILL").format({nameText = Settings.trans(skill.name)})
+					stageSkillText += "\n\n" + Settings.trans("%s_STAGESKILL_EFFECT" % cardNumber).replace("[", "[lb]")
 				else:
-					skillText += "\n\n" + tr("INFO_OSHI_SKILL").format({costText = costText, nameText = Settings.trans(skill[0])})
+					skillText += "\n\n" + tr("INFO_OSHI_SKILL").format({costText = costText, nameText = Settings.trans(skill.name)})
 					skillText += "\n\n" + Settings.trans("%s_SKILL_EFFECT" % cardNumber).replace("[", "[lb]")
 			
+			result += stageSkillText
 			result += skillText
 			result += spSkillText
 				

@@ -1,6 +1,5 @@
 from io import BytesIO
 
-import asyncio
 from azure.identity.aio import DefaultAzureCredential
 from azure.storage.blob.aio import BlobServiceClient
 
@@ -10,8 +9,6 @@ try:
 
     # Create the BlobServiceClient object
     blob_service_client = BlobServiceClient(account_url, credential=default_credential)
-
-    card_data_client = blob_service_client.get_blob_client(container="holodelta", blob="cardData.zip")
 
 except Exception as ex:
     print('Exception:')
@@ -23,9 +20,6 @@ async def get_stream(data_client):
     await data_stream.readinto(stream)
     stream.seek(0) #Thank you Saum
     return stream
-
-async def get_card_data():
-    return await get_stream(card_data_client)
 
 async def get_file(file_name):
     try:

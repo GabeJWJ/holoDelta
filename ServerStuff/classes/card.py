@@ -34,10 +34,11 @@ class Card:
                     self.skill_cost = 0
                     self.spskill_cost = 0
                     for skill in init_info["skills"]:
-                        if bool(skill["sp"]):
-                            self.spskill_cost = skill["cost"]
-                        else:
-                            self.skill_cost = skill["cost"]
+                        if bool(skill["stageSkill"]):
+                            if bool(skill["sp"]):
+                                self.spskill_cost = skill["cost"]
+                            else:
+                                self.skill_cost = skill["cost"]
                 case "Holomem":
                     self.bloomed_this_turn = False
                     self.level = init_info["level"]

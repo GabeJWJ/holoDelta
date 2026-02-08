@@ -61,6 +61,7 @@ var oshiBack
 
 @export var preliminary_phase = true
 var preliminary_holomem_in_center = false
+var mulligan_to_bottom = 0
 @export var can_do_things = false
 var fake_cards_on_stage = []
 var fuda_opponent_looking_at = null
@@ -78,7 +79,7 @@ var used_sp_oshi_skill = false
 var can_undo_shuffle_hand = null
 
 @export var is_your_side = false
-@export var is_spectated = false
+@export var is_spectating = false
 @export var player_id : String
 @export var player_name : String
 @export var game_id : String
@@ -181,6 +182,11 @@ func _ready():
 		else:
 			oshiCard = create_card(oshi[0],oshi[1],oshiBack)
 		oshiCard.position = Vector2(430,-223)
+		
+		for skill_to_check in oshiCard.oshi_skills:
+			if skill_to_check.sp:
+				$SPmarker.visible = true
+				break
 		
 		if mainSleeve.is_empty():
 			mainBack = defaultMain.get_image()
@@ -1213,9 +1219,6 @@ func _on_card_clicked(card_id : int) -> void:
 	#If you click your opponent's card, this gets called on your local copy of the opponent's side
 	#The code will go through, determine what options ought be included, and add them to the popup
 	
-	if currentPrompt != -1 or (!can_do_things and is_your_side):
-		return
-	
 	reset_popup()
 	currentCard = card_id
 	
@@ -1224,9 +1227,12 @@ func _on_card_clicked(card_id : int) -> void:
 		actualCard.showNotice()
 		send_command("Click Notification",{"player_id":player_id,"card_id":currentCard})
 	
+	if currentPrompt != -1 or (!can_do_things and is_your_side):
+		return
+	
 	if !is_your_side:
 		var currentZone = find_what_zone(currentCard)
-		if currentZone and !is_spectated:
+		if currentZone and !is_spectating:
 			popup.add_item("CARD_HOLOMEM_REQUESTDAMAGE", 53)
 			if currentZone not in [centerZone, collabZone] and len(all_occupied_zones(true)) > 1:
 				popup.add_item("CARD_HOLOMEM_REQUESTDAMAGEBACK", 54)
@@ -1245,8 +1251,10 @@ func _on_card_clicked(card_id : int) -> void:
 		if actualCard.cardType == "Holomem" and actualCard in hand and actualCard.level < 1:
 			if !preliminary_holomem_in_center and actualCard.level == 0:
 				popup.add_item(tr("CARD_HOLOMEM_PLAY_CENTERHIDDEN"), 102)
-			if preliminary_holomem_in_center and all_occupied_zones().size() < 6:
+			if preliminary_holomem_in_center and mulligan_to_bottom == 0 and all_occupied_zones().size() < 6:
 				popup.add_item(tr("CARD_HOLOMEM_PLAY_BACKHIDDEN"), 103)
+		if actualCard in hand and preliminary_holomem_in_center and mulligan_to_bottom > 0:
+			popup.add_item(tr("CARD_HAND_BOTTOMDECK"),111)
 	else:
 		match actualCard.cardType:
 			"Holomem":
@@ -1320,22 +1328,22 @@ func _on_card_clicked(card_id : int) -> void:
 				for i in range(actualCard.oshi_skills.size()):
 					var skill = actualCard.oshi_skills[i]
 					var cost_string
-					if skill[1] == -1:
+					if skill.cost == -1:
 						cost_string = "X"
 					else:
-						cost_string = str(skill[1])
+						cost_string = str(skill.cost)
 					var sp_string
-					if skill[2]:
+					if skill.sp:
 						sp_string = " SP "
 					else:
 						sp_string = " "
-					var canUseSkill = (skill[2] and !used_sp_oshi_skill) or (!skill[2] and !used_oshi_skill)
-					var canPayCost = (skill[1] >= 0 and holopower.cardList.size() >= skill[1]) or (skill[1] == -1 and holopower.cardList.size() > 0)
+					var canUseSkill = !skill.stageSkill and ((skill.sp and !used_sp_oshi_skill) or (!skill.sp and !used_oshi_skill))
+					var canPayCost = (skill.cost >= 0 and holopower.cardList.size() >= skill.cost) or (skill.cost == -1 and holopower.cardList.size() > 0)
 					#Will cause problems if an oshi has more than 2 skills
 					if canUseSkill and canPayCost:
-						popup.add_item(Settings.trans(skill[0]) + sp_string + "-" + cost_string,71 if skill[2] else 70)
-					if ((!skill[2] and used_oshi_skill) or (skill[2] and used_sp_oshi_skill)) and canPayCost:
-						popup.add_item(Settings.trans(skill[0]) + sp_string + " (again) -" + cost_string,71 if skill[2] else 70)
+						popup.add_item(Settings.trans(skill.name) + sp_string + "-" + cost_string,71 if skill.sp else 70)
+					if !skill.stageSkill and ((!skill.sp and used_oshi_skill) or (skill.sp and used_sp_oshi_skill)) and canPayCost:
+						popup.add_item(Settings.trans(skill.name) + sp_string + " (again) -" + cost_string,71 if skill.sp else 70)
 		
 		if popup.item_count > 0 and actualCard.cardType != "Oshi" and playing != currentCard:
 			popup.add_separator()
@@ -1367,6 +1375,7 @@ func _on_card_clicked(card_id : int) -> void:
 				popup.add_item(tr("CARD_STAGE_ARCHIVE"),2)
 				if actualCard.attached.size() == 0:
 					popup.add_item(tr("CARD_STAGE_HAND"),3)
+					popup.add_item(tr("CARD_STAGE_BOTTOMDECK"),14)
 				if find_in_zone(collabZone) == -1 and find_what_zone(currentCard) != centerZone:
 					popup.add_item(tr("CARD_HOLOMEM_MOVE_COLLAB"), 9)
 				if find_what_zone(currentCard) == centerZone and all_occupied_zones(true).size() > 0:
@@ -1410,6 +1419,7 @@ func _on_deck_clicked():
 		popup.add_item(tr("DECK_HOLOPOWER"),204)
 		if revealed.size() < 10:
 			popup.add_item(tr("DECK_REVEAL"),205)
+		popup.add_item(tr("DECK_DRAWBOTTOM"),206)
 		
 		popup.add_separator()
 		popup.add_item(tr("DECK_LOOKX"),297)
@@ -1426,6 +1436,9 @@ func _on_deck_clicked():
 		if !get_parent().rps:
 			popup.add_separator()
 			popup.add_item(tr("DECK_RPS"), 296)
+		
+		popup.add_separator()
+		popup.add_item(tr("DECK_EXTRA_TURN"), 295)
 		
 		popup.add_separator()
 		popup.add_item(tr("FORFEIT"), 999)
@@ -1632,7 +1645,12 @@ func _on_popup_menu_id_pressed(id):
 			currentPrompt = 54
 		70: #Oshi Skill
 			var skill = all_cards[currentCard].oshi_skills[0]
-			if skill[1] >= 0:
+			
+			#Hacky workaround for the oshi skill not being the first skill anymore
+			if skill.stageSkill:
+				skill = all_cards[currentCard].oshi_skills[1]
+			
+			if skill.cost >= 0:
 				used_oshi_skill = true
 				currentCard = -1
 			else:
@@ -1640,7 +1658,7 @@ func _on_popup_menu_id_pressed(id):
 				currentPrompt = id
 		71: #SP Oshi Skill
 			var skill = all_cards[currentCard].oshi_skills[1]
-			if skill[1] >= 0:
+			if skill.cost >= 0:
 				used_sp_oshi_skill = true
 				flipSPdown()
 				currentCard = -1
@@ -1673,12 +1691,18 @@ func _on_popup_menu_id_pressed(id):
 			currentPrompt = 101
 		102: #Play Hidden to Center
 			preliminary_holomem_in_center = true
-			$CanvasLayer/Ready.disabled = false
+			if mulligan_to_bottom == 0:
+				$CanvasLayer/Ready.disabled = false
 		103: #Play Hidden to Back
 			var possibleZones = all_unoccupied_back_zones()
 			showZoneSelection(possibleZones)
 			currentPrompt = 103
-			
+		111: #Send card in hand to bottom of deck
+			#It almost entirely happens server-side; this is just for the mulligan process
+			if mulligan_to_bottom > 0:
+				mulligan_to_bottom -= 1
+				if mulligan_to_bottom == 0:
+					$CanvasLayer/Ready.disabled = false
 		121: #Attach Support
 			var possibleZones = all_occupied_zones()
 			showZoneSelection(possibleZones)
@@ -1692,6 +1716,8 @@ func _on_popup_menu_id_pressed(id):
 			currentPrompt = 203
 		250: #Shuffle Hand Into Deck
 			can_undo_shuffle_hand = hand.duplicate()
+		295: #Take an Extra Turn
+			end_turn(true)
 		297: #Look at X
 			set_prompt(tr("PROMPT_LOOKATX"),5)
 			currentPrompt = 297
@@ -1937,7 +1963,7 @@ func set_player1(value:bool):
 			$CanvasLayer/OpponentLabel/Label.text = tr("TURN_FIRST")
 			$CanvasLayer/OpponentLabel.visible = true
 
-func end_turn():
+func end_turn(fake = false):
 	if is_turn:
 		step = 1
 		first_turn = false
@@ -1949,13 +1975,16 @@ func end_turn():
 		for actualCard in all_cards.values():
 			if actualCard.cardType == "Holomem":
 				actualCard.bloomed_this_turn = false
-		is_turn = false
 		turn += 1
 		%TurnCount.text = tr("TURN_COUNT").format({"turn": turn})
-		$"CanvasLayer/End Turn".visible = false
-		emit_signal("ended_turn")
+		if fake:
+			get_parent()._actually_select_step(1)
+		else:
+			is_turn = false
+			emit_signal("ended_turn")
+			get_parent().toggle_step_mouse_filters(false)
+			$"CanvasLayer/End Turn".visible = false
 		get_parent()._enable_steps(true)
-		get_parent().toggle_step_mouse_filters(false)
 		
 		if is_goldfishing:
 			for zone_info in get_parent().opponentSide.zones:
@@ -1998,7 +2027,9 @@ func side_command(command: String, data: Dictionary) -> void:
 			if "forced" in data:
 				_mulligan_decision(data["forced"])
 		"No Mulligan":
-			wait_mulligan()
+			if "penalty" in data:
+				mulligan_to_bottom = data["penalty"]
+				wait_mulligan()
 		"Mulligan Done":
 			if "forced_mulligan_cards" in data:
 				specialStart3(data["forced_mulligan_cards"])
@@ -2159,6 +2190,11 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 		"All Ready":
 			if "zones" in data:
 				specialStart4_fake(data["zones"])
+		"Extra Turn":
+			var yourSide = get_parent().yourSide
+			if yourSide:
+				yourSide.turn += 1
+				yourSide.find_child("TurnCount").text = tr("TURN_COUNT").format({"turn": yourSide.turn})
 		
 		"Card Left Field":
 			if "card_id" in data and int(data["card_id"]) in all_cards and _is_card_onstage(data["card_id"]):
@@ -2216,7 +2252,6 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 				fuda_list[int(data["fuda"])].shuffle()
 		"Roll Die":
 			if "result" in data:
-				#emit_signal("sent_game_message",tr("MESSAGE_DIERESULT").format({amount = num}))
 				die.roll(int(data["result"]))
 				_die_sfx()
 		"Attack":

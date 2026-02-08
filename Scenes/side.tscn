@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://j87r323v31qv"]
+[gd_scene format=3 uid="uid://j87r323v31qv"]
 
 [ext_resource type="Script" uid="uid://ylf18j5yu4ay" path="res://Scripts/side.gd" id="1_vy6dv"]
 [ext_resource type="Texture2D" uid="uid://cuxe458wilybi" path="res://playmat.jpg" id="2_0kggm"]
@@ -81,61 +81,61 @@ stream_0/stream = ExtResource("24_q5bqm")
 stream_1/stream = ExtResource("25_30rg1")
 stream_2/stream = ExtResource("26_u0kxe")
 
-[node name="Side" type="Node2D"]
+[node name="Side" type="Node2D" unique_id=987065924]
 script = ExtResource("1_vy6dv")
 
-[node name="gradient" type="Sprite2D" parent="."]
+[node name="gradient" type="Sprite2D" parent="." unique_id=1018266754]
 z_index = -2
 position = Vector2(-1758, -532)
 texture = ExtResource("2_0kggm")
 centered = false
 
-[node name="Zones" type="Node2D" parent="."]
+[node name="Zones" type="Node2D" parent="." unique_id=1053623049]
 
-[node name="Center" parent="Zones" instance=ExtResource("2_a11wy")]
+[node name="Center" parent="Zones" unique_id=35357881 instance=ExtResource("2_a11wy")]
 z_index = 1
 position = Vector2(0, -223)
 
-[node name="Collab" parent="Zones" instance=ExtResource("2_a11wy")]
+[node name="Collab" parent="Zones" unique_id=764593220 instance=ExtResource("2_a11wy")]
 z_index = 1
 position = Vector2(-430, -223)
 zoneID = 1
 
-[node name="Back1" parent="Zones" instance=ExtResource("2_a11wy")]
+[node name="Back1" parent="Zones" unique_id=567487445 instance=ExtResource("2_a11wy")]
 z_index = 1
 position = Vector2(-950, 380)
 zoneID = 2
 
-[node name="Back2" parent="Zones" instance=ExtResource("2_a11wy")]
+[node name="Back2" parent="Zones" unique_id=540424494 instance=ExtResource("2_a11wy")]
 z_index = 1
 position = Vector2(-600, 380)
 zoneID = 3
 
-[node name="Back3" parent="Zones" instance=ExtResource("2_a11wy")]
+[node name="Back3" parent="Zones" unique_id=138872796 instance=ExtResource("2_a11wy")]
 z_index = 1
 position = Vector2(-250, 380)
 zoneID = 4
 
-[node name="Back4" parent="Zones" instance=ExtResource("2_a11wy")]
+[node name="Back4" parent="Zones" unique_id=1544772084 instance=ExtResource("2_a11wy")]
 z_index = 1
 position = Vector2(100, 380)
 zoneID = 5
 
-[node name="Back5" parent="Zones" instance=ExtResource("2_a11wy")]
+[node name="Back5" parent="Zones" unique_id=2003184141 instance=ExtResource("2_a11wy")]
 z_index = 1
 position = Vector2(450, 380)
 zoneID = 6
 
-[node name="Back6" parent="Zones" instance=ExtResource("2_a11wy")]
+[node name="Back6" parent="Zones" unique_id=1145114586 instance=ExtResource("2_a11wy")]
 z_index = 1
 position = Vector2(800, 380)
 zoneID = 7
 
-[node name="PopupMenu" type="PopupMenu" parent="."]
+[node name="PopupMenu" type="PopupMenu" parent="." unique_id=1694199144]
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 20
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=224447367]
 clip_contents = true
 offset_left = -1690.0
 offset_top = -530.0
@@ -143,62 +143,62 @@ offset_right = 350.0
 offset_bottom = 514.0
 scale = Vector2(1.53, 1.53)
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=143611641]
 transparent_bg = true
 handle_input_locally = false
 physics_object_picking = true
 size = Vector2i(2040, 1044)
 render_target_update_mode = 4
 
-[node name="Node3D" type="Node3D" parent="SubViewportContainer/SubViewport"]
+[node name="Node3D" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1538897513]
 
-[node name="DECK" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+[node name="DECK" parent="SubViewportContainer/SubViewport/Node3D" unique_id=1653705644 instance=ExtResource("3_4khac")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 16.5929, 0, -0.627)
 
-[node name="CHEERDECK" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+[node name="CHEERDECK" parent="SubViewportContainer/SubViewport/Node3D" unique_id=808351442 instance=ExtResource("3_4khac")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -16.6171, 0, -0.627)
 
-[node name="ARCHIVE" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+[node name="ARCHIVE" parent="SubViewportContainer/SubViewport/Node3D" unique_id=1325405381 instance=ExtResource("3_4khac")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 21.2319, 0, -0.627)
 archive = true
 
-[node name="HOLOPOWER" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_4khac")]
+[node name="HOLOPOWER" parent="SubViewportContainer/SubViewport/Node3D" unique_id=1393912688 instance=ExtResource("3_4khac")]
 transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 15.9969, 0, -5.674)
 
-[node name="Die" parent="SubViewportContainer/SubViewport/Node3D" instance=ExtResource("7_3wwxl")]
+[node name="Die" parent="SubViewportContainer/SubViewport/Node3D" unique_id=2109000940 instance=ExtResource("7_3wwxl")]
 transform = Transform3D(0.944325, 0, -0.329015, 0, 1, 0, 0.329015, 0, 0.944325, 13.2699, 0, -0.02)
 
-[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/Node3D"]
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/Node3D" unique_id=1689305258]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 16.5, 3.8)
 size = 0.15
 
-[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Node3D"]
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Node3D" unique_id=191954070]
 transform = Transform3D(0.879607, -2.07935e-08, 0.475701, -0.475701, -3.84488e-08, 0.879607, 0, -1, -4.37113e-08, 21.5293, 13.4707, 3.32323)
 light_energy = 16.0
 light_indirect_energy = 4.676
 spot_range = 307.097
 spot_angle = 62.5486
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Node3D"]
+[node name="SpotLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Node3D" unique_id=2066087312]
 transform = Transform3D(0.375692, 0.774292, -0.509243, 0.148634, 0.492041, 0.85779, 0.914748, -0.397956, 0.0697697, -27.5446, 17.0795, -0.403971)
 light_energy = 16.0
 light_indirect_energy = 4.676
 spot_range = 136.037
 spot_angle = 48.0811
 
-[node name="Cards" type="Node2D" parent="."]
+[node name="Cards" type="Node2D" parent="." unique_id=918635807]
 
-[node name="Cheer" type="Node2D" parent="Cards"]
+[node name="Cheer" type="Node2D" parent="Cards" unique_id=2121155862]
 
-[node name="Attached" type="Node2D" parent="Cards"]
+[node name="Attached" type="Node2D" parent="Cards" unique_id=1572523098]
 
-[node name="Main" type="Node2D" parent="Cards"]
+[node name="Main" type="Node2D" parent="Cards" unique_id=1568787436]
 
-[node name="Above" type="Node2D" parent="Cards"]
+[node name="Above" type="Node2D" parent="Cards" unique_id=1282192839]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2124506503]
 
-[node name="Prompt" type="ColorRect" parent="CanvasLayer"]
+[node name="Prompt" type="ColorRect" parent="CanvasLayer" unique_id=1714048533]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -214,7 +214,7 @@ grow_vertical = 2
 theme = ExtResource("8_u8usn")
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[node name="Input" type="Label" parent="CanvasLayer/Prompt"]
+[node name="Input" type="Label" parent="CanvasLayer/Prompt" unique_id=1317413767]
 auto_translate_mode = 2
 layout_mode = 1
 anchors_preset = -1
@@ -232,7 +232,7 @@ theme_override_font_sizes/font_size = 28
 text = "Draw X cards
 X="
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Prompt/Input"]
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Prompt/Input" unique_id=2122798374]
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 54.309998
@@ -243,7 +243,7 @@ theme_override_font_sizes/font_size = 30
 placeholder_text = "7"
 max_length = 2
 
-[node name="Submit" type="Button" parent="CanvasLayer/Prompt"]
+[node name="Submit" type="Button" parent="CanvasLayer/Prompt" unique_id=1619299035]
 layout_mode = 0
 offset_left = 287.0
 offset_top = 41.0
@@ -252,7 +252,7 @@ offset_bottom = 88.0
 theme_override_font_sizes/font_size = 25
 text = "PROMPT_SUBMIT"
 
-[node name="PromptText" type="ColorRect" parent="CanvasLayer"]
+[node name="PromptText" type="ColorRect" parent="CanvasLayer" unique_id=1016815878]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -268,7 +268,7 @@ grow_vertical = 2
 theme = ExtResource("8_u8usn")
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[node name="Input" type="Label" parent="CanvasLayer/PromptText"]
+[node name="Input" type="Label" parent="CanvasLayer/PromptText" unique_id=532501148]
 auto_translate_mode = 2
 layout_mode = 1
 anchors_preset = -1
@@ -285,7 +285,7 @@ theme_override_constants/line_spacing = 20
 theme_override_font_sizes/font_size = 25
 text = "PROMPT_NOTE"
 
-[node name="TextEdit" type="TextEdit" parent="CanvasLayer/PromptText/Input"]
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/PromptText/Input" unique_id=1667801030]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 39.0
@@ -294,7 +294,7 @@ offset_bottom = 146.0
 theme_override_fonts/font = ExtResource("7_exc88")
 placeholder_text = "PROMPT_NOTE_PLACEHOLDER"
 
-[node name="Submit" type="Button" parent="CanvasLayer/PromptText"]
+[node name="Submit" type="Button" parent="CanvasLayer/PromptText" unique_id=1443274357]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 165.0
@@ -303,7 +303,7 @@ offset_bottom = 212.0
 theme_override_font_sizes/font_size = 25
 text = "PROMPT_SUBMIT"
 
-[node name="Cancel" type="Button" parent="CanvasLayer"]
+[node name="Cancel" type="Button" parent="CanvasLayer" unique_id=1466148454]
 visible = false
 offset_left = 1130.0
 offset_top = 559.0
@@ -313,7 +313,7 @@ theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
 text = "PROMPT_CANCEL"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer" unique_id=2077803079]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
@@ -329,13 +329,13 @@ grow_vertical = 2
 theme = SubResource("Theme_y8s1y")
 vertical_scroll_mode = 0
 
-[node name="LookAt" type="ColorRect" parent="CanvasLayer/ScrollContainer"]
+[node name="LookAt" type="ColorRect" parent="CanvasLayer/ScrollContainer" unique_id=605736133]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[node name="Go First" type="Button" parent="CanvasLayer"]
+[node name="Go First" type="Button" parent="CanvasLayer" unique_id=1999747179]
 visible = false
 offset_left = 765.0
 offset_top = 286.0
@@ -345,7 +345,7 @@ theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
 text = "CHOICE_FIRST"
 
-[node name="Go Second" type="Button" parent="CanvasLayer"]
+[node name="Go Second" type="Button" parent="CanvasLayer" unique_id=1397017227]
 visible = false
 offset_left = 766.0
 offset_top = 354.0
@@ -355,7 +355,7 @@ theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
 text = "CHOICE_SECOND"
 
-[node name="End Turn" type="Button" parent="CanvasLayer"]
+[node name="End Turn" type="Button" parent="CanvasLayer" unique_id=2106573774]
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
@@ -369,7 +369,7 @@ theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 20
 text = "END_TURN"
 
-[node name="TurnCount" type="Label" parent="CanvasLayer"]
+[node name="TurnCount" type="Label" parent="CanvasLayer" unique_id=1756886180]
 unique_name_in_owner = true
 visible = false
 offset_left = 1127.0
@@ -383,7 +383,7 @@ theme_override_constants/outline_size = 2
 text = "TURN_COUNT"
 horizontal_alignment = 2
 
-[node name="Ready" type="Button" parent="CanvasLayer"]
+[node name="Ready" type="Button" parent="CanvasLayer" unique_id=603321078]
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
@@ -398,7 +398,7 @@ theme_override_font_sizes/font_size = 25
 disabled = true
 text = "START_READY"
 
-[node name="Question" type="ColorRect" parent="CanvasLayer"]
+[node name="Question" type="ColorRect" parent="CanvasLayer" unique_id=1107408090]
 visible = false
 z_index = 10
 offset_left = 399.0
@@ -408,7 +408,7 @@ offset_bottom = 400.0
 theme = ExtResource("8_u8usn")
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[node name="Label" type="Label" parent="CanvasLayer/Question"]
+[node name="Label" type="Label" parent="CanvasLayer/Question" unique_id=1117541190]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -425,7 +425,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="RPS" type="HBoxContainer" parent="CanvasLayer/Question"]
+[node name="RPS" type="HBoxContainer" parent="CanvasLayer/Question" unique_id=294930002]
 layout_mode = 0
 offset_left = 49.0
 offset_top = 153.0
@@ -433,28 +433,28 @@ offset_right = 810.0
 offset_bottom = 193.0
 alignment = 1
 
-[node name="Rock" type="Button" parent="CanvasLayer/Question/RPS"]
+[node name="Rock" type="Button" parent="CanvasLayer/Question/RPS" unique_id=1613387149]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RPS_ROCK"
 
-[node name="Control" type="Control" parent="CanvasLayer/Question/RPS"]
+[node name="Control" type="Control" parent="CanvasLayer/Question/RPS" unique_id=244751830]
 layout_mode = 2
 
-[node name="Paper" type="Button" parent="CanvasLayer/Question/RPS"]
+[node name="Paper" type="Button" parent="CanvasLayer/Question/RPS" unique_id=1225960087]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RPS_PAPER"
 
-[node name="Control2" type="Control" parent="CanvasLayer/Question/RPS"]
+[node name="Control2" type="Control" parent="CanvasLayer/Question/RPS" unique_id=1828352207]
 layout_mode = 2
 
-[node name="Scissors" type="Button" parent="CanvasLayer/Question/RPS"]
+[node name="Scissors" type="Button" parent="CanvasLayer/Question/RPS" unique_id=1803458072]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RPS_SCISSORS"
 
-[node name="Yes" type="Button" parent="CanvasLayer/Question"]
+[node name="Yes" type="Button" parent="CanvasLayer/Question" unique_id=585385925]
 visible = false
 layout_mode = 0
 offset_left = 236.0
@@ -464,7 +464,7 @@ offset_bottom = 211.0
 theme_override_font_sizes/font_size = 40
 text = "YES"
 
-[node name="No" type="Button" parent="CanvasLayer/Question"]
+[node name="No" type="Button" parent="CanvasLayer/Question" unique_id=2061797813]
 visible = false
 layout_mode = 0
 offset_left = 472.0
@@ -474,7 +474,7 @@ offset_bottom = 211.0
 theme_override_font_sizes/font_size = 40
 text = "NO"
 
-[node name="Lose" type="Button" parent="CanvasLayer/Question"]
+[node name="Lose" type="Button" parent="CanvasLayer/Question" unique_id=1759496874]
 visible = false
 layout_mode = 0
 offset_left = 236.0
@@ -484,7 +484,7 @@ offset_bottom = 211.0
 theme_override_font_sizes/font_size = 40
 text = "YES"
 
-[node name="KeepPlaying" type="Button" parent="CanvasLayer/Question"]
+[node name="KeepPlaying" type="Button" parent="CanvasLayer/Question" unique_id=1780581681]
 visible = false
 layout_mode = 0
 offset_left = 472.0
@@ -494,7 +494,7 @@ offset_bottom = 211.0
 theme_override_font_sizes/font_size = 40
 text = "NO"
 
-[node name="OK" type="Button" parent="CanvasLayer/Question"]
+[node name="OK" type="Button" parent="CanvasLayer/Question" unique_id=284330170]
 visible = false
 layout_mode = 0
 offset_left = 344.0
@@ -504,7 +504,7 @@ offset_bottom = 219.0
 theme_override_font_sizes/font_size = 40
 text = "OK"
 
-[node name="OpponentLabel" type="ColorRect" parent="CanvasLayer"]
+[node name="OpponentLabel" type="ColorRect" parent="CanvasLayer" unique_id=427400122]
 visible = false
 anchors_preset = 5
 anchor_left = 0.5
@@ -517,7 +517,7 @@ grow_horizontal = 2
 theme = ExtResource("8_u8usn")
 color = Color(0.180392, 0.32549, 0.45098, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/OpponentLabel"]
+[node name="Label" type="Label" parent="CanvasLayer/OpponentLabel" unique_id=517384200]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -537,7 +537,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="MulliganWarning" type="ColorRect" parent="CanvasLayer/OpponentLabel"]
+[node name="MulliganWarning" type="ColorRect" parent="CanvasLayer/OpponentLabel" unique_id=1592996537]
 visible = false
 layout_mode = 1
 anchors_preset = 5
@@ -551,7 +551,7 @@ grow_horizontal = 2
 theme = ExtResource("8_u8usn")
 color = Color(0.180392, 0.32549, 0.45098, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/OpponentLabel/MulliganWarning"]
+[node name="Label" type="Label" parent="CanvasLayer/OpponentLabel/MulliganWarning" unique_id=796242970]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -568,55 +568,56 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 text = "MULLIGAN_TEXT"
 
-[node name="SPmarker" type="Sprite2D" parent="."]
+[node name="SPmarker" type="Sprite2D" parent="." unique_id=1790657238]
+visible = false
 z_index = 4
 position = Vector2(533, -448)
 texture = ExtResource("9_exc88")
 region_enabled = true
 region_rect = Rect2(0, 0, 200, 120)
 
-[node name="Audio" type="Node2D" parent="."]
+[node name="Audio" type="Node2D" parent="." unique_id=650178869]
 
-[node name="Drawing" type="AudioStreamPlayer" parent="Audio"]
+[node name="Drawing" type="AudioStreamPlayer" parent="Audio" unique_id=1046705269]
 stream = SubResource("AudioStreamRandomizer_dstwm")
 max_polyphony = 20
 bus = &"SFX"
 
-[node name="Shuffling" type="AudioStreamPlayer" parent="Audio"]
+[node name="Shuffling" type="AudioStreamPlayer" parent="Audio" unique_id=688495749]
 stream = SubResource("AudioStreamRandomizer_qmp8k")
 max_polyphony = 20
 bus = &"SFX"
 
-[node name="Rolling" type="AudioStreamPlayer" parent="Audio"]
+[node name="Rolling" type="AudioStreamPlayer" parent="Audio" unique_id=986435657]
 stream = SubResource("AudioStreamRandomizer_e0j4a")
 max_polyphony = 20
 bus = &"SFX"
 
-[node name="Moving" type="AudioStreamPlayer" parent="Audio"]
+[node name="Moving" type="AudioStreamPlayer" parent="Audio" unique_id=96360572]
 stream = SubResource("AudioStreamRandomizer_4b5bi")
 max_polyphony = 20
 bus = &"SFX"
 
-[node name="Placing" type="AudioStreamPlayer" parent="Audio"]
+[node name="Placing" type="AudioStreamPlayer" parent="Audio" unique_id=1331324279]
 stream = SubResource("AudioStreamRandomizer_1ol4w")
 max_polyphony = 20
 bus = &"SFX"
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=2044423774]
 wait_time = 0.5
 one_shot = true
 
-[node name="CosmeticsTimer" type="Timer" parent="."]
+[node name="CosmeticsTimer" type="Timer" parent="." unique_id=1562589686]
 unique_name_in_owner = true
 wait_time = 0.5
 one_shot = true
 
-[node name="CosmeticsTimer2" type="Timer" parent="."]
+[node name="CosmeticsTimer2" type="Timer" parent="." unique_id=778808025]
 unique_name_in_owner = true
 wait_time = 2.0
 one_shot = true
 
-[node name="HTTPManager" type="Node" parent="."]
+[node name="HTTPManager" type="Node" parent="." unique_id=442184223]
 unique_name_in_owner = true
 script = ExtResource("24_i3t2a")
 parallel_connections_count = 10

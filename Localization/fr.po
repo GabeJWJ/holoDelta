@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-12-22 19:33\n"
+"PO-Revision-Date: 2026-01-01 23:06\n"
 
 #: Scenes/board.tscn
 msgid "TITLE"
@@ -239,6 +239,14 @@ msgstr "Ajouter un Dé depuis un fichier"
 #: Scenes/board.tscn
 msgid "COSMETICS_D_DEFAULT"
 msgstr "Dé par défaut"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_SP"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_SP_DEFAULT"
+msgstr ""
 
 #: Scenes/board.tscn
 msgid "COSMETICS_DEFAULTSLEEVES"
@@ -858,6 +866,10 @@ msgid "CARD_HOLOMEM_PLAY"
 msgstr "Jouer"
 
 #: Scripts/side.gd
+msgid "CARD_HOLOMEM_PLAY_DIRECT"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "CARD_HOLOMEM_BLOOM"
 msgstr "Bloom"
 
@@ -878,20 +890,24 @@ msgid "CARD_HOLOMEM_REST"
 msgstr "Épuiser"
 
 #: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_CENTER"
-msgstr "Déplacer vers le Centre"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_BACK"
-msgstr "Déplacer vers les Backstages"
-
-#: Scripts/side.gd
 msgid "CARD_HOLOMEM_COLLAB"
 msgstr "Collab"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_BATON"
 msgstr "Relais"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_CENTERCOLLABSWAP"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_CENTER"
+msgstr "Déplacer vers le Centre"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_BACK"
+msgstr "Déplacer vers les Backstages"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_DAMAGE"
@@ -1121,6 +1137,14 @@ msgstr "Jouer"
 #: Scripts/side.gd
 msgid "LIST_ARCHIVE_HOLOMEM_PLAY"
 msgstr "Jouer"
+
+#: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_PLAY_DIRECT"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_PLAY_DIRECT"
+msgstr ""
 
 #: Scripts/side.gd
 msgid "LIST_DECK_HOLOMEM_BLOOM"

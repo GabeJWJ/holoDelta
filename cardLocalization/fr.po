@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2025-12-22 19:33\n"
+"PO-Revision-Date: 2026-02-07 21:38\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Quand cet Holomem est Inconscient, perdez 2 VIE"
@@ -1364,7 +1364,7 @@ msgid "hBP01-065_ART_0_NAME"
 msgstr "Je veux mettre de l'ambiance !"
 
 msgid "hBP01-065_BLOOM_NAME"
-msgstr "Faisons-le !!!!"
+msgstr "Let's do this!!!!"
 
 msgid "hBP01-065_BLOOM_EFFECT"
 msgstr "Regardez les 3 premières cartes de votre Deck. Révélez 1 Holomem parmi elles et mettez-le dans votre Main. Puis archivez les cartes restantes."
@@ -2909,7 +2909,7 @@ msgid "hBP02-007_SPSKILL_NAME"
 msgstr "Rap de Shinigami"
 
 msgid "hBP02-007_SPSKILL_EFFECT"
-msgstr "[1/partie] Utilisable si votre Holomem Central est ⟨Mori Calliope⟩ : Pendant ce tour, après avoir utilisé un Art, l'un de vos Holomems nommé ⟨Mori Calliope⟩ peut utiliser le même Art 1 fois de plus."
+msgstr "[1/partie] Utilisable si votre Holomem Central est ⟨Mori Calliope⟩ : Pendant ce tour, lorsque que l'une de vos ⟨Mori Calliope⟩ utilise un Art : utilisez le même Art une fois de plus"
 
 msgid "hBP02-044_NAME"
 msgstr "Murasaki Shion"
@@ -3438,7 +3438,7 @@ msgid "hBP02-039_GIFT_NAME"
 msgstr "puipuipui~"
 
 msgid "hBP02-039_GIFT_EFFECT"
-msgstr "[1/tour] Lorsque vous révélez des cartes avec l'Art de cet Holomem « Machines à sous holoX », vous pouvez mettre 1 carte Support dans votre Main au lieu de l'archiver."
+msgstr "[1/tour] Lorsque vous révélez des cartes avec l'Art de cet Holomem « Machines à sous holoX », vous pouvez mettre 1 Soutien dans votre Main au lieu de l'archiver."
 
 msgid "hBP02-040_NAME"
 msgstr "Sakamata Chloe"
@@ -3993,7 +3993,7 @@ msgid "hSD05-008_ART_0_NAME"
 msgstr "Je crois que je commence à ressembler à une Bancho !"
 
 msgid "hSD05-008_ART_0_EFFECT"
-msgstr "Les Arts de l'un de vos Holomems avec #ReGLOSS gagnent +40 dégâts jusqu'à la fin de ce tour."
+msgstr "Les Arts de l'un de vos Holomems Debut avec #ReGLOSS gagnent +40 dégâts jusqu'à la fin de ce tour."
 
 msgid "hSD05-009_NAME"
 msgstr "Todoroki Hajime"
@@ -4454,7 +4454,7 @@ msgid "hBP03-009_NAME"
 msgstr "Himemori Luna"
 
 msgid "hBP03-009_ART_0_NAME"
-msgstr "Tout le monde est d'accord ~?"
+msgstr "Est-ce que tout le monde est là ~?"
 
 msgid "hBP03-009_ART_0_EFFECT"
 msgstr "Si aucun ⟨Luknight⟩ est attaché à un Holomem sur votre Scène, révélez 1 ⟨Luknight⟩ de votre Deck et attachez-le à l'un de vos Holomems. Puis mélangez votre deck."
@@ -7099,7 +7099,7 @@ msgid "hBP04-009_ART_0_NAME"
 msgstr "Les enfants perdus dans le cycle sans fin de la réincarnation"
 
 msgid "hBP04-009_ART_0_EFFECT"
-msgstr "Regardez les 3 premières cartes de votre Deck. Révélez 1 [Holomem Debut avec #holoX ou carte Soutien avec #KoyoLabo] parmi elles et mettez cette carte dans votre Main. Puis, mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
+msgstr "Regardez les 3 premières cartes de votre Deck. Révélez 1 [Holomem Debut avec #holoX ou Soutien avec #KoyoLabo] parmi elles et mettez cette carte dans votre Main. Puis, mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP04-010_NAME"
 msgstr "Hakui Koyori"
@@ -7141,7 +7141,7 @@ msgid "hBP04-013_ART_0_NAME"
 msgstr "La vie de Koyori"
 
 msgid "hBP04-013_ART_0_EFFECT"
-msgstr "Si cet Holomem a une carte Soutien avec #KoyoLabo attachée, révélez 1 carte Soutien avec #KoyoLabo de votre Deck et ajoutez-la à votre Main. Puis mélangez votre Deck."
+msgstr "Si cet Holomem a un Soutien avec #KoyoLabo attachée, révélez 1 Soutien avec #KoyoLabo de votre Deck et ajoutez-la à votre Main. Puis mélangez votre Deck."
 
 msgid "hBP04-013_GIFT_NAME"
 msgstr "N’abandonne jamais !"
@@ -7155,7 +7155,7 @@ msgstr "Tube à essai vert"
 msgid "hBP04-097_EFFECT"
 msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts\n\n"
 "◆ Gagne l'effet suivant s'il est attaché à ⟨Hakui Koyori⟩ 1st Bloom ou plus :\n"
-"Pendant votre Phase Principale, vous pouvez archiver 1 Cheer de l'Holomem avec cet Outil attaché pour relever 1 Holomem avec #holoX au Repos.\n\n"
+"Pendant votre Phase Principale, vous pouvez archiver 1 Cheer de l'Holomem avec cet Outil attaché pour redresser 1 Holomem avec #holoX au Repos.\n\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP04-100_NAME"
@@ -7679,7 +7679,7 @@ msgid "hSD08-005_GIFT_NAME"
 msgstr "Sac à cordon"
 
 msgid "hSD08-005_GIFT_EFFECT"
-msgstr "(Position de collab uniquement) Si votre Holomem est mis inconscient durant le tour de votre adversaire, si vous avez autant ou moins de Vie que votre adversaire, vous pouvez récupérer un objet avec \"PC\" dans son nom de votre Archive vers votre main."
+msgstr "[Position Collab] Si l'un de vos Holomem est mis Inconscient durant le tour de votre adversaire, si vous avez autant ou moins de VIE que votre adversaire, vous pouvez mettre 1 Soutien avec \"PC\" dans son nom de votre Archive dans votre Main."
 
 msgid "hSD08-006_NAME"
 msgstr "Tokoyami Towa"
@@ -8472,7 +8472,7 @@ msgid "hBP05-073_ART_0_NAME"
 msgstr "C'EST L'heure dE R4AGER!!!!!"
 
 msgid "hBP05-073_ART_0_EFFECT"
-msgstr "Si votre Oshi est ⟨Ayunda Risu⟩, cet Art gagne +10 dégâts pour chaque Cheer attaché à vos Holomems avec #IDGen1. Cet effet est limité à 10 Cheers."
+msgstr "Si votre Oshi est ⟨Ayunda Risu⟩, cet Art gagne +10 dégâts pour chaque Cheer attaché à vos Holomems avec #IDGen1. Le nombre maximum de Cheers pour cet effet est de 10."
 
 msgid "hBP05-073_COLLAB_NAME"
 msgstr "BRRRR"
@@ -9218,7 +9218,7 @@ msgid "hBP06-063_BLOOM_NAME"
 msgstr "Flan et Omurice pour Enfant"
 
 msgid "hBP06-063_BLOOM_EFFECT"
-msgstr "Si un ⟨Roboser⟩ est attaché à cet Holomem, infligez 20 dégâts spéciaux à l'Holomem Central adverse. "
+msgstr "Si un ⟨Roboser⟩ est attaché à un Holomem, infligez 20 dégâts spéciaux à l'Holomem Central adverse. "
 
 msgid "hBP06-090_NAME"
 msgstr "Scène fleurissante"
@@ -9293,10 +9293,10 @@ msgid "hBP06-074_COLLAB_NAME"
 msgstr "Tenshi Kaiwai"
 
 msgid "hBP06-074_COLLAB_EFFECT"
-msgstr "Pendant ce tour, les Arts de votre Holomem Central gagnent +10 dégâts pour chaque Support utilisé durant ce tour. Le nombre maximum de cartes prises en compte pour cet effet est de 3. "
+msgstr "Pendant ce tour, les Arts de votre Holomem Central gagnent +10 dégâts pour chaque Soutien utilisé durant ce tour. Le nombre maximum de cartes prises en compte pour cet effet est de 3. "
 
 msgid "hBP06-088_NAME"
-msgstr "Prank Rabbit"
+msgstr "Lapine farceuse"
 
 msgid "hBP06-088_EFFECT"
 msgstr "Cette carte ne peut être jouée que si votre Holomem a été mis Inconscient pendant le tour précédent de votre adversaire, et que vous avez moins de VIE que votre adversaire.\n\n"
@@ -9346,7 +9346,7 @@ msgid "hBP06-085_NAME"
 msgstr "PC Favori"
 
 msgid "hBP06-085_EFFECT"
-msgstr "Révélez 1 Holomem Debut et 1 Holomem Buzz avec le même nom et 1 Support avec #MerchBuzz de votre Deck, mettez les cartes révélées dans votre Main. Puis mélangez votre Deck."
+msgstr "Révélez 1 Holomem Debut et 1 Holomem Buzz avec le même nom et 1 Soutien avec #MerchBuzz de votre Deck, mettez les cartes révélées dans votre Main. Puis mélangez votre Deck."
 
 msgid "hBP06-065_NAME"
 msgstr "Robocosan"
@@ -9639,7 +9639,7 @@ msgid "hBP06-030_GIFT_NAME"
 msgstr "Ressentir de la gratitude envers tout le monde"
 
 msgid "hBP06-030_GIFT_EFFECT"
-msgstr "[Position Collab] Pendant le tour de votre adversaire, au lieu d'archiver un ⟨Luknight⟩ attaché à votre Holomem Central, vous pouvez le réattacher à l'une de vos ⟨Himemori Luna⟩ à la place."
+msgstr "[Position Collab] Pendant le tour de votre adversaire, au lieu d'archiver un ⟨Luknight⟩ attaché à votre Holomem Central, vous pouvez le réattacher à l'une de vos ⟨Himemori Luna⟩ en Arrière à la place."
 
 msgid "hBP06-103_NAME"
 msgstr "Matsurisu"
@@ -10409,4 +10409,22 @@ msgstr "Cheer Violet"
 
 msgid "hY06-008_NAME"
 msgstr "Cheer Jaune"
+
+msgid "hY01-010_NAME"
+msgstr ""
+
+msgid "hY02-008_NAME"
+msgstr ""
+
+msgid "hY03-013_NAME"
+msgstr ""
+
+msgid "hY04-010_NAME"
+msgstr ""
+
+msgid "hY05-008_NAME"
+msgstr ""
+
+msgid "hY06-007_NAME"
+msgstr ""
 
