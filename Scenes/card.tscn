@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://4fkqvw0xk8ra"]
+[gd_scene format=3 uid="uid://4fkqvw0xk8ra"]
 
 [ext_resource type="Script" uid="uid://dapyj3grukcxh" path="res://Scripts/card.gd" id="1_wdbwf"]
 [ext_resource type="Texture2D" uid="uid://bknptx6wuqvkd" path="res://cardover.png" id="2_7g26p"]
@@ -15,16 +15,16 @@ bg_color = Color(0.11372549, 0.16470589, 0.22352941, 0.90588236)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mm04k"]
 bg_color = Color(0.11372549, 0.16470589, 0.22352941, 0.90588236)
 
-[node name="Card" type="Node2D"]
+[node name="Card" type="Node2D" unique_id=2098896367]
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_wdbwf")
 
-[node name="Notice" type="Sprite2D" parent="."]
+[node name="Notice" type="Sprite2D" parent="." unique_id=1589178124]
 modulate = Color(1, 1, 1, 0)
 scale = Vector2(1.05, 1.05)
 texture = ExtResource("2_7g26p")
 
-[node name="CardInfo" parent="." instance=ExtResource("3_0ltqy")]
+[node name="CardInfo" parent="." unique_id=1262460287 instance=ExtResource("3_0ltqy")]
 unique_name_in_owner = true
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,13 +34,13 @@ offset_top = -214.5
 offset_right = 154.5
 offset_bottom = 214.5
 
-[node name="DamageCounter" type="Sprite2D" parent="."]
+[node name="DamageCounter" type="Sprite2D" parent="." unique_id=1513878987]
 visible = false
 position = Vector2(-110.667, -176)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_p2v7u")
 
-[node name="Label" type="Label" parent="DamageCounter"]
+[node name="Label" type="Label" parent="DamageCounter" unique_id=1080216186]
 auto_translate_mode = 2
 offset_left = -48.0
 offset_top = -30.2222
@@ -50,13 +50,13 @@ rotation = -0.174533
 theme_override_font_sizes/font_size = 40
 text = "100"
 
-[node name="ExtraCounter" type="Sprite2D" parent="."]
+[node name="ExtraCounter" type="Sprite2D" parent="." unique_id=1537635163]
 visible = false
 position = Vector2(-88, -100)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("6_tkoyl")
 
-[node name="Label" type="Label" parent="ExtraCounter"]
+[node name="Label" type="Label" parent="ExtraCounter" unique_id=1863363546]
 auto_translate_mode = 2
 offset_left = -26.6667
 offset_top = -40.8889
@@ -66,7 +66,7 @@ rotation = 0.174533
 theme_override_font_sizes/font_size = 40
 text = "100"
 
-[node name="PotentialDamage" type="Label" parent="."]
+[node name="PotentialDamage" type="Label" parent="." unique_id=1128768168]
 auto_translate_mode = 2
 visible = false
 offset_left = -138.75
@@ -82,7 +82,7 @@ theme_override_font_sizes/font_size = 40
 text = "20"
 horizontal_alignment = 1
 
-[node name="ColorRect" type="PanelContainer" parent="PotentialDamage"]
+[node name="ColorRect" type="PanelContainer" parent="PotentialDamage" unique_id=1879730017]
 z_index = -1
 layout_mode = 0
 offset_left = -8.0
@@ -92,14 +92,14 @@ offset_bottom = 55.380768
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_u5wvb")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PotentialDamage/ColorRect"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PotentialDamage/ColorRect" unique_id=1659824435]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PotentialDamage/ColorRect/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PotentialDamage/ColorRect/VBoxContainer" unique_id=697074484]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="PotentialDamageAccept" type="Button" parent="PotentialDamage/ColorRect/VBoxContainer/HBoxContainer"]
+[node name="PotentialDamageAccept" type="Button" parent="PotentialDamage/ColorRect/VBoxContainer/HBoxContainer" unique_id=680267463]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.509804)
 custom_minimum_size = Vector2(100, 100)
@@ -110,7 +110,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="PotentialDamageReject" type="Button" parent="PotentialDamage/ColorRect/VBoxContainer/HBoxContainer"]
+[node name="PotentialDamageReject" type="Button" parent="PotentialDamage/ColorRect/VBoxContainer/HBoxContainer" unique_id=1932127199]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.509804)
 custom_minimum_size = Vector2(100, 100)
@@ -121,11 +121,11 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Spacer" type="Control" parent="PotentialDamage/ColorRect/VBoxContainer"]
+[node name="Spacer" type="Control" parent="PotentialDamage/ColorRect/VBoxContainer" unique_id=945242949]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="PotentialDamageRested" type="Label" parent="."]
+[node name="PotentialDamageRested" type="Label" parent="." unique_id=1907898421]
 auto_translate_mode = 2
 visible = false
 offset_left = -248.75002
@@ -142,7 +142,7 @@ theme_override_font_sizes/font_size = 40
 text = "20"
 horizontal_alignment = 1
 
-[node name="ColorRect" type="PanelContainer" parent="PotentialDamageRested"]
+[node name="ColorRect" type="PanelContainer" parent="PotentialDamageRested" unique_id=676899341]
 z_index = -1
 layout_mode = 0
 offset_left = 18.230705
@@ -151,18 +151,18 @@ offset_right = 329.0
 offset_bottom = 75.51891
 theme_override_styles/panel = SubResource("StyleBoxFlat_mm04k")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PotentialDamageRested/ColorRect"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PotentialDamageRested/ColorRect" unique_id=614929762]
 layout_mode = 2
 
-[node name="Control" type="Control" parent="PotentialDamageRested/ColorRect/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Control2" type="Control" parent="PotentialDamageRested/ColorRect/HBoxContainer"]
+[node name="Control" type="Control" parent="PotentialDamageRested/ColorRect/HBoxContainer" unique_id=1417666687]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PotentialDamageRestedAccept" type="Button" parent="PotentialDamageRested/ColorRect/HBoxContainer"]
+[node name="Control2" type="Control" parent="PotentialDamageRested/ColorRect/HBoxContainer" unique_id=374460638]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PotentialDamageRestedAccept" type="Button" parent="PotentialDamageRested/ColorRect/HBoxContainer" unique_id=43627529]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.509804)
 custom_minimum_size = Vector2(100, 100)
@@ -173,7 +173,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="PotentialDamageRestedReject" type="Button" parent="PotentialDamageRested/ColorRect/HBoxContainer"]
+[node name="PotentialDamageRestedReject" type="Button" parent="PotentialDamageRested/ColorRect/HBoxContainer" unique_id=383865695]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.509804)
 custom_minimum_size = Vector2(100, 100)

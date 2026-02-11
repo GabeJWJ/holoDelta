@@ -1,99 +1,18 @@
-# LANGUAGE translation for holoDelta - future for the following files:
-# res://Scenes/board.tscn
-# res://Scenes/deck_list.tscn
-# res://Scenes/sleeve_select.tscn
-# res://Scenes/side.tscn
-# res://Scenes/better_texture_button.tscn
-# res://Scenes/card.tscn
-# res://Scenes/die.tscn
-# res://Scenes/fuda.tscn
-# res://Scenes/info_panel.tscn
-# res://Scenes/zone.tscn
-# res://Scenes/deck_creation.tscn
-# res://Scripts/RemapButton.gd
-# res://Scripts/deck_creation.gd
-# res://Scripts/side.gd
-# res://Scripts/Multiplayer.gd
-#
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: holoDelta - future\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: ja\n"
+"Project-Id-Version: holodelta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.5\n"
-
-#: Scenes/board.tscn
-msgid "SEND_CHAT"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "OPTION_COSMETICS_HIDE"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "TAB_INFO"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "TAB_CHAT"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "TAB_SETTINGS"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "STEP1"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "STEP2"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "STEP3"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "STEP4"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "STEP5"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "STEP6"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "CONNECT_HOST"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "CONNECT_JOIN"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "CONNECT_DIRECT_PROMPT"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "CONNECT_STEAM"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "CONNECT_DIRECT"
-msgstr ""
+"Content-Transfer-Encoding: 8-bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: holodelta\n"
+"X-Crowdin-Project-ID: 724315\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: template.pot\n"
+"X-Crowdin-File-ID: 6\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
+"PO-Revision-Date: 2026-02-07 21:38\n"
 
 #: Scenes/board.tscn
 msgid "TITLE"
@@ -101,586 +20,1077 @@ msgstr "ホロデルタ"
 
 #: Scenes/board.tscn
 msgid "SUBTITLE"
-msgstr ""
+msgstr "非公式ホロライブOCGシミュレーター"
 
 #: Scenes/board.tscn
-msgid "CONNECT_STEAM_PUBLIC"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "CONNECT_SEARCH_CANCEL"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "CONNECT_IP_CANCEL"
-msgstr ""
+msgid "DEBUG"
+msgstr "再読み込み"
 
 #: Scenes/board.tscn
 msgid "DECK_CREATE"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "DECK_SELECT"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "EXIT"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "OPTION_UNREVEALED"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "OPTION_PROXY"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "ACTION_DRAW"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "ACTION_TABS"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "ACTION_LOCK"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "ACTION_LSTEP"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "ACTION_NSTEP"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "CONNECT_STEAM_HOSTWAIT"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "CONNECT_STEAM_JOINWAIT"
-msgstr ""
+msgstr "デッキ作成/編集"
 
 #: Scenes/board.tscn
 msgid "COSMETICS"
-msgstr ""
+msgstr "サプライ変更"
 
 #: Scenes/board.tscn
-msgid "COSMETICS_CANCEL"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "COSMETICS_PM"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "COSMETICS_D"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "COSMETICS_PM_DEFAULT"
-msgstr ""
-
-#: Scenes/board.tscn
-msgid "COSMETICS_D_DEFAULT"
-msgstr ""
+#: Scripts/Multiplayer.gd
+msgid "OPTION_EN"
+msgstr "英語表記カードのみ"
 
 #: Scenes/board.tscn
 msgid "INFO"
-msgstr ""
+msgstr "詳細"
+
+#: Scenes/board.tscn
+msgid "LOBBY_CREATE"
+msgstr "ロビー作成"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_JOIN"
+msgstr "ロビーに参加"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_SPECTATE"
+msgstr "観戦"
+
+#: Scenes/board.tscn
+msgid "SOLO_GOLDFISH"
+msgstr "1人回し"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "PLAYERS_ONLINE"
+msgstr "{amount} 人がオンライン"
 
 #: Scenes/board.tscn
 msgid "INFO_DLOC"
-msgstr ""
+msgstr "デッキ保存場所"
 
 #: Scenes/board.tscn
 msgid "INFO_CANCEL"
-msgstr ""
+msgstr "閉じる"
 
-#: Scenes/board.tscn Scenes/deck_creation.tscn
+#: Scenes/board.tscn
+msgid "SETTINGS_GAME_OPTIONS"
+msgstr "ゲーム設定"
+
+#: Scenes/board.tscn
+msgid "OPTION_UNREVEALED"
+msgstr "未発売カードを許可"
+
+#: Scenes/board.tscn
+msgid "OPTION_LANGUAGE"
+msgstr "カードの言語を合わせる"
+
+#: Scenes/board.tscn
+msgid "OPTION_PROXY"
+msgstr "プロキシ(代用カード)を許可"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_AUDIO_OPTIONS"
+msgstr "音量設定"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_KEYBINDINGS"
+msgstr "キー設定"
+
+#: Scenes/board.tscn
+msgid "ACTION_DRAW"
+msgstr "ドロー"
+
+#: Scenes/board.tscn
+msgid "ACTION_CHEER"
+msgstr "エールステップ処理"
+
+#: Scenes/board.tscn
+msgid "ACTION_RESET"
+msgstr "リセットステップ処理"
+
+#: Scenes/board.tscn
+msgid "ACTION_TABS"
+msgstr "タブ切替"
+
+#: Scenes/board.tscn
+msgid "ACTION_LOCK"
+msgstr "情報パネルをロック"
+
+#: Scenes/board.tscn
+msgid "ACTION_LSTEP"
+msgstr "前のステップ"
+
+#: Scenes/board.tscn
+msgid "ACTION_NSTEP"
+msgstr "次のステップ"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_PUBLIC_LOBBIES_FOUND"
+msgstr "{amount} 件の公開ロビーが見つかりました"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_LOBBYCODE"
+msgstr "ロビーコードを入力"
+
+#: Scenes/board.tscn
+msgid "LOBBY_LOBBYCODE_PASTE"
+msgstr "ロビーコードを張り付け"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SEARCHING"
+msgstr "検索中..."
+
+#: Scenes/board.tscn
+msgid "LOBBY_REFRESH"
+msgstr "更新"
+
+#: Scenes/board.tscn
+msgid "LOBBY_BACK"
+msgstr "戻る"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SETTINGS"
+msgstr "ロビー設定"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_PRIVATE"
+msgstr "非公開"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_ALLOWSPECTATORS"
+msgstr "観戦を許可"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST"
+msgstr "禁止カード一覧"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_NONE"
+msgstr "無制限"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT"
+msgstr "現行ルール"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CURRENT_EN"
+msgstr "現行ルール (EN)"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_UNRELEASED"
+msgstr "現行ルール + 未発売"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_UNRELEASED_EN"
+msgstr "現行ルール + 未発売 (EN)"
+
+#: Scenes/board.tscn
+msgid "GOLDFISH_MENU"
+msgstr "1人回しメニュー"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "DECK_SELECT"
+msgstr "デッキを選択"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "SPECTATE_PUBLIC_GAMES_FOUND"
+msgstr "{amount} 件の公開ゲームが見つかりました"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_GAMECODE"
+msgstr "ゲームコードを入力"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PLAYMATDICE"
+msgstr "プレイマット/ダイス"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM"
+msgstr "プレイマットを読み込む"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM_DEFAULT"
+msgstr "プレイマットをデフォルトに戻す"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D"
+msgstr "ダイスを読み込む"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D_DEFAULT"
+msgstr "ダイスをデフォルトに戻す"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_SP"
+msgstr "SPマーカーを読み込む"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_SP_DEFAULT"
+msgstr "SPマーカーをデフォルトに戻す"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_DEFAULTSLEEVES"
+msgstr "デフォルトスリーブ"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_CANCEL"
+msgstr "閉じる"
+
+#: Scenes/board.tscn
+msgid "EXIT"
+msgstr "ゲーム終了"
+
+#: Scenes/board.tscn
+msgid "STEP1"
+msgstr "リセット"
+
+#: Scenes/board.tscn
+msgid "STEP2"
+msgstr "手札"
+
+#: Scenes/board.tscn
+msgid "STEP3"
+msgstr "エール"
+
+#: Scenes/board.tscn
+msgid "STEP4"
+msgstr "メイン"
+
+#: Scenes/board.tscn
+msgid "STEP5"
+msgstr "パフォーマンス"
+
+#: Scenes/board.tscn
+msgid "STEP6"
+msgstr "エンド"
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_CHAT"
+msgstr "ゲームチャット"
+
+#: Scenes/board.tscn
+msgid "SEND_CHAT"
+msgstr "送信"
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_OPTIONS"
+msgstr "ゲーム設定"
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_GAME_CODE"
+msgstr "ゲームコード"
+
+#: Scenes/board.tscn
+msgid "OPTION_COSMETICS_HIDE"
+msgstr "相手のカスタムサプライを非表示"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_ROCK"
+msgstr "グー"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_PAPER"
+msgstr "パー"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_SCISSORS"
+msgstr "チョキ"
+
+#: Scenes/board.tscn
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "RPS_WAIT"
+msgstr "相手の手を待っています..."
+
+#: Scenes/board.tscn
+msgid "LOBBY_HOST"
+msgstr "ホスト"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_NONE_CHOSEN"
+msgstr "相手がいません"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_READY"
+msgstr "準備完了"
+
+#: Scenes/board.tscn
+msgid "LOBBY_CHOSEN"
+msgstr "選択済み"
+
+#: Scenes/board.tscn
+msgid "LOBBY_CODE"
+msgstr "ロビーコード:"
+
+#: Scenes/board.tscn
+msgid "LOBBY_LOBBYCODE_COPY"
+msgstr "ロビーコードをコピー"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SELECT_OPPONENT"
+msgstr "対戦相手を選択"
+
+#: Scenes/board.tscn
+msgid "LOBBY_STARTGAME"
+msgstr "ゲーム開始"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "OK"
+msgstr "決定"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_GAMESTART_SPECTATE"
+msgstr "ゲームが開始されました。観戦しますか？"
+
+#: Scenes/board.tscn
+#: Scenes/deck_list.tscn
+#: Scenes/side.tscn
+#: Scenes/deck_creation.tscn
+msgid "YES"
+msgstr "はい"
+
+#: Scenes/board.tscn
+#: Scenes/deck_list.tscn
+#: Scenes/side.tscn
+#: Scenes/deck_creation.tscn
+msgid "NO"
+msgstr "いいえ"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 msgid "MENU"
-msgstr ""
+msgstr "メインメニュー"
 
 #: Scenes/board.tscn
 msgid "MENU_PROMPT"
-msgstr ""
+msgstr "本当にメインメニューに戻りますか？"
 
-#: Scenes/board.tscn Scenes/side.tscn Scenes/deck_creation.tscn
-msgid "YES"
-msgstr ""
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_FAIL"
+msgstr "カードデータのダウンロードに失敗しました"
 
-#: Scenes/board.tscn Scenes/side.tscn Scenes/deck_creation.tscn
-msgid "NO"
-msgstr ""
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_FAIL_FULL"
+msgstr "cardData.zipアーカイブをダウンロードできませんでした。\n"
+"様々な原因が考えられますが、原因を特定できません。"
 
-#: Scenes/deck_list.tscn
-msgid "DECK_LOAD"
-msgstr ""
+#: Scenes/board.tscn
+msgid "TRYAGAIN"
+msgstr "リトライ"
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU"
+msgstr "アップデートメニュー"
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU_CLIENT_UPTODATE"
+msgstr "クライアントは最新です"
+
+#: Scenes/board.tscn
+msgid "DOWNLOAD_CLIENT"
+msgstr "クライアントを更新"
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU_CARD_UPTODATE"
+msgstr "カードDBは最新です"
+
+#: Scenes/board.tscn
+msgid "DOWNLOAD_CARD"
+msgstr "カードDBを更新"
+
+#: Scenes/board.tscn
+msgid "UPDATE_NOTFOUND"
+msgstr "サーバーに接続できませんでした。\n"
+"続行できますが、デッキビルダーのみ使用可能です。"
+
+#: Scenes/board.tscn
+msgid "BACK"
+msgstr "戻る"
 
 #: Scenes/deck_list.tscn
 msgid "DECK_SELECT_CANCEL"
-msgstr ""
+msgstr "キャンセル"
+
+#: Scenes/deck_list.tscn
+#: Scripts/deck_list.gd
+msgid "DECK_DELETE_CONFIRM"
+msgstr "{deckName} を完全に削除しますか？"
 
 #: Scenes/sleeve_select.tscn
 msgid "SLEEVE_LOAD"
-msgstr ""
+msgstr "ファイルから読み込む"
 
 #: Scenes/sleeve_select.tscn
 msgid "SLEEVE_DEFAULT"
-msgstr ""
+msgstr "デフォルトに戻す"
 
 #: Scenes/side.tscn
 msgid "PROMPT_SUBMIT"
-msgstr ""
+msgstr "決定"
 
 #: Scenes/side.tscn
 msgid "PROMPT_CANCEL"
-msgstr ""
+msgstr "取り消し"
 
 #: Scenes/side.tscn
 msgid "CHOICE_FIRST"
-msgstr ""
+msgstr "先行"
 
 #: Scenes/side.tscn
 msgid "CHOICE_SECOND"
-msgstr ""
+msgstr "後攻"
 
 #: Scenes/side.tscn
 msgid "END_TURN"
-msgstr ""
+msgstr "ターン終了"
+
+#: Scenes/side.tscn
+#: Scripts/side.gd
+msgid "TURN_COUNT"
+msgstr "ターン {turn}"
 
 #: Scenes/side.tscn
 msgid "START_READY"
-msgstr ""
+msgstr "準備完了"
 
 #: Scenes/side.tscn
 msgid "RPS_SELECT"
-msgstr ""
+msgstr "1つ選択してください。"
 
 #: Scenes/side.tscn
-msgid "RPS_ROCK"
-msgstr ""
-
-#: Scenes/side.tscn
-msgid "RPS_PAPER"
-msgstr ""
-
-#: Scenes/side.tscn
-msgid "RPS_SCISSORS"
-msgstr ""
-
-#: Scenes/side.tscn
-msgid "OK"
-msgstr ""
-
-#: Scenes/side.tscn Scripts/Multiplayer.gd
 msgid "OPPONENT"
-msgstr ""
+msgstr "相手"
 
 #: Scenes/side.tscn
 msgid "MULLIGAN_TEXT"
-msgstr ""
+msgstr "相手のマリガンを確認中"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
-msgid "NAME"
-msgstr ""
-
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
-msgid "COLOR"
-msgstr ""
+#: Scenes/info_panel.tscn
+msgid "SIDEBAR_INFO"
+msgstr "カード情報"
 
 #: Scenes/deck_creation.tscn
-msgid "FILTER_CLEAR"
-msgstr ""
+msgid "TAB_OSHI"
+msgstr "推しホロメン"
 
 #: Scenes/deck_creation.tscn
 msgid "SEARCH"
-msgstr ""
+msgstr "検索"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "NAME"
+msgstr "名前"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "COLOR"
+msgstr "色"
+
+#: Scenes/deck_creation.tscn
+msgid "LIFE_5"
+msgstr "5ライフ"
+
+#: Scenes/deck_creation.tscn
+msgid "LIFE_6"
+msgstr "6ライフ"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "SETCODE"
+msgstr "シリーズ"
+
+#: Scenes/deck_creation.tscn
+msgid "FILTER_CLEAR"
+msgstr "フィルターをクリア"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_HOLOMEM"
+msgstr "ホロメン"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
 msgid "LEVEL"
-msgstr ""
+msgstr "Bloomレベル"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "LEVEL_ANY"
+msgstr "全てのBloomレベル"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "LEVEL_DEBUT"
+msgstr "Debut"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "LEVEL_1"
+msgstr "1st"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "LEVEL_2"
+msgstr "2nd"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "LEVEL_SPOT"
+msgstr "SPOT"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "ADVANTAGE"
+msgstr "有利色"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "EFFECT"
+msgstr "効果"
+
+#: Scenes/deck_creation.tscn
+msgid "EFFECT_ANY"
+msgstr "全ての効果"
 
 #: Scenes/deck_creation.tscn
 msgid "TAG_PLURAL"
-msgstr ""
+msgstr "タグ"
 
 #: Scenes/deck_creation.tscn
 msgid "BUZZ"
-msgstr ""
+msgstr "Buzz"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+msgid "NOTBUZZ"
+msgstr "Buzzを除外"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_SUPPORT"
+msgstr "サポート"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
 msgid "SUPPORT_TYPE"
-msgstr ""
+msgstr "タイプ"
 
 #: Scenes/deck_creation.tscn
 msgid "SUPPORT_LIMITED"
-msgstr ""
+msgstr "LIMITED"
+
+#: Scenes/deck_creation.tscn
+msgid "SUPPORT_UNLIMITED"
+msgstr "LIMITEDを除外"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd
+msgid "TAG"
+msgstr "タグ"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_CHEER"
+msgstr "エール"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_DECK"
+msgstr "デッキ"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_ANALYTICS"
+msgstr "分析"
+
+#: Scenes/deck_creation.tscn
+msgid "TAB_SLEEVES"
+msgstr "スリーブ"
 
 #: Scenes/deck_creation.tscn
 msgid "MAIN_DECK"
-msgstr ""
+msgstr "メインデッキ"
 
 #: Scenes/deck_creation.tscn
 msgid "CHEER"
-msgstr ""
-
-#: Scenes/deck_creation.tscn
-msgid "OSHI"
-msgstr ""
+msgstr "エール"
 
 #: Scenes/deck_creation.tscn
 msgid "LOAD"
-msgstr ""
+msgstr "読み込み"
 
 #: Scenes/deck_creation.tscn
 msgid "DECK_SAVE"
-msgstr ""
+msgstr "保存"
 
 #: Scenes/deck_creation.tscn
 msgid "DEFAULT_DECK_NAME"
-msgstr ""
+msgstr "カスタムデッキ"
 
 #: Scenes/deck_creation.tscn
 msgid "DECK_CLEAR"
-msgstr ""
+msgstr "デッキをクリア"
 
 #: Scenes/deck_creation.tscn
 msgid "DEFAULT_DECK_FILE"
-msgstr ""
+msgstr "custom_deck"
+
+#: Scenes/deck_creation.tscn
+msgid "DECK_DOWNLOAD"
+msgstr "ダウンロード"
 
 #: Scenes/deck_creation.tscn
 msgid "DECK_SAVE_CANCEL"
-msgstr ""
+msgstr "キャンセル"
+
+#: Scenes/deck_creation.tscn
+msgid "LOADING"
+msgstr "読み込み中..."
 
 #: Scripts/RemapButton.gd
 msgid "REMAP_WAIT"
-msgstr ""
-
-#: Scripts/deck_creation.gd
-msgid "LEVEL_ANY"
-msgstr ""
+msgstr "... 待機中 ..."
 
 #: Scripts/deck_creation.gd
 msgid "NAME_ANY"
-msgstr ""
+msgstr "全ての名前"
 
 #: Scripts/deck_creation.gd
 msgid "COLOR_ANY"
-msgstr ""
+msgstr "全ての色"
+
+#: Scripts/deck_creation.gd
+msgid "SETCODE_ANY"
+msgstr "全てのシリーズ"
+
+#: Scripts/deck_creation.gd
+msgid "ADVANTAGE_ANY"
+msgstr "全ての有利色"
 
 #: Scripts/deck_creation.gd
 msgid "SUPPORT_TYPE_ANY"
+msgstr "全てのタイプ"
+
+#: Scripts/deck_creation.gd
+msgid "TAG_ANY"
+msgstr "全てのタグ"
+
+#: Scripts/deck_creation.gd
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+#: Scripts/fuda.gd
+#: Scripts/info_panel.gd
+msgid ""
 msgstr ""
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NOOSHI"
-msgstr ""
+msgstr "推しホロメンが選択されされていません。"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_FAKEOSHI"
-msgstr ""
+msgstr "{cardNum} は推しホロメンカードではありません。"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_BANNED"
+msgstr "{cardNum} は禁止カードです。"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_UNDERDECK"
-msgstr ""
+msgstr "メインデッキの枚数が足りません。"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_OVERDECK"
-msgstr ""
+msgstr "メインデッキの枚数が多すぎます。"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_UNDERCHEER"
-msgstr ""
+msgstr "エールデッキの枚数が足りません。"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_OVERCHEER"
-msgstr ""
+msgstr "エールデッキの枚数が多すぎます。"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NEGATIVEAMOUNT"
-msgstr ""
+msgstr "{cardNum} の枚数がマイナスになっています。"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_FAKEMAIN"
-msgstr ""
+msgstr "{cardNum} はメインデッキに入れられません。"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_NODEBUTS"
-msgstr ""
+msgstr "Debutが選択されていません。"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_FAKECHEER"
-msgstr ""
+msgstr "{cardNum} はエールカードではありません。"
 
 #: Scripts/deck_creation.gd
 msgid "DECKERROR_OVERAMOUNT"
-msgstr ""
+msgstr "{cardNum} の枚数が多すぎます。"
 
 #: Scripts/deck_creation.gd
-msgid "LEVEL_DEBUT"
-msgstr ""
-
-#: Scripts/deck_creation.gd
-msgid "LEVEL_1"
-msgstr ""
-
-#: Scripts/deck_creation.gd
-msgid "LEVEL_2"
-msgstr ""
-
-#: Scripts/deck_creation.gd
-msgid "LEVEL_SPOT"
-msgstr ""
+msgid "DECKERROR_RESTRICTED"
+msgstr "{cardNum} は制限枚数を超えています。"
 
 #: Scripts/deck_creation.gd
 msgid "DECK_OVERWRITE"
-msgstr ""
+msgstr "{fileName} を上書きしますか？"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NOALTART"
+msgstr "{cardNum} にはイラスト違いがありません。"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_FAKECARD"
+msgstr "{cardNum} は存在しないカードです。少なくともデータベースにはありません。"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_OSHIBADFORMAT"
+msgstr "推しホロメンのデータ形式が正しくありません。\n"
+"このファイルはholodeltaのデッキファイルですか？"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_DECKBADFORMAT"
+msgstr "メインデッキのデータ形式が正しくありません。\n"
+"このファイルはholodeltaのデッキファイルですか？"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NODECK"
+msgstr "メインデッキがありません。"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_CHEERBADFORMAT"
+msgstr "エールデッキのデータ形式が正しくありません。\n"
+"このファイルはholodeltaのデッキファイルですか？"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_NOCHEER"
+msgstr "エールデッキがありません。"
+
+#: Scripts/deck_creation.gd
+msgid "DECKERROR_ONLYEN"
+msgstr "{cardNum} (もしくは選択したイラスト) は英語版では使用できません。"
 
 #: Scripts/side.gd
 msgid "DECK"
-msgstr ""
+msgstr "デッキ"
 
 #: Scripts/side.gd
 msgid "CHEERDECK"
-msgstr ""
+msgstr "エールデッキ"
 
 #: Scripts/side.gd
 msgid "ARCHIVE"
-msgstr ""
+msgstr "アーカイブ"
 
 #: Scripts/side.gd
 msgid "HOLOPOWER"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "RPS_WAIT"
-msgstr ""
+msgstr "ホロパワー"
 
 #: Scripts/side.gd
 msgid "RPS_TIED"
-msgstr ""
+msgstr "あいこです。もう一度選択してください。"
 
 #: Scripts/side.gd
 msgid "MULLIGAN_QUESTION"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_MULLIGAN"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "LOSS"
-msgstr ""
+msgstr "マリガンしますか？"
 
 #: Scripts/side.gd
 msgid "MULLIGAN_FORCED"
-msgstr ""
+msgstr "Debutがありません。\n"
+"マリガンが必要です。"
+
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "LOSS"
+msgstr "敗北！"
 
 #: Scripts/side.gd
 msgid "MULLIGAN_WAIT"
-msgstr ""
+msgstr "相手を待っています..."
 
 #: Scripts/side.gd
 msgid "READY_WAIT"
-msgstr ""
+msgstr "待機中"
 
 #: Scripts/side.gd
-msgid "MESSAGE_DRAW"
-msgstr ""
+msgid "CARD_HOLOMEM_REQUESTDAMAGE"
+msgstr "ダメージを要求"
 
 #: Scripts/side.gd
-msgid "MESSAGE_DRAWX"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_MILL"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_MILLX"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_BLOOM"
-msgstr ""
+msgid "CARD_HOLOMEM_REQUESTDAMAGEBACK"
+msgstr "バックホロメン全員にダメージを要求"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_LOOK_ATTACHED"
-msgstr ""
+msgstr "重なっているカードを確認"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_LOOK_PAST"
-msgstr ""
+msgstr "重なっているホロメンを確認"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_PLAY_CENTERHIDDEN"
-msgstr ""
+msgstr "裏向きでセンターポジションに出す"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_PLAY_BACKHIDDEN"
-msgstr ""
+msgstr "裏向きでバックポジションに出す"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_PLAY"
-msgstr ""
+msgstr "ホロメンを出す"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_PLAY_DIRECT"
+msgstr "ホロメンを直接出す"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_BLOOM"
-msgstr ""
+msgstr "Bloom"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_BLOOM_SKIP"
-msgstr ""
+msgstr "飛び越えてBloom"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_BLOOM_FAST"
-msgstr ""
+msgstr "即時にBloom"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_UNREST"
-msgstr ""
+msgstr "アクティブにする"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_REST"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_CENTER"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_BACK"
-msgstr ""
+msgstr "お休みにする"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_COLLAB"
-msgstr ""
+msgstr "コラボ"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_BATON"
-msgstr ""
+msgstr "バトンタッチする"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_CENTERCOLLABSWAP"
+msgstr "センターホロメンとコラボホロメンを入れ替える"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_CENTER"
+msgstr "センターポジションへ移動"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_BACK"
+msgstr "バックポジションへ移動"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_DAMAGE"
-msgstr ""
+msgstr "ダメージ加算"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_HEAL"
-msgstr ""
+msgstr "回復"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_EXTRAHP"
-msgstr ""
+msgstr "HP追加"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
-msgstr ""
+msgstr "HP低下"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_EXTRABATONPASS"
+msgstr "バトンタッチのコスト増加"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_REMOVEBATONPASS"
+msgstr "バトンタッチのコスト減少"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_UNBLOOM"
-msgstr ""
+msgstr "Bloom解除"
 
 #: Scripts/side.gd
 msgid "CARD_SUPPORT_ATTACH"
-msgstr ""
+msgstr "付ける/送る"
 
 #: Scripts/side.gd
 msgid "CARD_SUPPORT_PLAY"
-msgstr ""
+msgstr "出す"
 
 #: Scripts/side.gd
 msgid "CARD_SUPPORT_ARCHIVE"
-msgstr ""
+msgstr "アーカイブ"
 
 #: Scripts/side.gd
 msgid "CARD_CHEER_LIFE_REVEAL"
-msgstr ""
+msgstr "見せて付ける/送る"
 
 #: Scripts/side.gd
 msgid "CARD_HAND_TOPDECK"
-msgstr ""
+msgstr "デッキの上に戻す"
 
 #: Scripts/side.gd
 msgid "CARD_HAND_BOTTOMDECK"
-msgstr ""
+msgstr "デッキの下に戻す"
 
 #: Scripts/side.gd
 msgid "CARD_HAND_ARCHIVE"
-msgstr ""
+msgstr "アーカイブ"
 
 #: Scripts/side.gd
 msgid "CARD_HAND_HOLOPOWER"
-msgstr ""
+msgstr "ホロパワーに置く"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_REVEAL"
+msgstr "公開"
+
+#: Scripts/side.gd
+msgid "CARD_HAND_REVEALALL"
+msgstr "手札を公開"
 
 #: Scripts/side.gd
 msgid "CARD_STAGE_ARCHIVE"
-msgstr ""
+msgstr "アーカイブ"
 
 #: Scripts/side.gd
 msgid "CARD_STAGE_HAND"
-msgstr ""
+msgstr "手札に加える"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_MOVE_COLLAB"
-msgstr ""
+msgstr "コラボポジションへ移動"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_SWITCH"
-msgstr ""
+msgstr "交代"
 
 #: Scripts/side.gd
 msgid "CARD_REVEALED_HAND"
-msgstr ""
+msgstr "手札に加える"
 
 #: Scripts/side.gd
 msgid "CARD_REVEALED_ATTACH"
-msgstr ""
+msgstr "付ける/送る"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_TOPDECK"
+msgstr "デッキの上に戻す"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_BOTTOMDECK"
+msgstr "デッキの下に戻す"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_ARCHIVE"
+msgstr "アーカイブする"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_HOLOPOWER"
+msgstr "ホロパワーの一番上に置く"
+
+#: Scripts/side.gd
+msgid "CARD_REVEALED_BOTTOMHOLOPOWER"
+msgstr "ホロパワーの一番下に置く"
 
 #: Scripts/side.gd
 msgid "DECK_DRAW"
-msgstr ""
+msgstr "ドロー"
 
 #: Scripts/side.gd
 msgid "DECK_DRAWX"
-msgstr ""
+msgstr "X枚引く"
 
 #: Scripts/side.gd
 msgid "DECK_ARCHIVE"
-msgstr ""
+msgstr "アーカイブする"
 
 #: Scripts/side.gd
 msgid "DECK_ARCHIVEX"
-msgstr ""
+msgstr "X枚アーカイブする"
 
 #: Scripts/side.gd
 msgid "DECK_HOLOPOWER"
-msgstr ""
+msgstr "ホロパワーに置く"
+
+#: Scripts/side.gd
+msgid "DECK_REVEAL"
+msgstr "一番上を公開する"
 
 #: Scripts/side.gd
 msgid "DECK_LOOKX"
-msgstr ""
+msgstr "X枚見る"
 
 #: Scripts/side.gd
 msgid "DECK_SEARCH"
-msgstr ""
+msgstr "探す"
 
 #: Scripts/side.gd
 msgid "DECK_SHUFFLE"
-msgstr ""
+msgstr "シャッフルする"
 
 #: Scripts/side.gd
 msgid "DECK_MULLIGAN"
-msgstr ""
+msgstr "シャッフルした手札をデッキに戻す"
 
 #: Scripts/side.gd
 msgid "DECK_MULLIGAN_UNDO"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "DECK_RPS"
+msgstr ""
+
+#: Scripts/side.gd
+#: Scripts/Multiplayer.gd
+msgid "FORFEIT"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "CHEERDECK_REVEAL"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CHEERDECK_ARCHIVE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CHEERDECK_ARCHIVEX"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CHEERDECK_LOOKX"
 msgstr ""
 
 #: Scripts/side.gd
@@ -696,11 +1106,19 @@ msgid "ARCHIVE_SEARCH"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "ARCHIVE_HAND_ALL"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "HOLOPOWER_ARCHIVE"
 msgstr ""
 
 #: Scripts/side.gd
 msgid "HOLOPOWER_ARCHIVEX"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "HOLOPOWER_REVEAL"
 msgstr ""
 
 #: Scripts/side.gd
@@ -724,11 +1142,27 @@ msgid "LIST_ARCHIVE_HOLOMEM_PLAY"
 msgstr ""
 
 #: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_PLAY_DIRECT"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_PLAY_DIRECT"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "LIST_DECK_HOLOMEM_BLOOM"
 msgstr ""
 
 #: Scripts/side.gd
 msgid "LIST_ARCHIVE_HOLOMEM_BLOOM"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_BLOOM_FAST"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_BLOOM_FAST"
 msgstr ""
 
 #: Scripts/side.gd
@@ -780,26 +1214,6 @@ msgid "LIST_CARD_HOLOPOWER"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "MESSAGE_STAGE_ARCHIVE"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_STAGE_HAND"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_STAGE_CENTER"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_STAGE_COLLAB"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_STAGE_MOVECOLLAB"
-msgstr ""
-
-#: Scripts/side.gd
 msgid "PROMPT_DAMAGE"
 msgstr ""
 
@@ -816,39 +1230,23 @@ msgid "PROMPT_REMOVEEXTRAHP"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "MESSAGE_STAGE_UNBLOOM"
+msgid "PROMPT_EXTRABATONPASS"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "MESSAGE_OSHISKILL_SP"
+msgid "PROMPT_REMOVEBATONPASS"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "MESSAGE_OSHISKILL"
+msgid "PROMPT_REQUESTDAMAGE"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "PROMPT_REQUESTDAMAGEBACK"
 msgstr ""
 
 #: Scripts/side.gd
 msgid "PROMPT_OSHICOST"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_HAND_TOPDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_HAND_BOTTOMDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_HAND_ARCHIVE"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_HAND_HOLOPOWER"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_HAND_SUPPORT_PLAY"
 msgstr ""
 
 #: Scripts/side.gd
@@ -860,31 +1258,11 @@ msgid "PROMPT_DECK_ARCHIVE"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "MESSAGE_DECK_MULLIGAN"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_DECK_UNDOMULLIGAN"
-msgstr ""
-
-#: Scripts/side.gd
 msgid "PROMPT_LOOKATX"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "MESSAGE_DECK_SEARCH"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_DECK_SHUFFLE"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_CHEERDECK_SEARCH"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_CHEERDECK_SHUFFLE"
+msgid "PROMPT_CHEERDECK_ARCHIVE"
 msgstr ""
 
 #: Scripts/side.gd
@@ -892,175 +1270,31 @@ msgid "PROMPT_HOLOPOWER_ARCHIVE"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "MESSAGE_HOLOPOWER_SEARCH"
+msgid "PROMPT_NOTE"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "MESSAGE_HOLOPOWER_SHUFFLE"
+msgid "PROMPT_NOTE_PLACEHOLDER"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "MESSAGE_FUDA_LIFE"
+msgid "GOLDFISH_ZONEDAMAGE"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "MESSAGE_ATTACHED_LIFE"
+msgid "GOLDFISH_ZONEDAMAGEREMOVE"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "MESSAGE_FUDA_REVEAL"
+msgid "GOLDFISH_ZONEDAMAGEALL"
 msgstr ""
 
 #: Scripts/side.gd
-msgid "MESSAGE_ARCHIVE_HAND"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_FUDA_HAND"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ATTACHED_HAND"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ARCHIVE_TOPDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_DECK_TOPDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_FUDA_TOPDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ATTACHED_TOPDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ARCHIVE_BOTTOMDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_DECK_BOTTOMDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_FUDA_BOTTOMDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ATTACHED_BOTTOMDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ARCHIVE_TOPCHEERDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_CHEERDECK_TOPCHEERDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_FUDA_TOPCHEERDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ATTACHED_TOPCHEERDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_FUDA_BOTTOMCHEERDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ATTACHED_BOTTOMCHEERDECK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_FUDA_ARCHIVE"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ATTACHED_ARCHIVE"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ARCHIVE_HOLOPOWER"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_FUDA_HOLOPOWER"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ATTACHED_HOLOPOWER"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ARTS_DAMAGE"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_DECK_LOOKATX"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_CARD_BACK"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_CARD_BATONPASS"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_CARD_SWITCH"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_SUPPORT_ATTACH"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_CHEER_ATTACH"
+msgid "GOLDFISH_ZONENOTE"
 msgstr ""
 
 #: Scripts/side.gd
 msgid "PROMPT_ART_DAMAGE"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_HOLOMEM_PLAY"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_DECK_HOLOMEM_PLAY"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ARCHIVE_CHEER_ATTACH"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_ATTACHED_CHEER_ATTACH"
 msgstr ""
 
 #: Scripts/side.gd
@@ -1071,99 +1305,878 @@ msgstr ""
 msgid "TURN_FIRST"
 msgstr ""
 
-#: Scripts/side.gd
-msgid "MESSAGE_ENDTURN"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "MESSAGE_DIERESULT"
+#: Scripts/Multiplayer.gd
+msgid "DOWNLOAD_CARDS"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
-msgid "DOWNLOADING"
+msgid "DECK_AUTOLOAD_CONFIRM"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
-msgid "VERSION_MISMATCH"
+msgid "DECK_AUTOLOAD_CONFIRM_INFO"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "UPDATE_MENU_CLIENT_UPDATEFOUND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "UPDATE_MENU_CARD_UPDATEFOUND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "LOAD_FAIL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "LOAD_FAIL_FULL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_BANLIST_CUSTOM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "GAME_VS"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_WAITING"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "INGAME_RPS_WON"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "INGAME_RPS_LOST"
 msgstr ""
 
 #: Scripts/Multiplayer.gd
 msgid "YOU"
 msgstr ""
 
-#: Scripts/card.gd
-msgid "COLORLESS"
-msgstr "無"
+#: Scripts/Multiplayer.gd
+msgid "WIN"
+msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/Multiplayer.gd
+msgid "SPECTATE_WIN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MULLIGAN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAW"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DRAWX"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_MILLX"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_BLOOM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_HAND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_CENTER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_COLLAB"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_MOVECOLLAB"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_STAGE_UNBLOOM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_HAND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_REVEALED_BOTTOMHOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_OSHISKILL_SP"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_OSHISKILL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_REVEAL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_REVEALALL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HAND_SUPPORT_PLAY"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_REVEAL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_REVEAL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_MULLIGAN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_UNDOMULLIGAN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_SEARCH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_SHUFFLE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_SEARCH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_SHUFFLE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_SEARCH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_SHUFFLE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_LIFE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_LIFE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HAND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_HAND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_HAND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_HAND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_TOPCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_TOPCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_TOPCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_TOPCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_BOTTOMCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_BOTTOMCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOPOWER_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_FUDA_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARTS_DAMAGE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_LOOKATX"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_LOOKATX"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CARD_BACK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CARD_BATONPASS"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CARD_SWITCH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_SUPPORT_ATTACH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEER_ATTACH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_HOLOMEM_PLAY"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DECK_HOLOMEM_PLAY"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HAND_ALL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ARCHIVE_CHEER_ATTACH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ATTACHED_CHEER_ATTACH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_ENDTURN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_DIERESULT"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "MESSAGE_RPS"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_MULLIGAN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DRAW"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DRAWX"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_MILL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_MILLX"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_BLOOM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_HAND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_CENTER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_COLLAB"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_MOVECOLLAB"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_STAGE_UNBLOOM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_HAND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_REVEALED_BOTTOMHOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_OSHISKILL_SP"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_OSHISKILL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_REVEAL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_REVEALALL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HAND_SUPPORT_PLAY"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_REVEAL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_REVEAL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_MULLIGAN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_UNDOMULLIGAN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_SEARCH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_SHUFFLE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_SEARCH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_SHUFFLE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_SEARCH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_SHUFFLE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_LIFE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_LIFE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HAND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_HAND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_HAND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_HAND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_TOPDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_TOPCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_TOPCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_TOPCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_TOPCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_BOTTOMCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_BOTTOMCHEERDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOPOWER_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_ARCHIVE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_FUDA_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_HOLOPOWER"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARTS_DAMAGE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_LOOKATX"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_LOOKATX"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CARD_BACK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CARD_BATONPASS"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CARD_SWITCH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_SUPPORT_ATTACH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEER_ATTACH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_HOLOMEM_PLAY"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DECK_HOLOMEM_PLAY"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_CHEERDECK_CHEER_ATTACH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HAND_ALL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ARCHIVE_CHEER_ATTACH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ATTACHED_CHEER_ATTACH"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_ENDTURN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_DIERESULT"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_MESSAGE_RPS"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "WINCONSENT_FORFEIT"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "WINCONSENT_DECKOUT"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "WINCONSENT_LIFE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "WINCONSENT_EMPTYSTAGE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_MULLIGAN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_DECKOUT"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_LIFE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_EMPTYSTAGE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "WINREASON_FORFEIT"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_MULLIGAN"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_DECKOUT"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_LIFE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_EMPTYSTAGE"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "YOU_WINREASON_FORFEIT"
+msgstr ""
+
+#: Scripts/Multiplayer.gd
+msgid "LOBBY_PUBLIC"
+msgstr ""
+
+#: Scripts/card_info.gd
 msgid "NOBODY"
 msgstr ""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NAMESEP"
 msgstr "と"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
+msgid "COLORLESS"
+msgstr "無"
+
+#: Scripts/card_info.gd
 msgid "COLORSEP"
 msgstr "​"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "NAME_BUZZ"
 msgstr "buzz!"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI"
-msgstr ""
-"{colorText}の推しホロメン\n"
+msgstr "{colorText}の推しホロメン\n"
 "ライフ: {life}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI_SPSKILL"
 msgstr "SP推しスキル ホロパワー-{costText}   「{nameText}」"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_OSHI_SKILL"
 msgstr "推しスキル ホロパワー-{costText}   「{nameText}」"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_SPOT"
 msgstr "SPOT"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_DEBUT"
 msgstr "DEBUT"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_1ST"
 msgstr "1st"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_2ND"
 msgstr "2nd"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_BUZZ"
 msgstr " Buzz"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_HOLOMEM_1"
-msgstr ""
-"{colorText}の{levelText}{buzzText}ホロメン\n"
+msgstr "{colorText}の{levelText}{buzzText}ホロメン\n"
 "HP: {hpText}\n"
 "タグ: {tagsText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_NOBATONPASSCOST"
 msgstr "​"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_HOLOMEM_2"
 msgstr "バトンタッチ: {costText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_SUPPORT"
-msgstr "{supportText}({typeText}){tagsText}"
+msgstr "{supportText}({typeText})"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd
 msgid "INFO_LIMITED"
 msgstr "LIMITED:ターンに1枚しか使えない"
+

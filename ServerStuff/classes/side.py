@@ -72,7 +72,7 @@ class Side:
         shuffle(self.deck)
         await self.tell_all("Shuffle Fuda", {"fuda":int(Fuda.deck)})
         
-        await self.draw(7-self.penalty)
+        await self.draw(7)
         
         if await self.hasLegalHand():
             await self.no_mulligan()
@@ -87,7 +87,7 @@ class Side:
                 self.forced_mulligan_cards.append(await hand_card.to_dict())
 
     async def no_mulligan(self):
-        await self.tell_player("No Mulligan")
+        await self.tell_player("No Mulligan", {"penalty": self.penalty})
 
         await self.game._mulligan(self.player.id)
 
@@ -423,6 +423,11 @@ class Side:
                 if currentCard is not None:
                     await self.send_message(self.player,"MESSAGE_STAGE_MOVECOLLAB",{"fromName":self.cards[currentCard].number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
                     await self.move_card_to_zone(currentCard,"Collab")
+            case 14: #Holomem from stage to bottom of the deck
+                if currentCard is not None:
+                    await self.send_message(self.player,"MESSAGE_STAGE_BOTTOMDECK",{"fromName":self.cards[currentCard].number + "_NAME"},{"fromZone":await self.find_what_zone(currentCard)})
+                    await self.add_to_fuda(currentCard,Fuda.deck, True)
+                    await self.remove_old_card(currentCard,True)
             case 15: #Unbloom
                 if currentCard is not None:
                     await self.tell_all("Unbloom",{"card_to_unbloom":currentCard})
@@ -435,6 +440,10 @@ class Side:
                             self.zones[zone] = newCard.id
                     await self.remove_old_card(currentCard,True)
                     await self.add_to_hand(currentCard)
+            case 18: #Switch Center and Collab
+                await self.send_message(self.player,"MESSAGE_CARD_SWITCH",{"fromName":self.cards[self.zones["Center"]].number+"_NAME","toName":self.cards[self.zones["Collab"]].number+"_NAME"},
+                                                                            {"fromZone":"Center","toZone":"Collab"})
+                await self.switch_cards_in_zones("Center","Collab")
             case 20: #Archive Support in Play
                 if currentCard is not None:
                     await self.add_to_fuda(currentCard,Fuda.archive)
@@ -502,6 +511,10 @@ class Side:
                     await self.add_to_fuda(currentCard,Fuda.deck,-1)
                     await self.remove_from_hand(currentCard)
                     self.can_undo_shuffle_hand = None
+
+                    #Mulligan handling
+                    if self.penalty > 0:
+                        self.penalty -= 1
             case 112: #Archive
                 if currentCard is not None:
                     await self.send_message(self.player,"MESSAGE_HAND_ARCHIVE",{"cardName":self.cards[currentCard].number + "_NAME"})
@@ -558,6 +571,12 @@ class Side:
                 self.can_undo_shuffle_hand = None
                 await self.tell_player("Reveal",{"card_id":currentCard})
                 await self.tell_others("Reveal",{"card":await actualCard.to_dict()})
+            case 206: #Draw from Bottom of Deck
+                new_card = self.deck[-1].id
+                await self.remove_from_fuda(new_card, Fuda.deck)
+                await self.add_to_hand(new_card)
+                self.can_undo_shuffle_hand = None
+                await self.send_message(self.player,"MESSAGE_DRAWBOTTOM")
             case 250: #Shuffle Hand Into Deck
                 await self.send_message(self.player,"MESSAGE_DECK_MULLIGAN")
                 list_of_ids = []
@@ -576,6 +595,9 @@ class Side:
                 for hand_id in self.can_undo_shuffle_hand:
                     await self.add_to_hand(hand_id)
                     await self.remove_from_fuda(hand_id,Fuda.deck)
+            case 295: #Take an Extra Turn
+                await self.game._on_end_turn(self.player.id, True)
+                await self.tell_others("Extra Turn")
             case 296: #Start RPS
                 await self.game._start_rps()
             case 298: #Search Deck
@@ -1101,10 +1123,10 @@ class Side:
                     if self.in_mulligans:
                         await self.no_mulligan()
                 case "Ready":
-                    if self.preliminary_phase and not self.in_mulligans and self.preliminary_holomem_in_center:
+                    if self.preliminary_phase and not self.in_mulligans and self.preliminary_holomem_in_center and self.penalty == 0:
                         await self.game._ready(self.player.id)
                 case "Popup Command":
-                    if "command_id" in data and self.can_do_things:
+                    if "command_id" in data and (self.can_do_things or (self.penalty > 0 and data["command_id"] == 111)):
                         await self.popup_command(data["command_id"], data)
                 case "Popup From Fuda Command":
                     if "currentCard" in data and "command_id" in data and "currentFuda" in data and self.can_do_things:

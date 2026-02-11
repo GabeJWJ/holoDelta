@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
-"PO-Revision-Date: 2025-12-22 19:33\n"
+"PO-Revision-Date: 2026-01-01 23:06\n"
 
 #: Scenes/board.tscn
 msgid "TITLE"
@@ -241,6 +241,14 @@ msgstr "주사위 이미지 불러오기"
 #: Scenes/board.tscn
 msgid "COSMETICS_D_DEFAULT"
 msgstr "주사위 초기화"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_SP"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_SP_DEFAULT"
+msgstr ""
 
 #: Scenes/board.tscn
 msgid "COSMETICS_DEFAULTSLEEVES"
@@ -858,6 +866,10 @@ msgid "CARD_HOLOMEM_PLAY"
 msgstr "플레이"
 
 #: Scripts/side.gd
+msgid "CARD_HOLOMEM_PLAY_DIRECT"
+msgstr ""
+
+#: Scripts/side.gd
 msgid "CARD_HOLOMEM_BLOOM"
 msgstr "Bloom"
 
@@ -878,20 +890,24 @@ msgid "CARD_HOLOMEM_REST"
 msgstr "휴식"
 
 #: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_CENTER"
-msgstr "센터 포지션으로 이동"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_BACK"
-msgstr "백 포지션으로 이동"
-
-#: Scripts/side.gd
 msgid "CARD_HOLOMEM_COLLAB"
 msgstr "콜라보"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_BATON"
 msgstr "배턴 터치"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_CENTERCOLLABSWAP"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_CENTER"
+msgstr "센터 포지션으로 이동"
+
+#: Scripts/side.gd
+msgid "CARD_HOLOMEM_MOVE_BACK"
+msgstr "백 포지션으로 이동"
 
 #: Scripts/side.gd
 msgid "CARD_HOLOMEM_DAMAGE"
@@ -1121,6 +1137,14 @@ msgstr "플레이"
 #: Scripts/side.gd
 msgid "LIST_ARCHIVE_HOLOMEM_PLAY"
 msgstr "플레이"
+
+#: Scripts/side.gd
+msgid "LIST_DECK_HOLOMEM_PLAY_DIRECT"
+msgstr ""
+
+#: Scripts/side.gd
+msgid "LIST_ARCHIVE_HOLOMEM_PLAY_DIRECT"
+msgstr ""
 
 #: Scripts/side.gd
 msgid "LIST_DECK_HOLOMEM_BLOOM"

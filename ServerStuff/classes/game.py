@@ -31,10 +31,11 @@ class Game:
         self.settings = {} if settings is None else settings
         self.only_en = self.settings["onlyEN"] if "onlyEN" in self.settings else False
         self.allow_spectators = self.settings["spectators"] if "spectators" in self.settings else False
-        self.cosmetics = {player1.id: {"passcode":''.join(sample(random_characters, 10)), "sleeve":False, "cheerSleeve":False, "playmat":False, "dice":False},
-                          player2.id: {"passcode":''.join(sample(random_characters, 10)), "sleeve":False, "cheerSleeve":False, "playmat":False, "dice":False}}
+        self.cosmetics = {player1.id: {"passcode":''.join(sample(random_characters, 10)), "sleeve":False, "cheerSleeve":False, "playmat":False, "dice":False, "SPMarker":False},
+                          player2.id: {"passcode":''.join(sample(random_characters, 10)), "sleeve":False, "cheerSleeve":False, "playmat":False, "dice":False, "SPMarker":False}}
 
         self.step = 5
+        self.turn_count = 1
 
         #Game Start Stuff
         self.game_start = {player1.id: {"RPS":-1, "Mulligan":False, "Ready":False}, player2.id: {"RPS":-1, "Mulligan":False, "Ready":False}}
@@ -123,27 +124,31 @@ class Game:
         if self.goldfish_must_end_turn is not None:
             await self._on_end_turn(self.goldfish_must_end_turn)
 
-    async def _on_end_turn(self, player_id):
+    async def _on_end_turn(self, player_id, fake=False):
         if player_id == self.current_turn:
             if self.firstTurn:
                 self.firstTurn = False
             
             self.step = 1
+            self.turn_count += 1
             
-            await self._send_message(self.players[player_id],"MESSAGE_ENDTURN")
-            
-            for player in self.playing:
-                if player == player_id:
-                    await self.playing[player].end_turn()
-                else:
-                    await self.playing[player].tell_player("Your Turn")
-                    self.playing[player].is_turn = True
-                    self.current_turn = player
-            
-            if self.goldfish and not self.players[player_id].dummy:
-                dummy_player = [p_id for p_id in self.players if p_id != player_id][0]
-                self.current_turn = dummy_player
-                await self._on_end_turn(dummy_player)
+            await self._send_message(self.players[player_id],"MESSAGE_ENDTURN", {}, {"turn_count":self.turn_count})
+
+            if fake:
+                await self.playing[player_id].end_turn()
+            else:
+                for player in self.playing:
+                    if player == player_id:
+                        await self.playing[player].end_turn()
+                    else:
+                        await self.playing[player].tell_player("Your Turn")
+                        self.playing[player].is_turn = True
+                        self.current_turn = player
+                
+                if self.goldfish and not self.players[player_id].dummy:
+                    dummy_player = [p_id for p_id in self.players if p_id != player_id][0]
+                    self.current_turn = dummy_player
+                    await self._on_end_turn(dummy_player)
     
     async def _start_rps(self):
         if not self.in_rps:
