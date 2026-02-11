@@ -368,15 +368,13 @@ func rps_end():
 	oshiCard.visible = true
 
 func _made_turn_choice(choice:bool):
-	%"Go First".visible = false
-	%"Go Second".visible = false
+	%PlayerOrderButtonVBox.visible = false
 	emit_signal("made_turn_choice",choice)
 	if is_goldfishing:
 		player1 = choice
 
 func _show_turn_choice():
-	%"Go First".visible = true
-	%"Go Second".visible = true
+	%PlayerOrderButtonVBox.visible = true
 
 func _mulligan_decision(forced=false):
 	%Question.visible = true
