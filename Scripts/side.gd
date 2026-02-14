@@ -1219,6 +1219,9 @@ func _on_card_clicked(card_id : int) -> void:
 	#If you click your opponent's card, this gets called on your local copy of the opponent's side
 	#The code will go through, determine what options ought be included, and add them to the popup
 	
+	if currentPrompt != -1 or (!can_do_things and is_your_side):
+		return
+	
 	reset_popup()
 	currentCard = card_id
 	
@@ -1226,9 +1229,6 @@ func _on_card_clicked(card_id : int) -> void:
 	if not actualCard in hand:
 		actualCard.showNotice()
 		send_command("Click Notification",{"player_id":player_id,"card_id":currentCard})
-	
-	if currentPrompt != -1 or (!can_do_things and is_your_side):
-		return
 	
 	if !is_your_side:
 		var currentZone = find_what_zone(currentCard)
