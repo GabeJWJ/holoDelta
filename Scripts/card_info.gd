@@ -58,10 +58,7 @@ var onTopOf = []
 var attached = []
 
 # Android input handling
-var touch_start_time := 0
-# Measured in ms (1000ms = 1 s)
-var android_long_press_threshold := 300
-var is_dragging: bool
+var android_click_handled := false
 
 func setup_info(number,art_code,back=null):
 	cardNumber = number
@@ -417,34 +414,23 @@ func _on_card_button_mouse_entered():
 func _on_card_button_mouse_exited():
 	emit_signal("card_mouse_left")
 
+func _on_card_button_pressed() -> void:
+	emit_signal("card_clicked",cardID)
+
 func _on_card_button_gui_input(event):
 	# Right click pressed
-	# Bypass godot's touch to mouse emulation as it is slightly buggy
-	if not OS.has_feature("android"):
-		if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
-			emit_signal("card_right_clicked",cardID)
-		elif event is InputEventMouseButton and not event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
+		android_click_handled = true
+		emit_signal("card_right_clicked",cardID)
+	# Left click released (only handled on android)
+	elif event is InputEventMouseButton and not event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if not OS.has_feature("android"):
+			return
+		if android_click_handled:
+			return
+		else:
 			emit_signal("card_clicked",cardID)
-	else:
-		# Android only touch handling
-		if event is InputEventScreenDrag:
-			Log.logv(4, "Drag detected")
-			is_dragging = true
-		if event is InputEventScreenTouch and event.pressed:
-			Log.logv(4, "Touch started")
-			touch_start_time = Time.get_ticks_msec()
-			is_dragging = false
-		elif event is InputEventScreenTouch and not event.pressed and not event.canceled:
-			Log.logv(4, "Touch ended")
-			if is_dragging:
-				return
-			var touch_duration = Time.get_ticks_msec() - touch_start_time
-			if touch_duration < android_long_press_threshold:
-				# Short tap
-				emit_signal("card_clicked",cardID)
-			else:
-				# Long tap
-				emit_signal("card_right_clicked",cardID)
+	# Left click pressed is handled in _on_card_button_pressed because of timing issues
 
 func flipDown():
 	if faceDown:

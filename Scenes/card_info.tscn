@@ -14,7 +14,6 @@ offset_right = 0.519989
 offset_bottom = -0.120026
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
 script = ExtResource("1_yvv3s")
 
 [node name="CollectedForScaling" type="Control" parent="."]
@@ -22,7 +21,6 @@ unique_name_in_owner = true
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-mouse_filter = 1
 
 [node name="Front" parent="CollectedForScaling" instance=ExtResource("2_btmxb")]
 unique_name_in_owner = true
@@ -34,7 +32,6 @@ offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
-mouse_filter = 1
 
 [node name="CardButton" type="TextureButton" parent="CollectedForScaling"]
 layout_mode = 0
@@ -42,7 +39,6 @@ offset_left = 0.75
 offset_top = 1.16699
 offset_right = 309.75
 offset_bottom = 430.167
-mouse_filter = 1
 texture_normal = ExtResource("3_nl1ep")
 texture_hover = ExtResource("4_y8rgj")
 

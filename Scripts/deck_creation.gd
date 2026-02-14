@@ -74,32 +74,32 @@ var support_setcodes = []
 var support_tags = []
 
 #Filter Buttons/LineEdits
-@onready var oshi_name_select = %OshiNameSelect
-@onready var oshi_color_select = %OshiColorSelect
-@onready var oshi_life5_select = %FiveLifeSelect
-@onready var oshi_life6_select = %SixLifeSelect
-@onready var oshi_setcode_select = %OshiSetcodeSelect
-@onready var oshi_search = %OshiSearch
+@onready var oshi_name_select = $CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1/NameSelect
+@onready var oshi_color_select = $CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1/ColorSelect
+@onready var oshi_life5_select = $"CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1/5LifeSelect"
+@onready var oshi_life6_select = $"CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1/6LifeSelect"
+@onready var oshi_setcode_select = $CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters2/SetcodeSelect
+@onready var oshi_search = $CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/Search
 
-@onready var holomem_name_select = %HolomemNameSelect
-@onready var holomem_color_select = %HolomemColorSelect
-@onready var holomem_level_select = %HolomemLevelSelect
-@onready var holomem_hp_compare_select = %HolomemHPCompareSelect
-@onready var holomem_hp_select = %HolomemHPSelect
-@onready var holomem_advantage_select = %HolomemAdvantageSelect
-@onready var holomem_effect_select = %HolomemEffectSelect
-@onready var holomem_tag_select = %HolomemTagSelect
-@onready var holomem_buzz_select = %HolomemBuzzSelect
-@onready var holomem_notbuzz_select = %HolomemNotBuzzSelect
-@onready var holomem_setcode_select = %HolomemSetcodeSelect
-@onready var holomem_search = %HolomemSearch
+@onready var holomem_name_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters1/NameSelect
+@onready var holomem_color_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters1/ColorSelect
+@onready var holomem_level_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters1/LevelSelect
+@onready var holomem_hp_compare_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2/HPCompareSelect
+@onready var holomem_hp_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2/HPSelect
+@onready var holomem_advantage_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2/AdvantageSelect
+@onready var holomem_effect_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2/EffectSelect
+@onready var holomem_tag_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2/TagSelect
+@onready var holomem_buzz_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3/BuzzSelect
+@onready var holomem_notbuzz_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3/NotBuzzSelect
+@onready var holomem_setcode_select = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3/SetcodeSelect
+@onready var holomem_search = $CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/Search
 
-@onready var support_type_select = %SupportTypeSelect
-@onready var support_limited_select = %SupportLimitedSelect
-@onready var support_unlimited_select = %SupportUnlimitedSelect
-@onready var support_setcode_select = %SupportSetcodeSelect
-@onready var support_tag_select = %SupportTagSelect
-@onready var support_search = %SupportSearch
+@onready var support_type_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters1/TypeSelect
+@onready var support_limited_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters1/LimitedSelect
+@onready var support_unlimited_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters1/UnlimitedSelect
+@onready var support_setcode_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters2/SetcodeSelect
+@onready var support_tag_select = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters2/TagSelect
+@onready var support_search = $CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/Search
 
 #Filter dictionaries
 var oshi_filter = {"Color":null,"Name":null,"Life":null,"Setcode":null,"Search":""}
@@ -107,7 +107,7 @@ var holomem_filter = {"Color":null,"Name":null,"Level":null,"HPCompare":0,"HP":n
 var support_filter = {"Type":null,"Limited":null,"Tag":null,"Setcode":null,"Search":""}
 
 #The ability to add/remove multiples of cheer at once
-@onready var cheer_multiple_label = %MultipleLabel
+@onready var cheer_multiple_label = $CanvasLayer/PossibleCards/TAB_CHEER/Multiple
 var cheer_multiple = 1
 
 #Various containers/objects we'll need
@@ -115,16 +115,16 @@ var cheer_multiple = 1
 @onready var holomem_tab = %HolomemGrid
 @onready var support_tab = %SupportGrid
 @onready var cheer_tab = %CheerGrid
-@onready var main_deck = %MainDeckGrid
-@onready var cheer_deck = %CheerDeckHBox
-@onready var main_count = %MainCountLabel
-@onready var cheer_count = %CheerCountLabel
-@onready var analytics = %StatsLabel
-@onready var list_of_decks_to_overwrite = %OverwriteVBox
+@onready var main_deck = $CanvasLayer/YourStuff/TAB_DECK/MainDeck/MarginContainer/GridContainer
+@onready var cheer_deck = $CanvasLayer/YourStuff/TAB_DECK/CheerDeck/MarginContainer/HBoxContainer
+@onready var main_count = $CanvasLayer/YourStuff/TAB_DECK/MainCount
+@onready var cheer_count = $CanvasLayer/YourStuff/TAB_DECK/CheerCount
+@onready var analytics = $CanvasLayer/YourStuff/TAB_ANALYTICS/ScrollContainer/Stats
+@onready var list_of_decks_to_overwrite = $CanvasLayer/SavePrompt/ScrollContainer/VBoxContainer
 
 #Those aforementioned SleeveSelects
-@onready var mainSleeveSelect = %MainSleeves
-@onready var cheerSleeveSelect = %CheerSleeves
+@onready var mainSleeveSelect = $CanvasLayer/YourStuff/TAB_SLEEVES/Main
+@onready var cheerSleeveSelect = $CanvasLayer/YourStuff/TAB_SLEEVES/Cheer
 
 var banlist = Database.en_current_banlist if Settings.settings.OnlyEN else Database.current_banlist
 
@@ -153,16 +153,9 @@ func _ready() -> void:
 	tr("LEVEL_ANY") #for POT generation - Godot's automatic system won't find it in a popupmenu list
 	
 	if Settings.settings.OnlyEN:
-		%BanlistChoice.selected = 2
+		$CanvasLayer/BanlistChoice.selected = 2
 	
 	%Loading.visible = true
-	
-	if OS.has_feature("android"):
-		# Disable the tiny scroll bar on Android
-		%OshiScrollContainer.set_vertical_scroll_mode(ScrollContainer.SCROLL_MODE_SHOW_NEVER)
-		%HolomemScrollContainer.set_vertical_scroll_mode(ScrollContainer.SCROLL_MODE_SHOW_NEVER)
-		%SupportScrollContainer.set_vertical_scroll_mode(ScrollContainer.SCROLL_MODE_SHOW_NEVER)
-		%CheerScrollContainer.set_vertical_scroll_mode(ScrollContainer.SCROLL_MODE_SHOW_NEVER)
 	
 	await get_tree().process_frame
 	
@@ -305,7 +298,7 @@ func _ready() -> void:
 	support_tag_select.get_popup().index_pressed.connect(_on_support_tag_select)
 	
 	#Last minute initializations
-	%SaveDeck.disabled = !is_deck_legal()
+	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 	%InfoMargins.update_word_wrap()
 	update_analytics()
 	fix_font_size()
@@ -444,7 +437,7 @@ func _update_tabs() -> void:
 			oshi_card.visible = false
 			continue
 		oshi_card.visible = true
-	%OshiScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
+	$CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 	
 	#Display/hide holomems
 	for holomem_card in holomem_tab.get_children():
@@ -452,7 +445,7 @@ func _update_tabs() -> void:
 			holomem_card.visible = false
 			continue
 		holomem_card.visible = true
-	%HolomemScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
+	$CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 	
 	#Display/hide supports
 	for support_card in support_tab.get_children():
@@ -460,7 +453,7 @@ func _update_tabs() -> void:
 			support_card.visible = false
 			continue
 		support_card.visible = true
-	%SupportScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
+	$CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer.scroll_vertical = 0 #Reset scrollbar to top
 
 func _update_deck():
 	#Just to sort the main deck/cheer deck
@@ -859,9 +852,9 @@ func load_from_deck_info(deck_info : Dictionary) -> void:
 	_update_deck()
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
-	%DeckName.text = deck_info.deckName
+	$CanvasLayer/DeckName.text = deck_info.deckName
 	
-	%SaveDeck.disabled = !is_deck_legal()
+	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 	
 	_hide_deck_list()
 
@@ -958,7 +951,7 @@ func create_oshi(number : String, art_code : int) -> void:
 	
 	oshiCard = create_card_button(number,art_code)
 	oshiCard._scale(0.37)
-	%OshiPlace.add_child(oshiCard)
+	$CanvasLayer/YourStuff/TAB_DECK/OshiPlace.add_child(oshiCard)
 
 func create_main_deck_card(number : String, art_code : int, amount = 1) -> void:
 	
@@ -998,7 +991,7 @@ func find_in_deck_with_number(cardNumber,artNum,areaToCheck):
 			return cardButton
 
 func _on_menu_card_clicked(card_id):
-	if %DeckList.visible or %SavePrompt.visible:
+	if $CanvasLayer/DeckList.visible or $CanvasLayer/SavePrompt.visible:
 		return
 	
 	var actualCard = all_cards[card_id]
@@ -1017,7 +1010,7 @@ func _on_menu_card_clicked(card_id):
 				alreadyHere.update_amount(alreadyHere.get_amount()+cheer_multiple)
 				in_deck_dictionary[actualCard.cardNumber] += cheer_multiple
 				total_cheer += cheer_multiple
-		_: # If cardType has a value for non-oshi non-cheer cards, you should probably use it instead of the catchall
+		_:
 			var alreadyHere = find_in_deck_with_number(actualCard.cardNumber,actualCard.artNum,main_deck)
 			if alreadyHere == null:
 				create_main_deck_card(actualCard.cardNumber,actualCard.artNum)
@@ -1033,10 +1026,10 @@ func _on_menu_card_clicked(card_id):
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
 	
-	%SaveDeck.disabled = !is_deck_legal()
+	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 
 func _on_menu_card_right_clicked(card_id):
-	if %DeckList.visible or %SavePrompt.visible:
+	if $CanvasLayer/DeckList.visible or $CanvasLayer/SavePrompt.visible:
 		return
 	
 	var actualCard = all_cards[card_id]
@@ -1067,12 +1060,12 @@ func _on_menu_card_right_clicked(card_id):
 		alreadyHere.queue_free()
 	
 	_update_deck()
-	%SaveDeck.disabled = !is_deck_legal()
+	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
 
 func _on_deck_card_right_clicked(card_id):
-	if %DeckList.visible or %SavePrompt.visible:
+	if $CanvasLayer/DeckList.visible or $CanvasLayer/SavePrompt.visible:
 		return
 	
 	var actualCard = all_cards[card_id]
@@ -1093,10 +1086,10 @@ func _on_deck_card_right_clicked(card_id):
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
 	
-	%SaveDeck.disabled = !is_deck_legal()
+	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 
 func _on_deck_card_clicked(card_id):
-	if %DeckList.visible or %SavePrompt.visible:
+	if $CanvasLayer/DeckList.visible or $CanvasLayer/SavePrompt.visible:
 		return
 	
 	var actualCard = all_cards[card_id]
@@ -1112,7 +1105,7 @@ func _on_deck_card_clicked(card_id):
 	main_count.text = str(total_main) + "/50"
 	cheer_count.text = str(total_cheer) + "/20"
 	
-	%SaveDeck.disabled = !is_deck_legal()
+	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 
 func _on_cheer_multiple_set(new_multiple):
 	cheer_multiple = new_multiple
@@ -1132,23 +1125,23 @@ func _twenty_multiple():
 
 #region Update Visuals/Cleanup
 func is_deck_legal():
-	%SaveDeck.tooltip_text = ""
+	$CanvasLayer/SaveDeck.tooltip_text = ""
 	
 	if oshiCard == null or oshiCard.name.contains("PleaseDelete"):
-		%SaveDeck.tooltip_text += tr("DECKERROR_NOOSHI") + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_NOOSHI") + "\n"
 	elif oshiCard.cardType != "Oshi":
-		%SaveDeck.tooltip_text += tr("DECKERROR_FAKEOSHI").format({cardNum = oshiCard.cardNumber}) + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_FAKEOSHI").format({cardNum = oshiCard.cardNumber}) + "\n"
 	elif oshiCard.cardNumber in banlist and banlist[oshiCard.cardNumber] == 0:
-		%SaveDeck.tooltip_text += tr("DECKERROR_BANNED").format({cardNum = oshiCard.cardNumber}) + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_BANNED").format({cardNum = oshiCard.cardNumber}) + "\n"
 	
 	if total_main < 50:
-		%SaveDeck.tooltip_text += tr("DECKERROR_UNDERDECK") + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_UNDERDECK") + "\n"
 	elif total_main > 50:
-		%SaveDeck.tooltip_text += tr("DECKERROR_OVERDECK") + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_OVERDECK") + "\n"
 	if total_cheer < 20:
-		%SaveDeck.tooltip_text += tr("DECKERROR_UNDERCHEER") + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_UNDERCHEER") + "\n"
 	elif total_cheer > 20:
-		%SaveDeck.tooltip_text += tr("DECKERROR_OVERCHEER") + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_OVERCHEER") + "\n"
 	
 	var found_debut = false
 	
@@ -1156,33 +1149,33 @@ func is_deck_legal():
 		if cardButton.cardType == "Holomem" and cardButton.level == 0 and !cardButton.name.contains("PleaseDelete"):
 			found_debut = true
 		if cardButton.get_amount() < 0:
-			%SaveDeck.tooltip_text += tr("DECKERROR_NEGATIVEAMOUNT").format({cardNum = cardButton.cardNumber}) + "\n"
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_NEGATIVEAMOUNT").format({cardNum = cardButton.cardNumber}) + "\n"
 		if cardButton.cardType in ["Cheer","Oshi"]:
-			%SaveDeck.tooltip_text += tr("DECKERROR_FAKEMAIN").format({cardNum = cardButton.cardNumber}) + "\n"
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_FAKEMAIN").format({cardNum = cardButton.cardNumber}) + "\n"
 		if cardButton.cardNumber in banlist and banlist[cardButton.cardNumber] == 0:
-			%SaveDeck.tooltip_text += tr("DECKERROR_BANNED").format({cardNum = cardButton.cardNumber}) + "\n"
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_BANNED").format({cardNum = cardButton.cardNumber}) + "\n"
 	
 	if !found_debut:
-		%SaveDeck.tooltip_text += tr("DECKERROR_NODEBUTS") + "\n"
+		$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_NODEBUTS") + "\n"
 	
 	for cardButton in cheer_deck.get_children():
 		if cardButton.get_amount() < 0:
-			%SaveDeck.tooltip_text += tr("DECKERROR_NEGATIVEAMOUNT").format({cardNum = cardButton.cardNumber}) + "\n"
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_NEGATIVEAMOUNT").format({cardNum = cardButton.cardNumber}) + "\n"
 		if cardButton.cardType in ["Holomem","Support"]:
-			%SaveDeck.tooltip_text += tr("DECKERROR_FAKECHEER").format({cardNum = cardButton.cardNumber}) + "\n"
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_FAKECHEER").format({cardNum = cardButton.cardNumber}) + "\n"
 		if cardButton.cardNumber in banlist and banlist[cardButton.cardNumber] == 0:
-			%SaveDeck.tooltip_text += tr("DECKERROR_BANNED").format({cardNum = cardButton.cardNumber}) + "\n"
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_BANNED").format({cardNum = cardButton.cardNumber}) + "\n"
 	
 	for cardNumber in in_deck_dictionary:
 		var cardLimit = Database.cardData[cardNumber]["cardLimit"]
 		if cardLimit != -1 and in_deck_dictionary[cardNumber] > cardLimit:
-			%SaveDeck.tooltip_text += tr("DECKERROR_OVERAMOUNT").format({cardNum = cardNumber}) + "\n"
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_OVERAMOUNT").format({cardNum = cardNumber}) + "\n"
 		if in_deck_dictionary[cardNumber] < 0:
-			%SaveDeck.tooltip_text += tr("DECKERROR_NEGATIVEAMOUNT").format({cardNum = cardNumber}) + "\n"
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_NEGATIVEAMOUNT").format({cardNum = cardNumber}) + "\n"
 		if cardNumber in banlist and banlist[cardNumber] < in_deck_dictionary[cardNumber]:
-			%SaveDeck.tooltip_text += tr("DECKERROR_RESTRICTED").format({cardNum = cardNumber}) + "\n"
+			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_RESTRICTED").format({cardNum = cardNumber}) + "\n"
 	
-	return %SaveDeck.tooltip_text == ""
+	return $CanvasLayer/SaveDeck.tooltip_text == ""
 
 func update_analytics():
 	var result = ""
@@ -1210,11 +1203,11 @@ func clear_info():
 
 #region Bottom Bar Buttons
 func _on_load_deck_pressed():
-	%DeckList._all_decks()
-	%DeckList.visible = true
+	$CanvasLayer/DeckList._all_decks()
+	$CanvasLayer/DeckList.visible = true
 
 func _hide_deck_list():
-	%DeckList.visible = false
+	$CanvasLayer/DeckList.visible = false
 
 func _on_banlist_choice_item_selected(index: int) -> void:
 	match index:
@@ -1236,7 +1229,7 @@ func _on_banlist_choice_item_selected(index: int) -> void:
 			else:
 				potential_card.set_ban(-1)
 	
-	%SaveDeck.disabled = !is_deck_legal()
+	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 
 func _on_save_deck_pressed():
 	for deckButton in list_of_decks_to_overwrite.get_children():
@@ -1252,9 +1245,9 @@ func _on_save_deck_pressed():
 				list_of_decks_to_overwrite.add_child(deckButton)
 	else:
 		print("An error occurred when trying to access the path.")
-	%SavePrompt.visible = true
+	$CanvasLayer/SavePrompt.visible = true
 	if OS.has_feature("web"):
-		%Download.visible = true
+		$CanvasLayer/SavePrompt/FileName/Download.visible = true
 
 func _save_deck_to_file(path, download=false):
 	if !path.ends_with(".json"):
@@ -1262,10 +1255,10 @@ func _save_deck_to_file(path, download=false):
 	
 	var deck_info = {}
 	
-	if %DeckName.text == "":
-		deck_info.deckName = tr(%DeckName.placeholder_text)
+	if $CanvasLayer/DeckName.text == "":
+		deck_info.deckName = tr($CanvasLayer/DeckName.placeholder_text)
 	else:
-		deck_info.deckName = %DeckName.text
+		deck_info.deckName = $CanvasLayer/DeckName.text
 	
 	deck_info.oshi = [oshiCard.cardNumber,oshiCard.artNum]
 	
@@ -1301,30 +1294,30 @@ func _save_deck_to_file(path, download=false):
 	_hide_save_prompt()
 
 func _on_save_pressed(confirmed=false):
-	var file_name = %FileName.text
+	var file_name = $CanvasLayer/SavePrompt/FileName.text
 	if file_name == "":
-		file_name = tr(%FileName.placeholder_text)
+		file_name = tr($CanvasLayer/SavePrompt/FileName.placeholder_text)
 	if !file_name.ends_with(".json"):
 		file_name += ".json"
 	if !confirmed and FileAccess.file_exists("user://Decks/" + file_name):
-		%OverwriteConfirmLabel.text = "Overwrite " + file_name + "?"
-		%OverwriteConfirm.visible = true
-		%OverwriteScroll.scroll_vertical = 0
+		$CanvasLayer/SavePrompt/OverwriteConfirm/Label.text = "Overwrite " + file_name + "?"
+		$CanvasLayer/SavePrompt/OverwriteConfirm.visible = true
+		$CanvasLayer/SavePrompt/ScrollContainer.scroll_vertical = 0
 	else:
 		_save_deck_to_file("user://Decks/" + file_name)
 
 func _on_download_pressed() -> void:
-	var file_name = %FileName.text
+	var file_name = $CanvasLayer/SavePrompt/FileName.text
 	if file_name == "":
-		file_name = tr(%FileName.placeholder_text)
+		file_name = tr($CanvasLayer/SavePrompt/FileName.placeholder_text)
 	if !file_name.ends_with(".json"):
 		file_name += ".json"
 	_save_deck_to_file(file_name, true)
 
 func _hide_save_prompt():
-	%SavePrompt.visible = false
-	%OverwriteConfirm.visible = false
-	%OverwriteConfirmLabel.text = ""
+	$CanvasLayer/SavePrompt.visible = false
+	$CanvasLayer/SavePrompt/OverwriteConfirm.visible = false
+	$CanvasLayer/SavePrompt/OverwriteConfirm/Label.text = ""
 
 func _on_main_menu_pressed():
 	get_tree().change_scene_to_file("res://Scenes/board.tscn")
@@ -1355,7 +1348,7 @@ func _on_clear_pressed(complete=true):
 	cheerSleeveSelect.new_sleeve()
 	update_analytics()
 	
-	%SaveDeck.disabled = !is_deck_legal()
+	$CanvasLayer/SaveDeck.disabled = !is_deck_legal()
 #endregion
 
 func fix_font_size() -> void:
