@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://chrab4uqxsh2s"]
 
-[ext_resource type="Script" uid="uid://bd6gls7q07ro8" path="res://Scripts/info_panel.gd" id="1_dle75"]
+[ext_resource type="Script" path="res://Scripts/info_panel.gd" id="1_dle75"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="2_ducyq"]
 [ext_resource type="Texture2D" uid="uid://brfosqsw30a1j" path="res://CyberAssets/DeckBuilder/61457.png" id="3_7wkbs"]
 [ext_resource type="Texture2D" uid="uid://syjyaota42p2" path="res://CyberAssets/Game Side Menu/scroll_icon_2.png" id="4_onx1c"]
@@ -10,7 +10,6 @@ clip_contents = true
 custom_minimum_size = Vector2(292, 0)
 size_flags_horizontal = 3
 script = ExtResource("1_dle75")
-allowed_to_scroll = null
 
 [node name="InfoVBox" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
@@ -98,5 +97,3 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("2_ducyq")
 bbcode_enabled = true
-
-[connection signal="gui_input" from="InfoVBox/Preview" to="." method="_on_preview_gui_input"]
