@@ -1,29 +1,37 @@
 extends Node2D
+@onready var canvas = %CanvasLayer
 
-@onready var popup = $PopupMenu
-@onready var prompt = $CanvasLayer/Prompt
-@onready var text_prompt = $CanvasLayer/PromptText
-@onready var lookAt = $CanvasLayer/ScrollContainer
-@onready var lookAtList = $CanvasLayer/ScrollContainer/LookAt
-@onready var cancel = $CanvasLayer/Cancel
+@onready var popup = %PopupMenu
+@onready var prompt = %Prompt
+@onready var text_prompt = %PromptText
+@onready var lookAt = %ScrollContainer
+@onready var lookAtList = %LookAt
+@onready var cancel = %Cancel
 
-@onready var centerZone = $Zones/Center
-@onready var collabZone = $Zones/Collab
-@onready var backZone1 = $Zones/Back1
-@onready var backZone2 = $Zones/Back2
-@onready var backZone3 = $Zones/Back3
-@onready var backZone4 = $Zones/Back4
-@onready var backZone5 = $Zones/Back5
-@onready var backZone6 = $Zones/Back6
-@onready var cardLayers = {"Cheer":$Cards/Cheer, "Attached":$Cards/Attached, "Main":$Cards/Main, "Above":$Cards/Above}
+@onready var centerZone = %Center
+@onready var collabZone = %Collab
+@onready var backZone1 = %Back1
+@onready var backZone2 = %Back2
+@onready var backZone3 = %Back3
+@onready var backZone4 = %Back4
+@onready var backZone5 = %Back5
+@onready var backZone6 = %Back6
+@onready var cardLayers = {"Cheer":%Cheer, "Attached":%Attached, "Main":%Main, "Above":%Above}
 
-@onready var deck = $SubViewportContainer/SubViewport/Node3D/DECK
-@onready var cheerDeck = $SubViewportContainer/SubViewport/Node3D/CHEERDECK
-@onready var archive = $SubViewportContainer/SubViewport/Node3D/ARCHIVE
-@onready var holopower = $SubViewportContainer/SubViewport/Node3D/HOLOPOWER
+@onready var deck = %DECK
+@onready var cheerDeck = %CHEERDECK
+@onready var archive = %ARCHIVE
+@onready var holopower = %HOLOPOWER
+@onready var die = %Die
 @onready var fuda_list = [deck, cheerDeck, archive, holopower]
-@onready var die = $SubViewportContainer/SubViewport/Node3D/Die
-@onready var spMarker = $SPmarker
+
+@onready var spMarker = %SPmarker
+@onready var board = get_tree().get_first_node_in_group("board")
+
+# Constants for the popup menu
+const SIDEBAR_WIDTH := 372
+const WINDOW_WIDTH := 1280
+const WINDOW_HEIGHT := 720
 
 var currentCard = -1
 var currentFuda = null
@@ -116,6 +124,7 @@ func _ready():
 	tr("HOLOPOWER")
 	# for POT generation
 	
+	
 	if OS.has_feature("web"):
 		%HTTPManager.accept_gzip = false
 	
@@ -123,9 +132,10 @@ func _ready():
 		holopower.count.position += Vector3(0.3,0,4.6)
 		holopower.looking.position += Vector3(3,0,0)
 	else:
+		%CanvasLayer.visible = false
 		position = Vector2(0,-1044)
 		rotation = -3.141
-		$SubViewportContainer/SubViewport/Node3D.position += Vector3(1000,0,1000)
+		%Node3D.position += Vector3(1000,0,1000)
 		deck.count.rotate_y(3.141)
 		deck.looking.rotate_y(3.141)
 		cheerDeck.count.rotate_y(3.141)
@@ -139,7 +149,7 @@ func _ready():
 	
 	if !stripped_bare:
 		if is_your_side:
-			var deckInfo = get_parent().deckInfo
+			var deckInfo = board.deckInfo
 			oshi = deckInfo.oshi
 			deckList = deckInfo.deck
 			cheerDeckList = deckInfo.cheerDeck
@@ -150,27 +160,27 @@ func _ready():
 			if deckInfo.has("cheerSleeve"):
 				cheerSleeve = deckInfo.cheerSleeve
 				found_cosmetics.append("cheerSleeve")
-			if get_parent().playmat:
-				playmatBuffer = get_parent().playmat.save_webp_to_buffer(true,0.6)
-				$gradient.texture = ImageTexture.create_from_image(get_parent().playmat)
+			if board.playmat:
+				playmatBuffer = board.playmat.save_webp_to_buffer(true,0.6)
+				%gradient.texture = ImageTexture.create_from_image(board.playmat)
 				found_cosmetics.append("playmat")
-			if get_parent().dice:
-				diceBuffer = get_parent().dice.save_webp_to_buffer(true,0.6)
-				$SubViewportContainer/SubViewport/Node3D/Die.new_texture(get_parent().dice)
+			if board.dice:
+				diceBuffer = board.dice.save_webp_to_buffer(true,0.6)
+				%Die.new_texture(board.dice)
 				found_cosmetics.append("dice")
-			if get_parent().spMarker:
-				SPBuffer = get_parent().spMarker.save_webp_to_buffer(true,0.6)
-				spMarker.texture = ImageTexture.create_from_image(get_parent().spMarker)
+			if board.spMarker:
+				SPBuffer = board.spMarker.save_webp_to_buffer(true,0.6)
+				spMarker.texture = ImageTexture.create_from_image(board.spMarker)
 				found_cosmetics.append("SPMarker")
 		else:
 			if playmatBuffer and !playmatBuffer.is_empty():
 				var image = Image.new()
 				image.load_webp_from_buffer(playmatBuffer)
-				$gradient.texture = ImageTexture.create_from_image(image)
+				%gradient.texture = ImageTexture.create_from_image(image)
 			if diceBuffer and !diceBuffer.is_empty():
 				var image = Image.new()
 				image.load_webp_from_buffer(diceBuffer)
-				$SubViewportContainer/SubViewport/Node3D/Die.new_texture(image)
+				%Die.new_texture(image)
 			if SPBuffer and !SPBuffer.is_empty():
 				var image = Image.new()
 				image.load_webp_from_buffer(SPBuffer)
@@ -253,7 +263,7 @@ func _ready():
 			for index in range(int(side_info["hand"])):
 				add_fake_to_hand()
 		if "zones" in side_info:
-			$Timer.start()
+			%Timer.start()
 			for zone in side_info["zones"]:
 				if side_info["zones"][zone]:
 					preliminary_phase = false
@@ -269,7 +279,7 @@ func _ready():
 							temp_on_top_of[oto_index+1].playOnTopOf(temp_on_top_of[oto_index])
 					for att in side_info["zones"][zone]["attached"]:
 						attach_fake_card(att, side_info["zones"][zone])
-				move_fake_card_to_zone(side_info["zones"][zone], $Zones.get_node(zone), side_info["zones"][zone]==null)
+				move_fake_card_to_zone(side_info["zones"][zone], %Zones.get_node(zone), side_info["zones"][zone]==null)
 				
 				
 		if "revealed" in side_info:
@@ -292,25 +302,25 @@ func _ready():
 		
 		if !is_goldfishing:
 			if is_your_side:
-				$CanvasLayer/Question.visible = true
+				%Question.visible = true
 			if is_front or is_your_side:
 				%CosmeticsTimer.start()
 		else:
-			$CanvasLayer/Question/RPS.visible = false
+			%RPS.visible = false
 			_show_turn_choice()
 		
 		if is_your_side:
-			$SubViewportContainer/SubViewport/Node3D/Die.is_your_die = true
+			%Die.is_your_die = true
 	else:
-		$SubViewportContainer.visible = false
+		%SubViewportContainer.visible = false
 	
-	move_child($Zones,-1)
+	move_child(%Zones,-1)
 
 func upload_cosmetics():
 	if is_your_side:
 		_upload_all_cosmetics()
 	else:
-		get_parent().send_command("Server", "Get Cosmetics", {"game":game_id})
+		board.send_command("Server", "Get Cosmetics", {"game":game_id})
 
 func finish_starting_spectate():
 	# Really hacky workaround for a bizzare issue when spectating a game in progress.
@@ -340,90 +350,88 @@ func _go_second():
 	_made_turn_choice(false)
 
 func _rps(choice):
-	$CanvasLayer/Question/Label.text = tr("RPS_WAIT")
-	$CanvasLayer/Question/RPS/Rock.disabled = true
-	$CanvasLayer/Question/RPS/Paper.disabled = true
-	$CanvasLayer/Question/RPS/Scissors.disabled = true
+	%Label.text = tr("RPS_WAIT")
+	%Rock.disabled = true
+	%Paper.disabled = true
+	%Scissors.disabled = true
 	emit_signal("rps",choice)
 
 func specialRestart():
-	$CanvasLayer/Question/Label.text = tr("RPS_TIED")
-	$CanvasLayer/Question/RPS/Rock.disabled = false
-	$CanvasLayer/Question/RPS/Paper.disabled = false
-	$CanvasLayer/Question/RPS/Scissors.disabled = false
+	%Label.text = tr("RPS_TIED")
+	%Rock.disabled = false
+	%Paper.disabled = false
+	%Scissors.disabled = false
 
 func rps_end():
-	$CanvasLayer/Question.visible = false
-	$CanvasLayer/Question/RPS.visible = false
+	%Question.visible = false
+	%RPS.visible = false
 	oshiCard.visible = true
 
 func _made_turn_choice(choice:bool):
-	$"CanvasLayer/Go First".visible = false
-	$"CanvasLayer/Go Second".visible = false
+	%PlayerOrderButtonVBox.visible = false
 	emit_signal("made_turn_choice",choice)
 	if is_goldfishing:
 		player1 = choice
 
 func _show_turn_choice():
-	$"CanvasLayer/Go First".visible = true
-	$"CanvasLayer/Go Second".visible = true
+	%PlayerOrderButtonVBox.visible = true
 
 func _mulligan_decision(forced=false):
-	$CanvasLayer/Question.visible = true
-	$CanvasLayer/Question/Label.text = tr("MULLIGAN_QUESTION")
-	$CanvasLayer/Question/Yes.visible = true
-	$CanvasLayer/Question/No.visible = true
-	$CanvasLayer/Question/OK.visible = false
-	$CanvasLayer/Question.visible = true
+	%Question.visible = true
+	%Label.text = tr("MULLIGAN_QUESTION")
+	%Yes.visible = true
+	%No.visible = true
+	%OK.visible = false
+	%Question.visible = true
 	if forced:
-		$CanvasLayer/Question/Yes.visible = false
-		$CanvasLayer/Question/No.visible = false
-		$CanvasLayer/Question/OK.visible = true
-		$CanvasLayer/Question/Label.text = tr("MULLIGAN_FORCED")
+		%Yes.visible = false
+		%No.visible = false
+		%OK.visible = true
+		%Label.text = tr("MULLIGAN_FORCED")
 	else:
-		$CanvasLayer/Question/No.disabled = false
+		%No.disabled = false
 
 func yes_mulligan():
 	send_command("Yes Mulligan")
-	$CanvasLayer/Question/Yes.visible = false
-	$CanvasLayer/Question/No.visible = false
-	$CanvasLayer/Question/OK.visible = false
+	%Yes.visible = false
+	%No.visible = false
+	%OK.visible = false
 
 func game_loss():
-	$CanvasLayer/Question/Label.text = tr("LOSS")
-	$CanvasLayer/Question/OK.visible = false
+	%Label.text = tr("LOSS")
+	%OK.visible = false
 
 func no_mulligan():
 	send_command("No Mulligan")
-	$CanvasLayer/Question/Yes.visible = false
-	$CanvasLayer/Question/No.visible = false
-	$CanvasLayer/Question/OK.visible = false
+	%Yes.visible = false
+	%No.visible = false
+	%OK.visible = false
 
 func wait_mulligan():
-	$CanvasLayer/Question/Label.text = tr('MULLIGAN_WAIT')
-	$CanvasLayer/Question/Yes.visible = false
-	$CanvasLayer/Question/No.visible = false
-	$CanvasLayer/Question/OK.visible = false
+	%Label.text = tr('MULLIGAN_WAIT')
+	%Yes.visible = false
+	%No.visible = false
+	%OK.visible = false
 
 func specialStart3(fmc):
 	if fmc.size() > 0:
-		$CanvasLayer/OpponentLabel/MulliganWarning.visible = true
+		%MulliganWarning.visible = true
 		var look_at_mulliganed = []
 		for card_info in fmc:
 			if card_info == null:
 				look_at_mulliganed.append(null)
 			else:
-				look_at_mulliganed.append(get_parent().opponentSide.get_real_card(card_info, mainBack, true))
+				look_at_mulliganed.append(board.opponentSide.get_real_card(card_info, mainBack, true))
 		showLookAt(look_at_mulliganed)
 	
-	$CanvasLayer/Question.visible = false
-	$CanvasLayer/Ready.visible = true
+	%Question.visible = false
+	%Ready.visible = true
 	can_do_things = true
 
 func _call_ready():
 	send_command("Ready")
-	$CanvasLayer/Ready.disabled = true
-	$CanvasLayer/Ready.text = tr("READY_WAIT")
+	%Ready.disabled = true
+	%Ready.text = tr("READY_WAIT")
 
 func specialStart4(life_info,ist):
 	oshiCard.flipUp()
@@ -433,10 +441,10 @@ func specialStart4(life_info,ist):
 			all_cards[zoneInfo[1]].flipUp()
 	
 	preliminary_phase = false
-	$CanvasLayer/Ready.visible = false
-	$CanvasLayer/OpponentLabel.visible = false
+	%Ready.visible = false
+	%OpponentLabelBackground.visible = false
 	is_turn = ist
-	$"CanvasLayer/End Turn".visible = is_turn
+	%"End Turn".visible = is_turn
 	turn = 1
 	%TurnCount.text = tr("TURN_COUNT").format({"turn": turn})
 	%TurnCount.visible = true
@@ -454,14 +462,14 @@ func specialStart4(life_info,ist):
 	
 	cheerDeck.update_size()
 	
-	get_parent()._enable_steps()
+	board._enable_steps()
 	if is_turn:
-		get_parent().toggle_step_mouse_filters(true)
+		board.toggle_step_mouse_filters(true)
 	else:
-		get_parent().toggle_step_mouse_filters(false)
+		board.toggle_step_mouse_filters(false)
 	
 	if is_goldfishing:
-		for zone_info in get_parent().opponentSide.zones:
+		for zone_info in board.opponentSide.zones:
 			zone_info[0].show_damage()
 
 
@@ -471,11 +479,11 @@ func specialStart4_fake(zone_info):
 	
 	for zone in zone_info:
 		var newCard = get_real_card(zone_info[zone],mainBack)
-		move_card_to_zone(newCard.cardID,$Zones.get_node(zone))
+		move_card_to_zone(newCard.cardID,%Zones.get_node(zone))
 	
 	preliminary_phase = false
-	$CanvasLayer/Ready.visible = false
-	$CanvasLayer/OpponentLabel.visible = false
+	%Ready.visible = false
+	%OpponentLabelBackground.visible = false
 	
 	for i in range(oshiCard.life):
 		cheerDeck.cardList.pop_front()
@@ -521,7 +529,7 @@ func create_fake_card(back):
 	newCard.cardID = -1
 	newCard.attachedTo = -1
 	newCard.position = Vector2(1000,1000)
-	move_child($Zones,-1)
+	move_child(%Zones,-1)
 	return newCard
 
 func get_real_card(card_dict, back, temp=false):
@@ -556,7 +564,7 @@ func get_real_card(card_dict, back, temp=false):
 			newCard.baton_pass_cost = int(card_dict.baton_pass_cost)
 		all_cards[new_id] = newCard
 		newCard.position = Vector2(1000,1000)
-		move_child($Zones,-1)
+		move_child(%Zones,-1)
 		return newCard
 
 func reveal_card(card_id):
@@ -973,11 +981,13 @@ func attach_fake_card(attachee_info, attach_to_info):
 	attach_card(attachee.cardID, attach_to.cardID)
 
 func show_popup():
+	# after moving the gamespace to a subviewport, we need to add the sidebar
+	# width to the mousex so we can set the popup pos in screen coordinates
 	if popup.item_count > 0:
 		popup.visible = true
-		var over_x = max(0,get_viewport().get_mouse_position().x + popup.size.x - 1280)
-		var over_y = max(0,get_viewport().get_mouse_position().y + popup.size.y - 720)
-		popup.position = get_viewport().get_mouse_position() - Vector2(over_x,over_y)
+		var over_x = max(0, get_viewport().get_mouse_position().x + SIDEBAR_WIDTH + popup.size.x - WINDOW_WIDTH)
+		var over_y = max(0, get_viewport().get_mouse_position().y + popup.size.y - WINDOW_HEIGHT)
+		popup.position = get_viewport().get_mouse_position() + Vector2(SIDEBAR_WIDTH, 0) - Vector2(over_x,over_y)
 
 func reset_popup():
 	popup.clear()
@@ -1021,7 +1031,7 @@ func showLookAt(list_of_cards):
 		newButton.id = actualCard.cardID
 		newButton.pressed.connect(_on_list_card_clicked.bind(actualCard.cardID))
 		if actualCard.temporary:
-			newButton.mouse_entered.connect(get_parent().opponentSide.update_info.bind(actualCard.cardID))
+			newButton.mouse_entered.connect(board.opponentSide.update_info.bind(actualCard.cardID))
 		else:
 			newButton.mouse_entered.connect(update_info.bind(actualCard.cardID))
 		lookAtList.add_child(newButton)
@@ -1076,7 +1086,7 @@ func hideLookAt(endOfAction=true):
 		newButton.queue_free()
 	lookAt.visible = false
 	cancel.visible = false
-	$CanvasLayer/OpponentLabel/MulliganWarning.visible = false
+	%MulliganWarning.visible = false
 	#emit_signal("exited_list")
 	send_command("Stop Look At")
 	if endOfAction:
@@ -1109,7 +1119,7 @@ func hideZoneSelection():
 	cancel.visible = false
 
 func _on_cancel_pressed():
-	var yourSide = get_parent().yourSide
+	var yourSide = board.yourSide
 	if yourSide:
 		yourSide.hideLookAt()
 		yourSide.remove_prompt()
@@ -1119,7 +1129,7 @@ func _on_cancel_pressed():
 	remove_prompt()
 	remove_text_prompt()
 	hideZoneSelection()
-	$CanvasLayer/Question.visible = false
+	%Question.visible = false
 
 func _hide_cosmetics():
 	for cardB in all_cards:
@@ -1140,9 +1150,9 @@ func _hide_cosmetics():
 	holopower.update_back(defaultMain.get_image())
 	cheerDeck.update_back(defaultCheer.get_image())
 	
-	$gradient.texture = get_parent().default_playmat
-	$SubViewportContainer/SubViewport/Node3D/Die.new_texture(get_parent().default_dice)
-	spMarker.texture = get_parent().default_SP
+	%gradient.texture = board.default_playmat
+	%Die.new_texture(board.default_dice)
+	spMarker.texture = board.default_SP
 
 func _redo_cosmetics():
 	cheerDeck.update_back(cheerBack)
@@ -1170,11 +1180,11 @@ func _redo_cosmetics():
 	if !playmatBuffer.is_empty():
 		var image = Image.new()
 		image.load_webp_from_buffer(playmatBuffer)
-		$gradient.texture = ImageTexture.create_from_image(image)
+		%gradient.texture = ImageTexture.create_from_image(image)
 	if !diceBuffer.is_empty():
 		var image = Image.new()
 		image.load_webp_from_buffer(diceBuffer)
-		$SubViewportContainer/SubViewport/Node3D/Die.new_texture(image)
+		%Die.new_texture(image)
 	if !SPBuffer.is_empty():
 		var image = Image.new()
 		image.load_webp_from_buffer(SPBuffer)
@@ -1433,7 +1443,7 @@ func _on_deck_clicked():
 			popup.add_separator()
 			popup.add_item(tr("DECK_MULLIGAN_UNDO"), 251)
 		
-		if !get_parent().rps:
+		if !board.rps:
 			popup.add_separator()
 			popup.add_item(tr("DECK_RPS"), 296)
 		
@@ -1666,7 +1676,7 @@ func _on_popup_menu_id_pressed(id):
 				set_prompt(tr("PROMPT_OSHICOST") + "\nX=",3)
 				currentPrompt = id
 		80,81: #Holomem Art
-			var oppSide = get_parent().opponentSide
+			var oppSide = board.opponentSide
 			oppSide.showZoneSelection(oppSide.all_occupied_zones())
 			oppSide.currentPrompt = id
 			currentPrompt = id
@@ -1692,7 +1702,7 @@ func _on_popup_menu_id_pressed(id):
 		102: #Play Hidden to Center
 			preliminary_holomem_in_center = true
 			if mulligan_to_bottom == 0:
-				$CanvasLayer/Ready.disabled = false
+				%Ready.disabled = false
 		103: #Play Hidden to Back
 			var possibleZones = all_unoccupied_back_zones()
 			showZoneSelection(possibleZones)
@@ -1829,14 +1839,14 @@ func _on_line_edit_text_submitted(new_text):
 	var input = new_text.to_int()
 	if new_text.is_valid_int() and input > 0:
 		if currentPrompt in [901,902,903,910] and is_goldfishing:
-			var actualZoneInfo = get_parent().opponentSide.zones[zone_to_deal_damage_to]
+			var actualZoneInfo = board.opponentSide.zones[zone_to_deal_damage_to]
 			match currentPrompt:
 				901:
 					actualZoneInfo[0].add_damage(input)
 				902:
 					actualZoneInfo[0].add_damage(-input)
 				903:
-					for zoneInfo in get_parent().opponentSide.zones:
+					for zoneInfo in board.opponentSide.zones:
 						if zoneInfo[0].zoneID > 1:
 							zoneInfo[0].add_damage(input)
 			zone_to_deal_damage_to = null
@@ -1853,9 +1863,9 @@ func _on_line_edit_text_submitted(new_text):
 					currentCard = -1
 				80,81: #Holomem Arts Damage
 					var actualCard = all_cards[currentCard]
-					var oppSide = get_parent().opponentSide
+					var oppSide = board.opponentSide
 					var attacking = oppSide.all_cards[currentAttacking]
-					var attackPos = attacking.position.rotated(-oppSide.rotation) + oppSide.position - get_parent().yourSide.position
+					var attackPos = attacking.position.rotated(-oppSide.rotation) + oppSide.position - board.yourSide.position
 					_move_sfx()
 					actualCard.hitAndBack(attackPos)
 	
@@ -1867,7 +1877,7 @@ func _on_text_edit_text_set() -> void:
 		match currentPrompt:
 			910: #Goldfish Zone Note
 				if is_goldfishing:
-					var actualZoneInfo = get_parent().opponentSide.zones[zone_to_deal_damage_to]
+					var actualZoneInfo = board.opponentSide.zones[zone_to_deal_damage_to]
 					actualZoneInfo[0].add_note(new_text)
 	remove_text_prompt()
 
@@ -1875,7 +1885,7 @@ func _on_zone_clicked(zone_id):
 	var actualZoneInfo = zones[zone_id]
 	
 	if actualZoneInfo[0].goldfish_mode:
-		var yourSide = get_parent().yourSide
+		var yourSide = board.yourSide
 		yourSide.reset_popup()
 		yourSide.zone_to_deal_damage_to = zone_id
 		yourSide.popup.add_item("GOLDFISH_ZONEDAMAGE", 901)
@@ -1890,7 +1900,7 @@ func _on_zone_clicked(zone_id):
 			
 		match currentPrompt:
 			80,81: #Holomem Arts (called on opponent's side)
-				var yourSide = get_parent().yourSide
+				var yourSide = board.yourSide
 				yourSide.currentAttacking = find_in_zone(actualZoneInfo[0])
 				yourSide.set_prompt(tr("PROMPT_ART_DAMAGE"),20,3)
 		
@@ -1899,25 +1909,25 @@ func _on_zone_clicked(zone_id):
 
 func _show_loss_consent(reason):
 	if is_your_side:
-		$CanvasLayer/Question/Label.text = tr("WINCONSENT_" + reason)
+		%Label.text = tr("WINCONSENT_" + reason)
 		losing_reason = "WINREASON_" + reason
-		$CanvasLayer/Question/RPS.visible = false
-		$CanvasLayer/Question/OK.visible = false
-		$CanvasLayer/Question/Yes.visible = false
-		$CanvasLayer/Question/No.visible = false
+		%RPS.visible = false
+		%OK.visible = false
+		%Yes.visible = false
+		%No.visible = false
 		
-		$CanvasLayer/Question/Lose.visible = true
-		$CanvasLayer/Question/KeepPlaying.visible = true
-		$CanvasLayer/Question.visible = true
+		%Lose.visible = true
+		%KeepPlaying.visible = true
+		%Question.visible = true
 
 func _on_lose_pressed():
-	get_parent().send_command("Game","Lose",{"reason": losing_reason})
+	board.send_command("Game","Lose",{"reason": losing_reason})
 
 func _on_keep_playing_pressed():
 	losing_reason = ""
-	$CanvasLayer/Question/Lose.visible = false
-	$CanvasLayer/Question/KeepPlaying.visible = false
-	$CanvasLayer/Question.visible = false
+	%Lose.visible = false
+	%KeepPlaying.visible = false
+	%Question.visible = false
 
 func _on_accept_damage(card_id):
 	send_command("Accept Damage",{"card_id":card_id})
@@ -1947,9 +1957,9 @@ func set_is_turn(value:bool):
 		is_turn = value
 		turn += 1
 		%TurnCount.text = tr("TURN_COUNT").format({"turn": turn})
-		get_parent()._select_step(1)
+		board._select_step(1)
 		if !preliminary_phase:
-			$"CanvasLayer/End Turn".visible = value
+			%"End Turn".visible = value
 			if deck.cardList.size() <= 0:
 				_show_loss_consent("DECKOUT")
 
@@ -1957,11 +1967,11 @@ func set_player1(value:bool):
 	if is_your_side:
 		player1 = value
 		if player1:
-			$CanvasLayer/OpponentLabel/Label.text = tr("TURN_SECOND") #"Opponent Going Second"
-			$CanvasLayer/OpponentLabel.visible = true
+			%OpponentLabel.text = tr("TURN_SECOND") #"Opponent Going Second"
+			%OpponentLabelBackground.visible = true
 		else:
-			$CanvasLayer/OpponentLabel/Label.text = tr("TURN_FIRST")
-			$CanvasLayer/OpponentLabel.visible = true
+			%OpponentLabel.text = tr("TURN_FIRST")
+			%OpponentLabelBackground.visible = true
 
 func end_turn(fake = false):
 	if is_turn:
@@ -1978,16 +1988,16 @@ func end_turn(fake = false):
 		turn += 1
 		%TurnCount.text = tr("TURN_COUNT").format({"turn": turn})
 		if fake:
-			get_parent()._actually_select_step(1)
+			board._actually_select_step(1)
 		else:
 			is_turn = false
 			emit_signal("ended_turn")
-			get_parent().toggle_step_mouse_filters(false)
-			$"CanvasLayer/End Turn".visible = false
-		get_parent()._enable_steps(true)
+			board.toggle_step_mouse_filters(false)
+			%"End Turn".visible = false
+		board._enable_steps(true)
 		
 		if is_goldfishing:
-			for zone_info in get_parent().opponentSide.zones:
+			for zone_info in board.opponentSide.zones:
 				zone_info[0].lock_in_damage()
 
 
@@ -1998,19 +2008,19 @@ func _on_die_rolled():
 	send_command("Roll Die")
 
 func _shuffle_sfx():
-	$Audio/Shuffling.play()
+	%Shuffling.play()
 
 func _die_sfx():
-	$Audio/Rolling.play()
+	%Rolling.play()
 
 func _draw_sfx():
-	$Audio/Drawing.play()
+	%Drawing.play()
 
 func _place_sfx():
-	$Audio/Placing.play()
+	%Placing.play()
 
 func _move_sfx():
-	$Audio/Moving.play()
+	%Moving.play()
 
 
 func _is_card_onstage(card_to_check):
@@ -2019,7 +2029,7 @@ func _is_card_onstage(card_to_check):
 
 
 func send_command(command:String, data=null) -> void:
-	get_parent().send_command("Side",command,data)
+	board.send_command("Side",command,data)
 
 func side_command(command: String, data: Dictionary) -> void:
 	match command:
@@ -2038,8 +2048,8 @@ func side_command(command: String, data: Dictionary) -> void:
 				specialStart4(data["life"],data["is_turn"])
 		"Your Turn":
 			set_is_turn(true)
-			get_parent()._enable_steps(true)
-			get_parent().toggle_step_mouse_filters(true)
+			board._enable_steps(true)
+			board.toggle_step_mouse_filters(true)
 			
 		"Game Loss":
 			game_loss()
@@ -2084,10 +2094,10 @@ func side_command(command: String, data: Dictionary) -> void:
 		
 		"Move Card To Zone":
 			if "card_id" in data and "zone" in data:
-				move_card_to_zone(int(data["card_id"]), $Zones.get_node(data["zone"]))
+				move_card_to_zone(int(data["card_id"]), %Zones.get_node(data["zone"]))
 		"Switch Cards In Zones":
 			if "zone_1" in data and "zone_2" in data:
-				switch_cards_in_zones($Zones.get_node(data["zone_1"]), $Zones.get_node(data["zone_2"]))
+				switch_cards_in_zones(%Zones.get_node(data["zone_1"]), %Zones.get_node(data["zone_2"]))
 		"Card Left Field":
 			if "card_id" in data and _is_card_onstage(data["card_id"]):
 				remove_old_card(int(data["card_id"]),true)
@@ -2096,7 +2106,7 @@ func side_command(command: String, data: Dictionary) -> void:
 				attach_card(int(data["attachee"]), int(data["attach_to"]))
 		"Bloom":
 			if "card_to_bloom" in data and "zone_to_bloom" in data:
-				bloom_on_zone(all_cards[int(data["card_to_bloom"])], $Zones.get_node(data["zone_to_bloom"]))
+				bloom_on_zone(all_cards[int(data["card_to_bloom"])], %Zones.get_node(data["zone_to_bloom"]))
 		"Unbloom":
 			if "card_to_unbloom" in data:
 				unbloom_on_zone(int(data["card_to_unbloom"]))
@@ -2201,13 +2211,13 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 				remove_old_card(int(data["card_id"]),true)
 		"Move Card To Zone":
 			if "card" in data and "zone" in data and "facedown" in data:
-				move_fake_card_to_zone(data["card"], $Zones.get_node(data["zone"]), data["facedown"])
+				move_fake_card_to_zone(data["card"], %Zones.get_node(data["zone"]), data["facedown"])
 		"Switch Cards In Zones":
 			if "zone_1" in data and "zone_2" in data:
-				switch_cards_in_zones($Zones.get_node(data["zone_1"]), $Zones.get_node(data["zone_2"]))
+				switch_cards_in_zones(%Zones.get_node(data["zone_1"]), %Zones.get_node(data["zone_2"]))
 		"Bloom":
 			if "card" in data and "zone_to_bloom" in data:
-				bloom_fake_on_zone(data["card"], $Zones.get_node(data["zone_to_bloom"]))
+				bloom_fake_on_zone(data["card"], %Zones.get_node(data["zone_to_bloom"]))
 		"Unbloom":
 			if "card_to_unbloom" in data:
 				unbloom_fake_on_zone(int(data["card_to_unbloom"]))
@@ -2257,12 +2267,12 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 		"Attack":
 			if "attacker" in data and "attacked" in data:
 				var attacker = all_cards[int(data["attacker"])]
-				var yourSide = get_parent().yourSide
+				var yourSide = board.yourSide
 				if !yourSide:
 					#For spectator
-					for side in get_parent().spectatedSides:
+					for side in board.spectatedSides:
 						if side != player_id:
-							yourSide = get_parent().spectatedSides[side]
+							yourSide = board.spectatedSides[side]
 				var attacked = yourSide.all_cards[int(data["attacked"])]
 				var attackPos = attacked.position.rotated(-rotation) + position - yourSide.position
 				if !is_your_side and is_front:
@@ -2314,7 +2324,7 @@ func _upload_cosmetics_suceeded(_result, cosmetic):
 		%CosmeticsTimer2.start()
 	else:
 		%CosmeticsTimer2.stop()
-	get_parent().send_command("Game", "Cosmetics", {"cosmetics": cosmetic})
+	board.send_command("Game", "Cosmetics", {"cosmetics": cosmetic})
 
 func _download_cosmetics_suceeded(result, cosmetic):
 	var image = Image.new()
@@ -2336,10 +2346,10 @@ func _download_cosmetics_suceeded(result, cosmetic):
 					life_card.updateBack(cheerBack)
 			"playmat":
 				playmatBuffer = image.save_webp_to_buffer(true)
-				$gradient.texture = ImageTexture.create_from_image(image)
+				%gradient.texture = ImageTexture.create_from_image(image)
 			"dice":
 				diceBuffer = image.save_webp_to_buffer(true)
-				$SubViewportContainer/SubViewport/Node3D/Die.new_texture(image)
+				%Die.new_texture(image)
 			"SPMarker":
 				SPBuffer = image.save_webp_to_buffer(true)
 				spMarker.texture = ImageTexture.create_from_image(image)

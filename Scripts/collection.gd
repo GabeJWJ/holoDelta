@@ -50,6 +50,7 @@ func changeAltArt(delta=1):
 
 func on_card_clicked(card_id):
 	emit_signal("card_clicked",card_id)
+	pass
 
 func on_card_right_clicked(card_id):
 	emit_signal("card_right_clicked",card_id)

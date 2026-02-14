@@ -81,61 +81,68 @@ stream_0/stream = ExtResource("24_q5bqm")
 stream_1/stream = ExtResource("25_30rg1")
 stream_2/stream = ExtResource("26_u0kxe")
 
-[node name="Side" type="Node2D" unique_id=987065924]
+[node name="Side" type="Node2D" unique_id=1631902554]
 script = ExtResource("1_vy6dv")
 
-[node name="gradient" type="Sprite2D" parent="." unique_id=1018266754]
+[node name="gradient" type="Sprite2D" parent="." unique_id=167790929]
+unique_name_in_owner = true
 z_index = -2
 position = Vector2(-1758, -532)
 texture = ExtResource("2_0kggm")
 centered = false
 
-[node name="Zones" type="Node2D" parent="." unique_id=1053623049]
+[node name="Zones" type="Node2D" parent="." unique_id=184736933]
+unique_name_in_owner = true
 
-[node name="Center" parent="Zones" unique_id=35357881 instance=ExtResource("2_a11wy")]
+[node name="Center" parent="Zones" unique_id=1170632495 instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(0, -223)
 
-[node name="Collab" parent="Zones" unique_id=764593220 instance=ExtResource("2_a11wy")]
+[node name="Collab" parent="Zones" unique_id=2108060373 instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(-430, -223)
 zoneID = 1
 
-[node name="Back1" parent="Zones" unique_id=567487445 instance=ExtResource("2_a11wy")]
+[node name="Back1" parent="Zones" unique_id=201999410 instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(-950, 380)
 zoneID = 2
 
-[node name="Back2" parent="Zones" unique_id=540424494 instance=ExtResource("2_a11wy")]
+[node name="Back2" parent="Zones" unique_id=449090963 instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(-600, 380)
 zoneID = 3
 
-[node name="Back3" parent="Zones" unique_id=138872796 instance=ExtResource("2_a11wy")]
+[node name="Back3" parent="Zones" unique_id=1816604033 instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(-250, 380)
 zoneID = 4
 
-[node name="Back4" parent="Zones" unique_id=1544772084 instance=ExtResource("2_a11wy")]
+[node name="Back4" parent="Zones" unique_id=2073975431 instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(100, 380)
 zoneID = 5
 
-[node name="Back5" parent="Zones" unique_id=2003184141 instance=ExtResource("2_a11wy")]
+[node name="Back5" parent="Zones" unique_id=872450785 instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(450, 380)
 zoneID = 6
 
-[node name="Back6" parent="Zones" unique_id=1145114586 instance=ExtResource("2_a11wy")]
+[node name="Back6" parent="Zones" unique_id=1498666878 instance=ExtResource("2_a11wy")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(800, 380)
 zoneID = 7
 
-[node name="PopupMenu" type="PopupMenu" parent="." unique_id=1694199144]
-theme = ExtResource("8_u8usn")
-theme_override_font_sizes/font_size = 20
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=224447367]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=2055458500]
+unique_name_in_owner = true
 clip_contents = true
 offset_left = -1690.0
 offset_top = -530.0
@@ -143,78 +150,120 @@ offset_right = 350.0
 offset_bottom = 514.0
 scale = Vector2(1.53, 1.53)
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=143611641]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1607987448]
 transparent_bg = true
 handle_input_locally = false
 physics_object_picking = true
 size = Vector2i(2040, 1044)
 render_target_update_mode = 4
 
-[node name="Node3D" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1538897513]
+[node name="Node3D" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=903939300]
+unique_name_in_owner = true
 
-[node name="DECK" parent="SubViewportContainer/SubViewport/Node3D" unique_id=1653705644 instance=ExtResource("3_4khac")]
+[node name="DECK" parent="SubViewportContainer/SubViewport/Node3D" unique_id=891515418 instance=ExtResource("3_4khac")]
+unique_name_in_owner = true
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 16.5929, 0, -0.627)
 
-[node name="CHEERDECK" parent="SubViewportContainer/SubViewport/Node3D" unique_id=808351442 instance=ExtResource("3_4khac")]
+[node name="CHEERDECK" parent="SubViewportContainer/SubViewport/Node3D" unique_id=350010454 instance=ExtResource("3_4khac")]
+unique_name_in_owner = true
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -16.6171, 0, -0.627)
 
-[node name="ARCHIVE" parent="SubViewportContainer/SubViewport/Node3D" unique_id=1325405381 instance=ExtResource("3_4khac")]
+[node name="ARCHIVE" parent="SubViewportContainer/SubViewport/Node3D" unique_id=292282142 instance=ExtResource("3_4khac")]
+unique_name_in_owner = true
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 21.2319, 0, -0.627)
 archive = true
 
-[node name="HOLOPOWER" parent="SubViewportContainer/SubViewport/Node3D" unique_id=1393912688 instance=ExtResource("3_4khac")]
+[node name="HOLOPOWER" parent="SubViewportContainer/SubViewport/Node3D" unique_id=683538998 instance=ExtResource("3_4khac")]
+unique_name_in_owner = true
 transform = Transform3D(-4.80825e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 15.9969, 0, -5.674)
 
-[node name="Die" parent="SubViewportContainer/SubViewport/Node3D" unique_id=2109000940 instance=ExtResource("7_3wwxl")]
+[node name="Die" parent="SubViewportContainer/SubViewport/Node3D" unique_id=499905874 instance=ExtResource("7_3wwxl")]
+unique_name_in_owner = true
 transform = Transform3D(0.944325, 0, -0.329015, 0, 1, 0, 0.329015, 0, 0.944325, 13.2699, 0, -0.02)
 
-[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/Node3D" unique_id=1689305258]
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/Node3D" unique_id=1102716859]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 16.5, 3.8)
 size = 0.15
 
-[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Node3D" unique_id=191954070]
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Node3D" unique_id=657502032]
 transform = Transform3D(0.879607, -2.07935e-08, 0.475701, -0.475701, -3.84488e-08, 0.879607, 0, -1, -4.37113e-08, 21.5293, 13.4707, 3.32323)
 light_energy = 16.0
 light_indirect_energy = 4.676
 spot_range = 307.097
 spot_angle = 62.5486
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Node3D" unique_id=2066087312]
+[node name="SpotLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport/Node3D" unique_id=528393169]
 transform = Transform3D(0.375692, 0.774292, -0.509243, 0.148634, 0.492041, 0.85779, 0.914748, -0.397956, 0.0697697, -27.5446, 17.0795, -0.403971)
 light_energy = 16.0
 light_indirect_energy = 4.676
 spot_range = 136.037
 spot_angle = 48.0811
 
-[node name="Cards" type="Node2D" parent="." unique_id=918635807]
+[node name="Cards" type="Node2D" parent="." unique_id=12998118]
 
-[node name="Cheer" type="Node2D" parent="Cards" unique_id=2121155862]
+[node name="Cheer" type="Node2D" parent="Cards" unique_id=2125470429]
+unique_name_in_owner = true
 
-[node name="Attached" type="Node2D" parent="Cards" unique_id=1572523098]
+[node name="Attached" type="Node2D" parent="Cards" unique_id=1932086613]
+unique_name_in_owner = true
 
-[node name="Main" type="Node2D" parent="Cards" unique_id=1568787436]
+[node name="Main" type="Node2D" parent="Cards" unique_id=393393105]
+unique_name_in_owner = true
 
-[node name="Above" type="Node2D" parent="Cards" unique_id=1282192839]
+[node name="Above" type="Node2D" parent="Cards" unique_id=564336163]
+unique_name_in_owner = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2124506503]
+[node name="PopupMenu" type="PopupMenu" parent="." unique_id=1915031208]
+unique_name_in_owner = true
+oversampling_override = 1.0
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 20
 
-[node name="Prompt" type="ColorRect" parent="CanvasLayer" unique_id=1714048533]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=57878121]
+unique_name_in_owner = true
+layer = 2
+
+[node name="PlayerOrderButtonVBox" type="VBoxContainer" parent="CanvasLayer" unique_id=1463714013]
+unique_name_in_owner = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -297.0
+offset_top = 332.0
+offset_right = -32.0
+offset_bottom = 446.0
+grow_horizontal = 0
+theme_override_constants/separation = 20
+
+[node name="Go First" type="Button" parent="CanvasLayer/PlayerOrderButtonVBox" unique_id=941565855]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 25
+text = "CHOICE_FIRST"
+
+[node name="Go Second" type="Button" parent="CanvasLayer/PlayerOrderButtonVBox" unique_id=1568697701]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 25
+text = "CHOICE_SECOND"
+
+[node name="Prompt" type="ColorRect" parent="CanvasLayer" unique_id=237110266]
+unique_name_in_owner = true
 visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 102.0
-offset_top = -56.0
-offset_right = 367.0
-offset_bottom = 56.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -551.0
+offset_top = 327.0
+offset_right = -286.0
+offset_bottom = 439.0
+grow_horizontal = 0
 theme = ExtResource("8_u8usn")
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[node name="Input" type="Label" parent="CanvasLayer/Prompt" unique_id=1317413767]
+[node name="Input" type="Label" parent="CanvasLayer/Prompt" unique_id=1258692333]
 auto_translate_mode = 2
 layout_mode = 1
 anchors_preset = -1
@@ -232,7 +281,7 @@ theme_override_font_sizes/font_size = 28
 text = "Draw X cards
 X="
 
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Prompt/Input" unique_id=2122798374]
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Prompt/Input" unique_id=1477858421]
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 54.309998
@@ -243,7 +292,7 @@ theme_override_font_sizes/font_size = 30
 placeholder_text = "7"
 max_length = 2
 
-[node name="Submit" type="Button" parent="CanvasLayer/Prompt" unique_id=1619299035]
+[node name="Submit" type="Button" parent="CanvasLayer/Prompt" unique_id=1175326019]
 layout_mode = 0
 offset_left = 287.0
 offset_top = 41.0
@@ -252,23 +301,24 @@ offset_bottom = 88.0
 theme_override_font_sizes/font_size = 25
 text = "PROMPT_SUBMIT"
 
-[node name="PromptText" type="ColorRect" parent="CanvasLayer" unique_id=1016815878]
+[node name="PromptText" type="ColorRect" parent="CanvasLayer" unique_id=1887951376]
+unique_name_in_owner = true
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 102.0
-offset_top = -56.0
-offset_right = 367.0
-offset_bottom = 99.0
+offset_left = -140.0
+offset_top = -101.0
+offset_right = 125.0
+offset_bottom = 54.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_u8usn")
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[node name="Input" type="Label" parent="CanvasLayer/PromptText" unique_id=532501148]
+[node name="Input" type="Label" parent="CanvasLayer/PromptText" unique_id=1228414292]
 auto_translate_mode = 2
 layout_mode = 1
 anchors_preset = -1
@@ -285,7 +335,7 @@ theme_override_constants/line_spacing = 20
 theme_override_font_sizes/font_size = 25
 text = "PROMPT_NOTE"
 
-[node name="TextEdit" type="TextEdit" parent="CanvasLayer/PromptText/Input" unique_id=1667801030]
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/PromptText/Input" unique_id=656136846]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 39.0
@@ -294,7 +344,7 @@ offset_bottom = 146.0
 theme_override_fonts/font = ExtResource("7_exc88")
 placeholder_text = "PROMPT_NOTE_PLACEHOLDER"
 
-[node name="Submit" type="Button" parent="CanvasLayer/PromptText" unique_id=1443274357]
+[node name="Submit" type="Button" parent="CanvasLayer/PromptText" unique_id=1044729211]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 165.0
@@ -303,59 +353,50 @@ offset_bottom = 212.0
 theme_override_font_sizes/font_size = 25
 text = "PROMPT_SUBMIT"
 
-[node name="Cancel" type="Button" parent="CanvasLayer" unique_id=1466148454]
+[node name="Cancel" type="Button" parent="CanvasLayer" unique_id=855132891]
+unique_name_in_owner = true
 visible = false
-offset_left = 1130.0
-offset_top = 559.0
-offset_right = 1264.0
-offset_bottom = 584.0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -122.0
+offset_right = -12.0
+offset_bottom = -75.0
+grow_horizontal = 0
+grow_vertical = 0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
 text = "PROMPT_CANCEL"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer" unique_id=2077803079]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer" unique_id=1229213940]
+unique_name_in_owner = true
 visible = false
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -223.0
-offset_top = -130.0
-offset_right = 610.0
-offset_bottom = 152.0
-grow_horizontal = 2
+offset_left = -869.0
+offset_top = -87.0
+offset_right = -36.0
+offset_bottom = 195.0
+grow_horizontal = 0
 grow_vertical = 2
 theme = SubResource("Theme_y8s1y")
 vertical_scroll_mode = 0
 
-[node name="LookAt" type="ColorRect" parent="CanvasLayer/ScrollContainer" unique_id=605736133]
+[node name="LookAt" type="ColorRect" parent="CanvasLayer/ScrollContainer" unique_id=543854528]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[node name="Go First" type="Button" parent="CanvasLayer" unique_id=1999747179]
-visible = false
-offset_left = 765.0
-offset_top = 286.0
-offset_right = 960.0
-offset_bottom = 324.0
-theme = ExtResource("8_u8usn")
-theme_override_font_sizes/font_size = 25
-text = "CHOICE_FIRST"
-
-[node name="Go Second" type="Button" parent="CanvasLayer" unique_id=1397017227]
-visible = false
-offset_left = 766.0
-offset_top = 354.0
-offset_right = 961.0
-offset_bottom = 392.0
-theme = ExtResource("8_u8usn")
-theme_override_font_sizes/font_size = 25
-text = "CHOICE_SECOND"
-
-[node name="End Turn" type="Button" parent="CanvasLayer" unique_id=2106573774]
+[node name="End Turn" type="Button" parent="CanvasLayer" unique_id=1820176619]
+unique_name_in_owner = true
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
@@ -369,13 +410,17 @@ theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 20
 text = "END_TURN"
 
-[node name="TurnCount" type="Label" parent="CanvasLayer" unique_id=1756886180]
+[node name="TurnCount" type="Label" parent="CanvasLayer" unique_id=1682209359]
 unique_name_in_owner = true
 visible = false
-offset_left = 1127.0
-offset_top = 71.0
-offset_right = 1269.0
-offset_bottom = 105.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -151.0
+offset_top = 61.0
+offset_right = -9.0
+offset_bottom = 95.0
+grow_horizontal = 0
 theme = ExtResource("8_u8usn")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -383,32 +428,42 @@ theme_override_constants/outline_size = 2
 text = "TURN_COUNT"
 horizontal_alignment = 2
 
-[node name="Ready" type="Button" parent="CanvasLayer" unique_id=603321078]
+[node name="Ready" type="Button" parent="CanvasLayer" unique_id=1444575537]
+unique_name_in_owner = true
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -230.0
+offset_left = -243.0
 offset_top = 100.0
-offset_right = -8.0
-offset_bottom = 133.0
+offset_right = -15.0
+offset_bottom = 147.0
 grow_horizontal = 0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 25
 disabled = true
 text = "START_READY"
 
-[node name="Question" type="ColorRect" parent="CanvasLayer" unique_id=1107408090]
+[node name="Question" type="ColorRect" parent="CanvasLayer" unique_id=304031281]
+unique_name_in_owner = true
 visible = false
 z_index = 10
-offset_left = 399.0
-offset_top = 130.0
-offset_right = 1246.0
-offset_bottom = 400.0
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -874.0
+offset_top = -141.0
+offset_right = -27.0
+offset_bottom = 129.0
+grow_horizontal = 0
+grow_vertical = 2
 theme = ExtResource("8_u8usn")
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[node name="Label" type="Label" parent="CanvasLayer/Question" unique_id=1117541190]
+[node name="Label" type="Label" parent="CanvasLayer/Question" unique_id=1951370598]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -425,7 +480,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="RPS" type="HBoxContainer" parent="CanvasLayer/Question" unique_id=294930002]
+[node name="RPS" type="HBoxContainer" parent="CanvasLayer/Question" unique_id=876748280]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 49.0
 offset_top = 153.0
@@ -433,28 +489,32 @@ offset_right = 810.0
 offset_bottom = 193.0
 alignment = 1
 
-[node name="Rock" type="Button" parent="CanvasLayer/Question/RPS" unique_id=1613387149]
+[node name="Rock" type="Button" parent="CanvasLayer/Question/RPS" unique_id=520235326]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RPS_ROCK"
 
-[node name="Control" type="Control" parent="CanvasLayer/Question/RPS" unique_id=244751830]
+[node name="Control" type="Control" parent="CanvasLayer/Question/RPS" unique_id=1284364141]
 layout_mode = 2
 
-[node name="Paper" type="Button" parent="CanvasLayer/Question/RPS" unique_id=1225960087]
+[node name="Paper" type="Button" parent="CanvasLayer/Question/RPS" unique_id=48773077]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RPS_PAPER"
 
-[node name="Control2" type="Control" parent="CanvasLayer/Question/RPS" unique_id=1828352207]
+[node name="Control2" type="Control" parent="CanvasLayer/Question/RPS" unique_id=445677162]
 layout_mode = 2
 
-[node name="Scissors" type="Button" parent="CanvasLayer/Question/RPS" unique_id=1803458072]
+[node name="Scissors" type="Button" parent="CanvasLayer/Question/RPS" unique_id=1312142877]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RPS_SCISSORS"
 
-[node name="Yes" type="Button" parent="CanvasLayer/Question" unique_id=585385925]
+[node name="Yes" type="Button" parent="CanvasLayer/Question" unique_id=1922476474]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 236.0
@@ -464,7 +524,8 @@ offset_bottom = 211.0
 theme_override_font_sizes/font_size = 40
 text = "YES"
 
-[node name="No" type="Button" parent="CanvasLayer/Question" unique_id=2061797813]
+[node name="No" type="Button" parent="CanvasLayer/Question" unique_id=1227942794]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 472.0
@@ -474,7 +535,8 @@ offset_bottom = 211.0
 theme_override_font_sizes/font_size = 40
 text = "NO"
 
-[node name="Lose" type="Button" parent="CanvasLayer/Question" unique_id=1759496874]
+[node name="Lose" type="Button" parent="CanvasLayer/Question" unique_id=497300454]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 236.0
@@ -484,7 +546,8 @@ offset_bottom = 211.0
 theme_override_font_sizes/font_size = 40
 text = "YES"
 
-[node name="KeepPlaying" type="Button" parent="CanvasLayer/Question" unique_id=1780581681]
+[node name="KeepPlaying" type="Button" parent="CanvasLayer/Question" unique_id=1984016575]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 472.0
@@ -494,7 +557,8 @@ offset_bottom = 211.0
 theme_override_font_sizes/font_size = 40
 text = "NO"
 
-[node name="OK" type="Button" parent="CanvasLayer/Question" unique_id=284330170]
+[node name="OK" type="Button" parent="CanvasLayer/Question" unique_id=222070407]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 344.0
@@ -504,20 +568,22 @@ offset_bottom = 219.0
 theme_override_font_sizes/font_size = 40
 text = "OK"
 
-[node name="OpponentLabel" type="ColorRect" parent="CanvasLayer" unique_id=427400122]
+[node name="OpponentLabelBackground" type="ColorRect" parent="CanvasLayer" unique_id=1197351856]
+unique_name_in_owner = true
 visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -241.0
-offset_top = 10.0
-offset_right = 606.0
-offset_bottom = 58.0
+offset_left = -423.5
+offset_top = 5.0
+offset_right = 423.5
+offset_bottom = 53.0
 grow_horizontal = 2
 theme = ExtResource("8_u8usn")
 color = Color(0.180392, 0.32549, 0.45098, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/OpponentLabel" unique_id=517384200]
+[node name="OpponentLabel" type="Label" parent="CanvasLayer/OpponentLabelBackground" unique_id=100930317]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -537,7 +603,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="MulliganWarning" type="ColorRect" parent="CanvasLayer/OpponentLabel" unique_id=1592996537]
+[node name="MulliganWarning" type="ColorRect" parent="CanvasLayer/OpponentLabelBackground" unique_id=1030871621]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = 5
@@ -551,7 +618,7 @@ grow_horizontal = 2
 theme = ExtResource("8_u8usn")
 color = Color(0.180392, 0.32549, 0.45098, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/OpponentLabel/MulliganWarning" unique_id=796242970]
+[node name="Label" type="Label" parent="CanvasLayer/OpponentLabelBackground/MulliganWarning" unique_id=911445019]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -568,56 +635,62 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 text = "MULLIGAN_TEXT"
 
-[node name="SPmarker" type="Sprite2D" parent="." unique_id=1790657238]
-visible = false
+[node name="SPmarker" type="Sprite2D" parent="." unique_id=1241294312]
+unique_name_in_owner = true
 z_index = 4
-position = Vector2(533, -448)
+position = Vector2(428, -467)
 texture = ExtResource("9_exc88")
 region_enabled = true
 region_rect = Rect2(0, 0, 200, 120)
 
-[node name="Audio" type="Node2D" parent="." unique_id=650178869]
+[node name="Audio" type="Node2D" parent="." unique_id=376390236]
 
-[node name="Drawing" type="AudioStreamPlayer" parent="Audio" unique_id=1046705269]
+[node name="Drawing" type="AudioStreamPlayer" parent="Audio" unique_id=522179973]
+unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_dstwm")
 max_polyphony = 20
 bus = &"SFX"
 
-[node name="Shuffling" type="AudioStreamPlayer" parent="Audio" unique_id=688495749]
+[node name="Shuffling" type="AudioStreamPlayer" parent="Audio" unique_id=1267686394]
+unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_qmp8k")
 max_polyphony = 20
 bus = &"SFX"
 
-[node name="Rolling" type="AudioStreamPlayer" parent="Audio" unique_id=986435657]
+[node name="Rolling" type="AudioStreamPlayer" parent="Audio" unique_id=1912960628]
+unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_e0j4a")
 max_polyphony = 20
 bus = &"SFX"
 
-[node name="Moving" type="AudioStreamPlayer" parent="Audio" unique_id=96360572]
+[node name="Moving" type="AudioStreamPlayer" parent="Audio" unique_id=508673894]
+unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_4b5bi")
 max_polyphony = 20
 bus = &"SFX"
 
-[node name="Placing" type="AudioStreamPlayer" parent="Audio" unique_id=1331324279]
+[node name="Placing" type="AudioStreamPlayer" parent="Audio" unique_id=1860556437]
+unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_1ol4w")
 max_polyphony = 20
 bus = &"SFX"
 
-[node name="Timer" type="Timer" parent="." unique_id=2044423774]
-wait_time = 0.5
-one_shot = true
-
-[node name="CosmeticsTimer" type="Timer" parent="." unique_id=1562589686]
+[node name="Timer" type="Timer" parent="." unique_id=1783307913]
 unique_name_in_owner = true
 wait_time = 0.5
 one_shot = true
 
-[node name="CosmeticsTimer2" type="Timer" parent="." unique_id=778808025]
+[node name="CosmeticsTimer" type="Timer" parent="." unique_id=1297000554]
+unique_name_in_owner = true
+wait_time = 0.5
+one_shot = true
+
+[node name="CosmeticsTimer2" type="Timer" parent="." unique_id=921452243]
 unique_name_in_owner = true
 wait_time = 2.0
 one_shot = true
 
-[node name="HTTPManager" type="Node" parent="." unique_id=442184223]
+[node name="HTTPManager" type="Node" parent="." unique_id=462272078]
 unique_name_in_owner = true
 script = ExtResource("24_i3t2a")
 parallel_connections_count = 10
@@ -648,7 +721,6 @@ metadata/_custom_type_script = "uid://dpmwhedq5ws5x"
 [connection signal="zone_clicked" from="Zones/Back6" to="." method="_on_zone_clicked"]
 [connection signal="zone_info_clear" from="Zones/Back6" to="." method="clear_info"]
 [connection signal="zone_info_set" from="Zones/Back6" to="." method="_on_zone_enter"]
-[connection signal="id_pressed" from="PopupMenu" to="." method="_on_popup_menu_id_pressed"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/DECK" to="." method="_on_deck_clicked"]
 [connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/DECK" to="." method="_on_fuda_shuffled"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/CHEERDECK" to="." method="_on_cheer_deck_clicked"]
@@ -659,12 +731,13 @@ metadata/_custom_type_script = "uid://dpmwhedq5ws5x"
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/HOLOPOWER" to="." method="_on_holopower_clicked"]
 [connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/HOLOPOWER" to="." method="_on_fuda_shuffled"]
 [connection signal="rolled" from="SubViewportContainer/SubViewport/Node3D/Die" to="." method="_on_die_rolled"]
+[connection signal="id_pressed" from="PopupMenu" to="." method="_on_popup_menu_id_pressed"]
+[connection signal="pressed" from="CanvasLayer/PlayerOrderButtonVBox/Go First" to="." method="_go_first"]
+[connection signal="pressed" from="CanvasLayer/PlayerOrderButtonVBox/Go Second" to="." method="_go_second"]
 [connection signal="text_submitted" from="CanvasLayer/Prompt/Input/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="CanvasLayer/Prompt/Submit" to="." method="_on_submit_pressed"]
 [connection signal="pressed" from="CanvasLayer/PromptText/Submit" to="." method="_on_text_edit_text_set"]
 [connection signal="pressed" from="CanvasLayer/Cancel" to="." method="_on_cancel_pressed"]
-[connection signal="pressed" from="CanvasLayer/Go First" to="." method="_go_first"]
-[connection signal="pressed" from="CanvasLayer/Go Second" to="." method="_go_second"]
 [connection signal="pressed" from="CanvasLayer/End Turn" to="." method="end_turn"]
 [connection signal="pressed" from="CanvasLayer/Ready" to="." method="_call_ready"]
 [connection signal="pressed" from="CanvasLayer/Question/RPS/Rock" to="." method="_rps_rock"]

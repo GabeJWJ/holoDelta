@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://cs6ginkulskya"]
+[gd_scene load_steps=47 format=3 uid="uid://cs6ginkulskya"]
 
 [ext_resource type="PackedScene" uid="uid://j87r323v31qv" path="res://Scenes/side.tscn" id="1_ima0g"]
 [ext_resource type="Script" uid="uid://c1po3kd3x6ln6" path="res://Scripts/Multiplayer.gd" id="3_0fpdy"]
+[ext_resource type="Script" uid="uid://xg6hfi2a0gir" path="res://Scripts/adaptive_canvas_scaling.gd" id="3_hih85"]
 [ext_resource type="Texture2D" uid="uid://kwq21hbtxatg" path="res://CyberAssets/Main Menu Assets/HoloDelta BG (Light Mode).svg" id="3_t0eaa"]
 [ext_resource type="Texture2D" uid="uid://chv6t7kvxgx0s" path="res://gear.png" id="4_n5n8m"]
 [ext_resource type="Texture2D" uid="uid://biy2phmp4flym" path="res://gearSelected.png" id="5_13mvd"]
@@ -48,9 +49,6 @@ height = 720
 fill_from = Vector2(0.111111, 0.87478)
 fill_to = Vector2(0.934524, 0.282187)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2xwu4"]
-texture = ExtResource("5_ct7jt")
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0jqk"]
 bg_color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
@@ -66,31 +64,39 @@ bg_color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvtkr"]
 bg_color = Color(0.27451, 0.760784, 1, 1)
 
-[node name="Board" type="Node2D" unique_id=89411147]
-position = Vector2(1020, 1566)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2xwu4"]
+texture = ExtResource("5_ct7jt")
+
+[node name="Board" type="Node2D" groups=["board"]]
 script = ExtResource("3_0fpdy")
 player_side = ExtResource("1_ima0g")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2057461104]
+[node name="MenuCanvas" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 2
+script = ExtResource("3_hih85")
 
-[node name="gradient" type="Sprite2D" parent="CanvasLayer" unique_id=121624542]
+[node name="gradient" type="Sprite2D" parent="MenuCanvas"]
 unique_name_in_owner = true
 texture = SubResource("GradientTexture2D_xoxh0")
 centered = false
 
-[node name="bg" type="Sprite2D" parent="CanvasLayer/gradient" unique_id=207174130]
+[node name="bg" type="Sprite2D" parent="MenuCanvas/gradient"]
 scale = Vector2(0.667, 0.667)
 texture = ExtResource("3_t0eaa")
 centered = false
 
-[node name="TitleVBox" type="VBoxContainer" parent="CanvasLayer" unique_id=1350257802]
+[node name="TitleVBox" type="VBoxContainer" parent="MenuCanvas"]
 unique_name_in_owner = true
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 137.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -533.5
+offset_right = 533.5
+offset_bottom = 193.0
 grow_horizontal = 2
 
-[node name="Title" type="Label" parent="CanvasLayer/TitleVBox" unique_id=305460477]
+[node name="Title" type="Label" parent="MenuCanvas/TitleVBox"]
 custom_minimum_size = Vector2(1067, 137)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -100,7 +106,7 @@ text = "TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Subtitle" type="Label" parent="CanvasLayer/TitleVBox" unique_id=1579970972]
+[node name="Subtitle" type="Label" parent="MenuCanvas/TitleVBox"]
 custom_minimum_size = Vector2(950, 42)
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
@@ -109,29 +115,29 @@ text = "SUBTITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LeftBarMargins" type="MarginContainer" parent="CanvasLayer" unique_id=1652730699]
+[node name="LeftBarMargins" type="MarginContainer" parent="MenuCanvas"]
 unique_name_in_owner = true
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_right = 239.0
+offset_right = 225.0
 grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="LeftBarVBox" type="VBoxContainer" parent="CanvasLayer/LeftBarMargins" unique_id=1874521995]
+[node name="LeftBarVBox" type="VBoxContainer" parent="MenuCanvas/LeftBarMargins"]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="DebugButton" type="Button" parent="CanvasLayer/LeftBarMargins/LeftBarVBox" unique_id=1231358967]
+[node name="DebugButton" type="Button" parent="MenuCanvas/LeftBarMargins/LeftBarVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 text = "DEBUG"
 
-[node name="ServerCode" type="Label" parent="CanvasLayer/LeftBarMargins/LeftBarVBox" unique_id=956342332]
+[node name="ServerCode" type="Label" parent="MenuCanvas/LeftBarMargins/LeftBarVBox"]
 unique_name_in_owner = true
 auto_translate_mode = 2
 layout_mode = 2
@@ -140,13 +146,13 @@ theme = ExtResource("5_fdkx6")
 text = "Server Code"
 horizontal_alignment = 1
 
-[node name="CustomizationSettingsVBox" type="VBoxContainer" parent="CanvasLayer/LeftBarMargins/LeftBarVBox" unique_id=477033441]
+[node name="CustomizationSettingsVBox" type="VBoxContainer" parent="MenuCanvas/LeftBarMargins/LeftBarVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="DeckCreationButton" type="Button" parent="CanvasLayer/LeftBarMargins/LeftBarVBox/CustomizationSettingsVBox" unique_id=64609179]
+[node name="DeckCreationButton" type="Button" parent="MenuCanvas/LeftBarMargins/LeftBarVBox/CustomizationSettingsVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 4
@@ -154,14 +160,14 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 text = "DECK_CREATE"
 
-[node name="PlaymatDiceCustom" type="Button" parent="CanvasLayer/LeftBarMargins/LeftBarVBox/CustomizationSettingsVBox" unique_id=2002533241]
+[node name="PlaymatDiceCustom" type="Button" parent="MenuCanvas/LeftBarMargins/LeftBarVBox/CustomizationSettingsVBox"]
 layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 text = "COSMETICS"
 
-[node name="OnlyEN" type="CheckButton" parent="CanvasLayer/LeftBarMargins/LeftBarVBox" unique_id=213261669]
+[node name="OnlyEN" type="CheckButton" parent="MenuCanvas/LeftBarMargins/LeftBarVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
@@ -169,7 +175,7 @@ theme_override_font_sizes/font_size = 20
 text = "OPTION_EN"
 alignment = 1
 
-[node name="LanguageSelect" type="MenuButton" parent="CanvasLayer/LeftBarMargins/LeftBarVBox" unique_id=1433919113]
+[node name="LanguageSelect" type="MenuButton" parent="MenuCanvas/LeftBarMargins/LeftBarVBox"]
 unique_name_in_owner = true
 auto_translate_mode = 2
 layout_mode = 2
@@ -193,7 +199,7 @@ popup/item_5/id = 5
 popup/item_6/text = "繁體中文"
 popup/item_6/id = 6
 
-[node name="InfoButton" type="Button" parent="CanvasLayer/LeftBarMargins/LeftBarVBox" unique_id=910867824]
+[node name="InfoButton" type="Button" parent="MenuCanvas/LeftBarMargins/LeftBarVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
@@ -201,14 +207,18 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 text = "INFO"
 
-[node name="OptionButton" type="TextureButton" parent="CanvasLayer" unique_id=1441629007]
+[node name="OptionButton" type="TextureButton" parent="MenuCanvas"]
 unique_name_in_owner = true
 y_sort_enabled = true
 custom_minimum_size = Vector2(100, 100)
-offset_left = 1160.0
-offset_top = 20.0
-offset_right = 1260.0
-offset_bottom = 120.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -129.0
+offset_top = 31.0
+offset_right = -29.0
+offset_bottom = 131.0
+grow_horizontal = 0
 size_flags_horizontal = 8
 theme = ExtResource("5_fdkx6")
 toggle_mode = true
@@ -217,30 +227,28 @@ texture_pressed = ExtResource("5_13mvd")
 ignore_texture_size = true
 stretch_mode = 4
 
-[node name="LobbyButtons" type="VBoxContainer" parent="CanvasLayer" unique_id=92598222]
+[node name="LobbyButtons" type="VBoxContainer" parent="MenuCanvas"]
 unique_name_in_owner = true
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -124.5
-offset_top = -135.0
-offset_right = 124.5
-offset_bottom = 318.0
+anchors_preset = -1
+anchor_left = 0.40273437
+anchor_top = 0.31111112
+anchor_right = 0.5972656
+anchor_bottom = 0.94027776
+offset_top = -1.5258789e-05
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 45
 alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="PlayerName" type="LineEdit" parent="CanvasLayer/LobbyButtons" unique_id=1285178770]
+[node name="PlayerName" type="LineEdit" parent="MenuCanvas/LobbyButtons"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 alignment = 1
 
-[node name="LobbyCreate" type="Button" parent="CanvasLayer/LobbyButtons" unique_id=1094401487]
+[node name="LobbyCreate" type="Button" parent="MenuCanvas/LobbyButtons"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
@@ -248,7 +256,7 @@ theme_override_font_sizes/font_size = 20
 disabled = true
 text = "LOBBY_CREATE"
 
-[node name="LobbyJoin" type="Button" parent="CanvasLayer/LobbyButtons" unique_id=1773080101]
+[node name="LobbyJoin" type="Button" parent="MenuCanvas/LobbyButtons"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
@@ -256,7 +264,7 @@ theme_override_font_sizes/font_size = 20
 disabled = true
 text = "LOBBY_JOIN"
 
-[node name="GameSpectate" type="Button" parent="CanvasLayer/LobbyButtons" unique_id=47183945]
+[node name="GameSpectate" type="Button" parent="MenuCanvas/LobbyButtons"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
@@ -264,7 +272,7 @@ theme_override_font_sizes/font_size = 20
 disabled = true
 text = "LOBBY_SPECTATE"
 
-[node name="Goldfish" type="Button" parent="CanvasLayer/LobbyButtons" unique_id=2040290398]
+[node name="Goldfish" type="Button" parent="MenuCanvas/LobbyButtons"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
@@ -272,7 +280,7 @@ theme_override_font_sizes/font_size = 20
 disabled = true
 text = "SOLO_GOLDFISH"
 
-[node name="PlayerCount" type="Label" parent="CanvasLayer/LobbyButtons" unique_id=1484587508]
+[node name="PlayerCount" type="Label" parent="MenuCanvas/LobbyButtons"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
@@ -280,29 +288,33 @@ theme_override_font_sizes/font_size = 20
 text = "PLAYERS_ONLINE"
 horizontal_alignment = 1
 
-[node name="ClientVersionText" type="Label" parent="CanvasLayer" unique_id=615078274]
+[node name="ClientVersionText" type="Label" parent="MenuCanvas"]
 unique_name_in_owner = true
 auto_translate_mode = 2
-offset_left = 991.0
-offset_top = 656.0
-offset_right = 1271.0
-offset_bottom = 680.0
+anchors_preset = -1
+anchor_left = 0.77421874
+anchor_top = 0.9111111
+anchor_right = 0.99296874
+anchor_bottom = 0.9444444
 theme = ExtResource("5_fdkx6")
 text = "Client Version "
 horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="CardVersionText" type="Label" parent="CanvasLayer" unique_id=556822934]
+[node name="CardVersionText" type="Label" parent="MenuCanvas"]
 unique_name_in_owner = true
 auto_translate_mode = 2
-offset_left = 990.0
-offset_top = 686.0
-offset_right = 1270.0
-offset_bottom = 710.0
+anchors_preset = -1
+anchor_left = 0.7734375
+anchor_top = 0.9527778
+anchor_right = 0.9921875
+anchor_bottom = 0.9861111
 theme = ExtResource("5_fdkx6")
 text = "Card Version "
 horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="CreditsPanel" type="PanelContainer" parent="CanvasLayer" unique_id=940231658]
+[node name="CreditsPanel" type="PanelContainer" parent="MenuCanvas"]
 unique_name_in_owner = true
 visible = false
 z_index = 10
@@ -319,18 +331,18 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("7_sgknu")
 
-[node name="InfoMargins" type="MarginContainer" parent="CanvasLayer/CreditsPanel" unique_id=1575452821]
+[node name="InfoMargins" type="MarginContainer" parent="MenuCanvas/CreditsPanel"]
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="InfoVBox" type="VBoxContainer" parent="CanvasLayer/CreditsPanel/InfoMargins" unique_id=1623676951]
+[node name="InfoVBox" type="VBoxContainer" parent="MenuCanvas/CreditsPanel/InfoMargins"]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="MadeBy" type="Label" parent="CanvasLayer/CreditsPanel/InfoMargins/InfoVBox" unique_id=1356079609]
+[node name="MadeBy" type="Label" parent="MenuCanvas/CreditsPanel/InfoMargins/InfoVBox"]
 auto_translate_mode = 2
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
@@ -342,11 +354,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/CreditsPanel/InfoMargins/InfoVBox" unique_id=1765351531]
+[node name="ScrollContainer" type="ScrollContainer" parent="MenuCanvas/CreditsPanel/InfoMargins/InfoVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Credits" type="Label" parent="CanvasLayer/CreditsPanel/InfoMargins/InfoVBox/ScrollContainer" unique_id=138800808]
+[node name="Credits" type="Label" parent="MenuCanvas/CreditsPanel/InfoMargins/InfoVBox/ScrollContainer"]
 auto_translate_mode = 2
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
@@ -365,7 +377,6 @@ text = "Special thanks to:
 - M rick and Tarko for the French translation
 - dcinside Holive OCG minor gallery for the Korean translation
 - Diego (TASI) for the Traditional Chinese translation
-- コロイド for the Japanese translation
 - Treevan, Nanaca, and FrozenFyre for cardData updates
 - HaruTsunX for helping with the sound design
 - WunderRiku for the BGM
@@ -379,24 +390,24 @@ Harukii, Whamer100, Phi, Prime, Qrimpuff, Siulzen, Diz, PTactician, wesleydm1999
 Ui icons created by Freepik - Flaticon - https://www.flaticon.com/free-icons/ui"
 autowrap_mode = 3
 
-[node name="DeckLocation" type="Label" parent="CanvasLayer/CreditsPanel/InfoMargins/InfoVBox" unique_id=830374409]
+[node name="DeckLocation" type="Label" parent="MenuCanvas/CreditsPanel/InfoMargins/InfoVBox"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/CreditsPanel/InfoMargins/InfoVBox" unique_id=919185118]
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuCanvas/CreditsPanel/InfoMargins/InfoVBox"]
 layout_mode = 2
 
-[node name="DeckLocationButton" type="Button" parent="CanvasLayer/CreditsPanel/InfoMargins/InfoVBox/HBoxContainer" unique_id=1581051270]
+[node name="DeckLocationButton" type="Button" parent="MenuCanvas/CreditsPanel/InfoMargins/InfoVBox/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 2
 theme = ExtResource("5_fdkx6")
 text = "INFO_DLOC"
 
-[node name="Close" type="Button" parent="CanvasLayer/CreditsPanel/InfoMargins/InfoVBox/HBoxContainer" unique_id=1628199326]
+[node name="Close" type="Button" parent="MenuCanvas/CreditsPanel/InfoMargins/InfoVBox/HBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -404,52 +415,53 @@ theme = ExtResource("5_fdkx6")
 text = "INFO_CANCEL"
 clip_text = true
 
-[node name="OptionPanel" type="PanelContainer" parent="CanvasLayer" unique_id=23924268]
+[node name="OptionPanel" type="PanelContainer" parent="MenuCanvas"]
 unique_name_in_owner = true
 visible = false
 z_index = 10
 anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 0.883
-anchor_bottom = 1.0
-offset_left = -14.88
-offset_top = 20.0
-offset_right = 14.88
-offset_bottom = -40.0
-grow_horizontal = 2
+anchor_left = 1.0
+anchor_top = 0.025
+anchor_right = 1.0
+anchor_bottom = 0.947
+offset_left = -678.0
+offset_right = -158.0
+offset_bottom = 0.15997314
+grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("11_122ys")
 
-[node name="OptionMargins" type="MarginContainer" parent="CanvasLayer/OptionPanel" unique_id=2121179101]
+[node name="OptionMargins" type="MarginContainer" parent="MenuCanvas/OptionPanel"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="OptionScrollContainer" type="ScrollContainer" parent="CanvasLayer/OptionPanel/OptionMargins" unique_id=1343767422]
+[node name="OptionScrollContainer" type="ScrollContainer" parent="MenuCanvas/OptionPanel/OptionMargins"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 horizontal_scroll_mode = 0
 
-[node name="OptionsVBox" type="VBoxContainer" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer" unique_id=1840779832]
+[node name="OptionsVBox" type="VBoxContainer" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 10
 
-[node name="GameOptionsLabel" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox" unique_id=532086583]
+[node name="GameOptionsLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 text = "SETTINGS_GAME_OPTIONS"
 horizontal_alignment = 1
 
-[node name="OptionsGridContainer" type="GridContainer" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox" unique_id=1146584318]
+[node name="OptionsGridContainer" type="GridContainer" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
 layout_mode = 2
 columns = 2
 
-[node name="CheckUnrevealed" type="TextureButton" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer" unique_id=123895694]
+[node name="CheckUnrevealed" type="TextureButton" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -459,7 +471,7 @@ texture_pressed = ExtResource("7_n8awk")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Unrevealed" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer" unique_id=788943384]
+[node name="Unrevealed" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer"]
 visible = false
 custom_minimum_size = Vector2(300, 20)
 layout_mode = 2
@@ -468,7 +480,7 @@ theme_override_font_sizes/font_size = 120
 text = "OPTION_UNREVEALED"
 autowrap_mode = 3
 
-[node name="UseCardLanguage" type="TextureButton" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer" unique_id=1241644574]
+[node name="UseCardLanguage" type="TextureButton" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
@@ -478,14 +490,14 @@ texture_pressed = ExtResource("7_n8awk")
 ignore_texture_size = true
 stretch_mode = 4
 
-[node name="CardLanguage" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer" unique_id=43886421]
+[node name="CardLanguage" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer"]
 custom_minimum_size = Vector2(300, 20)
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 text = "OPTION_LANGUAGE"
 autowrap_mode = 3
 
-[node name="AllowProxies" type="TextureButton" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer" unique_id=1118581743]
+[node name="AllowProxies" type="TextureButton" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
@@ -495,30 +507,30 @@ texture_pressed = ExtResource("7_n8awk")
 ignore_texture_size = true
 stretch_mode = 4
 
-[node name="Proxies" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer" unique_id=1617800094]
+[node name="Proxies" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer"]
 custom_minimum_size = Vector2(300, 20)
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 text = "OPTION_PROXY"
 autowrap_mode = 3
 
-[node name="HSeparator5" type="HSeparator" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox" unique_id=587236961]
+[node name="HSeparator5" type="HSeparator" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
 layout_mode = 2
 
-[node name="AudioOptionsLabel" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox" unique_id=480150042]
+[node name="AudioOptionsLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 text = "SETTINGS_AUDIO_OPTIONS"
 horizontal_alignment = 1
 
-[node name="SFXLabel" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox" unique_id=442165474]
+[node name="SFXLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
 auto_translate_mode = 2
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 text = "SFX"
 
-[node name="SFXSlider" type="HSlider" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox" unique_id=1789255655]
+[node name="SFXSlider" type="HSlider" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
@@ -528,18 +540,18 @@ scrollable = false
 tick_count = 11
 ticks_on_borders = true
 
-[node name="SFXTestAudio" type="AudioStreamPlayer" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/SFXSlider" unique_id=1015453860]
+[node name="SFXTestAudio" type="AudioStreamPlayer" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/SFXSlider"]
 unique_name_in_owner = true
 stream = ExtResource("12_lpjdh")
 bus = &"SFX"
 
-[node name="BGMLabel" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox" unique_id=290681143]
+[node name="BGMLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
 auto_translate_mode = 2
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 text = "BGM"
 
-[node name="BGMSlider" type="HSlider" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox" unique_id=1602011913]
+[node name="BGMSlider" type="HSlider" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
@@ -549,23 +561,23 @@ scrollable = false
 tick_count = 11
 ticks_on_borders = true
 
-[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox" unique_id=952952627]
+[node name="HSeparator2" type="HSeparator" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
 layout_mode = 2
 
-[node name="KeybindingsLabel" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox" unique_id=1414661639]
+[node name="KeybindingsLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 20
 text = "SETTINGS_KEYBINDINGS"
 horizontal_alignment = 1
 
-[node name="KeybindingsGridContainer" type="GridContainer" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox" unique_id=1185506304]
+[node name="KeybindingsGridContainer" type="GridContainer" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/v_separation = 20
 columns = 2
 
-[node name="DrawLabel" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=1511873170]
+[node name="DrawLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(300, 20)
 layout_mode = 2
@@ -575,7 +587,7 @@ text = "ACTION_DRAW"
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Draw" type="Button" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=1518675671]
+[node name="Draw" type="Button" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
@@ -584,7 +596,7 @@ text = "D"
 script = ExtResource("14_x8gke")
 action = "Draw"
 
-[node name="CheerLabel" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=319327867]
+[node name="CheerLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(300, 20)
 layout_mode = 2
@@ -594,7 +606,7 @@ text = "ACTION_CHEER"
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Cheer" type="Button" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=1806924228]
+[node name="Cheer" type="Button" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
@@ -603,7 +615,7 @@ text = "C"
 script = ExtResource("14_x8gke")
 action = "Cheer"
 
-[node name="ResetLabel" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=1418150789]
+[node name="ResetLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(300, 20)
 layout_mode = 2
@@ -613,7 +625,7 @@ text = "ACTION_RESET"
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Reset" type="Button" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=1291944903]
+[node name="Reset" type="Button" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
@@ -622,7 +634,7 @@ text = "R"
 script = ExtResource("14_x8gke")
 action = "Reset"
 
-[node name="TabsLabel" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=469341984]
+[node name="TabsLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(300, 20)
 layout_mode = 2
@@ -632,7 +644,7 @@ text = "ACTION_TABS"
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Tabs" type="Button" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=1420294760]
+[node name="Tabs" type="Button" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
@@ -641,7 +653,7 @@ text = "TAB"
 script = ExtResource("14_x8gke")
 action = "SwapPanels"
 
-[node name="LockInfoLabel" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=893988161]
+[node name="LockInfoLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(300, 20)
 layout_mode = 2
@@ -651,7 +663,7 @@ text = "ACTION_LOCK"
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="LockInfo" type="Button" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=1931629367]
+[node name="LockInfo" type="Button" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
@@ -660,7 +672,7 @@ text = "CTRL"
 script = ExtResource("14_x8gke")
 action = "LockInfo"
 
-[node name="LastStepLabel" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=1644420981]
+[node name="LastStepLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(300, 20)
 layout_mode = 2
@@ -670,7 +682,7 @@ text = "ACTION_LSTEP"
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="LastStep" type="Button" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=1096972843]
+[node name="LastStep" type="Button" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
@@ -679,7 +691,7 @@ text = "["
 script = ExtResource("14_x8gke")
 action = "Last Step"
 
-[node name="NextStepLabel" type="Label" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=652281256]
+[node name="NextStepLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 1
 custom_minimum_size = Vector2(300, 20)
 layout_mode = 2
@@ -689,7 +701,7 @@ text = "ACTION_NSTEP"
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="NextStep" type="Button" parent="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer" unique_id=845704313]
+[node name="NextStep" type="Button" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/KeybindingsGridContainer"]
 auto_translate_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
@@ -698,7 +710,107 @@ text = "]"
 script = ExtResource("14_x8gke")
 action = "Next Step"
 
-[node name="LobbyPanel" type="PanelContainer" parent="CanvasLayer" unique_id=65099195]
+[node name="AndroidLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 20
+text = "SETTINGS_ANDROID"
+horizontal_alignment = 1
+
+[node name="AndroidOptionsGridContainer" type="GridContainer" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+columns = 2
+
+[node name="AndroidAutoDetectSafeAreaButton" type="TextureButton" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("6_1x0cl")
+texture_pressed = ExtResource("7_n8awk")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="AndroidAutoDetectSafeArea" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer"]
+custom_minimum_size = Vector2(300, 20)
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+text = "OPTION_ANDROID_AUTO_DETECT_SAFE_AREA"
+autowrap_mode = 3
+
+[node name="MarginLeft" type="SpinBox" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+rounded = true
+update_on_text_changed = true
+suffix = "pixels"
+custom_arrow_step = 10.0
+select_all_on_focus = true
+
+[node name="MarginLeftLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer"]
+custom_minimum_size = Vector2(300, 20)
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+text = "SETTINGS_ANDROID_MARGIN_LEFT"
+autowrap_mode = 3
+
+[node name="MarginRight" type="SpinBox" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+rounded = true
+update_on_text_changed = true
+suffix = "pixels"
+custom_arrow_step = 10.0
+select_all_on_focus = true
+
+[node name="MarginRightLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer"]
+custom_minimum_size = Vector2(300, 20)
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+text = "SETTINGS_ANDROID_MARGIN_RIGHT"
+autowrap_mode = 3
+
+[node name="MarginTop" type="SpinBox" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+rounded = true
+update_on_text_changed = true
+suffix = "pixels"
+custom_arrow_step = 10.0
+select_all_on_focus = true
+
+[node name="MarginTopLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer"]
+custom_minimum_size = Vector2(300, 20)
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+text = "SETTINGS_ANDROID_MARGIN_TOP"
+autowrap_mode = 3
+
+[node name="MarginBottom" type="SpinBox" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+rounded = true
+update_on_text_changed = true
+suffix = "pixels"
+custom_arrow_step = 10.0
+select_all_on_focus = true
+
+[node name="MarginBottomLabel" type="Label" parent="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer"]
+custom_minimum_size = Vector2(300, 20)
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+text = "SETTINGS_ANDROID_MARGIN_BOTTOM"
+autowrap_mode = 3
+
+[node name="LobbyPanel" type="PanelContainer" parent="MenuCanvas"]
 unique_name_in_owner = true
 visible = false
 anchors_preset = 8
@@ -706,73 +818,73 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -316.5
+offset_left = -324.5
 offset_top = -300.0
-offset_right = 316.5
+offset_right = 324.5
 offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("5_fdkx6")
 theme_override_styles/panel = ExtResource("11_122ys")
 
-[node name="LobbyListMargins" type="MarginContainer" parent="CanvasLayer/LobbyPanel" unique_id=635076313]
+[node name="LobbyListMargins" type="MarginContainer" parent="MenuCanvas/LobbyPanel"]
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="LobblyListVBox" type="VBoxContainer" parent="CanvasLayer/LobbyPanel/LobbyListMargins" unique_id=404806323]
+[node name="LobblyListVBox" type="VBoxContainer" parent="MenuCanvas/LobbyPanel/LobbyListMargins"]
 layout_mode = 2
 
-[node name="LobbiesFoundLabel" type="Label" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox" unique_id=1178419123]
+[node name="LobbiesFoundLabel" type="Label" parent="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "LOBBY_PUBLIC_LOBBIES_FOUND"
 horizontal_alignment = 1
 
-[node name="LobbyListScroll" type="ScrollContainer" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox" unique_id=797993886]
+[node name="LobbyListScroll" type="ScrollContainer" parent="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="LobbiesFoundMargins" type="MarginContainer" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyListScroll" unique_id=2097638997]
+[node name="LobbiesFoundMargins" type="MarginContainer" parent="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyListScroll"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="LobbiesFound" type="VBoxContainer" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyListScroll/LobbiesFoundMargins" unique_id=1165765918]
+[node name="LobbiesFound" type="VBoxContainer" parent="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyListScroll/LobbiesFoundMargins"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="LobbyCodeHBox" type="HBoxContainer" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox" unique_id=1590669821]
+[node name="LobbyCodeHBox" type="HBoxContainer" parent="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox"]
 layout_mode = 2
 
-[node name="LobbyListCode" type="LineEdit" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox" unique_id=1229127085]
+[node name="LobbyListCode" type="LineEdit" parent="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "LOBBY_LOBBYCODE"
 
-[node name="PasteLobbyCodeButton" type="Button" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox" unique_id=250193288]
+[node name="PasteLobbyCodeButton" type="Button" parent="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "LOBBY_LOBBYCODE_PASTE"
 
-[node name="JoinByCode" type="Button" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox" unique_id=535297665]
+[node name="JoinByCode" type="Button" parent="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox"]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "LOBBY_JOIN"
 
-[node name="LobbySearchHBox" type="HBoxContainer" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox" unique_id=1848093394]
+[node name="LobbySearchHBox" type="HBoxContainer" parent="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox"]
 layout_mode = 2
 alignment = 2
 
-[node name="LobbyListSearchingText" type="Label" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox" unique_id=196933368]
+[node name="LobbyListSearchingText" type="Label" parent="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 2
@@ -780,63 +892,70 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 15
 text = "LOBBY_SEARCHING"
 
-[node name="Refresh" type="Button" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox" unique_id=1239361356]
+[node name="Refresh" type="Button" parent="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 15
 text = "LOBBY_REFRESH"
 
-[node name="LobbyBack" type="Button" parent="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox" unique_id=238185361]
+[node name="LobbyBack" type="Button" parent="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 20
 text = "LOBBY_BACK"
 
-[node name="LobbyCreateMenu" type="PanelContainer" parent="CanvasLayer" unique_id=1257950733]
+[node name="LobbyCreateMenu" type="PanelContainer" parent="MenuCanvas"]
 unique_name_in_owner = true
 visible = false
-offset_left = 481.0
-offset_top = 200.0
-offset_right = 815.0
-offset_bottom = 608.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.0
+offset_top = -162.0
+offset_right = 167.0
+offset_bottom = 304.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("5_fdkx6")
 theme_override_styles/panel = ExtResource("11_122ys")
 
-[node name="LobbyCreateMargins" type="MarginContainer" parent="CanvasLayer/LobbyCreateMenu" unique_id=939749961]
+[node name="LobbyCreateMargins" type="MarginContainer" parent="MenuCanvas/LobbyCreateMenu"]
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="LobbyCreateVBox" type="VBoxContainer" parent="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins" unique_id=76647932]
+[node name="LobbyCreateVBox" type="VBoxContainer" parent="MenuCanvas/LobbyCreateMenu/LobbyCreateMargins"]
 layout_mode = 2
 
-[node name="LobbySettingsLabel" type="Label" parent="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=699324798]
+[node name="LobbySettingsLabel" type="Label" parent="MenuCanvas/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox"]
 layout_mode = 2
 text = "LOBBY_SETTINGS"
 horizontal_alignment = 1
 
-[node name="LobbyPrivateButton" type="CheckButton" parent="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=2074646064]
+[node name="LobbyPrivateButton" type="CheckButton" parent="MenuCanvas/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "LOBBY_PRIVATE"
 
-[node name="LobbySpectatorButton" type="CheckButton" parent="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=942223340]
+[node name="LobbySpectatorButton" type="CheckButton" parent="MenuCanvas/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "LOBBY_ALLOWSPECTATORS"
 
-[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=7665439]
+[node name="HSeparator2" type="HSeparator" parent="MenuCanvas/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox"]
 layout_mode = 2
 
-[node name="LobbyBanlistLabel" type="Label" parent="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=1121525391]
+[node name="LobbyBanlistLabel" type="Label" parent="MenuCanvas/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox"]
 layout_mode = 2
 text = "LOBBY_BANLIST"
 horizontal_alignment = 1
 
-[node name="LobbyBanlist" type="OptionButton" parent="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=2030350459]
+[node name="LobbyBanlist" type="OptionButton" parent="MenuCanvas/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 alignment = 1
@@ -853,63 +972,70 @@ popup/item_3/id = 3
 popup/item_4/text = "LOBBY_BANLIST_UNRELEASED_EN"
 popup/item_4/id = 4
 
-[node name="HSeparator" type="HSeparator" parent="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=213243745]
+[node name="HSeparator" type="HSeparator" parent="MenuCanvas/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox"]
 layout_mode = 2
 
-[node name="FinalCreate" type="Button" parent="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=841611502]
+[node name="FinalCreate" type="Button" parent="MenuCanvas/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox"]
 layout_mode = 2
 size_flags_vertical = 10
 text = "LOBBY_CREATE"
 
-[node name="CreateBack" type="Button" parent="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=2117514788]
+[node name="CreateBack" type="Button" parent="MenuCanvas/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox"]
 layout_mode = 2
 size_flags_vertical = 8
 text = "LOBBY_BACK"
 
-[node name="GoldfishStartMenu" type="PanelContainer" parent="CanvasLayer" unique_id=1086934674]
+[node name="GoldfishStartMenu" type="PanelContainer" parent="MenuCanvas"]
 unique_name_in_owner = true
 visible = false
-offset_left = 481.0
-offset_top = 200.0
-offset_right = 815.0
-offset_bottom = 608.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.0
+offset_top = -153.0
+offset_right = 167.0
+offset_bottom = 272.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("5_fdkx6")
 theme_override_styles/panel = ExtResource("11_122ys")
 
-[node name="LobbyCreateMargins" type="MarginContainer" parent="CanvasLayer/GoldfishStartMenu" unique_id=1711172304]
+[node name="LobbyCreateMargins" type="MarginContainer" parent="MenuCanvas/GoldfishStartMenu"]
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="LobbyCreateVBox" type="VBoxContainer" parent="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins" unique_id=24395840]
+[node name="LobbyCreateVBox" type="VBoxContainer" parent="MenuCanvas/GoldfishStartMenu/LobbyCreateMargins"]
 layout_mode = 2
 
-[node name="GoldfishLabel" type="Label" parent="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=2021229320]
+[node name="GoldfishLabel" type="Label" parent="MenuCanvas/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox"]
 layout_mode = 2
 text = "GOLDFISH_MENU"
 horizontal_alignment = 1
 
-[node name="GoldfishDeck" type="Button" parent="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=834123639]
+[node name="GoldfishDeck" type="Button" parent="MenuCanvas/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 10
 text = "DECK_SELECT"
 
-[node name="FinalGoldfishCreate" type="Button" parent="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=132253500]
+[node name="FinalGoldfishCreate" type="Button" parent="MenuCanvas/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 10
 disabled = true
 text = "SOLO_GOLDFISH"
 
-[node name="CreateBack" type="Button" parent="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox" unique_id=157889624]
+[node name="CreateBack" type="Button" parent="MenuCanvas/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox"]
 layout_mode = 2
 size_flags_vertical = 8
 text = "LOBBY_BACK"
 
-[node name="SpectatePanel" type="PanelContainer" parent="CanvasLayer" unique_id=972754124]
+[node name="SpectatePanel" type="PanelContainer" parent="MenuCanvas"]
 unique_name_in_owner = true
 visible = false
 anchors_preset = 8
@@ -918,67 +1044,67 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -316.5
-offset_top = -300.0
+offset_top = -234.0
 offset_right = 316.5
-offset_bottom = 300.0
+offset_bottom = 329.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("5_fdkx6")
 theme_override_styles/panel = ExtResource("11_122ys")
 
-[node name="SpectateListMargins" type="MarginContainer" parent="CanvasLayer/SpectatePanel" unique_id=542676701]
+[node name="SpectateListMargins" type="MarginContainer" parent="MenuCanvas/SpectatePanel"]
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="SpectateVBox" type="VBoxContainer" parent="CanvasLayer/SpectatePanel/SpectateListMargins" unique_id=1266860418]
+[node name="SpectateVBox" type="VBoxContainer" parent="MenuCanvas/SpectatePanel/SpectateListMargins"]
 layout_mode = 2
 
-[node name="SpectateFoundLabel" type="Label" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox" unique_id=140941990]
+[node name="SpectateFoundLabel" type="Label" parent="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "SPECTATE_PUBLIC_GAMES_FOUND"
 horizontal_alignment = 1
 
-[node name="SpectateListScroll" type="ScrollContainer" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox" unique_id=412218951]
+[node name="SpectateListScroll" type="ScrollContainer" parent="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="GamesFoundMargins" type="MarginContainer" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/SpectateListScroll" unique_id=1547569287]
+[node name="GamesFoundMargins" type="MarginContainer" parent="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox/SpectateListScroll"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="GamesFound" type="VBoxContainer" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/SpectateListScroll/GamesFoundMargins" unique_id=1635810857]
+[node name="GamesFound" type="VBoxContainer" parent="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox/SpectateListScroll/GamesFoundMargins"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="LobbyCodeHBox" type="HBoxContainer" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox" unique_id=848621555]
+[node name="LobbyCodeHBox" type="HBoxContainer" parent="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox"]
 layout_mode = 2
 
-[node name="SpectateListCode" type="LineEdit" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox" unique_id=1851222764]
+[node name="SpectateListCode" type="LineEdit" parent="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "LOBBY_GAMECODE"
 
-[node name="SpectateByCode" type="Button" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox" unique_id=1601458461]
+[node name="SpectateByCode" type="Button" parent="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox"]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "LOBBY_SPECTATE"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox" unique_id=2043073756]
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox"]
 layout_mode = 2
 alignment = 2
 
-[node name="SpectateListSearchingText" type="Label" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer" unique_id=1813441929]
+[node name="SpectateListSearchingText" type="Label" parent="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
@@ -986,20 +1112,20 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 15
 text = "LOBBY_SEARCHING"
 
-[node name="Refresh" type="Button" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer" unique_id=1763172272]
+[node name="Refresh" type="Button" parent="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 15
 text = "LOBBY_REFRESH"
 
-[node name="SpectateBack" type="Button" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer" unique_id=1450356170]
+[node name="SpectateBack" type="Button" parent="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 20
 text = "LOBBY_BACK"
 
-[node name="CustomizationPanel" type="PanelContainer" parent="CanvasLayer" unique_id=1839525018]
+[node name="CustomizationPanel" type="PanelContainer" parent="MenuCanvas"]
 unique_name_in_owner = true
 visible = false
 anchors_preset = 15
@@ -1009,24 +1135,24 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("7_sgknu")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CustomizationPanel" unique_id=18408734]
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuCanvas/CustomizationPanel"]
 layout_mode = 2
 
-[node name="TabContainer" type="TabContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer" unique_id=638477481]
+[node name="TabContainer" type="TabContainer" parent="MenuCanvas/CustomizationPanel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 current_tab = 0
 
-[node name="COSMETICS_PLAYMATDICE" type="MarginContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer" unique_id=914881982]
+[node name="COSMETICS_PLAYMATDICE" type="MarginContainer" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 15
 metadata/_tab_index = 0
 
-[node name="CustomizationVBox" type="VBoxContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE" unique_id=1420688443]
+[node name="CustomizationVBox" type="VBoxContainer" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE"]
 layout_mode = 2
 alignment = 1
 
-[node name="PlaymatTextureRect" type="TextureRect" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox" unique_id=343027360]
+[node name="PlaymatTextureRect" type="TextureRect" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -1034,7 +1160,7 @@ texture = ExtResource("14_rk7pw")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="DieSubviewportContainer" type="SubViewportContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect" unique_id=173424514]
+[node name="DieSubviewportContainer" type="SubViewportContainer" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1049,26 +1175,26 @@ grow_horizontal = 2
 grow_vertical = 2
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer" unique_id=1014253404]
+[node name="SubViewport" type="SubViewport" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer"]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(293, 334)
 render_target_update_mode = 0
 
-[node name="Die" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport" unique_id=740365130 instance=ExtResource("15_ycoxv")]
+[node name="Die" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport" instance=ExtResource("15_ycoxv")]
 unique_name_in_owner = true
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 200, -50, 0)
 
-[node name="Camera3D" type="Camera3D" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport" unique_id=2135852965]
+[node name="Camera3D" type="Camera3D" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport"]
 transform = Transform3D(0.598005, -0.466652, 0.651633, -0.125598, 0.748419, 0.651225, -0.79159, -0.47128, 0.388948, 201.31, -48.3055, 1.06256)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport" unique_id=668414844]
+[node name="SpotLight3D" type="SpotLight3D" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect/DieSubviewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 0.979879, 0.19959, 0, -0.19959, 0.979879, 201.193, -47.9198, 4.06729)
 light_energy = 4.173
 spot_range = 8.92789
 spot_angle = 42.239
 
-[node name="SPPreview" type="TextureRect" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect" unique_id=346279030]
+[node name="SPPreview" type="TextureRect" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/PlaymatTextureRect"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 220.0
@@ -1077,22 +1203,22 @@ offset_right = 420.0
 offset_bottom = 365.0
 texture = ExtResource("15_otiia")
 
-[node name="ButtonMargins" type="MarginContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox" unique_id=176906524]
+[node name="ButtonMargins" type="MarginContainer" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox"]
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="CustomizationButtonVBox" type="VBoxContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins" unique_id=1983234722]
+[node name="CustomizationButtonVBox" type="VBoxContainer" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins"]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="PlaymatHBox" type="HBoxContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox" unique_id=1439242082]
+[node name="PlaymatHBox" type="HBoxContainer" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox"]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Playmat" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox" unique_id=797017924]
+[node name="Playmat" type="Button" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox"]
 custom_minimum_size = Vector2(600, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1100,7 +1226,7 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 30
 text = "COSMETICS_PM"
 
-[node name="PlaymatLoadDialog" type="FileDialog" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat" unique_id=2050458046]
+[node name="PlaymatLoadDialog" type="FileDialog" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat"]
 unique_name_in_owner = true
 auto_translate_mode = 2
 title = "Open a File"
@@ -1113,7 +1239,7 @@ filters = PackedStringArray("*.jpg,*.webp,*.png")
 show_hidden_files = true
 use_native_dialog = true
 
-[node name="PlaymatDefault" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox" unique_id=616903242]
+[node name="PlaymatDefault" type="Button" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox"]
 custom_minimum_size = Vector2(600, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1121,11 +1247,11 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
 text = "COSMETICS_PM_DEFAULT"
 
-[node name="DieHBox" type="HBoxContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox" unique_id=94755425]
+[node name="DieHBox" type="HBoxContainer" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox"]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Dice" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox" unique_id=1333021460]
+[node name="Dice" type="Button" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox"]
 custom_minimum_size = Vector2(600, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1133,7 +1259,7 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 30
 text = "COSMETICS_D"
 
-[node name="DiceLoadDialog" type="FileDialog" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice" unique_id=1806725183]
+[node name="DiceLoadDialog" type="FileDialog" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice"]
 unique_name_in_owner = true
 auto_translate_mode = 2
 title = "Open a File"
@@ -1146,7 +1272,7 @@ filters = PackedStringArray("*.png,*.webp,*.jpg")
 show_hidden_files = true
 use_native_dialog = true
 
-[node name="DiceDefault" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox" unique_id=1188314499]
+[node name="DiceDefault" type="Button" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox"]
 custom_minimum_size = Vector2(600, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1154,11 +1280,11 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
 text = "COSMETICS_D_DEFAULT"
 
-[node name="SPHBox" type="HBoxContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox" unique_id=435609595]
+[node name="SPHBox" type="HBoxContainer" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox"]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="SP" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox" unique_id=1124755437]
+[node name="SP" type="Button" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox"]
 custom_minimum_size = Vector2(600, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1166,7 +1292,7 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 30
 text = "COSMETICS_SP"
 
-[node name="SPLoadDialog" type="FileDialog" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox/SP" unique_id=1552449454]
+[node name="SPLoadDialog" type="FileDialog" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox/SP"]
 unique_name_in_owner = true
 auto_translate_mode = 2
 title = "Open a File"
@@ -1179,7 +1305,7 @@ filters = PackedStringArray("*.png,*.webp")
 show_hidden_files = true
 use_native_dialog = true
 
-[node name="SPDefault" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox" unique_id=1184484684]
+[node name="SPDefault" type="Button" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox"]
 custom_minimum_size = Vector2(600, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1187,29 +1313,29 @@ theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 25
 text = "COSMETICS_SP_DEFAULT"
 
-[node name="COSMETICS_DEFAULTSLEEVES" type="Control" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer" unique_id=373468084]
+[node name="COSMETICS_DEFAULTSLEEVES" type="Control" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="defaultSleeve" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES" unique_id=283688637 instance=ExtResource("15_gbx47")]
+[node name="defaultSleeve" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES" instance=ExtResource("15_gbx47")]
 unique_name_in_owner = true
 position = Vector2(100, 50)
 default_sleeve = ExtResource("16_emfff")
 
-[node name="defaultCheerSleeve" parent="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES" unique_id=1397450882 instance=ExtResource("15_gbx47")]
+[node name="defaultCheerSleeve" parent="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES" instance=ExtResource("15_gbx47")]
 unique_name_in_owner = true
 position = Vector2(750, 50)
 default_sleeve = ExtResource("17_6ha0t")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CustomizationPanel/VBoxContainer" unique_id=625154525]
+[node name="MarginContainer" type="MarginContainer" parent="MenuCanvas/CustomizationPanel/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Exit" type="Button" parent="CanvasLayer/CustomizationPanel/VBoxContainer/MarginContainer" unique_id=1155998626]
+[node name="Exit" type="Button" parent="MenuCanvas/CustomizationPanel/VBoxContainer/MarginContainer"]
 custom_minimum_size = Vector2(1000, 50)
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
@@ -1218,48 +1344,742 @@ text = "COSMETICS_CANCEL"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="Exit" type="Button" parent="CanvasLayer" unique_id=394574608]
+[node name="Exit" type="Button" parent="MenuCanvas"]
 unique_name_in_owner = true
 visible = false
-offset_left = 1049.0
-offset_top = 660.0
-offset_right = 1263.0
-offset_bottom = 696.0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -233.0
+offset_top = -63.0
+offset_right = -19.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
 theme = ExtResource("5_fdkx6")
 theme_override_font_sizes/font_size = 23
 text = "EXIT"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="Sidebar" type="PanelContainer" parent="CanvasLayer" unique_id=613087810]
+[node name="QuestionRPS" type="PanelContainer" parent="MenuCanvas"]
 unique_name_in_owner = true
 visible = false
-anchors_preset = -1
-anchor_right = 0.291
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -389.0
+offset_top = 39.0
+offset_right = 394.0
+offset_bottom = 154.0
+grow_horizontal = 2
+theme = ExtResource("5_fdkx6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_b0jqk")
+
+[node name="RPSMargins" type="MarginContainer" parent="MenuCanvas/QuestionRPS"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="RPSHBox" type="HBoxContainer" parent="MenuCanvas/QuestionRPS/RPSMargins"]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="Rock" type="Button" parent="MenuCanvas/QuestionRPS/RPSMargins/RPSHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "RPS_ROCK"
+
+[node name="Paper" type="Button" parent="MenuCanvas/QuestionRPS/RPSMargins/RPSHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "RPS_PAPER"
+
+[node name="Scissors" type="Button" parent="MenuCanvas/QuestionRPS/RPSMargins/RPSHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "RPS_SCISSORS"
+
+[node name="RPSWaitLabel" type="Label" parent="MenuCanvas/QuestionRPS/RPSMargins"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "RPS_WAIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LobbyScreen" type="PanelContainer" parent="MenuCanvas"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_fdkx6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_0h845")
+
+[node name="LobbyHBox" type="HBoxContainer" parent="MenuCanvas/LobbyScreen"]
+layout_mode = 2
+
+[node name="ActivePlayersMargins" type="MarginContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="ActivePlayersVBox" type="VBoxContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HostLabel" type="Label" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "LOBBY_HOST"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HostLabelHBox" type="HBoxContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="HostName" type="Label" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostLabelHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "LOBBY_NONE_CHOSEN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HostReadyLabel" type="Label" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostLabelHBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "LOBBY_READY"
+
+[node name="HostCenterContainer" type="CenterContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HostOptions" type="VBoxContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HostDeckSelect" type="Button" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 25
+text = "DECK_SELECT"
+
+[node name="LobbyHostReady" type="Button" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+disabled = true
+text = "LOBBY_READY"
+
+[node name="JoinLabel" type="Label" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "LOBBY_CHOSEN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JoinLabelHBox" type="HBoxContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="JoinName" type="Label" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinLabelHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "LOBBY_NONE_CHOSEN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JoinReady" type="Label" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinLabelHBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "LOBBY_READY"
+
+[node name="JoinCenterContainer" type="CenterContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JoinOptions" type="VBoxContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="JoinDeckSelect" type="Button" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 25
+text = "DECK_SELECT"
+
+[node name="LobbyJoinReady" type="Button" parent="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+disabled = true
+text = "LOBBY_READY"
+
+[node name="VSeparator" type="VSeparator" parent="MenuCanvas/LobbyScreen/LobbyHBox"]
+layout_mode = 2
+
+[node name="WaitingMargins" type="MarginContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="WaitingVBox" type="VBoxContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SelectOpponentLabel2" type="Label" parent="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "LOBBY_CODE"
+horizontal_alignment = 1
+
+[node name="LobbyCodeHBoxContainer" type="HBoxContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
+layout_mode = 2
+
+[node name="LobbyCode" type="RichTextLabel" parent="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/LobbyCodeHBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+context_menu_enabled = true
+selection_enabled = true
+deselect_on_focus_loss_enabled = false
+
+[node name="CopyLobbyCodeButton" type="Button" parent="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/LobbyCodeHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 25
+disabled = true
+text = "LOBBY_LOBBYCODE_COPY"
+
+[node name="SelectOpponentLabel" type="Label" parent="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "LOBBY_SELECT_OPPONENT"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="WaitingPlayersVBox" type="VBoxContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="ButtonHBox" type="HBoxContainer" parent="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 2
+
+[node name="StartGame" type="Button" parent="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "LOBBY_STARTGAME"
+
+[node name="LobbyExit" type="Button" parent="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 20
+text = "LOBBY_BACK"
+
+[node name="DeckErrors" type="PanelContainer" parent="MenuCanvas/LobbyScreen"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3p72o")
+
+[node name="DeckErrorMargins" type="MarginContainer" parent="MenuCanvas/LobbyScreen/DeckErrors"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="DeckErrorVBox" type="VBoxContainer" parent="MenuCanvas/LobbyScreen/DeckErrors/DeckErrorMargins"]
+layout_mode = 2
+
+[node name="DeckErrorScroll" type="ScrollContainer" parent="MenuCanvas/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DeckErrorList" type="Label" parent="MenuCanvas/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox/DeckErrorScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuCanvas/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="OK" type="Button" parent="MenuCanvas/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "OK"
+
+[node name="SpectateConfirmPanel" type="PanelContainer" parent="MenuCanvas"]
+unique_name_in_owner = true
+visible = false
+z_index = 99
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -408.5
+offset_top = -94.0
+offset_right = 408.5
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("5_fdkx6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dv823")
+
+[node name="SpectateConfirmMargins" type="MarginContainer" parent="MenuCanvas/SpectateConfirmPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="SpectateConfirmVBox" type="VBoxContainer" parent="MenuCanvas/SpectateConfirmPanel/SpectateConfirmMargins"]
+layout_mode = 2
+
+[node name="SpectateConfirmLabel" type="Label" parent="MenuCanvas/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "LOBBY_GAMESTART_SPECTATE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpectateButtonHBox" type="HBoxContainer" parent="MenuCanvas/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SpectateYes" type="Button" parent="MenuCanvas/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "YES"
+
+[node name="SpectateNo" type="Button" parent="MenuCanvas/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "NO"
+
+[node name="SpectateMainMenu" type="Button" parent="MenuCanvas/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "MENU"
+
+[node name="DeckList" parent="MenuCanvas" instance=ExtResource("10_058xr")]
+unique_name_in_owner = true
+visible = false
+
+[node name="MainMenuConfirm" type="PanelContainer" parent="MenuCanvas"]
+unique_name_in_owner = true
+visible = false
+top_level = true
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -318.5
+offset_top = -79.5
+offset_right = 318.5
+offset_bottom = 79.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme = ExtResource("5_fdkx6")
+theme_override_styles/panel = ExtResource("7_sgknu")
+
+[node name="MainMenuConfirmMargins" type="MarginContainer" parent="MenuCanvas/MainMenuConfirm"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="MainMenuConfirmVBox" type="VBoxContainer" parent="MenuCanvas/MainMenuConfirm/MainMenuConfirmMargins"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ConfirmExitLabel" type="Label" parent="MenuCanvas/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox"]
+layout_mode = 2
+text = "MENU_PROMPT"
+label_settings = ExtResource("20_dcvur")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenuButtonsHBox" type="HBoxContainer" parent="MenuCanvas/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox"]
+layout_mode = 2
+
+[node name="ExitConfrimYes" type="Button" parent="MenuCanvas/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "YES"
+
+[node name="ExitConfirmNo" type="Button" parent="MenuCanvas/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "NO"
+
+[node name="ConfirmDialog" parent="MenuCanvas" instance=ExtResource("19_ogfn8")]
+unique_name_in_owner = true
+visible = false
+offset_left = -309.5
+offset_top = -80.5
+offset_right = 309.5
+offset_bottom = 80.5
+
+[node name="Failure" type="PanelContainer" parent="MenuCanvas"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -109.0
+offset_right = 171.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("5_fdkx6")
+theme_override_styles/panel = ExtResource("11_122ys")
+
+[node name="FailureMargins" type="MarginContainer" parent="MenuCanvas/Failure"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="FailureVBox" type="VBoxContainer" parent="MenuCanvas/Failure/FailureMargins"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="FailureTitle" type="Label" parent="MenuCanvas/Failure/FailureMargins/FailureVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "DOWNLOAD_FAIL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FailureBody" type="Label" parent="MenuCanvas/Failure/FailureMargins/FailureVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "DOWNLOAD_FAIL_FULL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TryAgain_Download" type="Button" parent="MenuCanvas/Failure/FailureMargins/FailureVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "TRYAGAIN"
+
+[node name="TryAgain_Import" type="Button" parent="MenuCanvas/Failure/FailureMargins/FailureVBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "TRYAGAIN"
+
+[node name="Update" type="PanelContainer" parent="MenuCanvas"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -223.0
+offset_right = 230.0
+offset_bottom = 223.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("5_fdkx6")
+theme_override_styles/panel = ExtResource("11_122ys")
+
+[node name="UpdateMargins" type="MarginContainer" parent="MenuCanvas/Update"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="UpdateVBox" type="VBoxContainer" parent="MenuCanvas/Update/UpdateMargins"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="UpdateTitle" type="Label" parent="MenuCanvas/Update/UpdateMargins/UpdateVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "UPDATE_MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpdateClientBody" type="Label" parent="MenuCanvas/Update/UpdateMargins/UpdateVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "UPDATE_MENU_CLIENT_UPTODATE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Client_Download" type="Button" parent="MenuCanvas/Update/UpdateMargins/UpdateVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "DOWNLOAD_CLIENT"
+
+[node name="UpdateCardBody" type="Label" parent="MenuCanvas/Update/UpdateMargins/UpdateVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "UPDATE_MENU_CARD_UPTODATE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Card_Download" type="Button" parent="MenuCanvas/Update/UpdateMargins/UpdateVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "DOWNLOAD_CARD"
+
+[node name="UpdateNotFound" type="Label" parent="MenuCanvas/Update/UpdateMargins/UpdateVBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "UPDATE_NOTFOUND"
+horizontal_alignment = 1
+
+[node name="UpdateBack" type="Button" parent="MenuCanvas/Update/UpdateMargins/UpdateVBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "BACK"
+
+[node name="Popup" type="PanelContainer" parent="MenuCanvas"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_fvtkr")
+
+[node name="PopupMargins" type="MarginContainer" parent="MenuCanvas/Popup"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="PopupVBox" type="VBoxContainer" parent="MenuCanvas/Popup/PopupMargins"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="DownloadLabel" type="Label" parent="MenuCanvas/Popup/PopupMargins/PopupVBox"]
+unique_name_in_owner = true
+auto_translate_mode = 2
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "vspvjfspvs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PopupProgressBar" type="ProgressBar" parent="MenuCanvas/Popup/PopupMargins/PopupVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Error" type="PanelContainer" parent="MenuCanvas"]
+unique_name_in_owner = true
+visible = false
+z_index = 100
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 203.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("20_poi5y")
+
+[node name="ErrorMargins" type="MarginContainer" parent="MenuCanvas/Error"]
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+
+[node name="ErrorHBox" type="HBoxContainer" parent="MenuCanvas/Error/ErrorMargins"]
+layout_mode = 2
+
+[node name="ErrorMessage" type="RichTextLabel" parent="MenuCanvas/Error/ErrorMargins/ErrorHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+selection_enabled = true
+
+[node name="CloseError" type="TextureButton" parent="MenuCanvas/Error/ErrorMargins/ErrorHBox"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = ExtResource("18_b7won")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MainMenu" type="Button" parent="MenuCanvas"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -111.0
+offset_top = -46.0
+offset_right = -13.0
+offset_bottom = -13.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("5_fdkx6")
+theme_override_colors/font_color = Color(0.760664, 0.18676, 0.19329, 1)
+theme_override_font_sizes/font_size = 15
+text = "MENU"
+
+[node name="GameCanvas" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_hih85")
+
+[node name="WorldspaceHBox" type="HBoxContainer" parent="GameCanvas"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Sidebar" type="PanelContainer" parent="GameCanvas/WorldspaceHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
 theme = ExtResource("5_fdkx6")
 theme_override_styles/panel = SubResource("StyleBoxTexture_2xwu4")
-metadata/_edit_use_anchors_ = true
 
-[node name="SidebarHBox" type="HBoxContainer" parent="CanvasLayer/Sidebar" unique_id=1413663631]
+[node name="SidebarHBox" type="HBoxContainer" parent="GameCanvas/WorldspaceHBox/Sidebar"]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="ButtonMargins" type="MarginContainer" parent="CanvasLayer/Sidebar/SidebarHBox" unique_id=1753946213]
+[node name="ButtonMargins" type="MarginContainer" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="Buttons" type="VBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins" unique_id=870661564]
+[node name="Buttons" type="VBoxContainer" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="InfoTabButton" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" unique_id=526710402]
+[node name="InfoTabButton" type="Button" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1271,7 +2091,7 @@ icon = ExtResource("20_f4c3e")
 icon_alignment = 1
 expand_icon = true
 
-[node name="ChatTabButton" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" unique_id=800278936]
+[node name="ChatTabButton" type="Button" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1283,7 +2103,7 @@ icon = ExtResource("20_cu85v")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Notification" type="TextureRect" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons/ChatTabButton" unique_id=521713445]
+[node name="Notification" type="TextureRect" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons/ChatTabButton"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -1298,7 +2118,7 @@ grow_horizontal = 0
 texture = ExtResource("9_a1xo7")
 expand_mode = 1
 
-[node name="OptionTabButton" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" unique_id=1066619059]
+[node name="OptionTabButton" type="Button" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1310,7 +2130,7 @@ icon = ExtResource("22_b5lix")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Step1" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" unique_id=1983935599 groups=["step_buttons"]]
+[node name="Step1" type="Button" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons" groups=["step_buttons"]]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 size_flags_vertical = 10
@@ -1321,7 +2141,7 @@ button_group = ExtResource("23_r3vn8")
 text = "STEP1"
 autowrap_mode = 1
 
-[node name="Step2" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" unique_id=1420775066 groups=["step_buttons"]]
+[node name="Step2" type="Button" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons" groups=["step_buttons"]]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 theme = ExtResource("10_dyxng")
@@ -1331,7 +2151,7 @@ button_group = ExtResource("23_r3vn8")
 text = "STEP2"
 autowrap_mode = 1
 
-[node name="Step3" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" unique_id=304475384 groups=["step_buttons"]]
+[node name="Step3" type="Button" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons" groups=["step_buttons"]]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 theme = ExtResource("10_dyxng")
@@ -1341,7 +2161,7 @@ button_group = ExtResource("23_r3vn8")
 text = "STEP3"
 autowrap_mode = 1
 
-[node name="Step4" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" unique_id=1841257780 groups=["step_buttons"]]
+[node name="Step4" type="Button" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons" groups=["step_buttons"]]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 theme = ExtResource("10_dyxng")
@@ -1351,7 +2171,7 @@ button_group = ExtResource("23_r3vn8")
 text = "STEP4"
 autowrap_mode = 1
 
-[node name="Step5" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" unique_id=1954143559 groups=["step_buttons"]]
+[node name="Step5" type="Button" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons" groups=["step_buttons"]]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
@@ -1362,7 +2182,7 @@ button_group = ExtResource("23_r3vn8")
 text = "STEP5"
 autowrap_mode = 1
 
-[node name="Step6" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons" unique_id=1283951959 groups=["step_buttons"]]
+[node name="Step6" type="Button" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons" groups=["step_buttons"]]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 theme = ExtResource("10_dyxng")
@@ -1372,11 +2192,11 @@ button_group = ExtResource("23_r3vn8")
 text = "STEP6"
 autowrap_mode = 1
 
-[node name="InfoMargins" parent="CanvasLayer/Sidebar/SidebarHBox" unique_id=991792995 instance=ExtResource("24_jpb5x")]
+[node name="InfoMargins" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox" instance=ExtResource("24_jpb5x")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="ChatVBoxMargins" type="MarginContainer" parent="CanvasLayer/Sidebar/SidebarHBox" unique_id=1754240975]
+[node name="ChatVBoxMargins" type="MarginContainer" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox"]
 unique_name_in_owner = true
 visible = false
 clip_contents = true
@@ -1387,11 +2207,11 @@ theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="ChatVBox" type="VBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins" unique_id=214955841]
+[node name="ChatVBox" type="VBoxContainer" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ChatVBoxMargins"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="ChatLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox" unique_id=652190286]
+[node name="ChatLabel" type="Label" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox"]
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -1400,25 +2220,25 @@ text = "SIDEBAR_CHAT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ChatPanelContainer" type="PanelContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox" unique_id=117673604]
+[node name="ChatPanelContainer" type="PanelContainer" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ChatMargins" type="MarginContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatPanelContainer" unique_id=1030228953]
+[node name="ChatMargins" type="MarginContainer" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatPanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Chat" type="RichTextLabel" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatPanelContainer/ChatMargins" unique_id=1069679521]
+[node name="Chat" type="RichTextLabel" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatPanelContainer/ChatMargins"]
 unique_name_in_owner = true
 layout_mode = 2
 focus_mode = 2
 scroll_following = true
 selection_enabled = true
 
-[node name="ChatHBox" type="HBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox" unique_id=151850843]
+[node name="ChatHBox" type="HBoxContainer" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -1426,18 +2246,18 @@ theme = ExtResource("5_fdkx6")
 theme_override_constants/separation = 15
 alignment = 2
 
-[node name="ToSend" type="LineEdit" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox" unique_id=503224451]
+[node name="ToSend" type="LineEdit" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("5_fdkx6")
 script = ExtResource("28_6ha0t")
 
-[node name="Send" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox" unique_id=120086573]
+[node name="Send" type="Button" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox"]
 layout_mode = 2
 text = "SEND_CHAT"
 
-[node name="OptionMargins" type="MarginContainer" parent="CanvasLayer/Sidebar/SidebarHBox" unique_id=1876926150]
+[node name="OptionMargins" type="MarginContainer" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox"]
 unique_name_in_owner = true
 visible = false
 clip_contents = true
@@ -1445,10 +2265,10 @@ custom_minimum_size = Vector2(292, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="OptionsVBox" type="VBoxContainer" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins" unique_id=1669494488]
+[node name="OptionsVBox" type="VBoxContainer" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins"]
 layout_mode = 2
 
-[node name="OptionsLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox" unique_id=925413016]
+[node name="OptionsLabel" type="Label" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -1457,7 +2277,7 @@ text = "SIDEBAR_OPTIONS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GameCodeLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox" unique_id=2120316114]
+[node name="GameCodeLabel" type="Label" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -1465,7 +2285,7 @@ text = "SIDEBAR_GAME_CODE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GameCode" type="RichTextLabel" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox" unique_id=1040492922]
+[node name="GameCode" type="RichTextLabel" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
@@ -1482,13 +2302,13 @@ context_menu_enabled = true
 selection_enabled = true
 deselect_on_focus_loss_enabled = false
 
-[node name="SFXLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox" unique_id=885354296]
+[node name="SFXLabel" type="Label" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
 auto_translate_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "SFX"
 
-[node name="InGameSFXSlider" type="HSlider" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox" unique_id=361290798]
+[node name="InGameSFXSlider" type="HSlider" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
@@ -1498,13 +2318,13 @@ scrollable = false
 tick_count = 11
 ticks_on_borders = true
 
-[node name="BGMLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox" unique_id=1382230082]
+[node name="BGMLabel" type="Label" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
 auto_translate_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "BGM"
 
-[node name="InGameBGMSlider" type="HSlider" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox" unique_id=1172262278]
+[node name="InGameBGMSlider" type="HSlider" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
@@ -1514,17 +2334,17 @@ scrollable = false
 tick_count = 11
 ticks_on_borders = true
 
-[node name="Unrevealed" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox" unique_id=1088704672]
+[node name="Unrevealed" type="Label" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
 layout_mode = 2
 theme = ExtResource("5_fdkx6")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "OPTION_COSMETICS_HIDE"
 
-[node name="Control" type="Control" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox" unique_id=1010929114]
+[node name="Control" type="Control" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 
-[node name="HideCosmetics" type="TextureButton" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/Control" unique_id=2125660673]
+[node name="HideCosmetics" type="TextureButton" parent="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/Control"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
 offset_right = 50.0
@@ -1535,682 +2355,28 @@ texture_pressed = ExtResource("7_n8awk")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="QuestionRPS" type="PanelContainer" parent="CanvasLayer" unique_id=791974279]
-unique_name_in_owner = true
-visible = false
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -251.0
-offset_top = 27.0
-offset_right = 252.0
-offset_bottom = 83.0
-grow_horizontal = 2
-theme = ExtResource("5_fdkx6")
-theme_override_styles/panel = SubResource("StyleBoxFlat_b0jqk")
-
-[node name="RPSMargins" type="MarginContainer" parent="CanvasLayer/QuestionRPS" unique_id=1566803162]
-custom_minimum_size = Vector2(500, 0)
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
-
-[node name="RPSHBox" type="HBoxContainer" parent="CanvasLayer/QuestionRPS/RPSMargins" unique_id=1198240677]
-unique_name_in_owner = true
-layout_mode = 2
-alignment = 1
-
-[node name="Rock" type="Button" parent="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox" unique_id=2099756746]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 15
-text = "RPS_ROCK"
-
-[node name="Paper" type="Button" parent="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox" unique_id=1732978560]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 15
-text = "RPS_PAPER"
-
-[node name="Scissors" type="Button" parent="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox" unique_id=337512246]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 15
-text = "RPS_SCISSORS"
-
-[node name="RPSWaitLabel" type="Label" parent="CanvasLayer/QuestionRPS/RPSMargins" unique_id=1560040566]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 30
-text = "RPS_WAIT"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="LobbyScreen" type="PanelContainer" parent="CanvasLayer" unique_id=1840346236]
-unique_name_in_owner = true
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("5_fdkx6")
-theme_override_styles/panel = SubResource("StyleBoxFlat_0h845")
-
-[node name="LobbyHBox" type="HBoxContainer" parent="CanvasLayer/LobbyScreen" unique_id=109697221]
-layout_mode = 2
-
-[node name="ActivePlayersMargins" type="MarginContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox" unique_id=1651888548]
+[node name="GameSubviewportContainer" type="SubViewportContainer" parent="GameCanvas/WorldspaceHBox"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
+stretch = true
 
-[node name="ActivePlayersVBox" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins" unique_id=395676625]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HostLabel" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox" unique_id=137574016]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 30
-text = "LOBBY_HOST"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HostLabelHBox" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox" unique_id=1492650164]
-layout_mode = 2
-alignment = 1
-
-[node name="HostName" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostLabelHBox" unique_id=1783997118]
+[node name="GameSubviewport" type="SubViewport" parent="GameCanvas/WorldspaceHBox/GameSubviewportContainer"]
 unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
-text = "LOBBY_NONE_CHOSEN"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HostReadyLabel" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostLabelHBox" unique_id=1220414370]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 15
-text = "LOBBY_READY"
-
-[node name="HostCenterContainer" type="CenterContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox" unique_id=1451041018]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="HostOptions" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer" unique_id=1337507545]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="HostDeckSelect" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions" unique_id=1733425936]
-unique_name_in_owner = true
-layout_mode = 2
-theme = ExtResource("5_fdkx6")
-theme_override_font_sizes/font_size = 25
-text = "DECK_SELECT"
-
-[node name="LobbyHostReady" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions" unique_id=930796848]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-disabled = true
-text = "LOBBY_READY"
-
-[node name="JoinLabel" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox" unique_id=1504947564]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 30
-text = "LOBBY_CHOSEN"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="JoinLabelHBox" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox" unique_id=194219604]
-layout_mode = 2
-alignment = 1
-
-[node name="JoinName" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinLabelHBox" unique_id=358594125]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
-text = "LOBBY_NONE_CHOSEN"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="JoinReady" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinLabelHBox" unique_id=2000376312]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 15
-text = "LOBBY_READY"
-
-[node name="JoinCenterContainer" type="CenterContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox" unique_id=1090325818]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="JoinOptions" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer" unique_id=782838637]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="JoinDeckSelect" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions" unique_id=1370754949]
-unique_name_in_owner = true
-layout_mode = 2
-theme = ExtResource("5_fdkx6")
-theme_override_font_sizes/font_size = 25
-text = "DECK_SELECT"
-
-[node name="LobbyJoinReady" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions" unique_id=1889157381]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-disabled = true
-text = "LOBBY_READY"
-
-[node name="VSeparator" type="VSeparator" parent="CanvasLayer/LobbyScreen/LobbyHBox" unique_id=1200667636]
-layout_mode = 2
-
-[node name="WaitingMargins" type="MarginContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox" unique_id=281804237]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
-
-[node name="WaitingVBox" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins" unique_id=698732318]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="SelectOpponentLabel2" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox" unique_id=1105699713]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 30
-text = "LOBBY_CODE"
-horizontal_alignment = 1
-
-[node name="LobbyCodeHBoxContainer" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox" unique_id=524588989]
-layout_mode = 2
-
-[node name="LobbyCode" type="RichTextLabel" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/LobbyCodeHBoxContainer" unique_id=1869664944]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(250, 50)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-focus_mode = 2
-theme_override_font_sizes/normal_font_size = 30
-bbcode_enabled = true
-fit_content = true
-scroll_active = false
-context_menu_enabled = true
-selection_enabled = true
-deselect_on_focus_loss_enabled = false
-
-[node name="CopyLobbyCodeButton" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/LobbyCodeHBoxContainer" unique_id=1265868251]
-unique_name_in_owner = true
-layout_mode = 2
-theme = ExtResource("5_fdkx6")
-theme_override_font_sizes/font_size = 25
-disabled = true
-text = "LOBBY_LOBBYCODE_COPY"
-
-[node name="SelectOpponentLabel" type="Label" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox" unique_id=337128915]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 30
-text = "LOBBY_SELECT_OPPONENT"
-horizontal_alignment = 1
-
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox" unique_id=2124041499]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ScrollContainer" unique_id=2099410360]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="WaitingPlayersVBox" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ScrollContainer/MarginContainer" unique_id=834395248]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 15
-
-[node name="ButtonHBox" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox" unique_id=1621229928]
-layout_mode = 2
-size_flags_vertical = 8
-alignment = 2
-
-[node name="StartGame" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox" unique_id=979511821]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-size_flags_horizontal = 2
-theme_override_font_sizes/font_size = 20
-text = "LOBBY_STARTGAME"
-
-[node name="LobbyExit" type="Button" parent="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox" unique_id=1105714817]
-layout_mode = 2
-size_flags_horizontal = 10
-theme_override_font_sizes/font_size = 20
-text = "LOBBY_BACK"
-
-[node name="DeckErrors" type="PanelContainer" parent="CanvasLayer/LobbyScreen" unique_id=106594965]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme = ExtResource("5_fdkx6")
-theme_override_styles/panel = SubResource("StyleBoxFlat_3p72o")
-
-[node name="DeckErrorMargins" type="MarginContainer" parent="CanvasLayer/LobbyScreen/DeckErrors" unique_id=397306828]
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
-
-[node name="DeckErrorVBox" type="VBoxContainer" parent="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins" unique_id=502501615]
-layout_mode = 2
-
-[node name="DeckErrorScroll" type="ScrollContainer" parent="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox" unique_id=1176576804]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="DeckErrorList" type="Label" parent="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox/DeckErrorScroll" unique_id=931779342]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 25
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox" unique_id=1018319516]
-layout_mode = 2
-alignment = 1
-
-[node name="OK" type="Button" parent="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox/HBoxContainer" unique_id=1909551557]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "OK"
-
-[node name="SpectateConfirmPanel" type="PanelContainer" parent="CanvasLayer" unique_id=1231831827]
-unique_name_in_owner = true
-visible = false
-z_index = 99
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -408.0
-offset_top = -105.0
-offset_right = 409.0
-offset_bottom = 47.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("5_fdkx6")
-theme_override_styles/panel = SubResource("StyleBoxFlat_dv823")
-
-[node name="SpectateConfirmMargins" type="MarginContainer" parent="CanvasLayer/SpectateConfirmPanel" unique_id=6772035]
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
-
-[node name="SpectateConfirmVBox" type="VBoxContainer" parent="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins" unique_id=1845642795]
-layout_mode = 2
-
-[node name="SpectateConfirmLabel" type="Label" parent="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox" unique_id=1984568210]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 40
-text = "LOBBY_GAMESTART_SPECTATE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="SpectateButtonHBox" type="HBoxContainer" parent="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox" unique_id=66545532]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="SpectateYes" type="Button" parent="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox" unique_id=869736284]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "YES"
-
-[node name="SpectateNo" type="Button" parent="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox" unique_id=1209765766]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "NO"
-
-[node name="SpectateMainMenu" type="Button" parent="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox" unique_id=119368875]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "MENU"
-
-[node name="DeckList" parent="CanvasLayer" unique_id=173108882 instance=ExtResource("10_058xr")]
-unique_name_in_owner = true
-visible = false
-
-[node name="MainMenuConfirm" type="PanelContainer" parent="CanvasLayer" unique_id=61754739]
-unique_name_in_owner = true
-visible = false
-top_level = true
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -318.5
-offset_top = -65.5
-offset_right = 318.5
-offset_bottom = 65.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 4
-theme = ExtResource("5_fdkx6")
-theme_override_styles/panel = ExtResource("7_sgknu")
-
-[node name="MainMenuConfirmMargins" type="MarginContainer" parent="CanvasLayer/MainMenuConfirm" unique_id=1946844013]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="MainMenuConfirmVBox" type="VBoxContainer" parent="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins" unique_id=1965533375]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="ConfirmExitLabel" type="Label" parent="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox" unique_id=1392323236]
-layout_mode = 2
-text = "MENU_PROMPT"
-label_settings = ExtResource("20_dcvur")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MainMenuButtonsHBox" type="HBoxContainer" parent="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox" unique_id=174507905]
-layout_mode = 2
-
-[node name="ExitConfrimYes" type="Button" parent="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox" unique_id=1018065988]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 25
-text = "YES"
-
-[node name="ExitConfirmNo" type="Button" parent="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox" unique_id=1874409809]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 25
-text = "NO"
-
-[node name="MainMenu" type="Button" parent="CanvasLayer" unique_id=667137349]
-unique_name_in_owner = true
-visible = false
-anchors_preset = -1
-anchor_left = 0.933
-anchor_top = 0.947
-anchor_right = 0.933
-anchor_bottom = 0.947
-offset_left = -49.24
-offset_top = -12.84
-offset_right = 48.76
-offset_bottom = 13.16
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("5_fdkx6")
-theme_override_colors/font_color = Color(0.760664, 0.18676, 0.19329, 1)
-theme_override_font_sizes/font_size = 15
-text = "MENU"
-
-[node name="ConfirmDialog" parent="CanvasLayer" unique_id=785129843 instance=ExtResource("19_ogfn8")]
-unique_name_in_owner = true
-visible = false
-
-[node name="Popup" type="PanelContainer" parent="CanvasLayer" unique_id=1673303804]
-unique_name_in_owner = true
-visible = false
-offset_right = 1278.0
-offset_bottom = 719.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_fvtkr")
-
-[node name="PopupMargins" type="MarginContainer" parent="CanvasLayer/Popup" unique_id=709868628]
-layout_mode = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
-
-[node name="PopupVBox" type="VBoxContainer" parent="CanvasLayer/Popup/PopupMargins" unique_id=500745960]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="DownloadLabel" type="Label" parent="CanvasLayer/Popup/PopupMargins/PopupVBox" unique_id=1247837822]
-unique_name_in_owner = true
-auto_translate_mode = 2
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-theme = ExtResource("5_fdkx6")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
-text = "vspvjfspvs"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="PopupProgressBar" type="ProgressBar" parent="CanvasLayer/Popup/PopupMargins/PopupVBox" unique_id=358365786]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 6
-
-[node name="Failure" type="PanelContainer" parent="CanvasLayer" unique_id=1070351400]
-unique_name_in_owner = true
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -171.0
-offset_top = -91.5
-offset_right = 171.0
-offset_bottom = 91.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("5_fdkx6")
-theme_override_styles/panel = ExtResource("11_122ys")
-
-[node name="FailureMargins" type="MarginContainer" parent="CanvasLayer/Failure" unique_id=1770481832]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="FailureVBox" type="VBoxContainer" parent="CanvasLayer/Failure/FailureMargins" unique_id=1937451288]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="FailureTitle" type="Label" parent="CanvasLayer/Failure/FailureMargins/FailureVBox" unique_id=721289996]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 30
-text = "DOWNLOAD_FAIL"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="FailureBody" type="Label" parent="CanvasLayer/Failure/FailureMargins/FailureVBox" unique_id=1616509019]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
-text = "DOWNLOAD_FAIL_FULL"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TryAgain_Download" type="Button" parent="CanvasLayer/Failure/FailureMargins/FailureVBox" unique_id=1114076264]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "TRYAGAIN"
-
-[node name="TryAgain_Import" type="Button" parent="CanvasLayer/Failure/FailureMargins/FailureVBox" unique_id=185948245]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "TRYAGAIN"
-
-[node name="Update" type="PanelContainer" parent="CanvasLayer" unique_id=811239930]
-unique_name_in_owner = true
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -640.0
-offset_top = -360.0
-offset_right = 640.0
-offset_bottom = 360.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("5_fdkx6")
-theme_override_styles/panel = ExtResource("11_122ys")
-
-[node name="UpdateMargins" type="MarginContainer" parent="CanvasLayer/Update" unique_id=1245228217]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="UpdateVBox" type="VBoxContainer" parent="CanvasLayer/Update/UpdateMargins" unique_id=527987115]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="UpdateTitle" type="Label" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox" unique_id=489019614]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 30
-text = "UPDATE_MENU"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="UpdateClientBody" type="Label" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox" unique_id=916622653]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
-text = "UPDATE_MENU_CLIENT_UPTODATE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Client_Download" type="Button" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox" unique_id=1079669364]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-disabled = true
-text = "DOWNLOAD_CLIENT"
-
-[node name="UpdateCardBody" type="Label" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox" unique_id=1466539876]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
-text = "UPDATE_MENU_CARD_UPTODATE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Card_Download" type="Button" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox" unique_id=37788047]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-disabled = true
-text = "DOWNLOAD_CARD"
-
-[node name="UpdateNotFound" type="Label" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox" unique_id=1234754614]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 30
-text = "UPDATE_NOTFOUND"
-horizontal_alignment = 1
-
-[node name="UpdateBack" type="Button" parent="CanvasLayer/Update/UpdateMargins/UpdateVBox" unique_id=724469742]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "BACK"
-
-[node name="Error" type="PanelContainer" parent="CanvasLayer" unique_id=1081282167]
-unique_name_in_owner = true
-visible = false
-z_index = 100
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.189
-grow_horizontal = 2
-theme_override_styles/panel = ExtResource("20_poi5y")
-
-[node name="ErrorMargins" type="MarginContainer" parent="CanvasLayer/Error" unique_id=190766453]
-layout_mode = 2
-theme = ExtResource("5_fdkx6")
-
-[node name="ErrorHBox" type="HBoxContainer" parent="CanvasLayer/Error/ErrorMargins" unique_id=496648872]
-layout_mode = 2
-
-[node name="ErrorMessage" type="RichTextLabel" parent="CanvasLayer/Error/ErrorMargins/ErrorHBox" unique_id=223596285]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 2
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/normal_font_size = 30
-bbcode_enabled = true
-selection_enabled = true
-
-[node name="CloseError" type="TextureButton" parent="CanvasLayer/Error/ErrorMargins/ErrorHBox" unique_id=652982033]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
-size_flags_horizontal = 8
-texture_normal = ExtResource("18_b7won")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=784377002]
-position = Vector2(-670, -400)
+handle_input_locally = false
+size = Vector2i(908, 720)
+render_target_update_mode = 4
+
+[node name="GameCamera" type="Camera2D" parent="GameCanvas/WorldspaceHBox/GameSubviewportContainer/GameSubviewport"]
+position = Vector2(0, -400)
 zoom = Vector2(0.27, 0.27)
 
-[node name="HTTPManager" type="Node" parent="." unique_id=1710953411]
+[node name="HTTPManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("18_n8kk3")
 parallel_connections_count = 15
 print_debug = true
 
-[node name="VersionHTTPManager" type="Node" parent="." unique_id=1783858868]
+[node name="VersionHTTPManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("18_n8kk3")
 parallel_connections_count = 1
@@ -2218,112 +2384,117 @@ timeout = 10.0
 max_retries = 1
 print_debug = true
 
-[node name="BGM" type="AudioStreamPlayer" parent="." unique_id=1868356180]
+[node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_vg3fm")
 volume_db = -15.0
 autoplay = true
 bus = &"BGM"
 
-[node name="WebSocket" type="Node" parent="." unique_id=810452385]
+[node name="WebSocket" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("20_v32ia")
 route = "/ws"
 autoconnect_mode = 2
 
-[node name="Timer" type="Timer" parent="." unique_id=1611810139]
+[node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 3.0
 one_shot = true
 
-[node name="Timer2" type="Timer" parent="." unique_id=1785516522]
+[node name="Timer2" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 0.2
 one_shot = true
 
-[connection signal="pressed" from="CanvasLayer/LeftBarMargins/LeftBarVBox/DebugButton" to="." method="_restart"]
-[connection signal="pressed" from="CanvasLayer/LeftBarMargins/LeftBarVBox/CustomizationSettingsVBox/DeckCreationButton" to="." method="_on_deck_creation_pressed"]
-[connection signal="pressed" from="CanvasLayer/LeftBarMargins/LeftBarVBox/CustomizationSettingsVBox/PlaymatDiceCustom" to="." method="_on_playmat_dice_custom_pressed"]
-[connection signal="pressed" from="CanvasLayer/LeftBarMargins/LeftBarVBox/OnlyEN" to="." method="_on_en_only_pressed"]
-[connection signal="pressed" from="CanvasLayer/LeftBarMargins/LeftBarVBox/InfoButton" to="." method="_on_info_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/OptionButton" to="." method="_on_options_pressed"]
-[connection signal="text_changed" from="CanvasLayer/LobbyButtons/PlayerName" to="." method="update_name"]
-[connection signal="pressed" from="CanvasLayer/LobbyButtons/LobbyCreate" to="." method="create_lobby_options"]
-[connection signal="pressed" from="CanvasLayer/LobbyButtons/LobbyJoin" to="." method="find_lobbies"]
-[connection signal="pressed" from="CanvasLayer/LobbyButtons/GameSpectate" to="." method="find_games"]
-[connection signal="pressed" from="CanvasLayer/LobbyButtons/Goldfish" to="." method="_goldfish_menu"]
-[connection signal="pressed" from="CanvasLayer/CreditsPanel/InfoMargins/InfoVBox/HBoxContainer/DeckLocationButton" to="." method="_on_deck_location_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/CreditsPanel/InfoMargins/InfoVBox/HBoxContainer/Close" to="." method="_on_info_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer/CheckUnrevealed" to="." method="_on_check_unrevealed_pressed"]
-[connection signal="pressed" from="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer/UseCardLanguage" to="." method="_on_use_card_language_pressed"]
-[connection signal="pressed" from="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer/AllowProxies" to="." method="_on_allow_proxies_pressed"]
-[connection signal="drag_ended" from="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
-[connection signal="drag_started" from="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
-[connection signal="value_changed" from="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/BGMSlider" to="." method="_on_bgm_slider_value_changed"]
-[connection signal="text_changed" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox/LobbyListCode" to="." method="update_join_from_code_button"]
-[connection signal="text_submitted" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox/LobbyListCode" to="." method="join_lobby"]
-[connection signal="pressed" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox/PasteLobbyCodeButton" to="." method="_on_paste_lobby_code_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox/JoinByCode" to="." method="join_lobby_from_code"]
-[connection signal="pressed" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox/Refresh" to="." method="find_lobbies"]
-[connection signal="pressed" from="CanvasLayer/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox/LobbyBack" to="." method="close_lobby_list"]
-[connection signal="pressed" from="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox/FinalCreate" to="." method="create_lobby"]
-[connection signal="pressed" from="CanvasLayer/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox/CreateBack" to="." method="hide_lobby_options"]
-[connection signal="pressed" from="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox/GoldfishDeck" to="." method="_on_deck_select_pressed"]
-[connection signal="pressed" from="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox/FinalGoldfishCreate" to="." method="_attempt_goldfish"]
-[connection signal="pressed" from="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox/CreateBack" to="." method="_close_goldfish_menu"]
-[connection signal="text_changed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/SpectateListCode" to="." method="update_spectate_from_code_button"]
-[connection signal="text_submitted" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/SpectateListCode" to="." method="spectate_game"]
-[connection signal="pressed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/SpectateByCode" to="." method="spectate_game_from_code"]
-[connection signal="pressed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer/Refresh" to="." method="find_games"]
-[connection signal="pressed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer/SpectateBack" to="." method="close_game_list"]
-[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat" to="." method="_on_playmat_pressed"]
-[connection signal="file_selected" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat/PlaymatLoadDialog" to="." method="_on_playmat_load_dialog_file_selected"]
-[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/PlaymatDefault" to="." method="_on_playmat_default_pressed"]
-[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice" to="." method="_on_dice_pressed"]
-[connection signal="file_selected" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice/DiceLoadDialog" to="." method="_on_dice_load_dialog_file_selected"]
-[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/DiceDefault" to="." method="_on_dice_default_pressed"]
-[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox/SP" to="." method="_on_sp_pressed"]
-[connection signal="file_selected" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox/SP/SPLoadDialog" to="." method="_on_sp_load_dialog_file_selected"]
-[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox/SPDefault" to="." method="_on_sp_default_pressed"]
-[connection signal="updated_sleeve" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES/defaultSleeve" to="." method="_on_default_sleeve_updated"]
-[connection signal="updated_sleeve" from="CanvasLayer/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES/defaultCheerSleeve" to="." method="_on_default_cheer_sleeve_updated"]
-[connection signal="pressed" from="CanvasLayer/CustomizationPanel/VBoxContainer/MarginContainer/Exit" to="." method="_on_cosmetics_exit_pressed"]
-[connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons/InfoTabButton" to="." method="_on_card_info_pressed"]
-[connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons/ChatTabButton" to="." method="_on_chat_pressed"]
-[connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons/OptionTabButton" to="." method="_on_sidebar_options_pressed"]
-[connection signal="text_submitted" from="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox/ToSend" to="." method="send_message"]
-[connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox/Send" to="." method="send_message_on_click"]
-[connection signal="drag_ended" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_drag_ended"]
-[connection signal="drag_started" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_drag_ended"]
-[connection signal="value_changed" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameBGMSlider" to="." method="_on_bgm_slider_value_changed"]
-[connection signal="toggled" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/Control/HideCosmetics" to="." method="_on_hide_cosmetics_toggled"]
-[connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Rock" to="." method="_rps_rock"]
-[connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Paper" to="." method="_rps_paper"]
-[connection signal="pressed" from="CanvasLayer/QuestionRPS/RPSMargins/RPSHBox/Scissors" to="." method="_rps_scissors"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions/HostDeckSelect" to="." method="_on_deck_select_pressed"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions/LobbyHostReady" to="." method="ready_lobby"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions/JoinDeckSelect" to="." method="_on_deck_select_pressed"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions/LobbyJoinReady" to="." method="ready_lobby"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/LobbyCodeHBoxContainer/CopyLobbyCodeButton" to="." method="_on_copy_lobby_code_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox/StartGame" to="." method="start_game"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox/LobbyExit" to="." method="exit_lobby"]
-[connection signal="pressed" from="CanvasLayer/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox/HBoxContainer/OK" to="." method="close_deckerror"]
-[connection signal="pressed" from="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox/SpectateYes" to="." method="_spectate_yes"]
-[connection signal="pressed" from="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox/SpectateNo" to="." method="_spectate_no"]
-[connection signal="pressed" from="CanvasLayer/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox/SpectateMainMenu" to="." method="_on_yes_pressed"]
-[connection signal="cancel" from="CanvasLayer/DeckList" to="." method="_hide_deck_list"]
-[connection signal="selected" from="CanvasLayer/DeckList" to="." method="_on_deck_list_selected"]
-[connection signal="pressed" from="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox/ExitConfrimYes" to="." method="_on_yes_pressed"]
-[connection signal="pressed" from="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox/ExitConfirmNo" to="." method="_on_no_pressed"]
-[connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
-[connection signal="pressed" from="CanvasLayer/Failure/FailureMargins/FailureVBox/TryAgain_Download" to="." method="_attempt_download_zip"]
-[connection signal="pressed" from="CanvasLayer/Failure/FailureMargins/FailureVBox/TryAgain_Import" to="." method="_attempt_load_zip"]
-[connection signal="pressed" from="CanvasLayer/Update/UpdateMargins/UpdateVBox/Client_Download" to="." method="_go_to_github"]
-[connection signal="pressed" from="CanvasLayer/Update/UpdateMargins/UpdateVBox/Card_Download" to="." method="_attempt_download_zip"]
-[connection signal="pressed" from="CanvasLayer/Update/UpdateMargins/UpdateVBox/UpdateBack" to="." method="_attempt_load_zip"]
-[connection signal="pressed" from="CanvasLayer/Error/ErrorMargins/ErrorHBox/CloseError" to="." method="_on_close_error_pressed"]
+[connection signal="pressed" from="MenuCanvas/LeftBarMargins/LeftBarVBox/DebugButton" to="." method="_restart"]
+[connection signal="pressed" from="MenuCanvas/LeftBarMargins/LeftBarVBox/CustomizationSettingsVBox/DeckCreationButton" to="." method="_on_deck_creation_pressed"]
+[connection signal="pressed" from="MenuCanvas/LeftBarMargins/LeftBarVBox/CustomizationSettingsVBox/PlaymatDiceCustom" to="." method="_on_playmat_dice_custom_pressed"]
+[connection signal="pressed" from="MenuCanvas/LeftBarMargins/LeftBarVBox/OnlyEN" to="." method="_on_en_only_pressed"]
+[connection signal="pressed" from="MenuCanvas/LeftBarMargins/LeftBarVBox/InfoButton" to="." method="_on_info_button_pressed"]
+[connection signal="pressed" from="MenuCanvas/OptionButton" to="." method="_on_options_pressed"]
+[connection signal="text_changed" from="MenuCanvas/LobbyButtons/PlayerName" to="." method="update_name"]
+[connection signal="pressed" from="MenuCanvas/LobbyButtons/LobbyCreate" to="." method="create_lobby_options"]
+[connection signal="pressed" from="MenuCanvas/LobbyButtons/LobbyJoin" to="." method="find_lobbies"]
+[connection signal="pressed" from="MenuCanvas/LobbyButtons/GameSpectate" to="." method="find_games"]
+[connection signal="pressed" from="MenuCanvas/LobbyButtons/Goldfish" to="." method="_goldfish_menu"]
+[connection signal="pressed" from="MenuCanvas/CreditsPanel/InfoMargins/InfoVBox/HBoxContainer/DeckLocationButton" to="." method="_on_deck_location_button_pressed"]
+[connection signal="pressed" from="MenuCanvas/CreditsPanel/InfoMargins/InfoVBox/HBoxContainer/Close" to="." method="_on_info_button_pressed"]
+[connection signal="pressed" from="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer/CheckUnrevealed" to="." method="_on_check_unrevealed_pressed"]
+[connection signal="pressed" from="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer/UseCardLanguage" to="." method="_on_use_card_language_pressed"]
+[connection signal="pressed" from="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/OptionsGridContainer/AllowProxies" to="." method="_on_allow_proxies_pressed"]
+[connection signal="drag_ended" from="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="drag_started" from="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/SFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/BGMSlider" to="." method="_on_bgm_slider_value_changed"]
+[connection signal="toggled" from="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer/AndroidAutoDetectSafeAreaButton" to="." method="_on_android_auto_detect_safe_area_button_toggled"]
+[connection signal="value_changed" from="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer/MarginLeft" to="." method="_on_margin_left_value_changed"]
+[connection signal="value_changed" from="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer/MarginRight" to="." method="_on_margin_right_value_changed"]
+[connection signal="value_changed" from="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer/MarginTop" to="." method="_on_margin_top_value_changed"]
+[connection signal="value_changed" from="MenuCanvas/OptionPanel/OptionMargins/OptionScrollContainer/OptionsVBox/AndroidOptionsGridContainer/MarginBottom" to="." method="_on_margin_bottom_value_changed"]
+[connection signal="text_changed" from="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox/LobbyListCode" to="." method="update_join_from_code_button"]
+[connection signal="text_submitted" from="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox/LobbyListCode" to="." method="join_lobby"]
+[connection signal="pressed" from="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox/PasteLobbyCodeButton" to="." method="_on_paste_lobby_code_button_pressed"]
+[connection signal="pressed" from="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbyCodeHBox/JoinByCode" to="." method="join_lobby_from_code"]
+[connection signal="pressed" from="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox/Refresh" to="." method="find_lobbies"]
+[connection signal="pressed" from="MenuCanvas/LobbyPanel/LobbyListMargins/LobblyListVBox/LobbySearchHBox/LobbyBack" to="." method="close_lobby_list"]
+[connection signal="pressed" from="MenuCanvas/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox/FinalCreate" to="." method="create_lobby"]
+[connection signal="pressed" from="MenuCanvas/LobbyCreateMenu/LobbyCreateMargins/LobbyCreateVBox/CreateBack" to="." method="hide_lobby_options"]
+[connection signal="pressed" from="MenuCanvas/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox/GoldfishDeck" to="." method="_on_deck_select_pressed"]
+[connection signal="pressed" from="MenuCanvas/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox/FinalGoldfishCreate" to="." method="_attempt_goldfish"]
+[connection signal="pressed" from="MenuCanvas/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox/CreateBack" to="." method="_close_goldfish_menu"]
+[connection signal="text_changed" from="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/SpectateListCode" to="." method="update_spectate_from_code_button"]
+[connection signal="text_submitted" from="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/SpectateListCode" to="." method="spectate_game"]
+[connection signal="pressed" from="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/SpectateByCode" to="." method="spectate_game_from_code"]
+[connection signal="pressed" from="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer/Refresh" to="." method="find_games"]
+[connection signal="pressed" from="MenuCanvas/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer/SpectateBack" to="." method="close_game_list"]
+[connection signal="pressed" from="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat" to="." method="_on_playmat_pressed"]
+[connection signal="file_selected" from="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/Playmat/PlaymatLoadDialog" to="." method="_on_playmat_load_dialog_file_selected"]
+[connection signal="pressed" from="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/PlaymatHBox/PlaymatDefault" to="." method="_on_playmat_default_pressed"]
+[connection signal="pressed" from="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice" to="." method="_on_dice_pressed"]
+[connection signal="file_selected" from="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/Dice/DiceLoadDialog" to="." method="_on_dice_load_dialog_file_selected"]
+[connection signal="pressed" from="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/DieHBox/DiceDefault" to="." method="_on_dice_default_pressed"]
+[connection signal="pressed" from="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox/SP" to="." method="_on_sp_pressed"]
+[connection signal="file_selected" from="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox/SP/SPLoadDialog" to="." method="_on_sp_load_dialog_file_selected"]
+[connection signal="pressed" from="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_PLAYMATDICE/CustomizationVBox/ButtonMargins/CustomizationButtonVBox/SPHBox/SPDefault" to="." method="_on_sp_default_pressed"]
+[connection signal="updated_sleeve" from="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES/defaultSleeve" to="." method="_on_default_sleeve_updated"]
+[connection signal="updated_sleeve" from="MenuCanvas/CustomizationPanel/VBoxContainer/TabContainer/COSMETICS_DEFAULTSLEEVES/defaultCheerSleeve" to="." method="_on_default_cheer_sleeve_updated"]
+[connection signal="pressed" from="MenuCanvas/CustomizationPanel/VBoxContainer/MarginContainer/Exit" to="." method="_on_cosmetics_exit_pressed"]
+[connection signal="pressed" from="MenuCanvas/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MenuCanvas/QuestionRPS/RPSMargins/RPSHBox/Rock" to="." method="_rps_rock"]
+[connection signal="pressed" from="MenuCanvas/QuestionRPS/RPSMargins/RPSHBox/Paper" to="." method="_rps_paper"]
+[connection signal="pressed" from="MenuCanvas/QuestionRPS/RPSMargins/RPSHBox/Scissors" to="." method="_rps_scissors"]
+[connection signal="pressed" from="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions/HostDeckSelect" to="." method="_on_deck_select_pressed"]
+[connection signal="pressed" from="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/HostCenterContainer/HostOptions/LobbyHostReady" to="." method="ready_lobby"]
+[connection signal="pressed" from="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions/JoinDeckSelect" to="." method="_on_deck_select_pressed"]
+[connection signal="pressed" from="MenuCanvas/LobbyScreen/LobbyHBox/ActivePlayersMargins/ActivePlayersVBox/JoinCenterContainer/JoinOptions/LobbyJoinReady" to="." method="ready_lobby"]
+[connection signal="pressed" from="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/LobbyCodeHBoxContainer/CopyLobbyCodeButton" to="." method="_on_copy_lobby_code_button_pressed"]
+[connection signal="pressed" from="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox/StartGame" to="." method="start_game"]
+[connection signal="pressed" from="MenuCanvas/LobbyScreen/LobbyHBox/WaitingMargins/WaitingVBox/ButtonHBox/LobbyExit" to="." method="exit_lobby"]
+[connection signal="pressed" from="MenuCanvas/LobbyScreen/DeckErrors/DeckErrorMargins/DeckErrorVBox/HBoxContainer/OK" to="." method="close_deckerror"]
+[connection signal="pressed" from="MenuCanvas/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox/SpectateYes" to="." method="_spectate_yes"]
+[connection signal="pressed" from="MenuCanvas/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox/SpectateNo" to="." method="_spectate_no"]
+[connection signal="pressed" from="MenuCanvas/SpectateConfirmPanel/SpectateConfirmMargins/SpectateConfirmVBox/SpectateButtonHBox/SpectateMainMenu" to="." method="_on_yes_pressed"]
+[connection signal="cancel" from="MenuCanvas/DeckList" to="." method="_hide_deck_list"]
+[connection signal="selected" from="MenuCanvas/DeckList" to="." method="_on_deck_list_selected"]
+[connection signal="pressed" from="MenuCanvas/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox/ExitConfrimYes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="MenuCanvas/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox/ExitConfirmNo" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="MenuCanvas/Failure/FailureMargins/FailureVBox/TryAgain_Download" to="." method="_attempt_download_zip"]
+[connection signal="pressed" from="MenuCanvas/Failure/FailureMargins/FailureVBox/TryAgain_Import" to="." method="_attempt_load_zip"]
+[connection signal="pressed" from="MenuCanvas/Update/UpdateMargins/UpdateVBox/Client_Download" to="." method="_go_to_github"]
+[connection signal="pressed" from="MenuCanvas/Update/UpdateMargins/UpdateVBox/Card_Download" to="." method="_attempt_download_zip"]
+[connection signal="pressed" from="MenuCanvas/Update/UpdateMargins/UpdateVBox/UpdateBack" to="." method="_attempt_load_zip"]
+[connection signal="pressed" from="MenuCanvas/Error/ErrorMargins/ErrorHBox/CloseError" to="." method="_on_close_error_pressed"]
+[connection signal="pressed" from="MenuCanvas/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons/InfoTabButton" to="." method="_on_card_info_pressed"]
+[connection signal="pressed" from="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons/ChatTabButton" to="." method="_on_chat_pressed"]
+[connection signal="pressed" from="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ButtonMargins/Buttons/OptionTabButton" to="." method="_on_sidebar_options_pressed"]
+[connection signal="text_submitted" from="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox/ToSend" to="." method="send_message"]
+[connection signal="pressed" from="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox/Send" to="." method="send_message_on_click"]
+[connection signal="drag_ended" from="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="drag_started" from="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_drag_ended"]
+[connection signal="value_changed" from="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameBGMSlider" to="." method="_on_bgm_slider_value_changed"]
+[connection signal="toggled" from="GameCanvas/WorldspaceHBox/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/Control/HideCosmetics" to="." method="_on_hide_cosmetics_toggled"]
 [connection signal="progress" from="HTTPManager" to="." method="_download_progress"]
 [connection signal="connected" from="WebSocket" to="." method="_on_websocket_connected"]
 [connection signal="received" from="WebSocket" to="." method="_on_websocket_received"]

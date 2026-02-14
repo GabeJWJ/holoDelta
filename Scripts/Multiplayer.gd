@@ -82,6 +82,7 @@ func findByClass(node: Node, className : String, result : Array) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	proper_hypertext = "https://" if %WebSocket.use_WSS else "http://"
 	%WebSocket.host = Server.websocketURL
 	
@@ -225,6 +226,29 @@ func _ready():
 					%ConfirmDialog.dialogContent = tr("DECK_AUTOLOAD_CONFIRM_INFO")
 					%ConfirmDialog.confirmed.connect(_on_deck_import_confirmed)
 					%ConfirmDialog.cancelled.connect(_on_deck_import_cancelled)
+	
+	# Android specific UI changes
+	if OS.has_feature("android"):
+		# Turn off the scroll bar (Using finger swipe)
+		%OptionScrollContainer.set_vertical_scroll_mode(ScrollContainer.SCROLL_MODE_SHOW_NEVER)
+		# Make android specific options visible
+		%AndroidLabel.visible = true
+		%AndroidOptionsGridContainer.visible = true
+		# Set android settings to values from settings autoload
+		var margins = Settings.settings["AndroidCustomMargins"]
+		%MarginLeft.value = margins[0]
+		%MarginTop.value = margins[1]
+		%MarginRight.value = margins[2]
+		%MarginBottom.value = margins[3]
+		var autodetect:bool = Settings.settings["AndroidAutoDetectSafeArea"]
+		%AndroidAutoDetectSafeAreaButton.button_pressed = autodetect
+		if autodetect:
+			%MarginLeft.editable = false
+			%MarginRight.editable = false
+			%MarginTop.editable = false
+			%MarginBottom.editable = false
+		# Disable spinboxes
+	
 
 func _on_deck_import_cancelled():
 	# Cancel the deck import process also
@@ -391,6 +415,8 @@ func _download_progress(_assigned_files, _current_files, _total_bytes, current_b
 #endregion
 
 #region Settings
+# Instead of a region in this massive script, I suggest we move this to its own script
+
 @onready var menus = {
 	"option": %OptionPanel,
 	"credits": %CreditsPanel,
@@ -466,7 +492,11 @@ func _on_bgm_slider_value_changed(value):
 		AudioServer.set_bus_mute(Settings.bgm_bus_index, false)
 
 func _on_playmat_dice_custom_pressed():
-	switch_menu("customization")
+	if OS.has_feature("android"):
+		OS.request_permission("android.permission.READ_MEDIA_IMAGES")
+		switch_menu("customization")
+	else:
+		switch_menu("customization")
 
 func _on_cosmetics_exit_pressed():
 	%CustomizationPanel.visible = false
@@ -591,6 +621,52 @@ func _on_hide_cosmetics_toggled(toggled_on):
 				spectatedSides[spectated]._redo_cosmetics()
 		else:
 			opponentSide._redo_cosmetics()
+	
+func _on_android_auto_detect_safe_area_button_toggled(toggled_on: bool) -> void:
+	Settings.update_settings("AndroidAutoDetectSafeArea", toggled_on)
+	if toggled_on:
+		%MenuCanvas.apply_safe_area()
+		%GameCanvas.apply_safe_area()
+		%MarginLeft.editable = false
+		%MarginRight.editable = false
+		%MarginTop.editable = false
+		%MarginBottom.editable = false
+	else:
+		%MenuCanvas.apply_margins_from_settings()
+		%GameCanvas.apply_margins_from_settings()
+		%MarginLeft.editable = true
+		%MarginRight.editable = true
+		%MarginTop.editable = true
+		%MarginBottom.editable = true
+
+func _on_margin_left_value_changed(value: float):
+	var old_margins = Settings.settings["AndroidCustomMargins"] #LTRB
+	old_margins[0] = int(value)
+	Settings.update_settings("AndroidCustomMargins", old_margins)
+	%MenuCanvas.apply_margins_from_settings()
+	%GameCanvas.apply_margins_from_settings()
+
+func _on_margin_top_value_changed(value: float):
+	var old_margins = Settings.settings["AndroidCustomMargins"] #LTRB
+	old_margins[1] = int(value)
+	Settings.update_settings("AndroidCustomMargins", old_margins)
+	%MenuCanvas.apply_margins_from_settings()
+	%GameCanvas.apply_margins_from_settings()
+
+func _on_margin_right_value_changed(value: float):
+	var old_margins = Settings.settings["AndroidCustomMargins"] #LTRB
+	old_margins[2] = int(value)
+	Settings.update_settings("AndroidCustomMargins", old_margins)
+	%MenuCanvas.apply_margins_from_settings()
+	%GameCanvas.apply_margins_from_settings()
+
+func _on_margin_bottom_value_changed(value: float):
+	var old_margins = Settings.settings["AndroidCustomMargins"] #LTRB
+	old_margins[3] = int(value)
+	Settings.update_settings("AndroidCustomMargins", old_margins)
+	%MenuCanvas.apply_margins_from_settings()
+	%GameCanvas.apply_margins_from_settings()
+
 #endregion
 
 func _on_info_button_pressed():
@@ -1266,14 +1342,19 @@ func show_game(game_id:String,opponent_id:String,opponent_name:String,opponent_o
 	yourSide.card_info_clear.connect(clear_info)
 	opponentSide.card_info_set.connect(update_info)
 	opponentSide.card_info_clear.connect(clear_info)
-	call_deferred("add_child",opponentSide)
-	call_deferred("add_child",yourSide)
+	%GameSubviewport.call_deferred("add_child",opponentSide)
+	%GameSubviewport.call_deferred("add_child",yourSide)
 	
 	yourSide.ended_turn.connect(_on_end_turn)
 	yourSide.made_turn_choice.connect(_on_choice_made)
 	yourSide.rps.connect(_on_rps)
 	
 	%GameCode.text = "[center]" + game_id + "[/center]"
+	
+	# Moved the main menu button into subviewport, get its reference and
+	# connect its signal to the correct function
+	
+	
 	
 	_hide_main_menu()
 	
@@ -1308,12 +1389,11 @@ func show_goldfish_game() -> void:
 	opponentSide.stripped_bare = true
 	yourSide.card_info_set.connect(update_info)
 	yourSide.card_info_clear.connect(clear_info)
-	call_deferred("add_child",yourSide)
-	call_deferred("add_child",opponentSide)
+	%GameSubviewport.call_deferred("add_child",yourSide)
+	%GameSubviewport.call_deferred("add_child",opponentSide)
 	
 	yourSide.ended_turn.connect(_on_end_turn)
 	yourSide.made_turn_choice.connect(_on_choice_made)
-	
 	_hide_main_menu()
 	%MainMenu.visible = true
 	%ChatHBox.visible = false
@@ -1337,7 +1417,7 @@ func _hide_main_menu():
 	%CardVersionText.visible = false
 	
 	# For now, this function enables the sidebar too
-	%Sidebar.visible = true
+	%WorldspaceHBox.visible = true
 	# ChatHBox gets disabled later if you are a spectator. This is here to reenable it.
 	%ChatHBox.visible = true
 	# Same goes for the step button mouse filters
@@ -1366,9 +1446,10 @@ func show_spectated_game(player_info:Dictionary, game_id:String) -> void:
 		newSide.player_name = player_info[player]["name"]
 		newSide.card_info_set.connect(update_info)
 		newSide.card_info_clear.connect(clear_info)
+		newSide.main_menu.pressed.connect(_on_main_menu_pressed)
 		spectatedSides[player] = newSide
 		firstPlayer = false
-		call_deferred("add_child",newSide)
+		%GameSubviewport.call_deferred("add_child",newSide)
 	
 	# hide_main_menu shows the sidebar and chat input by default
 	_hide_main_menu()

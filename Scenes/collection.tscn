@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://uto3eg6j4gmv"]
 
-[ext_resource type="Script" path="res://Scripts/collection.gd" id="1_1rbjl"]
+[ext_resource type="Script" uid="uid://d23wx51grcodv" path="res://Scripts/collection.gd" id="1_1rbjl"]
 [ext_resource type="Texture2D" uid="uid://bi8y625jyb82c" path="res://rightArrow.png" id="1_ofk0v"]
 [ext_resource type="Texture2D" uid="uid://cocwa4l3oqfnr" path="res://leftArrow.png" id="2_v4h2d"]
 
@@ -13,6 +13,7 @@ offset_right = 5.64
 offset_bottom = -9.72
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 script = ExtResource("1_1rbjl")
 
 [node name="Cards" type="Control" parent="."]
@@ -20,6 +21,7 @@ layout_mode = 1
 anchor_right = 1.0
 anchor_bottom = 0.724
 offset_bottom = 0.0199966
+mouse_filter = 1
 
 [node name="NextAltArt" type="TextureButton" parent="."]
 layout_mode = 0

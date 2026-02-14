@@ -14,6 +14,10 @@ const MAXIMUM_OFFSET := 90 # The largest possible interval in px cards can be se
 const POPUP_Y := 0 # Y position of selected card
 const NORMAL_Y := 10 # Y position of unselected cards
 
+# Android Input Handling
+var touch_start_time
+var android_long_press_threshold := 300 # in ms
+
 var showing_card_ids = [] #This is used for one thing - hovering over a card attached to the card you were already looking at
 var showing = [] #A list of pairs [card image : TextureRect, card text : String]
 var showing_grays = [] #A list of transparent gray TextureRects positioned over the cards to dull not shown cards
@@ -133,7 +137,7 @@ func _set_showing(to_show : Array, cheer_show : Dictionary, start_index : int) -
 func _show_specific(showing_id):
 	#Shows a specific card in the stack
 	#The gray corresponding is hidden and the preview is moved up a little and placed over the others
-	#showing_id : int - the index of showing to show
+	#showing_id:int  the index of showing to show
 	
 	%CardText.text = showing[showing_id][1]
 	showing[showing_id][0].z_index = 1
@@ -144,13 +148,28 @@ func _show_specific(showing_id):
 
 func _change_show(change=1) -> void:
 	#Cycles the current showed card in the stack
-	#change : int - the index delta
+	#change:int   how many cards to cycle through
 	
+	# Reset currently shown card
 	showing[current_showing][0].z_index = 0
 	showing[current_showing][0].position.y = NORMAL_Y
 	showing_grays[current_showing].visible = true
+	# Show new card
 	_show_specific(clamp(current_showing+change,0,showing.size()-1))
 
+func _cycle_show(change=1) -> void:
+	# Reset currently shown card
+	showing[current_showing][0].z_index = 0
+	showing[current_showing][0].position.y = NORMAL_Y
+	showing_grays[current_showing].visible = true
+	var new_index = current_showing + change
+	var array_max_index = showing.size() - 1
+	if new_index > array_max_index:
+		new_index = new_index - array_max_index - 1
+	if new_index < 0:
+		new_index = array_max_index - new_index
+	_show_specific(new_index)
+	
 func _clear_showing() -> void:
 	#Resets the visuals
 	
@@ -179,21 +198,47 @@ func update_word_wrap() -> void:
 		_:
 			%CardText.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 
+
+
 func _input(event) -> void:
-	#We're looking for scroll wheel movement to cycle through cards in the stack
-	#And a LockInfo action (CTRL by default) to lock/unlock the panel
-	
-	var mouse_pos = get_viewport().get_mouse_position()
-	if allowed_to_scroll and event is InputEventMouseButton and !(mouse_pos.x < 370 and mouse_pos.y > 220) and showing.size() > 1:
-		if event.is_pressed():
-			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-				_change_show(-1)
-			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-				_change_show()
-	if event is InputEventKey and event.pressed:
-		if event.is_action_pressed("LockInfo") and (showing.size() != 0 or locked):
-			locked = !locked
-			if locked:
-				%LockIcon.modulate.a = 1
+	if not OS.has_feature("android"):
+		#We're looking for scroll wheel movement to cycle through cards in the stack
+		#And a LockInfo action (CTRL by default) to lock/unlock the panel
+		if allowed_to_scroll and event is InputEventMouseButton and showing.size() > 1:
+			if event.is_pressed():
+				if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+					_change_show(-1)
+				if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+					_change_show()
+			get_viewport().set_input_as_handled()
+		if event is InputEventKey and event.pressed:
+			if event.is_action_pressed("LockInfo") and (showing.size() != 0 or locked):
+				locked = !locked
+				if locked:
+					%LockIcon.modulate.a = 1
+				else:
+					%LockIcon.modulate.a = 0.25
+				get_viewport().set_input_as_handled()
+
+func _on_preview_gui_input(event: InputEvent) -> void:
+	# This function only handles Android input, as other input is sent via keyboard
+	if OS.has_feature("android"):
+		# On android we will simply cycle left once per tap
+		# And lock on a long tap
+		if event is InputEventScreenTouch and event.pressed:
+			touch_start_time = Time.get_ticks_msec()
+		elif event is InputEventScreenTouch and not event.pressed and not event.canceled:
+			var touch_duration = Time.get_ticks_msec() - touch_start_time
+			if touch_duration < android_long_press_threshold:
+				# Short tap
+				if showing.size() > 1:
+					_cycle_show()
 			else:
-				%LockIcon.modulate.a = 0.25
+				# Long tap
+				if showing.size() != 0 or locked:
+					locked = !locked
+					if locked:
+						%LockIcon.modulate.a = 1
+					else:
+						%LockIcon.modulate.a = 0.25
+			get_viewport().set_input_as_handled()
