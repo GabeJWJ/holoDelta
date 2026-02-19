@@ -12,7 +12,7 @@ msgstr ""
 "X-Crowdin-File-ID: 6\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2026-01-01 23:06\n"
+"PO-Revision-Date: 2026-02-19 20:47\n"
 
 #: Scenes/board.tscn
 msgid "TITLE"
@@ -35,7 +35,7 @@ msgid "COSMETICS"
 msgstr "Cosmétiques"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1042
 msgid "OPTION_EN"
 msgstr "Cartes EN"
 
@@ -48,12 +48,13 @@ msgid "LOBBY_CREATE"
 msgstr "Créer un Lobby"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:884
 msgid "LOBBY_JOIN"
 msgstr "Rejoindre un Lobby"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:885
+#: Scripts/Multiplayer.gd:1760
 msgid "LOBBY_SPECTATE"
 msgstr "Regarder la partie"
 
@@ -62,7 +63,7 @@ msgid "SOLO_GOLDFISH"
 msgstr "Entraînement"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:883
 msgid "PLAYERS_ONLINE"
 msgstr "{amount} joueurs en ligne"
 
@@ -127,12 +128,13 @@ msgid "ACTION_NSTEP"
 msgstr "Prochaine Phase "
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:196
+#: Scripts/Multiplayer.gd:1047
 msgid "LOBBY_PUBLIC_LOBBIES_FOUND"
 msgstr "{amount} Lobbys publiques trouvés"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1761
 msgid "LOBBY_LOBBYCODE"
 msgstr "Entrer le code du lobby"
 
@@ -157,47 +159,51 @@ msgid "LOBBY_SETTINGS"
 msgstr "Options du Lobby"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1759
 msgid "LOBBY_PRIVATE"
 msgstr "Privé"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1763
 msgid "LOBBY_ALLOWSPECTATORS"
 msgstr "Spectateurs autorisés"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1027
+#: Scripts/Multiplayer.gd:1753
 msgid "LOBBY_BANLIST"
 msgstr "Banlist"
 
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1030
+#: Scripts/Multiplayer.gd:1754
 msgid "LOBBY_BANLIST_NONE"
 msgstr "Sans Banlist"
 
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1032
+#: Scripts/Multiplayer.gd:1755
 msgid "LOBBY_BANLIST_CURRENT"
 msgstr "Officielle"
 
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1034
 msgid "LOBBY_BANLIST_CURRENT_EN"
 msgstr "Officielle (En)"
 
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1036
+#: Scripts/Multiplayer.gd:1756
 msgid "LOBBY_BANLIST_UNRELEASED"
 msgstr "Officielle + Non sortie"
 
 #: Scenes/board.tscn
 #: Scenes/deck_creation.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1038
 msgid "LOBBY_BANLIST_UNRELEASED_EN"
 msgstr "Officielle + Non sortie (En)"
 
@@ -206,17 +212,19 @@ msgid "GOLDFISH_MENU"
 msgstr "Menu d'entraînement"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1218
+#: Scripts/Multiplayer.gd:1219
 msgid "DECK_SELECT"
 msgstr "Choisir un deck"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:197
+#: Scripts/Multiplayer.gd:1095
 msgid "SPECTATE_PUBLIC_GAMES_FOUND"
 msgstr "{amount} Lobby public trouver"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1762
 msgid "LOBBY_GAMECODE"
 msgstr "Entrer le code de la partie"
 
@@ -242,11 +250,11 @@ msgstr "Dé par défaut"
 
 #: Scenes/board.tscn
 msgid "COSMETICS_SP"
-msgstr ""
+msgstr "Ajouter un Marqueur SP depuis un fichier"
 
 #: Scenes/board.tscn
 msgid "COSMETICS_SP_DEFAULT"
-msgstr ""
+msgstr "Marqueur SP par défaut"
 
 #: Scenes/board.tscn
 msgid "COSMETICS_DEFAULTSLEEVES"
@@ -320,8 +328,8 @@ msgid "RPS_SCISSORS"
 msgstr "Ciseaux"
 
 #: Scenes/board.tscn
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
+#: Scripts/side.gd:338
+#: Scripts/Multiplayer.gd:1419
 msgid "RPS_WAIT"
 msgstr "En attente de l'adversaire..."
 
@@ -330,12 +338,17 @@ msgid "LOBBY_HOST"
 msgstr "Héberger"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1130
+#: Scripts/Multiplayer.gd:1228
+#: Scripts/Multiplayer.gd:1231
 msgid "LOBBY_NONE_CHOSEN"
 msgstr "Aucun"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:956
+#: Scripts/Multiplayer.gd:960
+#: Scripts/Multiplayer.gd:1216
+#: Scripts/Multiplayer.gd:1217
 msgid "LOBBY_READY"
 msgstr "Prêt"
 
@@ -365,7 +378,7 @@ msgid "OK"
 msgstr "OK"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:971
 msgid "LOBBY_GAMESTART_SPECTATE"
 msgstr "Partie commencée. Regarder ? "
 
@@ -393,12 +406,12 @@ msgid "MENU_PROMPT"
 msgstr "Voulez-vous retourner au menu principal ?"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:362
 msgid "DOWNLOAD_FAIL"
 msgstr "Erreur dans le téléchargement des cartes"
 
 #: Scenes/board.tscn
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:363
 msgid "DOWNLOAD_FAIL_FULL"
 msgstr "Erreur dans le téléchargement du dossier cardData.Zip.\n"
 "Il existe de nombreuses raisons pouvant expliquer ce phénomène, et je ne sais pas laquelle s'applique ici."
@@ -441,7 +454,7 @@ msgid "DECK_SELECT_CANCEL"
 msgstr "Retour"
 
 #: Scenes/deck_list.tscn
-#: Scripts/deck_list.gd
+#: Scripts/deck_list.gd:89
 msgid "DECK_DELETE_CONFIRM"
 msgstr "Supprimer définitivement {deckName} ?"
 
@@ -474,7 +487,10 @@ msgid "END_TURN"
 msgstr "Fin de Tour"
 
 #: Scenes/side.tscn
-#: Scripts/side.gd
+#: Scripts/side.gd:436
+#: Scripts/side.gd:1939
+#: Scripts/side.gd:1969
+#: Scripts/side.gd:2187
 msgid "TURN_COUNT"
 msgstr "Tour {turn}"
 
@@ -507,12 +523,19 @@ msgid "SEARCH"
 msgstr "Recherche"
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:474
+#: Scripts/deck_creation.gd:517
+#: Scripts/deck_creation.gd:529
+#: Scripts/deck_creation.gd:638
 msgid "NAME"
 msgstr "Nom"
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:485
+#: Scripts/deck_creation.gd:516
+#: Scripts/deck_creation.gd:540
+#: Scripts/deck_creation.gd:583
+#: Scripts/deck_creation.gd:637
 msgid "COLOR"
 msgstr "Couleur"
 
@@ -525,7 +548,12 @@ msgid "LIFE_6"
 msgstr "6 VIES"
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:503
+#: Scripts/deck_creation.gd:518
+#: Scripts/deck_creation.gd:622
+#: Scripts/deck_creation.gd:642
+#: Scripts/deck_creation.gd:672
+#: Scripts/deck_creation.gd:699
 msgid "SETCODE"
 msgstr "Set/SD"
 
@@ -538,42 +566,44 @@ msgid "TAB_HOLOMEM"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:562
+#: Scripts/deck_creation.gd:639
 msgid "LEVEL"
 msgstr "Niveau"
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:153
 msgid "LEVEL_ANY"
 msgstr "N'importe quels niveaux"
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1183
 msgid "LEVEL_DEBUT"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1183
 msgid "LEVEL_1"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1183
 msgid "LEVEL_2"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1183
 msgid "LEVEL_SPOT"
 msgstr ""
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:640
 msgid "ADVANTAGE"
 msgstr "Avantage"
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:594
+#: Scripts/deck_creation.gd:641
 msgid "EFFECT"
 msgstr "Effet"
 
@@ -598,7 +628,8 @@ msgid "TAB_SUPPORT"
 msgstr "Soutien"
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:654
+#: Scripts/deck_creation.gd:698
 msgid "SUPPORT_TYPE"
 msgstr "Type"
 
@@ -611,7 +642,8 @@ msgid "SUPPORT_UNLIMITED"
 msgstr "Non Limité"
 
 #: Scenes/deck_creation.tscn
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:683
+#: Scripts/deck_creation.gd:700
 msgid "TAG"
 msgstr "Tag"
 
@@ -671,1515 +703,1579 @@ msgstr "Retour"
 msgid "LOADING"
 msgstr "Chargement ..."
 
-#: Scripts/RemapButton.gd
+#: Scripts/RemapButton.gd:27
 msgid "REMAP_WAIT"
 msgstr "... En attente ..."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:235
+#: Scripts/deck_creation.gd:251
 msgid "NAME_ANY"
 msgstr "Tous les noms"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:241
+#: Scripts/deck_creation.gd:257
 msgid "COLOR_ANY"
 msgstr "Toutes les couleurs"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:246
+#: Scripts/deck_creation.gd:275
+#: Scripts/deck_creation.gd:290
 msgid "SETCODE_ANY"
 msgstr "Tous les Sets"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:266
 msgid "ADVANTAGE_ANY"
 msgstr "Tous les avantages"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:285
 msgid "SUPPORT_TYPE_ANY"
 msgstr "Tous les types"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:295
 msgid "TAG_ANY"
 msgstr "Tous les tags"
 
-#: Scripts/deck_creation.gd
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
-#: Scripts/fuda.gd
-#: Scripts/info_panel.gd
-msgid ""
-msgstr ""
-
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1131
+#: Scripts/deck_creation.gd:1375
 msgid "DECKERROR_NOOSHI"
 msgstr "Pas d'Oshi sélectionné."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1133
+#: Scripts/deck_creation.gd:1372
 msgid "DECKERROR_FAKEOSHI"
 msgstr "{cardNum} n'est pas une carte Oshi."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1135
+#: Scripts/deck_creation.gd:1156
+#: Scripts/deck_creation.gd:1167
+#: Scripts/deck_creation.gd:1370
 msgid "DECKERROR_BANNED"
 msgstr "{cardNum} est bannie."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1138
+#: Scripts/deck_creation.gd:1381
 msgid "DECKERROR_UNDERDECK"
 msgstr "Le deck principal n'a pas assez de cartes."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1140
+#: Scripts/deck_creation.gd:1382
 msgid "DECKERROR_OVERDECK"
 msgstr "Le deck de Cheer n'a pas assez de cartes."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1142
+#: Scripts/deck_creation.gd:1386
 msgid "DECKERROR_UNDERCHEER"
 msgstr "Le deck de Cheer n'a pas assez de cartes."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1144
+#: Scripts/deck_creation.gd:1387
 msgid "DECKERROR_OVERCHEER"
 msgstr "Le deck de Cheer a trop de cartes."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1152
+#: Scripts/deck_creation.gd:1163
+#: Scripts/deck_creation.gd:1174
+#: Scripts/deck_creation.gd:1377
 msgid "DECKERROR_NEGATIVEAMOUNT"
 msgstr "Il y a un nombre négatif de carte {cardNum}"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1154
+#: Scripts/deck_creation.gd:1379
 msgid "DECKERROR_FAKEMAIN"
 msgstr "{cardNum} ne va pas dans le deck principal"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1159
+#: Scripts/deck_creation.gd:1380
 msgid "DECKERROR_NODEBUTS"
 msgstr "Pas de carte Debut dans le deck"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1165
+#: Scripts/deck_creation.gd:1385
 msgid "DECKERROR_FAKECHEER"
 msgstr "{cardNum} ne va pas dans le deck de Cheer"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1172
+#: Scripts/deck_creation.gd:1378
 msgid "DECKERROR_OVERAMOUNT"
 msgstr "Il y a trop copies de la carte {cardNum}"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1176
+#: Scripts/deck_creation.gd:1376
 msgid "DECKERROR_RESTRICTED"
 msgstr "{cardNum} est limité à moins de copies que ce que vous avez."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1243
 msgid "DECK_OVERWRITE"
 msgstr "Écraser {fileName}"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1371
 msgid "DECKERROR_NOALTART"
 msgstr "{cardNum} n'a pas cet art alternatif."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1373
 msgid "DECKERROR_FAKECARD"
 msgstr "{cardNum} n'est pas une vraie carte, ou du moins, elle n'est pas répertoriée dans la base de données."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1374
 msgid "DECKERROR_OSHIBADFORMAT"
 msgstr "Les informations de la carte Oshi sont incorrectes. Êtes-vous sûr qu'il s'agit d'un deck Holodelta ?"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1383
 msgid "DECKERROR_DECKBADFORMAT"
 msgstr "Les informations du deck principal sont incorrectes. Êtes-vous sûr qu'il s'agit d'un deck Holodelta ?"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1384
 msgid "DECKERROR_NODECK"
 msgstr "Il n'y a pas de deck principal."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1388
 msgid "DECKERROR_CHEERBADFORMAT"
 msgstr "Les informations du deck de cheers sont incorrectes. Êtes-vous sûr qu'il s'agit d'un deck Holodelta ?"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1389
 msgid "DECKERROR_NOCHEER"
 msgstr "Il n'y a pas de deck de cheers principal."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1390
 msgid "DECKERROR_ONLYEN"
 msgstr "{cardNum} (ou l'art choisi) n'est pas disponible en anglais."
 
-#: Scripts/side.gd
+#: Scripts/side.gd:113
 msgid "DECK"
 msgstr "Deck"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:114
 msgid "CHEERDECK"
 msgstr "Deck de Cheer"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:115
 msgid "ARCHIVE"
 msgstr "Archive"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:116
 msgid "HOLOPOWER"
 msgstr "Holopower"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:345
 msgid "RPS_TIED"
 msgstr "Égalité. Choisissez de nouveau."
 
-#: Scripts/side.gd
+#: Scripts/side.gd:368
 msgid "MULLIGAN_QUESTION"
 msgstr "Voulez-vous mulligan ?"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:377
 msgid "MULLIGAN_FORCED"
 msgstr "Pas de début holomem\n"
 "Vous devez Mulligan"
 
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
+#: Scripts/side.gd:388
+#: Scripts/Multiplayer.gd:1489
+#: Scripts/Multiplayer.gd:1731
 msgid "LOSS"
 msgstr "Vous avez perdu !"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:398
 msgid "MULLIGAN_WAIT"
 msgstr "En attente de l'adversaire..."
 
-#: Scripts/side.gd
+#: Scripts/side.gd:421
 msgid "READY_WAIT"
 msgstr "En attente ..."
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1231
 msgid "CARD_HOLOMEM_REQUESTDAMAGE"
 msgstr "Ajouter des dégâts à l'Holomem"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1233
 msgid "CARD_HOLOMEM_REQUESTDAMAGEBACK"
 msgstr "Ajouter des dégâts à tous les Holomems en Arrière"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1239
+#: Scripts/side.gd:1352
 msgid "CARD_HOLOMEM_LOOK_ATTACHED"
 msgstr "Regarder les cartes attachées"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1241
+#: Scripts/side.gd:1355
 msgid "CARD_HOLOMEM_LOOK_PAST"
 msgstr "Regarder les Holomems attachés"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1248
 msgid "CARD_HOLOMEM_PLAY_CENTERHIDDEN"
 msgstr "Jouer une carte (Face Cachée) au centre."
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1250
 msgid "CARD_HOLOMEM_PLAY_BACKHIDDEN"
 msgstr "Jouer une carte (Face Cachée) en Backstage."
 
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_PLAY"
-msgstr "Jouer"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_PLAY_DIRECT"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_BLOOM"
-msgstr "Bloom"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_BLOOM_SKIP"
-msgstr "Sauter un Bloom"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_BLOOM_FAST"
-msgstr "Bloom immédiatement"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_UNREST"
-msgstr "Restaurer"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_REST"
-msgstr "Épuiser"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_COLLAB"
-msgstr "Collab"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_BATON"
-msgstr "Relais"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_CENTERCOLLABSWAP"
-msgstr ""
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_CENTER"
-msgstr "Déplacer vers le Centre"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_BACK"
-msgstr "Déplacer vers les Backstages"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_DAMAGE"
-msgstr "Ajouter des dégâts"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_HEAL"
-msgstr "Soigner"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_EXTRAHP"
-msgstr "Ajouter des HP supplémentaires"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
-msgstr "Retirer des HP supplémentaires"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_EXTRABATONPASS"
-msgstr "Augmenter le coût de Relais"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_REMOVEBATONPASS"
-msgstr "Réduire le coût de Relais"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_UNBLOOM"
-msgstr "Annuler un Bloom"
-
-#: Scripts/side.gd
-msgid "CARD_SUPPORT_ATTACH"
-msgstr "Attacher"
-
-#: Scripts/side.gd
-msgid "CARD_SUPPORT_PLAY"
-msgstr "Jouer"
-
-#: Scripts/side.gd
-msgid "CARD_SUPPORT_ARCHIVE"
-msgstr "Archiver"
-
-#: Scripts/side.gd
-msgid "CARD_CHEER_LIFE_REVEAL"
-msgstr "Révéler et attacher"
-
-#: Scripts/side.gd
-msgid "CARD_HAND_TOPDECK"
-msgstr "Envoyer sur le deck"
-
-#: Scripts/side.gd
+#: Scripts/side.gd:1252
+#: Scripts/side.gd:1363
 msgid "CARD_HAND_BOTTOMDECK"
 msgstr "Envoyer sous le deck"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1260
+msgid "CARD_HOLOMEM_PLAY"
+msgstr "Jouer"
+
+#: Scripts/side.gd:1262
+msgid "CARD_HOLOMEM_PLAY_DIRECT"
+msgstr "Jouer directement"
+
+#: Scripts/side.gd:1266
+msgid "CARD_HOLOMEM_BLOOM"
+msgstr "Bloom"
+
+#: Scripts/side.gd:1268
+msgid "CARD_HOLOMEM_BLOOM_SKIP"
+msgstr "Sauter un Bloom"
+
+#: Scripts/side.gd:1270
+msgid "CARD_HOLOMEM_BLOOM_FAST"
+msgstr "Bloom immédiatement"
+
+#: Scripts/side.gd:1279
+msgid "CARD_HOLOMEM_UNREST"
+msgstr "Restaurer"
+
+#: Scripts/side.gd:1281
+msgid "CARD_HOLOMEM_REST"
+msgstr "Épuiser"
+
+#: Scripts/side.gd:1285
+msgid "CARD_HOLOMEM_COLLAB"
+msgstr "Collab"
+
+#: Scripts/side.gd:1287
+msgid "CARD_HOLOMEM_BATON"
+msgstr "Relais"
+
+#: Scripts/side.gd:1289
+msgid "CARD_HOLOMEM_CENTERCOLLABSWAP"
+msgstr "Échanger Central et Collab"
+
+#: Scripts/side.gd:1292
+msgid "CARD_HOLOMEM_MOVE_CENTER"
+msgstr "Déplacer vers le Centre"
+
+#: Scripts/side.gd:1294
+msgid "CARD_HOLOMEM_MOVE_BACK"
+msgstr "Déplacer vers les Backstages"
+
+#: Scripts/side.gd:1297
+msgid "CARD_HOLOMEM_DAMAGE"
+msgstr "Ajouter des dégâts"
+
+#: Scripts/side.gd:1299
+msgid "CARD_HOLOMEM_HEAL"
+msgstr "Soigner"
+
+#: Scripts/side.gd:1300
+msgid "CARD_HOLOMEM_EXTRAHP"
+msgstr "Ajouter des HP supplémentaires"
+
+#: Scripts/side.gd:1302
+msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
+msgstr "Retirer des HP supplémentaires"
+
+#: Scripts/side.gd:1303
+msgid "CARD_HOLOMEM_EXTRABATONPASS"
+msgstr "Augmenter le coût de Relais"
+
+#: Scripts/side.gd:1305
+msgid "CARD_HOLOMEM_REMOVEBATONPASS"
+msgstr "Réduire le coût de Relais"
+
+#: Scripts/side.gd:1309
+msgid "CARD_HOLOMEM_UNBLOOM"
+msgstr "Annuler un Bloom"
+
+#: Scripts/side.gd:1315
+msgid "CARD_SUPPORT_ATTACH"
+msgstr "Attacher"
+
+#: Scripts/side.gd:1319
+msgid "CARD_SUPPORT_PLAY"
+msgstr "Jouer"
+
+#: Scripts/side.gd:1321
+msgid "CARD_SUPPORT_ARCHIVE"
+msgstr "Archiver"
+
+#: Scripts/side.gd:1347
+msgid "CARD_CHEER_LIFE_REVEAL"
+msgstr "Révéler et attacher"
+
+#: Scripts/side.gd:1362
+msgid "CARD_HAND_TOPDECK"
+msgstr "Envoyer sur le deck"
+
+#: Scripts/side.gd:1364
 msgid "CARD_HAND_ARCHIVE"
 msgstr "Envoyer dans Archive"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1365
 msgid "CARD_HAND_HOLOPOWER"
 msgstr "Holopower"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1366
 msgid "CARD_HAND_REVEAL"
 msgstr "Révéler"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1368
 msgid "CARD_HAND_REVEALALL"
 msgstr "Révélez la Main"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1370
 msgid "CARD_STAGE_ARCHIVE"
 msgstr "Archiver"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1372
 msgid "CARD_STAGE_HAND"
 msgstr "Ajouter à la main"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1373
+msgid "CARD_STAGE_BOTTOMDECK"
+msgstr "Envoyer sous le Deck"
+
+#: Scripts/side.gd:1375
 msgid "CARD_HOLOMEM_MOVE_COLLAB"
 msgstr "Déplacer vers la zone Collab"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1377
 msgid "CARD_HOLOMEM_SWITCH"
 msgstr "Échanger avec les Backstages"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1379
 msgid "CARD_REVEALED_HAND"
 msgstr "Ajouter à la main"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1381
 msgid "CARD_REVEALED_ATTACH"
 msgstr "Attacher"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1383
 msgid "CARD_REVEALED_TOPDECK"
 msgstr "Envoyer sur le deck"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1384
 msgid "CARD_REVEALED_BOTTOMDECK"
 msgstr "Envoyer sous le deck"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1385
 msgid "CARD_REVEALED_ARCHIVE"
 msgstr "Envoyer dans Archive"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1386
 msgid "CARD_REVEALED_HOLOPOWER"
 msgstr "Mettre au-dessus des Holopowers"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1387
 msgid "CARD_REVEALED_BOTTOMHOLOPOWER"
 msgstr "Mettre au-dessous des Holopowers"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1410
 msgid "DECK_DRAW"
 msgstr "Piocher"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1411
 msgid "DECK_DRAWX"
 msgstr "Piocher X"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1412
 msgid "DECK_ARCHIVE"
 msgstr "Archiver"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1413
 msgid "DECK_ARCHIVEX"
 msgstr "Archiver X"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1414
 msgid "DECK_HOLOPOWER"
 msgstr "Holopower"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1416
 msgid "DECK_REVEAL"
 msgstr "Révéler la première carte"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1417
+msgid "DECK_DRAWBOTTOM"
+msgstr "Piochez la dernière carte"
+
+#: Scripts/side.gd:1420
 msgid "DECK_LOOKX"
 msgstr "Regarder X carte"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1421
 msgid "DECK_SEARCH"
 msgstr "Chercher"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1422
 msgid "DECK_SHUFFLE"
 msgstr "Mélanger"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1426
 msgid "DECK_MULLIGAN"
 msgstr "Mélanger la main dans le deck"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1429
 msgid "DECK_MULLIGAN_UNDO"
 msgstr "Annuler le mélange de la main "
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1433
 msgid "DECK_RPS"
 msgstr "Jouer à PPC"
 
-#: Scripts/side.gd
-#: Scripts/Multiplayer.gd
+#: Scripts/side.gd:1436
+msgid "DECK_EXTRA_TURN"
+msgstr "Jouer un tour supplémentaire"
+
+#: Scripts/side.gd:1439
+#: Scripts/Multiplayer.gd:1734
 msgid "FORFEIT"
 msgstr "Abandon"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1451
 msgid "CHEERDECK_REVEAL"
 msgstr "Révéler et attacher"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1454
 msgid "CHEERDECK_ARCHIVE"
 msgstr "Archiver la première carte"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1455
 msgid "CHEERDECK_ARCHIVEX"
 msgstr "Archivez les X premières cartes"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1459
 msgid "CHEERDECK_LOOKX"
 msgstr "Regarder X carte"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1460
 msgid "CHEERDECK_SEARCH"
 msgstr "Chercher"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1461
 msgid "CHEERDECK_SHUFFLE"
 msgstr "Mélanger"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1471
 msgid "ARCHIVE_SEARCH"
 msgstr "Chercher"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1475
 msgid "ARCHIVE_HAND_ALL"
 msgstr "Archiver votre main"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1486
 msgid "HOLOPOWER_ARCHIVE"
 msgstr "Archiver"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1487
 msgid "HOLOPOWER_ARCHIVEX"
 msgstr "Archiver X"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1490
 msgid "HOLOPOWER_REVEAL"
 msgstr "Révéler la première carte"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1494
 msgid "HOLOPOWER_DECK"
 msgstr "Envoyer sur le deck"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1498
 msgid "HOLOPOWER_SEARCH"
 msgstr "Chercher"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1499
 msgid "HOLOPOWER_SHUFFLE"
 msgstr "Mélanger"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1521
 msgid "LIST_DECK_HOLOMEM_PLAY"
 msgstr "Jouer"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1523
 msgid "LIST_ARCHIVE_HOLOMEM_PLAY"
 msgstr "Jouer"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1526
 msgid "LIST_DECK_HOLOMEM_PLAY_DIRECT"
-msgstr ""
+msgstr "Jouer directement"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1528
 msgid "LIST_ARCHIVE_HOLOMEM_PLAY_DIRECT"
-msgstr ""
+msgstr "Jouer directement"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1533
 msgid "LIST_DECK_HOLOMEM_BLOOM"
 msgstr "Bloom"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1535
 msgid "LIST_ARCHIVE_HOLOMEM_BLOOM"
 msgstr "Bloom"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1538
 msgid "LIST_DECK_HOLOMEM_BLOOM_FAST"
 msgstr "Bloom immédiatement"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1540
 msgid "LIST_ARCHIVE_HOLOMEM_BLOOM_FAST"
 msgstr "Bloom immédiatement"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1544
 msgid "LIST_CHEERDECK_CHEER_ATTACH"
 msgstr "Attacher"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1546
 msgid "LIST_ARCHIVE_CHEER_ATTACH"
 msgstr "Attacher"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1548
 msgid "LIST_ATTACHED_CHEER_ATTACH"
 msgstr "Réattacher"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1551
 msgid "LIST_CHEER_LIFE"
 msgstr "Déplacer vers VIE"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1554
 msgid "LIST_CARD_REVEAL"
 msgstr "Révéler"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1561
 msgid "LIST_CARD_HAND"
 msgstr "Ajouter à la main"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1564
 msgid "LIST_CARD_TOPDECK"
 msgstr "Envoyer sur le deck"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1565
 msgid "LIST_CARD_BOTTOMDECK"
 msgstr "Envoyer sous le deck"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1567
 msgid "LIST_CARD_TOPCHEERDECK"
 msgstr "Envoyer sur le deck de Cheer"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1568
 msgid "LIST_CARD_BOTTOMCHEERDECK"
 msgstr "Envoyer sous le deck de Cheer"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1570
 msgid "LIST_CARD_ARCHIVE"
 msgstr "Archiver"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1572
 msgid "LIST_CARD_HOLOPOWER"
 msgstr "Holopower"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1599
 msgid "PROMPT_DAMAGE"
 msgstr "Ajouter X dégâts"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1602
 msgid "PROMPT_HEAL"
 msgstr "Soigner X "
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1605
 msgid "PROMPT_EXTRAHP"
 msgstr "Ajouter X HP supplémentaires"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1608
 msgid "PROMPT_REMOVEEXTRAHP"
 msgstr "Retirer X HP supplémentaires"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1611
 msgid "PROMPT_EXTRABATONPASS"
 msgstr "Augmenter le coût de Relais de X"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1614
 msgid "PROMPT_REMOVEBATONPASS"
 msgstr "Réduire le coût de Relais de X"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1636
 msgid "PROMPT_REQUESTDAMAGE"
 msgstr "Ajouter X dégâts"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1639
 msgid "PROMPT_REQUESTDAMAGEBACK"
 msgstr "Ajouter X dégâts"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1647
+#: Scripts/side.gd:1656
 msgid "PROMPT_OSHICOST"
 msgstr "Archiver X cartes"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1702
 msgid "PROMPT_DRAW"
 msgstr "Piocher X cartes"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1705
 msgid "PROMPT_DECK_ARCHIVE"
 msgstr "Archiver X cartes"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1712
+#: Scripts/side.gd:1724
 msgid "PROMPT_LOOKATX"
 msgstr "Regarder X :"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1721
 msgid "PROMPT_CHEERDECK_ARCHIVE"
 msgstr "Archivez X cartes"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1738
 msgid "PROMPT_HOLOPOWER_ARCHIVE"
 msgstr "Archiver X cartes"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1806
 msgid "PROMPT_NOTE"
 msgstr "Ajouter une note"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1806
 msgid "PROMPT_NOTE_PLACEHOLDER"
 msgstr "Écrivez la note ici..."
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1871
 msgid "GOLDFISH_ZONEDAMAGE"
 msgstr "Ajouter des dégâts à la Zone"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1872
 msgid "GOLDFISH_ZONEDAMAGEREMOVE"
 msgstr "Retirer des dégâts à la Zone"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1874
 msgid "GOLDFISH_ZONEDAMAGEALL"
 msgstr "Ajouter des dégâts à toute la Zone Arrière"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1875
 msgid "GOLDFISH_ZONENOTE"
 msgstr "Ajouter une note à la Zone"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1885
 msgid "PROMPT_ART_DAMAGE"
 msgstr "Inflige X dégâts"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1950
 msgid "TURN_SECOND"
 msgstr "Votre adversaire joue en deuxième"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1953
 msgid "TURN_FIRST"
 msgstr "Votre adversaire joue en premier"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:179
+#: Scripts/Multiplayer.gd:298
+#: Scripts/Multiplayer.gd:311
 msgid "DOWNLOAD_CARDS"
 msgstr "Téléchargement des cartes, veuillez patienter..."
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:224
 msgid "DECK_AUTOLOAD_CONFIRM"
 msgstr "CODE DE DECK DÉTECTÉ.\n"
 "CONTINUER VERS L'ÉDITEUR DE DECK ?"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:225
 msgid "DECK_AUTOLOAD_CONFIRM_INFO"
 msgstr "Le jeu a détecté que vous avez importé un Deck valide.\n"
 "Si vous souhaitez le voir, cliquez sur « Oui » pour accéder à l'éditeur de Deck."
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:333
 msgid "UPDATE_MENU_CLIENT_UPDATEFOUND"
 msgstr "Mise à jour trouvée"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:337
 msgid "UPDATE_MENU_CARD_UPDATEFOUND"
 msgstr "Nouvelle carte trouvée"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:370
 msgid "LOAD_FAIL"
 msgstr "Erreur dans le chargement des cartes"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:371
 msgid "LOAD_FAIL_FULL"
 msgstr "Vous disposez de l'archive cardData.zip, mais elle n'a pas pu être chargée.\n"
 "Veuillez m'informer si vous voyez ce message, car je ne comprends pas comment cela a pu se produire."
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1040
+#: Scripts/Multiplayer.gd:1757
 msgid "LOBBY_BANLIST_CUSTOM"
 msgstr "Banlist personnalisée"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1089
+#: Scripts/Multiplayer.gd:1764
 msgid "GAME_VS"
 msgstr ""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1195
+#: Scripts/Multiplayer.gd:1198
 msgid "LOBBY_WAITING"
 msgstr "En attente"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1429
+#: Scripts/Multiplayer.gd:1750
 msgid "INGAME_RPS_WON"
 msgstr "Vous avez gagné"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1435
+#: Scripts/Multiplayer.gd:1751
 msgid "INGAME_RPS_LOST"
 msgstr "Vous avez perdu"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1449
 msgid "YOU"
 msgstr "Vous"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1482
+#: Scripts/Multiplayer.gd:1732
 msgid "WIN"
 msgstr "Vous avez gagné !"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1500
+#: Scripts/Multiplayer.gd:1733
 msgid "SPECTATE_WIN"
 msgstr "{person} a gagné ! "
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1556
 msgid "MESSAGE_MULLIGAN"
 msgstr "{person} a mulligan"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1557
 msgid "MESSAGE_DRAW"
 msgstr "{person} a pioché une carte"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1558
 msgid "MESSAGE_DRAWX"
 msgstr "{person} a pioché {amount} cartes"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1559
 msgid "MESSAGE_MILL"
 msgstr "{person} a envoyé une carte depuis {from} vers {to}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1560
 msgid "MESSAGE_MILLX"
 msgstr "{person} a envoyé {amount} cartes depuis {from} vers {to}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1561
 msgid "MESSAGE_BLOOM"
 msgstr "{person} a bloom ({fromZone}) {fromName} en {toName} ({fromLevel} vers {toLevel})"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1562
 msgid "MESSAGE_STAGE_ARCHIVE"
 msgstr "{person} a archivé ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1563
+msgid "MESSAGE_DRAWBOTTOM"
+msgstr "{person} a pioché la dernière carte de son Deck."
+
+#: Scripts/Multiplayer.gd:1564
+msgid "MESSAGE_STAGE_BOTTOMDECK"
+msgstr "{person} a envoyé ({fromZone}) {fromName} au-dessous de son Deck."
+
+#: Scripts/Multiplayer.gd:1565
 msgid "MESSAGE_STAGE_HAND"
 msgstr "{person} a repris ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1566
 msgid "MESSAGE_STAGE_CENTER"
 msgstr "{person} a déplacé ({fromZone}) {fromName} vers le centre"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1567
 msgid "MESSAGE_STAGE_COLLAB"
 msgstr "{person} a collab avec ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1568
 msgid "MESSAGE_STAGE_MOVECOLLAB"
 msgstr "{person} a déplacé ({fromZone}) {fromName} vers la zone Collab"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1569
 msgid "MESSAGE_STAGE_UNBLOOM"
 msgstr "{person} a annulé le bloom de ({fromZone}) {fromName}, pour revenir à {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1570
 msgid "MESSAGE_REVEALED_HAND"
 msgstr "{person} a ajouté {cardName} à sa main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1571
 msgid "MESSAGE_REVEALED_TOPDECK"
 msgstr "{person} a déplacé {cardName} sur son deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1572
 msgid "MESSAGE_REVEALED_BOTTOMDECK"
 msgstr "{person} a déplacé {cardName} sous son deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1573
 msgid "MESSAGE_REVEALED_ARCHIVE"
 msgstr "{person} a archivé {cardName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1574
 msgid "MESSAGE_REVEALED_HOLOPOWER"
 msgstr "{person} a ajouté {cardName} à ces Holopower"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1575
 msgid "MESSAGE_REVEALED_BOTTOMHOLOPOWER"
 msgstr "{person} a ajouté {cardName} au-dessous de ces Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1576
 msgid "MESSAGE_OSHISKILL_SP"
 msgstr "{person} a utilisé son SP Oshi Skill \"{skillName}\""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1577
 msgid "MESSAGE_OSHISKILL"
 msgstr "{person} a utilisé son Oshi Skill \"{skillName}\""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1578
 msgid "MESSAGE_HAND_TOPDECK"
 msgstr "{person} a mis une carte sur son deck depuis sa main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1579
 msgid "MESSAGE_HAND_BOTTOMDECK"
 msgstr "{person} a mis une carte sous son deck depuis sa main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1580
 msgid "MESSAGE_HAND_ARCHIVE"
 msgstr "{person} a archivé {cardName} depuis sa main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1581
 msgid "MESSAGE_HAND_HOLOPOWER"
 msgstr "{person} a mis une carte en Holopower depuis sa main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1582
 msgid "MESSAGE_HAND_REVEAL"
 msgstr "{person} a révélé {cardName} depuis sa main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1583
 msgid "MESSAGE_HAND_REVEALALL"
 msgstr "{person} a révélé sa main."
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1584
 msgid "MESSAGE_HAND_SUPPORT_PLAY"
 msgstr "{person} a joué {cardName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1585
 msgid "MESSAGE_FUDA_REVEAL"
 msgstr "{person} a révélé {cardName} depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1586
 msgid "MESSAGE_HOLOPOWER_REVEAL"
 msgstr "{person} a révélé {cardName} depuis ses Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1587
 msgid "MESSAGE_DECK_MULLIGAN"
 msgstr "{person} a mélangé sa main dans son deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1588
 msgid "MESSAGE_DECK_UNDOMULLIGAN"
 msgstr "{person} a annulé le mélange de sa main dans son deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1589
 msgid "MESSAGE_DECK_SEARCH"
 msgstr "{person} a commencé à chercher dans son deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1590
 msgid "MESSAGE_DECK_SHUFFLE"
 msgstr "{person} a mélangé son deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1591
 msgid "MESSAGE_CHEERDECK_SEARCH"
 msgstr "{person} a commencé à chercher dans son deck de Cheer"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1592
 msgid "MESSAGE_CHEERDECK_SHUFFLE"
 msgstr "{person} a mélangé son deck de Cheer"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1593
 msgid "MESSAGE_HOLOPOWER_SEARCH"
 msgstr "{person} a commencé à chercher dans ses Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1594
 msgid "MESSAGE_HOLOPOWER_SHUFFLE"
 msgstr "{person} a mélangé ses Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1595
 msgid "MESSAGE_FUDA_LIFE"
 msgstr "{person} a ajouté une carte à ses VIE depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1596
 msgid "MESSAGE_ATTACHED_LIFE"
 msgstr "{person} a ajouté {cardName} à ses VIE depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1597
 msgid "MESSAGE_ARCHIVE_HAND"
 msgstr "{person} a ajouté {cardName} à sa main depuis son archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1598
 msgid "MESSAGE_FUDA_HAND"
 msgstr "{person} a ajouté une carte à sa main depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1599
 msgid "MESSAGE_HOLOPOWER_HAND"
 msgstr "{person} a ajouté une carte à sa main depuis ses Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1600
 msgid "MESSAGE_ATTACHED_HAND"
 msgstr "{person} a ajouté {cardName} à sa main depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1601
 msgid "MESSAGE_ARCHIVE_TOPDECK"
 msgstr "{person} a déplacé {cardName} sur son deck depuis son archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1602
 msgid "MESSAGE_DECK_TOPDECK"
 msgstr "{person} a déplacé une carte au-dessus de son deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1603
 msgid "MESSAGE_FUDA_TOPDECK"
 msgstr "{person} a déplacé une carte sur son deck depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1604
 msgid "MESSAGE_HOLOPOWER_TOPDECK"
 msgstr "{person} a placé une carte sur son deck depuis ses Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1605
 msgid "MESSAGE_ATTACHED_TOPDECK"
 msgstr "{person} a déplacé {cardName} sur son deck depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1606
 msgid "MESSAGE_ARCHIVE_BOTTOMDECK"
 msgstr "{person} a déplacé {cardName} sous son deck depuis son archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1607
 msgid "MESSAGE_DECK_BOTTOMDECK"
 msgstr "{person} a déplacé une carte au-dessous de son deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1608
 msgid "MESSAGE_FUDA_BOTTOMDECK"
 msgstr "{person} a déplacé une carte sous son deck depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1609
 msgid "MESSAGE_HOLOPOWER_BOTTOMDECK"
 msgstr "{person} a placé une carte sous son deck depuis ses Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1610
 msgid "MESSAGE_ATTACHED_BOTTOMDECK"
 msgstr "{person} a déplacé {cardName} sous son deck depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1611
 msgid "MESSAGE_ARCHIVE_TOPCHEERDECK"
 msgstr "{person} a déplacé {cardName} au-dessus de son deck de Cheer depuis son archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1612
 msgid "MESSAGE_CHEERDECK_TOPCHEERDECK"
 msgstr "{person} a déplacé une carte au-dessus de son deck de Cheer"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1613
 msgid "MESSAGE_FUDA_TOPCHEERDECK"
 msgstr "{person} a déplacé une carte sur son deck de Cheer depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1614
 msgid "MESSAGE_ATTACHED_TOPCHEERDECK"
 msgstr "{person} a déplacé {cardName} sur son deck de Cheer depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1615
 msgid "MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
 msgstr "{person} a déplacé {cardName} sous son deck de Cheer depuis son archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1616
 msgid "MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
 msgstr "{person} a déplacé une carte au-dessous de son deck de Cheer"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1617
 msgid "MESSAGE_FUDA_BOTTOMCHEERDECK"
 msgstr "{person} a déplacé une carte sous son deck de Cheer depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1618
 msgid "MESSAGE_ATTACHED_BOTTOMCHEERDECK"
 msgstr "{person} a déplacé {cardName} sous son deck de Cheer depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1619
 msgid "MESSAGE_FUDA_ARCHIVE"
 msgstr "{person} a archivé {cardName} depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1620
 msgid "MESSAGE_HOLOPOWER_ARCHIVE"
 msgstr "{person} a archivé {cardName} depuis ses Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1621
 msgid "MESSAGE_ATTACHED_ARCHIVE"
 msgstr "{person} a archivé {cardName} depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1622
 msgid "MESSAGE_ARCHIVE_HOLOPOWER"
 msgstr "{person} a placé {cardName} en Holopower depuis son archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1623
 msgid "MESSAGE_FUDA_HOLOPOWER"
 msgstr "{person} a placé {cardName} en Holopower depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1624
 msgid "MESSAGE_ATTACHED_HOLOPOWER"
 msgstr "{person} a placé {cardName} en Holopower depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1625
 msgid "MESSAGE_ARTS_DAMAGE"
 msgstr "{person} a utilisé \"{artName}\" avec ({fromZone}) {fromName}, infligeant {damage} à ({toZone}) {toName}."
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1626
 msgid "MESSAGE_DECK_LOOKATX"
 msgstr "{person} a commencé à regarder les {amount} premières cartes de son deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1627
 msgid "MESSAGE_CHEERDECK_LOOKATX"
 msgstr "{person} a commencé à regarder les {amount} premières cartes de son deck de Cheer"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1628
 msgid "MESSAGE_CARD_BACK"
 msgstr "{person} a déplacé {cardName} vers ses Backstages"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1629
 msgid "MESSAGE_CARD_BATONPASS"
 msgstr "{person} a fait un relais entre ({fromZone}) {fromName} et ({toZone}) {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1630
 msgid "MESSAGE_CARD_SWITCH"
 msgstr "{person} a échangé ({fromZone}) {fromName} et ({toZone}) {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1631
 msgid "MESSAGE_SUPPORT_ATTACH"
 msgstr "{person} a attaché {attachName} à ({toZone}) {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1632
 msgid "MESSAGE_CHEER_ATTACH"
 msgstr "{person} a attaché {attachName} à ({toZone}) {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1633
 msgid "MESSAGE_HOLOMEM_PLAY"
 msgstr "{person} a joué {cardName} dans ses Backstages"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1634
 msgid "MESSAGE_DECK_HOLOMEM_PLAY"
 msgstr "{person} a joué {cardName} dans ses Backstages depuis son deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1635
 msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr "{person} a attaché {attachName} à ({toZone}) {toName} depuis son deck de Cheer"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1636
 msgid "MESSAGE_ARCHIVE_HAND_ALL"
 msgstr "{personne} a archivé toute sa main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1637
 msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr "{person} a joué {cardName} dans ses Backstages depuis son archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1638
 msgid "MESSAGE_ARCHIVE_CHEER_ATTACH"
 msgstr "{person} a attaché {attachName} à ({toZone}) {toName} depuis son archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1639
 msgid "MESSAGE_ATTACHED_CHEER_ATTACH"
 msgstr "{person} a attaché {attachName} à ({toZone}) {toName} depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1640
 msgid "MESSAGE_ENDTURN"
 msgstr "{person} a fini son tour"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1641
 msgid "MESSAGE_DIERESULT"
 msgstr "{person} a obtenu un {amount} au dé"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1642
 msgid "MESSAGE_RPS"
 msgstr "{person} a gagné le PPC"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1643
 msgid "YOU_MESSAGE_MULLIGAN"
 msgstr "Vous avez mulligan"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1644
 msgid "YOU_MESSAGE_DRAW"
 msgstr "Vous avez pioché une carte"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1645
 msgid "YOU_MESSAGE_DRAWX"
 msgstr "Vous avez pioché {amount} cartes"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1646
 msgid "YOU_MESSAGE_MILL"
 msgstr "Vous avez envoyé une carte depuis {from} vers {to}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1647
 msgid "YOU_MESSAGE_MILLX"
 msgstr "Vous avez envoyé {amount} cartes depuis {from} vers {to}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1648
 msgid "YOU_MESSAGE_BLOOM"
 msgstr "Vous avez bloom ({fromZone}) {fromName} en {toName} ({fromLevel} vers {toLevel})"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1649
 msgid "YOU_MESSAGE_STAGE_ARCHIVE"
 msgstr "Vous avez archivé ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1650
+msgid "YOU_MESSAGE_DRAWBOTTOM"
+msgstr "Vous avez pioché la dernière carte de votre Deck."
+
+#: Scripts/Multiplayer.gd:1651
+msgid "YOU_MESSAGE_STAGE_BOTTOMDECK"
+msgstr "Vous avez envoyé ({fromZone}) {fromName} au-dessous de votre Deck."
+
+#: Scripts/Multiplayer.gd:1652
 msgid "YOU_MESSAGE_STAGE_HAND"
 msgstr "Vous avez repris ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1653
 msgid "YOU_MESSAGE_STAGE_CENTER"
 msgstr "Vous avez déplacé ({fromZone}) {fromName} vers le centre"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1654
 msgid "YOU_MESSAGE_STAGE_COLLAB"
 msgstr "Vous avez collab avec ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1655
 msgid "YOU_MESSAGE_STAGE_MOVECOLLAB"
 msgstr "Vous avez déplacé ({fromZone}) {fromName} vers la zone Collab"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1656
 msgid "YOU_MESSAGE_STAGE_UNBLOOM"
 msgstr "Vous avez annulé le bloom de ({fromZone}) {fromName}, pour revenir à {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1657
 msgid "YOU_MESSAGE_REVEALED_HAND"
 msgstr "Vous avez ajouté {cardName} à votre main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1658
 msgid "YOU_MESSAGE_REVEALED_TOPDECK"
 msgstr "Vous avez déplacé {cardName} sur votre deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1659
 msgid "YOU_MESSAGE_REVEALED_BOTTOMDECK"
 msgstr "Vous avez déplacé {cardName} sous votre deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1660
 msgid "YOU_MESSAGE_REVEALED_ARCHIVE"
 msgstr "Vous avez archivé {cardName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1661
 msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
 msgstr "Vous avez ajouté {cardName} à vos Holopower"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1662
 msgid "YOU_MESSAGE_REVEALED_BOTTOMHOLOPOWER"
 msgstr "Vous avez ajouté {cardName} au-dessous de vos Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1663
 msgid "YOU_MESSAGE_OSHISKILL_SP"
 msgstr "Vous avez utilisé votre SP Oshi Skill \"{skillName}\""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1664
 msgid "YOU_MESSAGE_OSHISKILL"
 msgstr "Vous avez utilisé votre Oshi Skill \"{skillName}\""
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1665
 msgid "YOU_MESSAGE_HAND_TOPDECK"
 msgstr "Vous avez mis une carte sur votre deck depuis votre main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1666
 msgid "YOU_MESSAGE_HAND_BOTTOMDECK"
 msgstr "Vous avez mis une carte sous votre deck depuis votre main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1667
 msgid "YOU_MESSAGE_HAND_ARCHIVE"
 msgstr "Vous avez archivé {cardName} depuis votre main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1668
 msgid "YOU_MESSAGE_HAND_HOLOPOWER"
 msgstr "Vous avez mis une carte en Holopower depuis votre main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1669
 msgid "YOU_MESSAGE_HAND_REVEAL"
 msgstr "Vous avez révélé {cardName} depuis votre main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1670
 msgid "YOU_MESSAGE_HAND_REVEALALL"
 msgstr "Vous avez révélé votre main."
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1671
 msgid "YOU_MESSAGE_HAND_SUPPORT_PLAY"
 msgstr "Vous avez joué {cardName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1672
 msgid "YOU_MESSAGE_FUDA_REVEAL"
 msgstr "Vous avez révélé {cardName} depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1673
 msgid "YOU_MESSAGE_HOLOPOWER_REVEAL"
 msgstr "Vous avez révélé {cardName} depuis vos Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1674
 msgid "YOU_MESSAGE_DECK_MULLIGAN"
 msgstr "Vous avez mélangé votre main dans votre deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1675
 msgid "YOU_MESSAGE_DECK_UNDOMULLIGAN"
 msgstr "Vous avez annulé le mélange de votre main dans votre deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1676
 msgid "YOU_MESSAGE_DECK_SEARCH"
 msgstr "Vous avez commencé à chercher dans votre deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1677
 msgid "YOU_MESSAGE_DECK_SHUFFLE"
 msgstr "Vous avez mélangé votre deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1678
 msgid "YOU_MESSAGE_CHEERDECK_SEARCH"
 msgstr "Vous avez commencé à chercher dans votre deck de Cheer"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1679
 msgid "YOU_MESSAGE_CHEERDECK_SHUFFLE"
 msgstr "Vous avez mélangé votre deck de Cheer"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1680
 msgid "YOU_MESSAGE_HOLOPOWER_SEARCH"
 msgstr "Vous avez commencé à chercher dans vos Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1681
 msgid "YOU_MESSAGE_HOLOPOWER_SHUFFLE"
 msgstr "Vous avez mélangé vos Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1682
 msgid "YOU_MESSAGE_FUDA_LIFE"
 msgstr "Vous avez ajouté une carte à vos VIE depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1683
 msgid "YOU_MESSAGE_ATTACHED_LIFE"
 msgstr "Vous avez ajouté {cardName} à vos VIE depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1684
 msgid "YOU_MESSAGE_ARCHIVE_HAND"
 msgstr "Vous avez ajouté {cardName} à votre main depuis votre archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1685
 msgid "YOU_MESSAGE_FUDA_HAND"
 msgstr "Vous avez ajouté une carte à votre main depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1686
 msgid "YOU_MESSAGE_HOLOPOWER_HAND"
 msgstr "Vous avez ajouté une carte à votre main depuis vos Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1687
 msgid "YOU_MESSAGE_ATTACHED_HAND"
 msgstr "Vous avez ajouté {cardName} à votre main depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1688
 msgid "YOU_MESSAGE_ARCHIVE_TOPDECK"
 msgstr "Vous avez déplacé {cardName} sur votre deck depuis votre archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1689
 msgid "YOU_MESSAGE_DECK_TOPDECK"
 msgstr "Vous avez déplacé une carte au-dessus de son deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1690
 msgid "YOU_MESSAGE_FUDA_TOPDECK"
 msgstr "Vous avez déplacé une carte sur votre deck depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1691
 msgid "YOU_MESSAGE_HOLOPOWER_TOPDECK"
 msgstr "Vous avez placé une carte sur votre deck depuis vos Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1692
 msgid "YOU_MESSAGE_ATTACHED_TOPDECK"
 msgstr "Vous avez déplacé {cardName} sur votre deck depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1693
 msgid "YOU_MESSAGE_ARCHIVE_BOTTOMDECK"
 msgstr "Vous avez déplacé {cardName} sous votre deck depuis son archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1694
 msgid "YOU_MESSAGE_DECK_BOTTOMDECK"
 msgstr "Vous avez déplacé une carte au-dessous de votre deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1695
 msgid "YOU_MESSAGE_FUDA_BOTTOMDECK"
 msgstr "Vous avez déplacé une carte sous votre deck depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1696
 msgid "YOU_MESSAGE_HOLOPOWER_BOTTOMDECK"
 msgstr "Vous avez placé une carte sous votre deck depuis vos Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1697
 msgid "YOU_MESSAGE_ATTACHED_BOTTOMDECK"
 msgstr "Vous avez déplacé {cardName} sous votre deck depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1698
 msgid "YOU_MESSAGE_ARCHIVE_TOPCHEERDECK"
 msgstr "Vous avez déplacé {cardName} au-dessus de votre deck de Cheer depuis votre archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1699
 msgid "YOU_MESSAGE_CHEERDECK_TOPCHEERDECK"
 msgstr "Vous avez déplacé une carte au-dessus de votre deck de Cheer"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1700
 msgid "YOU_MESSAGE_FUDA_TOPCHEERDECK"
 msgstr "Vous avez déplacé une carte sur votre deck de Cheer depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1701
 msgid "YOU_MESSAGE_ATTACHED_TOPCHEERDECK"
 msgstr "Vous avez déplacé {cardName} sur votre deck de Cheer depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1702
 msgid "YOU_MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
 msgstr "Vous avez déplacé {cardName} sous votre deck de Cheer depuis votre archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1703
 msgid "YOU_MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
 msgstr "Vous avez déplacé une carte au-dessous de votre deck de Cheer"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1704
 msgid "YOU_MESSAGE_FUDA_BOTTOMCHEERDECK"
 msgstr "Vous avez déplacé une carte sous votre deck de Cheer depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1705
 msgid "YOU_MESSAGE_ATTACHED_BOTTOMCHEERDECK"
 msgstr "Vous avez déplacé {cardName} sous votre deck de Cheer depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1706
 msgid "YOU_MESSAGE_FUDA_ARCHIVE"
 msgstr "Vous avez archivé {cardName} depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1707
 msgid "YOU_MESSAGE_HOLOPOWER_ARCHIVE"
 msgstr "Vous avez archivé {cardName} depuis vos Holopowers"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1708
 msgid "YOU_MESSAGE_ATTACHED_ARCHIVE"
 msgstr "Vous avez archivé {cardName} depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1709
 msgid "YOU_MESSAGE_ARCHIVE_HOLOPOWER"
 msgstr "Vous avez placé {cardName} en Holopower depuis votre archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1710
 msgid "YOU_MESSAGE_FUDA_HOLOPOWER"
 msgstr "Vous avez placé {cardName} en Holopower depuis {fromFuda}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1711
 msgid "YOU_MESSAGE_ATTACHED_HOLOPOWER"
 msgstr "Vous avez placé {cardName} en Holopower depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1712
 msgid "YOU_MESSAGE_ARTS_DAMAGE"
 msgstr "Vous avez utilisé \"{artName}\" avec ({fromZone}) {fromName}, infligeant {damage} à ({toZone}) {toName}."
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1713
 msgid "YOU_MESSAGE_DECK_LOOKATX"
 msgstr "Vous avez commencé à regarder les {amount} premières cartes de votre deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1714
 msgid "YOU_MESSAGE_CHEERDECK_LOOKATX"
 msgstr "Vous avez commencé à regarder les {amount} premières cartes de votre deck de Cheer"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1715
 msgid "YOU_MESSAGE_CARD_BACK"
 msgstr "Vous avez déplacé {cardName} vers vos Backstages"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1716
 msgid "YOU_MESSAGE_CARD_BATONPASS"
 msgstr "Vous avez fait un relais entre ({fromZone}) {fromName} et ({toZone}) {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1717
 msgid "YOU_MESSAGE_CARD_SWITCH"
 msgstr "Vous avez échangé ({fromZone}) {fromName} et ({toZone}) {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1718
 msgid "YOU_MESSAGE_SUPPORT_ATTACH"
 msgstr "Vous avez attaché {attachName} à ({toZone}) {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1719
 msgid "YOU_MESSAGE_CHEER_ATTACH"
 msgstr "Vous avez attaché {attachName} à ({toZone}) {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1720
 msgid "YOU_MESSAGE_HOLOMEM_PLAY"
 msgstr "Vous avez joué {cardName} dans vos Backstages"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1721
 msgid "YOU_MESSAGE_DECK_HOLOMEM_PLAY"
 msgstr "Vous avez joué {cardName} dans vos Backstages depuis son deck"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1722
 msgid "YOU_MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr "Vous avez attaché {attachName} à ({toZone}) {toName} depuis votre deck de Cheer"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1723
 msgid "YOU_MESSAGE_ARCHIVE_HAND_ALL"
 msgstr "Vous avez archivé toute votre main"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1724
 msgid "YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr "Vous avez joué {cardName} dans vos Backstages depuis son archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1725
 msgid "YOU_MESSAGE_ARCHIVE_CHEER_ATTACH"
 msgstr "Vous avez attaché {attachName} à ({toZone}) {toName} depuis votre archive"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1726
 msgid "YOU_MESSAGE_ATTACHED_CHEER_ATTACH"
 msgstr "Vous avez attaché {attachName} à ({toZone}) {toName} depuis ({fromZone}) {fromName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1727
 msgid "YOU_MESSAGE_ENDTURN"
 msgstr "Vous avez fini votre tour"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1728
 msgid "YOU_MESSAGE_DIERESULT"
 msgstr "Vous avez obtenu un {amount} au dé"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1729
 msgid "YOU_MESSAGE_RPS"
 msgstr "Vous avez gagné le PPC"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1735
 msgid "WINCONSENT_FORFEIT"
 msgstr "Voulez-vous vraiment abandonner ?"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1736
 msgid "WINCONSENT_DECKOUT"
 msgstr "Votre tour à commencer avec un deck vide.\n"
 "Perdez-vous parce que vous n'avez plus de carte dans votre deck."
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1737
 msgid "WINCONSENT_LIFE"
 msgstr "Vous n'avez pas de carte en VIE.\n"
 "Perdez-vous parce que vous n'avez plus de VIE ?"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1738
 msgid "WINCONSENT_EMPTYSTAGE"
 msgstr "Vous n'avez pas de holomems sur Scène.\n"
 "Perdez-vous parce que votre Scène est vide ?"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1739
 msgid "WINREASON_MULLIGAN"
 msgstr "{person} a mulligan jusqu'à 0"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1740
 msgid "WINREASON_DECKOUT"
 msgstr "{person} a pioché alors que son deck était vide"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1741
 msgid "WINREASON_LIFE"
 msgstr "{person} n'a plus de VIE"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1742
 msgid "WINREASON_EMPTYSTAGE"
 msgstr "{person} a une Scène vide"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1743
 msgid "WINREASON_FORFEIT"
 msgstr "{person} a abandonné"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1744
 msgid "YOU_WINREASON_MULLIGAN"
 msgstr "Vous avez mulligan jusqu'à 0"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1745
 msgid "YOU_WINREASON_DECKOUT"
 msgstr "Vous avez pioché alors que votre deck était vide"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1746
 msgid "YOU_WINREASON_LIFE"
 msgstr "Vous n'avez plus de VIE"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1747
 msgid "YOU_WINREASON_EMPTYSTAGE"
 msgstr "Vous avez une Scène vide"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1748
 msgid "YOU_WINREASON_FORFEIT"
 msgstr "Vous avez abandonné."
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1758
 msgid "LOBBY_PUBLIC"
 msgstr "Public"
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:175
+#: Scripts/card_info.gd:180
 msgid "NOBODY"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:177
+#: Scripts/card_info.gd:182
 msgid "NAMESEP"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:190
+#: Scripts/card_info.gd:195
 msgid "COLORLESS"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:192
+#: Scripts/card_info.gd:197
 msgid "COLORSEP"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:232
 msgid "NAME_BUZZ"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:237
 msgid "INFO_OSHI"
 msgstr "{colorText} Oshi Holomem\n"
 "Vie : {life}{tagsText}"
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:246
 msgid "INFO_OSHI_SPSKILL"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:249
+msgid "INFO_OSHI_STAGESKILL"
+msgstr ""
+
+#: Scripts/card_info.gd:252
 msgid "INFO_OSHI_SKILL"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:260
 msgid "INFO_SPOT"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:260
 msgid "INFO_DEBUT"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:260
 msgid "INFO_1ST"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:260
 msgid "INFO_2ND"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:261
 msgid "INFO_BUZZ"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:264
 msgid "INFO_HOLOMEM_1"
 msgstr "{colorText} {levelText} {buzzText}Holomem\n"
 "PV: {hpText}\n"
 "Tags: {tagsText}"
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:316
 msgid "INFO_NOBATONPASSCOST"
 msgstr "Gratuit"
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:317
 msgid "INFO_HOLOMEM_2"
 msgstr "Relais : {costText}"
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:328
 msgid "INFO_SUPPORT"
 msgstr ""
 
-#: Scripts/card_info.gd
+#: Scripts/card_info.gd:330
 msgid "INFO_LIMITED"
 msgstr "LIMITÉ : Seule une carte ne peut être jouée par tour."
 

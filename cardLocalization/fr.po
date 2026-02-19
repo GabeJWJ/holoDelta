@@ -1,16 +1,21 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: holodelta\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-02-19 15:56-0500\n"
+"Last-Translator: \n"
+"Language-Team: French\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Crowdin-Project: holodelta\n"
 "X-Crowdin-Project-ID: 724315\n"
 "X-Crowdin-Language: fr\n"
 "X-Crowdin-File: /cards/template.pot\n"
 "X-Crowdin-File-ID: 14\n"
-"Project-Id-Version: holodelta\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language-Team: French\n"
-"Language: fr_FR\n"
-"PO-Revision-Date: 2026-02-07 21:38\n"
+"X-Generator: Poedit 3.8\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "Quand cet Holomem est Inconscient, perdez 2 VIE"
@@ -616,7 +621,8 @@ msgid "hSD01-015_COLLAB_NAME"
 msgstr "SoAzKo"
 
 msgid "hSD01-015_COLLAB_EFFECT"
-msgstr "- Si vous avez Tokino Sora en position Central, piochez 1 carte de votre Deck.\n"
+msgstr ""
+"- Si vous avez Tokino Sora en position Central, piochez 1 carte de votre Deck.\n"
 "- Si vous avez AZKi en position Central, envoyez la première carte de votre Deck de Cheer vers votre Holomem Central."
 
 msgid "hPR-001_NAME"
@@ -1226,7 +1232,7 @@ msgid "hBP01-027_GIFT_NAME"
 msgstr "V.7"
 
 msgid "hBP01-027_GIFT_EFFECT"
-msgstr "[1/tour] [Position Collab] Lorsque l'un de vos Holomems est sur le point de subir des dégâts de votre adversaire, vous pouvez lancer un dé : Si le résultat est impair, ne subissez pas les dégâts."
+msgstr "[1/Tour] [Position Collab] Lorsque l'un de vos Holomems est sur le point de subir des dégâts de votre adversaire, vous pouvez lancer un dé : Si le résultat est impair, ne subissez pas les dégâts."
 
 msgid "hBP01-054_NAME"
 msgstr "Airani Iofifteen"
@@ -1703,7 +1709,9 @@ msgid "hSD01-017_NAME"
 msgstr "Mane-chan"
 
 msgid "hSD01-017_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez au moins 1 autre carte dans votre Main\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez au moins 1 autre carte dans votre Main\n"
+"\n"
 "Mélangez votre Main dans votre Deck. Puis piochez 5 cartes de votre Deck."
 
 msgid "hSD01-018_NAME"
@@ -1716,7 +1724,9 @@ msgid "hSD01-019_NAME"
 msgstr "Incroyable PC "
 
 msgid "hSD01-019_EFFECT"
-msgstr "Pour jouer cette carte, vous devez archiver 1 Cheer de votre Scène.\n\n"
+msgstr ""
+"Pour jouer cette carte, vous devez archiver 1 Cheer de votre Scène.\n"
+"\n"
 "Révélez 1 Holomem [1st Bloom ou 2nd Bloom] (autre qu'un Holomem Buzz)  de votre Deck et ajoutez-le à votre Main. Puis mélangez votre Deck."
 
 msgid "hSD01-020_NAME"
@@ -1729,7 +1739,9 @@ msgid "hSD01-021_NAME"
 msgstr "Première gravité"
 
 msgid "hSD01-021_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les quatre premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles qui sont des holomems nommés \"Tokino Sora\" ou \"AZKi\" et mettez-les dans votre main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hY01-001_NAME"
@@ -1778,14 +1790,18 @@ msgid "hBP01-102_NAME"
 msgstr "Micro d'Idole"
 
 msgid "hBP01-102_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Chanson et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP01-105_NAME"
 msgstr "Penlight"
 
 msgid "hBP01-105_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous archivez 1 Holopower.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous archivez 1 Holopower.\n"
+"\n"
 "Révélez 1 Cheer de votre Deck de Cheers qui est de la même couleur que l'un de vos Holomems, et attachez ce Cheer à l'un de vos Holomems. Puis mélangez votre Deck."
 
 msgid "hBP01-108_NAME"
@@ -1798,14 +1814,18 @@ msgid "hBP01-109_NAME"
 msgstr "L'histoire de la lune et du lapin"
 
 msgid "hBP01-109_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles qui sont des Holomems nommés ⟨Usada Pekora⟩ ou ⟨Moona Hoshinova⟩ et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP01-110_NAME"
 msgstr "Les réduire à néant !"
 
 msgid "hBP01-110_EFFECT"
-msgstr "Lancez un dé : si le résultat est 3 ou moins, archivez 1 Cheer d'un Holomem adverse.\n\n"
+msgstr ""
+"Lancez un dé : si le résultat est 3 ou moins, archivez 1 Cheer d'un Holomem adverse.\n"
+"\n"
 "◆ Si votre Oshi est ⟨Nanashi Mumei⟩, vous pouvez remplacer l'effet par le suivant : \n"
 "[1/partie] archivez 2 Cheers de l'Holomem Central adverse."
 
@@ -1813,75 +1833,98 @@ msgid "hBP01-114_NAME"
 msgstr "Hache de pierre"
 
 msgid "hBP01-114_EFFECT"
-msgstr "■ Les Arts de l'Holomem avec cet Outil attaché gagnent +20 dégâts.\n"
-"■ Lorsque l'Holomem avec cet Outil attaché utilise un Art, cet Holomem subit 10 dégâts spéciaux.\n\n"
+msgstr ""
+"■ Les Arts de l'Holomem avec cet Outil attaché gagnent +20 dégâts.\n"
+"■ Lorsque l'Holomem avec cet Outil attaché utilise un Art, cet Holomem subit 10 dégâts spéciaux.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à ⟨Aki Rosenthal⟩ 1st Bloom ou plus : \n"
-"[1/tour] Lorsque l'Holomem auquel cet Outil est attaché restaure ses PV, piochez 1 carte de votre Deck.\n\n"
+"[1/Tour] Lorsque l'Holomem auquel cet Outil est attaché restaure ses PV, piochez 1 carte de votre Deck.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP01-115_NAME"
 msgstr "Micro de Hoshimachi Suisei"
 
 msgid "hBP01-115_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à ⟨Hoshimachi Suisei⟩ 1st Bloom ou plus : \n"
-"Lorsque l'Holomem auquel cet Outil est attaché met Inconscient l'un des Holomems adverses, attachez la première carte votre Deck de Cheers à cet Holomem.\n\n"
+"Lorsque l'Holomem auquel cet Outil est attaché met Inconscient l'un des Holomems adverses, attachez la première carte votre Deck de Cheers à cet Holomem.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP01-118_NAME"
 msgstr "Ankimo"
 
 msgid "hBP01-118_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +10 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +10 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Tokino Sora⟩ :\n"
-"Lorsque l'Holomem auquel cette Mascotte est attachée utilise un Art, cette Mascotte est traitée comme 1 Cheer Blanc.\n\n"
+"Lorsque l'Holomem auquel cette Mascotte est attachée utilise un Art, cette Mascotte est traitée comme 1 Cheer Blanc.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP01-119_NAME"
 msgstr "Jobz"
 
 msgid "hBP01-119_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +10 PV \n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +10 PV \n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Aki Rosenthal⟩ :\n"
-"Lorsque l'Holomem auquel cette Mascotte est attachée utilise un Art, restaurez 10 PV à l'un de vos Holomems.\n\n"
+"Lorsque l'Holomem auquel cette Mascotte est attachée utilise un Art, restaurez 10 PV à l'un de vos Holomems.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP01-120_NAME"
 msgstr "Ganmo"
 
 msgid "hBP01-120_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Takane Lui⟩ :\n"
-"Lorsque l'Holomem auquel cette Mascotte est attachée utilise un Art en Position Centrale, piochez 1 carte dans votre Deck.\n\n"
+"Lorsque l'Holomem auquel cette Mascotte est attachée utilise un Art en Position Centrale, piochez 1 carte dans votre Deck.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP01-122_NAME"
 msgstr "Rosetai"
 
 msgid "hBP01-122_EFFECT"
-msgstr "Pendant le tour de votre adversaire, lorsque l'Holomem auquel ce Fan est attaché est mis inconscient, attachez la première carte de votre Deck de Cheers à l'une de vos ⟨Aki Rosenthal⟩.\n\n"
+msgstr ""
+"Pendant le tour de votre adversaire, lorsque l'Holomem auquel ce Fan est attaché est mis inconscient, attachez la première carte de votre Deck de Cheers à l'une de vos ⟨Aki Rosenthal⟩.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Aki Rosenthal⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP01-123_NAME"
 msgstr "Alliance des Nousagi"
 
 msgid "hBP01-123_EFFECT"
-msgstr "Lorsque l'Holomem auquel ce Fan est attaché lance un dé pour l'une de ses Compétences, vous pouvez archiver ce Fan pour obtenir l'effet suivant : relancez le dé 1 fois.\n\n"
+msgstr ""
+"Lorsque l'Holomem auquel ce Fan est attaché lance un dé pour l'une de ses Compétences, vous pouvez archiver ce Fan pour obtenir l'effet suivant : relancez le dé 1 fois.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Usada Pekora⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP01-124_NAME"
 msgstr "Pionnier"
 
 msgid "hBP01-124_EFFECT"
-msgstr "Pendant le tour de votre adversaire, lorsque l'Holomem auquel ce Fan est attaché est mis Inconscient, attachez 1 Cheer de cet Holomem à un autre de vos Holomems. \n\n"
+msgstr ""
+"Pendant le tour de votre adversaire, lorsque l'Holomem auquel ce Fan est attaché est mis Inconscient, attachez 1 Cheer de cet Holomem à un autre de vos Holomems. \n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨AZKi⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP01-126_NAME"
 msgstr "Zain"
 
 msgid "hBP01-126_EFFECT"
-msgstr "■ Lorsque l'Holomem auquel ce Fan est attaché utilise un Art, ce Fan est traité comme 1 Cheer Rouge.\n"
-"■ L'Holomem auquel ce Fan est attaché subit +10 dégâts.\n\n"
+msgstr ""
+"■ Lorsque l'Holomem auquel ce Fan est attaché utilise un Art, ce Fan est traité comme 1 Cheer Rouge.\n"
+"■ L'Holomem auquel ce Fan est attaché subit +10 dégâts.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Omaru Polka⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP01-104_NAME"
@@ -1897,25 +1940,33 @@ msgid "hBP01-117_NAME"
 msgstr "Friend"
 
 msgid "hBP01-117_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Nanashi Mumei⟩ :\n"
-"Pendant le tour de votre adversaire, lorsque l'Holomem auquel cette Mascotte est attachée est sur le point de subir des dégâts, vous pouvez archiver cette Mascotte pour réduire ces dégâts de 30.\n\n"
+"Pendant le tour de votre adversaire, lorsque l'Holomem auquel cette Mascotte est attachée est sur le point de subir des dégâts, vous pouvez archiver cette Mascotte pour réduire ces dégâts de 30.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP01-113_NAME"
 msgstr "Promise"
 
 msgid "hBP01-113_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Promise et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP01-116_NAME"
 msgstr "Upao"
 
 msgid "hBP01-116_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Amane Kanata⟩ : \n"
-"[1/tour] Pendant le tour de votre adversaire, lorsque l'Holomem auquel cette Mascotte est attachée subit des dégâts, infligez 20 dégâts spéciaux à l'Holomem Central adverse.\n\n"
+"[1/Tour] Pendant le tour de votre adversaire, lorsque l'Holomem auquel cette Mascotte est attachée subit des dégâts, infligez 20 dégâts spéciaux à l'Holomem Central adverse.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP01-001_NAME"
@@ -1931,7 +1982,9 @@ msgid "hBP01-111_NAME"
 msgstr "Hololive ID 3ème génération"
 
 msgid "hBP01-111_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #IDGen3 et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP01-107_NAME"
@@ -1950,7 +2003,9 @@ msgid "hBP01-103_NAME"
 msgstr "PC de jeux"
 
 msgid "hBP01-103_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous archivez 1 Holopower. \n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous archivez 1 Holopower. \n"
+"\n"
 "Révélez 1 Holomem Debut ou 1st Bloom de votre Deck (autre qu'un Holomem Buzz)  qui est de la même couleur que votre Oshi, et mettez-le dans votre Main. Puis mélangez votre Deck."
 
 msgid "hBD24-001_NAME"
@@ -1960,14 +2015,18 @@ msgid "hBP01-125_NAME"
 msgstr "KFP"
 
 msgid "hBP01-125_EFFECT"
-msgstr "Lorsque vous attachez ce Fan de votre Main à un Holomem, vous pouvez archiver 1 carte de votre Main pour l'effet suivant : piochez 1 carte de votre Deck.\n\n"
+msgstr ""
+"Lorsque vous attachez ce Fan de votre Main à un Holomem, vous pouvez archiver 1 carte de votre Main pour l'effet suivant : piochez 1 carte de votre Deck.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Takanashi Kiara⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hPR-002_NAME"
 msgstr "ReGLOSS"
 
 msgid "hPR-002_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les quatre premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #ReGLOSS et mettez-les dans votre main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP01-006_NAME"
@@ -1977,9 +2036,12 @@ msgid "hBP01-121_NAME"
 msgstr "Kotori"
 
 msgid "hBP01-121_EFFECT"
-msgstr "L'Holomem auquel cette Mascotte est attachée subit -10 dégâts lorsqu'il est en Position Centrale ou Collab.\n\n"
+msgstr ""
+"L'Holomem auquel cette Mascotte est attachée subit -10 dégâts lorsqu'il est en Position Centrale ou Collab.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Takanashi Kiara⟩ :\n"
-"Lorsque le niveau de Bloom de l'Holomem avec cette Mascotte augmente, piochez 1 carte de votre Deck.\n\n"
+"Lorsque le niveau de Bloom de l'Holomem avec cette Mascotte augmente, piochez 1 carte de votre Deck.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP02-001_NAME"
@@ -2010,7 +2072,9 @@ msgid "hBP02-082_NAME"
 msgstr "hololive GAMERS"
 
 msgid "hBP02-082_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Gamers et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hY05-001_NAME"
@@ -2092,85 +2156,85 @@ msgid "hBP01-003_SKILL_NAME"
 msgstr "Pouvoir de survie"
 
 msgid "hBP01-003_SKILL_EFFECT"
-msgstr "[1/tour] Révélez 1 ⟨Hache de pierre⟩ de votre Deck et attachez-la à l'un de vos Holomems Verts. Puis mélangez votre Deck."
+msgstr "[1/Tour] Révélez 1 ⟨Hache de pierre⟩ de votre Deck et attachez-la à l'un de vos Holomems Verts. Puis mélangez votre Deck."
 
 msgid "hBP01-003_SPSKILL_NAME"
 msgstr "Chant de la Terre"
 
 msgid "hBP01-003_SPSKILL_EFFECT"
-msgstr "[1/partie] Si votre Holomem Central est Vert, restaurez tous ses PV."
+msgstr "[1/Partie] Si votre Holomem Central est Vert, restaurez tous ses PV."
 
 msgid "hBP01-004_SKILL_NAME"
 msgstr "Nousagis~"
 
 msgid "hBP01-004_SKILL_EFFECT"
-msgstr "[1/tour] Peut être utilisé pendant le tour de votre adversaire lorsque l'un de vos Holomems est mis Inconscient : Répartissez tous les Cheers Verts de cet Holomem entre vos autres Holomems comme vous le souhaitez."
+msgstr "[1/Tour] Peut être utilisé pendant le tour de votre adversaire lorsque l'un de vos Holomems est mis Inconscient : Répartissez tous les Cheers Verts de cet Holomem entre vos autres Holomems comme vous le souhaitez."
 
 msgid "hBP01-004_SPSKILL_NAME"
 msgstr "Lapin chanceux"
 
 msgid "hBP01-004_SPSKILL_EFFECT"
-msgstr "[1/partie] Pendant ce tour, traitez tous les jets de dés comme si le résultat était 6."
+msgstr "[1/Partie] Pendant ce tour, traitez tous les jets de dés comme si le résultat était 6."
 
 msgid "hBP01-005_SKILL_NAME"
 msgstr "Ordres du Cadre"
 
 msgid "hBP01-005_SKILL_EFFECT"
-msgstr "[1/tour] Peut être utilisé lorsque vous utilisez une Compétence ou un Art d'un Holomem Rouge qui archive des cartes de votre Main : Vous pouvez choisir d'archiver n'importe quel nombre de cartes de vos Holopowers au lieu de votre Main."
+msgstr "[1/Tour] Peut être utilisé lorsque vous utilisez une Compétence ou un Art d'un Holomem Rouge qui archive des cartes de votre Main : Vous pouvez choisir d'archiver n'importe quel nombre de cartes de vos Holopowers au lieu de votre Main."
 
 msgid "hBP01-005_SPSKILL_NAME"
 msgstr "Oeil de Faucon"
 
 msgid "hBP01-005_SPSKILL_EFFECT"
-msgstr "[1/partie] Pendant le prochain tour de votre adversaire, son Holomem Central et Collab ne peuvent pas être déplacés, relayés ou échangés."
+msgstr "[1/Partie] Pendant le prochain tour de votre adversaire, son Holomem Central et Collab ne peuvent pas être déplacés, relayés ou échangés."
 
 msgid "hBP01-007_SKILL_NAME"
 msgstr "Comète"
 
 msgid "hBP01-007_SKILL_EFFECT"
-msgstr "[1/tour] Peut être utilisé lorsque l'un de vos Holomems Bleus ou cet Oshi inflige des dégâts à l'un des Holomems en Arrière adverses : Infligez 50 dégâts spéciaux à ce même Holomem."
+msgstr "[1/Tour] Peut être utilisé lorsque l'un de vos Holomems Bleus ou cet Oshi inflige des dégâts à l'un des Holomems en Arrière adverses : Infligez 50 dégâts spéciaux à ce même Holomem."
 
 msgid "hBP01-007_SPSKILL_NAME"
 msgstr "Étoile filante"
 
 msgid "hBP01-007_SPSKILL_EFFECT"
-msgstr "[1/partie] Peut être utilisé lorsque l'un de vos Holomems Bleus inflige des dégâts à un Holomem Central ou Collab adverse : Infligez autant de dégâts spéciaux à l'un des Holomems en Arrière adverse."
+msgstr "[1/Partie] Peut être utilisé lorsque l'un de vos Holomems Bleus inflige des dégâts à un Holomem Central ou Collab adverse : Infligez autant de dégâts spéciaux à l'un des Holomems en Arrière adverse."
 
 msgid "hBP01-008_SKILL_NAME"
 msgstr "Shaminisme de la pluie"
 
 msgid "hBP01-008_SKILL_EFFECT"
-msgstr "[1/tour] Utilisable lorsque vous archivez un Cheer en utilisant une Compétence ou un Art de vos Holomems Bleus : Infligez 20 dégâts spéciaux à l'un des Holomems adverses."
+msgstr "[1/Tour] Utilisable lorsque vous archivez un Cheer en utilisant une Compétence ou un Art de vos Holomems Bleus : Infligez 20 dégâts spéciaux à l'un des Holomems adverses."
 
 msgid "hBP01-008_SPSKILL_NAME"
 msgstr "Prier pour la pluie"
 
 msgid "hBP01-008_SPSKILL_EFFECT"
-msgstr "[1/partie] Attachez 1~5 Cheers de votre Archive à vos Holomems avec #ID comme vous le souhaitez."
+msgstr "[1/Partie] Attachez 1~5 Cheers de votre Archive à vos Holomems avec #ID comme vous le souhaitez."
 
 msgid "hBP01-002_SKILL_NAME"
 msgstr "Gardienne de la Civilisation"
 
 msgid "hBP01-002_SKILL_EFFECT"
-msgstr "[1/tour] Peut être utilisé pendant le tour de votre adversaire lorsque l'un de vos Holomems avec #Promise est sur le point de subir des dégâts : Réduisez ces dégâts de 50."
+msgstr "[1/Tour] Peut être utilisé pendant le tour de votre adversaire lorsque l'un de vos Holomems avec #Promise est sur le point de subir des dégâts : Réduisez ces dégâts de 50."
 
 msgid "hBP01-002_SPSKILL_NAME"
 msgstr "Incroyable Dessin"
 
 msgid "hBP01-002_SPSKILL_EFFECT"
-msgstr "[1/partie] Révélez 1 carte Événement de votre Deck et mettez-la dans votre Main. Puis mélangez votre Deck."
+msgstr "[1/Partie] Révélez 1 carte Événement de votre Deck et mettez-la dans votre Main. Puis mélangez votre Deck."
 
 msgid "hBP01-001_SKILL_NAME"
 msgstr "Presse presse"
 
 msgid "hBP01-001_SKILL_EFFECT"
-msgstr "[1/tour] Changez les PV restants de l'Holomem Central adverse à 50."
+msgstr "[1/Tour] Changez les PV restants de l'Holomem Central adverse à 50."
 
 msgid "hBP01-001_SPSKILL_NAME"
 msgstr "Je vais t'écraser"
 
 msgid "hBP01-001_SPSKILL_EFFECT"
-msgstr "[1/partie] Pendant  ce tour, les Arts de l'un de vos Holomems gagnent +50 dégâts. Si c'est un Holomem Blanc, donnez à ses Arts +50 dégâts supplémentaires."
+msgstr "[1/Partie] Pendant  ce tour, les Arts de l'un de vos Holomems gagnent +50 dégâts. Si c'est un Holomem Blanc, donnez à ses Arts +50 dégâts supplémentaires."
 
 msgid "hBD24-001_SKILL_NAME"
 msgstr "Amélioration Verte"
@@ -2188,25 +2252,25 @@ msgid "hBP01-006_SKILL_NAME"
 msgstr "Queue de Phénix"
 
 msgid "hBP01-006_SKILL_EFFECT"
-msgstr "[1/tour] Mettez 1 Holomem de votre Archive dans votre Main."
+msgstr "[1/Tour] Mettez 1 Holomem de votre Archive dans votre Main."
 
 msgid "hBP01-006_SPSKILL_NAME"
 msgstr "Renaître de ses cendres"
 
 msgid "hBP01-006_SPSKILL_EFFECT"
-msgstr "[1/partie] Peut être utilisé pendant le tour de votre adversaire lorsque l'un de vos Holomems Rouges est mis Inconscient : Perdez 1 VIE de moins que vous ne perdriez normalement. Puis choisissez un Holomem qui a été rendu Inconscient et mettez cet Holomem, ainsi que tous les Holomems sous lui, dans votre Main."
+msgstr "[1/Partie] Peut être utilisé pendant le tour de votre adversaire lorsque l'un de vos Holomems Rouges est mis Inconscient : Perdez 1 VIE de moins que vous ne perdriez normalement. Puis choisissez un Holomem qui a été rendu Inconscient et mettez cet Holomem, ainsi que tous les Holomems sous lui, dans votre Main."
 
 msgid "hBP02-001_SKILL_NAME"
 msgstr "Création de mascotte"
 
 msgid "hBP02-001_SKILL_EFFECT"
-msgstr "[1/tour] Révélez 1 Mascotte de votre Deck et mettez-la dans votre Main. Puis mélangez votre Deck."
+msgstr "[1/Tour] Révélez 1 Mascotte de votre Deck et mettez-la dans votre Main. Puis mélangez votre Deck."
 
 msgid "hBP02-001_SPSKILL_NAME"
 msgstr "Fubukingdom"
 
 msgid "hBP02-001_SPSKILL_EFFECT"
-msgstr "[1/partie] Peut être utilisé lorsque l'un de vos Holomems Blancs met Inconscient un Holomem adverse : Vous pouvez lancer un dé pour chaque 2 Mascottes attachées à vos Holomems :Ssi vous obtenez un ou plusieurs nombres impairs, votre adversaire perd 1 VIE."
+msgstr "[1/Partie] Peut être utilisé lorsque l'un de vos Holomems Blancs met Inconscient un Holomem adverse : Vous pouvez lancer un dé pour chaque 2 Mascottes attachées à vos Holomems :Ssi vous obtenez un ou plusieurs nombres impairs, votre adversaire perd 1 VIE."
 
 msgid "hBD24-002_SKILL_NAME"
 msgstr "Amélioration Verte"
@@ -2284,13 +2348,13 @@ msgid "hBP02-003_SKILL_NAME"
 msgstr "Ahoy !!"
 
 msgid "hBP02-003_SKILL_EFFECT"
-msgstr "[1/tour] Un de vos Holomems avec #Gen3 qui a Bloom ce tour, peut bloom une nouvelle fois en utilisant un Holomem dans votre Main."
+msgstr "[1/Tour] L'un de vos Holomems avec #Gen3 qui a Bloom ce tour, peut bloom une nouvelle fois en utilisant un Holomem dans votre Main."
 
 msgid "hBP02-003_SPSKILL_NAME"
 msgstr "Shukkou!"
 
 msgid "hBP02-003_SPSKILL_EFFECT"
-msgstr "[1/partie] Si votre Holomem Central est ⟨Houshou Marine⟩, infligez 50 dégâts spéciaux pour chaque Holomem empilé sous cet Holomem à l'Holomem Central ou Collab adverse."
+msgstr "[1/Partie] Si votre Holomem Central est ⟨Houshou Marine⟩, infligez 50 dégâts spéciaux pour chaque Holomem empilé sous cet Holomem à l'Holomem Central ou Collab adverse."
 
 msgid "Shooter"
 msgstr "Tireur"
@@ -2344,23 +2408,31 @@ msgid "hSD02-012_NAME"
 msgstr "Irohanihohetto AyaFubuMi"
 
 msgid "hSD02-012_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les quatre premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles qui sont des holomems nommés Shirakami Fubuki, Ookami Mio, or Nakiri Ayame et mettez-les dans votre main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hSD02-013_NAME"
 msgstr "Asura & Rakshasa"
 
 msgid "hSD02-013_EFFECT"
-msgstr "Les Arts du holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
-"Si cet Outil est attaché à Nakiri Ayame 1st Bloom ou plus, il gagne l'effet suivant : les Arts de l'holomem avec cet Outil gagnent +10 dégâts supplémentaires.\n\n"
+msgstr ""
+"Les Arts du holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
+"Si cet Outil est attaché à Nakiri Ayame 1st Bloom ou plus, il gagne l'effet suivant : les Arts de l'holomem avec cet Outil gagnent +10 dégâts supplémentaires.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un holomem."
 
 msgid "hSD02-014_NAME"
 msgstr "Poyoyo"
 
 msgid "hSD02-014_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV\n\n"
-"Si cette Mascotte est attachée à Nakiri Ayame, il gagne l'effet suivant : Lorsque l'Holomem avec cette Mascotte Bloom, piochez 1 carte dans votre Deck.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV\n"
+"\n"
+"Si cette Mascotte est attachée à Nakiri Ayame, il gagne l'effet suivant : Lorsque l'Holomem avec cette Mascotte Bloom, piochez 1 carte dans votre Deck.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hSD03-001_NAME"
@@ -2400,34 +2472,45 @@ msgid "hBP02-087_NAME"
 msgstr "Le bâton magique de Murasaki Shion"
 
 msgid "hBP02-087_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à ⟨Murasaki Shion⟩ 1st Bloom ou plus : \n"
-"Si l'Holomem avec cet Outil attaché est votre Holomem Central, votre Oshi Skill « Neeeeeee » devient [2/tour] au lieu de [1/tour].\n\n"
+"Si l'Holomem avec cet Outil attaché est votre Holomem Central, votre Oshi Skill « Neeeeeee » devient [2/tour] au lieu de [1/Tour].\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP02-092_NAME"
 msgstr "Fubuzilla"
 
 msgid "hBP02-092_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Shirakami Fubuki⟩ : \n"
-"[1/tour] Lors de votre Phase Principale, vous pouvez archiver 2 Cheers de vos Holomems pour l'effet suivant : pendant ce tour, les Arts de l'Holomem auquel cette Mascotte est attachée gagnent +50 dégâts.\n\n"
+"[1/Tour] Lors de votre Phase Principale, vous pouvez archiver 2 Cheers de vos Holomems pour l'effet suivant : pendant ce tour, les Arts de l'Holomem auquel cette Mascotte est attachée gagnent +50 dégâts.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP02-093_NAME"
 msgstr "Miteiru"
 
 msgid "hBP02-093_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Shirakami Fubuki⟩ : \n"
-"[Position Arrière] L'Holomem avec cette Mascotte attachée ne subit aucun dégât.\n\n"
+"[Position Arrière] L'Holomem avec cette Mascotte attachée ne subit aucun dégât.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP02-099_NAME"
 msgstr "Sukonbu"
 
 msgid "hBP02-099_EFFECT"
-msgstr "L'Holomem avec ce Fan attaché gagne +10 PV.\n\n"
+msgstr ""
+"L'Holomem avec ce Fan attaché gagne +10 PV.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Shirakami Fubuki⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hSD02-002_ART_0_NAME"
@@ -2626,13 +2709,13 @@ msgid "hBP02-005_SKILL_NAME"
 msgstr "Neeeeeee"
 
 msgid "hBP02-005_SKILL_EFFECT"
-msgstr "[1/tour] Peut être utilisé lorsque vous lancez des dés pour une Compétence ou un Art de votre ⟨Murasaki Shion⟩ : Relancez les dés qui font partie de cette Compétence ou Art."
+msgstr "[1/Tour] Peut être utilisé lorsque vous lancez des dés pour une Compétence ou un Art de votre ⟨Murasaki Shion⟩ : Relancez les dés qui font partie de cette Compétence ou Art."
 
 msgid "hBP02-005_SPSKILL_NAME"
 msgstr "L'incroyable magie de Shion"
 
 msgid "hBP02-005_SPSKILL_EFFECT"
-msgstr "[1/partie] Peut être utilisé lorsque votre Holomem Central Violet utilise un Art : Pour chaque Cheer attaché à l'Holomem Central adverse, infligez 50 dégâts spéciaux à l'Holomem Central adverse."
+msgstr "[1/Partie] Peut être utilisé lorsque votre Holomem Central Violet utilise un Art : Pour chaque Cheer attaché à l'Holomem Central adverse, infligez 50 dégâts spéciaux à l'Holomem Central adverse."
 
 msgid "EXTRA_DUO"
 msgstr "Cet Holomem est considéré comme {firstName} et {secondName}."
@@ -2692,14 +2775,18 @@ msgid "hSD03-012_NAME"
 msgstr "Dorobo Construction"
 
 msgid "hSD03-012_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les quatre premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles qui sont des holomems nommés Nekomata Okayu, Takane Lui, Ookami Mio, Shirakami Fubuki, La+ Darknesss, or Inugami Korone et mettez-les dans votre main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hSD03-014_NAME"
 msgstr "Onigirya"
 
 msgid "hSD03-014_EFFECT"
-msgstr "L'holomem avec ce Fan attaché gagne +10 PV.\n\n"
+msgstr ""
+"L'holomem avec ce Fan attaché gagne +10 PV.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à vos Nekomata Okayu, et vous pouvez attacher n'importe quel nombre de ce Fan à un holomem."
 
 msgid "Isaki Riona"
@@ -2757,8 +2844,11 @@ msgid "hSD03-013_NAME"
 msgstr "Okanyan"
 
 msgid "hSD03-013_EFFECT"
-msgstr "Lorsque l'holomem avec cette Mascotte attachée subit des dégâts alors qu'il est en position Central ou Collab, il subit -10 points de dégâts.\n\n"
-"Si cette Mascotte est attachée à Nekomata Okayu, il gagne l'effet suivant : Lorsque l'holomem avec cette Mascotte archive un Cheer pour une Compétence ou un Art, vous pouvez archiver cette Mascotte à la place d'un Cheer.\n\n"
+msgstr ""
+"Lorsque l'holomem avec cette Mascotte attachée subit des dégâts alors qu'il est en position Central ou Collab, il subit -10 points de dégâts.\n"
+"\n"
+"Si cette Mascotte est attachée à Nekomata Okayu, il gagne l'effet suivant : Lorsque l'holomem avec cette Mascotte archive un Cheer pour une Compétence ou un Art, vous pouvez archiver cette Mascotte à la place d'un Cheer.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un holomem."
 
 msgid "hSD04-002_NAME"
@@ -2795,8 +2885,11 @@ msgid "hSD04-014_NAME"
 msgstr "Chocolat"
 
 msgid "hSD04-014_EFFECT"
-msgstr "L'holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
-"Si cette Mascotte est attachée à Yuzuki Choco, il gagne l'effet suivant : Lorsque l'holomem avec cette Mascotte Bloom, Restaurez 20 PV à ce Holomem.\n\n"
+msgstr ""
+"L'holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
+"Si cette Mascotte est attachée à Yuzuki Choco, il gagne l'effet suivant : Lorsque l'holomem avec cette Mascotte Bloom, Restaurez 20 PV à ce Holomem.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un holomem."
 
 msgid "hSD04-009_NAME"
@@ -2839,7 +2932,9 @@ msgid "hSD04-012_NAME"
 msgstr "SubaChocoLuna"
 
 msgid "hSD04-012_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les quatre premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles qui sont des holomems nommés Oozora Subaru, Yuzuki Choco, or Himemori Luna et mettez-les dans votre main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hSD04-013_NAME"
@@ -2903,13 +2998,13 @@ msgid "hBP02-007_SKILL_NAME"
 msgstr "Échantillonnage"
 
 msgid "hBP02-007_SKILL_EFFECT"
-msgstr "[1/tour] Archivez 2 cartes de votre Main et mettez 2 Holomems avec #EN de votre Archive dans votre Main."
+msgstr "[1/Tour] Archivez 2 cartes de votre Main et mettez 2 Holomems avec #EN de votre Archive dans votre Main."
 
 msgid "hBP02-007_SPSKILL_NAME"
 msgstr "Rap de Shinigami"
 
 msgid "hBP02-007_SPSKILL_EFFECT"
-msgstr "[1/partie] Utilisable si votre Holomem Central est ⟨Mori Calliope⟩ : Pendant ce tour, lorsque que l'une de vos ⟨Mori Calliope⟩ utilise un Art : utilisez le même Art une fois de plus"
+msgstr "[1/Partie] Utilisable si votre Holomem Central est ⟨Mori Calliope⟩ : Pendant ce tour, lorsque que l'une de vos ⟨Mori Calliope⟩ utilise un Art : utilisez le même Art une fois de plus"
 
 msgid "hBP02-044_NAME"
 msgstr "Murasaki Shion"
@@ -3047,21 +3142,26 @@ msgid "hBP02-075_NAME"
 msgstr "Feutre d'Idole"
 
 msgid "hBP02-075_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Art et mettez-les dans votre Main. Puis, mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP02-079_NAME"
 msgstr "Magie d'explosion"
 
 msgid "hBP02-079_EFFECT"
-msgstr "Infligez 20 dégâts spéciaux à l'Holomem Central ou Collab adverse. Les Holomems mis Inconscients avec cet effet ne font pas perdre de VIE.\n"
+msgstr ""
+"Infligez 20 dégâts spéciaux à l'Holomem Central ou Collab adverse. Les Holomems mis Inconscients avec cet effet ne font pas perdre de VIE.\n"
 "Vous ne pouvez jouer qu'un seul Événement avec #Magie par tour."
 
 msgid "hBP02-083_NAME"
 msgstr "Placard magique"
 
 msgid "hBP02-083_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous archivez 1 Holopower.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous archivez 1 Holopower.\n"
+"\n"
 "Attachez 1 Cheer Violet de votre Archive à l'un de vos Holomems nommé ⟨Murasaki Shion⟩.\n"
 "Vous ne pouvez jouer qu'un seul Événement avec #Magie par tour."
 
@@ -3069,26 +3169,34 @@ msgid "hBP02-088_NAME"
 msgstr "La faux de Mori Calliope"
 
 msgid "hBP02-088_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à une ⟨Mori Calliope⟩ 1st Bloom ou plus : \n"
-"Lorsque vous attachez cet Outil de votre Main à un Holomem, archivez la première carte de votre Deck.\n\n"
+"Lorsque vous attachez cet Outil de votre Main à un Holomem, archivez la première carte de votre Deck.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP02-098_NAME"
 msgstr "Sensei de la mort"
 
 msgid "hBP02-098_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Mori Calliope⟩ : \n"
-"Les Cheers requis pour les Arts de l'Holomem avec cette Mascotte attachée deviennent Neutres.\n\n"
+"Les Cheers requis pour les Arts de l'Holomem avec cette Mascotte attachée deviennent Neutres.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP02-102_NAME"
 msgstr "Shiokko"
 
 msgid "hBP02-102_EFFECT"
-msgstr "■ Les Arts de l'Holomem avec ce Fan attaché gagnent +10 dégâts.\n"
-"■ Lorsque l'Holomem avec ce Fan attaché subit des dégâts, archivez ce Fan.\n\n"
+msgstr ""
+"■ Les Arts de l'Holomem avec ce Fan attaché gagnent +10 dégâts.\n"
+"■ Lorsque l'Holomem avec ce Fan attaché subit des dégâts, archivez ce Fan.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Murasaki Shion⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBD24-010_NAME"
@@ -3155,7 +3263,9 @@ msgid "hBP02-077_NAME"
 msgstr "PC Retro "
 
 msgid "hBP02-077_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 3 VIES ou moins.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 3 VIES ou moins.\n"
+"\n"
 "Mettez 1 Holomem de votre Archive dans votre Main."
 
 msgid "hBD24-012_NAME"
@@ -3192,9 +3302,12 @@ msgid "hBP02-086_NAME"
 msgstr "Vin pétillant d'Holo"
 
 msgid "hBP02-086_EFFECT"
-msgstr "■ Les Arts de l'Holomem avec cet Outil attaché gagnent +20 dégâts.\n\n"
+msgstr ""
+"■ Les Arts de l'Holomem avec cet Outil attaché gagnent +20 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à un Holomem qui n'a pas #Alcool : \n"
-"L'Holomem avec cet Outil attaché subit +10 dégâts\n\n"
+"L'Holomem avec cet Outil attaché subit +10 dégâts\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP02-016_NAME"
@@ -3225,7 +3338,9 @@ msgid "hBP02-100_NAME"
 msgstr "Shirogane Dan'in"
 
 msgid "hBP02-100_EFFECT"
-msgstr "L'Holomem avec ce Fan attaché subit -10 points de dégâts.\n\n"
+msgstr ""
+"L'Holomem avec ce Fan attaché subit -10 points de dégâts.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Shirogane Noel⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP02-029_NAME"
@@ -3253,9 +3368,12 @@ msgid "hBP02-095_NAME"
 msgstr "Dokuro-kun"
 
 msgid "hBP02-095_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attaché gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attaché gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Houshou Marine⟩ :\n"
-"[Position Centrale] Lorsque l'Holomem avec cette Mascotte attachée bloom, piochez 1 carte dans votre Deck.\n\n"
+"[Position Centrale] Lorsque l'Holomem avec cette Mascotte attachée bloom, piochez 1 carte dans votre Deck.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP02-031_NAME"
@@ -3301,23 +3419,30 @@ msgid "hBP02-085_NAME"
 msgstr "HOLOLIVE FANTASY"
 
 msgid "hBP02-085_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Gen3 et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP02-080_NAME"
 msgstr "Société secrète HoloX"
 
 msgid "hBP02-080_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #holoX et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP02-096_NAME"
 msgstr "Inu"
 
 msgid "hBP02-096_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Sakamata Chloe⟩ : \n"
-"Lorsque l'Holomem avec cette mascotte attachée met Inconscient un Holomem adverse, attahez 1 Cheer de votre Archive à l'un de vos Holomems avec #holoX.\n\n"
+"Lorsque l'Holomem avec cette mascotte attachée met Inconscient un Holomem adverse, attahez 1 Cheer de votre Archive à l'un de vos Holomems avec #holoX.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBD24-016_NAME"
@@ -3417,13 +3542,13 @@ msgid "hBP02-004_SKILL_NAME"
 msgstr "poepoepoe~"
 
 msgid "hBP02-004_SKILL_EFFECT"
-msgstr "[1/tour] Utilisable si votre Holomem Central est ⟨Sakamata Chloe⟩ : regardez les 3 premières cartes de votre Deck. Vous pouvez archiver ces cartes, ou les remettre sur le dessus de votre Deck dans n'importe quel ordre."
+msgstr "[1/Tour] Utilisable si votre Holomem Central est ⟨Sakamata Chloe⟩ : regardez les 3 premières cartes de votre Deck. Vous pouvez archiver ces cartes, ou les remettre sur le dessus de votre Deck dans n'importe quel ordre."
 
 msgid "hBP02-004_SPSKILL_NAME"
 msgstr "Bouton de réinitialisation de Vie"
 
 msgid "hBP02-004_SPSKILL_EFFECT"
-msgstr "[1/partie] Comptez le nombre de cartes de votre Main, puis mélangez toutes les cartes de votre Main et tous les Holomems de votre Archive dans votre Deck. Ensuite, piochez 1 carte de votre Deck pour chaque carte retournée de votre Main à votre Deck."
+msgstr "[1/Partie] Comptez le nombre de cartes de votre Main, puis mélangez toutes les cartes de votre Main et tous les Holomems de votre Archive dans votre Deck. Ensuite, piochez 1 carte de votre Deck pour chaque carte retournée de votre Main à votre Deck."
 
 msgid "hBP02-039_NAME"
 msgstr "Sakamata Chloe"
@@ -3438,7 +3563,7 @@ msgid "hBP02-039_GIFT_NAME"
 msgstr "puipuipui~"
 
 msgid "hBP02-039_GIFT_EFFECT"
-msgstr "[1/tour] Lorsque vous révélez des cartes avec l'Art de cet Holomem « Machines à sous holoX », vous pouvez mettre 1 Soutien dans votre Main au lieu de l'archiver."
+msgstr "[1/Tour] Lorsque vous révélez des cartes avec l'Art de cet Holomem « Machines à sous holoX », vous pouvez mettre 1 Soutien dans votre Main au lieu de l'archiver."
 
 msgid "hBP02-040_NAME"
 msgstr "Sakamata Chloe"
@@ -3453,13 +3578,15 @@ msgid "hBP02-040_GIFT_NAME"
 msgstr "Hot streak~"
 
 msgid "hBP02-040_GIFT_EFFECT"
-msgstr "[1/tour] Lorsque vous révélez des cartes avec l'Art de cet Holomem « Machines à sous holoX », si les 3 cartes révélées sont toutes des Holomems de même niveau de Bloom, votre adversaire perd 1 VIE."
+msgstr "[1/Tour] Lorsque vous révélez des cartes avec l'Art de cet Holomem « Machines à sous holoX », si les 3 cartes révélées sont toutes des Holomems de même niveau de Bloom, votre adversaire perd 1 VIE."
 
 msgid "hBP02-078_NAME"
 msgstr "Kanata Construction"
 
 msgid "hBP02-078_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles qui sont des Holomems nommés ⟨Amane Kanata⟩, ⟨AZKi⟩, ou ⟨Sakamata Chloe⟩ et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP02-069_NAME"
@@ -3571,9 +3698,12 @@ msgid "hBP02-097_NAME"
 msgstr "UDIN"
 
 msgid "hBP02-097_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Kureiji Ollie⟩ : \n"
-"Lorsque l'Holomem avec cette mascotte attachée bloom, piochez 1 carte de votre Deck puis archivez 1 carte de votre Main.\n\n"
+"Lorsque l'Holomem avec cette mascotte attachée bloom, piochez 1 carte de votre Deck puis archivez 1 carte de votre Main.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP02-006_NAME"
@@ -3583,13 +3713,13 @@ msgid "hBP02-006_SKILL_NAME"
 msgstr "Tactique de zombie"
 
 msgid "hBP02-006_SKILL_EFFECT"
-msgstr "[1/tour] Faites bloom l'un de vos Holomems avec #IDGen2 en utilisant un Holomem de votre Archive."
+msgstr "[1/Tour] Faites bloom l'un de vos Holomems avec #IDGen2 en utilisant un Holomem de votre Archive."
 
 msgid "hBP02-006_SPSKILL_NAME"
 msgstr "Résurrection d'Ollie"
 
 msgid "hBP02-006_SPSKILL_EFFECT"
-msgstr "[1/partie] Piochez 4 cartes, puis archivez 2 cartes de votre Main. Puis vous pouvez bloom l'un de vos Holomems en utilisant un Holomem de votre Archive."
+msgstr "[1/Partie] Piochez 4 cartes, puis archivez 2 cartes de votre Main. Puis vous pouvez bloom l'un de vos Holomems en utilisant un Holomem de votre Archive."
 
 msgid "hBP02-051_NAME"
 msgstr "Kureiji Ollie"
@@ -3637,7 +3767,9 @@ msgid "hBP02-081_NAME"
 msgstr "hololive ID 2ème génération"
 
 msgid "hBP02-081_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #IDGen2 et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBD24-013_NAME"
@@ -3662,13 +3794,13 @@ msgid "hBP02-002_SKILL_NAME"
 msgstr "HALU"
 
 msgid "hBP02-002_SKILL_EFFECT"
-msgstr "[1/tour] Archivez 1 Cheer Vert de l'un de vos Holomems, puis révélez 1 Cheer de votre Deck de Cheers et attachez-le à l'un de vos Holomems. Puis mélangez votre Deck de Cheer."
+msgstr "[1/Tour] Archivez 1 Cheer Vert de l'un de vos Holomems, puis révélez 1 Cheer de votre Deck de Cheers et attachez-le à l'un de vos Holomems. Puis mélangez votre Deck de Cheer."
 
 msgid "hBP02-002_SPSKILL_NAME"
 msgstr "Une fête colorée"
 
 msgid "hBP02-002_SPSKILL_EFFECT"
-msgstr "[1/partie] Les Arts de tous vos Holomems avec #IDGen2 gagnent +20 dégâts pour chaque couleur de Cheer attachée à cet Holomem, jusqu'à la fin de ce tour."
+msgstr "[1/Partie] Les Arts de tous vos Holomems avec #IDGen2 gagnent +20 dégâts pour chaque couleur de Cheer attachée à cet Holomem, jusqu'à la fin de ce tour."
 
 msgid "hBP02-018_NAME"
 msgstr "Pavolia Reine"
@@ -3752,16 +3884,21 @@ msgid "hBP02-094_NAME"
 msgstr "Tatang"
 
 msgid "hBP02-094_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Pavolia Reine⟩ : \n"
-"L'Holomem avec cette Mascotte attachée gagne +30 PV.\n\n"
+"L'Holomem avec cette Mascotte attachée gagne +30 PV.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP02-101_NAME"
 msgstr "Miofa"
 
 msgid "hBP02-101_EFFECT"
-msgstr "Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est mis Inconscient, piochez 1 carte.\n\n"
+msgstr ""
+"Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est mis Inconscient, piochez 1 carte.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Ookami Mio⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP02-025_NAME"
@@ -3810,27 +3947,36 @@ msgid "hBP02-089_NAME"
 msgstr "Oruyanke"
 
 msgid "hBP02-089_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Shirakami Fubuki⟩ : \n"
-"Lorsque l'Holomem avec cette Mascotte attachée collab, piochez 1 carte de votre Deck.\n\n"
+"Lorsque l'Holomem avec cette Mascotte attachée collab, piochez 1 carte de votre Deck.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP02-090_NAME"
 msgstr "Nejimakitsune"
 
 msgid "hBP02-090_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Shirakami Fubuki⟩ : \n"
-"Lorsque l'Holomem avec cette Mascotte attachée est mis Inconscient, réattachez 1 Cheer de cet Holomem à un autre de vos Holomems.\n\n"
+"Lorsque l'Holomem avec cette Mascotte attachée est mis Inconscient, réattachez 1 Cheer de cet Holomem à un autre de vos Holomems.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP02-091_NAME"
 msgstr "Fubuchun"
 
 msgid "hBP02-091_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Shirakami Fubuki⟩ : \n"
-"Lorsque l'Holomem avec cette Mascotte attachée collab, vous pouvez mettre 1 Mascotte de votre Archive dans votre Main.\n\n"
+"Lorsque l'Holomem avec cette Mascotte attachée collab, vous pouvez mettre 1 Mascotte de votre Archive dans votre Main.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP02-012_NAME"
@@ -4059,8 +4205,11 @@ msgid "hSD05-014_NAME"
 msgstr "Banpen"
 
 msgid "hSD05-014_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attchée gagnent +10 dégâts.\n\n"
-"Si cette Mascotte est attachée à \"Todoroki Hajime\", elle gagne l'effet suivant : l'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attchée gagnent +10 dégâts.\n"
+"\n"
+"Si cette Mascotte est attachée à \"Todoroki Hajime\", elle gagne l'effet suivant : l'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hSD06-001_NAME"
@@ -4178,16 +4327,22 @@ msgid "hSD06-011_NAME"
 msgstr "Chakimaru"
 
 msgid "hSD06-011_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
-"Si cet Outil est attaché à une \"Kazama Iroha\" 1st Bloom ou au-dessus, il gagne l'effet suivant : (Une fois par tour) Durant le tour de votre adversaire, lorsque l'Holomem avec cet Outil attaché subit des dégâts, infligez 20 dégâts spéciaux à l'Holomem Central de votre adversaire. Les Holomems mis Inconscients avec cet effet ne réduisent pas la VIE.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
+"Si cet Outil est attaché à une \"Kazama Iroha\" 1st Bloom ou au-dessus, il gagne l'effet suivant : (Une fois par tour) Durant le tour de votre adversaire, lorsque l'Holomem avec cet Outil attaché subit des dégâts, infligez 20 dégâts spéciaux à l'Holomem Central de votre adversaire. Les Holomems mis Inconscients avec cet effet ne réduisent pas la VIE.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem. "
 
 msgid "hSD06-012_NAME"
 msgstr "Pokobe"
 
 msgid "hSD06-012_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +10 PV.\n\n"
-"Si cette Mascotte est attachée à une \"Kazama Iroha\", il gagne l'effet suivant : l'Holomem avec cette Mascotte attachée a +20 PV additionnels.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +10 PV.\n"
+"\n"
+"Si cette Mascotte est attachée à une \"Kazama Iroha\", il gagne l'effet suivant : l'Holomem avec cette Mascotte attachée a +20 PV additionnels.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hSD07-001_NAME"
@@ -4347,14 +4502,18 @@ msgid "hSD07-014_NAME"
 msgstr "Constructions Shiranui"
 
 msgid "hSD07-014_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les quatre premières cartes de votre Deck. Révélez n'importe nombre d'entre elles qui sont des Holomems nommés \"Shiranui Flare\", \"Omaru Polka\", \"Sakura Miko\", \"Hoshimachi Suisei\" ou \"Shirogane Noel\" et mettez-les dans votre main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hSD07-015_NAME"
 msgstr "Elfriend"
 
 msgid "hSD07-015_EFFECT"
-msgstr "L'Holomem avec ce Fan attaché gagne +10 PV.\n\n"
+msgstr ""
+"L'Holomem avec ce Fan attaché gagne +10 PV.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à vos Shiranui Flare, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hY06-001_NAME"
@@ -4367,13 +4526,13 @@ msgid "hBP03-001_SKILL_NAME"
 msgstr "Si vous aviez un PC, vous comprendriez"
 
 msgid "hBP03-001_SKILL_EFFECT"
-msgstr "[1/tour] Révélez 1 Objet avec « PC » dans son nom de votre Deck et mettez-le dans votre Main. Puis mélangez votre Deck."
+msgstr "[1/Tour] Révélez 1 Objet avec « PC » dans son nom de votre Deck et mettez-le dans votre Main. Puis mélangez votre Deck."
 
 msgid "hBP03-001_SPSKILL_NAME"
 msgstr "Rassemblement des Luknights"
 
 msgid "hBP03-001_SPSKILL_EFFECT"
-msgstr "[1/partie] Peut être utilisé si votre Holomem Central est ⟨Himemori Luna⟩ : Révélez 1~4 ⟨Luknights⟩ de votre Deck et attachez-les à vos Holomems comme vous le souhaitez. Puis mélangez votre Deck."
+msgstr "[1/Partie] Peut être utilisé si votre Holomem Central est ⟨Himemori Luna⟩ : Révélez 1~4 ⟨Luknights⟩ de votre Deck et attachez-les à vos Holomems comme vous le souhaitez. Puis mélangez votre Deck."
 
 msgid "hBP03-002_NAME"
 msgstr "Shishiro Botan"
@@ -4382,13 +4541,13 @@ msgid "hBP03-002_SKILL_NAME"
 msgstr "poi"
 
 msgid "hBP03-002_SKILL_EFFECT"
-msgstr "[1/tour] Attachez 1 Cheer de votre Archive à l'un de vos Holomems en Arrière nommé ⟨Shishiro Botan⟩."
+msgstr "[1/Tour] Attachez 1 Cheer de votre Archive à l'un de vos Holomems en Arrière nommé ⟨Shishiro Botan⟩."
 
 msgid "hBP03-002_SPSKILL_NAME"
 msgstr "Viser"
 
 msgid "hBP03-002_SPSKILL_EFFECT"
-msgstr "[1/partie] Peut être utilisé si votre Holomem Central est Vert : Infligez 100 points de dégâts spéciaux à l'Holomem Central adverse s'il ne s'agit pas d'un Holomem Début."
+msgstr "[1/Partie] Peut être utilisé si votre Holomem Central est Vert : Infligez 100 points de dégâts spéciaux à l'Holomem Central adverse s'il ne s'agit pas d'un Holomem Début."
 
 msgid "hBP03-004_NAME"
 msgstr "FUWAMOCO"
@@ -4397,13 +4556,13 @@ msgid "hBP03-004_SKILL_NAME"
 msgstr "Moco-chan!"
 
 msgid "hBP03-004_SKILL_EFFECT"
-msgstr "[1/tour] Attachez la première carte de votre Deck de Cheers à l'un de vos Holomems 1st Bloom nommé ⟨Mococo Abyssgard⟩."
+msgstr "[1/Tour] Attachez la première carte de votre Deck de Cheers à l'un de vos Holomems 1st Bloom nommé ⟨Mococo Abyssgard⟩."
 
 msgid "hBP03-004_SPSKILL_NAME"
 msgstr "BAU BAU!"
 
 msgid "hBP03-004_SPSKILL_EFFECT"
-msgstr "[1/partie] Choisissez 1 de vos Holomems avec #Advent. Les Arts de cet Holomem peuvent cibler les Holomems en Arrière adverses jusqu'à la fin de ce tour."
+msgstr "[1/Partie] Choisissez 1 de vos Holomems avec #Advent. Les Arts de cet Holomem peuvent cibler les Holomems en Arrière adverses jusqu'à la fin de ce tour."
 
 msgid "hBP03-005_NAME"
 msgstr "Tokoyami Towa"
@@ -4412,13 +4571,13 @@ msgid "hBP03-005_SKILL_NAME"
 msgstr "La voix du diable"
 
 msgid "hBP03-005_SKILL_EFFECT"
-msgstr "[1/tour] Les Arts de vos Holomems [Central et Collab] avec #Song gagnent +20 dégâts jusqu'à la fin du tour."
+msgstr "[1/Tour] Les Arts de vos Holomems [Central et Collab] avec #Song gagnent +20 dégâts jusqu'à la fin du tour."
 
 msgid "hBP03-005_SPSKILL_NAME"
 msgstr "Actes diaboliques"
 
 msgid "hBP03-005_SPSKILL_EFFECT"
-msgstr "[1/partie] Peut être utilisé pendant le tour de votre adversaire lorsque votre ⟨Tokoyami Towa⟩ est mise Inconsciente : Mettez 2 Cheers de l'Holomem Central adverse et 2 Cheers de l'Holomem Collab adverse au-dessous de son Deck de Cheers dans n'importe quel ordre."
+msgstr "[1/Partie] Peut être utilisé pendant le tour de votre adversaire lorsque votre ⟨Tokoyami Towa⟩ est mise Inconsciente : Mettez 2 Cheers de l'Holomem Central adverse et 2 Cheers de l'Holomem Collab adverse au-dessous de son Deck de Cheers dans n'importe quel ordre."
 
 msgid "hBP03-007_NAME"
 msgstr "Tsunomaki Watame"
@@ -4427,13 +4586,13 @@ msgid "hBP03-007_SKILL_NAME"
 msgstr "Bienvenue aux moutons !"
 
 msgid "hBP03-007_SKILL_EFFECT"
-msgstr "[1/tour] Révélez 1 Fan de votre Deck et mettez-le dans votre Main. Puis mélangez votre Deck."
+msgstr "[1/Tour] Révélez 1 Fan de votre Deck et mettez-le dans votre Main. Puis mélangez votre Deck."
 
 msgid "hBP03-007_SPSKILL_NAME"
 msgstr "Watame n'a rien fait de mal"
 
 msgid "hBP03-007_SPSKILL_EFFECT"
-msgstr "[1/partie] Attachez les 2 premières cartes de votre Deck de Cheers à l'une de vos ⟨Tsunomaki Watames⟩."
+msgstr "[1/Partie] Attachez les 2 premières cartes de votre Deck de Cheers à l'une de vos ⟨Tsunomaki Watames⟩."
 
 msgid "hBP03-008_NAME"
 msgstr "Ayunda Risu"
@@ -4442,13 +4601,13 @@ msgid "hBP03-008_SKILL_NAME"
 msgstr "Famille hololive ID"
 
 msgid "hBP03-008_SKILL_EFFECT"
-msgstr "[1/tour] Peut être utilisé lorsqu'un de vos Holomems avec #IDGen1 est mis Inconscient : Piochez 1 carte."
+msgstr "[1/Tour] Peut être utilisé lorsqu'un de vos Holomems avec #IDGen1 est mis Inconscient : Piochez 1 carte."
 
 msgid "hBP03-008_SPSKILL_NAME"
 msgstr "Ganbari-risu!"
 
 msgid "hBP03-008_SPSKILL_EFFECT"
-msgstr "[1/partie] Les Arts de tous vos Holomems nommés ⟨Ayunda Risu⟩ gagnent +50 dégâts jusqu'à la fin de ce tour."
+msgstr "[1/Partie] Les Arts de tous vos Holomems nommés ⟨Ayunda Risu⟩ gagnent +50 dégâts jusqu'à la fin de ce tour."
 
 msgid "hBP03-009_NAME"
 msgstr "Himemori Luna"
@@ -4886,7 +5045,8 @@ msgid "hBP03-074_ART_0_NAME"
 msgstr "Des vœux qui se rencontrent"
 
 msgid "hBP03-074_ART_0_EFFECT"
-msgstr "■ S'il y a une ⟨Airani Iofifteen⟩ sur votre Scène, cet Art gagne +10 dégâts.\n"
+msgstr ""
+"■ S'il y a une ⟨Airani Iofifteen⟩ sur votre Scène, cet Art gagne +10 dégâts.\n"
 "■ S'il y a une ⟨Moona Hoshinova⟩ sur votre Scène, cet Art gagne +10 dégâts."
 
 msgid "hBP03-075_NAME"
@@ -4929,7 +5089,8 @@ msgid "hBP03-078_ART_0_NAME"
 msgstr "Fille écureuil dans la forêt magique"
 
 msgid "hBP03-078_ART_0_EFFECT"
-msgstr "■ Si cet Holomem a des Cheers Verts attachés, cet Art gagne +50 dégâts.\n"
+msgstr ""
+"■ Si cet Holomem a des Cheers Verts attachés, cet Art gagne +50 dégâts.\n"
 "■ Si cet Holomem a des Cheers Bleus attachés, cet Art gagne +50 dégâts."
 
 msgid "hBP03-078_BLOOM_NAME"
@@ -4954,7 +5115,9 @@ msgid "hBP03-084_NAME"
 msgstr "Magnifique PC"
 
 msgid "hBP03-084_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous archivez 1 Holopower.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous archivez 1 Holopower.\n"
+"\n"
 "Révélez 1 Holomem 1st Bloom, qui est de la même couleur votre Oshi, de votre Deck et mettez-le dans votre Main. Puis mélangez votre Deck."
 
 msgid "hBP03-086_NAME"
@@ -4967,7 +5130,9 @@ msgid "hBP03-088_NAME"
 msgstr "Appel"
 
 msgid "hBP03-088_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez moins de VIE que votre adversaire.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez moins de VIE que votre adversaire.\n"
+"\n"
 "Si votre adversaire n'a pas d'Holomem Collab, il choisit un de ses Holomems en Arrière et le déplace en Position Collab (ceci n'est pas considéré comme une Collab)"
 
 msgid "hBP03-090_NAME"
@@ -4980,99 +5145,129 @@ msgid "hBP03-091_NAME"
 msgstr "hololive ID 1ère Génération"
 
 msgid "hBP03-091_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #IDGen1 et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP03-093_NAME"
 msgstr "hololive 4ème Génération"
 
 msgid "hBP03-093_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Gen4 et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP03-094_NAME"
 msgstr "Live FPS"
 
 msgid "hBP03-094_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Tireur et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP03-096_NAME"
 msgstr "Fusil"
 
 msgid "hBP03-096_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à un Holomem 1st Bloom ou plus avec #Tireur :\n"
-"Les dégâts spéciaux infligés par cet Holomem à une cible unique sont augmentés de +10 dégâts.\n\n"
+"Les dégâts spéciaux infligés par cet Holomem à une cible unique sont augmentés de +10 dégâts.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP03-100_NAME"
 msgstr "Pero"
 
 msgid "hBP03-100_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Fuwawa Abyssgard⟩ ou ⟨Mococo Abyssgard⟩ :\n"
-"Les Cheers requis pour les Arts de l'Holomem avec cette Mascotte attachée deviennent Neutres.\n\n"
+"Les Cheers requis pour les Arts de l'Holomem avec cette Mascotte attachée deviennent Neutres.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP03-101_NAME"
 msgstr "Bibi"
 
 msgid "hBP03-101_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attaché à ⟨Tokoyami Towa⟩ :\n"
-"Les dégâts spéciaux infligés par cet Holomem à une cible unique sont augmentés de +10 dégâts.\n\n"
+"Les dégâts spéciaux infligés par cet Holomem à une cible unique sont augmentés de +10 dégâts.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP03-104_NAME"
 msgstr "Riscot"
 
 msgid "hBP03-104_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Ayunda Risu⟩ :\n"
-"Lorsque l'Holomem avec cette Mascotte attachée collab, vous pouvez réattacher 1 Cheer de l'un de vos Holomems à celui-ci.\n\n"
+"Lorsque l'Holomem avec cette Mascotte attachée collab, vous pouvez réattacher 1 Cheer de l'un de vos Holomems à celui-ci.\n"
+"\n"
 "Vous ne pouvez attacher qu'une Mascotte à un Holomem."
 
 msgid "hBP03-105_NAME"
 msgstr "Luknight"
 
 msgid "hBP03-105_EFFECT"
-msgstr "Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est sur le point de subir des dégâts, vous pouvez archiver ce Fan pour subir -30 dégâts.\n\n"
+msgstr ""
+"Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est sur le point de subir des dégâts, vous pouvez archiver ce Fan pour subir -30 dégâts.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Himemori Luna⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-106_NAME"
 msgstr "SSRB"
 
 msgid "hBP03-106_EFFECT"
-msgstr "Lorsque l'Holomem avec ce Fan attaché archive des Cheers pour une Compétence ou Art, vous pouvez archiver ce Fan à la place d'un Cheer.\n\n"
+msgstr ""
+"Lorsque l'Holomem avec ce Fan attaché archive des Cheers pour une Compétence ou Art, vous pouvez archiver ce Fan à la place d'un Cheer.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Shishiro Botan⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-108_NAME"
 msgstr "Haaton"
 
 msgid "hBP03-108_EFFECT"
-msgstr "Lorsque l'Holomem auquel ce Fan est attaché lance un dé pour l'une de ses Compétences, vous pouvez archiver ce Fan pour obtenir l'effet suivant : relancez tous les dés lancés pour la Compétence.\n\n"
+msgstr ""
+"Lorsque l'Holomem auquel ce Fan est attaché lance un dé pour l'une de ses Compétences, vous pouvez archiver ce Fan pour obtenir l'effet suivant : relancez tous les dés lancés pour la Compétence.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Akai Haato⟩, et vous pouvez attacher n'importe que nombre de ce Fan à un Holomem."
 
 msgid "hBP03-109_NAME"
 msgstr "Ruffians"
 
 msgid "hBP03-109_EFFECT"
-msgstr "Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est mis Inconscient, vous pouvez attacher 1 Cheer Bleu de votre Archive à l'un de vos Holomems nommé ⟨Fuwawa Abyssgard⟩.\n\n"
+msgstr ""
+"Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est mis Inconscient, vous pouvez attacher 1 Cheer Bleu de votre Archive à l'un de vos Holomems nommé ⟨Fuwawa Abyssgard⟩.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Fuwawa Abyssgard⟩ ou ⟨Mococo Abyssgard⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-112_NAME"
 msgstr "Watamate"
 
 msgid "hBP03-112_EFFECT"
-msgstr "Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est mis Inconscient, vous pouvez réattacher 1~2 Cheers Jaunes de cet Holomem à un autre de vos Holomems nommé ⟨Tsunomaki Watame⟩.\n\n"
+msgstr ""
+"Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est mis Inconscient, vous pouvez réattacher 1~2 Cheers Jaunes de cet Holomem à un autre de vos Holomems nommé ⟨Tsunomaki Watame⟩.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Tsunomaki Watame⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-113_NAME"
 msgstr "Risuners"
 
 msgid "hBP03-113_EFFECT"
-msgstr "[1/tour] Lorsque l'Holomem avec ce Fan attaché reçoit un Cheer, ses Arts gagnent +10 dégâts jusqu'à la fin du tour.\n\n"
+msgstr ""
+"[1/Tour] Lorsque l'Holomem avec ce Fan attaché reçoit un Cheer, ses Arts gagnent +10 dégâts jusqu'à la fin du tour.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Ayunda Risu⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-015_NAME"
@@ -5154,13 +5349,13 @@ msgid "hBP03-003_SKILL_NAME"
 msgstr "C'est le retour des 35P ?!"
 
 msgid "hBP03-003_SKILL_EFFECT"
-msgstr "[1/tour] Vous pouvez lancer un dé : Si le résultat est 1, 2, 4 ou 6, mettez 1 ⟨35P⟩ de votre Archive dans votre Main. Si le résultat est 3 ou 5, mettez 2 ⟨35P⟩ de votre Archive dans votre Main."
+msgstr "[1/Tour] Vous pouvez lancer un dé : Si le résultat est 1, 2, 4 ou 6, mettez 1 ⟨35P⟩ de votre Archive dans votre Main. Si le résultat est 3 ou 5, mettez 2 ⟨35P⟩ de votre Archive dans votre Main."
 
 msgid "hBP03-003_SPSKILL_NAME"
 msgstr "Un cœur qui n'abandonne pas"
 
 msgid "hBP03-003_SPSKILL_EFFECT"
-msgstr "[1/partie] Peut être utilisé si votre Holomem Central est Rouge : Choisissez n'importe quel nombre de cartes de votre Main et placez-les au-dessous de votre Deck dans n'importe quel ordre. Puis piochez dans votre Deck jusqu'à ce que vous ayez 5 cartes en Main."
+msgstr "[1/Partie] Peut être utilisé si votre Holomem Central est Rouge : Choisissez n'importe quel nombre de cartes de votre Main et placez-les au-dessous de votre Deck dans n'importe quel ordre. Puis piochez dans votre Deck jusqu'à ce que vous ayez 5 cartes en Main."
 
 msgid "hBP03-006_NAME"
 msgstr "Inugami Korone"
@@ -5169,13 +5364,13 @@ msgid "hBP03-006_SKILL_NAME"
 msgstr "Force infinie"
 
 msgid "hBP03-006_SKILL_EFFECT"
-msgstr "[1/tour] Redressez l'un de vos Holomems au Repos nommé ⟨Inugami Korone⟩."
+msgstr "[1/Tour] Redressez l'un de vos Holomems au Repos nommé ⟨Inugami Korone⟩."
 
 msgid "hBP03-006_SPSKILL_NAME"
 msgstr "Wowowowow"
 
 msgid "hBP03-006_SPSKILL_EFFECT"
-msgstr "[1/partie] Peut être utilisé lorsque l'un de vos Holomems Jaunes est mis Inconscient : Attachez 1 Cheer de cet Holomem à l'un de vos autres Holomems, puis retournez l'un des Holomems empilés sous cet Holomem (y compris l'Holomem du dessus) dans votre Main."
+msgstr "[1/Partie] Peut être utilisé lorsque l'un de vos Holomems Jaunes est mis Inconscient : Attachez 1 Cheer de cet Holomem à l'un de vos autres Holomems, puis retournez l'un des Holomems empilés sous cet Holomem (y compris l'Holomem du dessus) dans votre Main."
 
 msgid "hBP03-022_NAME"
 msgstr "Aki Rosenthal"
@@ -5274,7 +5469,7 @@ msgid "hBP03-030_GIFT_NAME"
 msgstr "Jeu de hasard d'élite"
 
 msgid "hBP03-030_GIFT_EFFECT"
-msgstr "[Position Centrale] [1/tour] Pendant votre Phase Principale, si cet Holomem a un ⟨35P⟩ attaché, vous pouvez lancer un dé : Si le résultat est 3 ou 5, l'Art de cet Holomem gagne +50 dégâts jusqu'à la fin du tour."
+msgstr "[Position Centrale] [1/Tour] Pendant votre Phase Principale, si cet Holomem a un ⟨35P⟩ attaché, vous pouvez lancer un dé : Si le résultat est 3 ou 5, l'Art de cet Holomem gagne +50 dégâts jusqu'à la fin du tour."
 
 msgid "hBP03-035_NAME"
 msgstr "Takane Lui"
@@ -5481,84 +5676,109 @@ msgid "hBP03-092_NAME"
 msgstr "hololive Génération 0"
 
 msgid "hBP03-092_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Gen0 et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP03-095_NAME"
 msgstr "Casquette Holo"
 
 msgid "hBP03-095_EFFECT"
-msgstr "◆ Gagne l'effet suivant s'il est attaché à un Holomem Debut ou Spot : \n"
+msgstr ""
+"◆ Gagne l'effet suivant s'il est attaché à un Holomem Debut ou Spot : \n"
 "■ L'Holomem avec cet Outil attaché gagne +30 PV.\n"
-"■ L'Holomem avec cet Outil attaché ne subit pas les dégâts spéciaux de votre adversaire.\n\n"
+"■ L'Holomem avec cet Outil attaché ne subit pas les dégâts spéciaux de votre adversaire.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP03-097_NAME"
 msgstr "Flûte à bec"
 
 msgid "hBP03-097_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à ⟨Otonose Kanade⟩ 1st Bloom ou plus :\n"
-"Lorsque l'Holomem avec cet Outil attaché met Inconscient l'un des Holomems adverses, piochez 1 carte de votre Deck.\n\n"
+"Lorsque l'Holomem avec cet Outil attaché met Inconscient l'un des Holomems adverses, piochez 1 carte de votre Deck.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP03-098_NAME"
 msgstr "Kintoki"
 
 msgid "hBP03-098_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Sakura Miko⟩ :\n"
-"Lorsque l'Holomem avec cette Mascotte attachée collab, piochez 1 carte de votre Deck.\n\n"
+"Lorsque l'Holomem avec cette Mascotte attachée collab, piochez 1 carte de votre Deck.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP03-099_NAME"
 msgstr "Maguchi"
 
 msgid "hBP03-099_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Sakura Miko⟩ :\n"
-"Lorsque l'Holomem avec cette Mascotte attachée collab, si votre Holomem Central est ⟨Sakura Miko⟩, les Arts de cet Holomem gagnent +10 dégâts jusqu'à la fin de ce tour.\n\n"
+"Lorsque l'Holomem avec cette Mascotte attachée collab, si votre Holomem Central est ⟨Sakura Miko⟩, les Arts de cet Holomem gagnent +10 dégâts jusqu'à la fin de ce tour.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP03-102_NAME"
 msgstr "Futoinu"
 
 msgid "hBP03-102_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Inugami Korone⟩ :\n"
-"Lorsque l'Holomem avec cette Mascotte attachée collab, vous pouvez attacher 1 Cheer Jaune de votre Archive à cet Holomem.\n\n"
+"Lorsque l'Holomem avec cette Mascotte attachée collab, vous pouvez attacher 1 Cheer Jaune de votre Archive à cet Holomem.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP03-103_NAME"
 msgstr "Hosoinu"
 
 msgid "hBP03-103_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Inugami Korone⟩ :\n"
-"Lorsque l'Holomem avec cette Mascotte attachée est mis Inconscient, vous pouvez archiver 1 Holopower pour récupérer cette Mascotte dans votre Main.\n\n"
+"Lorsque l'Holomem avec cette Mascotte attachée est mis Inconscient, vous pouvez archiver 1 Holopower pour récupérer cette Mascotte dans votre Main.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP03-107_NAME"
 msgstr "35P"
 
 msgid "hBP03-107_EFFECT"
-msgstr "■ Lorsque l'Holomem avec ce Fan attaché utilise un Art, ce Fan est traîté comme 1 Cheer Rouge.\n"
-"■ Lorsque l'Holomem avec ce Fan attaché est mis Inconscient, votre adversaire peut piocher 1 carte de son Deck.\n\n"
+msgstr ""
+"■ Lorsque l'Holomem avec ce Fan attaché utilise un Art, ce Fan est traîté comme 1 Cheer Rouge.\n"
+"■ Lorsque l'Holomem avec ce Fan attaché est mis Inconscient, votre adversaire peut piocher 1 carte de son Deck.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Sakura Miko⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-110_NAME"
 msgstr "Roboser"
 
 msgid "hBP03-110_EFFECT"
-msgstr "■ Lorsque l'Holomem avec ce Fan attaché utilise un Art, ce Fan est traîté comme 1 Cheer Violet.\n"
-"■ L'Art de l'Holomem avec ce Fan attaché gagne -10 dégâts.\n\n"
+msgstr ""
+"■ Lorsque l'Holomem avec ce Fan attaché utilise un Art, ce Fan est traîté comme 1 Cheer Violet.\n"
+"■ L'Art de l'Holomem avec ce Fan attaché gagne -10 dégâts.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Robocosan⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP03-111_NAME"
 msgstr "Koronesuki"
 
 msgid "hBP03-111_EFFECT"
-msgstr "Le coût de Relais de l'Holomem avec ce Fan attaché est réduit de 1.\n\n"
+msgstr ""
+"Le coût de Relais de l'Holomem avec ce Fan attaché est réduit de 1.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Inugami Korone⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hY01-004_NAME"
@@ -6000,13 +6220,13 @@ msgid "hBP04-006_SKILL_NAME"
 msgstr "Mental ! Physique ! Passion !"
 
 msgid "hBP04-006_SKILL_EFFECT"
-msgstr "[1/tour] Peut être utilisé lorsque l'un de vos Holomems nommé ⟨Oozora Subaru⟩ est sur le point de subir des dégâts : Tous vos Holomems nommés ⟨Oozora Subaru⟩ subissent -30 dégâts. "
+msgstr "[1/Tour] Peut être utilisé lorsque l'un de vos Holomems nommé ⟨Oozora Subaru⟩ est sur le point de subir des dégâts : Tous vos Holomems nommés ⟨Oozora Subaru⟩ subissent -30 dégâts. "
 
 msgid "hBP04-006_SPSKILL_NAME"
 msgstr "Arts de la réaction"
 
 msgid "hBP04-006_SPSKILL_EFFECT"
-msgstr "[1/partie] Peut être utilisé lorsque vous avez 3 VIES ou moins: Si votre Holomem Central est ⟨Oozora Subaru⟩, les Arts de cet Holomem gagnent +100 dégâts, jusqu'à la fin de ce tour."
+msgstr "[1/Partie] Peut être utilisé lorsque vous avez 3 VIES ou moins : Si votre Holomem Central est ⟨Oozora Subaru⟩, les Arts de cet Holomem gagnent +100 dégâts, jusqu'à la fin de ce tour."
 
 msgid "hBP04-050_NAME"
 msgstr "Shiori Novella"
@@ -6084,16 +6304,21 @@ msgid "hBP04-096_NAME"
 msgstr "Advent"
 
 msgid "hBP04-096_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Advent et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP04-104_NAME"
 msgstr "Canard Subarudo"
 
 msgid "hBP04-104_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Ooozora Subaru⟩ :\n"
-"Si le total des Cheers en jeu chez les deux joueurs est de 10 ou plus, les Arts de l'Holomem avec cette Mascotte attachée gagnent +20 dégâts.\n\n"
+"Si le total des Cheers en jeu chez les deux joueurs est de 10 ou plus, les Arts de l'Holomem avec cette Mascotte attachée gagnent +20 dégâts.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP04-070_NAME"
@@ -6139,7 +6364,9 @@ msgid "hBP04-093_NAME"
 msgstr "Hololive 2ème Génération"
 
 msgid "hBP04-093_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Gen2 et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "Justice"
@@ -6161,13 +6388,13 @@ msgid "hBP04-003_SKILL_NAME"
 msgstr "Atteindre le sommet !"
 
 msgid "hBP04-003_SKILL_EFFECT"
-msgstr "[1/tour] Si votre Holomem Central a #ReGLOSS, infligez 50 dégâts spéciaux à l'Holomem Collab adverse."
+msgstr "[1/Tour] Si votre Holomem Central a #ReGLOSS, infligez 50 dégâts spéciaux à l'Holomem Collab adverse."
 
 msgid "hBP04-003_SPSKILL_NAME"
 msgstr "Kawaii ! Positive ! Géniale !"
 
 msgid "hBP04-003_SPSKILL_EFFECT"
-msgstr "[1/partie] Utilisable pendant le tour de votre adversaire lorsque votre ⟨Ichijou Ririka⟩ est mise Inconsciente : Révélez 1 ⟨Ichijou Ririka⟩ et 1 ⟨Repas de fortune⟩ de votre Deck et mettez-les dans votre Main. Puis mélangez votre Deck."
+msgstr "[1/Partie] Utilisable pendant le tour de votre adversaire lorsque votre ⟨Ichijou Ririka⟩ est mise Inconsciente : Révélez 1 ⟨Ichijou Ririka⟩ et 1 ⟨Repas de fortune⟩ de votre Deck et mettez-les dans votre Main. Puis mélangez votre Deck."
 
 msgid "hBP04-014_NAME"
 msgstr "Shirakami Fubuki"
@@ -6545,7 +6772,9 @@ msgid "hBP04-089_NAME"
 msgstr "PC Bicolore"
 
 msgid "hBP04-089_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 2 Holomems unicolores de couleurs différentes sur votre Scène.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 2 Holomems unicolores de couleurs différentes sur votre Scène.\n"
+"\n"
 "Choisisez 2 de vos Holomems unicolores de couleurs différentes. Révélez 1 Holomem 1st Bloom de votre Deck (autre qu'un Holomem Buzz)  pour chacune de ces couleurs, et mettez-les dans votre Main. Puis mélangez votre Deck."
 
 msgid "hBP04-091_NAME"
@@ -6558,16 +6787,21 @@ msgid "hBP04-092_NAME"
 msgstr "NePoLaBo"
 
 msgid "hBP04-092_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Gen5 et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP04-098_NAME"
 msgstr "Marteau du forgeron"
 
 msgid "hBP04-098_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts. \n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts. \n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à un Holomem avec #IDGen3 1st Bloom ou plus : \n"
-"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts supplémentaires. \n\n"
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts supplémentaires. \n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP04-004_NAME"
@@ -6577,13 +6811,13 @@ msgid "hBP04-004_SKILL_NAME"
 msgstr "Je t'aime"
 
 msgid "hBP04-004_SKILL_EFFECT"
-msgstr "[1/tour] Peut être utilisé pendant le tour de votre adversaire lorsque l'un de vos Holomems est mis Inconscient : Mettez 1 Fan attaché à cet Holomem dans votre Main."
+msgstr "[1/Tour] Peut être utilisé pendant le tour de votre adversaire lorsque l'un de vos Holomems est mis Inconscient : Mettez 1 Fan attaché à cet Holomem dans votre Main."
 
 msgid "hBP04-004_SPSKILL_NAME"
 msgstr "Vrooooom! Baribaribaribari"
 
 msgid "hBP04-004_SPSKILL_EFFECT"
-msgstr "[1/partie] Choisissez l'un de vos Holomems nommé ⟨Yukihana Lamy⟩. Les dégâts spéciaux infligés par cet Holomem à une cible unique sont augmentés de +100 dégâts jusqu'à la fin du tour. Lorsque l'Holomem choisi met Inconscient l'un des Holomems adverses, piochez 2 cartes."
+msgstr "[1/Partie] Choisissez l'un de vos Holomems nommé ⟨Yukihana Lamy⟩. Les dégâts spéciaux infligés par cet Holomem à une cible unique sont augmentés de +100 dégâts jusqu'à la fin du tour. Lorsque l'Holomem choisi met Inconscient l'un des Holomems adverses, piochez 2 cartes."
 
 msgid "hBP04-007_NAME"
 msgstr "Anya Melfissa"
@@ -6592,13 +6826,13 @@ msgid "hBP04-007_SKILL_NAME"
 msgstr "Rituel Mystique"
 
 msgid "hBP04-007_SKILL_EFFECT"
-msgstr "[1/tour] Révélez 1 ⟨Arme antique⟩ de votre Deck et attachez-la à l'un de vos Holomems. Puis mélangez votre Deck."
+msgstr "[1/Tour] Révélez 1 ⟨Arme antique⟩ de votre Deck et attachez-la à l'un de vos Holomems. Puis mélangez votre Deck."
 
 msgid "hBP04-007_SPSKILL_NAME"
 msgstr "Ceux qui réfléchissent à la vie l'emporteront"
 
 msgid "hBP04-007_SPSKILL_EFFECT"
-msgstr "[1/partie]  Attachez 1 Cheer de votre Archive à chaque Holomem avec une ⟨Arme antique⟩ attachée."
+msgstr "[1/Partie]  Attachez 1 Cheer de votre Archive à chaque Holomem avec une ⟨Arme antique⟩ attachée."
 
 msgid "hBP04-073_NAME"
 msgstr "Anya Melfissa"
@@ -6667,9 +6901,12 @@ msgid "hBP04-099_NAME"
 msgstr "Arme antique"
 
 msgid "hBP04-099_EFFECT"
-msgstr "Si l'Holomem avec cet Outil attaché est mis Inconscient pendant le tour de votre adversaire, vous pouvez archiver 1 carte de votre Main pour l'effet suivant : mettez cette carte dans votre Main.\n\n"
+msgstr ""
+"Si l'Holomem avec cet Outil attaché est mis Inconscient pendant le tour de votre adversaire, vous pouvez archiver 1 carte de votre Main pour l'effet suivant : mettez cette carte dans votre Main.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à  ⟨Anya Melfissa⟩ 1st Bloom ou plus :\n"
-"Pour chaque ⟨Arme antique⟩ attachée à vos Holomems sur votre Scène, les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
+"Pour chaque ⟨Arme antique⟩ attachée à vos Holomems sur votre Scène, les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP04-002_NAME"
@@ -6679,13 +6916,13 @@ msgid "hBP04-002_SKILL_NAME"
 msgstr "L'élégance de ReGLOSS"
 
 msgid "hBP04-002_SKILL_EFFECT"
-msgstr "[1/tour] Attachez 1 Cheer de votre Archive à l'un de vos Holomems avec #ReGLOSS."
+msgstr "[1/Tour] Attachez 1 Cheer de votre Archive à l'un de vos Holomems avec #ReGLOSS."
 
 msgid "hBP04-002_SPSKILL_NAME"
 msgstr "Je papillonne pendant mon temps libre"
 
 msgid "hBP04-002_SPSKILL_EFFECT"
-msgstr "[1/partie] Mettez 1~4 Événements avec #Champignon de votre Archive dans votre Main. Puis pour chaque 2 cartes mises dans votre Main, piochez 1 carte."
+msgstr "[1/Partie] Mettez 1~4 Événements avec #Champignon de votre Archive dans votre Main. Puis pour chaque 2 cartes mises dans votre Main, piochez 1 carte."
 
 msgid "hBP04-020_NAME"
 msgstr "Juufuutei Raden"
@@ -6859,14 +7096,15 @@ msgid "hBP04-005_SKILL_NAME"
 msgstr "Tâche du chef"
 
 msgid "hBP04-005_SKILL_EFFECT"
-msgstr "[1/tour] Pendant ce tour, à chaque fois que vous lancez un dé 3 fois pour une Compétence ou un Art,\n"
+msgstr ""
+"[1/Tour] Pendant ce tour, à chaque fois que vous lancez un dé 3 fois pour une Compétence ou un Art,\n"
 "traitez tous les jets de dés comme si le résultat était 5."
 
 msgid "hBP04-005_SPSKILL_NAME"
 msgstr "Nous sommes la société secrète HoloX !"
 
 msgid "hBP04-005_SPSKILL_EFFECT"
-msgstr "[1/partie] Les Arts de l'un de vos Holomem avec #holoX peut être utilisé sans avoir le nombre requis de Cheers jusqu'a la fin de ce tour."
+msgstr "[1/Partie] Les Arts de l'un de vos Holomem avec #holoX peut être utilisé sans avoir le nombre requis de Cheers jusqu'a la fin de ce tour."
 
 msgid "hBP04-055_NAME"
 msgstr "La+ Darknesss"
@@ -6935,9 +7173,12 @@ msgid "hBP04-103_NAME"
 msgstr "Corbeau"
 
 msgid "hBP04-103_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts. \n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts. \n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨La+ Darknesss⟩ :\n"
-"[Position Collab] [1/tour] Pendant la Phase Principale, vous pouvez lancer un dé: Si le résultat est impair, déplacez l'Holomem avec cette Mascotte attachée en Arrière.\n\n"
+"[Position Collab] [1/Tour] Pendant la Phase Principale, vous pouvez lancer un dé: Si le résultat est impair, déplacez l'Holomem avec cette Mascotte attachée en Arrière.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP04-043_NAME"
@@ -7010,32 +7251,42 @@ msgid "hBP04-090_NAME"
 msgstr "PC de travail"
 
 msgid "hBP04-090_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez 1 Holomem et 1 [Outil, Mascotte ou Fan] parmi elles et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP04-101_NAME"
 msgstr "Daifuku"
 
 msgid "hBP04-101_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts. \n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts. \n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Yukihana Lamy⟩ :\n"
-"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP04-102_NAME"
 msgstr "Yamena"
 
 msgid "hBP04-102_EFFECT"
-msgstr "Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cette Mascotte attachée gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à un Holomem avec #Gen5 :\n"
-"[Position Arrière] L'Holomem avec cette Mascotte attachée ne subit aucun dégât de votre adversaire.\n\n"
+"[Position Arrière] L'Holomem avec cette Mascotte attachée ne subit aucun dégât de votre adversaire.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP04-106_NAME"
 msgstr "Yukimin"
 
 msgid "hBP04-106_EFFECT"
-msgstr "L'Holomem avec ce Fan attaché inflige +10 dégâts lorsqu'il inflige des dégâts spéciaux à l'Holomem Central adverse.\n\n"
+msgstr ""
+"L'Holomem avec ce Fan attaché inflige +10 dégâts lorsqu'il inflige des dégâts spéciaux à l'Holomem Central adverse.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Yukihana Lamy⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP04-027_NAME"
@@ -7063,7 +7314,7 @@ msgid "hBP04-038_BLOOM_NAME"
 msgstr "Je me demande s'ils ont vu ça !! ❤️❤️"
 
 msgid "hBP04-038_BLOOM_EFFECT"
-msgstr "Infligez 10 dégâts spéciaux à un Holomem Central et Collab adverse."
+msgstr "Infligez 10 dégâts spéciaux à un Holomem Central et Collab adverses."
 
 msgid "hBP04-095_NAME"
 msgstr "Attrape-Mascotte"
@@ -7078,13 +7329,13 @@ msgid "hBP04-001_SKILL_NAME"
 msgstr "Experience de Koyori"
 
 msgid "hBP04-001_SKILL_EFFECT"
-msgstr "[1/tour] Les Arts de l'un de vos Holomems nommé ⟨Hakui Koyori⟩ avec une carte avec #KoyoLabo attachée gagne +30 dégâts jusqu'à la fin du tour."
+msgstr "[1/Tour] Les Arts de l'un de vos Holomems nommé ⟨Hakui Koyori⟩ avec une carte avec #KoyoLabo attachée gagne +30 dégâts jusqu'à la fin du tour."
 
 msgid "hBP04-001_SPSKILL_NAME"
 msgstr "Assistant-Kun, Mwah !"
 
 msgid "hBP04-001_SPSKILL_EFFECT"
-msgstr "[1/partie] Utilisable si l'un de vos Holomems nommé ⟨Hakui Koyori⟩ avec un ⟨Assistant-Kun de Koyori⟩ attaché est sur le point de subir des dégâts pendant le tour de votre adversaire : Cet Holomem subit -100 dégâts."
+msgstr "[1/Partie] Utilisable si l'un de vos Holomems nommé ⟨Hakui Koyori⟩ avec un ⟨Assistant-Kun de Koyori⟩ attaché est sur le point de subir des dégâts pendant le tour de votre adversaire : Cet Holomem subit -100 dégâts."
 
 msgid "hBP04-008_NAME"
 msgstr "Hakui Koyori"
@@ -7153,25 +7404,33 @@ msgid "hBP04-097_NAME"
 msgstr "Tube à essai vert"
 
 msgid "hBP04-097_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à ⟨Hakui Koyori⟩ 1st Bloom ou plus :\n"
-"Pendant votre Phase Principale, vous pouvez archiver 1 Cheer de l'Holomem avec cet Outil attaché pour redresser 1 Holomem avec #holoX au Repos.\n\n"
+"Pendant votre Phase Principale, vous pouvez archiver 1 Cheer de l'Holomem avec cet Outil attaché pour redresser 1 Holomem avec #holoX au Repos.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP04-100_NAME"
 msgstr "Kokoro"
 
 msgid "hBP04-100_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attaché à ⟨Hakui Koyori⟩ 1st Bloom ou plus :\n"
-"Lorsque l'Holomem avec cette Mascotte attachée collab, ses Arts gagnent +10 dégâts jusqu'à la fin du tour.\n\n"
+"Lorsque l'Holomem avec cette Mascotte attachée collab, ses Arts gagnent +10 dégâts jusqu'à la fin du tour.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP04-105_NAME"
 msgstr "Assistant-kun de Koyori"
 
 msgid "hBP04-105_EFFECT"
-msgstr "Lorsque vous attachez ce Fan à l'un de vos Holomems de votre Main ou Archive, vous pouvez réattacher 1 Cheer de votre Scène à l'Holomem avec ce Fan attaché.\n\n"
+msgstr ""
+"Lorsque vous attachez ce Fan à l'un de vos Holomems de votre Main ou Archive, vous pouvez réattacher 1 Cheer de votre Scène à l'Holomem avec ce Fan attaché.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Hakui Koyori⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hY01-006_NAME"
@@ -7484,13 +7743,13 @@ msgid "hBP05-006_SKILL_NAME"
 msgstr "Liebesträume"
 
 msgid "hBP05-006_SKILL_EFFECT"
-msgstr "[1/tour] Jusqu'à la fin du tour, les Arts de vos Holomems [Central et Collab] avec #Chanson gagnent +10 dégâts."
+msgstr "[1/Tour] Jusqu'à la fin du tour, les Arts de vos Holomems [Central et Collab] avec #Chanson gagnent +10 dégâts."
 
 msgid "hBP05-006_SPSKILL_NAME"
 msgstr "Viser la lune"
 
 msgid "hBP05-006_SPSKILL_EFFECT"
-msgstr "[1/partie] Jusqu'à la fin de la partie, le coût en Cheers des Arts de vos ⟨Nerissa Ravencroft⟩ est réduit de 1 Neutre."
+msgstr "[1/Partie] Jusqu'à la fin de la partie, le coût en Cheers des Arts de vos ⟨Nerissa Ravencroft⟩ est réduit de 1 Neutre."
 
 msgid "hBP05-009_NAME"
 msgstr "Shirogane Noel"
@@ -7832,13 +8091,13 @@ msgid "hBP05-002_SKILL_NAME"
 msgstr "IOFORIA~!"
 
 msgid "hBP05-002_SKILL_EFFECT"
-msgstr "[1/tour] Utilisable pendant le tour de votre adversaire si l'un de vos Holomems avec #IDGen1 subit des dégâts d'un Holomem adverse : Vous pouvez réattacher 1 Cheer de cet Holomem à un autre Holomem avec #IDGen1."
+msgstr "[1/Tour] Utilisable pendant le tour de votre adversaire si l'un de vos Holomems avec #IDGen1 subit des dégâts d'un Holomem adverse : Vous pouvez réattacher 1 Cheer de cet Holomem à un autre Holomem avec #IDGen1."
 
 msgid "hBP05-002_SPSKILL_NAME"
 msgstr "Kekuatan Iofi"
 
 msgid "hBP05-002_SPSKILL_EFFECT"
-msgstr "[1/partie] Archivez 2 Cheers de votre Scène et révelez 2 Holomems avec #IDGen1 de votre Deck, ajoutez-les à votre Main. Puis mélangez votre Deck."
+msgstr "[1/Partie] Archivez 2 Cheers de votre Scène et révelez 2 Holomems avec #IDGen1 de votre Deck, ajoutez-les à votre Main. Puis mélangez votre Deck."
 
 msgid "hBP05-003_NAME"
 msgstr "Omaru Polka"
@@ -7847,13 +8106,13 @@ msgid "hBP05-003_SKILL_NAME"
 msgstr "La légende de Polka"
 
 msgid "hBP05-003_SKILL_EFFECT"
-msgstr "[1/tour] Piochez dans votre Deck jusqu'à ce que vous ayez dans votre Main autant de cartes que de ⟨Zain⟩ sur votre Scène. Vous ne pouvez pas piochez plus de 4 cartes."
+msgstr "[1/Tour] Piochez dans votre Deck jusqu'à ce que vous ayez dans votre Main autant de cartes que de ⟨Zain⟩ sur votre Scène. Vous ne pouvez pas piochez plus de 4 cartes."
 
 msgid "hBP05-003_SPSKILL_NAME"
 msgstr "Experience Réussi~ !!!"
 
 msgid "hBP05-003_SPSKILL_EFFECT"
-msgstr "[1/partie] Regardez les 7 premières cartes de votre Deck. Revelez 1 [⟨Omaru Poluka⟩ et Staff] parmi elles et ajoutez-la à votre Main. Archivez les cartes restantes."
+msgstr "[1/Partie] Regardez les 7 premières cartes de votre Deck. Revelez 1 [⟨Omaru Poluka⟩ et Staff] parmi elles et ajoutez-la à votre Main. Archivez les cartes restantes."
 
 msgid "hBP05-019_NAME"
 msgstr "Airani Iofifteen"
@@ -8066,20 +8325,28 @@ msgid "hBP05-086_NAME"
 msgstr "Cilus"
 
 msgid "hBP05-086_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Kobo Kanaeru⟩ :\n"
-"[Position Centrale][1/tour] Si un Holomem en Arrière adverse est mis Inconscient, piochez 1 carte de votre Deck.\n\n"
+"[Position Centrale][1/Tour] Si un Holomem en Arrière adverse est mis Inconscient, piochez 1 carte de votre Deck.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP05-082_NAME"
 msgstr "Hache d'Aki Rosenthal"
 
 msgid "hBP05-082_EFFECT"
-msgstr "Cette carte ne peut etre utilisée que si vous archivez 1 carte de votre Main, ou 1 ⟨Stone Axe⟩ de votre Scène.\n\n"
-"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
+msgstr ""
+"Cette carte ne peut etre utilisée que si vous archivez 1 carte de votre Main, ou 1 ⟨Stone Axe⟩ de votre Scène.\n"
+"\n"
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attachée à ⟨Aki Rosenthal⟩ 2nd Bloom ou plus :\n"
-"Les Arts de l'Holomem avec cet Outil attaché gagnent +40 dégâts.\n\n"
-"Vous ne pouvez attacher qu'un seul Outil à un Holomem.\n\n"
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +40 dégâts.\n"
+"\n"
+"Vous ne pouvez attacher qu'un seul Outil à un Holomem.\n"
+"\n"
 "Extra: Cet outil est considéré comme ⟨Stone Axe⟩"
 
 msgid "hBP05-001_NAME"
@@ -8089,13 +8356,13 @@ msgid "hBP05-001_SKILL_NAME"
 msgstr "Chevaliers Shirogane"
 
 msgid "hBP05-001_SKILL_EFFECT"
-msgstr "[1/tour] Utilisable lorsque l'un de vos Holomems met Inconscient un Holomem adverse : Révélez 1 Holomem avec #Gen3, et ajoutez-le à votre Main. Puis mélangez votre Deck."
+msgstr "[1/Tour] Utilisable lorsque l'un de vos Holomems met Inconscient un Holomem adverse : Révélez 1 Holomem avec #Gen3, et ajoutez-le à votre Main. Puis mélangez votre Deck."
 
 msgid "hBP05-001_SPSKILL_NAME"
 msgstr "Très mauvais Taro"
 
 msgid "hBP05-001_SPSKILL_EFFECT"
-msgstr "[1/partie] Utilisable lorsque votre Holomem avec #Gen3 est mis Inconscient par un Holomem adverse : Perdez 1 VIE de moins que vous ne le feriez normalement. Puis, si cet Holomem est un Holomem 2nd Bloom ou 1st Bloom Buzz, piochez 2 cartes de votre Deck."
+msgstr "[1/Partie] Utilisable lorsque votre Holomem avec #Gen3 est mis Inconscient par un Holomem adverse : Perdez 1 VIE de moins que vous ne le feriez normalement. Puis, si cet Holomem est un Holomem 2nd Bloom ou 1st Bloom Buzz, piochez 2 cartes de votre Deck."
 
 msgid "hBP05-008_NAME"
 msgstr "Shirogane Noel"
@@ -8233,35 +8500,46 @@ msgid "hBP05-081_NAME"
 msgstr "Mace de Shirogane Noel"
 
 msgid "hBP05-081_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attachée à ⟨Shirogane Noel⟩ 1st Bloom ou plus :\n"
-"Si l'Holomem avec cet Outil attaché a 3 Cheers ou plus attachés, les Arts de cet Holomem gagnent +20 dégâts.\n\n"
+"Si l'Holomem avec cet Outil attaché a 3 Cheers ou plus attachés, les Arts de cet Holomem gagnent +20 dégâts.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP05-083_NAME"
 msgstr "Baton de Nerissa Ravencroft"
 
 msgid "hBP05-083_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à ⟨Nerissa Ravencroft⟩ 2nd Bloom ou plus :\n"
-"[Position Centrale ou Collab][1/tour] Lorsque l'Holomem avec cet Outil attaché archive des cartes de votre Main par l'une de ses capacités, infligez 20 dégâts speciaux à l'Holomem Central ou Collab adverse.\n\n"
+"[Position Centrale ou Collab][1/Tour] Lorsque l'Holomem avec cet Outil attaché archive des cartes de votre Main par l'une de ses capacités, infligez 20 dégâts speciaux à l'Holomem Central ou Collab adverse.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP05-084_NAME"
 msgstr "Harp de Tsunomaki Watame"
 
 msgid "hBP05-084_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à ⟨Tsunomaki Watame⟩ 2nd Bloom ou plus : \n"
 "■ S'il y a un ⟨Watamate⟩ sur votre Scène, les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
-"■ Lorsque l'Holomem avec cet Outil attaché utilise un Art, vous pouvez attacher 1 Cheer de votre Archive à l'une de vos ⟨Tsunomaki Watame⟩.\n\n"
+"■ Lorsque l'Holomem avec cet Outil attaché utilise un Art, vous pouvez attacher 1 Cheer de votre Archive à l'une de vos ⟨Tsunomaki Watame⟩.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP05-087_NAME"
 msgstr "Jailbird"
 
 msgid "hBP05-087_EFFECT"
-msgstr "Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est mis Inconscient, réattachez 1 Cheer de cet Holomem à un autre Holomem avec #Chanson.\n\n"
+msgstr ""
+"Pendant le tour de votre adversaire, lorsque l'Holomem avec ce Fan attaché est mis Inconscient, réattachez 1 Cheer de cet Holomem à un autre Holomem avec #Chanson.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Nerissa Ravencroft⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBD24-065_NAME"
@@ -8301,13 +8579,13 @@ msgid "hBP05-007_SKILL_NAME"
 msgstr "Je veux être ta force"
 
 msgid "hBP05-007_SKILL_EFFECT"
-msgstr "[1/tour] Échangez votre Holomem Collab [Debut, 1st Bloom, ou Spot] avec l'une de vos ⟨Shiranui Flare⟩ en Arrière."
+msgstr "[1/Tour] Échangez votre Holomem Collab [Debut, 1st Bloom, ou Spot] avec l'une de vos ⟨Shiranui Flare⟩ en Arrière."
 
 msgid "hBP05-007_SPSKILL_NAME"
 msgstr "Amusons-nous tous ensemble !"
 
 msgid "hBP05-007_SPSKILL_EFFECT"
-msgstr "[1/partie] Vous pouvez réattacher 1~5 Cheers sur votre Scène à l'une de vos ⟨Shiranui Flare⟩. Puis pendant ce tour, les Arts de tous vos Holomems gagnent +10 dégats pour chaque Cheer attaché à votre Holomem Central."
+msgstr "[1/Partie] Vous pouvez réattacher 1~5 Cheers sur votre Scène à l'une de vos ⟨Shiranui Flare⟩. Puis pendant ce tour, les Arts de tous vos Holomems gagnent +10 dégats pour chaque Cheer attaché à votre Holomem Central."
 
 msgid "hBP05-016_NAME"
 msgstr "Usada Pekora"
@@ -8352,7 +8630,7 @@ msgid "hBP05-028_GIFT_NAME"
 msgstr "J'ai fait de mon mieux"
 
 msgid "hBP05-028_GIFT_EFFECT"
-msgstr "[Position Centrale][1/tour] Lorsque votre Oshi ⟨Shishiro Botan⟩ ou une ⟨Shishiro Botan⟩ sur votre Scène inflige 30 dégâts spéciaux ou plus à un Holomem adverse, piochez 1 carte de votre Deck."
+msgstr "[Position Centrale][1/Tour] Lorsque votre Oshi ⟨Shishiro Botan⟩ ou une ⟨Shishiro Botan⟩ sur votre Scène inflige 30 dégâts spéciaux ou plus à un Holomem adverse, piochez 1 carte de votre Deck."
 
 msgid "hBP05-038_NAME"
 msgstr "Mococo Abyssgard"
@@ -8433,7 +8711,7 @@ msgid "hBP05-065_GIFT_NAME"
 msgstr "Pierre porte-bonheur"
 
 msgid "hBP05-065_GIFT_EFFECT"
-msgstr "[Position Collab][1/tour] Si un autre Holomem est sur le point de subir des dégâts adverses, vous pouvez lancer un dé : Si le résultat est impair, il subit -40 dégâts. Si le résultat est pair, il subit -20 dégâts."
+msgstr "[Position Collab][1/Tour] Si un autre Holomem est sur le point de subir des dégâts adverses, vous pouvez lancer un dé : Si le résultat est impair, il subit -40 dégâts. Si le résultat est pair, il subit -20 dégâts."
 
 msgid "hBP05-066_NAME"
 msgstr "Shiranui Flare"
@@ -8490,7 +8768,9 @@ msgid "hBP05-078_NAME"
 msgstr "Stream consommation d'alcool"
 
 msgid "hBP05-078_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Alcool et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hY01-007_NAME"
@@ -8518,13 +8798,13 @@ msgid "hBP05-004_SKILL_NAME"
 msgstr "C'est partiii"
 
 msgid "hBP05-004_SKILL_EFFECT"
-msgstr "[1/tour] Utilisable si votre Holomem Central est ⟨Nekomata Okayu⟩ : Infligez 10 dégâts spéciaux à 1 Holomem adverse."
+msgstr "[1/Tour] Utilisable si votre Holomem Central est ⟨Nekomata Okayu⟩ : Infligez 10 dégâts spéciaux à 1 Holomem adverse."
 
 msgid "hBP05-004_SPSKILL_NAME"
 msgstr "Yum yum !"
 
 msgid "hBP05-004_SPSKILL_EFFECT"
-msgstr "[1/partie] Vous pouvez échanger l'Holomem Central adverse avec un Holomem en Arrière adverse qui a subi des dégâts. Puis si votre Holomem Central est ⟨Nekomata Okayu⟩, piochez 3 cartes de votre Deck."
+msgstr "[1/Partie] Vous pouvez échanger l'Holomem Central adverse avec un Holomem en Arrière adverse qui a subi des dégâts. Puis si votre Holomem Central est ⟨Nekomata Okayu⟩, piochez 3 cartes de votre Deck."
 
 msgid "hBP05-005_NAME"
 msgstr "Yuzuki Choco"
@@ -8533,13 +8813,13 @@ msgid "hBP05-005_SKILL_NAME"
 msgstr "Recouvert de chocolat !"
 
 msgid "hBP05-005_SKILL_EFFECT"
-msgstr "[1/tour] Révélez 1 Événement avec #Nourriture de votre Deck, et ajoutez-le à votre Main. Puis mélangez votre Deck. "
+msgstr "[1/Tour] Révélez 1 Événement avec #Nourriture de votre Deck, et ajoutez-le à votre Main. Puis mélangez votre Deck. "
 
 msgid "hBP05-005_SPSKILL_NAME"
 msgstr "Cuisiner avec Choco"
 
 msgid "hBP05-005_SPSKILL_EFFECT"
-msgstr "[1/partie] Mettez 1~4 Événements avec #Nourriture de votre Archive dans votre Main. Puis pendant ce tour, les Arts de l'un de vos Holomems avec #Cuisine gagnent +40 de dégâts."
+msgstr "[1/Partie] Mettez 1~4 Événements avec #Nourriture de votre Archive dans votre Main. Puis pendant ce tour, les Arts de l'un de vos Holomems avec #Cuisine gagnent +40 de dégâts."
 
 msgid "hBP05-013_NAME"
 msgstr "Tokino Sora"
@@ -8860,22 +9140,27 @@ msgid "hBP05-079_NAME"
 msgstr "Miko, j'ai honte"
 
 msgid "hBP05-079_EFFECT"
-msgstr "Piochez 2 cartes. Si un Holomem a été mis Inconscient pendant le tour précédent de votre adversaire, et que vous avez moins de VIE que votre adversaire, attachez 1 Cheer de votre Archive à un Holomem."
+msgstr "Piochez 2 cartes. Si l'un de vos Holomems a été mis Inconscient pendant le tour précédent de votre adversaire, et que vous avez moins de VIE que votre adversaire, attachez 1 Cheer de votre Archive à un Holomem."
 
 msgid "hBP05-085_NAME"
 msgstr "Mikodanye"
 
 msgid "hBP05-085_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +10 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +10 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Sakura Miko⟩ :\n"
-"Pendant le tour de votre adversaire, si l'Holomem avec cette Mascotte attachée est mis Inconscient, votre adversaire archive 1 carte de sa Main.\n\n"
+"Pendant le tour de votre adversaire, si l'Holomem avec cette Mascotte attachée est mis Inconscient, votre adversaire archive 1 carte de sa Main.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP05-077_NAME"
 msgstr "Cirque Bakatare"
 
 msgid "hBP05-077_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles qui sont des Holomems nommés ⟨Omaru Polka⟩, ⟨Tsunomaki Watame⟩, ⟨Shirakami Fubuki⟩ ou ⟨Shiranui Flare⟩ et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hY01-008_NAME"
@@ -9008,23 +9293,30 @@ msgid "hSD10-011_NAME"
 msgstr "WHAT'S UP!!!!! KEEEEEP GROWING!!!!!"
 
 msgid "hSD10-011_EFFECT"
-msgstr "Cette carte ne peut être jouée que si tous les Holomems sur votre Scène ont #FLOW GLOW.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si tous les Holomems sur votre Scène ont #FLOW GLOW.\n"
+"\n"
 "Choisissez 3 Cheers de votre Archive, et attachez-les à votre Holomem Central et Holomem Collab répartis comme vous le souhaitez. Cependant, vous ne pouvez attacher que 2 Cheers maximum à chaque Holomem."
 
 msgid "hSD10-012_NAME"
 msgstr "FLOW GLOW"
 
 msgid "hSD10-012_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #FLOW GLOW et mettez-les dans votre Main. Ensuite, mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hSD10-013_NAME"
 msgstr "Fugutaro"
 
 msgid "hSD10-013_EFFECT"
-msgstr "Les Arts de l'Holomem avec #FLOW GLOW avec cet Outil attaché gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec #FLOW GLOW avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à un Holomem avec #FLOW GLOW :\n"
-"Utilisable à la fin de votre Phase de Fin, si l'Holomem avec cet Outil attaché a utilisé un Art durant ce tour : Révélez 1 Holomem [Debut ou Spot] avec #FLOW GLOW de votre Deck et mettez-le sur votre Scène, puis mélangez votre Deck. Puis mettez cet outil au-dessous de votre Deck.\n\n"
+"Utilisable à la fin de votre Phase de Fin, si l'Holomem avec cet Outil attaché a utilisé un Art durant ce tour : Révélez 1 Holomem [Debut ou Spot] avec #FLOW GLOW de votre Deck et mettez-le sur votre Scène, puis mélangez votre Deck. Puis mettez cet outil au-dessous de votre Deck.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hSD11-001_NAME"
@@ -9040,7 +9332,8 @@ msgid "hSD11-001_SPSKILL_NAME"
 msgstr "Prononcez juste mon nom !"
 
 msgid "hSD11-001_SPSKILL_EFFECT"
-msgstr "SP Oshi Skill holo Power -2: Prononcez juste mon nom !\n"
+msgstr ""
+"SP Oshi Skill holo Power -2: Prononcez juste mon nom !\n"
 "[1/Partie] Utilisable lorsque la capacité d'un Holomem avec #FLOW GLOW archive un Cheer : Infligez 30 dégâts spéciaux pour chaque Cheer archivé avec cette capacité à l'Holomem Central ou Collab adverse."
 
 msgid "hSD11-002_NAME"
@@ -9299,7 +9592,9 @@ msgid "hBP06-088_NAME"
 msgstr "Lapine farceuse"
 
 msgid "hBP06-088_EFFECT"
-msgstr "Cette carte ne peut être jouée que si votre Holomem a été mis Inconscient pendant le tour précédent de votre adversaire, et que vous avez moins de VIE que votre adversaire.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que Si l'un de vos Holomems a été mis Inconscient pendant le tour précédent de votre adversaire, et que vous avez moins de VIE que votre adversaire.\n"
+"\n"
 "Choisissez l'Holomem Central ou Collab adverse. Épuisez-le et déplacez-le en Position Arrière. L'Holomem choisi ne pourra pas être redressé pendant la prochaine Phase de Réinitialisation de l'adversaire."
 
 msgid "hBP06-059_NAME"
@@ -9327,7 +9622,9 @@ msgid "hBP06-104_NAME"
 msgstr "Subatomo"
 
 msgid "hBP06-104_EFFECT"
-msgstr "Pendant le Tour adverse, si l'Holomem avec ce Fan attaché est mis Inconscient, attachez la première carte de votre Deck de Cheers à l'une de vos ⟨Oozora Subaru⟩.\n\n"
+msgstr ""
+"Pendant le Tour adverse, si l'Holomem avec ce Fan attaché est mis Inconscient, attachez la première carte de votre Deck de Cheers à l'une de vos ⟨Oozora Subaru⟩.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Oozora Subaru⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP06-041_NAME"
@@ -9355,7 +9652,7 @@ msgid "hBP06-065_ART_0_NAME"
 msgstr "Jours irremplaçables"
 
 msgid "hBP06-065_ART_0_EFFECT"
-msgstr "Si l'un de vos Holomems a été mis Inconscient lors du dernier tour de votre adversaire, le coût en Cheer de cet Art nécessite 1 Cheer Neutre de moins."
+msgstr "Si l'un de vos Holomems a été mis Inconscient pendant le tour précédent de votre adversaire, le coût en Cheer de cet Art nécessite 1 Cheer Neutre de moins."
 
 msgid "hBP06-065_GIFT_NAME"
 msgstr "Un mot de gratitude"
@@ -9481,9 +9778,12 @@ msgid "hBP06-098_NAME"
 msgstr "Épée démoniaque \"Asura\""
 
 msgid "hBP06-098_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
 "◆ Gagne l'effet suivant s'il est attaché à ⟨Nakiri Ayame⟩ :\n"
-"Lorsque l'Holomem avec cet Outil attaché collab, si vos VIES sont égales à 1 et que votre adversaire n'a pas d'Holomem en Collab, il choisit un de ses Holomems en Arrière et le déplace en Position Collab (ceci n'est pas considéré comme une Collab)\n\n"
+"Lorsque l'Holomem avec cet Outil attaché collab, si vos VIES sont égales à 1 et que votre adversaire n'a pas d'Holomem en Collab, il choisit un de ses Holomems en Arrière et le déplace en Position Collab (ceci n'est pas considéré comme une Collab)\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP06-023_NAME"
@@ -9547,9 +9847,12 @@ msgid "hBP06-101_NAME"
 msgstr "Moonabito"
 
 msgid "hBP06-101_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Moona Hoshinova⟩ :\n"
-"[1/tour]Lorsque l'Holomem avec cette Mascotte attachée inflige des dégâts spéciaux à un Holomem adverse, vous pouvez attacher 1 Cheer Bleu de votre Archive à l'un de vos Holomems en Arrière.\n\n"
+"[1/Tour]Lorsque l'Holomem avec cette Mascotte attachée inflige des dégâts spéciaux à un Holomem adverse, vous pouvez attacher 1 Cheer Bleu de votre Archive à l'un de vos Holomems en Arrière.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP06-032_NAME"
@@ -9580,9 +9883,11 @@ msgid "hBP06-097_NAME"
 msgstr "Jolie veste universitaire"
 
 msgid "hBP06-097_EFFECT"
-msgstr "◆ Gagne l'effet suivant s'il est attaché à un Holomem Buzz :\n"
+msgstr ""
+"◆ Gagne l'effet suivant s'il est attaché à un Holomem Buzz :\n"
 "■ L'Holomem avec cet Outil attaché gagne +30 PV.\n"
-"■ Pendant la Phase Principale de votre adversaire, les PV de cet Holomem ne peuvent pas être modifiés ou réduits par les Compétences adverses.\n\n"
+"■ Pendant la Phase Principale de votre adversaire, les PV de cet Holomem ne peuvent pas être modifiés ou réduits par les Compétences adverses.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP06-072_NAME"
@@ -9601,8 +9906,11 @@ msgid "hBP06-099_NAME"
 msgstr "Yubi"
 
 msgid "hBP06-099_EFFECT"
-msgstr "Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n\n"
-"Lorsque cet Outil est attaché à l'une de vos ⟨Inugami Korone⟩ de votre Main , vous pouvez mettre 1 ⟨Inugami Korone⟩ de votre Archive dans votre Main.\n\n"
+msgstr ""
+"Les Arts de l'Holomem avec cet Outil attaché gagnent +10 dégâts.\n"
+"\n"
+"Lorsque cet Outil est attaché à l'une de vos ⟨Inugami Korone⟩ de votre Main , vous pouvez mettre 1 ⟨Inugami Korone⟩ de votre Archive dans votre Main.\n"
+"\n"
 "Vous ne pouvez attacher qu'un seul Outil à un Holomem."
 
 msgid "hBP06-009_NAME"
@@ -9645,7 +9953,9 @@ msgid "hBP06-103_NAME"
 msgstr "Matsurisu"
 
 msgid "hBP06-103_EFFECT"
-msgstr "Si votre [Oshi ou Holomem avec #Gen1] lance un dé pour l'une de ses Compétences, vous pouvez archiver ce Fan : Traitez le prochain jet de dé comme si le résultat était 4.\n\n"
+msgstr ""
+"Si votre [Oshi ou Holomem avec #Gen1] lance un dé pour l'une de ses Compétences, vous pouvez archiver ce Fan : Traitez le prochain jet de dé comme si le résultat était 4.\n"
+"\n"
 "Ce Fan ne peut être attaché qu'à ⟨Natsuiro Matsuri⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP06-005_NAME"
@@ -9892,7 +10202,9 @@ msgid "hBP06-091_NAME"
 msgstr "hololive Generation 1"
 
 msgid "hBP06-091_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
 "Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Gen1 et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP06-012_NAME"
@@ -9989,17 +10301,20 @@ msgid "hBP06-087_NAME"
 msgstr "Shimeji Dance"
 
 msgid "hBP06-087_EFFECT"
-msgstr "Cette carte ne peut être jouée que si votre Oshi est ⟨Juufuutei Raden⟩.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si votre Oshi est ⟨Juufuutei Raden⟩.\n"
+"\n"
 "Archivez la première carte de votre Deck de Cheers. Puis mettez 1 ⟨Juufuutei Raden⟩ de votre Archive dans votre Main."
 
 msgid "hBP06-039_NAME"
 msgstr "Nakiri Ayame"
 
 msgid "hBP06-039_ART_0_NAME"
-msgstr "Danse des cent oni - Lune brumeuse -"
+msgstr "Art : Danse des cents oni - Lune brumeuse -"
 
 msgid "hBP06-039_ART_0_EFFECT"
-msgstr "Si votre Oshi est ⟨Nakiri Ayame⟩, vous pouvez archiver les 1~3 premières cartes de votre Deck de Cheers : Cet Art gagne +40 dégâts pour chaque carte archivée.\n"
+msgstr ""
+"Si votre Oshi est ⟨Nakiri Ayame⟩, vous pouvez archiver les 1~3 premières cartes de votre Deck de Cheers : Cet Art gagne +40 dégâts pour chaque carte archivée.\n"
 "Cet Art ne peut pas être utilisé en Position Collab à moins que votre VIE ne soit inférieure ou égale à 2."
 
 msgid "hBP06-039_GIFT_NAME"
@@ -10087,7 +10402,9 @@ msgid "hBP06-094_NAME"
 msgstr "Entraînement Sportif"
 
 msgid "hBP06-094_EFFECT"
-msgstr "Cette carte ne peut être jouée que si vous avez un Holomem Collab, ou que votre Adversaire n'a pas d'Holomem Collab.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez un Holomem Collab, ou que votre Adversaire n'a pas d'Holomem Collab.\n"
+"\n"
 "Pendant ce tour, les Arts de l'un de vos Holomems gagnent +20 dégâts. Si l'Holomem choisi est un Holomem Buzz ou un Holomem 2nd Bloom, l'Holomem choisi gagne +50 dégâts à la place."
 
 msgid "hBP06-068_NAME"
@@ -10112,7 +10429,7 @@ msgid "hBP06-077_ART_0_NAME"
 msgstr "Never give up!! Âme de Natsuiro"
 
 msgid "hBP06-077_ART_0_EFFECT"
-msgstr "Pour chaque Soutien Limité joué durant ce tour, cet Art gagne +30 dégâts."
+msgstr "Pour chaque Soutien Limité joué durant que vous avez ce tour, cet Art gagne +30 dégâts."
 
 msgid "hBP06-077_BLOOM_NAME"
 msgstr "Re:START"
@@ -10181,16 +10498,21 @@ msgid "hBP06-093_NAME"
 msgstr "YamadaLui54Sen"
 
 msgid "hBP06-093_EFFECT"
-msgstr "Cette carte ne peut être jouée que si tous les Holomems sur votre Scène ont #holoX.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si tous les Holomems sur votre Scène ont #holoX.\n"
+"\n"
 "Révélez 2 Holomems avec #holoX de votre Deck, et mettez-les dans votre Main. Puis mélangez votre Deck. Puis si vous avez moins de Cheers sur votre Scène que votre adversaire, vous pouvez attacher la première carte de votre Deck de Cheers à l'un de vos Holomems. "
 
 msgid "hBP06-102_NAME"
 msgstr "Ebifrion"
 
 msgid "hBP06-102_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Natsuiro Matsuri⟩ :\n"
-"Pendant le tour de votre adversaire, si l'Holomem avec cette Mascotte attachée est mis Inconscient, vous pouvez réattacher 1 Cheer Jaune de cet Holomem à une autre de vos ⟨Natsuiro Matsuri⟩.\n\n"
+"Pendant le tour de votre adversaire, si l'Holomem avec cette Mascotte attachée est mis Inconscient, vous pouvez réattacher 1 Cheer Jaune de cet Holomem à une autre de vos ⟨Natsuiro Matsuri⟩.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP06-051_NAME"
@@ -10248,9 +10570,12 @@ msgid "hBP06-100_NAME"
 msgstr "Chattino"
 
 msgid "hBP06-100_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +10 PV.\n\n"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +10 PV.\n"
+"\n"
 "◆ Gagne l'effet suivant si elle est attachée à ⟨Raora Panthera⟩ :\n"
-"Si votre Oshi est ⟨Raora Panthera⟩, l'Holomem avec cette Mascotte attachée gagne +20 PV.\n\n"
+"Si votre Oshi est ⟨Raora Panthera⟩, l'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
 "Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
 
 msgid "hBP06-029_NAME"
@@ -10311,7 +10636,9 @@ msgid "hBP06-095_NAME"
 msgstr "IDENTIFY -AREA 15-"
 
 msgid "hBP06-095_EFFECT"
-msgstr "Cette carte ne peut être jouée que si tous les Holomems sur votre Scène ont #ID Gen 1.\n\n"
+msgstr ""
+"Cette carte ne peut être jouée que si tous les Holomems sur votre Scène ont #ID Gen 1.\n"
+"\n"
 "Révélez 2 Holomems avec #ID Gen 1 de votre Deck, et mettez-les dans votre Main. Puis mélangez votre Deck. Puis, s'il y a 0 carte dans votre Deck de Cheers, pendant ce tour, lorsque l'un de vos Holomems avec #ID Gen 1 met Inconscient le Holomem Centrale adverse, votre adversaire perd 1 VIE."
 
 msgid "hBP06-013_NAME"
@@ -10411,20 +10738,428 @@ msgid "hY06-008_NAME"
 msgstr "Cheer Jaune"
 
 msgid "hY01-010_NAME"
-msgstr ""
+msgstr "Cheer Blanc"
 
 msgid "hY02-008_NAME"
-msgstr ""
+msgstr "Cheer Verte"
 
 msgid "hY03-013_NAME"
-msgstr ""
+msgstr "Cheer Rouge"
 
 msgid "hY04-010_NAME"
-msgstr ""
+msgstr "Cheer Bleue"
 
 msgid "hY05-008_NAME"
-msgstr ""
+msgstr "Cheer Violet"
 
 msgid "hY06-007_NAME"
-msgstr ""
+msgstr "Cheer Jaune"
 
+msgid "hSD13-001_NAME"
+msgstr "Elizabeth Rose Bloodflame"
+
+msgid "hSD13-001_SKILL_NAME"
+msgstr "Héraut de l'ordre"
+
+msgid "hSD13-001_SKILL_EFFECT"
+msgstr "[1/Tour] Lorsqu'un de vos Holomems est sur le point de subir des dégâts d'Arts adverse, vous pouvez choisir 1 Holomem [Buzz ou 2nd] de votre Scène : l'Holomem choisi reçoit les dégâts."
+
+msgid "hSD13-001_SPSKILL_NAME"
+msgstr "JUST LIKE THAT"
+
+msgid "hSD13-001_SPSKILL_EFFECT"
+msgstr "[1/Partie] Placez 1 Holomem avec #Justice depuis votre Archive sur votre Scène. Puis attachez 1~5 Cheers de votre Archive à cet Holomem."
+
+msgid "hSD13-002_NAME"
+msgstr "Gigi Murin"
+
+msgid "hSD13-002_SKILL_NAME"
+msgstr "Boat Goes Binted"
+
+msgid "hSD13-002_SKILL_EFFECT"
+msgstr "[1/Tour] Échangez l'Holomem Central adverse avec l'Holomem Collab adverse."
+
+msgid "hSD13-002_SPSKILL_NAME"
+msgstr "Chasseuse libre comme l'air"
+
+msgid "hSD13-002_SPSKILL_EFFECT"
+msgstr "[1/Partie] Révélez 2 ⟨Gigi Murin⟩ 2nd de votre Deck et placez-les sur votre Scène. Puis mélangez votre Deck. Attachez 1 Cheer de votre Archive a chacun de vos Holomems."
+
+msgid "hSD13-003_NAME"
+msgstr "Elizabeth Rose Bloodflame"
+
+msgid "hSD13-003_ART_0_NAME"
+msgstr "O~hohoho!"
+
+msgid "hSD13-004_NAME"
+msgstr "Elizabeth Rose Bloodflame"
+
+msgid "hSD13-004_ART_0_NAME"
+msgstr "Roses are Red"
+
+msgid "hSD13-004_ART_1_NAME"
+msgstr "The Fire of My Heart is Blue"
+
+msgid "hSD13-005_NAME"
+msgstr "Elizabeth Rose Bloodflame"
+
+msgid "hSD13-005_ART_0_NAME"
+msgstr "Lovely to See You, to See You, Lovely~♡"
+
+msgid "hSD13-005_GIFT_NAME"
+msgstr "Gift: For Justice! -ERB-"
+
+msgid "hSD13-005_GIFT_EFFECT"
+msgstr "Pendant le tour de votre adversaire, lorsque l'un de vos Holomems avec #Justice est mis inconscient, attachez la première carte de votre Deck de Cheers à cet Holomem. Vous ne pouvez utiliser l'effet de Gift «For Justice! -ERB-» qu'une fois par tour."
+
+msgid "hSD13-006_NAME"
+msgstr "Elizabeth Rose Bloodflame"
+
+msgid "hSD13-006_ART_0_NAME"
+msgstr "Quelque chose à protéger"
+
+msgid "hSD13-006_BLOOM_NAME"
+msgstr "Bring It On!"
+
+msgid "hSD13-006_BLOOM_EFFECT"
+msgstr "Choisissez 1 Holomem avec #Justice sur votre Scène. Pendant ce tour, les Arts de l'Holomem choisi gagnent +20 dégâts."
+
+msgid "hSD13-007_NAME"
+msgstr "Elizabeth Rose Bloodflame"
+
+msgid "hSD13-007_ART_0_NAME"
+msgstr "Cadenza du Pourfendeur du Mal"
+
+msgid "hSD13-007_ART_0_EFFECT"
+msgstr "Pour chaque Cheer attaché à cet Holomem, cet Art gagne +20 dégâts. Lorsque cet Art met un Holomem adverse Inconscient, attachez la première carte de votre Deck de Cheers à cet Holomem."
+
+msgid "hSD13-007_GIFT_NAME"
+msgstr "Cri de la Flamme Féroce"
+
+msgid "hSD13-007_GIFT_EFFECT"
+msgstr "Pour chaque Cheer attaché à cet Holomem, cet Holomem gagne +10 PV."
+
+msgid "hSD13-008_NAME"
+msgstr "Gigi Murin"
+
+msgid "hSD13-008_ART_0_NAME"
+msgstr "GI MURIN!!!!"
+
+msgid "hSD13-008_COLLAB_NAME"
+msgstr "For Justice! -GG-"
+
+msgid "hSD13-008_COLLAB_EFFECT"
+msgstr "Attachez 1 Cheer de votre Archive à l'un de vos Holomems avec #Justice."
+
+msgid "hSD13-009_NAME"
+msgstr "Gigi Murin"
+
+msgid "hSD13-009_ART_0_NAME"
+msgstr "YIPPEEE"
+
+msgid "hSD13-009_COLLAB_NAME"
+msgstr "Croissance malicieuse !"
+
+msgid "hSD13-009_COLLAB_EFFECT"
+msgstr "Si vous jouez en deuxième et qu'il s'agit de votre premier tour, Révélez 1 1st Holomem avec #Justice de votre Deck, et placez-le sur le terrain. Puis mélangez votre Deck."
+
+msgid "hSD13-011_NAME"
+msgstr "Gigi Murin"
+
+msgid "hSD13-011_ART_0_NAME"
+msgstr "Recherchez la signification de tout"
+
+msgid "hSD13-011_ART_0_EFFECT"
+msgstr "S'il n'y a pas d'Holomem sous celui-ci, cet Art gagne +20 dégâts."
+
+msgid "hSD13-011_BLOOM_NAME"
+msgstr "I am Gonathan G."
+
+msgid "hSD13-011_BLOOM_EFFECT"
+msgstr "Vous pouvez archiver 1 Debut Holomem sous celui-ci pour l'effet suivant : Infligez 20 dégâts spéciaux à l'Holomem Collab adverse."
+
+msgid "hSD13-012_NAME"
+msgstr "Gigi Murin"
+
+msgid "hSD13-012_ART_0_NAME"
+msgstr "Je ne perdrai pas"
+
+msgid "hSD13-012_GIFT_NAME"
+msgstr "Merci pour votre travail acharné !"
+
+msgid "hSD13-012_GIFT_EFFECT"
+msgstr "Pendant le tour de votre adversaire, lorsque 1 de vos Holomems Arrière subit des dégâts spéciaux de votre Adversaire, vous pouvez Archiver 1 Holomem empilé sous cet Holomem: Pendant ce tour, tous vos Holomems Arrière ne subissent pas de dégâts spéciaux."
+
+msgid "hSD13-014_NAME"
+msgstr "Cecilia Immergreen"
+
+msgid "hSD13-014_ART_0_NAME"
+msgstr "Prenez du thé !"
+
+msgid "hSD13-014_ART_0_EFFECT"
+msgstr "Attachez la première carte de votre Deck de Cheers à l'un de vos Holomems avec #Justice."
+
+msgid "hSD13-014_GIFT_NAME"
+msgstr "Mélodie de Justice"
+
+msgid "hSD13-014_GIFT_EFFECT"
+msgstr "[Position Centrale ou Collab][1/Tour] Lorsqu'un [Holomem Debut ou Holomem Spot] avec #Justice est placé sur votre Scène, piochez 1 carte de votre Deck."
+
+msgid "hSD13-015_NAME"
+msgstr "Raora Panthera"
+
+msgid "hSD13-015_ART_0_NAME"
+msgstr "Servez-vous un café !"
+
+msgid "hSD13-015_ART_0_EFFECT"
+msgstr "Si des Cheers de couleurs différentes sont attachés à votre [Holomem Central et Holomem Collab] avec #Justice, cet Art gagne +20 dégâts."
+
+msgid "hSD13-015_COLLAB_NAME"
+msgstr "Harmonie de la justice"
+
+msgid "hSD13-015_COLLAB_EFFECT"
+msgstr "Mettez 1 Cheer de votre Scène au-dessous de votre Deck de Cheers. Si vous le faites, révélez 1 Cheer depuis votre Deck de Cheers et attachez-le à l’un de vos Holomems. Puis mélangez votre Deck de Cheers."
+
+msgid "hSD13-016_NAME"
+msgstr "Justice"
+
+msgid "hSD13-016_EFFECT"
+msgstr ""
+"Cette carte ne peut être jouée que si vous avez 6 cartes ou moins en Main, à l'exception de cette carte.\n"
+"\n"
+"Regardez les 4 premières cartes de votre Deck. Révélez n'importe quel nombre d'entre elles avec #Justice et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
+
+msgid "hSD13-018_NAME"
+msgstr "Popo"
+
+msgid "hSD13-018_EFFECT"
+msgstr ""
+"L’Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
+"◆ Gagne l’effet suivant si elle est attachée à ⟨Gigi Murin⟩ :\n"
+"Si cet Holomem n’a aucun Holomem empilé sous celui-ci, les Arts de cet Holomem gagnent +20 dégâts.\n"
+"\n"
+"Vous ne pouvez attacher qu’une seule Mascotte à un Holomem."
+
+msgid "hSD12-001_NAME"
+msgstr "Shiori Novella"
+
+msgid "hSD12-001_SKILL_NAME"
+msgstr "L'archiviste"
+
+msgid "hSD12-001_SKILL_EFFECT"
+msgstr "[1/Tour] Regardez les 3 premières cartes de votre Deck. Révélez un Soutien parmis elles et mettez-les dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
+
+msgid "hSD12-001_SPSKILL_NAME"
+msgstr "Rebellion"
+
+msgid "hSD12-001_SPSKILL_EFFECT"
+msgstr "[1/Partie] Infligez 10 dégâts spéciaux pour chaque Soutien dans votre Archive à l'une des Holomem en Arrière adverse s'il ne s'agit pas d'un Holomem Début."
+
+msgid "hSD12-002_NAME"
+msgstr "Koseki Bijou"
+
+msgid "hSD12-002_SKILL_NAME"
+msgstr "Biboo Tax"
+
+msgid "hSD12-002_SKILL_EFFECT"
+msgstr "[1/Tour] Archivez la première carte du Deck de Cheer de chaque joueur. Pour chaque couleur de Cheer archivée, piochez 1 carte. "
+
+msgid "hSD12-002_SPSKILL_NAME"
+msgstr "Éclat de gemme antique"
+
+msgid "hSD12-002_SPSKILL_EFFECT"
+msgstr "[1/Partie] Infligez 10 dégâts spéciaux pour chaque [Holomem avec #Advent ou Cheer] dans votre Archive à l'Holomem Central adverse."
+
+msgid "hSD12-003_NAME"
+msgstr "Shiori Novella"
+
+msgid "hSD12-003_ART_0_NAME"
+msgstr "Adieu, cher Auditeur !"
+
+msgid "hSD12-003_COLLAB_NAME"
+msgstr "Avez-vous déjà entendu parler de l'histoire du 'Palais Montrose'?    "
+
+msgid "hSD12-003_COLLAB_EFFECT"
+msgstr "Infligez 10 dégâts spéciaux à 1 Holomem Arrière adverse."
+
+msgid "hSD12-004_NAME"
+msgstr "Shiori Novella"
+
+msgid "hSD12-004_ART_0_NAME"
+msgstr "Avertissement inquiétant"
+
+msgid "hSD12-004_ART_0_EFFECT"
+msgstr "Cet Art peut aussi cibler les Holomems Arrière de votre adversaire."
+
+msgid "hSD12-004_ART_1_NAME"
+msgstr "Just a Humble, Kind Witch"
+
+msgid "hSD12-004_ART_1_EFFECT"
+msgstr "S’il y a 4 Soutien ou plus dans votre Archive, attachez la première carte de votre Deck de Cheers à un de vos Holomems avec #Advent."
+
+msgid "hSD12-007_NAME"
+msgstr "Shiori Novella"
+
+msgid "hSD12-007_ART_0_NAME"
+msgstr "Pourriez-vous ne pas nous sous-estimer ?"
+
+msgid "hSD12-007_ART_0_EFFECT"
+msgstr "Infligez 10 dégâts spéciaux pour chaque Holomem avec #Advent sur votre Scène a 1 Holomem Adverse s'il ne s'agit pas d'un Holomem Début."
+
+msgid "hSD12-007_GIFT_NAME"
+msgstr "Quel savoir vais-je obtenir"
+
+msgid "hSD12-007_GIFT_EFFECT"
+msgstr "[1/Tour] Lorsque cet Holomem met Inconscient un Holomem adverse, mettez 1 Soutien autre que LIMITÉ de votre Archive à votre Main."
+
+msgid "hSD12-008_NAME"
+msgstr "Koseki Bijou"
+
+msgid "hSD12-008_ART_0_NAME"
+msgstr "J'ai fait beaucoup de rêves récemment"
+
+msgid "hSD12-008_COLLAB_NAME"
+msgstr "Demoiselle d'honneur"
+
+msgid "hSD12-008_COLLAB_EFFECT"
+msgstr "Si vous jouez en deuxième et qu'il s'agit de votre premier tour, piochez 1 carte de votre Deck pour chaque Cheer présent en jeu chez les deux joueurs."
+
+msgid "hSD12-009_NAME"
+msgstr "Koseki Bijou"
+
+msgid "hSD12-009_ART_0_NAME"
+msgstr "Je suis très reconnaissant"
+
+msgid "hSD12-009_BLOOM_NAME"
+msgstr "Famille vivante"
+
+msgid "hSD12-009_BLOOM_EFFECT"
+msgstr "Regardez les 3 premières cartes de votre Deck. Révélez 1 Holomem avec #Advent parmi elles et mettez-la dans votre Main.  Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
+
+msgid "hSD12-010_NAME"
+msgstr "Koseki Bijou"
+
+msgid "hSD12-010_ART_0_NAME"
+msgstr "Éclat cristallin"
+
+msgid "hSD12-010_ART_1_NAME"
+msgstr "Your Princess AWAKENS!"
+
+msgid "hSD12-010_ART_1_EFFECT"
+msgstr "Vous pouvez archiver 1 Cheer non violet de cet Holomem : Mettez 1 Holomem de votre Archive dans votre Main."
+
+msgid "hSD12-011_NAME"
+msgstr "Koseki Bijou"
+
+msgid "hSD12-011_ART_0_NAME"
+msgstr "Accepte tous les éclats !"
+
+msgid "hSD12-011_ART_0_EFFECT"
+msgstr "Pour chaque couleur de Cheer dans l'Archive de chaque joueur, le coût en Cheer de cet Art nécessite 1 Cheer Neutre de moins."
+
+msgid "hSD12-011_BLOOM_NAME"
+msgstr "Tu veux jouer avec Biboo ?"
+
+msgid "hSD12-011_BLOOM_EFFECT"
+msgstr "Piochez 1 carte de votre Deck. Vous pouvez archiver 1 Cheer de votre Scène. Si vous avez archivé un Cheer, choisissez 1 Holomem sur votre Scène. Pendant ce tour, les Arts de l'Holomem choisi gagnent +40 dégâts."
+
+msgid "hSD12-012_NAME"
+msgstr "Nerissa Ravencroft"
+
+msgid "hSD12-012_ART_0_NAME"
+msgstr "Sentiments d’un bleu éphémère"
+
+msgid "hSD12-012_ART_0_EFFECT"
+msgstr "Si vous avez 3 VIES ou moins,  le coût en Cheers de cet Art est réduit de 2 Cheers Neutres."
+
+msgid "hSD12-013_NAME"
+msgstr "Mococo Abyssgard"
+
+msgid "hSD12-013_ART_0_NAME"
+msgstr "Vraiment, vraiment~!!"
+
+msgid "hSD12-013_COLLAB_NAME"
+msgstr "Happy☆Puppy -MOCOCO-"
+
+msgid "hSD12-013_COLLAB_EFFECT"
+msgstr "Si tous les Holomems sur votre Scène ont #Advent, renvoyez au-dessous de votre Deck 1 Holomem Debut depuis votre Position Arrière : Piochez 2 cartes."
+
+msgid "hSD12-014_NAME"
+msgstr "Fuwawa Abyssgard"
+
+msgid "hSD12-014_ART_0_NAME"
+msgstr "C’est vraiment vrai !"
+
+msgid "hSD12-014_COLLAB_NAME"
+msgstr "Happy☆Puppy -FUWAWA-"
+
+msgid "hSD12-014_COLLAB_EFFECT"
+msgstr "Si tous les Holomems sur votre Scène ont #Advent, renvoyez au-dessous de votre Deck 1 Holomem Debut depuis votre Position Arrière : Attachez la première carte de votre Deck de Cheers à l’un de vos Holomems."
+
+msgid "hSD12-015_NAME"
+msgstr "Les Complices Évadés"
+
+msgid "hSD12-015_EFFECT"
+msgstr ""
+"Cette carte ne peut être jouée que si tous les Holomems sur votre Scène ont #Advent\n"
+"\n"
+"Infligez 20 dégâts spéciaux à l'Holomem Central adverse. Attachez 1 Cheer de votre Archive à un de vos Holomems.\n"
+"Vous ne pouvez jouer qu'une seule carte <Escaped Criminal Gang> par tour."
+
+msgid "hSD12-016_NAME"
+msgstr "GEOW"
+
+msgid "hSD12-016_EFFECT"
+msgstr ""
+"L'Holomem avec cette Mascotte attachée gagne +20 PV.\n"
+"\n"
+"◆ Gagne l'effet suivant si elle est attachée à ⟨Koseki Bijou⟩ 1st Bloom ou plus :\n"
+"Vous pouvez archiver 1 Cheer de votre Scène : Révélez 1 Cheer de votre Deck de Cheers et attachez le à l'un de vos Holomems. Puis mélangez votre Deck de Cheers.\n"
+"\n"
+"Vous ne pouvez attacher qu'une seule Mascotte à un Holomem."
+
+msgid "hBP07-001_NAME"
+msgstr "Tsunomaki Watame"
+
+msgid "hBP07-001_STAGESKILL_NAME"
+msgstr "Do Do Do Live"
+
+msgid "hBP07-001_STAGESKILL_EFFECT"
+msgstr "Lorsque l’une de vos ⟨Tsunomaki Watame⟩ utilise un Art, vous pouvez mettre la première carte de votre Deck dans vos Holopowers."
+
+msgid "hBP07-001_SKILL_NAME"
+msgstr "Tu veux que je te perce avec mes cornes ?"
+
+msgid "hBP07-001_SKILL_EFFECT"
+msgstr "[1/Tour] Pendant ce tour, les Arts de toutes vos ⟨Tsunomaki Watame⟩ sur votre Scène gagnent +100 dégâts."
+
+msgid "hBP07-004_NAME"
+msgstr "Akai Haato"
+
+msgid "hBP07-004_STAGESKILL_NAME"
+msgstr "Haachama Now"
+
+msgid "hBP07-004_STAGESKILL_EFFECT"
+msgstr "[1/Tour] Pendant votre tour, lorsque l’une de vos ⟨Akai Haato⟩ est replacée de votre Scène dans votre Deck par l’effet d’une de vos capacités, piochez 2 cartes."
+
+msgid "hBP07-004_SKILL_NAME"
+msgstr "L’idole la plus forte du monde !"
+
+msgid "hBP07-004_SKILL_EFFECT"
+msgstr "[1/Tour] Renvoyez au-dessous de votre Deck 1 Holomem Debut ⟨Akai Haato⟩ depuis votre Position Arrière. Puis choisissez 1 ⟨Akai Haato⟩ sur votre Scène. Pendant ce tour, les Arts de cet Holomem gagnent +50 dégâts."
+
+msgid "hBP07-006_NAME"
+msgstr "AZKi"
+
+msgid "hBP07-006_STAGESKILL_NAME"
+msgstr "ETERNiTY FRONTiER"
+
+msgid "hBP07-006_STAGESKILL_EFFECT"
+msgstr "Pour chaque Holopower que vous avez, les Arts de votre Holomem Central ⟨AZKi⟩ gagnent +20 dégâts."
+
+msgid "hBP07-006_SKILL_NAME"
+msgstr "Allons-y, Pioneers."
+
+msgid "hBP07-006_SKILL_EFFECT"
+msgstr "[1/Tour] Si l'un de vos Holomems a été mis Inconscient pendant le tour précédent de votre adversaire, révélez 1 carte Événement de votre Deck, ajoutez-la à votre main, puis mélangez votre Deck."
