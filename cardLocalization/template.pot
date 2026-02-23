@@ -10561,3 +10561,60 @@ msgstr ""
 msgid "hBP07-006_SKILL_EFFECT"
 msgstr ""
 
+msgid "hSD12-005_NAME"
+msgstr ""
+
+msgid "hSD12-005_ART_0_NAME"
+msgstr ""
+
+msgid "hSD12-005_COLLAB_NAME"
+msgstr ""
+
+msgid "hSD12-005_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hSD12-006_NAME"
+msgstr ""
+
+msgid "hSD12-006_ART_0_NAME"
+msgstr ""
+
+msgid "hSD12-006_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD12-006_BLOOM_NAME"
+msgstr ""
+
+msgid "hSD12-006_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hSD13-010_NAME"
+msgstr ""
+
+msgid "hSD13-010_ART_0_NAME"
+msgstr ""
+
+msgid "hSD13-010_ART_1_NAME"
+msgstr ""
+
+msgid "hSD13-013_NAME"
+msgstr ""
+
+msgid "hSD13-013_ART_0_NAME"
+msgstr ""
+
+msgid "hSD13-013_ART_0_EFFECT"
+msgstr ""
+
+msgid "hSD13-013_GIFT_NAME"
+msgstr ""
+
+msgid "hSD13-013_GIFT_EFFECT"
+msgstr ""
+
+msgid "hSD13-017_NAME"
+msgstr ""
+
+msgid "hSD13-017_EFFECT"
+msgstr ""
+

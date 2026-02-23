@@ -10561,3 +10561,60 @@ msgstr "行くよ、開拓者。"
 msgid "hBP07-006_SKILL_EFFECT"
 msgstr "[ターンに1回] 直前の相手のターンに自分のホロメンがダウンしていたら、自分のデッキから、イベント1枚内に、手札に加える。そしてデッキをシャッフルする。"
 
+msgid "hSD12-005_NAME"
+msgstr "シオリ・ノヴェラ"
+
+msgid "hSD12-005_ART_0_NAME"
+msgstr "車窓から見える星がとてもきれいよ"
+
+msgid "hSD12-005_COLLAB_NAME"
+msgstr "『異世界への旅立ちと幸せ』"
+
+msgid "hSD12-005_COLLAB_EFFECT"
+msgstr "自分のアーカイブのエール1枚を自分の#Adventを持つホロメンに送る。"
+
+msgid "hSD12-006_NAME"
+msgstr "シオリ・ノヴェラ"
+
+msgid "hSD12-006_ART_0_NAME"
+msgstr "初歩的なことよ"
+
+msgid "hSD12-006_ART_0_EFFECT"
+msgstr "相手のホロメン1人に特殊ダメージ20を与える。"
+
+msgid "hSD12-006_BLOOM_NAME"
+msgstr "A Study in Advent"
+
+msgid "hSD12-006_BLOOM_EFFECT"
+msgstr "自分の手札のサポートカード1枚をアーカイブできる：自分のデッキから、#Adventを持つ[Debutホロメンか1stホロメン]1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hSD13-010_NAME"
+msgstr "ジジ・ムリン"
+
+msgid "hSD13-010_ART_0_NAME"
+msgstr "周囲の頭痛の種"
+
+msgid "hSD13-010_ART_1_NAME"
+msgstr "悪戯好きのグレムリン"
+
+msgid "hSD13-013_NAME"
+msgstr "ジジ・ムリン"
+
+msgid "hSD13-013_ART_0_NAME"
+msgstr "殻破りのライオット"
+
+msgid "hSD13-013_ART_0_EFFECT"
+msgstr "このホロメンに重なっているホロメンが0枚なら、このアーツ+90。"
+
+msgid "hSD13-013_GIFT_NAME"
+msgstr "再起のストレングス"
+
+msgid "hSD13-013_GIFT_EFFECT"
+msgstr "[ターンに1回]自分のメインステップで、自分の〈ジジ・ムリン〉に重なっているホロメン1枚をアーカイブできる：自分のエールデッキの上から1枚をこのホロメンに送る。"
+
+msgid "hSD13-017_NAME"
+msgstr "JUSTICE, JUST LIKE THAT!!!!"
+
+msgid "hSD13-017_EFFECT"
+msgstr "このカードは、自分のステージのホロメン全員が#Justiceを持つホロメンでなければ使えない。\n\n自分のステージのホロメン1人を選ぶ。選んだホロメンに重なっているホロメン1～2枚を手札に戻す。このターンの間、この能力で戻したホロメン1枚につき、選んだホロメンのアーツ+20。"
+
