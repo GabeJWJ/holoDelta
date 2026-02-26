@@ -10618,3 +10618,1194 @@ msgstr "JUSTICE, JUST LIKE THAT!!!!"
 msgid "hSD13-017_EFFECT"
 msgstr "This card can only be used if all holomem on your stage have #Justice.\n\nChoose 1 holomem on your stage. Return 1~2 holomem stacked to that holomem to hand. During this turn, the chosen holomem gets Arts+20 for each holomem returned by this effect."
 
+msgid "hBP07-002_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBP07-002_SKILL_NAME"
+msgstr "Good Luck, holoh3ro!"
+
+msgid "hBP07-002_SKILL_EFFECT"
+msgstr "[1/Turn]Choose 1 holomem on your stage. During this turn, the chosen holomem gets Arts+50. If that holomem is a Buzz holomem with #ID Gen 3, that holomem gets Arts+80 instead."
+
+msgid "hBP07-002_SPSKILL_NAME"
+msgstr "Because nothing is impossible!"
+
+msgid "hBP07-002_SPSKILL_EFFECT"
+msgstr "[1/Game]Choose any number of [mascots and fans] from your archive, and attach them to 1 of your holomem with #ID Gen 3. If you attach 3 or more, during this turn, that holomem gets Arts+100."
+
+msgid "hBP07-003_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP07-003_SKILL_NAME"
+msgstr "Guidance of the Divine Talisman"
+
+msgid "hBP07-003_SKILL_EFFECT"
+msgstr "[1/Turn]Look at the top 2 cards of your deck. Add 1 card from among them to hand. Then, return the remaining card to the top of the deck."
+
+msgid "hBP07-003_SPSKILL_NAME"
+msgstr "Everyone's Mama"
+
+msgid "hBP07-003_SPSKILL_EFFECT"
+msgstr "[1/Game]Look at the top 6 cards of your deck. Add 3 cards from among them to hand. Then, return the remaining cards to the top of the deck in any order. Restore 50 HP to all of your holomem."
+
+msgid "hBP07-005_NAME"
+msgstr "Ouro Kronii"
+
+msgid "hBP07-005_SKILL_NAME"
+msgstr "On the Rings of Oblivion"
+
+msgid "hBP07-005_SKILL_EFFECT"
+msgstr "[1/Turn]Draw the bottom 2 cards of your deck, and archive 1 card from your hand."
+
+msgid "hBP07-005_SPSKILL_NAME"
+msgstr "Warden of Time"
+
+msgid "hBP07-005_SPSKILL_EFFECT"
+msgstr "[1/Game]If your center holomem is a 2nd holomem <Ouro Kronii>, take an extra turn after this one."
+
+msgid "hBP07-007_NAME"
+msgstr "Momosuzu Nene"
+
+msgid "hBP07-007_SKILL_NAME"
+msgstr "Super NePoLaBo Energy"
+
+msgid "hBP07-007_SKILL_EFFECT"
+msgstr "[1/Turn]Send 1 cheer from your archive to each of your 2nd holomem with #Gen 5."
+
+msgid "hBP07-007_SPSKILL_NAME"
+msgstr "Nenechi's Great Rampage!"
+
+msgid "hBP07-007_SPSKILL_EFFECT"
+msgstr "[1/Game]Reveal 1~4 Debut holomem <Momosuzu Nene> from your deck, and place them on stage. Then, shuffle the deck."
+
+msgid "hBP07-008_NAME"
+msgstr "Tsunomaki Watame"
+
+msgid "hBP07-008_ART_0_NAME"
+msgstr "Spring Sheep"
+
+msgid "hBP07-008_COLLAB_NAME"
+msgstr "Once More"
+
+msgid "hBP07-008_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, choose 1 of your <Tsunomaki Watame>. During this turn, after the chosen holomem used Arts, use the same Arts once more."
+
+msgid "hBP07-009_NAME"
+msgstr "Tsunomaki Watame"
+
+msgid "hBP07-009_ART_0_NAME"
+msgstr "Gabu gabu!"
+
+msgid "hBP07-009_ART_0_EFFECT"
+msgstr "[Center Position Only]This Arts gets +20."
+
+msgid "hBP07-010_NAME"
+msgstr "Tsunomaki Watame"
+
+msgid "hBP07-010_ART_0_NAME"
+msgstr "I Wonder If I Can Hear Everyone's Voices???????"
+
+msgid "hBP07-010_COLLAB_NAME"
+msgstr "Everyone! Let's Have Fun!!!!"
+
+msgid "hBP07-010_COLLAB_EFFECT"
+msgstr "Put the top card of your deck as holo Power. Look at your holo Power, and add 1 card from among them to hand. Then, shuffle your holo Power."
+
+msgid "hBP07-011_NAME"
+msgstr "Tsunomaki Watame"
+
+msgid "hBP07-011_ART_0_NAME"
+msgstr "This button's about to pop"
+
+msgid "hBP07-011_ART_0_EFFECT"
+msgstr "If this holomem has 2 white cheers attached, this Arts requires -1 colorless."
+
+msgid "hBP07-011_BLOOM_NAME"
+msgstr "Guruguru Sheep"
+
+msgid "hBP07-011_BLOOM_EFFECT"
+msgstr "Reveal 1 1st holomem <Tsunomaki Watame> from your deck, and add it to hand. Then, shuffle the deck. You may only use Bloom Effect \"Guruguru Sheep\" once per turn."
+
+msgid "hBP07-012_NAME"
+msgstr "Tsunomaki Watame"
+
+msgid "hBP07-012_ART_0_NAME"
+msgstr "WataCannon too!"
+
+msgid "hBP07-012_ART_0_EFFECT"
+msgstr "Draw 1 card."
+
+msgid "hBP07-012_BLOOM_NAME"
+msgstr "WataBeeeeeeeeam!!!!!!"
+
+msgid "hBP07-012_BLOOM_EFFECT"
+msgstr "Deal 30 special damage to your opponent's center holomem or collab holomem. Your opponent draws 1 card."
+
+msgid "hBP07-013_NAME"
+msgstr "Tsunomaki Watame"
+
+msgid "hBP07-013_ART_0_NAME"
+msgstr "Thank You Oversheep!"
+
+msgid "hBP07-013_ART_0_EFFECT"
+msgstr "This Arts gets +50 for each <Watamates> attached to this holomem."
+
+msgid "hBP07-013_COLLAB_NAME"
+msgstr "Have A Nice Day!!!"
+
+msgid "hBP07-013_COLLAB_EFFECT"
+msgstr "During this turn, all <Tsunomaki Watame> on your stage get Arts+20. If 6 or more cheers are attached to your center holomem, draw 2 cards."
+
+msgid "hBP07-015_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBP07-015_ART_0_NAME"
+msgstr "I found a stray cat~"
+
+msgid "hBP07-015_COLLAB_NAME"
+msgstr "Adopt Me?"
+
+msgid "hBP07-015_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, reveal 1 Buzz holomem with #ID Gen 3 from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP07-016_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBP07-016_ART_0_NAME"
+msgstr "So, Tell Me Your Secrets?"
+
+msgid "hBP07-016_GIFT_NAME"
+msgstr "Pat the BAZO"
+
+msgid "hBP07-016_GIFT_EFFECT"
+msgstr "If this holomem has a mascot attached, this holomem gets +30 HP."
+
+msgid "hBP07-017_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBP07-017_ART_0_NAME"
+msgstr "I like spending time with everyone"
+
+msgid "hBP07-017_GIFT_NAME"
+msgstr "holoh3ro Shopping"
+
+msgid "hBP07-017_GIFT_EFFECT"
+msgstr "[Center Position Only]When your Buzz holomem with #ID Gen 3 collabs, choose 1 holomem on your stage. The chosen holomem gets Arts+30."
+
+msgid "hBP07-018_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBP07-018_ART_0_NAME"
+msgstr "Umami~ Umami~♪"
+
+msgid "hBP07-018_ART_0_EFFECT"
+msgstr "If you have used an event this turn, this Arts gets +30."
+
+msgid "hBP07-018_COLLAB_NAME"
+msgstr "Horse Doko?"
+
+msgid "hBP07-018_COLLAB_EFFECT"
+msgstr "Reveal the top card of your deck. If the revealed card is a support card, add it to your hand. If it is not a support card, return it to the top of the deck."
+
+msgid "hBP07-019_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBP07-019_ART_0_NAME"
+msgstr "hololive ID's first Dance Queen"
+
+msgid "hBP07-019_ART_0_EFFECT"
+msgstr "If this holomem has a mascot or fan attached, draw 1 card."
+
+msgid "hBP07-019_BLOOM_NAME"
+msgstr "All set!"
+
+msgid "hBP07-019_BLOOM_EFFECT"
+msgstr "Reveal 1 [<BAZO> or <Zecretary>] from your deck, and attach it to your <Vestia Zeta>. Then, shuffle the deck."
+
+msgid "hBP07-020_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBP07-020_ART_0_NAME"
+msgstr "I want to perform more!"
+
+msgid "hBP07-020_COLLAB_NAME"
+msgstr "Ya ya ya ya ya~!"
+
+msgid "hBP07-020_COLLAB_EFFECT"
+msgstr "Roll a die once. If it is odd, set your opponent's 2nd holomem in the center position's remaining HP to 100."
+
+msgid "hBP07-021_NAME"
+msgstr "Vestia Zeta"
+
+msgid "hBP07-021_ART_0_NAME"
+msgstr "Supreme Secret Agent"
+
+msgid "hBP07-021_ART_0_EFFECT"
+msgstr "If you have a Buzz holomem with #ID Gen 3 on your stage, this Arts gets +40."
+
+msgid "hBP07-021_BLOOM_NAME"
+msgstr "Will You Assist Me in This Mission?"
+
+msgid "hBP07-021_BLOOM_EFFECT"
+msgstr "Attach 1 [<BAZO> or <Zecretary>] from your archive to your holomem."
+
+msgid "hBP07-022_NAME"
+msgstr "Shirogane Noel"
+
+msgid "hBP07-022_ART_0_NAME"
+msgstr " I'll be full of energy all the way"
+
+msgid "hBP07-022_ART_0_EFFECT"
+msgstr "Choose 1 of your holomem with #Gen 3. During this turn, the chosen holomem requires -1 colorless for its Arts. If that holomem is a 2nd <Shirogane Noel>, it requires -2 colorless for its Arts instead."
+
+msgid "hBP07-022_GIFT_NAME"
+msgstr "Muscles never betray you!"
+
+msgid "hBP07-022_GIFT_EFFECT"
+msgstr "[Collab Position Only]During your opponent's turn, when your center holomem with #Gen 3 is downed, return all of the stacked holomem including that downed holomem to hand."
+
+msgid "hBP07-023_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP07-023_ART_0_NAME"
+msgstr "MIOON!"
+
+msgid "hBP07-023_COLLAB_NAME"
+msgstr "Fortune telling power injection!"
+
+msgid "hBP07-023_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, look at the top 3 cards of your deck. Add 1 card from among them to hand. Then, return the remaining cards to the top of the deck in any order."
+
+msgid "hBP07-024_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP07-024_ART_0_NAME"
+msgstr "Let's laugh a lot today too"
+
+msgid "hBP07-024_ART_0_EFFECT"
+msgstr "You may archive the top card of your deck. If the archived card is a support card, this Arts gets +30."
+
+msgid "hBP07-024_GIFT_NAME"
+msgstr "My Precious Family"
+
+msgid "hBP07-024_GIFT_EFFECT"
+msgstr "[1/Turn]When <Mio-fam> is attached to this holomem, draw 1 card."
+
+msgid "hBP07-025_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP07-025_ART_0_NAME"
+msgstr "Welcome to Gamers Cafe"
+
+msgid "hBP07-025_ART_0_EFFECT"
+msgstr "Send 1 cheer from your archive to 1 of your holomem with #GAMERS."
+
+msgid "hBP07-025_COLLAB_NAME"
+msgstr "Matcha Parfait! with love"
+
+msgid "hBP07-025_COLLAB_EFFECT"
+msgstr "Choose 1 of your holomem with #GAMERS and with a support card attached. During this turn, the chosen holomem gets Arts+20."
+
+msgid "hBP07-026_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP07-026_ART_0_NAME"
+msgstr "It's kinda stylish, right?"
+
+msgid "hBP07-026_BLOOM_NAME"
+msgstr "I hope they get here soon..."
+
+msgid "hBP07-026_BLOOM_EFFECT"
+msgstr "Reveal 1 [<Pigeotaurus> or <Mio-fam>] from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP07-027_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP07-027_ART_0_NAME"
+msgstr "Call me Your Majesty"
+
+msgid "hBP07-027_ART_0_EFFECT"
+msgstr "[Center Position Only]When this Arts downed your opponent's holomem, draw 1 card."
+
+msgid "hBP07-027_BLOOM_NAME"
+msgstr "The Queen of Hearts' Command"
+
+msgid "hBP07-027_BLOOM_EFFECT"
+msgstr "Choose 1 of your back holomem other than this holomem. During this turn, the chosen holomem gets Arts+30."
+
+msgid "hBP07-028_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP07-028_ART_0_NAME"
+msgstr "May everyone's wishes reach the heavens"
+
+msgid "hBP07-028_ART_0_EFFECT"
+msgstr "You may archive the top card of your deck. If the archived card is a support card, this Arts gets +50."
+
+msgid "hBP07-028_COLLAB_NAME"
+msgstr "Golden-eyed Star"
+
+msgid "hBP07-028_COLLAB_EFFECT"
+msgstr "Look at the top 2 cards of your deck. Add 1 card from among them to hand. Then, return the remaining card to the top of the deck."
+
+msgid "hBP07-029_NAME"
+msgstr "Ookami Mio"
+
+msgid "hBP07-029_ART_0_NAME"
+msgstr "Upright Leading"
+
+msgid "hBP07-029_ART_0_EFFECT"
+msgstr "You may archive the top card of your deck:If the archived card is a holomem, send the top card of your cheer deck to your holomem. If it is a support card, this Arts gets +50."
+
+msgid "hBP07-029_GIFT_NAME"
+msgstr "Earth Mother Goddess"
+
+msgid "hBP07-029_GIFT_EFFECT"
+msgstr "[1/Turn]During your opponent's turn, when this holomem takes damage, if this holomem has a support card attached, restore 50 HP to this holomem."
+
+msgid "hBP07-030_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hBP07-030_ART_0_NAME"
+msgstr "Many Treasures"
+
+msgid "hBP07-030_ART_0_EFFECT"
+msgstr "You may archive 2 cheers from this holomem:Draw 2 cards."
+
+msgid "hBP07-030_BLOOM_NAME"
+msgstr "holoRêve -Iroha-"
+
+msgid "hBP07-030_BLOOM_EFFECT"
+msgstr "When bloomed from a Buzz holomem, restore 100 HP to 1 of your holomem."
+
+msgid "hBP07-031_NAME"
+msgstr "Airani Iofifteen"
+
+msgid "hBP07-031_ART_0_NAME"
+msgstr "Voices that become one"
+
+msgid "hBP07-031_ART_0_EFFECT"
+msgstr "If your oshi holomem is green, blue or yellow, put the top card of your deck as holo Power."
+
+msgid "hBP07-031_BLOOM_NAME"
+msgstr "This brilliance is us!"
+
+msgid "hBP07-031_BLOOM_EFFECT"
+msgstr "You may archive the top 2 cards of your holo Power:Draw 2 cards."
+
+msgid "hBP07-032_NAME"
+msgstr "Rindo Chihaya"
+
+msgid "hBP07-032_ART_0_NAME"
+msgstr "A gust of night wind"
+
+msgid "hBP07-032_COLLAB_NAME"
+msgstr "Let's go for a drive"
+
+msgid "hBP07-032_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, reveal 1 [1st holomem <Rindo Chihaya> and/or <Fugutaro>] each from your deck, and add them to hand. Then, shuffle the deck."
+
+msgid "hBP07-033_NAME"
+msgstr "Rindo Chihaya"
+
+msgid "hBP07-033_ART_0_NAME"
+msgstr "~Something blue~ Chihaya"
+
+msgid "hBP07-033_BLOOM_NAME"
+msgstr "Teal Mermaid"
+
+msgid "hBP07-033_BLOOM_EFFECT"
+msgstr "Choose 1 of your holomem with #FLOW GLOW that has bloomed this turn. During this turn, the chosen holomem gets Arts+30."
+
+msgid "hBP07-034_NAME"
+msgstr "Rindo Chihaya"
+
+msgid "hBP07-034_ART_0_NAME"
+msgstr "Which is faster?!?!?!"
+
+msgid "hBP07-034_ART_0_EFFECT"
+msgstr "If <Fugutaro> is attached to this holomem, this Arts gets +10."
+
+msgid "hBP07-034_BLOOM_NAME"
+msgstr "Let's drive like crazy!!!"
+
+msgid "hBP07-034_BLOOM_EFFECT"
+msgstr "You may archive 1 cheer from your stage:Reveal 1 [Debut holomem, 1st holomem or Spot holomem] with #FLOW GLOW from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP07-035_NAME"
+msgstr "Rindo Chihaya"
+
+msgid "hBP07-035_ART_0_NAME"
+msgstr "Surging Exhaust"
+
+msgid "hBP07-035_ART_0_EFFECT"
+msgstr "Count the number of cheers attached to this holomem, and return all cheers attached to this holomem to the bottom of your cheer deck in any order. Draw cards until your hand has the same number of cards as the number of cheers returned."
+
+msgid "hBP07-035_COLLAB_NAME"
+msgstr "Give Me Hype!!"
+
+msgid "hBP07-035_COLLAB_EFFECT"
+msgstr "Send the top card of your cheer deck to this holomem for each time your holomem with #FLOW GLOW bloomed this turn."
+
+msgid "hBP07-036_NAME"
+msgstr "Akai Haato"
+
+msgid "hBP07-036_ART_0_NAME"
+msgstr "Which do you prefer?♡"
+
+msgid "hBP07-036_COLLAB_NAME"
+msgstr "AKAI HAATO VS HAACHAMA"
+
+msgid "hBP07-036_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, reveal 2 Debut holomem <Akai Haato> from your deck, and place them on stage. Then, shuffle the deck."
+
+msgid "hBP07-037_NAME"
+msgstr "Akai Haato"
+
+msgid "hBP07-037_ART_0_NAME"
+msgstr "The journey has only just begun."
+
+msgid "hBP07-037_COLLAB_NAME"
+msgstr "Travel with Chama!"
+
+msgid "hBP07-037_COLLAB_EFFECT"
+msgstr "If your center holomem is <Akai Haato>, draw 1 card."
+
+msgid "hBP07-038_NAME"
+msgstr "Akai Haato"
+
+msgid "hBP07-038_ART_0_NAME"
+msgstr "hololiveEN0"
+
+msgid "hBP07-038_ART_0_EFFECT"
+msgstr "During this turn, all holomem on your stage with #EN get Arts+20."
+
+msgid "hBP07-038_BLOOM_NAME"
+msgstr "Genju Gourmet Hunter"
+
+msgid "hBP07-038_BLOOM_EFFECT"
+msgstr "Roll a die once. If it is odd, deal 20 special damage to your opponent's center holomem. If it is even, draw 1 card."
+
+msgid "hBP07-039_NAME"
+msgstr "Akai Haato"
+
+msgid "hBP07-039_ART_0_NAME"
+msgstr "My name is \"Chamao\" and I'm a real man!"
+
+msgid "hBP07-039_ART_0_EFFECT"
+msgstr "Deal 20 special damage to your opponent's center holomem."
+
+msgid "hBP07-039_GIFT_NAME"
+msgstr "Is the blood flying?"
+
+msgid "hBP07-039_GIFT_EFFECT"
+msgstr "[1/Turn]During your turn, when your <Akai Haato> returns from your stage to deck, you may send 1 cheer from your archive to this holomem."
+
+msgid "hBP07-040_NAME"
+msgstr "Akai Haato"
+
+msgid "hBP07-040_ART_0_NAME"
+msgstr "Our specialty Haaton Burger!"
+
+msgid "hBP07-040_COLLAB_NAME"
+msgstr "Haachama ♥ Restaurant"
+
+msgid "hBP07-040_COLLAB_EFFECT"
+msgstr "You may return 1 Debut <Akai Haato> from your back position to the bottom of your deck:Reveal 1 [1st holomem or 2nd holomem] other than Buzz from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP07-041_NAME"
+msgstr "Akai Haato"
+
+msgid "hBP07-041_ART_0_NAME"
+msgstr "Plan to be loved by all things"
+
+msgid "hBP07-041_ART_0_EFFECT"
+msgstr "If all cheers on your stage are red cheers, this Arts gets +20."
+
+msgid "hBP07-041_COLLAB_NAME"
+msgstr "EVERYBODY SAY HENTAI"
+
+msgid "hBP07-041_COLLAB_EFFECT"
+msgstr "Deal 50 special damage to your opponent's collab holomem."
+
+msgid "hBP07-042_NAME"
+msgstr "Akai Haato"
+
+msgid "hBP07-042_ART_0_NAME"
+msgstr "Pure Heart Tarantella"
+
+msgid "hBP07-042_ART_0_EFFECT"
+msgstr "Deal 40 special damage to your opponent's center holomem and collab holomem."
+
+msgid "hBP07-042_ART_1_NAME"
+msgstr "Journey to Happiness"
+
+msgid "hBP07-042_ART_1_EFFECT"
+msgstr "If your holomem returned from your stage to deck this turn, this Arts gets +50."
+
+msgid "hBP07-043_NAME"
+msgstr "Sakura Miko"
+
+msgid "hBP07-043_ART_0_NAME"
+msgstr "Revelation of cherry blossoms"
+
+msgid "hBP07-043_ART_0_EFFECT"
+msgstr "For each <35P> attached to this holomem, this Arts gets +70 and you draw 1 card."
+
+msgid "hBP07-043_COLLAB_NAME"
+msgstr "holoRêve -Miko-"
+
+msgid "hBP07-043_COLLAB_EFFECT"
+msgstr "Choose the number 3 or 5. During this turn, when you roll a die using the ability of your Oshi holomem <Sakura Miko> or any <Sakura Miko> on your stage, regard all numbers on the faces of that die as the chosen number."
+
+msgid "hBP07-048_NAME"
+msgstr "Elizabeth Rose Bloodflame"
+
+msgid "hBP07-048_ART_0_NAME"
+msgstr "Because I love people's voices"
+
+msgid "hBP07-048_ART_0_EFFECT"
+msgstr "Return 1 holomem with #EN from your archive to hand."
+
+msgid "hBP07-048_GIFT_NAME"
+msgstr "Queen of Impersonation"
+
+msgid "hBP07-048_GIFT_EFFECT"
+msgstr "This holomem may use the Arts of any holomem on your stage with #EN (correct cheer is required to use those Arts)."
+
+msgid "hBP07-050_NAME"
+msgstr "Ouro Kronii"
+
+msgid "hBP07-050_ART_0_NAME"
+msgstr "Golden Lure"
+
+msgid "hBP07-050_COLLAB_NAME"
+msgstr "Today's the day!"
+
+msgid "hBP07-050_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, you may bloom your center holomem <Ouro Kronii> using a 1st holomem in your hand. This ability allows you to bloom on your first turn."
+
+msgid "hBP07-051_NAME"
+msgstr "Ouro Kronii"
+
+msgid "hBP07-051_ART_0_NAME"
+msgstr "Check This Out Yo 👓"
+
+msgid "hBP07-051_COLLAB_NAME"
+msgstr "TAKE YOUR TIME"
+
+msgid "hBP07-051_COLLAB_EFFECT"
+msgstr "You may reattach 1 cheer from your stage to your other holomem with #Promise."
+
+msgid "hBP07-052_NAME"
+msgstr "Ouro Kronii"
+
+msgid "hBP07-052_ART_0_NAME"
+msgstr "It's my new catchphrase. What do you think?"
+
+msgid "hBP07-052_ART_0_EFFECT"
+msgstr "If your stage has a holomem with #Promise other than <Ouro Kronii>, this Arts gets +10."
+
+msgid "hBP07-052_COLLAB_NAME"
+msgstr "It's Time desuwa!"
+
+msgid "hBP07-052_COLLAB_EFFECT"
+msgstr "You may attach 1 mascot from your archive to this holomem."
+
+msgid "hBP07-054_NAME"
+msgstr "Ouro Kronii"
+
+msgid "hBP07-054_ART_0_NAME"
+msgstr "I'm pretty shy...uwu"
+
+msgid "hBP07-054_ART_0_EFFECT"
+msgstr "Send the top card of your cheer deck to your Buzz holomem with #Promise."
+
+msgid "hBP07-055_NAME"
+msgstr "Ouro Kronii"
+
+msgid "hBP07-055_ART_0_NAME"
+msgstr "Life Goes On"
+
+msgid "hBP07-055_BLOOM_NAME"
+msgstr "Toward a Promised Future"
+
+msgid "hBP07-055_BLOOM_EFFECT"
+msgstr "Choose 1 holomem with #Promise on your stage. During this turn, the chosen holomem gets Arts+50."
+
+msgid "hBP07-058_NAME"
+msgstr "Kobo Kanaeru"
+
+msgid "hBP07-058_ART_0_NAME"
+msgstr "MANTAP LEE!!"
+
+msgid "hBP07-058_ART_0_EFFECT"
+msgstr "If your opponent has 3 or more back holomem with reduced HP, draw 2 cards."
+
+msgid "hBP07-058_BLOOM_NAME"
+msgstr "Happy For You"
+
+msgid "hBP07-058_BLOOM_EFFECT"
+msgstr "Reveal 1 cheer from your cheer deck with the same color as 1 holomem with #ID Gen 3 on your stage, and send it to your holomem. Then, shuffle the cheer deck."
+
+msgid "hBP07-059_NAME"
+msgstr "Shiori Novella"
+
+msgid "hBP07-059_ART_0_NAME"
+msgstr "A Cozy, Spooky Night Together"
+
+msgid "hBP07-059_ART_0_EFFECT"
+msgstr "Deal 10 special damage to 1 of your opponent's holomem."
+
+msgid "hBP07-059_COLLAB_NAME"
+msgstr "It's Time to Play Dress-up!"
+
+msgid "hBP07-059_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, return 1 support card from your archive to hand."
+
+msgid "hBP07-060_NAME"
+msgstr "Shiori Novella"
+
+msgid "hBP07-060_ART_0_NAME"
+msgstr "Food Anatomy"
+
+msgid "hBP07-060_ART_1_NAME"
+msgstr "Don't Let Her Cook!"
+
+msgid "hBP07-060_ART_1_EFFECT"
+msgstr "This Arts may not be used unless you have 4 or more support cards in your archive."
+
+msgid "hBP07-064_NAME"
+msgstr "AZKi"
+
+msgid "hBP07-064_ART_0_NAME"
+msgstr "Come and relax♡"
+
+msgid "hBP07-064_ART_0_EFFECT"
+msgstr "Reveal 1 <Pioneers> from your deck, and attach it to your <AZKi>. Then, shuffle the deck."
+
+msgid "hBP07-065_NAME"
+msgstr "AZKi"
+
+msgid "hBP07-065_ART_0_NAME"
+msgstr "Let's get excited!"
+
+msgid "hBP07-065_ART_0_EFFECT"
+msgstr "Draw 1 card, and archive 1 card from your hand.\n"
+
+msgid "hBP07-065_ART_1_NAME"
+msgstr "Let me hear everyone's voices!!!"
+
+msgid "hBP07-066_NAME"
+msgstr "AZKi"
+
+msgid "hBP07-066_ART_0_NAME"
+msgstr "I love music and singing!"
+
+msgid "hBP07-066_COLLAB_NAME"
+msgstr "A diva from the virtual world"
+
+msgid "hBP07-066_COLLAB_EFFECT"
+msgstr "Restore 30 HP to 1 of your holomem. Choose 1 holomem on your stage. During this turn, the chosen holomem gets Arts+10."
+
+msgid "hBP07-067_NAME"
+msgstr "AZKi"
+
+msgid "hBP07-067_ART_0_NAME"
+msgstr "A night alone with you"
+
+msgid "hBP07-067_ART_0_EFFECT"
+msgstr "You may archive 1 card from your hand:Deal 20 special damage to your opponent's center holomem or collab holomem."
+
+msgid "hBP07-067_BLOOM_NAME"
+msgstr "ROMANTiC NiGHT"
+
+msgid "hBP07-067_BLOOM_EFFECT"
+msgstr "Look at the top 4 cards of your deck. Reveal 1 <AZKi> from among them, and add it to hand. Then, return the remaining cards to the bottom of the deck in any order."
+
+msgid "hBP07-068_NAME"
+msgstr "AZKi"
+
+msgid "hBP07-068_ART_0_NAME"
+msgstr "I'm waiting for your White Day gift"
+
+msgid "hBP07-068_COLLAB_NAME"
+msgstr "The path we've walked together"
+
+msgid "hBP07-068_COLLAB_EFFECT"
+msgstr "During this turn, this holomem gets Arts+20 for each differently named holomem with #Gen 0 on your stage."
+
+msgid "hBP07-069_NAME"
+msgstr "AZKi"
+
+msgid "hBP07-069_ART_0_NAME"
+msgstr "To a new frontier with you"
+
+msgid "hBP07-069_ART_0_EFFECT"
+msgstr "Draw 2 cards."
+
+msgid "hBP07-069_ART_1_NAME"
+msgstr "The trajectory we spun - a song dedicated to all"
+
+msgid "hBP07-069_ART_1_EFFECT"
+msgstr "If your Oshi holomem is <AZKi>, you may archive 4 of your holo Power:If you have 4 <Frontier Spirit> in your archive, your opponent gets life-1."
+
+msgid "hBP07-070_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hBP07-070_ART_0_NAME"
+msgstr "I'll do my best to make something delicious♡"
+
+msgid "hBP07-070_ART_0_EFFECT"
+msgstr "Choose 1 of your holomem with #Cooking. During this turn, for each event with #Food you used this turn, the chosen holomem requires -1 colorless for its Arts."
+
+msgid "hBP07-070_BLOOM_NAME"
+msgstr "What would you like for dinner today?"
+
+msgid "hBP07-070_BLOOM_EFFECT"
+msgstr "Look at the top 3 cards of your deck. Reveal 1 holomem with #Cooking from among them, and add it to hand. Then, return the remaining cards to the bottom of the deck in any order."
+
+msgid "hBP07-071_NAME"
+msgstr "La+ Darknesss"
+
+msgid "hBP07-071_ART_0_NAME"
+msgstr "I want a homemade breakfast"
+
+msgid "hBP07-071_COLLAB_NAME"
+msgstr "Hey, you"
+
+msgid "hBP07-071_COLLAB_EFFECT"
+msgstr "Look at the top 5 cards of your deck. Reveal 1 purple Debut holomem from among them, and add it to hand. Then, return the remaining cards to the bottom of the deck in any order."
+
+msgid "hBP07-072_NAME"
+msgstr "La+ Darknesss"
+
+msgid "hBP07-072_ART_0_NAME"
+msgstr "It's a secret between us"
+
+msgid "hBP07-072_BLOOM_NAME"
+msgstr "Secret Love -La+-"
+
+msgid "hBP07-072_BLOOM_EFFECT"
+msgstr "Choose 1 of your holomem with #holoX, and roll a die 3 times. During this turn, for each odd result rolled, the chosen holomem gets Arts+10."
+
+msgid "hBP07-073_NAME"
+msgstr "La+ Darknesss"
+
+msgid "hBP07-073_ART_0_NAME"
+msgstr "Is there anyone who will listen to my singing!?!?"
+
+msgid "hBP07-073_ART_0_EFFECT"
+msgstr "Reveal 1 <La+ Darknesss> from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP07-073_COLLAB_NAME"
+msgstr "I'm Live!!!!!!!!!"
+
+msgid "hBP07-073_COLLAB_EFFECT"
+msgstr "During this turn, this holomem requires -2 colorless for its Arts."
+
+msgid "hBP07-074_NAME"
+msgstr "La+ Darknesss"
+
+msgid "hBP07-074_ART_0_NAME"
+msgstr "Listen to my sooooong!!!!"
+
+msgid "hBP07-074_ART_0_EFFECT"
+msgstr "If your center holomem is purple, this Arts gets +40."
+
+msgid "hBP07-074_BLOOM_NAME"
+msgstr "Rush! Go!"
+
+msgid "hBP07-074_BLOOM_EFFECT"
+msgstr "Look at the top 3 cards of your deck. Reveal any number of holomem from among them, and add the revealed cards to hand. Then, return the remaining cards to the bottom of the deck in any order."
+
+msgid "hBP07-076_NAME"
+msgstr "Nerissa Ravencroft"
+
+msgid "hBP07-076_ART_0_NAME"
+msgstr "Oh no, I got caught!"
+
+msgid "hBP07-076_ART_0_EFFECT"
+msgstr "You may archive 1 of your holo Power:This Arts gets +30."
+
+msgid "hBP07-076_COLLAB_NAME"
+msgstr "SUGOISUGOIDEKAI"
+
+msgid "hBP07-076_COLLAB_EFFECT"
+msgstr "If your Oshi holomem is <Nerissa Ravencroft>, draw 1 card and put 1 card from your hand to holo Power."
+
+msgid "hBP07-077_NAME"
+msgstr "Momosuzu Nene"
+
+msgid "hBP07-077_ART_0_NAME"
+msgstr "Nene is drunk"
+
+msgid "hBP07-077_COLLAB_NAME"
+msgstr "apapa"
+
+msgid "hBP07-077_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, reveal 1 2nd holomem with #Gen 5 from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP07-078_NAME"
+msgstr "Momosuzu Nene"
+
+msgid "hBP07-078_ART_0_NAME"
+msgstr "Have fun with Nene!!"
+
+msgid "hBP07-078_COLLAB_NAME"
+msgstr "Join me over here!"
+
+msgid "hBP07-078_COLLAB_EFFECT"
+msgstr "Look at the top 5 cards of your deck. Reveal 1 <Nekko> from among them, and add it to hand. Then, return the remaining cards to the bottom of the deck in any order."
+
+msgid "hBP07-079_NAME"
+msgstr "Momosuzu Nene"
+
+msgid "hBP07-079_ART_0_NAME"
+msgstr "Please feel free to use it!"
+
+msgid "hBP07-079_ART_0_EFFECT"
+msgstr "Reveal 1 <Yamena> from your deck, and attach it to your holomem. Then, shuffle the deck."
+
+msgid "hBP07-079_BLOOM_NAME"
+msgstr "Nenechi Live Start!"
+
+msgid "hBP07-079_BLOOM_EFFECT"
+msgstr "You may send 1 cheer from your archive to this holomem."
+
+msgid "hBP07-081_NAME"
+msgstr "Momosuzu Nene"
+
+msgid "hBP07-081_ART_0_NAME"
+msgstr "Bullock your heart!"
+
+msgid "hBP07-081_ART_0_EFFECT"
+msgstr "If this holomem has <Giraffe Stag Beetle> attached, this Arts damage is dealt to your opponent's center holomem and collab holomem, instead of only the holomem targeted by this Arts."
+
+msgid "hBP07-081_COLLAB_NAME"
+msgstr "Momosuzu Nene, insect expert!"
+
+msgid "hBP07-081_COLLAB_EFFECT"
+msgstr "If you have 4 or more holo Power and your opponent has no collab holomem, your opponent moves 1 of their back holomem to the collab position (Moving is not regarded as collab)."
+
+msgid "hBP07-082_NAME"
+msgstr "Momosuzu Nene"
+
+msgid "hBP07-082_ART_0_NAME"
+msgstr "A-cho~~~!"
+
+msgid "hBP07-082_COLLAB_NAME"
+msgstr "NePoLaBo is the best!!!!!!!!!!!!!"
+
+msgid "hBP07-082_COLLAB_EFFECT"
+msgstr "Reveal 1 2nd holomem with #Gen 5 from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP07-084_NAME"
+msgstr "Natsuiro Matsuri"
+
+msgid "hBP07-084_ART_0_NAME"
+msgstr "FPS after all?"
+
+msgid "hBP07-084_ART_0_EFFECT"
+msgstr "Send 1 cheer from your archive to your holomem."
+
+msgid "hBP07-084_GIFT_NAME"
+msgstr "Let's play games together"
+
+msgid "hBP07-084_GIFT_EFFECT"
+msgstr "During your opponent's turn, when this holomem is downed, you may return 1 LIMITED support card from your archive to the bottom of your deck. If you do, return this holomem to hand instead of archiving it."
+
+msgid "hBP07-085_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hBP07-085_ART_0_NAME"
+msgstr "Full-of-energy, colorful parfait"
+
+msgid "hBP07-085_ART_0_EFFECT"
+msgstr "If your Oshi holomem is <Shiranui Flare>, choose 1 of your <Shiranui Flare>. During this turn, the chosen holomem gets Arts+20 for each of the chosen holomem's cheers."
+
+msgid "hBP07-085_GIFT_NAME"
+msgstr "My special!"
+
+msgid "hBP07-085_GIFT_EFFECT"
+msgstr "During your turn, when this holomem moves to the collab position, look at the top 3 cards of your deck. Reveal 1 <Shiranui Flare> from among them, and add it to hand. Then, archive the remaining cards."
+
+msgid "hBP07-087_NAME"
+msgstr "Koganei Niko"
+
+msgid "hBP07-087_ART_0_NAME"
+msgstr "The criminal was caught red-handed"
+
+msgid "hBP07-087_COLLAB_NAME"
+msgstr "Niko-tan dispatched!"
+
+msgid "hBP07-087_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, you may archive the top 2 cards of your cheer deck:Choose 1 holomem with #FLOW GLOW on your stage. During this turn, the chosen holomem gets Arts+20."
+
+msgid "hBP07-088_NAME"
+msgstr "Koganei Niko"
+
+msgid "hBP07-088_ART_0_NAME"
+msgstr "I'm happy because everyone is here!"
+
+msgid "hBP07-088_ART_0_EFFECT"
+msgstr "If cheer has been archived from your stage this turn, this Arts gets +30."
+
+msgid "hBP07-088_GIFT_NAME"
+msgstr "The Power of the Tiger"
+
+msgid "hBP07-088_GIFT_EFFECT"
+msgstr "All of your 1st holomem in the back position with #FLOW GLOW do not take special damage from your opponent."
+
+msgid "hBP07-089_NAME"
+msgstr "Koganei Niko"
+
+msgid "hBP07-089_ART_0_NAME"
+msgstr "So exciting!!"
+
+msgid "hBP07-089_BLOOM_NAME"
+msgstr "Swift Riposte!"
+
+msgid "hBP07-089_BLOOM_EFFECT"
+msgstr "If your holomem with #FLOW GLOW was downed during your opponent's previous turn, draw 2 cards. You may only use Bloom Effect \"Swift Riposte!\" once per turn."
+
+msgid "hBP07-090_NAME"
+msgstr "Koganei Niko"
+
+msgid "hBP07-090_ART_0_NAME"
+msgstr "I'm fired up!"
+
+msgid "hBP07-090_ART_0_EFFECT"
+msgstr "This Arts gets +20 for each of this holomem's cheers."
+
+msgid "hBP07-090_COLLAB_NAME"
+msgstr "This isn't the end for this tiger!"
+
+msgid "hBP07-090_COLLAB_EFFECT"
+msgstr "You may send 2 cheers from your archive to 1 of your holomem with #FLOW GLOW."
+
+msgid "hBP07-091_NAME"
+msgstr "Live Staff"
+
+msgid "hBP07-091_EFFECT"
+msgstr "This card can only be used if you archive 1 cheer from your stage.\n\nAttach 1 fan from your archive to your holomem. If you do, return 1 holomem from your archive to hand."
+
+msgid "hBP07-092_NAME"
+msgstr "Archive PC"
+
+msgid "hBP07-092_EFFECT"
+msgstr "Return 1~3 holomem from your archive to the deck and shuffle it. Draw 2 cards."
+
+msgid "hBP07-094_NAME"
+msgstr "GiriWaru Robo"
+
+msgid "hBP07-094_EFFECT"
+msgstr "Return all of the cards in your hand to the deck and shuffle it. Then, draw 4 cards. If your life is 3 or less, instead both players return all of the cards in their hands to their decks and shuffle them. Then, both players draw 4 cards."
+
+msgid "hBP07-095_NAME"
+msgstr "Cross Impact"
+
+msgid "hBP07-095_EFFECT"
+msgstr "This card cannot be used unless both players' center holomem are 2nd holomem.\n\nBoth players roll a die once. If your result is greater than or equal to your opponent's result, during this turn, your center holomem gets Arts+100. If your result is less than your opponent's result, send the top card of your cheer deck to your holomem."
+
+msgid "hBP07-096_NAME"
+msgstr "Chama Journey"
+
+msgid "hBP07-096_EFFECT"
+msgstr "Choose 1 <Akai Haato> in your back position. Return all of the chosen holomem's stacked holomem, including that holomem, to the bottom of the deck in any order. During this turn, all of your <Akai Haato> requires -1 colorless for their Arts."
+
+msgid "hBP07-097_NAME"
+msgstr "Ruler of Time -Promise-"
+
+msgid "hBP07-097_EFFECT"
+msgstr "This card can only be used if all holomem on your stage have #Promise.\n\nReveal 2 holomem with #Promise from your deck, and add them to hand. Then, shuffle the deck. If your life is less than your opponent's, choose 1 holomem on your stage. During this turn, the chosen holomem gets Arts+20."
+
+msgid "hBP07-098_NAME"
+msgstr "Big God Mion's Fortune Telling"
+
+msgid "hBP07-098_EFFECT"
+msgstr "This card can only be used if your Oshi holomem is <Ookami Mio>.\n\nReveal the top 3 cards of your deck. During this turn, for each support card revealed, all holomem on your stage get Arts+20. Then, return the revealed cards to the top of the deck in any order."
+
+msgid "hBP07-099_NAME"
+msgstr "Buhii!"
+
+msgid "hBP07-099_EFFECT"
+msgstr "Draw 2 cards. If your holomem was downed during your opponent's previous turn, choose 1 holomem on your stage. During this turn, the chosen holomem gets Arts+20. Then, if the holomem that was downed during your opponent's previous turn was <La+ Darknesss>, draw 2 cards."
+
+msgid "hBP07-100_NAME"
+msgstr "Frontier Spirit"
+
+msgid "hBP07-100_EFFECT"
+msgstr "Return 1 <AZKi> from your archive to hand. Send 1 cheer from your archive to 1 of your <AZKi> for each <Frontier Spirit> in your archive.\nYou may only use the card <Frontier Spirit> once per turn."
+
+msgid "hBP07-101_NAME"
+msgstr "ASMR Microphone"
+
+msgid "hBP07-101_EFFECT"
+msgstr "◆Additional ability if attached to a Buzz holomem\nThis holomem requires -1 colorless for its Arts.\n\nOnly 1 tool can be attached to each of your holomem."
+
+msgid "hBP07-103_NAME"
+msgstr "Giraffe Stag Beetle"
+
+msgid "hBP07-103_EFFECT"
+msgstr "The <Momosuzu Nene> with this tool attached gets Arts+20.\n\n◆Additional ability if attached to 1st or greater <Momosuzu Nene>\nThis holomem's Arts damage cannot be reduced.\n\nOnly 1 tool can be attached to each of your holomem."
+
+msgid "hBP07-104_NAME"
+msgstr "Thorn"
+
+msgid "hBP07-104_EFFECT"
+msgstr "The <Elizabeth Rose Bloodflame> with this tool attached gets Arts+20.\n\n◆Additional ability if attached to 2nd <Elizabeth Rose Bloodflame>\nWhile this holomem has reduced HP, this holomem gets Arts+20.\n\nOnly 1 tool can be attached to each of your holomem."
+
+msgid "hBP07-106_NAME"
+msgstr "Pigeotaurus"
+
+msgid "hBP07-106_EFFECT"
+msgstr "The holomem this mascot is attached to gets +20 HP.\n\n◆Additional ability if attached to <Ookami Mio>\nWhen this holomem collabs, you may return 1 <Pigeotaurus> attached to this holomem to the top of the deck:Return 1 holomem from your archive to hand.\n\nOnly 1 mascot can be attached to each of your holomem."
+
+msgid "hY01-012_NAME"
+msgstr "White Cheer"
+
+msgid "hY02-010_NAME"
+msgstr "Green Cheer"
+
+msgid "hY03-014_NAME"
+msgstr "Red Cheer"
+
+msgid "hY04-011_NAME"
+msgstr "Blue Cheer"
+
+msgid "hY05-009_NAME"
+msgstr "Purple Cheer"
+
+msgid "hY06-009_NAME"
+msgstr "Yellow Cheer"
+
+msgid "hBP07-057_NAME"
+msgstr "Nekomata Okayu"
+
+msgid "hBP07-057_ART_0_NAME"
+msgstr "Hiya!! You let your guard down~"
+
+msgid "hBP07-057_ART_0_EFFECT"
+msgstr "If your Oshi holomem is <Nekomata Okayu> and your opponent has a back holomem which has taken 100 or more damage, deal 50 special damage to 1 of your opponent's holomem."
+
+msgid "hBP07-057_COLLAB_NAME"
+msgstr "Playing with you makes my heart beat faster..."
+
+msgid "hBP07-057_COLLAB_EFFECT"
+msgstr "Deal 30 special damage to 1 of your opponent's holomem.\n"
+
+msgid "hBP07-014_NAME"
+msgstr "Tsunomaki Watame"
+
+msgid "hBP07-014_ART_0_NAME"
+msgstr "Headshot with the Watame Hammer!"
+
+msgid "hBP07-014_ART_0_EFFECT"
+msgstr "[Center Position Only]If your opponent's holomem is downed by this Arts, and the dealt damage was greater than the remaining HP, deal special damage to 1 of your opponent's 2nd holomem equal to the excess damage."
+
+msgid "hBP07-014_GIFT_NAME"
+msgstr "Cute Sexy"
+
+msgid "hBP07-014_GIFT_EFFECT"
+msgstr "This holomem gets +10 HP for each holomem stacked to this holomem."
+
+msgid "hBP07-075_NAME"
+msgstr "Koseki Bijou"
+
+msgid "hBP07-075_ART_0_NAME"
+msgstr "CODE:81800"
+
+msgid "hBP07-075_ART_0_EFFECT"
+msgstr "If 3 or more cheers are attached to this holomem, this Arts gets +10 for each cheer in both players' archive."
+
+msgid "hBP07-075_GIFT_NAME"
+msgstr "Hunter in the Dark"
+
+msgid "hBP07-075_GIFT_EFFECT"
+msgstr "If the target of this holomem's Arts is your opponent's holomem with the same color as a cheer in your archive, damage from that Arts cannot be reduced."
+
+msgid "hBP07-044_NAME"
+msgstr "Omaru Polka"
+
+msgid "hBP07-044_ART_0_NAME"
+msgstr "Staff First!"
+
+msgid "hBP07-044_ART_0_EFFECT"
+msgstr "Archive the top 2 cards of your deck. You may return 1 staff from your archive to hand."
+
+msgid "hBP07-044_GIFT_NAME"
+msgstr "The Show Must Go On"
+
+msgid "hBP07-044_GIFT_EFFECT"
+msgstr "[Center Position・Collab Position Only]During your opponent's turn, when your Buzz holomem with a fan attached is downed, if your Oshi holomem is <Omaru Polka>, you take -1 Life Damage."
+
+msgid "hBP07-046_NAME"
+msgstr "Elizabeth Rose Bloodflame"
+
+msgid "hBP07-046_ART_0_NAME"
+msgstr "Onwards and Upwards!"
+
+msgid "hBP07-046_COLLAB_NAME"
+msgstr "Taking Back the Initiative!"
+
+msgid "hBP07-046_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, reveal 1 [1st holomem <Elizabeth Rose Bloodflame> and/or <Thorn>] each from your deck, and add them to hand. Then, shuffle the deck."
+
+msgid "hBP07-049_NAME"
+msgstr "Elizabeth Rose Bloodflame"
+
+msgid "hBP07-049_ART_0_NAME"
+msgstr "Unyielding Concerto"
+
+msgid "hBP07-049_ART_0_EFFECT"
+msgstr "If your life is 4 or less, this Arts gets +30. If your life is 2 or less, this Arts gets +60 instead."
+
+msgid "hBP07-049_GIFT_NAME"
+msgstr "Gorgeous Einsatz"
+
+msgid "hBP07-049_GIFT_EFFECT"
+msgstr "[Center Position・Collab Position Only]When your holomem downs your opponent's holomem, choose 1 of your holomem. During this turn, the chosen holomem requires -2 colorless for its Arts."
+
+msgid "hBP07-063_NAME"
+msgstr "AZKi"
+
+msgid "hBP07-063_ART_0_NAME"
+msgstr "A space that is close to you"
+
+msgid "hBP07-063_COLLAB_NAME"
+msgstr "Exciting night camp"
+
+msgid "hBP07-063_COLLAB_EFFECT"
+msgstr "If you went second, it is your first turn, and your Oshi holomem is <AZKi>, return 1 cheer from your opponent's stage to the bottom of the cheer deck."
+
+msgid "hBP07-105_NAME"
+msgstr "BAZO"
+
+msgid "hBP07-105_EFFECT"
+msgstr "The holomem this mascot is attached to gets Arts+10.\n\n◆Additional ability if attached to <Vestia Zeta>\nWhen this holomem uses Arts, return 1 fan from your archive to hand.\n\nOnly 1 mascot can be attached to each of your holomem."
+
+msgid "hBP07-107_NAME"
+msgstr "Boros"
+
+msgid "hBP07-107_EFFECT"
+msgstr "The holomem this mascot is attached to gets +20 HP.\n\n◆Additional ability if attached to <Ouro Kronii>\nIf you have used your SP Oshi Skill \"Warden of Time\" this game, this holomem gets Arts+20.\n\nOnly 1 mascot can be attached to each of your holomem."
+
+msgid "hBP07-108_NAME"
+msgstr "Zecretary"
+
+msgid "hBP07-108_EFFECT"
+msgstr "■If the holomem this fan is attached to would use Arts, if your Oshi holomem is <Vestia Zeta>, this fan is also regarded as a white cheer.\n■During your opponent's turn, when the holomem this fan is attached to takes damage, archive this fan.\n\nYou may only attach this fan to your <Vestia Zeta>, and you may attach any number of this fan per holomem."
+
+msgid "hBP07-109_NAME"
+msgstr "Kronies"
+
+msgid "hBP07-109_EFFECT"
+msgstr "The holomem this fan is attached to gets Arts+10.\n\nYou may only attach this fan to your <Ouro Kronii>, and you may attach any number of this fan per holomem."
+
+msgid "hBP07-110_NAME"
+msgstr "Nekko"
+
+msgid "hBP07-110_EFFECT"
+msgstr "[1/Turn]When the bloom level of the holomem this fan is attached to increases, draw 1 card.\n\nYou may only attach this fan to your <Momosuzu Nene>, and you may attach any number of this fan per holomem."
+
