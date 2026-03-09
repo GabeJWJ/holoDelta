@@ -11809,3 +11809,144 @@ msgstr "ねっ子"
 msgid "hBP07-110_EFFECT"
 msgstr "[ターンに1回] このファンが付いているホロメンのブルームレベルが上がった時、自分のデッキを1枚引く。\n\nこのファンは、自分の〈桃鈴ねね〉だけに付けられ、1人につき何枚でも付けられる"
 
+msgid "hBP07-093_NAME"
+msgstr "うまみー！"
+
+msgid "hBP07-093_EFFECT"
+msgstr "自分のコラボポジションの〈ベスティア·ゼータ〉を選ぶ。このターンの間、選んだホロメンのアーツ+40。その後、サイコロを1回振る。6以外なら、このカードをデッキに戻してシャッフルする。\n自分の〈うまみー！〉はターンに1回しか使えない。 "
+
+msgid "hBP07-102_NAME"
+msgstr "角巻わためのハンマー"
+
+msgid "hBP07-102_EFFECT"
+msgstr "このツールが付いている〈角巻わため〉のアーツ+20。\n\n◆2ndの〈角巻わため〉に付いていたら能力追加\n■[センターポジション限定]このホロメンのアーツ+30。\n■[センターポジション限定]このホロメンがアーツを使った時、サイコロを1回振る。3か5なら、このホロメン以外の自分のホロメン1人に特殊ダメージ50を与える。\n\nツールは、自分のホロメン1人につき1枚だけ付けられる。"
+
+msgid "hBP07-045_NAME"
+msgstr "ハコス・ベールズ"
+
+msgid "hBP07-045_ART_0_NAME"
+msgstr "キミがいないと楽しくないもん"
+
+msgid "hBP07-045_ART_0_EFFECT"
+msgstr "自分の手札1枚につき、このアーツ+20。"
+
+msgid "hBP07-045_GIFT_NAME"
+msgstr "テンション上がってきた！"
+
+msgid "hBP07-045_GIFT_EFFECT"
+msgstr "[センターポジション·コラボポジンョン限定]自分のSP推しスキルを使った時、自分のデッキの上から1枚をホロパワーにする。"
+
+msgid "hBP07-047_NAME"
+msgstr "エリザベス・ローズ・ブラッドフレイム"
+
+msgid "hBP07-047_ART_0_NAME"
+msgstr "さあ、かかってくるといい"
+
+msgid "hBP07-047_COLLAB_NAME"
+msgstr "...Very well."
+
+msgid "hBP07-047_COLLAB_EFFECT"
+msgstr "自分の推しホロメンがくエリザベス·ローズ·ブラッドフレイム〉なら、自分のテッキの上から1枚をホロバワーにする。"
+
+msgid "hBP07-053_NAME"
+msgstr "オーロ・クロニー"
+
+msgid "hBP07-053_ART_0_NAME"
+msgstr "Everlasting Flower"
+
+msgid "hBP07-053_ART_0_EFFECT"
+msgstr "自分のエールテッキの上から1枚を自分の#Promiseを持つホロメンに送る。"
+
+msgid "hBP07-053_BLOOM_NAME"
+msgstr "時を超えた約束"
+
+msgid "hBP07-053_BLOOM_EFFECT"
+msgstr "自分のステージの#Promiseを持つホロメン1人を選ぶ。このターンの間、選んだホロメンのアーツ+20。"
+
+msgid "hBP07-056_NAME"
+msgstr "オーロ・クロニー"
+
+msgid "hBP07-056_ART_0_NAME"
+msgstr "You're not ready for me."
+
+msgid "hBP07-056_ART_0_EFFECT"
+msgstr "このホロメンのエール1枚を自分の他の#Promiseを持つホロメンに付け替えられる。その後、自分の推しホロメンがくオーロ·クロニー〉なら、このアーツ+100。"
+
+msgid "hBP07-056_GIFT_NAME"
+msgstr "時界を統べし者"
+
+msgid "hBP07-056_GIFT_EFFECT"
+msgstr "[センターポジション限定]自分のパフォーマンスステップが開始する時、このホロメン以外の自分の〈オーロ·クロニー〉1人を、このホロメンに重なっているホロメンを使ってBloomできる。"
+
+msgid "hBP07-061_NAME"
+msgstr "シオリ・ノヴェラ"
+
+msgid "hBP07-061_ART_0_NAME"
+msgstr "逃がす訳がないでしょう？"
+
+msgid "hBP07-061_ART_0_EFFECT"
+msgstr "相手のバックホロメン1に特殊ダメージ20を与える。"
+
+msgid "hBP07-061_BLOOM_NAME"
+msgstr "A New Chapter Begins!"
+
+msgid "hBP07-061_BLOOM_EFFECT"
+msgstr "自分の推しホロメンがくシオリ·ノヴェラ〉なら、自分のデッキの上から4枚を見る。その中から、サポートカード1枚を公開し、手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hBP07-062_NAME"
+msgstr "シオリ・ノヴェラ"
+
+msgid "hBP07-062_ART_0_NAME"
+msgstr "解き放たれた禁断の知識"
+
+msgid "hBP07-062_ART_0_EFFECT"
+msgstr "自分のアーカイブのエール1枚を自分の#Adventを持つホロメンに送る。その後、自分の推しホロメンがくシオリ·ノヴェラ〉で、このホロメンにエールが4枚以上付いでいるなら、このアーツ+100。"
+
+msgid "hBP07-062_COLLAB_NAME"
+msgstr "A New Crime & A New Me"
+
+msgid "hBP07-062_COLLAB_EFFECT"
+msgstr "自分の手札のサポートカード2枚をアーカイブできる：自分のステージのホロメン1人を選ぶ。このターンの間、選んだホロメンのアーツ+50。"
+
+msgid "hBP07-080_NAME"
+msgstr "桃鈴ねね"
+
+msgid "hBP07-080_ART_0_NAME"
+msgstr "さいくーにくぅわいい"
+
+msgid "hBP07-080_GIFT_NAME"
+msgstr "オレンジアイドル！"
+
+msgid "hBP07-080_GIFT_EFFECT"
+msgstr "[ターンに1回]自分の推しホロメンが〈桃鈴ねね〉なら、自分のメインステップに使える:自分のアーカイブの〈ねっ子〉1枚をこのホロメンに付ける。"
+
+msgid "hBP07-083_NAME"
+msgstr "桃鈴ねね"
+
+msgid "hBP07-083_ART_0_NAME"
+msgstr "オーバーチアリーディング"
+
+msgid "hBP07-083_ART_0_EFFECT"
+msgstr "相手の[センターホロメンかコラボホロメン]のエール1枚をエールデッキの下に戻す。"
+
+msgid "hBP07-083_BLOOM_NAME"
+msgstr "みんなのエナジードリンク"
+
+msgid "hBP07-083_BLOOM_EFFECT"
+msgstr "[センターボジション限定]次の相手のターン終了時まで、お互いのステージのホロメン全員のアーツ+40。さらに、自分のステージの2ndホロメンの〈桃鈴ねね〉全員のアーツ+60。"
+
+msgid "hBP07-086_NAME"
+msgstr "ジジ・ムリン"
+
+msgid "hBP07-086_ART_0_NAME"
+msgstr "追撃のライオット"
+
+msgid "hBP07-086_ART_0_EFFECT"
+msgstr "このアーツの対象が、相手のHPが減っているホロメンなら、このアーツ+30。"
+
+msgid "hBP07-086_COLLAB_NAME"
+msgstr "執念のチェイサー"
+
+msgid "hBP07-086_COLLAB_EFFECT"
+msgstr "自分の〈ジジ·ムリン〉1人を選ぶ。このターンの間、選んだホロメンのアーツは、相手のHPが減っているバックホロメンも対象にできる。"
+

@@ -1607,10 +1607,10 @@ func _on_popup_menu_id_pressed(id):
 			set_prompt(tr("PROMPT_HEAL") + "\nX=",20,3)
 			currentPrompt = 11
 		12: #Add Extra HP
-			set_prompt(tr("PROMPT_EXTRAHP") + "\nX=",10,2)
+			set_prompt(tr("PROMPT_EXTRAHP") + "\nX=",10,3)
 			currentPrompt = 12
 		13: #Remove Extra HP
-			set_prompt(tr("PROMPT_REMOVEEXTRAHP") + "\nX=",10,2)
+			set_prompt(tr("PROMPT_REMOVEEXTRAHP") + "\nX=",10,3)
 			currentPrompt = 13
 		16: #Add Extra Baton Pass Cost
 			set_prompt(tr("PROMPT_EXTRABATONPASS") + "\nX=",1,1)

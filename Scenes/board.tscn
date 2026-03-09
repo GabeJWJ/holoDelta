@@ -2076,6 +2076,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "TRYAGAIN"
 
+[node name="ManualDownload" type="Button" parent="CanvasLayer/Failure/FailureMargins/FailureVBox" unique_id=366301095]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "MANUALDOWNLOAD"
+
 [node name="TryAgain_Import" type="Button" parent="CanvasLayer/Failure/FailureMargins/FailureVBox" unique_id=185948245]
 unique_name_in_owner = true
 visible = false
@@ -2319,6 +2325,7 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/MainMenuConfirm/MainMenuConfirmMargins/MainMenuConfirmVBox/MainMenuButtonsHBox/ExitConfirmNo" to="." method="_on_no_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/Failure/FailureMargins/FailureVBox/TryAgain_Download" to="." method="_attempt_download_zip"]
+[connection signal="pressed" from="CanvasLayer/Failure/FailureMargins/FailureVBox/ManualDownload" to="." method="_on_manual_download_pressed"]
 [connection signal="pressed" from="CanvasLayer/Failure/FailureMargins/FailureVBox/TryAgain_Import" to="." method="_attempt_load_zip"]
 [connection signal="pressed" from="CanvasLayer/Update/UpdateMargins/UpdateVBox/Client_Download" to="." method="_go_to_github"]
 [connection signal="pressed" from="CanvasLayer/Update/UpdateMargins/UpdateVBox/Card_Download" to="." method="_attempt_download_zip"]

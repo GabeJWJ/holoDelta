@@ -11809,3 +11809,144 @@ msgstr ""
 msgid "hBP07-110_EFFECT"
 msgstr ""
 
+msgid "hBP07-093_NAME"
+msgstr ""
+
+msgid "hBP07-093_EFFECT"
+msgstr ""
+
+msgid "hBP07-102_NAME"
+msgstr ""
+
+msgid "hBP07-102_EFFECT"
+msgstr ""
+
+msgid "hBP07-045_NAME"
+msgstr ""
+
+msgid "hBP07-045_ART_0_NAME"
+msgstr ""
+
+msgid "hBP07-045_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP07-045_GIFT_NAME"
+msgstr ""
+
+msgid "hBP07-045_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP07-047_NAME"
+msgstr ""
+
+msgid "hBP07-047_ART_0_NAME"
+msgstr ""
+
+msgid "hBP07-047_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP07-047_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP07-053_NAME"
+msgstr ""
+
+msgid "hBP07-053_ART_0_NAME"
+msgstr ""
+
+msgid "hBP07-053_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP07-053_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP07-053_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP07-056_NAME"
+msgstr ""
+
+msgid "hBP07-056_ART_0_NAME"
+msgstr ""
+
+msgid "hBP07-056_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP07-056_GIFT_NAME"
+msgstr ""
+
+msgid "hBP07-056_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP07-061_NAME"
+msgstr ""
+
+msgid "hBP07-061_ART_0_NAME"
+msgstr ""
+
+msgid "hBP07-061_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP07-061_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP07-061_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP07-062_NAME"
+msgstr ""
+
+msgid "hBP07-062_ART_0_NAME"
+msgstr ""
+
+msgid "hBP07-062_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP07-062_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP07-062_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP07-080_NAME"
+msgstr ""
+
+msgid "hBP07-080_ART_0_NAME"
+msgstr ""
+
+msgid "hBP07-080_GIFT_NAME"
+msgstr ""
+
+msgid "hBP07-080_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP07-083_NAME"
+msgstr ""
+
+msgid "hBP07-083_ART_0_NAME"
+msgstr ""
+
+msgid "hBP07-083_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP07-083_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP07-083_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP07-086_NAME"
+msgstr ""
+
+msgid "hBP07-086_ART_0_NAME"
+msgstr ""
+
+msgid "hBP07-086_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP07-086_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP07-086_COLLAB_EFFECT"
+msgstr ""
+

@@ -474,6 +474,11 @@ class Side:
                     await self.send_message(self.player,"MESSAGE_REVEALED_HOLOPOWER",{"cardName":self.cards[currentCard].number + "_NAME"})
                     await self.remove_old_card(currentCard,True)
                     await self.add_to_fuda(currentCard, Fuda.holopower)
+            case 27: #Send Revealed Card to Bottom of Holopower
+                if currentCard is not None:
+                    await self.send_message(self.player,"MESSAGE_REVEALED_BOTTOMHOLOPOWER",{"cardName":self.cards[currentCard].number + "_NAME"})
+                    await self.remove_old_card(currentCard,True)
+                    await self.add_to_fuda(currentCard, Fuda.holopower, True)
             case 30: #Reveal and Attach Life
                 if currentCard is not None:
                     cheerCard = self.cards[currentCard]

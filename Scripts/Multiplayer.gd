@@ -362,6 +362,7 @@ func _download_zip_failed(_result):
 	%FailureTitle.text = tr("DOWNLOAD_FAIL")
 	%FailureBody.text = tr("DOWNLOAD_FAIL_FULL")
 	%TryAgain_Download.visible = true
+	%ManualDownload.visible = true
 	%TryAgain_Import.visible = false
 	
 	switch_menu("failure", false)
@@ -370,6 +371,7 @@ func _load_zip_failed():
 	%FailureTitle.text = tr("LOAD_FAIL")
 	%FailureBody.text = tr("LOAD_FAIL_FULL")
 	%TryAgain_Download.visible = false
+	%ManualDownload.visible = false
 	%TryAgain_Import.visible = true
 	
 	switch_menu("failure", false)
@@ -384,6 +386,9 @@ func _download_version_failed(_result):
 	%Popup.visible = false
 	
 	switch_menu("update", false)
+
+func _on_manual_download_pressed() -> void:
+	OS.shell_open("https://github.com/GabeJWJ/holoDelta/releases/tag/CardData")
 
 func _download_progress(_assigned_files, _current_files, _total_bytes, current_bytes):
 	%PopupProgressBar.value = current_bytes
@@ -1446,14 +1451,14 @@ func game_command(command: String, data: Dictionary) -> void:
 		"Chat":
 			if "sender" in data and "message" in data:
 				if data["sender"] == player_id:
-					chat.text += "\n\n" + tr("YOU") + ": " + data["message"]
+					chat.text += "\n\n ◇ " + tr("YOU") + ": " + data["message"]
 				else:
 					var sender_name = "ERROR"
 					if opponentSide:
 						sender_name = opponentSide.player_name
 					elif data["sender"] in spectatedSides:
 						sender_name = spectatedSides[data["sender"]].player_name
-					chat.text += "\n\n" + sender_name + ": " + data["message"]
+					chat.text += "\n\n ◇ " + sender_name + ": " + data["message"]
 					%Notification.visible = !%ChatVBoxMargins.visible
 		"Game Message":
 			if "sender" in data and "message_code" in data and "untranslated" in data and "translated" in data:
