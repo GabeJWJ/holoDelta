@@ -1265,14 +1265,14 @@ func _on_card_clicked(card_id : int) -> void:
 							popup.add_item(tr("CARD_HOLOMEM_PLAY"),100)
 						else:
 							popup.add_item(tr("CARD_HOLOMEM_PLAY_DIRECT"),100)
-					if !first_turn:
-						var bloomable = all_bloomable_zones(actualCard)
-						if bloomable[Settings.bloomCode.OK].size() > 0:
-							popup.add_item(tr("CARD_HOLOMEM_BLOOM"),101)
-						if bloomable[Settings.bloomCode.Skip].size() > 0:
-							popup.add_item(tr("CARD_HOLOMEM_BLOOM_SKIP"),104)
-						if bloomable[Settings.bloomCode.Instant].size() > 0:
-							popup.add_item(tr("CARD_HOLOMEM_BLOOM_FAST"),105)
+					
+					var bloomable = all_bloomable_zones(actualCard)
+					if bloomable[Settings.bloomCode.OK].size() > 0:
+						popup.add_item(tr("CARD_HOLOMEM_BLOOM"),101)
+					if bloomable[Settings.bloomCode.Skip].size() > 0:
+						popup.add_item(tr("CARD_HOLOMEM_BLOOM_SKIP"),104)
+					if bloomable[Settings.bloomCode.Instant].size() > 0:
+						popup.add_item(tr("CARD_HOLOMEM_BLOOM_FAST"),105)
 				elif currentZone:
 					if is_turn:
 						if !actualCard.rested and currentZone in [centerZone, collabZone] and !(first_turn and player1) and !is_goldfishing:

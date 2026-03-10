@@ -30,6 +30,8 @@ var spectatedSides = {}
 var inGame = false
 var rps = false
 
+var lastMessageWasChat = false
+
 # Lobby code only supports a-z, 0-9.
 var valid_lobby_code_regex_pattern := "[^a-z0-9]"
 var lobby_code_regex := RegEx.new()
@@ -1450,16 +1452,18 @@ func game_command(command: String, data: Dictionary) -> void:
 		
 		"Chat":
 			if "sender" in data and "message" in data:
+				var serf_verticalspacing = "" if lastMessageWasChat else "\n"
 				if data["sender"] == player_id:
-					chat.text += "\n\n ◇ " + tr("YOU") + ": " + data["message"]
+					chat.text += serf_verticalspacing + "\n ◇ " + tr("YOU") + ": " + data["message"]
 				else:
 					var sender_name = "ERROR"
 					if opponentSide:
 						sender_name = opponentSide.player_name
 					elif data["sender"] in spectatedSides:
 						sender_name = spectatedSides[data["sender"]].player_name
-					chat.text += "\n\n ◇ " + sender_name + ": " + data["message"]
+					chat.text += serf_verticalspacing + "\n ◇ " + sender_name + ": " + data["message"]
 					%Notification.visible = !%ChatVBoxMargins.visible
+				lastMessageWasChat = true
 		"Game Message":
 			if "sender" in data and "message_code" in data and "untranslated" in data and "translated" in data:
 				var format_info = data["untranslated"]
@@ -1473,14 +1477,17 @@ func game_command(command: String, data: Dictionary) -> void:
 					if new_value == data["translated"][key]:
 						new_value = tr(data["translated"][key])
 					format_info[key] = new_value
+				
+				var serf_verticalspacing = "\n" if lastMessageWasChat else ""
 				if data["sender"] == player_id:
-					chat.text += "\n" + tr("YOU_" + data["message_code"]).format(format_info)
+					chat.text += serf_verticalspacing + "\n" + tr("YOU_" + data["message_code"]).format(format_info)
 				else:
 					if opponentSide:
 						format_info["person"] = opponentSide.player_name
 					elif data["sender"] in spectatedSides:
 						format_info["person"] = spectatedSides[data["sender"]].player_name
-					chat.text += "\n" + tr(data["message_code"]).format(format_info)
+					chat.text += serf_verticalspacing + "\n" + tr(data["message_code"]).format(format_info)
+				lastMessageWasChat = false
 		"Game Win":
 			if "winner" in data and "reason" in data:
 				if data["winner"] == player_id:
