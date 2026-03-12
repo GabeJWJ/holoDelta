@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
-"PO-Revision-Date: 2026-03-10 23:35\n"
+"PO-Revision-Date: 2026-03-12 20:12\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "此Holo成員被擊倒時，自己的生命值-2"
@@ -9326,7 +9326,8 @@ msgid "hBP06-104_NAME"
 msgstr ""
 
 msgid "hBP06-104_EFFECT"
-msgstr ""
+msgstr "對手回合中，裝備此粉絲的Holo成員被擊倒時，將自己聲援牌組最上方的1張牌發送給自己的《大空スバル》。\n\n"
+"此粉絲僅能裝備於自己的《大空スバル》，且每人可裝備任意張數。"
 
 msgid "hBP06-041_NAME"
 msgstr ""
@@ -9338,13 +9339,13 @@ msgid "hBP06-041_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP06-041_COLLAB_EFFECT"
-msgstr ""
+msgstr "若在自己後攻的首回合，抽3張牌後，將2張手牌送入檔案區。"
 
 msgid "hBP06-085_NAME"
 msgstr ""
 
 msgid "hBP06-085_EFFECT"
-msgstr ""
+msgstr "從自己牌組中公開名稱相同的［Debut Holo成員與Buzz Holo成員］各1張，以及1張持有［Buzzグッズ］的支援卡，將公開的卡片加入手牌。然後將牌組洗牌。"
 
 msgid "hBP06-065_NAME"
 msgstr ""
@@ -9353,13 +9354,13 @@ msgid "hBP06-065_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-065_ART_0_EFFECT"
-msgstr ""
+msgstr "若在上個對手回合中自己的Holo成員被擊倒，則此技藝所需的「無色聲援」-1。"
 
 msgid "hBP06-065_GIFT_NAME"
 msgstr ""
 
 msgid "hBP06-065_GIFT_EFFECT"
-msgstr ""
+msgstr "當從Debut Holo成員綻放的此Holo成員使用技藝時，對對手的中心Holo成員或聯動Holo成員造成50點特殊傷害。"
 
 msgid "hBP06-050_NAME"
 msgstr ""
@@ -9368,7 +9369,7 @@ msgid "hBP06-050_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-050_ART_0_EFFECT"
-msgstr ""
+msgstr "對對手1位後備Holo成員造成10點特殊傷害。"
 
 msgid "hBP06-050_ART_1_NAME"
 msgstr ""
@@ -9383,7 +9384,7 @@ msgid "hBP06-016_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP06-016_COLLAB_EFFECT"
-msgstr ""
+msgstr "若在自己後攻的首回合，從自己牌組中公開1張持有［［聯動效果］與［＃FLOW GLOW］的Holo成員］，將其加入手牌。然後將牌組洗牌。"
 
 msgid "hBP06-070_NAME"
 msgstr ""
@@ -9392,13 +9393,13 @@ msgid "hBP06-070_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-070_ART_0_EFFECT"
-msgstr ""
+msgstr "若本回合自己使用過主推技能［無限の体力］，此技藝＋40。"
 
 msgid "hBP06-070_GIFT_NAME"
 msgstr ""
 
 msgid "hBP06-070_GIFT_EFFECT"
-msgstr ""
+msgstr "［中心位置限定］［每個回合一次］將自己場上的1張《ゆび》放回牌組最下方：此回合期間，此Holo成員技藝所需的［無色聲援］－2。"
 
 msgid "hBP06-033_NAME"
 msgstr ""
@@ -9407,13 +9408,13 @@ msgid "hBP06-033_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-033_ART_0_EFFECT"
-msgstr ""
+msgstr "將自己檔案區中的1張聲援，發送給持有［＃ReGLOSS］的Holo成員。"
 
 msgid "hBP06-033_BLOOM_NAME"
 msgstr ""
 
 msgid "hBP06-033_BLOOM_EFFECT"
-msgstr ""
+msgstr "若本回合自己使用過持有［＃きのこ］的事件卡，抽2張牌。自己的綻放效果［濡羽色のほころび］每回合只能使用一次。"
 
 msgid "hBP06-003_NAME"
 msgstr ""
@@ -9422,13 +9423,13 @@ msgid "hBP06-003_SKILL_NAME"
 msgstr ""
 
 msgid "hBP06-003_SKILL_EFFECT"
-msgstr ""
+msgstr "［每個回合一次］將自己聲援牌組頂端的1張牌發送給自己的[Buzz Holo成員或從Buzz Holo成員綻放的《風真いろは》]。"
 
 msgid "hBP06-003_SPSKILL_NAME"
 msgstr ""
 
 msgid "hBP06-003_SPSKILL_EFFECT"
-msgstr ""
+msgstr "［每場遊戲一次］本回合期間，自己舞台上每有1張聲援，自己舞台上所有《風真いろは》的技藝值＋１０。之後，若自己舞台上有Buzz Holo成員，抽3張牌。"
 
 msgid "hBP06-056_NAME"
 msgstr ""
@@ -9437,13 +9438,13 @@ msgid "hBP06-056_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-056_ART_0_EFFECT"
-msgstr ""
+msgstr "從自己牌組中公開最上方的6張牌。每公開1張Holo成員，此技藝＋20。然後將公開的牌放入檔案區。"
 
 msgid "hBP06-056_GIFT_NAME"
 msgstr ""
 
 msgid "hBP06-056_GIFT_EFFECT"
-msgstr ""
+msgstr "若自己在此遊戲中使用了SP主推技能「人生リセットボタン」，則此Holo成員的技藝「沙花叉と青春しよ？」所需的［紫色聲援］-1。"
 
 msgid "hBP06-055_NAME"
 msgstr ""
@@ -9452,13 +9453,13 @@ msgid "hBP06-055_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-055_ART_0_EFFECT"
-msgstr ""
+msgstr "從自己牌組中公開最上方的4張牌。每公開1張Holo成員卡，此技藝＋２０。然後將公開的牌放入檔案區。若其中存在事件卡，抽2張牌。"
 
 msgid "hBP06-055_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP06-055_COLLAB_EFFECT"
-msgstr ""
+msgstr "若自己的主推Holo成員是《紫咲シオン》，將對手檔案區中的3張聲援發送給對手的中心Holo成員。然後可以將自己檔案區中的1張聲援發送給至自己的《紫咲シオン》。"
 
 msgid "hBP06-045_NAME"
 msgstr ""
@@ -9467,19 +9468,22 @@ msgid "hBP06-045_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-045_ART_0_EFFECT"
-msgstr ""
+msgstr "將自己檔案區中的Holo成員1～5張以任意順序放回牌組最下方。每放回1張Holo成員，此技藝＋10。"
 
 msgid "hBP06-045_ART_1_NAME"
 msgstr ""
 
 msgid "hBP06-045_ART_1_EFFECT"
-msgstr ""
+msgstr "若自己在此遊戲中使用了SP主推技能「🎲ƎNOZ NꓵℲ ƎHꓕ Oꓕ ƎWOƆꓶƎM🎲」，對對手的中心Holo成員或聯動Holo成員造成100點特殊傷害。"
 
 msgid "hBP06-098_NAME"
 msgstr ""
 
 msgid "hBP06-098_EFFECT"
-msgstr ""
+msgstr "裝備此工具的Holo成員技藝+10。\n\n"
+"・若裝備於《百鬼あやめ》則追加能力\n"
+"當裝備此道具的Holo成員進行聯動時，若自己生命值為１且對手聯動位置沒有Holo成員，則對手須將自己1位後備Holo成員移至聯動位置（此移動不視為聯動行為）。\n\n"
+"每位Holo成員僅能裝備1張工具卡。"
 
 msgid "hBP06-023_NAME"
 msgstr ""
@@ -9491,7 +9495,7 @@ msgid "hBP06-023_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP06-023_COLLAB_EFFECT"
-msgstr ""
+msgstr "若在自己後攻的首回合，從自己牌組中公開1張Buzz Holo成員《風真いろは》，將其加入手牌。然後將牌組洗牌。"
 
 msgid "hBP06-080_NAME"
 msgstr ""
@@ -9500,19 +9504,19 @@ msgid "hBP06-080_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-080_ART_0_EFFECT"
-msgstr ""
+msgstr "此Holo成員每裝備1張《スバ友》，此技藝＋20。"
 
 msgid "hBP06-080_BLOOM_NAME"
 msgstr ""
 
 msgid "hBP06-080_BLOOM_EFFECT"
-msgstr ""
+msgstr "從自己牌組中公開1張［《スバルドダック》或《スバ友》］，加入手牌。然後將牌組洗牌。"
 
 msgid "hBP06-092_NAME"
 msgstr ""
 
 msgid "hBP06-092_EFFECT"
-msgstr ""
+msgstr "此回合期間，自己舞台上1位《博衣こより》技藝＋30。"
 
 msgid "hBP06-011_NAME"
 msgstr ""
@@ -9524,7 +9528,7 @@ msgid "hBP06-011_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP06-011_COLLAB_EFFECT"
-msgstr ""
+msgstr "從自己牌組中公開1張持有［＃Justice］的［Debut Holo成員或1st Holo成員］，將其加入手牌。然後將牌組洗牌。"
 
 msgid "hBP06-043_NAME"
 msgstr ""
@@ -9536,13 +9540,16 @@ msgid "hBP06-043_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP06-043_COLLAB_EFFECT"
-msgstr ""
+msgstr "可以將自己手牌中1張持有［＃Promise］的Holo成員放入檔案區：對對手的中心Holo成員或聯動Holo成員造成30點特殊傷害。"
 
 msgid "hBP06-101_NAME"
 msgstr ""
 
 msgid "hBP06-101_EFFECT"
-msgstr ""
+msgstr "裝備此吉祥物的Holo成員HP+20。\n\n"
+"・若裝備於《ムーナ・ホシノヴァ》則追加能力\n"
+"［每個回合1次］當裝備此吉祥物的Holo成員對對手Holo成員造成特殊傷害時，可將自己檔案庫中的［青色聲援］1張發送給自己的後備Holo成員。\n\n"
+"每位Holo成員僅能裝備1張吉祥物卡。"
 
 msgid "hBP06-032_NAME"
 msgstr ""
@@ -9554,7 +9561,7 @@ msgid "hBP06-032_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP06-032_COLLAB_EFFECT"
-msgstr ""
+msgstr "將自己聲援牌組最上方的1張牌，發送給除該Holo成員外自己持有［＃正義］的Holo成員。"
 
 msgid "hBP06-035_NAME"
 msgstr ""
@@ -9566,13 +9573,16 @@ msgid "hBP06-035_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP06-035_COLLAB_EFFECT"
-msgstr ""
+msgstr "若在自己後攻的首回合，從自己牌組中公開1張［道具、吉祥物或粉絲］，將其裝備於自己的《百鬼あやめ》上。然後將牌組洗牌。"
 
 msgid "hBP06-097_NAME"
 msgstr ""
 
 msgid "hBP06-097_EFFECT"
-msgstr ""
+msgstr "・若裝備於Buzz Holo成員，則附加能力\n"
+"⊡裝備此工具的Holo成員HP+30。\n"
+"⊡在對手主要階段期間，裝備此工具的Holo成員HP不會因為對手能力而減少或變動。\n\n"
+"每位Holo成員僅能裝備1張工具卡。"
 
 msgid "hBP06-072_NAME"
 msgstr ""
@@ -9584,13 +9594,15 @@ msgid "hBP06-072_GIFT_NAME"
 msgstr ""
 
 msgid "hBP06-072_GIFT_EFFECT"
-msgstr ""
+msgstr "此Holo成員承受的來自對手的1st Holo成員的技藝傷害-30。"
 
 msgid "hBP06-099_NAME"
 msgstr ""
 
 msgid "hBP06-099_EFFECT"
-msgstr ""
+msgstr "裝備此工具的Holo成員技藝+10。\n\n"
+"將此工具從手牌裝備至《戌神ころね》時，可將自己檔案區中的1張《戌神ころね》返回手牌。\n\n"
+"每位Holo成員僅能裝備1張工具卡。"
 
 msgid "hBP06-009_NAME"
 msgstr ""
@@ -9602,7 +9614,7 @@ msgid "hBP06-009_GIFT_NAME"
 msgstr ""
 
 msgid "hBP06-009_GIFT_EFFECT"
-msgstr ""
+msgstr "［中心位置限定］自己的聯動Holo成員承受的傷害減少10。"
 
 msgid "hBP06-048_NAME"
 msgstr ""
@@ -9611,7 +9623,7 @@ msgid "hBP06-048_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-048_ART_0_EFFECT"
-msgstr ""
+msgstr "［青色聲援］以外的聲援發送給此Holo成員時，對對手1名後備Holo成員造成10點特殊傷害。但即使擊倒也不會減少對手生命值。"
 
 msgid "hBP06-030_NAME"
 msgstr ""
@@ -9620,19 +9632,20 @@ msgid "hBP06-030_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-030_ART_0_EFFECT"
-msgstr ""
+msgstr "可將自己檔案區中的1張《ルーナイト》裝備至自己的《姫森ルーナ》。"
 
 msgid "hBP06-030_GIFT_NAME"
 msgstr ""
 
 msgid "hBP06-030_GIFT_EFFECT"
-msgstr ""
+msgstr "［聯動位置限定］對手回合中，要將自己中心Holo成員裝備的《ルーナイト》放入檔案區時，可改為將其重新裝備至自己的後備Holo成員《姬森露娜》身上。"
 
 msgid "hBP06-103_NAME"
 msgstr ""
 
 msgid "hBP06-103_EFFECT"
-msgstr ""
+msgstr "當自己的［主推Holo成員或［＃１期生］Holo成員］使用能力擲骰時，可將此粉絲放入檔案區：將一個骰子的點數視為4點。\n\n"
+"此粉絲僅能裝備於自己的《夏色まつり》，且每人可裝備任意張數。"
 
 msgid "hBP06-005_NAME"
 msgstr ""
@@ -9641,13 +9654,13 @@ msgid "hBP06-005_SKILL_NAME"
 msgstr ""
 
 msgid "hBP06-005_SKILL_EFFECT"
-msgstr ""
+msgstr "［每個回合一次］若自己在此遊戲中使用了SP主推技能，則擲1次骰子。從自己的牌組抽牌，直到手牌數量與骰子點數相同為止。"
 
 msgid "hBP06-005_SPSKILL_NAME"
 msgstr ""
 
 msgid "hBP06-005_SPSKILL_EFFECT"
-msgstr ""
+msgstr "［每場遊戲一次］擲1次骰子。從自己手牌中將骰子點數相同數量的牌放入檔案區。"
 
 msgid "hBP06-067_NAME"
 msgstr ""
@@ -9659,7 +9672,7 @@ msgid "hBP06-067_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP06-067_COLLAB_EFFECT"
-msgstr ""
+msgstr "可將手牌中1張持有［＃ゲーマーズ］的Holo成員卡放入檔案區：抽1張牌。"
 
 msgid "hBP06-017_NAME"
 msgstr ""
@@ -9677,13 +9690,13 @@ msgid "hBP06-060_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-060_ART_0_EFFECT"
-msgstr ""
+msgstr "若自己的主推Holo成員是《森カリオペ》，可將自己牌組最上方的2張牌放入檔案區。若執行此操作，將自己的聲援牌組最上方的1張牌發送給自己的Holo成員。"
 
 msgid "hBP06-060_ART_1_NAME"
 msgstr ""
 
 msgid "hBP06-060_ART_1_EFFECT"
-msgstr ""
+msgstr "此回合期間，自己舞台上持有［＃Myth］的1位Holo成員技藝+20。之後，若自己的主推Holo成員為《森カリオペ》，且自己檔案區的Holo成員達8張以上，抽1張牌。"
 
 msgid "hBP06-082_NAME"
 msgstr ""
@@ -9692,13 +9705,13 @@ msgid "hBP06-082_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-082_ART_0_EFFECT"
-msgstr ""
+msgstr "若自己在此回合中使用了主推技能「神秘の儀式」，則可將自己檔案區中的1～3張《アーニャ・メルフィッサ》返回手牌。"
 
 msgid "hBP06-082_GIFT_NAME"
 msgstr ""
 
 msgid "hBP06-082_GIFT_EFFECT"
-msgstr ""
+msgstr "［聯動位置限定］若你的主推Holo成員為《アーニャ・メルフィッサ》，則自己裝備有《古代武器》的［中心Holo成員與聯動Holo成員］所受的技藝傷害-30。"
 
 msgid "hBP06-020_NAME"
 msgstr ""
@@ -9707,13 +9720,13 @@ msgid "hBP06-020_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-020_ART_0_EFFECT"
-msgstr ""
+msgstr "將自己牌組最上方的1至3張牌放入檔案區。每放入1張牌，此技藝+20。"
 
 msgid "hBP06-020_GIFT_NAME"
 msgstr ""
 
 msgid "hBP06-020_GIFT_EFFECT"
-msgstr ""
+msgstr "對手的回合中，此Holo成員被擊倒時，可將自己牌組最上方的2張牌放入檔案區。若將牌放入檔案區，則自己舞台上每有1位持有［＃FLOW GLOW］且卡名不同的Holo成員，就抽1張牌。"
 
 msgid "hBP06-037_NAME"
 msgstr ""
@@ -9722,13 +9735,13 @@ msgid "hBP06-037_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-037_ART_0_EFFECT"
-msgstr ""
+msgstr "可將自己聲援牌組最上方的1張牌放入檔案區：對對手的中心Holo成員或聯動Holo成員造成30點特殊傷害。"
 
 msgid "hBP06-037_BLOOM_NAME"
 msgstr ""
 
 msgid "hBP06-037_BLOOM_EFFECT"
-msgstr ""
+msgstr "可將自己檔案區中的2張［紅色聲援］以任意順序放回聲援牌組最下方。"
 
 msgid "hBP06-054_NAME"
 msgstr ""
@@ -9737,13 +9750,13 @@ msgid "hBP06-054_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-054_ART_0_EFFECT"
-msgstr ""
+msgstr "此Holo成員每裝備1張《雪民》，此技藝+10。"
 
 msgid "hBP06-054_BLOOM_NAME"
 msgstr ""
 
 msgid "hBP06-054_BLOOM_EFFECT"
-msgstr ""
+msgstr "若此Holo成員裝備有《雪民》，對對手的中心Holo成員造成20點特殊傷害。之後，抽1張牌。若此Holo成員裝備有3張或以上《雪民》效果，則改為抽2張牌。"
 
 msgid "hBP06-047_NAME"
 msgstr ""
@@ -9752,13 +9765,13 @@ msgid "hBP06-047_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-047_ART_0_EFFECT"
-msgstr ""
+msgstr "［聯動位置限定］對對手的聯動Holo成員造成50點特殊傷害。若對手無聯動Holo成員，則改為對對手的中心Holo成員造成50點特殊傷害。"
 
 msgid "hBP06-047_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP06-047_COLLAB_EFFECT"
-msgstr ""
+msgstr "如果自己主推的Holo成員是《一条莉々華》，且自己的檔案區中有2張以上的《限界飯》，抽2張牌。"
 
 msgid "hBP06-028_NAME"
 msgstr ""
@@ -9773,13 +9786,13 @@ msgid "hBP06-001_SKILL_NAME"
 msgstr ""
 
 msgid "hBP06-001_SKILL_EFFECT"
-msgstr ""
+msgstr "［每個回合一次］若你的中心Holo成員是《ラオーラ・パンテーラ》，從自己牌組中公開1張與自己的聯動Holo成員同卡名的Holo成員，將其加入手牌。然後將牌組洗牌。"
 
 msgid "hBP06-001_SPSKILL_NAME"
 msgstr ""
 
 msgid "hBP06-001_SPSKILL_EFFECT"
-msgstr ""
+msgstr "［每場遊戲一次］此遊戲期間，自己所有《ラオーラ・パンテーラ》在重置步驟時不會休息。"
 
 msgid "hBP06-022_NAME"
 msgstr ""
@@ -9794,7 +9807,7 @@ msgid "hBP06-057_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-057_ART_0_EFFECT"
-msgstr ""
+msgstr "抽1張牌，將1張手牌放入檔案區。"
 
 msgid "hBP06-034_NAME"
 msgstr ""
@@ -9803,7 +9816,7 @@ msgid "hBP06-034_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-034_ART_0_EFFECT"
-msgstr ""
+msgstr "可將自己1張手牌放入檔案區：本回合期間，自己的中央Holo成員《百鬼あやめ》技藝+30。"
 
 msgid "hBP06-078_NAME"
 msgstr ""
@@ -9815,7 +9828,7 @@ msgid "hBP06-078_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP06-078_COLLAB_EFFECT"
-msgstr ""
+msgstr "可將此Holo成員的聲援放入檔案區：從自己牌組中公開1張與自己的主推Holo成員同名的Debut Holo成員卡，將其加入手牌。然後將牌組洗牌。"
 
 msgid "hBP06-046_NAME"
 msgstr ""
@@ -9824,13 +9837,13 @@ msgid "hBP06-046_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-046_ART_0_EFFECT"
-msgstr ""
+msgstr "若你的主推Holo成員是《鷹嶺ルイ》，則可將自己2張手牌放入檔案區：對對手的中心Holo成員或聯動Holo成員造成50點特殊傷害。"
 
 msgid "hBP06-046_GIFT_NAME"
 msgstr ""
 
 msgid "hBP06-046_GIFT_EFFECT"
-msgstr ""
+msgstr "若自己在此遊戲中使用了SP主推技能「ホークアイ」，此Holo成員的技藝+20。"
 
 msgid "hBP06-026_NAME"
 msgstr ""
@@ -9842,7 +9855,7 @@ msgid "hBP06-026_GIFT_NAME"
 msgstr ""
 
 msgid "hBP06-026_GIFT_EFFECT"
-msgstr ""
+msgstr "［中心位置限定］自己的Holo成員聯動時，若自己的手牌張數達5張以上，可將自己聲援牌組最上方的1張牌發送給自己的聯動Holo成員。"
 
 msgid "hBP06-021_NAME"
 msgstr ""
@@ -9851,13 +9864,13 @@ msgid "hBP06-021_ART_0_NAME"
 msgstr ""
 
 msgid "hBP06-021_ART_0_EFFECT"
-msgstr ""
+msgstr "可將自己檔案區中1張持有［＃こよラボ］的支援卡放回牌組最下方：此技藝＋40。"
 
 msgid "hBP06-021_COLLAB_NAME"
 msgstr ""
 
 msgid "hBP06-021_COLLAB_EFFECT"
-msgstr ""
+msgstr "此回合期間，自己舞台上持有［＃秘密結社holoX］的1位Holo成員，技藝+30。若該Holo成員裝備有持有［＃こよラボ］的支援卡，則改為該Holo成員的技藝+50。"
 
 msgid "hBP06-007_NAME"
 msgstr ""
@@ -9866,13 +9879,13 @@ msgid "hBP06-007_SKILL_NAME"
 msgstr ""
 
 msgid "hBP06-007_SKILL_EFFECT"
-msgstr ""
+msgstr "［每個回合一次］在對手回合中，當自己的《ロボ子さん》被擊倒時可使用：將自己牌組最上方的2張牌放入檔案區。然後將檔案區中的1張《ロボ子さん》返回手牌。"
 
 msgid "hBP06-007_SPSKILL_NAME"
 msgstr ""
 
 msgid "hBP06-007_SPSKILL_EFFECT"
-msgstr ""
+msgstr "［每場遊戲一次］抽2張牌，將2張手牌放入檔案區。然後可從自己的檔案區中選擇任意張數的《ろぼさー》，將其分配給自己的《ロボ子さん》。"
 
 msgid "hBP06-091_NAME"
 msgstr ""
