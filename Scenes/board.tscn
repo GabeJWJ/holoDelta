@@ -2194,8 +2194,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 2
 theme_override_constants/outline_size = 4
-theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
+scroll_following = true
 selection_enabled = true
 
 [node name="CloseError" type="TextureButton" parent="CanvasLayer/Error/ErrorMargins/ErrorHBox" unique_id=652982033]
@@ -2234,6 +2235,7 @@ bus = &"BGM"
 unique_name_in_owner = true
 script = ExtResource("20_v32ia")
 route = "/ws"
+use_WSS = false
 autoconnect_mode = 2
 
 [node name="Timer" type="Timer" parent="." unique_id=1611810139]

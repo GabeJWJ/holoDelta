@@ -1,65 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: holodelta\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-08-23 14:11-0400\n"
-"Last-Translator: \n"
-"Language-Team: Chinese (Traditional)\n"
-"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: holodelta\n"
 "X-Crowdin-Project-ID: 724315\n"
 "X-Crowdin-Language: zh-TW\n"
 "X-Crowdin-File: template.pot\n"
 "X-Crowdin-File-ID: 6\n"
-"X-Generator: Poedit 3.5\n"
-
-#: Scenes/board.tscn
-msgid "SEND_CHAT"
-msgstr "傳送"
-
-#: Scenes/board.tscn
-msgid "OPTION_COSMETICS_HIDE"
-msgstr "隱藏對手外觀"
-
-#: Scenes/board.tscn
-msgid "TAB_INFO"
-msgstr "資訊"
-
-#: Scenes/board.tscn
-msgid "TAB_CHAT"
-msgstr "聊天"
-
-#: Scenes/board.tscn
-msgid "TAB_SETTINGS"
-msgstr "設定"
-
-#: Scenes/board.tscn
-msgid "STEP1"
-msgstr "重置"
-
-#: Scenes/board.tscn
-msgid "STEP2"
-msgstr "抽牌"
-
-#: Scenes/board.tscn
-msgid "STEP3"
-msgstr "聲援"
-
-#: Scenes/board.tscn
-msgid "STEP4"
-msgstr "主要"
-
-#: Scenes/board.tscn
-msgid "STEP5"
-msgstr "表現"
-
-#: Scenes/board.tscn
-msgid "STEP6"
-msgstr "結束"
+"Language-Team: Chinese Traditional\n"
+"Language: zh_TW\n"
+"PO-Revision-Date: 2026-04-24 01:58\n"
 
 #: Scenes/board.tscn
 msgid "TITLE"
@@ -69,85 +22,62 @@ msgstr "holoDelta"
 msgid "SUBTITLE"
 msgstr "一個非官方的Hololive OCG模擬器"
 
-#: Scenes/board.tscn Scenes/side.tscn
-msgid "RPS_ROCK"
-msgstr "石頭"
-
-#: Scenes/board.tscn Scenes/side.tscn
-msgid "RPS_PAPER"
-msgstr "布"
-
-#: Scenes/board.tscn Scenes/side.tscn
-msgid "RPS_SCISSORS"
-msgstr "剪刀"
-
-#: Scenes/board.tscn Scripts/side.gd Scripts/Multiplayer.gd
-msgid "RPS_WAIT"
-msgstr "等待對手..."
+#: Scenes/board.tscn
+msgid "DEBUG"
+msgstr "快速刷新"
 
 #: Scenes/board.tscn
 msgid "DECK_CREATE"
 msgstr "建立/編輯牌組"
 
 #: Scenes/board.tscn
-msgid "DEBUG"
-msgstr "快速刷新"
+msgid "COSMETICS"
+msgstr "外觀"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:1047
+msgid "OPTION_EN"
+msgstr "僅限英文卡"
+
+#: Scenes/board.tscn
+msgid "INFO"
+msgstr "資訊"
 
 #: Scenes/board.tscn
 msgid "LOBBY_CREATE"
 msgstr "建立大廳"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "PLAYERS_ONLINE"
-msgstr "{amount} 位玩家在線"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:889
 msgid "LOBBY_JOIN"
 msgstr "加入大廳"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:890
+#: Scripts/Multiplayer.gd:1765
 msgid "LOBBY_SPECTATE"
 msgstr "觀看對戰"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_PRIVATE"
-msgstr "私人"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_ALLOWSPECTATORS"
-msgstr "允許觀戰"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST"
-msgstr "禁卡表"
-
-#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_NONE"
-msgstr "無禁卡表"
-
-#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_CURRENT"
-msgstr "現行"
-
-#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_CURRENT_EN"
-msgstr "現行 (英文)"
-
-#: Scenes/board.tscn Scenes/deck_creation.tscn Scripts/Multiplayer.gd
-msgid "LOBBY_BANLIST_UNRELEASED"
-msgstr "現行 + 未發行"
+#: Scenes/board.tscn
+msgid "SOLO_GOLDFISH"
+msgstr ""
 
 #: Scenes/board.tscn
-msgid "LOBBY_BACK"
-msgstr "返回"
+#: Scripts/Multiplayer.gd:888
+msgid "PLAYERS_ONLINE"
+msgstr "{amount} 位玩家在線"
 
 #: Scenes/board.tscn
-msgid "EXIT"
-msgstr "離開遊戲"
+msgid "INFO_DLOC"
+msgstr "牌組位置"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "OPTION_EN"
-msgstr "僅限英文卡"
+#: Scenes/board.tscn
+msgid "INFO_CANCEL"
+msgstr "關閉"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_GAME_OPTIONS"
+msgstr ""
 
 #: Scenes/board.tscn
 msgid "OPTION_UNREVEALED"
@@ -160,6 +90,14 @@ msgstr "匹配卡片語言"
 #: Scenes/board.tscn
 msgid "OPTION_PROXY"
 msgstr "允許代牌"
+
+#: Scenes/board.tscn
+msgid "SETTINGS_AUDIO_OPTIONS"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SETTINGS_KEYBINDINGS"
+msgstr ""
 
 #: Scenes/board.tscn
 msgid "ACTION_DRAW"
@@ -190,32 +128,19 @@ msgid "ACTION_NSTEP"
 msgstr "下一階段"
 
 #: Scenes/board.tscn
-msgid "COSMETICS"
-msgstr "外觀"
+#: Scripts/Multiplayer.gd:196
+#: Scripts/Multiplayer.gd:1052
+msgid "LOBBY_PUBLIC_LOBBIES_FOUND"
+msgstr ""
 
 #: Scenes/board.tscn
-msgid "COSMETICS_CANCEL"
-msgstr "關閉"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_PM"
-msgstr "從檔案載入桌墊"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_D"
-msgstr "從檔案載入骰子"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_PM_DEFAULT"
-msgstr "恢復預設桌墊"
-
-#: Scenes/board.tscn
-msgid "COSMETICS_D_DEFAULT"
-msgstr "恢復預設骰子"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1766
 msgid "LOBBY_LOBBYCODE"
 msgstr "輸入大廳代碼"
+
+#: Scenes/board.tscn
+msgid "LOBBY_LOBBYCODE_PASTE"
+msgstr ""
 
 #: Scenes/board.tscn
 msgid "LOBBY_SEARCHING"
@@ -225,65 +150,254 @@ msgstr "搜尋中..."
 msgid "LOBBY_REFRESH"
 msgstr "刷新"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+msgid "LOBBY_BACK"
+msgstr "返回"
+
+#: Scenes/board.tscn
+msgid "LOBBY_SETTINGS"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:1764
+msgid "LOBBY_PRIVATE"
+msgstr "私人"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:1768
+msgid "LOBBY_ALLOWSPECTATORS"
+msgstr "允許觀戰"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:1032
+#: Scripts/Multiplayer.gd:1758
+msgid "LOBBY_BANLIST"
+msgstr "禁卡表"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd:1035
+#: Scripts/Multiplayer.gd:1759
+msgid "LOBBY_BANLIST_NONE"
+msgstr "無禁卡表"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd:1037
+#: Scripts/Multiplayer.gd:1760
+msgid "LOBBY_BANLIST_CURRENT"
+msgstr "現行"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd:1039
+msgid "LOBBY_BANLIST_CURRENT_EN"
+msgstr "現行 (英文)"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd:1041
+#: Scripts/Multiplayer.gd:1761
+msgid "LOBBY_BANLIST_UNRELEASED"
+msgstr "現行 + 未發行"
+
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
+#: Scripts/Multiplayer.gd:1043
+msgid "LOBBY_BANLIST_UNRELEASED_EN"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "GOLDFISH_MENU"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:1223
+#: Scripts/Multiplayer.gd:1224
+msgid "DECK_SELECT"
+msgstr "選擇牌組"
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:197
+#: Scripts/Multiplayer.gd:1100
+msgid "SPECTATE_PUBLIC_GAMES_FOUND"
+msgstr ""
+
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:1767
 msgid "LOBBY_GAMECODE"
 msgstr "輸入遊戲代碼"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PLAYMATDICE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM"
+msgstr "從檔案載入桌墊"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_PM_DEFAULT"
+msgstr "恢復預設桌墊"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D"
+msgstr "從檔案載入骰子"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_D_DEFAULT"
+msgstr "恢復預設骰子"
+
+#: Scenes/board.tscn
+msgid "COSMETICS_SP"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_SP_DEFAULT"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_DEFAULTSLEEVES"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "COSMETICS_CANCEL"
+msgstr "關閉"
+
+#: Scenes/board.tscn
+msgid "EXIT"
+msgstr "離開遊戲"
+
+#: Scenes/board.tscn
+msgid "STEP1"
+msgstr "重置"
+
+#: Scenes/board.tscn
+msgid "STEP2"
+msgstr "抽牌"
+
+#: Scenes/board.tscn
+msgid "STEP3"
+msgstr "聲援"
+
+#: Scenes/board.tscn
+msgid "STEP4"
+msgstr "主要"
+
+#: Scenes/board.tscn
+msgid "STEP5"
+msgstr "表現"
+
+#: Scenes/board.tscn
+msgid "STEP6"
+msgstr "結束"
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_CHAT"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SEND_CHAT"
+msgstr "傳送"
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_OPTIONS"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "SIDEBAR_GAME_CODE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "OPTION_COSMETICS_HIDE"
+msgstr "隱藏對手外觀"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_ROCK"
+msgstr "石頭"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_PAPER"
+msgstr "布"
+
+#: Scenes/board.tscn
+#: Scenes/side.tscn
+msgid "RPS_SCISSORS"
+msgstr "剪刀"
+
+#: Scenes/board.tscn
+#: Scripts/side.gd:343
+#: Scripts/Multiplayer.gd:1424
+msgid "RPS_WAIT"
+msgstr "等待對手..."
 
 #: Scenes/board.tscn
 msgid "LOBBY_HOST"
 msgstr "房主"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:1135
+#: Scripts/Multiplayer.gd:1233
+#: Scripts/Multiplayer.gd:1236
 msgid "LOBBY_NONE_CHOSEN"
 msgstr "無人"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:961
+#: Scripts/Multiplayer.gd:965
+#: Scripts/Multiplayer.gd:1221
+#: Scripts/Multiplayer.gd:1222
 msgid "LOBBY_READY"
 msgstr "準備"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
-msgid "DECK_SELECT"
-msgstr "選擇牌組"
 
 #: Scenes/board.tscn
 msgid "LOBBY_CHOSEN"
 msgstr "已選擇"
 
 #: Scenes/board.tscn
+msgid "LOBBY_CODE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "LOBBY_LOBBYCODE_COPY"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "LOBBY_SELECT_OPPONENT"
+msgstr ""
+
+#: Scenes/board.tscn
 msgid "LOBBY_STARTGAME"
 msgstr "開始遊戲"
 
-#: Scenes/board.tscn Scenes/side.tscn
+#: Scenes/board.tscn
+#: Scenes/side.tscn
 msgid "OK"
 msgstr "確定"
 
 #: Scenes/board.tscn
-msgid "INFO"
-msgstr "資訊"
-
-#: Scenes/board.tscn
-msgid "INFO_DLOC"
-msgstr "牌組位置"
-
-#: Scenes/board.tscn
-msgid "INFO_CANCEL"
-msgstr "關閉"
-
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:976
 msgid "LOBBY_GAMESTART_SPECTATE"
 msgstr "遊戲已開始。要觀戰嗎？"
 
-#: Scenes/board.tscn Scenes/deck_list.tscn Scenes/side.tscn
+#: Scenes/board.tscn
+#: Scenes/deck_list.tscn
+#: Scenes/side.tscn
 #: Scenes/deck_creation.tscn
 msgid "YES"
 msgstr "是"
 
-#: Scenes/board.tscn Scenes/deck_list.tscn Scenes/side.tscn
+#: Scenes/board.tscn
+#: Scenes/deck_list.tscn
+#: Scenes/side.tscn
 #: Scenes/deck_creation.tscn
 msgid "NO"
 msgstr "否"
 
-#: Scenes/board.tscn Scenes/deck_creation.tscn
+#: Scenes/board.tscn
+#: Scenes/deck_creation.tscn
 msgid "MENU"
 msgstr "主選單"
 
@@ -291,23 +405,59 @@ msgstr "主選單"
 msgid "MENU_PROMPT"
 msgstr "確定要返回主選單嗎？"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:362
 msgid "DOWNLOAD_FAIL"
 msgstr "下載卡片資料失敗"
 
-#: Scenes/board.tscn Scripts/Multiplayer.gd
+#: Scenes/board.tscn
+#: Scripts/Multiplayer.gd:363
 msgid "DOWNLOAD_FAIL_FULL"
-msgstr "無法下載 cardData.zip 檔案。\n這可能由多種原因造成，無法確定具體問題。"
+msgstr "無法下載 cardData.zip 檔案。\n"
+"這可能由多種原因造成，無法確定具體問題。"
 
 #: Scenes/board.tscn
 msgid "TRYAGAIN"
 msgstr "再試一次"
+
+#: Scenes/board.tscn
+msgid "MANUALDOWNLOAD"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU_CLIENT_UPTODATE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "DOWNLOAD_CLIENT"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "UPDATE_MENU_CARD_UPTODATE"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "DOWNLOAD_CARD"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "UPDATE_NOTFOUND"
+msgstr ""
+
+#: Scenes/board.tscn
+msgid "BACK"
+msgstr ""
 
 #: Scenes/deck_list.tscn
 msgid "DECK_SELECT_CANCEL"
 msgstr "取消"
 
 #: Scenes/deck_list.tscn
+#: Scripts/deck_list.gd:89
 msgid "DECK_DELETE_CONFIRM"
 msgstr "要永久刪除 {deckName} 嗎？"
 
@@ -340,6 +490,14 @@ msgid "END_TURN"
 msgstr "結束回合"
 
 #: Scenes/side.tscn
+#: Scripts/side.gd:441
+#: Scripts/side.gd:1949
+#: Scripts/side.gd:1979
+#: Scripts/side.gd:2197
+msgid "TURN_COUNT"
+msgstr ""
+
+#: Scenes/side.tscn
 msgid "START_READY"
 msgstr "準備好了"
 
@@ -355,53 +513,106 @@ msgstr "對手"
 msgid "MULLIGAN_TEXT"
 msgstr "正在檢視對手的調度"
 
+#: Scenes/info_panel.tscn
+msgid "SIDEBAR_INFO"
+msgstr ""
+
 #: Scenes/deck_creation.tscn
 msgid "TAB_OSHI"
 msgstr "主推"
-
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
-msgid "NAME"
-msgstr "名稱"
-
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
-msgid "COLOR"
-msgstr "顏色"
-
-#: Scenes/deck_creation.tscn
-msgid "FILTER_CLEAR"
-msgstr "清除篩選"
 
 #: Scenes/deck_creation.tscn
 msgid "SEARCH"
 msgstr "搜尋"
 
 #: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:474
+#: Scripts/deck_creation.gd:517
+#: Scripts/deck_creation.gd:529
+#: Scripts/deck_creation.gd:638
+msgid "NAME"
+msgstr "名稱"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:485
+#: Scripts/deck_creation.gd:516
+#: Scripts/deck_creation.gd:540
+#: Scripts/deck_creation.gd:583
+#: Scripts/deck_creation.gd:637
+msgid "COLOR"
+msgstr "顏色"
+
+#: Scenes/deck_creation.tscn
+msgid "LIFE_5"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+msgid "LIFE_6"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:503
+#: Scripts/deck_creation.gd:518
+#: Scripts/deck_creation.gd:622
+#: Scripts/deck_creation.gd:642
+#: Scripts/deck_creation.gd:672
+#: Scripts/deck_creation.gd:699
+msgid "SETCODE"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+msgid "FILTER_CLEAR"
+msgstr "清除篩選"
+
+#: Scenes/deck_creation.tscn
 msgid "TAB_HOLOMEM"
 msgstr "Holo成員"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:562
+#: Scripts/deck_creation.gd:639
 msgid "LEVEL"
 msgstr "等級"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:153
 msgid "LEVEL_ANY"
 msgstr "任何等級"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:1183
 msgid "LEVEL_DEBUT"
 msgstr "出道"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:1183
 msgid "LEVEL_1"
 msgstr "1st"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:1183
 msgid "LEVEL_2"
 msgstr "2nd"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:1183
 msgid "LEVEL_SPOT"
 msgstr "SPOT"
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:640
+msgid "ADVANTAGE"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:594
+#: Scripts/deck_creation.gd:641
+msgid "EFFECT"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+msgid "EFFECT_ANY"
+msgstr ""
 
 #: Scenes/deck_creation.tscn
 msgid "TAG_PLURAL"
@@ -412,16 +623,32 @@ msgid "BUZZ"
 msgstr "Buzz"
 
 #: Scenes/deck_creation.tscn
+msgid "NOTBUZZ"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
 msgid "TAB_SUPPORT"
 msgstr "支援"
 
-#: Scenes/deck_creation.tscn Scripts/deck_creation.gd
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:654
+#: Scripts/deck_creation.gd:698
 msgid "SUPPORT_TYPE"
 msgstr "類型"
 
 #: Scenes/deck_creation.tscn
 msgid "SUPPORT_LIMITED"
 msgstr "限制"
+
+#: Scenes/deck_creation.tscn
+msgid "SUPPORT_UNLIMITED"
+msgstr ""
+
+#: Scenes/deck_creation.tscn
+#: Scripts/deck_creation.gd:683
+#: Scripts/deck_creation.gd:700
+msgid "TAG"
+msgstr ""
 
 #: Scenes/deck_creation.tscn
 msgid "TAB_CHEER"
@@ -446,10 +673,6 @@ msgstr "主牌組"
 #: Scenes/deck_creation.tscn
 msgid "CHEER"
 msgstr "聲援"
-
-#: Scenes/deck_creation.tscn
-msgid "OSHI"
-msgstr "主推"
 
 #: Scenes/deck_creation.tscn
 msgid "LOAD"
@@ -479,1378 +702,1583 @@ msgstr "下載"
 msgid "DECK_SAVE_CANCEL"
 msgstr "取消"
 
-#: Scripts/RemapButton.gd
+#: Scenes/deck_creation.tscn
+msgid "LOADING"
+msgstr ""
+
+#: Scripts/RemapButton.gd:27
 msgid "REMAP_WAIT"
 msgstr "... 等待中 ..."
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:235
+#: Scripts/deck_creation.gd:251
 msgid "NAME_ANY"
 msgstr "任何名稱"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:241
+#: Scripts/deck_creation.gd:257
 msgid "COLOR_ANY"
 msgstr "任何顏色"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:246
+#: Scripts/deck_creation.gd:275
+#: Scripts/deck_creation.gd:290
+msgid "SETCODE_ANY"
+msgstr ""
+
+#: Scripts/deck_creation.gd:266
+msgid "ADVANTAGE_ANY"
+msgstr ""
+
+#: Scripts/deck_creation.gd:285
 msgid "SUPPORT_TYPE_ANY"
 msgstr "任何類型"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:295
+msgid "TAG_ANY"
+msgstr ""
+
+#: Scripts/deck_creation.gd:1131
+#: Scripts/deck_creation.gd:1375
 msgid "DECKERROR_NOOSHI"
 msgstr "未選擇主推。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1133
+#: Scripts/deck_creation.gd:1372
 msgid "DECKERROR_FAKEOSHI"
 msgstr "{cardNum} 不是一張主推卡。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1135
+#: Scripts/deck_creation.gd:1156
+#: Scripts/deck_creation.gd:1167
+#: Scripts/deck_creation.gd:1370
 msgid "DECKERROR_BANNED"
 msgstr "{cardNum} 是禁卡。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1138
+#: Scripts/deck_creation.gd:1381
 msgid "DECKERROR_UNDERDECK"
 msgstr "主牌組卡片數量過少。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1140
+#: Scripts/deck_creation.gd:1382
 msgid "DECKERROR_OVERDECK"
 msgstr "主牌組卡片數量過多。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1142
+#: Scripts/deck_creation.gd:1386
 msgid "DECKERROR_UNDERCHEER"
 msgstr "聲援牌組卡片數量過少。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1144
+#: Scripts/deck_creation.gd:1387
 msgid "DECKERROR_OVERCHEER"
 msgstr "聲援牌組卡片數量過多。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1152
+#: Scripts/deck_creation.gd:1163
+#: Scripts/deck_creation.gd:1174
+#: Scripts/deck_creation.gd:1377
 msgid "DECKERROR_NEGATIVEAMOUNT"
 msgstr "卡片 {cardNum} 的數量為負值。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1154
+#: Scripts/deck_creation.gd:1379
 msgid "DECKERROR_FAKEMAIN"
 msgstr "{cardNum} 不應放入主牌組。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1159
+#: Scripts/deck_creation.gd:1380
 msgid "DECKERROR_NODEBUTS"
 msgstr "未選擇任何出道卡。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1165
+#: Scripts/deck_creation.gd:1385
 msgid "DECKERROR_FAKECHEER"
 msgstr "{cardNum} 不是聲援卡。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1172
+#: Scripts/deck_creation.gd:1378
 msgid "DECKERROR_OVERAMOUNT"
 msgstr "卡片 {cardNum} 的數量過多。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1176
+#: Scripts/deck_creation.gd:1376
 msgid "DECKERROR_RESTRICTED"
 msgstr "{cardNum} 是限制卡，放入的數量超過上限。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1243
 msgid "DECK_OVERWRITE"
 msgstr "是否覆寫 {fileName}？"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1371
 msgid "DECKERROR_NOALTART"
 msgstr "{cardNum} 沒有該異圖版本。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1373
 msgid "DECKERROR_FAKECARD"
 msgstr "{cardNum} 不是一張真實的卡片。至少，資料庫裡沒有。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1374
 msgid "DECKERROR_OSHIBADFORMAT"
 msgstr "主推資料格式不正確。您確定這是 holoDelta 的牌組檔案嗎？"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1383
 msgid "DECKERROR_DECKBADFORMAT"
 msgstr "主牌組資料格式不正確。您確定這是 holoDelta 的牌組檔案嗎？"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1384
 msgid "DECKERROR_NODECK"
 msgstr "沒有主牌組。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1388
 msgid "DECKERROR_CHEERBADFORMAT"
 msgstr "聲援牌組資料格式不正確。您確定這是 holoDelta 的牌組檔案嗎？"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1389
 msgid "DECKERROR_NOCHEER"
 msgstr "沒有聲援牌組。"
 
-#: Scripts/deck_creation.gd
+#: Scripts/deck_creation.gd:1390
 msgid "DECKERROR_ONLYEN"
 msgstr "{cardNum} (或所選的特定卡圖) 沒有英文版本。"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:113
 msgid "DECK"
 msgstr "牌組"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:114
 msgid "CHEERDECK"
 msgstr "聲援牌組"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:115
 msgid "ARCHIVE"
 msgstr "檔案區"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:116
 msgid "HOLOPOWER"
 msgstr "holo能量"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:350
 msgid "RPS_TIED"
 msgstr "平手，請再選一次。"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:373
 msgid "MULLIGAN_QUESTION"
 msgstr "要調度手牌嗎？"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:382
 msgid "MULLIGAN_FORCED"
-msgstr "找不到出道卡。\n您必須調度手牌。"
+msgstr "找不到出道卡。\n"
+"您必須調度手牌。"
 
-#: Scripts/side.gd Scripts/Multiplayer.gd
+#: Scripts/side.gd:393
+#: Scripts/Multiplayer.gd:1494
+#: Scripts/Multiplayer.gd:1736
 msgid "LOSS"
 msgstr "你輸了！"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:403
 msgid "MULLIGAN_WAIT"
 msgstr "等待對手..."
 
-#: Scripts/side.gd
+#: Scripts/side.gd:426
 msgid "READY_WAIT"
 msgstr "等待中"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1236
+msgid "CARD_HOLOMEM_REQUESTDAMAGE"
+msgstr ""
+
+#: Scripts/side.gd:1238
+msgid "CARD_HOLOMEM_REQUESTDAMAGEBACK"
+msgstr ""
+
+#: Scripts/side.gd:1244
+#: Scripts/side.gd:1357
 msgid "CARD_HOLOMEM_LOOK_ATTACHED"
 msgstr "檢視附加卡"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1246
+#: Scripts/side.gd:1360
 msgid "CARD_HOLOMEM_LOOK_PAST"
 msgstr "檢視開花前階段"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1253
 msgid "CARD_HOLOMEM_PLAY_CENTERHIDDEN"
 msgstr "覆蓋至C位"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1255
 msgid "CARD_HOLOMEM_PLAY_BACKHIDDEN"
 msgstr "覆蓋至後備"
 
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_PLAY"
-msgstr "打出"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_BLOOM"
-msgstr "開花"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_BLOOM_SKIP"
-msgstr "跳過開花"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_BLOOM_FAST"
-msgstr "即時開花"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_UNREST"
-msgstr "轉為活動"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_REST"
-msgstr "轉為休息"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_CENTER"
-msgstr "移至C位"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_MOVE_BACK"
-msgstr "移至後備"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_COLLAB"
-msgstr "聯動"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_BATON"
-msgstr "接力"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_DAMAGE"
-msgstr "增加傷害"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_HEAL"
-msgstr "回復"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_EXTRAHP"
-msgstr "增加額外HP"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
-msgstr "移除額外HP"
-
-#: Scripts/side.gd
-msgid "CARD_HOLOMEM_UNBLOOM"
-msgstr "解除開花"
-
-#: Scripts/side.gd
-msgid "CARD_SUPPORT_ATTACH"
-msgstr "附加"
-
-#: Scripts/side.gd
-msgid "CARD_SUPPORT_PLAY"
-msgstr "打出"
-
-#: Scripts/side.gd
-msgid "CARD_SUPPORT_ARCHIVE"
-msgstr "送入檔案區"
-
-#: Scripts/side.gd
-msgid "CARD_CHEER_LIFE_REVEAL"
-msgstr "展示並附加"
-
-#: Scripts/side.gd
-msgid "CARD_HAND_TOPDECK"
-msgstr "放回牌組頂端"
-
-#: Scripts/side.gd
+#: Scripts/side.gd:1257
+#: Scripts/side.gd:1368
 msgid "CARD_HAND_BOTTOMDECK"
 msgstr "放回牌組底端"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1265
+msgid "CARD_HOLOMEM_PLAY"
+msgstr "打出"
+
+#: Scripts/side.gd:1267
+msgid "CARD_HOLOMEM_PLAY_DIRECT"
+msgstr ""
+
+#: Scripts/side.gd:1271
+msgid "CARD_HOLOMEM_BLOOM"
+msgstr "開花"
+
+#: Scripts/side.gd:1273
+msgid "CARD_HOLOMEM_BLOOM_SKIP"
+msgstr "跳過開花"
+
+#: Scripts/side.gd:1275
+msgid "CARD_HOLOMEM_BLOOM_FAST"
+msgstr "即時開花"
+
+#: Scripts/side.gd:1284
+msgid "CARD_HOLOMEM_UNREST"
+msgstr "轉為活動"
+
+#: Scripts/side.gd:1286
+msgid "CARD_HOLOMEM_REST"
+msgstr "轉為休息"
+
+#: Scripts/side.gd:1290
+msgid "CARD_HOLOMEM_COLLAB"
+msgstr "聯動"
+
+#: Scripts/side.gd:1292
+msgid "CARD_HOLOMEM_BATON"
+msgstr "接力"
+
+#: Scripts/side.gd:1294
+msgid "CARD_HOLOMEM_CENTERCOLLABSWAP"
+msgstr ""
+
+#: Scripts/side.gd:1297
+msgid "CARD_HOLOMEM_MOVE_CENTER"
+msgstr "移至C位"
+
+#: Scripts/side.gd:1299
+msgid "CARD_HOLOMEM_MOVE_BACK"
+msgstr "移至後備"
+
+#: Scripts/side.gd:1302
+msgid "CARD_HOLOMEM_DAMAGE"
+msgstr "增加傷害"
+
+#: Scripts/side.gd:1304
+msgid "CARD_HOLOMEM_HEAL"
+msgstr "回復"
+
+#: Scripts/side.gd:1305
+msgid "CARD_HOLOMEM_EXTRAHP"
+msgstr "增加額外HP"
+
+#: Scripts/side.gd:1307
+msgid "CARD_HOLOMEM_REMOVEEXTRAHP"
+msgstr "移除額外HP"
+
+#: Scripts/side.gd:1308
+msgid "CARD_HOLOMEM_EXTRABATONPASS"
+msgstr ""
+
+#: Scripts/side.gd:1310
+msgid "CARD_HOLOMEM_REMOVEBATONPASS"
+msgstr ""
+
+#: Scripts/side.gd:1314
+msgid "CARD_HOLOMEM_UNBLOOM"
+msgstr "解除開花"
+
+#: Scripts/side.gd:1320
+msgid "CARD_SUPPORT_ATTACH"
+msgstr "附加"
+
+#: Scripts/side.gd:1324
+msgid "CARD_SUPPORT_PLAY"
+msgstr "打出"
+
+#: Scripts/side.gd:1326
+msgid "CARD_SUPPORT_ARCHIVE"
+msgstr "送入檔案區"
+
+#: Scripts/side.gd:1352
+msgid "CARD_CHEER_LIFE_REVEAL"
+msgstr "展示並附加"
+
+#: Scripts/side.gd:1367
+msgid "CARD_HAND_TOPDECK"
+msgstr "放回牌組頂端"
+
+#: Scripts/side.gd:1369
 msgid "CARD_HAND_ARCHIVE"
 msgstr "送入檔案區"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1370
 msgid "CARD_HAND_HOLOPOWER"
 msgstr "作為holo能量"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1371
 msgid "CARD_HAND_REVEAL"
 msgstr "展示"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1373
+msgid "CARD_HAND_REVEALALL"
+msgstr ""
+
+#: Scripts/side.gd:1375
 msgid "CARD_STAGE_ARCHIVE"
 msgstr "送入檔案區"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1377
 msgid "CARD_STAGE_HAND"
 msgstr "加入手牌"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1378
+msgid "CARD_STAGE_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/side.gd:1380
 msgid "CARD_HOLOMEM_MOVE_COLLAB"
 msgstr "移至聯動區"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1382
 msgid "CARD_HOLOMEM_SWITCH"
 msgstr "交換至後備"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1384
 msgid "CARD_REVEALED_HAND"
 msgstr "加入手牌"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1386
 msgid "CARD_REVEALED_ATTACH"
 msgstr "附加"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1388
 msgid "CARD_REVEALED_TOPDECK"
 msgstr "放回牌組頂端"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1389
 msgid "CARD_REVEALED_BOTTOMDECK"
 msgstr "放回牌組底端"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1390
 msgid "CARD_REVEALED_ARCHIVE"
 msgstr "送入檔案區"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1391
 msgid "CARD_REVEALED_HOLOPOWER"
 msgstr "放至holo能量頂端"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1392
 msgid "CARD_REVEALED_BOTTOMHOLOPOWER"
 msgstr "放至holo能量底端"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1415
 msgid "DECK_DRAW"
 msgstr "抽牌"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1416
 msgid "DECK_DRAWX"
 msgstr "抽X張"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1417
 msgid "DECK_ARCHIVE"
 msgstr "從牌組送入檔案區"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1418
 msgid "DECK_ARCHIVEX"
 msgstr "從牌組送入檔案區X張"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1419
 msgid "DECK_HOLOPOWER"
 msgstr "作為holo能量"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1421
 msgid "DECK_REVEAL"
 msgstr "展示頂端卡片"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1422
+msgid "DECK_DRAWBOTTOM"
+msgstr ""
+
+#: Scripts/side.gd:1425
 msgid "DECK_LOOKX"
 msgstr "檢視X張"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1426
 msgid "DECK_SEARCH"
 msgstr "搜尋"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1427
 msgid "DECK_SHUFFLE"
 msgstr "洗牌"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1431
 msgid "DECK_MULLIGAN"
 msgstr "將手牌洗回牌組"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1434
 msgid "DECK_MULLIGAN_UNDO"
 msgstr "取消手牌洗回牌組"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1438
 msgid "DECK_RPS"
 msgstr "猜拳"
 
-#: Scripts/side.gd Scripts/Multiplayer.gd
+#: Scripts/side.gd:1441
+msgid "DECK_EXTRA_TURN"
+msgstr ""
+
+#: Scripts/side.gd:1444
+#: Scripts/Multiplayer.gd:1739
 msgid "FORFEIT"
 msgstr "投降"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1456
 msgid "CHEERDECK_REVEAL"
 msgstr "展示並附加"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1459
+msgid "CHEERDECK_ARCHIVE"
+msgstr ""
+
+#: Scripts/side.gd:1460
+msgid "CHEERDECK_ARCHIVEX"
+msgstr ""
+
+#: Scripts/side.gd:1464
 msgid "CHEERDECK_LOOKX"
 msgstr "檢視X張"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1465
 msgid "CHEERDECK_SEARCH"
 msgstr "搜尋"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1466
 msgid "CHEERDECK_SHUFFLE"
 msgstr "洗牌"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1476
 msgid "ARCHIVE_SEARCH"
 msgstr "搜尋"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1480
 msgid "ARCHIVE_HAND_ALL"
 msgstr "將手牌全數送入檔案區"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1491
 msgid "HOLOPOWER_ARCHIVE"
 msgstr "送入檔案區"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1492
 msgid "HOLOPOWER_ARCHIVEX"
 msgstr "送入檔案區X張"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1495
 msgid "HOLOPOWER_REVEAL"
 msgstr "展示頂端卡片"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1499
 msgid "HOLOPOWER_DECK"
 msgstr "放回牌組頂端"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1503
 msgid "HOLOPOWER_SEARCH"
 msgstr "搜尋"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1504
 msgid "HOLOPOWER_SHUFFLE"
 msgstr "洗牌"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1526
 msgid "LIST_DECK_HOLOMEM_PLAY"
 msgstr "打出"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1528
 msgid "LIST_ARCHIVE_HOLOMEM_PLAY"
 msgstr "打出"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1531
+msgid "LIST_DECK_HOLOMEM_PLAY_DIRECT"
+msgstr ""
+
+#: Scripts/side.gd:1533
+msgid "LIST_ARCHIVE_HOLOMEM_PLAY_DIRECT"
+msgstr ""
+
+#: Scripts/side.gd:1538
 msgid "LIST_DECK_HOLOMEM_BLOOM"
 msgstr "開花"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1540
 msgid "LIST_ARCHIVE_HOLOMEM_BLOOM"
 msgstr "開花"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1543
 msgid "LIST_DECK_HOLOMEM_BLOOM_FAST"
 msgstr "即時開花"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1545
 msgid "LIST_ARCHIVE_HOLOMEM_BLOOM_FAST"
 msgstr "即時開花"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1549
 msgid "LIST_CHEERDECK_CHEER_ATTACH"
 msgstr "附加"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1551
 msgid "LIST_ARCHIVE_CHEER_ATTACH"
 msgstr "附加"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1553
 msgid "LIST_ATTACHED_CHEER_ATTACH"
 msgstr "重新附加"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1556
 msgid "LIST_CHEER_LIFE"
 msgstr "作為生命值"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1559
 msgid "LIST_CARD_REVEAL"
 msgstr "展示"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1566
 msgid "LIST_CARD_HAND"
 msgstr "加入手牌"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1569
 msgid "LIST_CARD_TOPDECK"
 msgstr "放回牌組頂端"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1570
 msgid "LIST_CARD_BOTTOMDECK"
 msgstr "放回牌組底端"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1572
 msgid "LIST_CARD_TOPCHEERDECK"
 msgstr "放回聲援牌組頂端"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1573
 msgid "LIST_CARD_BOTTOMCHEERDECK"
 msgstr "放回聲援牌組底端"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1575
 msgid "LIST_CARD_ARCHIVE"
 msgstr "送入檔案區"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1577
 msgid "LIST_CARD_HOLOPOWER"
 msgstr "作為holo能量"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1604
 msgid "PROMPT_DAMAGE"
 msgstr "增加 X 點傷害"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1607
 msgid "PROMPT_HEAL"
 msgstr "回復 X 點"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1610
 msgid "PROMPT_EXTRAHP"
 msgstr "增加 X 點HP"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1613
 msgid "PROMPT_REMOVEEXTRAHP"
 msgstr "移除 X 點HP"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1616
+msgid "PROMPT_EXTRABATONPASS"
+msgstr ""
+
+#: Scripts/side.gd:1619
+msgid "PROMPT_REMOVEBATONPASS"
+msgstr ""
+
+#: Scripts/side.gd:1641
+msgid "PROMPT_REQUESTDAMAGE"
+msgstr ""
+
+#: Scripts/side.gd:1644
+msgid "PROMPT_REQUESTDAMAGEBACK"
+msgstr ""
+
+#: Scripts/side.gd:1657
+#: Scripts/side.gd:1666
 msgid "PROMPT_OSHICOST"
 msgstr "將 X 張卡送入檔案區"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1712
 msgid "PROMPT_DRAW"
 msgstr "抽 X 張卡"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1715
 msgid "PROMPT_DECK_ARCHIVE"
 msgstr "從牌組送入檔案區 X 張卡"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1722
+#: Scripts/side.gd:1734
 msgid "PROMPT_LOOKATX"
 msgstr "檢視 X 張："
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1731
+msgid "PROMPT_CHEERDECK_ARCHIVE"
+msgstr ""
+
+#: Scripts/side.gd:1748
 msgid "PROMPT_HOLOPOWER_ARCHIVE"
 msgstr "從holo能量送入檔案區 X 張卡"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1816
+msgid "PROMPT_NOTE"
+msgstr ""
+
+#: Scripts/side.gd:1816
+msgid "PROMPT_NOTE_PLACEHOLDER"
+msgstr ""
+
+#: Scripts/side.gd:1881
+msgid "GOLDFISH_ZONEDAMAGE"
+msgstr ""
+
+#: Scripts/side.gd:1882
+msgid "GOLDFISH_ZONEDAMAGEREMOVE"
+msgstr ""
+
+#: Scripts/side.gd:1884
+msgid "GOLDFISH_ZONEDAMAGEALL"
+msgstr ""
+
+#: Scripts/side.gd:1885
+msgid "GOLDFISH_ZONENOTE"
+msgstr ""
+
+#: Scripts/side.gd:1895
 msgid "PROMPT_ART_DAMAGE"
 msgstr "造成 X 點傷害"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1960
 msgid "TURN_SECOND"
 msgstr "對手選擇後攻"
 
-#: Scripts/side.gd
+#: Scripts/side.gd:1963
 msgid "TURN_FIRST"
 msgstr "對手選擇先攻"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:179
+#: Scripts/Multiplayer.gd:298
+#: Scripts/Multiplayer.gd:311
 msgid "DOWNLOAD_CARDS"
 msgstr "正在設置卡片，請稍候..."
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:224
 msgid "DECK_AUTOLOAD_CONFIRM"
-msgstr "偵測到牌組代碼。\n是否前往牌組編輯器？"
+msgstr "偵測到牌組代碼。\n"
+"是否前往牌組編輯器？"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:225
 msgid "DECK_AUTOLOAD_CONFIRM_INFO"
-msgstr "遊戲偵測到您已匯入一副有效的牌組。\n若要檢視，請點擊「是」以前往牌組建立畫面。"
+msgstr "遊戲偵測到您已匯入一副有效的牌組。\n"
+"若要檢視，請點擊「是」以前往牌組建立畫面。"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:333
+msgid "UPDATE_MENU_CLIENT_UPDATEFOUND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd:337
+msgid "UPDATE_MENU_CARD_UPDATEFOUND"
+msgstr ""
+
+#: Scripts/Multiplayer.gd:371
 msgid "LOAD_FAIL"
 msgstr "載入卡片資料失敗"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:372
 msgid "LOAD_FAIL_FULL"
-msgstr "您已擁有 cardData.zip 檔案，但無法載入。\n如果您看到此訊息，請通知開發者，因為我不知道這怎麼可能發生。"
+msgstr "您已擁有 cardData.zip 檔案，但無法載入。\n"
+"如果您看到此訊息，請通知開發者，因為我不知道這怎麼可能發生。"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1045
+#: Scripts/Multiplayer.gd:1762
 msgid "LOBBY_BANLIST_CUSTOM"
 msgstr "自訂"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1094
+#: Scripts/Multiplayer.gd:1769
 msgid "GAME_VS"
 msgstr "{player1} vs {player2}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1200
+#: Scripts/Multiplayer.gd:1203
 msgid "LOBBY_WAITING"
 msgstr "等待中"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1434
+#: Scripts/Multiplayer.gd:1755
 msgid "INGAME_RPS_WON"
 msgstr "你贏了"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1440
+#: Scripts/Multiplayer.gd:1756
 msgid "INGAME_RPS_LOST"
 msgstr "你輸了"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1454
 msgid "YOU"
 msgstr "你"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1487
+#: Scripts/Multiplayer.gd:1737
 msgid "WIN"
 msgstr "你贏了！"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1505
+#: Scripts/Multiplayer.gd:1738
 msgid "SPECTATE_WIN"
 msgstr "{person} 獲勝！"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1561
 msgid "MESSAGE_MULLIGAN"
 msgstr "{person} 調度了手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1562
 msgid "MESSAGE_DRAW"
 msgstr "{person} 抽了一張牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1563
 msgid "MESSAGE_DRAWX"
 msgstr "{person} 抽了 {amount} 張牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1564
 msgid "MESSAGE_MILL"
 msgstr "{person} 從 {from} 將一張卡送入了 {to}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1565
 msgid "MESSAGE_MILLX"
 msgstr "{person} 從 {from} 將 {amount} 張卡送入了 {to}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1566
 msgid "MESSAGE_BLOOM"
 msgstr "{person} 將 ({fromZone}) 的 {fromName} 開花成 {toName} ({fromLevel} 到 {toLevel})"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1567
 msgid "MESSAGE_STAGE_ARCHIVE"
 msgstr "{person} 將 ({fromZone}) 的 {fromName} 送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1568
+msgid "MESSAGE_DRAWBOTTOM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd:1569
+msgid "MESSAGE_STAGE_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd:1570
 msgid "MESSAGE_STAGE_HAND"
 msgstr "{person} 將 ({fromZone}) 的 {fromName} 加入手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1571
 msgid "MESSAGE_STAGE_CENTER"
 msgstr "{person} 將 ({fromZone}) 的 {fromName} 移至C位"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1572
 msgid "MESSAGE_STAGE_COLLAB"
 msgstr "{person} 與 ({fromZone}) 的 {fromName} 進行了聯動"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1573
 msgid "MESSAGE_STAGE_MOVECOLLAB"
 msgstr "{person} 將 ({fromZone}) 的 {fromName} 移至聯動區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1574
 msgid "MESSAGE_STAGE_UNBLOOM"
 msgstr "{person} 將 ({fromZone}) 的 {fromName} 解除開花，變回 {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1575
 msgid "MESSAGE_REVEALED_HAND"
 msgstr "{person} 將 {cardName} 加入手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1576
 msgid "MESSAGE_REVEALED_TOPDECK"
 msgstr "{person} 將 {cardName} 放回牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1577
 msgid "MESSAGE_REVEALED_BOTTOMDECK"
 msgstr "{person} 將 {cardName} 放至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1578
 msgid "MESSAGE_REVEALED_ARCHIVE"
 msgstr "{person} 將 {cardName} 送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1579
 msgid "MESSAGE_REVEALED_HOLOPOWER"
 msgstr "{person} 將 {cardName} 作為holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1580
 msgid "MESSAGE_REVEALED_BOTTOMHOLOPOWER"
 msgstr "{person} 將 {cardName} 放至holo能量底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1581
 msgid "MESSAGE_OSHISKILL_SP"
 msgstr "{person} 使用了 SP 主推技能「{skillName}」"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1582
 msgid "MESSAGE_OSHISKILL"
 msgstr "{person} 使用了主推技能「{skillName}」"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1583
 msgid "MESSAGE_HAND_TOPDECK"
 msgstr "{person} 從手牌將一張卡放回牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1584
 msgid "MESSAGE_HAND_BOTTOMDECK"
 msgstr "{person} 從手牌將一張卡放至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1585
 msgid "MESSAGE_HAND_ARCHIVE"
 msgstr "{person} 從手牌將 {cardName} 送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1586
 msgid "MESSAGE_HAND_HOLOPOWER"
 msgstr "{person} 從手牌將一張卡作為holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1587
 msgid "MESSAGE_HAND_REVEAL"
 msgstr "{person} 從手牌展示了 {cardName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1588
+msgid "MESSAGE_HAND_REVEALALL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd:1589
 msgid "MESSAGE_HAND_SUPPORT_PLAY"
 msgstr "{person} 打出了 {cardName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1590
 msgid "MESSAGE_FUDA_REVEAL"
 msgstr "{person} 從 {fromFuda} 展示了 {cardName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1591
 msgid "MESSAGE_HOLOPOWER_REVEAL"
 msgstr "{person} 從holo能量展示了 {cardName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1592
 msgid "MESSAGE_DECK_MULLIGAN"
 msgstr "{person} 將手牌洗回了牌組"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1593
 msgid "MESSAGE_DECK_UNDOMULLIGAN"
 msgstr "{person} 從牌組取回了手牌。哎呀。"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1594
 msgid "MESSAGE_DECK_SEARCH"
 msgstr "{person} 開始搜尋牌組"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1595
 msgid "MESSAGE_DECK_SHUFFLE"
 msgstr "{person} 洗了牌組"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1596
 msgid "MESSAGE_CHEERDECK_SEARCH"
 msgstr "{person} 開始搜尋聲援牌組"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1597
 msgid "MESSAGE_CHEERDECK_SHUFFLE"
 msgstr "{person} 洗了聲援牌組"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1598
 msgid "MESSAGE_HOLOPOWER_SEARCH"
 msgstr "{person} 開始搜尋holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1599
 msgid "MESSAGE_HOLOPOWER_SHUFFLE"
 msgstr "{person} 洗了holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1600
 msgid "MESSAGE_FUDA_LIFE"
 msgstr "{person} 從 {fromFuda} 將一張卡作為生命值"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1601
 msgid "MESSAGE_ATTACHED_LIFE"
 msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 作為生命值"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1602
 msgid "MESSAGE_ARCHIVE_HAND"
 msgstr "{person} 從檔案區將 {cardName} 加入手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1603
 msgid "MESSAGE_FUDA_HAND"
 msgstr "{person} 從 {fromFuda} 將一張卡加入手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1604
 msgid "MESSAGE_HOLOPOWER_HAND"
 msgstr "{person} 從holo能量將一張卡加入手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1605
 msgid "MESSAGE_ATTACHED_HAND"
 msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 加入手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1606
 msgid "MESSAGE_ARCHIVE_TOPDECK"
 msgstr "{person} 從檔案區將 {cardName} 放至牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1607
 msgid "MESSAGE_DECK_TOPDECK"
 msgstr "{person} 將一張卡移至牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1608
 msgid "MESSAGE_FUDA_TOPDECK"
 msgstr "{person} 從 {fromFuda} 將一張卡放至牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1609
 msgid "MESSAGE_HOLOPOWER_TOPDECK"
 msgstr "{person} 從holo能量將一張卡放至牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1610
 msgid "MESSAGE_ATTACHED_TOPDECK"
 msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 放至牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1611
 msgid "MESSAGE_ARCHIVE_BOTTOMDECK"
 msgstr "{person} 從檔案區將 {cardName} 放至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1612
 msgid "MESSAGE_DECK_BOTTOMDECK"
 msgstr "{person} 將一張卡移至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1613
 msgid "MESSAGE_FUDA_BOTTOMDECK"
 msgstr "{person} 從 {fromFuda} 將一張卡放至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1614
 msgid "MESSAGE_HOLOPOWER_BOTTOMDECK"
 msgstr "{person} 從holo能量將一張卡放至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1615
 msgid "MESSAGE_ATTACHED_BOTTOMDECK"
 msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 放至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1616
 msgid "MESSAGE_ARCHIVE_TOPCHEERDECK"
 msgstr "{person} 從檔案區將 {cardName} 放至聲援牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1617
 msgid "MESSAGE_CHEERDECK_TOPCHEERDECK"
 msgstr "{person} 將一張卡移至聲援牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1618
 msgid "MESSAGE_FUDA_TOPCHEERDECK"
 msgstr "{person} 從 {fromFuda} 將一張卡放至聲援牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1619
 msgid "MESSAGE_ATTACHED_TOPCHEERDECK"
 msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 放至聲援牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1620
 msgid "MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
 msgstr "{person} 從檔案區將 {cardName} 放至聲援牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1621
 msgid "MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
 msgstr "{person} 將一張卡移至聲援牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1622
 msgid "MESSAGE_FUDA_BOTTOMCHEERDECK"
 msgstr "{person} 從 {fromFuda} 將一張卡放至聲援牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1623
 msgid "MESSAGE_ATTACHED_BOTTOMCHEERDECK"
 msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 放至聲援牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1624
 msgid "MESSAGE_FUDA_ARCHIVE"
 msgstr "{person} 從 {fromFuda} 將 {cardName} 送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1625
 msgid "MESSAGE_HOLOPOWER_ARCHIVE"
 msgstr "{person} 從holo能量將 {cardName} 送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1626
 msgid "MESSAGE_ATTACHED_ARCHIVE"
 msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1627
 msgid "MESSAGE_ARCHIVE_HOLOPOWER"
 msgstr "{person} 從檔案區將 {cardName} 作為holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1628
 msgid "MESSAGE_FUDA_HOLOPOWER"
 msgstr "{person} 從 {fromFuda} 將一張卡作為holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1629
 msgid "MESSAGE_ATTACHED_HOLOPOWER"
 msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {cardName} 作為holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1630
 msgid "MESSAGE_ARTS_DAMAGE"
 msgstr "{person} 讓 ({fromZone}) 的 {fromName} 使用了「{artName}」，對 ({toZone}) 的 {toName} 造成了 {damage} 點傷害"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1631
 msgid "MESSAGE_DECK_LOOKATX"
 msgstr "{person} 開始檢視牌組頂端的 {amount} 張卡"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1632
 msgid "MESSAGE_CHEERDECK_LOOKATX"
 msgstr "{person} 開始檢視聲援牌組頂端的 {amount} 張卡"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1633
 msgid "MESSAGE_CARD_BACK"
 msgstr "{person} 將 ({fromZone}) 的 {fromName} 移至後備"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1634
 msgid "MESSAGE_CARD_BATONPASS"
 msgstr "{person} 進行了接力，將 ({fromZone}) 的 {fromName} 與 ({toZone}) 的 {toName} 交換"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1635
 msgid "MESSAGE_CARD_SWITCH"
 msgstr "{person} 將 ({fromZone}) 的 {fromName} 與 ({toZone}) 的 {toName} 交換"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1636
 msgid "MESSAGE_SUPPORT_ATTACH"
 msgstr "{person} 將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1637
 msgid "MESSAGE_CHEER_ATTACH"
 msgstr "{person} 將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1638
 msgid "MESSAGE_HOLOMEM_PLAY"
 msgstr "{person} 將 {cardName} 打出至後備"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1639
 msgid "MESSAGE_DECK_HOLOMEM_PLAY"
 msgstr "{person} 從牌組將 {cardName} 打出至後備"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1640
 msgid "MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr "{person} 從聲援牌組將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1641
 msgid "MESSAGE_ARCHIVE_HAND_ALL"
 msgstr "{person} 將全部手牌送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1642
 msgid "MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr "{person} 從檔案區將 {cardName} 打出至後備"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1643
 msgid "MESSAGE_ARCHIVE_CHEER_ATTACH"
 msgstr "{person} 從檔案區將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1644
 msgid "MESSAGE_ATTACHED_CHEER_ATTACH"
 msgstr "{person} 從 ({fromZone}) 的 {fromName} 將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1645
 msgid "MESSAGE_ENDTURN"
 msgstr "{person} 結束了他的回合"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1646
 msgid "MESSAGE_DIERESULT"
 msgstr "{person} 擲出了 {amount} 點"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1647
 msgid "MESSAGE_RPS"
 msgstr "{person} 贏了猜拳"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1648
 msgid "YOU_MESSAGE_MULLIGAN"
 msgstr "你調度了手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1649
 msgid "YOU_MESSAGE_DRAW"
 msgstr "你抽了一張牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1650
 msgid "YOU_MESSAGE_DRAWX"
 msgstr "你抽了 {amount} 張牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1651
 msgid "YOU_MESSAGE_MILL"
 msgstr "你從 {from} 將一張卡送入了 {to}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1652
 msgid "YOU_MESSAGE_MILLX"
 msgstr "你從 {from} 將 {amount} 張卡送入了 {to}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1653
 msgid "YOU_MESSAGE_BLOOM"
 msgstr "你將 ({fromZone}) 的 {fromName} 開花成 {toName} ({fromLevel} 到 {toLevel})"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1654
 msgid "YOU_MESSAGE_STAGE_ARCHIVE"
 msgstr "你將 ({fromZone}) 的 {fromName} 送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1655
+msgid "YOU_MESSAGE_DRAWBOTTOM"
+msgstr ""
+
+#: Scripts/Multiplayer.gd:1656
+msgid "YOU_MESSAGE_STAGE_BOTTOMDECK"
+msgstr ""
+
+#: Scripts/Multiplayer.gd:1657
 msgid "YOU_MESSAGE_STAGE_HAND"
 msgstr "你將 ({fromZone}) 的 {fromName} 加入手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1658
 msgid "YOU_MESSAGE_STAGE_CENTER"
 msgstr "你將 ({fromZone}) 的 {fromName} 移至C位"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1659
 msgid "YOU_MESSAGE_STAGE_COLLAB"
 msgstr "你與 ({fromZone}) 的 {fromName} 進行了聯動"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1660
 msgid "YOU_MESSAGE_STAGE_MOVECOLLAB"
 msgstr "你將 ({fromZone}) 的 {fromName} 移至聯動區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1661
 msgid "YOU_MESSAGE_STAGE_UNBLOOM"
 msgstr "你將 ({fromZone}) 的 {fromName} 解除開花，變回 {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1662
 msgid "YOU_MESSAGE_REVEALED_HAND"
 msgstr "你將 {cardName} 加入手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1663
 msgid "YOU_MESSAGE_REVEALED_TOPDECK"
 msgstr "你將 {cardName} 放回牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1664
 msgid "YOU_MESSAGE_REVEALED_BOTTOMDECK"
 msgstr "你將 {cardName} 放至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1665
 msgid "YOU_MESSAGE_REVEALED_ARCHIVE"
 msgstr "你將 {cardName} 送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1666
 msgid "YOU_MESSAGE_REVEALED_HOLOPOWER"
 msgstr "你將 {cardName} 作為holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1667
 msgid "YOU_MESSAGE_REVEALED_BOTTOMHOLOPOWER"
 msgstr "你將 {cardName} 放至holo能量底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1668
 msgid "YOU_MESSAGE_OSHISKILL_SP"
 msgstr "你使用了 SP 主推技能「{skillName}」"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1669
 msgid "YOU_MESSAGE_OSHISKILL"
 msgstr "你使用了主推技能「{skillName}」"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1670
 msgid "YOU_MESSAGE_HAND_TOPDECK"
 msgstr "你從手牌將一張卡放回牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1671
 msgid "YOU_MESSAGE_HAND_BOTTOMDECK"
 msgstr "你從手牌將一張卡放至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1672
 msgid "YOU_MESSAGE_HAND_ARCHIVE"
 msgstr "你從手牌將 {cardName} 送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1673
 msgid "YOU_MESSAGE_HAND_HOLOPOWER"
 msgstr "你從手牌將一張卡作為holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1674
 msgid "YOU_MESSAGE_HAND_REVEAL"
 msgstr "你從手牌展示了 {cardName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1675
+msgid "YOU_MESSAGE_HAND_REVEALALL"
+msgstr ""
+
+#: Scripts/Multiplayer.gd:1676
 msgid "YOU_MESSAGE_HAND_SUPPORT_PLAY"
 msgstr "你打出了 {cardName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1677
 msgid "YOU_MESSAGE_FUDA_REVEAL"
 msgstr "你從 {fromFuda} 展示了 {cardName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1678
 msgid "YOU_MESSAGE_HOLOPOWER_REVEAL"
 msgstr "你從holo能量展示了 {cardName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1679
 msgid "YOU_MESSAGE_DECK_MULLIGAN"
 msgstr "你將手牌洗回了牌組"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1680
 msgid "YOU_MESSAGE_DECK_UNDOMULLIGAN"
 msgstr "你從牌組取回了手牌。哎呀。"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1681
 msgid "YOU_MESSAGE_DECK_SEARCH"
 msgstr "你開始搜尋牌組"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1682
 msgid "YOU_MESSAGE_DECK_SHUFFLE"
 msgstr "你洗了牌組"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1683
 msgid "YOU_MESSAGE_CHEERDECK_SEARCH"
 msgstr "你開始搜尋聲援牌組"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1684
 msgid "YOU_MESSAGE_CHEERDECK_SHUFFLE"
 msgstr "你洗了聲援牌組"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1685
 msgid "YOU_MESSAGE_HOLOPOWER_SEARCH"
 msgstr "你開始搜尋holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1686
 msgid "YOU_MESSAGE_HOLOPOWER_SHUFFLE"
 msgstr "你洗了holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1687
 msgid "YOU_MESSAGE_FUDA_LIFE"
 msgstr "你從 {fromFuda} 將一張卡作為生命值"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1688
 msgid "YOU_MESSAGE_ATTACHED_LIFE"
 msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 作為生命值"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1689
 msgid "YOU_MESSAGE_ARCHIVE_HAND"
 msgstr "你從檔案區將 {cardName} 加入手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1690
 msgid "YOU_MESSAGE_FUDA_HAND"
 msgstr "你從 {fromFuda} 將一張卡加入手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1691
 msgid "YOU_MESSAGE_HOLOPOWER_HAND"
 msgstr "你從holo能量將一張卡加入手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1692
 msgid "YOU_MESSAGE_ATTACHED_HAND"
 msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 加入手牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1693
 msgid "YOU_MESSAGE_ARCHIVE_TOPDECK"
 msgstr "你從檔案區將 {cardName} 放至牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1694
 msgid "YOU_MESSAGE_DECK_TOPDECK"
 msgstr "你將一張卡移至牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1695
 msgid "YOU_MESSAGE_FUDA_TOPDECK"
 msgstr "你從 {fromFuda} 將一張卡放至牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1696
 msgid "YOU_MESSAGE_HOLOPOWER_TOPDECK"
 msgstr "你從holo能量將一張卡放至牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1697
 msgid "YOU_MESSAGE_ATTACHED_TOPDECK"
 msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 放至牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1698
 msgid "YOU_MESSAGE_ARCHIVE_BOTTOMDECK"
 msgstr "你從檔案區將 {cardName} 放至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1699
 msgid "YOU_MESSAGE_DECK_BOTTOMDECK"
 msgstr "你將一張卡移至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1700
 msgid "YOU_MESSAGE_FUDA_BOTTOMDECK"
 msgstr "你從 {fromFuda} 將一張卡放至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1701
 msgid "YOU_MESSAGE_HOLOPOWER_BOTTOMDECK"
 msgstr "你從holo能量將一張卡放至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1702
 msgid "YOU_MESSAGE_ATTACHED_BOTTOMDECK"
 msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 放至牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1703
 msgid "YOU_MESSAGE_ARCHIVE_TOPCHEERDECK"
 msgstr "你從檔案區將 {cardName} 放至聲援牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1704
 msgid "YOU_MESSAGE_CHEERDECK_TOPCHEERDECK"
 msgstr "你將一張卡移至聲援牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1705
 msgid "YOU_MESSAGE_FUDA_TOPCHEERDECK"
 msgstr "你從 {fromFuda} 將一張卡放至聲援牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1706
 msgid "YOU_MESSAGE_ATTACHED_TOPCHEERDECK"
 msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 放至聲援牌組頂端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1707
 msgid "YOU_MESSAGE_ARCHIVE_BOTTOMCHEERDECK"
 msgstr "你從檔案區將 {cardName} 放至聲援牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1708
 msgid "YOU_MESSAGE_CHEERDECK_BOTTOMCHEERDECK"
 msgstr "你將一張卡移至聲援牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1709
 msgid "YOU_MESSAGE_FUDA_BOTTOMCHEERDECK"
 msgstr "你從 {fromFuda} 將一張卡放至聲援牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1710
 msgid "YOU_MESSAGE_ATTACHED_BOTTOMCHEERDECK"
 msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 放至聲援牌組底端"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1711
 msgid "YOU_MESSAGE_FUDA_ARCHIVE"
 msgstr "你從 {fromFuda} 將 {cardName} 送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1712
 msgid "YOU_MESSAGE_HOLOPOWER_ARCHIVE"
 msgstr "你從holo能量將 {cardName} 送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1713
 msgid "YOU_MESSAGE_ATTACHED_ARCHIVE"
 msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1714
 msgid "YOU_MESSAGE_ARCHIVE_HOLOPOWER"
 msgstr "你從檔案區將 {cardName} 作為holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1715
 msgid "YOU_MESSAGE_FUDA_HOLOPOWER"
 msgstr "你從 {fromFuda} 將一張卡作為holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1716
 msgid "YOU_MESSAGE_ATTACHED_HOLOPOWER"
 msgstr "你從 ({fromZone}) 的 {fromName} 將 {cardName} 作為holo能量"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1717
 msgid "YOU_MESSAGE_ARTS_DAMAGE"
 msgstr "你讓 ({fromZone}) 的 {fromName} 使用了「{artName}」，對 ({toZone}) 的 {toName} 造成了 {damage} 點傷害"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1718
 msgid "YOU_MESSAGE_DECK_LOOKATX"
 msgstr "你開始檢視牌組頂端的 {amount} 張卡"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1719
 msgid "YOU_MESSAGE_CHEERDECK_LOOKATX"
 msgstr "你開始檢視聲援牌組頂端的 {amount} 張卡"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1720
 msgid "YOU_MESSAGE_CARD_BACK"
 msgstr "你將 ({fromZone}) 的 {fromName} 移至後備"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1721
 msgid "YOU_MESSAGE_CARD_BATONPASS"
 msgstr "你進行了接力，將 ({fromZone}) 的 {fromName} 與 ({toZone}) 的 {toName} 交換"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1722
 msgid "YOU_MESSAGE_CARD_SWITCH"
 msgstr "你將 ({fromZone}) 的 {fromName} 與 ({toZone}) 的 {toName} 交換"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1723
 msgid "YOU_MESSAGE_SUPPORT_ATTACH"
 msgstr "你將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1724
 msgid "YOU_MESSAGE_CHEER_ATTACH"
 msgstr "你將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1725
 msgid "YOU_MESSAGE_HOLOMEM_PLAY"
 msgstr "你將 {cardName} 打出至後備"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1726
 msgid "YOU_MESSAGE_DECK_HOLOMEM_PLAY"
 msgstr "你從牌組將 {cardName} 打出至後備"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1727
 msgid "YOU_MESSAGE_CHEERDECK_CHEER_ATTACH"
 msgstr "你從聲援牌組將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1728
 msgid "YOU_MESSAGE_ARCHIVE_HAND_ALL"
 msgstr "你將全部手牌送入檔案區"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1729
 msgid "YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY"
 msgstr "你從檔案區將 {cardName} 打出至後備"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1730
 msgid "YOU_MESSAGE_ARCHIVE_CHEER_ATTACH"
 msgstr "你從檔案區將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1731
 msgid "YOU_MESSAGE_ATTACHED_CHEER_ATTACH"
 msgstr "你從 ({fromZone}) 的 {fromName} 將 {attachName} 附加至 ({toZone}) 的 {toName}"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1732
 msgid "YOU_MESSAGE_ENDTURN"
 msgstr "你結束了你的回合"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1733
 msgid "YOU_MESSAGE_DIERESULT"
 msgstr "你擲出了 {amount} 點"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1734
 msgid "YOU_MESSAGE_RPS"
 msgstr "你贏了猜拳"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1740
 msgid "WINCONSENT_FORFEIT"
 msgstr "你確定要投降嗎？"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1741
 msgid "WINCONSENT_DECKOUT"
-msgstr "你的回合開始時牌組已空。\n你是否因牌組抽空而敗北？"
+msgstr "你的回合開始時牌組已空。\n"
+"你是否因牌組抽空而敗北？"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1742
 msgid "WINCONSENT_LIFE"
-msgstr "你的生命值區已沒有卡片。\n你是否因生命值耗盡而敗北？"
+msgstr "你的生命值區已沒有卡片。\n"
+"你是否因生命值耗盡而敗北？"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1743
 msgid "WINCONSENT_EMPTYSTAGE"
-msgstr "你的舞台上沒有任何Holo成員。\n你是否因舞台清空而敗北？"
+msgstr "你的舞台上沒有任何Holo成員。\n"
+"你是否因舞台清空而敗北？"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1744
 msgid "WINREASON_MULLIGAN"
 msgstr "{person} 調度手牌至0張"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1745
 msgid "WINREASON_DECKOUT"
 msgstr "{person} 從空的牌組抽牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1746
 msgid "WINREASON_LIFE"
 msgstr "{person} 生命值耗盡"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1747
 msgid "WINREASON_EMPTYSTAGE"
 msgstr "{person} 的舞台已空"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1748
 msgid "WINREASON_FORFEIT"
 msgstr "{person} 投降了"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1749
 msgid "YOU_WINREASON_MULLIGAN"
 msgstr "你調度手牌至0張"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1750
 msgid "YOU_WINREASON_DECKOUT"
 msgstr "你從空的牌組抽牌"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1751
 msgid "YOU_WINREASON_LIFE"
 msgstr "你的生命值已耗盡。"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1752
 msgid "YOU_WINREASON_EMPTYSTAGE"
 msgstr "你的舞台已空"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1753
 msgid "YOU_WINREASON_FORFEIT"
 msgstr "你投降了"
 
-#: Scripts/Multiplayer.gd
+#: Scripts/Multiplayer.gd:1763
 msgid "LOBBY_PUBLIC"
 msgstr "公開"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:175
+#: Scripts/card_info.gd:180
 msgid "NOBODY"
 msgstr "無人？"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:177
+#: Scripts/card_info.gd:182
 msgid "NAMESEP"
 msgstr "/"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:190
+#: Scripts/card_info.gd:195
 msgid "COLORLESS"
 msgstr "無色"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:192
+#: Scripts/card_info.gd:197
 msgid "COLORSEP"
 msgstr "/"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:232
 msgid "NAME_BUZZ"
 msgstr "buzz!"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:237
 msgid "INFO_OSHI"
-msgstr "{colorText} 主推 Holo成員\n生命值: {life}{tagsText}"
+msgstr "{colorText} 主推 Holo成員\n"
+"生命值: {life}{tagsText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:246
 msgid "INFO_OSHI_SPSKILL"
 msgstr "SP 主推技能 holo能量 -{costText} \"{nameText}\""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:249
+msgid "INFO_OSHI_STAGESKILL"
+msgstr ""
+
+#: Scripts/card_info.gd:252
 msgid "INFO_OSHI_SKILL"
 msgstr "主推技能 holo能量 -{costText} \"{nameText}\""
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:260
 msgid "INFO_SPOT"
 msgstr "SPOT"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:260
 msgid "INFO_DEBUT"
 msgstr "出道"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:260
 msgid "INFO_1ST"
 msgstr "1st 開花"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:260
 msgid "INFO_2ND"
 msgstr "2nd 開花"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:261
 msgid "INFO_BUZZ"
 msgstr "Buzz "
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:264
 msgid "INFO_HOLOMEM_1"
-msgstr "{colorText} {levelText} {buzzText}Holo成員\nHP: {hpText}\n標籤: {tagsText}"
+msgstr "{colorText} {levelText} {buzzText}Holo成員\n"
+"HP: {hpText}\n"
+"標籤: {tagsText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:316
 msgid "INFO_NOBATONPASSCOST"
 msgstr "免費"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:317
 msgid "INFO_HOLOMEM_2"
 msgstr "接力: {costText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:328
 msgid "INFO_SUPPORT"
 msgstr "{supportText} ({typeText}){tagsText}"
 
-#: Scripts/card.gd
+#: Scripts/card_info.gd:330
 msgid "INFO_LIMITED"
 msgstr "限制：每回合只能使用一張。"
+

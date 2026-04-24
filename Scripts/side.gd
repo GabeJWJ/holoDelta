@@ -94,6 +94,7 @@ var zone_to_deal_damage_to
 @export var is_front = false
 @export var side_info = {}
 
+var art_metadata = null
 var losing_reason = ""
 
 signal ended_turn
@@ -782,6 +783,9 @@ func remove_from_attached(card_id,attached):
 		attached.update_attached()
 	elif actualCard in attached.onTopOf:
 		remove_from_card_list(card_id,attached.onTopOf)
+	
+	if actualCard.cardType == "Holomem":
+		actualCard.bloomed_this_turn = true
 
 func remove_fake_from_attached(card_id, attached_id):
 	if card_id in all_cards and attached_id in all_cards:
@@ -982,6 +986,8 @@ func show_popup():
 func reset_popup():
 	popup.clear()
 	popup.size = Vector2i(40,40)
+	%PopupSubMenu.clear()
+	%PopupSubMenu.size = Vector2i(40,40)
 
 func set_prompt(promptText,placeholder=7,charLimit=2):
 	prompt.get_node("Input").text = promptText
@@ -997,6 +1003,7 @@ func remove_prompt():
 	currentPrompt = -1
 	currentAttacking = ["",""]
 	cancel.visible = false
+	art_metadata = null
 
 func set_text_prompt(promptText, placeholder):
 	text_prompt.get_node("Input").text = promptText
@@ -1278,6 +1285,19 @@ func _on_card_clicked(card_id : int) -> void:
 						if !actualCard.rested and currentZone in [centerZone, collabZone] and !(first_turn and player1) and !is_goldfishing:
 							for art in actualCard.holomem_arts:
 								popup.add_item(Settings.trans("%s_ART_%s_NAME" % [actualCard.cardNumber, art[0]]), 80+art[0])
+							
+							var found_other = [actualCard.cardNumber]
+							var current_index = 0
+							for zone in all_occupied_zones():
+								var found_card = all_cards[find_in_zone(zone)]
+								if found_card.cardNumber not in found_other:
+									for art in found_card.holomem_arts:
+										%PopupSubMenu.add_item(Settings.trans("%s_ART_%s_NAME" % [found_card.cardNumber, art[0]]), 80)
+										%PopupSubMenu.set_item_metadata(current_index, {"holomem_number":found_card.cardNumber, "art_index":art[0]})
+										current_index += 1
+							
+							if current_index > 0:
+								popup.add_submenu_node_item(tr("CARD_HOLOMEM_OTHERARTS"), %PopupSubMenu, 10080)
 							popup.add_separator()
 					
 					if actualCard.rested:
@@ -1290,13 +1310,17 @@ func _on_card_clicked(card_id : int) -> void:
 							popup.add_item(tr("CARD_HOLOMEM_COLLAB"), 6)
 						if currentZone == centerZone and all_occupied_zones(true).size() > 0 and !used_baton_pass:
 							popup.add_item(tr("CARD_HOLOMEM_BATON"), 7)
-						if (currentZone == centerZone and find_in_zone(collabZone) != -1) or (currentZone == collabZone and find_in_zone(centerZone) != -1):
-							popup.add_item(tr("CARD_HOLOMEM_CENTERCOLLABSWAP"), 18)
 					
-					if find_in_zone(centerZone) == -1 and currentZone != collabZone:
+					if currentZone != collabZone and find_in_zone(centerZone) == -1:
 						popup.add_item(tr("CARD_HOLOMEM_MOVE_CENTER"), 4)
+					if currentZone != centerZone and find_in_zone(collabZone) == -1:
+						popup.add_item(tr("CARD_HOLOMEM_MOVE_COLLAB"), 9)
 					if currentZone in [centerZone, collabZone] and first_unoccupied_back_zone():
 						popup.add_item(tr("CARD_HOLOMEM_MOVE_BACK"), 5)
+					if currentZone == centerZone and all_occupied_zones(true).size() > 0:
+						popup.add_item(tr("CARD_HOLOMEM_SWITCH"), 8)
+					if (currentZone == centerZone and find_in_zone(collabZone) != -1) or (currentZone == collabZone and find_in_zone(centerZone) != -1):
+						popup.add_item(tr("CARD_HOLOMEM_CENTERCOLLABSWAP"), 18)
 					popup.add_separator()
 					
 					popup.add_item(tr("CARD_HOLOMEM_DAMAGE"), 10)
@@ -1344,6 +1368,9 @@ func _on_card_clicked(card_id : int) -> void:
 						popup.add_item(Settings.trans(skill.name) + sp_string + "-" + cost_string,71 if skill.sp else 70)
 					if !skill.stageSkill and ((!skill.sp and used_oshi_skill) or (skill.sp and used_sp_oshi_skill)) and canPayCost:
 						popup.add_item(Settings.trans(skill.name) + sp_string + " (again) -" + cost_string,71 if skill.sp else 70)
+			"Cheer":
+				if !actualCard.faceDown and actualCard.attachedTo == currentCard:
+					popup.add_item(tr("CHEER_ATTACH"),62)
 		
 		if popup.item_count > 0 and actualCard.cardType != "Oshi" and playing != currentCard:
 			popup.add_separator()
@@ -1376,15 +1403,27 @@ func _on_card_clicked(card_id : int) -> void:
 				if actualCard.attached.size() == 0:
 					popup.add_item(tr("CARD_STAGE_HAND"),3)
 					popup.add_item(tr("CARD_STAGE_BOTTOMDECK"),14)
-				if find_in_zone(collabZone) == -1 and find_what_zone(currentCard) != centerZone:
-					popup.add_item(tr("CARD_HOLOMEM_MOVE_COLLAB"), 9)
-				if find_what_zone(currentCard) == centerZone and all_occupied_zones(true).size() > 0:
-					popup.add_item(tr("CARD_HOLOMEM_SWITCH"), 8)
 			elif currentCard in revealed:
-				popup.add_item(tr("CARD_REVEALED_HAND"),21)
+				if actualCard.cardType == "Holomem":
+					if first_unoccupied_back_zone() and all_occupied_zones().size() < 6:
+						if actualCard.level < 1:
+							popup.add_item(tr("CARD_REVEALED_PLAY"),40)
+						else:
+							popup.add_item(tr("CARD_REVEALED_PLAY_DIRECT"),40)
+					
+					var bloomable = all_bloomable_zones(actualCard)
+					if bloomable[Settings.bloomCode.OK].size() > 0:
+						popup.add_item(tr("CARD_REVEALED_BLOOM"),41)
+					if bloomable[Settings.bloomCode.Skip].size() > 0:
+						popup.add_item(tr("CARD_REVEALED_BLOOM_SKIP"),44)
+					if bloomable[Settings.bloomCode.Instant].size() > 0:
+						popup.add_item(tr("CARD_REVEALED_BLOOM_FAST"),45)
+					popup.add_separator()
 				if actualCard.cardType == "Support" and actualCard.supportType in ["Tool","Mascot","Fan"] and all_occupied_zones().size() > 0:
 					popup.add_item(tr("CARD_REVEALED_ATTACH"),22)
-				popup.add_separator()
+					popup.add_separator()
+				
+				popup.add_item(tr("CARD_REVEALED_HAND"),21)
 				popup.add_item(tr("CARD_REVEALED_TOPDECK"),23)
 				popup.add_item(tr("CARD_REVEALED_BOTTOMDECK"),24)
 				popup.add_item(tr("CARD_REVEALED_ARCHIVE"),25)
@@ -1437,8 +1476,9 @@ func _on_deck_clicked():
 			popup.add_separator()
 			popup.add_item(tr("DECK_RPS"), 296)
 		
-		popup.add_separator()
-		popup.add_item(tr("DECK_EXTRA_TURN"), 295)
+		if is_turn:
+			popup.add_separator()
+			popup.add_item(tr("DECK_EXTRA_TURN"), 295)
 		
 		popup.add_separator()
 		popup.add_item(tr("FORFEIT"), 999)
@@ -1470,7 +1510,8 @@ func _on_cheer_deck_clicked():
 func _on_archive_clicked():
 	reset_popup()
 	
-	if preliminary_phase or currentPrompt != -1:
+	var yourSide = get_parent().yourSide
+	if preliminary_phase or currentPrompt != -1 or (yourSide and yourSide.currentPrompt != -1):
 		return
 	
 	popup.add_item(tr("ARCHIVE_SEARCH"),498)
@@ -1526,23 +1567,31 @@ func _on_list_card_clicked(card_id):
 						popup.add_item(tr("LIST_DECK_HOLOMEM_PLAY"),600)
 					elif currentFuda == archive:
 						popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_PLAY"),610)
+					elif currentAttached != null:
+						popup.add_item(tr("LIST_ATTACHED_HOLOMEM_PLAY"),620)
 				else:
 					if currentFuda == deck:
 						popup.add_item(tr("LIST_DECK_HOLOMEM_PLAY_DIRECT"),600)
 					elif currentFuda == archive:
 						popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_PLAY_DIRECT"),610)
-			if is_turn and !first_turn:
+					elif currentAttached != null:
+						popup.add_item(tr("LIST_ATTACHED_HOLOMEM_PLAY_DIRECT"),620)
+			if is_turn:
 				var bloomable = all_bloomable_zones(actualCard)
 				if bloomable[Settings.bloomCode.OK].size() > 0:
 					if currentFuda == deck:
 						popup.add_item(tr("LIST_DECK_HOLOMEM_BLOOM"),601)
 					elif currentFuda == archive:
 						popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_BLOOM"),611)
+					elif currentAttached != null:
+						popup.add_item(tr("LIST_ATTACHED_HOLOMEM_BLOOM"),621)
 				if bloomable[Settings.bloomCode.Instant].size() > 0:
 					if currentFuda == deck:
 						popup.add_item(tr("LIST_DECK_HOLOMEM_BLOOM_FAST"),604)
 					elif currentFuda == archive:
 						popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_BLOOM_FAST"),614)
+					elif currentAttached != null:
+						popup.add_item(tr("LIST_ATTACHED_HOLOMEM_BLOOM_FAST"),624)
 		"Cheer":
 			if all_occupied_zones().size() > 0:
 				if currentFuda == cheerDeck:
@@ -1579,13 +1628,19 @@ func _on_list_card_clicked(card_id):
 	show_popup()
 
 
-func _on_popup_menu_id_pressed(id):
+func _on_popup_menu_index_pressed(index):
+	_popup_from_id(popup.get_item_id(index), popup.get_item_metadata(index))
+
+func _on_popup_sub_menu_index_pressed(index):
+	_popup_from_id(%PopupSubMenu.get_item_id(index), %PopupSubMenu.get_item_metadata(index))
+
+func _popup_from_id(id, metadata = null):
 	if currentFuda:
-		send_command("Popup From Fuda Command",{"currentCard":currentCard, "command_id":id, "currentFuda":fuda_list.find(currentFuda)})
+		send_command("Popup From Fuda Command",{"currentCard":currentCard, "command_id":id, "currentFuda":fuda_list.find(currentFuda), "metadata":metadata})
 	elif currentAttached:
-		send_command("Popup From Attached Command",{"currentCard":currentCard, "command_id":id, "currentAttached":currentAttached.cardID})
+		send_command("Popup From Attached Command",{"currentCard":currentCard, "command_id":id, "currentAttached":currentAttached.cardID, "metadata":metadata})
 	else:
-		send_command("Popup Command", {"currentCard":currentCard, "command_id":id})
+		send_command("Popup Command", {"currentCard":currentCard, "command_id":id, "metadata":metadata})
 	
 	match id:
 		
@@ -1629,6 +1684,24 @@ func _on_popup_menu_id_pressed(id):
 			var possibleZones = all_occupied_zones()
 			showZoneSelection(possibleZones,false)
 			currentPrompt = 30
+		40: #Play to Back from Revealed
+			var possibleZones = all_unoccupied_back_zones()
+			if zones[0][1] == -1:
+				possibleZones.append(centerZone)
+			showZoneSelection(possibleZones)
+			currentPrompt = 40
+		41: #Bloom from Revealed
+			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.OK]
+			showZoneSelection(possibleZones)
+			currentPrompt = 41
+		44: #Skip Bloom from Revealed
+			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.Skip]
+			showZoneSelection(possibleZones)
+			currentPrompt = 41
+		45: #Instant Bloom from Revealed
+			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.Instant]
+			showZoneSelection(possibleZones)
+			currentPrompt = 41
 		50: #Look At Attached
 			currentAttached = all_cards[currentCard]
 			showLookAt(currentAttached.attached)
@@ -1643,6 +1716,12 @@ func _on_popup_menu_id_pressed(id):
 		54: #Request Damage to Back
 			set_prompt(tr("PROMPT_REQUESTDAMAGEBACK") + "\nX=",20,3)
 			currentPrompt = 54
+		
+		62: #Attach Cheer
+			var possibleZones = all_occupied_zones()
+			showZoneSelection(possibleZones)
+			currentPrompt = 62
+		
 		70: #Oshi Skill
 			var skill = all_cards[currentCard].oshi_skills[0]
 			
@@ -1670,6 +1749,8 @@ func _on_popup_menu_id_pressed(id):
 			oppSide.showZoneSelection(oppSide.all_occupied_zones())
 			oppSide.currentPrompt = id
 			currentPrompt = id
+			if metadata:
+				art_metadata = metadata
 		
 		100: #Play to Back
 			var possibleZones = all_unoccupied_back_zones()
@@ -1797,11 +1878,28 @@ func _on_popup_menu_id_pressed(id):
 			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.Instant]
 			showZoneSelection(possibleZones)
 			currentPrompt = 614
+		620: #Play From Attach
+			hideLookAt(false)
+			var possibleZones = all_unoccupied_back_zones()
+			if zones[0][1] == -1:
+				possibleZones.append(centerZone)
+			showZoneSelection(possibleZones)
+			currentPrompt = 620
+		621: #Bloom From Attach
+			hideLookAt(false)
+			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.OK]
+			showZoneSelection(possibleZones)
+			currentPrompt = 621
 		622: #Attach Cheer From Attach
 			var possibleZones = all_occupied_zones(false,currentAttached.cardID)
 			hideLookAt(false)
 			showZoneSelection(possibleZones)
 			currentPrompt = 622
+		624: #Instant Bloom From Attach
+			hideLookAt(false)
+			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.Instant]
+			showZoneSelection(possibleZones)
+			currentPrompt = 624
 		
 		901: #Goldfish Zone Damage
 			set_prompt("PROMPT_DAMAGE", 20, 3)
@@ -1841,7 +1939,7 @@ func _on_line_edit_text_submitted(new_text):
 							zoneInfo[0].add_damage(input)
 			zone_to_deal_damage_to = null
 		else:
-			send_command("Prompt Command", {"command_id":currentPrompt, "input":input, "currentCard":currentCard, "currentAttacking":currentAttacking})
+			send_command("Prompt Command", {"command_id":currentPrompt, "input":input, "currentCard":currentCard, "currentAttacking":currentAttacking, "art_metadata":art_metadata})
 		
 			match currentPrompt:
 				70:

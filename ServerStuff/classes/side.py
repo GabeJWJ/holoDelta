@@ -959,10 +959,14 @@ class Side:
                     opponentSide = self.game.playing[self.opponent.id]
                     actualAttacking = opponentSide.cards[currentAttacking]
                     actualAttacking.offered_damage += input
+                    if data["metadata"] is not None:
+                        art_name = data["metadata"]["holomem_number"]+"_ART_"+str(data["metadata"]["art_index"])+"_NAME"
+                    else:
+                        art_name = actualCard.number+"_ART_"+str(command_id-80)+"_NAME"
                     await opponentSide.tell_player("Offered Damage",{"card_id":currentAttacking,"amount":input})
                     await self.tell_others("Attack",{"attacker":currentCard,"attacked":currentAttacking})
                     await self.send_message(self.player,"MESSAGE_ARTS_DAMAGE",{"fromName":actualCard.number+"_NAME",
-                                                                                "artName":actualCard.number+"_ART_"+str(command_id-80)+"_NAME",
+                                                                                "artName":art_name,
                                                                                 "toName":actualAttacking.number+"_NAME"},
                                                                                 {"damage":input,"fromZone":await self.find_what_zone(currentCard),
                                                                                 "toZone":await opponentSide.find_what_zone(currentAttacking)})
@@ -1029,6 +1033,25 @@ class Side:
                 await self.send_message(self.player,"MESSAGE_CHEER_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
                 await attachTo.attach(actualCard)
 
+                await self.tell_player("Attach Card", {"attachee" : actualCard.id, "attach_to": attachTo.id})
+                await self.tell_others("Attach Card", {"attachee_info" : await actualCard.to_dict(), "attach_to_info": await attachTo.to_dict()})
+            
+            case 40: #Play from Revealed
+                await self.send_message(self.player,"MESSAGE_REVEALED_HOLOMEM_PLAY",{"cardName":self.cards[currentCard].number + "_NAME"})
+                await self.move_card_to_zone(currentCard,chosenZone)
+                self.revealed.remove(currentCard)
+                self.cards[currentCard].bloomed_this_turn = True
+                await self.tell_player("Card Played", {"card_id":currentCard})
+            case 41: #Bloom from Revealed
+                actualCard = self.cards[currentCard]
+                await self.bloom_on_zone(actualCard,chosenZone)
+                self.revealed.remove(currentCard)
+            
+            case 62: #Attach Cheer From Deck
+                actualCard = self.cards[currentCard]
+                attachTo = self.cards[self.zones[chosenZone]]
+                await self.send_message(self.player,"MESSAGE_CHEER_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
+                await attachTo.attach(actualCard)
                 await self.tell_player("Attach Card", {"attachee" : actualCard.id, "attach_to": attachTo.id})
                 await self.tell_others("Attach Card", {"attachee_info" : await actualCard.to_dict(), "attach_to_info": await attachTo.to_dict()})
             
@@ -1101,7 +1124,24 @@ class Side:
                 await attachTo.attach(actualCard)
                 await self.tell_player("Attach Card", {"attachee" : actualCard.id, "attach_to": attachTo.id})
                 await self.tell_others("Attach Card", {"attachee_info" : await actualCard.to_dict(), "attach_to_info": await attachTo.to_dict()})
-                
+            
+            case 620: #Play From Attach
+                try:
+                    currentAttached = self.cards[data["currentAttached"]]
+                    await self.send_message(self.player,"MESSAGE_ATTACH_HOLOMEM_PLAY",{"cardName":self.cards[currentCard].number + "_NAME","fromName":currentAttached.number + "_NAME"})
+                    await self.remove_from_attached(currentCard,currentAttached)
+                    await self.move_card_to_zone(currentCard,chosenZone)
+                    self.cards[currentCard].bloomed_this_turn = True
+                except IndexError:
+                    return
+            case 621 | 624: #Bloom From Attach
+                try:
+                    currentAttached = self.cards[data["currentAttached"]]
+                    await self.remove_from_attached(currentCard,currentAttached)
+                    actualCard = self.cards[currentCard]
+                    await self.bloom_on_zone(actualCard,chosenZone)    
+                except IndexError:
+                    return        
             case 622: #Attach Cheer From Attach
                 try:
                     currentAttached = self.cards[data["currentAttached"]]

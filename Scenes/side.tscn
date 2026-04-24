@@ -132,8 +132,17 @@ position = Vector2(800, 380)
 zoneID = 7
 
 [node name="PopupMenu" type="PopupMenu" parent="." unique_id=1694199144]
+oversampling_override = 1.0
 theme = ExtResource("8_u8usn")
 theme_override_font_sizes/font_size = 20
+submenu_popup_delay = 0.01
+
+[node name="PopupSubMenu" type="PopupMenu" parent="PopupMenu" unique_id=408538144]
+unique_name_in_owner = true
+oversampling_override = 1.0
+theme = ExtResource("8_u8usn")
+theme_override_font_sizes/font_size = 20
+submenu_popup_delay = 0.01
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=224447367]
 clip_contents = true
@@ -648,7 +657,8 @@ metadata/_custom_type_script = "uid://dpmwhedq5ws5x"
 [connection signal="zone_clicked" from="Zones/Back6" to="." method="_on_zone_clicked"]
 [connection signal="zone_info_clear" from="Zones/Back6" to="." method="clear_info"]
 [connection signal="zone_info_set" from="Zones/Back6" to="." method="_on_zone_enter"]
-[connection signal="id_pressed" from="PopupMenu" to="." method="_on_popup_menu_id_pressed"]
+[connection signal="index_pressed" from="PopupMenu" to="." method="_on_popup_menu_index_pressed"]
+[connection signal="index_pressed" from="PopupMenu/PopupSubMenu" to="." method="_on_popup_sub_menu_index_pressed"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/DECK" to="." method="_on_deck_clicked"]
 [connection signal="shuffled" from="SubViewportContainer/SubViewport/Node3D/DECK" to="." method="_on_fuda_shuffled"]
 [connection signal="fuda_clicked" from="SubViewportContainer/SubViewport/Node3D/CHEERDECK" to="." method="_on_cheer_deck_clicked"]

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: holodelta\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-03-12 16:13-0400\n"
+"PO-Revision-Date: 2026-04-23 22:04-0400\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -9063,7 +9063,7 @@ msgid "hBP05-056_ART_0_NAME"
 msgstr "Fait avec amour"
 
 msgid "hBP05-056_ART_0_EFFECT"
-msgstr "Cet Art gagne +20 dégâts pour chaque Événement avec #Nourriture que vous avez joué pendant ce tour. Le nombre maximum d'Événements pour cet effet est de 4."
+msgstr "Cet Art gagne +20 dégâts pour chaque Événement avec #Nourriture que vous avez joué pendant ce tour. Le nombre maximum d'Événements pour cet effet est de 2."
 
 msgid "hBP05-056_ART_1_NAME"
 msgstr "Se blottir durant la nuit"
@@ -10035,7 +10035,7 @@ msgid "hBP06-020_GIFT_NAME"
 msgstr "Conductrice de la Volonté"
 
 msgid "hBP06-020_GIFT_EFFECT"
-msgstr "Si cet Holomem est mis Inconscient pendant le tour de votre adversaire, vous pouvez archiver les 2 Cheer du dessus de votre Deck de Cheers. Si vous le faites, piochez 1 carte pour chaque Holomem de nom différent avec #FLOW GLOW sur votre Scène."
+msgstr "Si cet Holomem est mis Inconscient pendant le tour de votre adversaire, vous pouvez archiver les 2 cartes du dessus de votre Deck. Si vous le faites, piochez 1 carte pour chaque Holomem de nom différent avec #FLOW GLOW sur votre Scène."
 
 msgid "hBP06-037_NAME"
 msgstr "Nakiri Ayame"
@@ -11327,7 +11327,7 @@ msgid "hBP07-011_BLOOM_NAME"
 msgstr "Mouton qui tourne en rond"
 
 msgid "hBP07-011_BLOOM_EFFECT"
-msgstr "Révélez 1 Holomem 1st ⟨Tsunomaki Watame⟩ depuis votre Deck et ajoutez-le à votre main. Puis mélangez votre Deck. Vous ne pouvez utiliser votre Effet de Bloom « Mouton qui tourne en rond » qu’1 fois par tour."
+msgstr "Révélez 1 Holomem 1st ⟨Tsunomaki Watame⟩ depuis votre Deck et ajoutez-le à votre main. Puis mélangez votre Deck. Vous ne pouvez utiliser l'Effet de Bloom « Mouton qui tourne en rond » qu’1 fois par tour."
 
 msgid "hBP07-012_NAME"
 msgstr "Tsunomaki Watame"
@@ -11444,13 +11444,13 @@ msgid "hBP07-021_ART_0_NAME"
 msgstr "Agent secret suprême"
 
 msgid "hBP07-021_ART_0_EFFECT"
-msgstr "S’il y a un Holomem Buzz avec #IDGen3 sur votre Scène, cet Art gagne +50 dégâts."
+msgstr "S’il y a un Holomem Buzz avec #IDGen3 sur votre Scène, cet Art gagne +40 dégâts."
 
 msgid "hBP07-021_BLOOM_NAME"
 msgstr "Tu peux m’aider pour ma mission ?"
 
 msgid "hBP07-021_BLOOM_EFFECT"
-msgstr "Attachez 1 [⟨BAZO⟩ ou ⟨Zecretary⟩] depuis votre Archive à l'un de vos Holomems."
+msgstr "Attachez 1 [⟨BAZO⟩ ou ⟨Zecretary⟩] de votre Archive à l'un de vos Holomems."
 
 msgid "hBP07-022_NAME"
 msgstr "Shirogane Noel"
@@ -12471,142 +12471,151 @@ msgstr ""
 "Ce Fan ne peut être attaché qu'à ⟨Momosuzu Nene⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à un Holomem."
 
 msgid "hBP07-093_NAME"
-msgstr ""
+msgstr "Umami !"
 
 msgid "hBP07-093_EFFECT"
 msgstr ""
+"Choisissez votre ⟨Vestia Zeta⟩ en Position Collab. Pendant ce tour, les Arts de l'Holomem choisi gagnent +40 dégâts. Puis lancez un dé : Si le résultat est autre que 6, remettez cette carte dans votre Deck et mélangez-le.\n"
+"Vous ne pouvez jouer qu'un seul ⟨Umamii !⟩ par tour."
 
 msgid "hBP07-102_NAME"
-msgstr ""
+msgstr "Marteau de Tsunomaki Watame"
 
 msgid "hBP07-102_EFFECT"
 msgstr ""
+"Les Arts de votre ⟨Tsunomaki Watame⟩ avec cet Outil attaché gagnent +20 dégâts.\n"
+"\n"
+"◆ Gagne l'effet suivant s'il est attaché à ⟨Tsunomaki Watame⟩ 2nd Bloom ou plus : \n"
+"■ [Position Centrale] Les Arts de cet Holomem gagnent +30 dégâts.\n"
+"■ [Position Centrale] Lorsque cet Holomem utilise un Art, lancez un dé : Si le résultat est 3 ou 5, infligez 50 dégâts spéciaux à l'un de vos autres Holomems.\n"
+"\n"
+"Vous ne pouvez attacher qu’un seul Outil à un Holomem."
 
 msgid "hBP07-045_NAME"
-msgstr ""
+msgstr "Hakos Baelz"
 
 msgid "hBP07-045_ART_0_NAME"
-msgstr ""
+msgstr "C'est pas fun sans toi"
 
 msgid "hBP07-045_ART_0_EFFECT"
-msgstr ""
+msgstr "Pour chaque carte en Main, cet Art gagne +20 dégâts."
 
 msgid "hBP07-045_GIFT_NAME"
-msgstr ""
+msgstr "L'excitation monte !"
 
 msgid "hBP07-045_GIFT_EFFECT"
-msgstr ""
+msgstr "[Position Centrale ou Collab] Lorsque vous utilisez votre SP Oshi Skill, mettez la première carte de votre Deck dans vos Holopowers."
 
 msgid "hBP07-047_NAME"
-msgstr ""
+msgstr "Elizabeth Rose Bloodflame"
 
 msgid "hBP07-047_ART_0_NAME"
-msgstr ""
+msgstr "Allez, venez donc m'affronter !"
 
 msgid "hBP07-047_COLLAB_NAME"
-msgstr ""
+msgstr "...Very well."
 
 msgid "hBP07-047_COLLAB_EFFECT"
-msgstr ""
+msgstr "Si votre Oshi est ⟨Elizabeth Rose Bloodflame⟩, mettez la première carte de votre Deck dans vos Holopowers."
 
 msgid "hBP07-053_NAME"
-msgstr ""
+msgstr "Ouro Kronii"
 
 msgid "hBP07-053_ART_0_NAME"
-msgstr ""
+msgstr "Everlasting Flower"
 
 msgid "hBP07-053_ART_0_EFFECT"
-msgstr ""
+msgstr "Attachez la première carte de votre Deck de Cheers à l’un de vos Holomems avec #Promise."
 
 msgid "hBP07-053_BLOOM_NAME"
-msgstr ""
+msgstr "Promesse au-delà du temps"
 
 msgid "hBP07-053_BLOOM_EFFECT"
-msgstr ""
+msgstr "Choisissez 1 de vos Holomems avec #Promise. Pendant ce tour, les Arts de l'Holomem choisi gagnent +20 dégâts."
 
 msgid "hBP07-056_NAME"
-msgstr ""
+msgstr "Ouro Kronii"
 
 msgid "hBP07-056_ART_0_NAME"
-msgstr ""
+msgstr "You're not ready for me"
 
 msgid "hBP07-056_ART_0_EFFECT"
-msgstr ""
+msgstr "Vous pouvez réattacher 1 Cheer de cet Holomem à 1 de vos Holomems avec #Promise. Si votre Oshi est ⟨Ouro Kronii⟩, cet Art gagne +100 dégâts."
 
 msgid "hBP07-056_GIFT_NAME"
-msgstr ""
+msgstr "Souveraine du Temps"
 
 msgid "hBP07-056_GIFT_EFFECT"
-msgstr ""
+msgstr "[Position Centrale] Au début de votre Phase de Performance, vous pouvez bloom 1 de vos ⟨Ouro Kronii⟩ en utilisant un Holomem empilé sous cette carte."
 
 msgid "hBP07-061_NAME"
-msgstr ""
+msgstr "Shiori Novella"
 
 msgid "hBP07-061_ART_0_NAME"
-msgstr ""
+msgstr "Il n'y a aucune chance que je les laisse s'enfuir, n'est-ce pas ?"
 
 msgid "hBP07-061_ART_0_EFFECT"
-msgstr ""
+msgstr "Infligez 20 dégâts spéciaux à 1 Holomem en Arrière adverse."
 
 msgid "hBP07-061_BLOOM_NAME"
-msgstr ""
+msgstr "A New Chapter Begins!"
 
 msgid "hBP07-061_BLOOM_EFFECT"
-msgstr ""
+msgstr "Si votre Oshi est ⟨Shiori Novella⟩, regardez les 4 premières cartes de votre Deck. Révélez 1 Soutien parmi elles et mettez-le dans votre Main. Puis mettez les cartes restantes au-dessous de votre Deck dans n'importe quel ordre."
 
 msgid "hBP07-062_NAME"
-msgstr ""
+msgstr "Shiori Novella"
 
 msgid "hBP07-062_ART_0_NAME"
-msgstr ""
+msgstr "Le savoir interdit dévoilé"
 
 msgid "hBP07-062_ART_0_EFFECT"
-msgstr ""
+msgstr "Attachez 1 Cheer de votre Archive à l'un de vos Holomems avec #Advent. Si votre Oshi est ⟨Shiori Novella⟩ et qu'il y a 4 Cheers ou plus attachés à cet Holomem, cet Art gagne +100 dégâts."
 
 msgid "hBP07-062_COLLAB_NAME"
-msgstr ""
+msgstr "A New Crime & A New Me"
 
 msgid "hBP07-062_COLLAB_EFFECT"
-msgstr ""
+msgstr "Vous pouvez archiver 2 Soutiens de votre Main : Choisissez 1 Holomem sur votre Scène, Pendant ce tour, les Arts de l'Holomem choisi gagnent +50 dégâts."
 
 msgid "hBP07-080_NAME"
-msgstr ""
+msgstr "Momosuzu Nene"
 
 msgid "hBP07-080_ART_0_NAME"
-msgstr ""
+msgstr "Super méga mignonne"
 
 msgid "hBP07-080_GIFT_NAME"
-msgstr ""
+msgstr "Idole Orange !"
 
 msgid "hBP07-080_GIFT_EFFECT"
-msgstr ""
+msgstr "[1/Tour] Si votre Oshi est ⟨Momosuzu Nene⟩, vous pouvez utiliser cet effet pendant votre Phase Principale : attachez 1 ⟨Nekko⟩ depuis votre Archive à cet Holomem."
 
 msgid "hBP07-083_NAME"
-msgstr ""
+msgstr "Momosuzu Nene"
 
 msgid "hBP07-083_ART_0_NAME"
-msgstr ""
+msgstr "Overcheerleading"
 
 msgid "hBP07-083_ART_0_EFFECT"
-msgstr ""
+msgstr "Mettez 1 Cheer attaché à l'Holomem Central ou Collab adverse au-dessous de son Deck de Cheers."
 
 msgid "hBP07-083_BLOOM_NAME"
-msgstr ""
+msgstr "Boisson énergétique de tout le monde"
 
 msgid "hBP07-083_BLOOM_EFFECT"
-msgstr ""
+msgstr "[Position Centrale] Jusqu’à la fin du prochain tour de votre adversaire, les Arts de tous les Holomem sur les deux Scènes gagnent +40 dégâts. Puis, toutes vos ⟨Momosuzu Nene⟩ 2nd Bloom sur votre Stage gagnent +60 dégâts supplémentaires."
 
 msgid "hBP07-086_NAME"
-msgstr ""
+msgstr "Gigi Murin"
 
 msgid "hBP07-086_ART_0_NAME"
-msgstr ""
+msgstr "Le Chaos de la poursuite"
 
 msgid "hBP07-086_ART_0_EFFECT"
-msgstr ""
+msgstr "Si la cible de cet Art est un Holomem dont les PV ont été réduits, cet Art gagne +30 dégâts."
 
 msgid "hBP07-086_COLLAB_NAME"
-msgstr ""
+msgstr "La chasseuse obstinée"
 
 msgid "hBP07-086_COLLAB_EFFECT"
-msgstr ""
+msgstr "Choisissez 1 de vos ⟨Gigi Murin⟩. Pendant ce tour, les Arts de l'Holomem choisi peuvent également cibler les Holomems adverses en Arrière dont les PV ont été réduits."
