@@ -1567,14 +1567,14 @@ func _on_list_card_clicked(card_id):
 						popup.add_item(tr("LIST_DECK_HOLOMEM_PLAY"),600)
 					elif currentFuda == archive:
 						popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_PLAY"),610)
-					elif currentAttached != null:
+					elif currentAttached != currentCard:
 						popup.add_item(tr("LIST_ATTACHED_HOLOMEM_PLAY"),620)
 				else:
 					if currentFuda == deck:
 						popup.add_item(tr("LIST_DECK_HOLOMEM_PLAY_DIRECT"),600)
 					elif currentFuda == archive:
 						popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_PLAY_DIRECT"),610)
-					elif currentAttached != null:
+					elif currentAttached != currentCard:
 						popup.add_item(tr("LIST_ATTACHED_HOLOMEM_PLAY_DIRECT"),620)
 			if is_turn:
 				var bloomable = all_bloomable_zones(actualCard)
@@ -1583,14 +1583,14 @@ func _on_list_card_clicked(card_id):
 						popup.add_item(tr("LIST_DECK_HOLOMEM_BLOOM"),601)
 					elif currentFuda == archive:
 						popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_BLOOM"),611)
-					elif currentAttached != null:
+					elif currentAttached != currentCard:
 						popup.add_item(tr("LIST_ATTACHED_HOLOMEM_BLOOM"),621)
 				if bloomable[Settings.bloomCode.Instant].size() > 0:
 					if currentFuda == deck:
 						popup.add_item(tr("LIST_DECK_HOLOMEM_BLOOM_FAST"),604)
 					elif currentFuda == archive:
 						popup.add_item(tr("LIST_ARCHIVE_HOLOMEM_BLOOM_FAST"),614)
-					elif currentAttached != null:
+					elif currentAttached != currentCard:
 						popup.add_item(tr("LIST_ATTACHED_HOLOMEM_BLOOM_FAST"),624)
 		"Cheer":
 			if all_occupied_zones().size() > 0:
@@ -1598,7 +1598,7 @@ func _on_list_card_clicked(card_id):
 					popup.add_item(tr("LIST_CHEERDECK_CHEER_ATTACH"),602)
 				elif currentFuda == archive:
 					popup.add_item(tr("LIST_ARCHIVE_CHEER_ATTACH"),612)
-				elif currentAttached != null and all_occupied_zones().size() > 1:
+				elif currentAttached != currentCard and all_occupied_zones().size() > 1:
 					popup.add_item(tr("LIST_ATTACHED_CHEER_ATTACH"),622)
 			
 			if life.size() < 6:
@@ -1686,8 +1686,6 @@ func _popup_from_id(id, metadata = null):
 			currentPrompt = 30
 		40: #Play to Back from Revealed
 			var possibleZones = all_unoccupied_back_zones()
-			if zones[0][1] == -1:
-				possibleZones.append(centerZone)
 			showZoneSelection(possibleZones)
 			currentPrompt = 40
 		41: #Bloom from Revealed

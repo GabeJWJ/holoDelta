@@ -1,23 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://chrab4uqxsh2s"]
+[gd_scene format=3 uid="uid://chrab4uqxsh2s"]
 
-[ext_resource type="Script" path="res://Scripts/info_panel.gd" id="1_dle75"]
+[ext_resource type="Script" uid="uid://bd6gls7q07ro8" path="res://Scripts/info_panel.gd" id="1_dle75"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="2_ducyq"]
 [ext_resource type="Texture2D" uid="uid://brfosqsw30a1j" path="res://CyberAssets/DeckBuilder/61457.png" id="3_7wkbs"]
 [ext_resource type="Texture2D" uid="uid://syjyaota42p2" path="res://CyberAssets/Game Side Menu/scroll_icon_2.png" id="4_onx1c"]
 
-[node name="InfoMargins" type="MarginContainer"]
+[node name="InfoMargins" type="MarginContainer" unique_id=1251533339]
 clip_contents = true
 custom_minimum_size = Vector2(292, 0)
 size_flags_horizontal = 3
 script = ExtResource("1_dle75")
 
-[node name="InfoVBox" type="VBoxContainer" parent="."]
+[node name="InfoVBox" type="VBoxContainer" parent="." unique_id=1941393723]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 5
 
-[node name="InfoLabel" type="Label" parent="InfoVBox"]
+[node name="InfoLabel" type="Label" parent="InfoVBox" unique_id=2052572318]
 layout_mode = 2
 theme = ExtResource("2_ducyq")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -26,12 +26,12 @@ text = "SIDEBAR_INFO"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Icons" type="Control" parent="InfoVBox"]
+[node name="Icons" type="Control" parent="InfoVBox" unique_id=283884811]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="ScrollIcon" type="TextureRect" parent="InfoVBox/Icons"]
+[node name="ScrollIcon" type="TextureRect" parent="InfoVBox/Icons" unique_id=1542074509]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.823529)
 z_index = 4
@@ -46,12 +46,12 @@ texture = ExtResource("4_onx1c")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="ScrollIconTimer" type="Timer" parent="InfoVBox/Icons/ScrollIcon"]
+[node name="ScrollIconTimer" type="Timer" parent="InfoVBox/Icons/ScrollIcon" unique_id=459691171]
 unique_name_in_owner = true
 wait_time = 2.0
 one_shot = true
 
-[node name="LockVBox" type="VBoxContainer" parent="InfoVBox/Icons"]
+[node name="LockVBox" type="VBoxContainer" parent="InfoVBox/Icons" unique_id=501657068]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -63,7 +63,7 @@ offset_bottom = 48.0
 grow_horizontal = 0
 theme_override_constants/separation = 0
 
-[node name="LockIcon" type="TextureRect" parent="InfoVBox/Icons/LockVBox"]
+[node name="LockIcon" type="TextureRect" parent="InfoVBox/Icons/LockVBox" unique_id=338108450]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.258824)
 z_index = 2
@@ -74,7 +74,7 @@ texture = ExtResource("3_7wkbs")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="LockText" type="Label" parent="InfoVBox/Icons/LockVBox"]
+[node name="LockText" type="Label" parent="InfoVBox/Icons/LockVBox" unique_id=555211912]
 auto_translate_mode = 2
 z_index = 2
 layout_mode = 2
@@ -84,12 +84,12 @@ text = "CTRL"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Preview" type="Control" parent="InfoVBox"]
+[node name="Preview" type="Control" parent="InfoVBox" unique_id=400525728]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 
-[node name="CardText" type="RichTextLabel" parent="InfoVBox"]
+[node name="CardText" type="RichTextLabel" parent="InfoVBox" unique_id=689075956]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 360)
 layout_mode = 2

@@ -137,7 +137,7 @@ func setup_info(number,art_code,back=null):
 							cost_dict.Yellow += 1
 						"N":
 							cost_dict.Any += 1
-				holomem_arts.append([art.artIndex,cost_dict,art.damage,bool(art.hasPlus),bool(art.hasEffect),null if !art.has("advantage") else art.advantage])
+				holomem_arts.append([art.artIndex,cost_dict,art.damage,bool(art.hasPlus),bool(art.hasEffect),null if !art.has("advantage") else art.advantage,null if !art.has("advantage") else art.advantageAmount])
 			holomem_arts.sort_custom(func(a,b): return a[0] < b[0]) #Order arts by index
 			holomem_effects = []
 			if card_data.has("effect"):
@@ -299,7 +299,12 @@ func full_desc():
 				result += " " + Settings.trans("%s_ART_%s_NAME" % [cardNumber, art[0]]).replace("[", "[lb]")
 				result += " " + str(art[2]) + ("+" if art[3] else "")
 				if art[5] != null:
-					result += " [img=40]res://Icons/tokkou_50_%s.png[/img]" % art[5].to_lower()
+					if art[6] in [null, 50]:
+						result += " [img=40]res://Icons/tokkou_50_%s.png[/img]" % art[5].to_lower()
+					elif art[6] == 30:
+						result += " [img=40]res://Icons/tokkou_30_%s.png[/img]" % art[5].to_lower()
+					else:
+						result += " (+%d [img=18]res://CheerIcons/%s.webp[/img])" % [art[6], art[5]]
 				result += "[/center]"
 				if art[4]:
 					result += "\n\n" + Settings.trans("%s_ART_%s_EFFECT" % [cardNumber, art[0]]).replace("[", "[lb]")
