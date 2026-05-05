@@ -976,6 +976,14 @@ func attach_fake_card(attachee_info, attach_to_info):
 	var attach_to = get_real_card(attach_to_info, mainBack)
 	attach_card(attachee.cardID, attach_to.cardID)
 
+func remove_card_from_revealed(card_to_remove, layer_to_move_to):
+	var actualCard = all_cards[card_to_remove]
+	actualCard.reparent(cardLayers[layer_to_move_to],true)
+	revealed.erase(card_to_remove)
+
+func remove_fake_card_from_revealed(fake_card_to_remove, layer_to_move_to):
+	remove_card_from_revealed(fake_card_to_remove, layer_to_move_to)
+
 func show_popup():
 	if popup.item_count > 0:
 		popup.visible = true
@@ -2212,6 +2220,9 @@ func side_command(command: String, data: Dictionary) -> void:
 			if "card_id" in data:
 				life[0].flipUp()
 				life.pop_front()
+		"Remove From Revealed":
+			if "card_id" in data and "layer" in data:
+				remove_card_from_revealed(data["card_id"],data["layer"])
 		"Play Support":
 			if "card_id" in data:
 				play_card(int(data["card_id"]))
@@ -2318,6 +2329,9 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 		"Reveal Life":
 			if "card" in data:
 				reveal_fake_life(data["card"])
+		"Remove From Revealed":
+			if "card_id" in data and "layer" in data:
+				remove_fake_card_from_revealed(data["card_id"],data["layer"])
 		"Play Support":
 			if "card" in data:
 				play_fake_card(data["card"])

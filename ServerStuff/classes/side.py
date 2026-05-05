@@ -286,6 +286,10 @@ class Side:
         
         await self.tell_player("Add To Fuda",{"card_id":card_id,"to_fuda":int(to_fuda),"bottom":bottom})
         await self.tell_others("Add To Fuda",{"to_fuda":int(to_fuda),"moved_card":moved_card})
+    
+    async def remove_from_revealed(self, card_to_remove, layer_to_move_to):
+        self.revealed.remove(card_to_remove)
+        await self.tell_all("Remove From Revealed", {"card_id":card_to_remove, "layer":layer_to_move_to})
 
     async def first_unoccupied_back_zone(self, card_id = None):
         result = None
@@ -959,8 +963,8 @@ class Side:
                     opponentSide = self.game.playing[self.opponent.id]
                     actualAttacking = opponentSide.cards[currentAttacking]
                     actualAttacking.offered_damage += input
-                    if data["metadata"] is not None:
-                        art_name = data["metadata"]["holomem_number"]+"_ART_"+str(data["metadata"]["art_index"])+"_NAME"
+                    if "art_metadata" in data and data["art_metadata"] is not None:
+                        art_name = data["art_metadata"]["holomem_number"]+"_ART_"+str(data["art_metadata"]["art_index"])+"_NAME"
                     else:
                         art_name = actualCard.number+"_ART_"+str(command_id-80)+"_NAME"
                     await opponentSide.tell_player("Offered Damage",{"card_id":currentAttacking,"amount":input})
@@ -1021,7 +1025,7 @@ class Side:
                 actualCard = self.cards[currentCard]
                 attachTo = self.cards[self.zones[chosenZone]]
                 await self.send_message(self.player,"MESSAGE_SUPPORT_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME"},{"toZone":chosenZone})
-                self.revealed.remove(currentCard)
+                await self.remove_from_revealed(currentCard, "Attached")
                 await attachTo.attach(actualCard)
 
                 await self.tell_player("Attach Card", {"attachee" : actualCard.id, "attach_to": attachTo.id})
@@ -1039,13 +1043,13 @@ class Side:
             case 40: #Play from Revealed
                 await self.send_message(self.player,"MESSAGE_REVEALED_HOLOMEM_PLAY",{"cardName":self.cards[currentCard].number + "_NAME"})
                 await self.move_card_to_zone(currentCard,chosenZone)
-                self.revealed.remove(currentCard)
+                await self.remove_from_revealed(currentCard, "Main")
                 self.cards[currentCard].bloomed_this_turn = True
                 await self.tell_player("Card Played", {"card_id":currentCard})
             case 41: #Bloom from Revealed
                 actualCard = self.cards[currentCard]
                 await self.bloom_on_zone(actualCard,chosenZone)
-                self.revealed.remove(currentCard)
+                await self.remove_from_revealed(currentCard, "Main")
             
             case 62: #Attach Cheer From Deck
                 actualCard = self.cards[currentCard]
