@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: holodelta\n"
-"X-Crowdin-Project-ID: 724315\n"
-"X-Crowdin-Language: en\n"
-"X-Crowdin-File: /cards/template.pot\n"
-"X-Crowdin-File-ID: 14\n"
-"Project-Id-Version: holodelta\n"
+"Project-Id-Version: holoDelta - future\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Language-Team: English\n"
-"Language: en_US\n"
-"PO-Revision-Date: 2026-05-04 23:50\n"
+"Content-Transfer-Encoding: 8bit\n"
+"\" \"POT-Creation-Date: \n"
+"X-Generator: Poedit 3.9\n"
 
 msgid "EXTRA_BUZZ"
 msgstr "If this holomem is downed, you get life-2"
@@ -616,7 +616,8 @@ msgid "hSD01-015_COLLAB_NAME"
 msgstr "SoAzKo"
 
 msgid "hSD01-015_COLLAB_EFFECT"
-msgstr "■If collabing with <Tokino Sora>, draw 1 card from your deck.\n"
+msgstr ""
+"■If collabing with <Tokino Sora>, draw 1 card from your deck.\n"
 "■If collabing with <AZKi>, send the top card of your cheer deck to your center holomem."
 
 msgid "hPR-001_NAME"
@@ -1703,7 +1704,9 @@ msgid "hSD01-017_NAME"
 msgstr "Manager-chan"
 
 msgid "hSD01-017_EFFECT"
-msgstr "This card can only be used if you have 1 or more cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 1 or more cards in hand excluding this card.\n"
+"\n"
 "Return all of the cards in your hand to the deck and shuffle it. Then, draw 5 cards from your deck."
 
 msgid "hSD01-018_NAME"
@@ -1716,7 +1719,9 @@ msgid "hSD01-019_NAME"
 msgstr "Amazing PC"
 
 msgid "hSD01-019_EFFECT"
-msgstr "This card can only be used if you archive 1 cheer from your stage.\n\n"
+msgstr ""
+"This card can only be used if you archive 1 cheer from your stage.\n"
+"\n"
 "Reveal 1 [1st holomem or 2nd holomem] other than Buzz from your deck, and add it to hand. Then, shuffle the deck."
 
 msgid "hSD01-020_NAME"
@@ -1729,7 +1734,9 @@ msgid "hSD01-021_NAME"
 msgstr "First Gravity"
 
 msgid "hSD01-021_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of <Tokino Sora> and/or <AZKi> from among them, and put the revealed holomem into hand. Then, return the rest to the bottom of the deck in any order."
 
 msgid "hY01-001_NAME"
@@ -1778,14 +1785,18 @@ msgid "hBP01-102_NAME"
 msgstr "Idol Microphone"
 
 msgid "hBP01-102_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Singing from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP01-105_NAME"
 msgstr "Penlight"
 
 msgid "hBP01-105_EFFECT"
-msgstr "This card can only be used if you archive 1 of your holo Power.\n\n"
+msgstr ""
+"This card can only be used if you archive 1 of your holo Power.\n"
+"\n"
 "Reveal 1 cheer from your cheer deck with the same color as 1 of your holomem, and send it to your holomem. Then, shuffle the cheer deck."
 
 msgid "hBP01-108_NAME"
@@ -1798,14 +1809,18 @@ msgid "hBP01-109_NAME"
 msgstr "Tale of the Moon and the Rabbit"
 
 msgid "hBP01-109_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of <Usada Pekora> and/or <Moona Hoshinova> from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP01-110_NAME"
 msgstr "I'll smack you with a blunt weapon!"
 
 msgid "hBP01-110_EFFECT"
-msgstr "Roll a die once:If it is 3 or less, archive 1 of your opponent's holomem's cheers.\n\n"
+msgstr ""
+"Roll a die once:If it is 3 or less, archive 1 of your opponent's holomem's cheers.\n"
+"\n"
 "◆If your Oshi holomem is <Nanashi Mumei>, you may Ability Shift\n"
 "[1/Game]Archive 2 of your opponent's center holomem's cheers."
 
@@ -1813,75 +1828,98 @@ msgid "hBP01-114_NAME"
 msgstr "Stone Axe"
 
 msgid "hBP01-114_EFFECT"
-msgstr "■The holomem this tool is attached to gets Arts+20.\n"
-"■When the holomem this tool is attached to uses Arts, deal 10 Special Damage to this holomem.\n\n"
+msgstr ""
+"■The holomem this tool is attached to gets Arts+20.\n"
+"■When the holomem this tool is attached to uses Arts, deal 10 Special Damage to this holomem.\n"
+"\n"
 "◆Additional ability if attached to a 1st or greater <Aki Rosenthal>\n"
-"[1/Turn]When this holomem is restored by your ability, draw 1 card from the deck.\n\n"
+"[1/Turn]When this holomem is restored by your ability, draw 1 card from the deck.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP01-115_NAME"
 msgstr "Hoshimachi Suisei's Microphone"
 
 msgid "hBP01-115_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to a 1st or greater <Hoshimachi Suisei>\n"
-"If the holomem this tool is attached to downed your opponent's holomem, send 1 card from the top of your cheer deck to this holomem.\n\n"
+"If the holomem this tool is attached to downed your opponent's holomem, send 1 card from the top of your cheer deck to this holomem.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP01-118_NAME"
 msgstr "Ankimo"
 
 msgid "hBP01-118_EFFECT"
-msgstr "The holomem this mascot is attached to gets +10 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +10 HP.\n"
+"\n"
 "◆Additional ability if attached to <Tokino Sora>\n"
-"If the holomem this mascot is attached to would use Arts, this mascot is also regarded as a white cheer.\n\n"
+"If the holomem this mascot is attached to would use Arts, this mascot is also regarded as a white cheer.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP01-119_NAME"
 msgstr "Jobs"
 
 msgid "hBP01-119_EFFECT"
-msgstr "The holomem this mascot is attached to gets +10 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +10 HP.\n"
+"\n"
 "◆Additional ability if attached to <Aki Rosenthal>\n"
-"When the holomem this mascot is attached to uses Arts, restore 10 HP to 1 of your holomem.\n\n"
+"When the holomem this mascot is attached to uses Arts, restore 10 HP to 1 of your holomem.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP01-120_NAME"
 msgstr "Ganmo"
 
 msgid "hBP01-120_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Takane Lui>\n"
-"When the holomem this mascot is attached to uses Arts in the Center Position, draw 1 card from your deck.\n\n"
+"When the holomem this mascot is attached to uses Arts in the Center Position, draw 1 card from your deck.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP01-122_NAME"
 msgstr "Rose Knights"
 
 msgid "hBP01-122_EFFECT"
-msgstr "During your opponent's turn, if the holomem this fan is attached to is downed, send the top card of your cheer deck to your <Aki Rosenthal>.\n\n"
+msgstr ""
+"During your opponent's turn, if the holomem this fan is attached to is downed, send the top card of your cheer deck to your <Aki Rosenthal>.\n"
+"\n"
 "You may only attach this fan to your <Aki Rosenthal>, and you may attach any number of this fan per holomem."
 
 msgid "hBP01-123_NAME"
 msgstr "Wild Rabbit Alliance"
 
 msgid "hBP01-123_EFFECT"
-msgstr "If the holomem this fan is attached to rolled a die by an ability, you may archive this fan:Ignore the previous results, and reroll the die.\n\n"
+msgstr ""
+"If the holomem this fan is attached to rolled a die by an ability, you may archive this fan:Ignore the previous results, and reroll the die.\n"
+"\n"
 "You may only attach this fan to your <Usada Pekora>, and you may attach any number of this fan per holomem."
 
 msgid "hBP01-124_NAME"
 msgstr "Pioneers"
 
 msgid "hBP01-124_EFFECT"
-msgstr "During your opponent's turn, if the holomem this fan is attached to is downed, reattach 1 cheer from the holomem this fan is attached to to your other holomem.\n\n"
+msgstr ""
+"During your opponent's turn, if the holomem this fan is attached to is downed, reattach 1 cheer from the holomem this fan is attached to to your other holomem.\n"
+"\n"
 "You may only attach this fan to your <AZKi>, and you may attach any number of this fan per holomem."
 
 msgid "hBP01-126_NAME"
 msgstr "Troupe Member"
 
 msgid "hBP01-126_EFFECT"
-msgstr "■If the holomem this fan is attached to would use Arts, this fan is also regarded as a red cheer.\n"
-"■The holomem this fan is attached to takes +10 Damage.\n\n"
+msgstr ""
+"■If the holomem this fan is attached to would use Arts, this fan is also regarded as a red cheer.\n"
+"■The holomem this fan is attached to takes +10 Damage.\n"
+"\n"
 "You may only attach this fan to your <Omaru Polka>, and you may attach any number of this fan per holomem."
 
 msgid "hBP01-104_NAME"
@@ -1897,25 +1935,33 @@ msgid "hBP01-117_NAME"
 msgstr "Friend"
 
 msgid "hBP01-117_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Nanashi Mumei>\n"
-"During your opponent's turn, if the holomem this mascot is attached to would take Damage, you may archive this mascot:The holomem this mascot was attached to takes -30 Damage.\n\n"
+"During your opponent's turn, if the holomem this mascot is attached to would take Damage, you may archive this mascot:The holomem this mascot was attached to takes -30 Damage.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP01-113_NAME"
 msgstr "Promise"
 
 msgid "hBP01-113_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Promise from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP01-116_NAME"
 msgstr "Upao"
 
 msgid "hBP01-116_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Amane Kanata>\n"
-"[1/Turn]During your opponent's turn, when the holomem this mascot is attached to takes Damage, deal 20 Special Damage to your opponent's center holomem.\n\n"
+"[1/Turn]During your opponent's turn, when the holomem this mascot is attached to takes Damage, deal 20 Special Damage to your opponent's center holomem.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP01-001_NAME"
@@ -1931,7 +1977,9 @@ msgid "hBP01-111_NAME"
 msgstr "hololive Indonesia Gen 3"
 
 msgid "hBP01-111_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #ID Gen 3 from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP01-107_NAME"
@@ -1950,7 +1998,9 @@ msgid "hBP01-103_NAME"
 msgstr "Gaming PC"
 
 msgid "hBP01-103_EFFECT"
-msgstr "This card can only be used if you archive 1 of your holo Power.\n\n"
+msgstr ""
+"This card can only be used if you archive 1 of your holo Power.\n"
+"\n"
 "Reveal 1 [Debut holomem or 1st holomem] other than Buzz from your deck with the same color as your Oshi holomem, and add it to hand. Then, shuffle the deck."
 
 msgid "hBD24-001_NAME"
@@ -1960,14 +2010,18 @@ msgid "hBP01-125_NAME"
 msgstr "KFP"
 
 msgid "hBP01-125_EFFECT"
-msgstr "When this fan is attached from hand to a holomem, you may archive 1 card from your hand:Draw 1 card from your deck.\n\n"
+msgstr ""
+"When this fan is attached from hand to a holomem, you may archive 1 card from your hand:Draw 1 card from your deck.\n"
+"\n"
 "You may only attach this fan to your <Takanashi Kiara>, and you may attach any number of this fan per holomem."
 
 msgid "hPR-002_NAME"
 msgstr "ReGLOSS"
 
 msgid "hPR-002_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #ReGLOSS from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP01-006_NAME"
@@ -1977,9 +2031,12 @@ msgid "hBP01-121_NAME"
 msgstr "Kotori"
 
 msgid "hBP01-121_EFFECT"
-msgstr "The holomem this mascot is attached to in the Center Position or Collab Position takes -10 Damage.\n\n"
+msgstr ""
+"The holomem this mascot is attached to in the Center Position or Collab Position takes -10 Damage.\n"
+"\n"
 "◆Additional ability if attached to <Takanashi Kiara>\n"
-"When the Bloom level of the holomem this mascot is attached to increases, draw 1 card from your deck.\n\n"
+"When the Bloom level of the holomem this mascot is attached to increases, draw 1 card from your deck.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP02-001_NAME"
@@ -2010,7 +2067,9 @@ msgid "hBP02-082_NAME"
 msgstr "hololive GAMERS"
 
 msgid "hBP02-082_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #GAMERS from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hY05-001_NAME"
@@ -2344,25 +2403,33 @@ msgid "hSD02-012_NAME"
 msgstr "AyaFubuMi"
 
 msgid "hSD02-012_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of <Shirakami Fubuki>, <Ookami Mio>, and <Nakiri Ayame> from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hSD02-013_NAME"
 msgstr "Asura & Rakshasa"
 
 msgid "hSD02-013_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to a 1st or greater <Nakiri Ayame>\n"
-"The holomem this tool is attached to gets Arts+10.\n\n"
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hSD02-014_NAME"
 msgstr "Poyoyo"
 
 msgid "hSD02-014_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Nakiri Ayame>\n"
-"When the holomem this mascot is attached to blooms, draw 1 card.\n\n"
+"When the holomem this mascot is attached to blooms, draw 1 card.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hSD03-001_NAME"
@@ -2402,34 +2469,45 @@ msgid "hBP02-087_NAME"
 msgstr "Murasaki Shion's Magic Wand"
 
 msgid "hBP02-087_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to a 1st or greater <Musasaki Shion>\n"
-"If the holomem this tool is attached to is your center holomem, change [1/Turn] to [2/turn] for your Oshi Skill \"Heeeyyyyy\".\n\n"
+"If the holomem this tool is attached to is your center holomem, change [1/Turn] to [2/turn] for your Oshi Skill \"Heeeyyyyy\".\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP02-092_NAME"
 msgstr "Fubzilla"
 
 msgid "hBP02-092_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Shirakami Fubuki>\n"
-"[1/Turn]During your main phase, you may archive 2 cheers from your holomem:During this turn, this holomem gets Arts+50.\n\n"
+"[1/Turn]During your main phase, you may archive 2 cheers from your holomem:During this turn, this holomem gets Arts+50.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP02-093_NAME"
 msgstr "Miteiru"
 
 msgid "hBP02-093_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Shirakami Fubuki>\n"
-"[Back Position Only]The holomem this mascot is attached to does not take damage from your opponent.\n\n"
+"[Back Position Only]The holomem this mascot is attached to does not take damage from your opponent.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP02-099_NAME"
 msgstr "Sukonbu"
 
 msgid "hBP02-099_EFFECT"
-msgstr "The holomem this fan is attached to gets +10 HP.\n\n"
+msgstr ""
+"The holomem this fan is attached to gets +10 HP.\n"
+"\n"
 "You may only attach this fan to your <Shirakami Fubuki>, and you may attach any number of this fan per holomem."
 
 msgid "hSD02-002_ART_0_NAME"
@@ -2694,14 +2772,18 @@ msgid "hSD03-012_NAME"
 msgstr "Dorobo Construction"
 
 msgid "hSD03-012_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of <Nekomata Okayu>, <Takane Lui>, <Ookami Mio>, <Shirakami Fubuki>, <La+ Darknesss>, and <Inugami Korone> from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hSD03-014_NAME"
 msgstr "Onigiryaa"
 
 msgid "hSD03-014_EFFECT"
-msgstr "The holomem this fan is attached to gets +10 HP.\n\n"
+msgstr ""
+"The holomem this fan is attached to gets +10 HP.\n"
+"\n"
 "You may only attach this fan to your <Nekomata Okayu>, and you may attach any number of this fan per holomem."
 
 msgid "Isaki Riona"
@@ -2759,9 +2841,12 @@ msgid "hSD03-013_NAME"
 msgstr "Oka-nyan"
 
 msgid "hSD03-013_EFFECT"
-msgstr "The holomem this mascot is attached to in the center position or collab position takes -10 damage.\n\n"
+msgstr ""
+"The holomem this mascot is attached to in the center position or collab position takes -10 damage.\n"
+"\n"
 "◆Additional ability if attached to <Nekomata Okayu>\n"
-"If the ability of the holomem this mascot is attached to would archive a cheer, you may archive this mascot instead of archiving a blue cheer.\n\n"
+"If the ability of the holomem this mascot is attached to would archive a cheer, you may archive this mascot instead of archiving a blue cheer.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hSD04-002_NAME"
@@ -2798,9 +2883,12 @@ msgid "hSD04-014_NAME"
 msgstr "Chocolat"
 
 msgid "hSD04-014_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Yuzuki Choco>\n"
-"When the holomem this mascot is attached to blooms, restore 20 HP to this holomem.\n\n"
+"When the holomem this mascot is attached to blooms, restore 20 HP to this holomem.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hSD04-009_NAME"
@@ -2843,7 +2931,9 @@ msgid "hSD04-012_NAME"
 msgstr "SubaChocoLuna"
 
 msgid "hSD04-012_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of <Oozora Subaru>, <Yuzuki Choco>, and <Himemori Luna> from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hSD04-013_NAME"
@@ -3051,21 +3141,26 @@ msgid "hBP02-075_NAME"
 msgstr "Idol's Autograph Pen"
 
 msgid "hBP02-075_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Painting from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP02-079_NAME"
 msgstr "Explosion Magic"
 
 msgid "hBP02-079_EFFECT"
-msgstr "Deal 20 special damage to your opponent's center holomem or collab holomem. However, your opponent's Life does not reduce even if downed.\n"
+msgstr ""
+"Deal 20 special damage to your opponent's center holomem or collab holomem. However, your opponent's Life does not reduce even if downed.\n"
 "Only 1 of your event with #Magic can be used each turn."
 
 msgid "hBP02-083_NAME"
 msgstr "Magic Dresser"
 
 msgid "hBP02-083_EFFECT"
-msgstr "This card can only be used if you archive 1 of your holo Power.\n\n"
+msgstr ""
+"This card can only be used if you archive 1 of your holo Power.\n"
+"\n"
 "Send 1 purple cheer from your archive to your <Murasaki Shion>.\n"
 "Only 1 of your event with #Magic can be used each turn."
 
@@ -3073,26 +3168,34 @@ msgid "hBP02-088_NAME"
 msgstr "Mori Calliope's Scythe"
 
 msgid "hBP02-088_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to a 1st or greater <Mori Calliope>\n"
-"When this tool is attached from hand to a holomem, archive the top card of your deck.\n\n"
+"When this tool is attached from hand to a holomem, archive the top card of your deck.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP02-098_NAME"
 msgstr "Death-sensei"
 
 msgid "hBP02-098_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Mori Calliope>\n"
-"All cheer colors required for the Arts of the holomem this mascot is attached to is set to colorless.\n\n"
+"All cheer colors required for the Arts of the holomem this mascot is attached to is set to colorless.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP02-102_NAME"
 msgstr "Shiokko"
 
 msgid "hBP02-102_EFFECT"
-msgstr "■The holomem this fan is attached to gets Arts+10.\n"
-"■When the holomem this fan is attached to would take damage, archive this fan.\n\n"
+msgstr ""
+"■The holomem this fan is attached to gets Arts+10.\n"
+"■When the holomem this fan is attached to would take damage, archive this fan.\n"
+"\n"
 "You may only attach this fan to your <Murasaki Shion>, and you may attach any number of this fan per holomem."
 
 msgid "hBD24-010_NAME"
@@ -3159,7 +3262,9 @@ msgid "hBP02-077_NAME"
 msgstr "Retro PC"
 
 msgid "hBP02-077_EFFECT"
-msgstr "This card can only be used if your life is 3 or less.\n\n"
+msgstr ""
+"This card can only be used if your life is 3 or less.\n"
+"\n"
 "Return 1 holomem from your archive to hand."
 
 msgid "hBD24-012_NAME"
@@ -3196,8 +3301,10 @@ msgid "hBP02-086_NAME"
 msgstr "holoSparkling"
 
 msgid "hBP02-086_EFFECT"
-msgstr "■The holomem this tool is attached to gets Arts+20.\n"
-"■The holomem without #Alcohol this tool is attached to takes +10 damage.\n\n"
+msgstr ""
+"■The holomem this tool is attached to gets Arts+20.\n"
+"■The holomem without #Alcohol this tool is attached to takes +10 damage.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP02-016_NAME"
@@ -3228,7 +3335,9 @@ msgid "hBP02-100_NAME"
 msgstr "Knight's Order of Shirogane"
 
 msgid "hBP02-100_EFFECT"
-msgstr "The holomem this fan is attached to takes -10 damage.\n\n"
+msgstr ""
+"The holomem this fan is attached to takes -10 damage.\n"
+"\n"
 "You may only attach this fan to your <Shirogane Noel>, and you may attach any number of this fan per holomem."
 
 msgid "hBP02-029_NAME"
@@ -3256,9 +3365,12 @@ msgid "hBP02-095_NAME"
 msgstr "Dokuro-kun"
 
 msgid "hBP02-095_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Houshou Marine>\n"
-"[Center Position Only]When the holomem this mascot is attached to blooms, draw 1 card.\n\n"
+"[Center Position Only]When the holomem this mascot is attached to blooms, draw 1 card.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP02-031_NAME"
@@ -3304,23 +3416,30 @@ msgid "hBP02-085_NAME"
 msgstr "HOLOLIVE FANTASY"
 
 msgid "hBP02-085_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Gen 3 from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP02-080_NAME"
 msgstr "holoX"
 
 msgid "hBP02-080_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #holoX from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP02-096_NAME"
 msgstr "inu"
 
 msgid "hBP02-096_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Sakamata Chloe>\n"
-"If the holomem this mascot is attached to downed your opponent's holomem, you may send 1 cheer from your archive to your holomem with #holoX.\n\n"
+"If the holomem this mascot is attached to downed your opponent's holomem, you may send 1 cheer from your archive to your holomem with #holoX.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBD24-016_NAME"
@@ -3462,7 +3581,9 @@ msgid "hBP02-078_NAME"
 msgstr "Kanata Construction"
 
 msgid "hBP02-078_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of <Amane Kanata>, <AZKi>, and <Sakamata Chloe> from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP02-069_NAME"
@@ -3574,9 +3695,12 @@ msgid "hBP02-097_NAME"
 msgstr "UDIN"
 
 msgid "hBP02-097_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Kureiji Ollie>\n"
-"When the holomem this mascot is attached to blooms, draw 1 card, and archive 1 card from your hand.\n\n"
+"When the holomem this mascot is attached to blooms, draw 1 card, and archive 1 card from your hand.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP02-006_NAME"
@@ -3640,7 +3764,9 @@ msgid "hBP02-081_NAME"
 msgstr "hololive Indonesia Gen 2"
 
 msgid "hBP02-081_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #ID Gen 2 from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBD24-013_NAME"
@@ -3755,16 +3881,21 @@ msgid "hBP02-094_NAME"
 msgstr "Tatang"
 
 msgid "hBP02-094_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Pavolia Reine>\n"
-"The holomem this mascot is attached to gets +30 HP.\n\n"
+"The holomem this mascot is attached to gets +30 HP.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP02-101_NAME"
 msgstr "Mio-fam"
 
 msgid "hBP02-101_EFFECT"
-msgstr "During your opponent's turn, if the holomem this fan is attached to is downed, draw 1 card.\n\n"
+msgstr ""
+"During your opponent's turn, if the holomem this fan is attached to is downed, draw 1 card.\n"
+"\n"
 "You may only attach this fan to your <Ookami Mio>, and you may attach any number of this fan per holomem."
 
 msgid "hBP02-025_NAME"
@@ -3813,27 +3944,36 @@ msgid "hBP02-089_NAME"
 msgstr "Oruyanke"
 
 msgid "hBP02-089_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Shirakami Fubuki>\n"
-"When the holomem this mascot is attached to collabs, draw 1 card.\n\n"
+"When the holomem this mascot is attached to collabs, draw 1 card.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP02-090_NAME"
 msgstr "Nejimakitsune"
 
 msgid "hBP02-090_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Shirakami Fubuki>\n"
-"If the holomem this mascot is attached to is downed, reattach 1 cheer from this holomem to your other holomem.\n\n"
+"If the holomem this mascot is attached to is downed, reattach 1 cheer from this holomem to your other holomem.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP02-091_NAME"
 msgstr "Fubu-chun"
 
 msgid "hBP02-091_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Shirakami Fubuki>\n"
-"When the holomem this mascot is attached to collabs, you may return 1 mascot from your archive to hand.\n\n"
+"When the holomem this mascot is attached to collabs, you may return 1 mascot from your archive to hand.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP02-012_NAME"
@@ -4062,9 +4202,12 @@ msgid "hSD05-014_NAME"
 msgstr "Banpen"
 
 msgid "hSD05-014_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Todoroki Hajime>\n"
-"The holomem this mascot is attached to gets +20 HP.\n\n"
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hSD06-001_NAME"
@@ -4182,18 +4325,24 @@ msgid "hSD06-011_NAME"
 msgstr "Chakimaru"
 
 msgid "hSD06-011_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to a 1st or greater <Kazama Iroha>\n"
-"[1/Turn]During your opponent's turn, when the holomem this tool is attached to takes damage, deal 20 special damage to your opponent's center holomem. However, your opponent's life does not reduce even if downed.\n\n"
+"[1/Turn]During your opponent's turn, when the holomem this tool is attached to takes damage, deal 20 special damage to your opponent's center holomem. However, your opponent's life does not reduce even if downed.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hSD06-012_NAME"
 msgstr "Pokobe"
 
 msgid "hSD06-012_EFFECT"
-msgstr "The holomem this mascot is attached to gets +10 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +10 HP.\n"
+"\n"
 "◆Additional ability if attached to <Kazama Iroha>\n"
-"The holomem this mascot is attached to gets +20 HP.\n\n"
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hSD07-001_NAME"
@@ -4353,14 +4502,18 @@ msgid "hSD07-014_NAME"
 msgstr "Shiranui Construction"
 
 msgid "hSD07-014_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of <Shiranui Flare>, <Omaru Polka>, <Sakura Miko>, <Hoshimachi Suisei> and <Shirogane Noel> from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hSD07-015_NAME"
 msgstr "Elfriend"
 
 msgid "hSD07-015_EFFECT"
-msgstr "The holomem this fan is attached to gets +10 HP.\n\n"
+msgstr ""
+"The holomem this fan is attached to gets +10 HP.\n"
+"\n"
 "You may only attach this fan to your <Shiranui Flare>, and you may attach any number of this fan per holomem."
 
 msgid "hY06-001_NAME"
@@ -4892,7 +5045,8 @@ msgid "hBP03-074_ART_0_NAME"
 msgstr "Connected Wishes"
 
 msgid "hBP03-074_ART_0_EFFECT"
-msgstr "■If your stage has <Airani Iofifteen>, this Arts gets +10.\n"
+msgstr ""
+"■If your stage has <Airani Iofifteen>, this Arts gets +10.\n"
 "■If your stage has <Moona Hoshinova>, this Arts gets +10."
 
 msgid "hBP03-075_NAME"
@@ -4935,7 +5089,8 @@ msgid "hBP03-078_ART_0_NAME"
 msgstr "Squirrel Girl from the Magical Forest"
 
 msgid "hBP03-078_ART_0_EFFECT"
-msgstr "■If a green cheer is attached to this holomem, this Arts gets +50.\n"
+msgstr ""
+"■If a green cheer is attached to this holomem, this Arts gets +50.\n"
 "■If a blue cheer is attached to this holomem, this Arts gets +50."
 
 msgid "hBP03-078_BLOOM_NAME"
@@ -4960,7 +5115,9 @@ msgid "hBP03-084_NAME"
 msgstr "Gorgeous PC"
 
 msgid "hBP03-084_EFFECT"
-msgstr "This card can only be used if you archive 1 of your holo Power.\n\n"
+msgstr ""
+"This card can only be used if you archive 1 of your holo Power.\n"
+"\n"
 "Reveal 1 1st holomem with the same color as your Oshi holomem from your deck, and add it to hand. Then, shuffle the deck."
 
 msgid "hBP03-086_NAME"
@@ -4973,7 +5130,9 @@ msgid "hBP03-088_NAME"
 msgstr "Totsumachi"
 
 msgid "hBP03-088_EFFECT"
-msgstr "This card can only be used if your life is less than your opponent's.\n\n"
+msgstr ""
+"This card can only be used if your life is less than your opponent's.\n"
+"\n"
 "If your opponent has no collab holomem, your opponent moves 1 of their back holomem to the collab position (Moving is not regarded as collab)."
 
 msgid "hBP03-090_NAME"
@@ -4986,99 +5145,129 @@ msgid "hBP03-091_NAME"
 msgstr "hololive Indonesia Gen 1"
 
 msgid "hBP03-091_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #ID Gen 1 from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP03-093_NAME"
 msgstr "hololive Gen 4"
 
 msgid "hBP03-093_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Gen 4 from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP03-094_NAME"
 msgstr "FPS Stream"
 
 msgid "hBP03-094_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Shooter from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP03-096_NAME"
 msgstr "Rifle"
 
 msgid "hBP03-096_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to a 1st or greater holomem with #Shooter\n"
-"The holomem this tool is attached to deals +10 special damage to 1 of your opponent's holomem.\n\n"
+"The holomem this tool is attached to deals +10 special damage to 1 of your opponent's holomem.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP03-100_NAME"
 msgstr "Pero"
 
 msgid "hBP03-100_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Fuwawa Abyssgard> or <Mococo Abyssgard>\n"
-"All cheer colors required for the Arts of the holomem this mascot is attached to is set to colorless.\n\n"
+"All cheer colors required for the Arts of the holomem this mascot is attached to is set to colorless.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP03-101_NAME"
 msgstr "Bibi"
 
 msgid "hBP03-101_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Tokoyami Towa>\n"
-"The holomem this mascot is attached to deals +10 special damage to 1 of your opponent's holomem.\n\n"
+"The holomem this mascot is attached to deals +10 special damage to 1 of your opponent's holomem.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP03-104_NAME"
 msgstr "Riscot"
 
 msgid "hBP03-104_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Ayunda Risu>\n"
-"When the holomem this mascot is attached to collabs, you may reattach 1 cheer from your stage to this holomem.\n\n"
+"When the holomem this mascot is attached to collabs, you may reattach 1 cheer from your stage to this holomem.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP03-105_NAME"
 msgstr "Lu-knights"
 
 msgid "hBP03-105_EFFECT"
-msgstr "During your opponent's turn, if the holomem this fan is attached to would take damage, you may archive this fan:The holomem this fan is attached to takes -30 damage.\n\n"
+msgstr ""
+"During your opponent's turn, if the holomem this fan is attached to would take damage, you may archive this fan:The holomem this fan is attached to takes -30 damage.\n"
+"\n"
 "You may only attach this fan to your <Himemori Luna>, and you may attach any number of this fan per holomem."
 
 msgid "hBP03-106_NAME"
 msgstr "SSRB"
 
 msgid "hBP03-106_EFFECT"
-msgstr "If you would archive a cheer by the ability of the holomem this fan is attached to, you may archive this fan instead of archiving 1 cheer.\n\n"
+msgstr ""
+"If you would archive a cheer by the ability of the holomem this fan is attached to, you may archive this fan instead of archiving 1 cheer.\n"
+"\n"
 "You may only attach this fan to your <Shishiro Botan>, and you may attach any number of this fan per holomem."
 
 msgid "hBP03-108_NAME"
 msgstr "Haaton"
 
 msgid "hBP03-108_EFFECT"
-msgstr "If the holomem this fan is attached to rolled a die by an ability, you may archive this fan:Ignore the previous results, and reroll the die.\n\n"
+msgstr ""
+"If the holomem this fan is attached to rolled a die by an ability, you may archive this fan:Ignore the previous results, and reroll the die.\n"
+"\n"
 "You may only attach this fan to your <Akai Haato>, and you may attach any number of this fan per holomem."
 
 msgid "hBP03-109_NAME"
 msgstr "Ruffians"
 
 msgid "hBP03-109_EFFECT"
-msgstr "During your opponent's turn, when the holomem this fan is attached to is downed, you may send 1 blue cheer from your archive to your <Fuwawa Abyssgard>.\n\n"
+msgstr ""
+"During your opponent's turn, when the holomem this fan is attached to is downed, you may send 1 blue cheer from your archive to your <Fuwawa Abyssgard>.\n"
+"\n"
 "You may only attach this fan to your <Fuwawa Abyssgard> or <Mococo Abyssgard>, and you may attach any number of this fan per holomem."
 
 msgid "hBP03-112_NAME"
 msgstr "Watamates"
 
 msgid "hBP03-112_EFFECT"
-msgstr "During your opponent's turn, when the holomem this fan is attached to is downed, you may reattach 1-2 yellow cheers from this holomem to your other <Tsunomaki Watame>.\n\n"
+msgstr ""
+"During your opponent's turn, when the holomem this fan is attached to is downed, you may reattach 1-2 yellow cheers from this holomem to your other <Tsunomaki Watame>.\n"
+"\n"
 "You may only attach this fan to your <Tsunomaki Watame>, and you may attach any number of this fan per holomem."
 
 msgid "hBP03-113_NAME"
 msgstr "Risuners"
 
 msgid "hBP03-113_EFFECT"
-msgstr "[1/Turn]When a cheer is attached to the holomem this fan is attached to, during this turn, this holomem gets Arts+10.\n\n"
+msgstr ""
+"[1/Turn]When a cheer is attached to the holomem this fan is attached to, during this turn, this holomem gets Arts+10.\n"
+"\n"
 "You may only attach this fan to your <Ayunda Risu>, and you may attach any number of this fan per holomem."
 
 msgid "hBP03-015_NAME"
@@ -5487,84 +5676,109 @@ msgid "hBP03-092_NAME"
 msgstr "hololive Gen 0"
 
 msgid "hBP03-092_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Gen 0 from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP03-095_NAME"
 msgstr "holoCap"
 
 msgid "hBP03-095_EFFECT"
-msgstr "◆Additional ability if attached to a Debut holomem or Spot holomem\n"
+msgstr ""
+"◆Additional ability if attached to a Debut holomem or Spot holomem\n"
 "■The holomem this tool is attached to gets +30 HP.\n"
-"■The holomem this tool is attached to does not take special damage from your opponent.\n\n"
+"■The holomem this tool is attached to does not take special damage from your opponent.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP03-097_NAME"
 msgstr "Recorder"
 
 msgid "hBP03-097_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to a 1st or greater <Otonose Kanade>\n"
-"When the holomem this tool is attached to downed your opponent's holomem, draw 1 card.\n\n"
+"When the holomem this tool is attached to downed your opponent's holomem, draw 1 card.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP03-098_NAME"
 msgstr "Kintoki"
 
 msgid "hBP03-098_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Sakura Miko>\n"
-"When the holomem this mascot is attached to collabs, draw 1 card.\n\n"
+"When the holomem this mascot is attached to collabs, draw 1 card.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP03-099_NAME"
 msgstr "Maguchi"
 
 msgid "hBP03-099_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Sakura Miko>\n"
-"When the holomem this mascot is attached to collabs, during this turn, your center holomem <Sakura Miko> gets Arts+10.\n\n"
+"When the holomem this mascot is attached to collabs, during this turn, your center holomem <Sakura Miko> gets Arts+10.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP03-102_NAME"
 msgstr "Futoinu"
 
 msgid "hBP03-102_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Inugami Korone>\n"
-"When the holomem this mascot is attached to collabs, you may send 1 yellow cheer from your archive to this holomem.\n\n"
+"When the holomem this mascot is attached to collabs, you may send 1 yellow cheer from your archive to this holomem.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP03-103_NAME"
 msgstr "Hosoinu"
 
 msgid "hBP03-103_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Inugami Korone>\n"
-"If the holomem this mascot is attached to is downed, you may archive 1 of your holo Power:Return this mascot to hand.\n\n"
+"If the holomem this mascot is attached to is downed, you may archive 1 of your holo Power:Return this mascot to hand.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP03-107_NAME"
 msgstr "35P"
 
 msgid "hBP03-107_EFFECT"
-msgstr "■If the holomem this fan is attached to would use Arts, this fan is also regarded as a red cheer.\n"
-"■When the holomem this fan is attached to is downed, your opponent may draw 1 card.\n\n"
+msgstr ""
+"■If the holomem this fan is attached to would use Arts, this fan is also regarded as a red cheer.\n"
+"■When the holomem this fan is attached to is downed, your opponent may draw 1 card.\n"
+"\n"
 "You may only attach this fan to your <Sakura Miko>, and you may attach any number of this fan per holomem."
 
 msgid "hBP03-110_NAME"
 msgstr "Roboser"
 
 msgid "hBP03-110_EFFECT"
-msgstr "■If the holomem this fan is attached to would use Arts, this fan is also regarded as a purple cheer.\n"
-"■The holomem this fan is attached to gets Arts -10.\n\n"
+msgstr ""
+"■If the holomem this fan is attached to would use Arts, this fan is also regarded as a purple cheer.\n"
+"■The holomem this fan is attached to gets Arts -10.\n"
+"\n"
 "You may only attach this fan to your <Robocosan>, and you may attach any number of this fan per holomem."
 
 msgid "hBP03-111_NAME"
 msgstr "Koronesuki"
 
 msgid "hBP03-111_EFFECT"
-msgstr "The holomem this fan is attached to requires -1 colorless for its baton pass.\n\n"
+msgstr ""
+"The holomem this fan is attached to requires -1 colorless for its baton pass.\n"
+"\n"
 "You may only attach this fan to your <Inugami Korone>, and you may attach any number of this fan per holomem."
 
 msgid "hY01-004_NAME"
@@ -6090,16 +6304,21 @@ msgid "hBP04-096_NAME"
 msgstr "Advent"
 
 msgid "hBP04-096_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Advent from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP04-104_NAME"
 msgstr "Subaru Duck"
 
 msgid "hBP04-104_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Oozora Subaru>\n"
-"While the total number of cheers on both players' stage is 10 or more, the holomem this mascot is attached to gets Arts+20.\n\n"
+"While the total number of cheers on both players' stage is 10 or more, the holomem this mascot is attached to gets Arts+20.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP04-070_NAME"
@@ -6145,7 +6364,9 @@ msgid "hBP04-093_NAME"
 msgstr "hololive Gen 2"
 
 msgid "hBP04-093_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Gen 2 from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "Justice"
@@ -6551,7 +6772,9 @@ msgid "hBP04-089_NAME"
 msgstr "Two-Tone PC"
 
 msgid "hBP04-089_EFFECT"
-msgstr "This card can only be used if you have 2 or more holomem on stage, each with only 1 color and is different color from each other.\n\n"
+msgstr ""
+"This card can only be used if you have 2 or more holomem on stage, each with only 1 color and is different color from each other.\n"
+"\n"
 "Choose 2 of your holomem on stage each with only 1 color and is different color from each other. Reveal 1 1st holomem with the same color as each of the chosen holomem other than Buzz from your deck, and add them to hand. Then, shuffle the deck."
 
 msgid "hBP04-091_NAME"
@@ -6564,16 +6787,21 @@ msgid "hBP04-092_NAME"
 msgstr "NePoLaBo"
 
 msgid "hBP04-092_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Gen 5 from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP04-098_NAME"
 msgstr "Smithing Hammer"
 
 msgid "hBP04-098_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to 1st or greater holomem with #ID Gen 3\n"
-"The holomem this tool is attached to gets Arts+10.\n\n"
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP04-004_NAME"
@@ -6673,9 +6901,12 @@ msgid "hBP04-099_NAME"
 msgstr "Ancient Weapon"
 
 msgid "hBP04-099_EFFECT"
-msgstr "During your opponent's turn, when the holomem this tool is attached to is downed, you may archive 1 card from your hand:Return this tool to hand.\n\n"
+msgstr ""
+"During your opponent's turn, when the holomem this tool is attached to is downed, you may archive 1 card from your hand:Return this tool to hand.\n"
+"\n"
 "◆Additional ability if attached to 1st or greater <Anya Melfissa>\n"
-"The holomem this tool is attached to gets Arts+10 for each <Ancient Weapon> on your stage.\n\n"
+"The holomem this tool is attached to gets Arts+10 for each <Ancient Weapon> on your stage.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP04-002_NAME"
@@ -6940,9 +7171,12 @@ msgid "hBP04-103_NAME"
 msgstr "Karasu"
 
 msgid "hBP04-103_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <La+ Darknesss>\n"
-"[Collab Position Only][1/Turn]During your main phase, you may roll a die once:If it is odd, move the holomem this mascot is attached to to the back position.\n\n"
+"[Collab Position Only][1/Turn]During your main phase, you may roll a die once:If it is odd, move the holomem this mascot is attached to to the back position.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP04-043_NAME"
@@ -7015,32 +7249,42 @@ msgid "hBP04-090_NAME"
 msgstr "Work PC"
 
 msgid "hBP04-090_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal 1 holomem and 1 [tool, mascot or fan] from among them, and add the revealed cards to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP04-101_NAME"
 msgstr "Daifuku"
 
 msgid "hBP04-101_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Yukihana Lamy>\n"
-"The holomem this mascot is attached to gets +20 HP.\n\n"
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP04-102_NAME"
 msgstr "Yamena"
 
 msgid "hBP04-102_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to 1st or greater holomem with #Gen 5\n"
-"[Back Position Only]The holomem this mascot is attached to does not take damage from your opponent.\n\n"
+"[Back Position Only]The holomem this mascot is attached to does not take damage from your opponent.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP04-106_NAME"
 msgstr "Yukimin"
 
 msgid "hBP04-106_EFFECT"
-msgstr "The holomem this fan is attached to deals +10 special damage to your opponent's center holomem.\n\n"
+msgstr ""
+"The holomem this fan is attached to deals +10 special damage to your opponent's center holomem.\n"
+"\n"
 "You may only attach this fan to your <Yukihana Lamy>, and you may attach any number of this fan per holomem."
 
 msgid "hBP04-027_NAME"
@@ -7158,25 +7402,33 @@ msgid "hBP04-097_NAME"
 msgstr "Green Test Tube"
 
 msgid "hBP04-097_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to 1st or greater <Hakui Koyori>\n"
-"During your main phase, you may archive 1 cheer from the holomem this tool is attached to:Set 1 of your resting holomem with #holoX to active.\n\n"
+"During your main phase, you may archive 1 cheer from the holomem this tool is attached to:Set 1 of your resting holomem with #holoX to active.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP04-100_NAME"
 msgstr "Kokoro"
 
 msgid "hBP04-100_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Hakui Koyori>\n"
-"When the holomem this mascot is attached to collabs, during this turn, this holomem gets Arts+10.\n\n"
+"When the holomem this mascot is attached to collabs, during this turn, this holomem gets Arts+10.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP04-105_NAME"
 msgstr "Koyori's Assistant-kun"
 
 msgid "hBP04-105_EFFECT"
-msgstr "When this fan is attached to holomem from hand or archive, you may reattach 1 cheer from your stage to the holomem this fan is attached to.\n\n"
+msgstr ""
+"When this fan is attached to holomem from hand or archive, you may reattach 1 cheer from your stage to the holomem this fan is attached to.\n"
+"\n"
 "You may only attach this fan to your <Hakui Koyori>, and you may attach any number of this fan per holomem."
 
 msgid "hY01-006_NAME"
@@ -8071,19 +8323,26 @@ msgid "hBP05-086_NAME"
 msgstr "Cilus"
 
 msgid "hBP05-086_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Kobo Kanaeru>\n"
-"[Center Position Only][1/Turn]When your opponent's back holomem is downed, draw 1 card.\n\n"
+"[Center Position Only][1/Turn]When your opponent's back holomem is downed, draw 1 card.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP05-082_NAME"
 msgstr "Aki Rosenthal's Axe"
 
 msgid "hBP05-082_EFFECT"
-msgstr "This card can only be used if you archive 1 card from your hand or 1 <Stone Axe> from your stage.\n\n"
-"The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"This card can only be used if you archive 1 card from your hand or 1 <Stone Axe> from your stage.\n"
+"\n"
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to 2nd or greater <Aki Rosenthal>\n"
-"The holomem this tool is attached to gets Arts+40.\n\n"
+"The holomem this tool is attached to gets Arts+40.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP05-001_NAME"
@@ -8237,35 +8496,46 @@ msgid "hBP05-081_NAME"
 msgstr "Shirogane Noel's Mace"
 
 msgid "hBP05-081_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to 1st or greater <Shirogane Noel>\n"
-"While the holomem this tool is attached to has 3 or more cheers attached, this holomem gets Arts+20.\n\n"
+"While the holomem this tool is attached to has 3 or more cheers attached, this holomem gets Arts+20.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP05-083_NAME"
 msgstr "Nerissa Ravencroft's Staff"
 
 msgid "hBP05-083_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to 2nd or greater <Nerissa Ravencroft>\n"
-"[Center Position・Collab Position Only][1/Turn]When you archive a card from hand for the ability of the holomem this tool is attached to, deal 20 special damage to your opponent's center holomem or collab holomem.\n\n"
+"[Center Position・Collab Position Only][1/Turn]When you archive a card from hand for the ability of the holomem this tool is attached to, deal 20 special damage to your opponent's center holomem or collab holomem.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP05-084_NAME"
 msgstr "Tsunomaki Watame's Harp"
 
 msgid "hBP05-084_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to 2nd or greater <Tsunomaki Watame>\n"
 "■While your stage has <Watamates>, the holomem this tool is attached to gets Arts+10.\n"
-"■When the holomem this tool is attached to uses Arts, you may send 1 cheer from your archive to your <Tsunomaki Watame>.\n\n"
+"■When the holomem this tool is attached to uses Arts, you may send 1 cheer from your archive to your <Tsunomaki Watame>.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP05-087_NAME"
 msgstr "Jailbird"
 
 msgid "hBP05-087_EFFECT"
-msgstr "During your opponent's turn, when the holomem this fan is attached to is downed, you may reattach 1 cheer from this holomem to your other holomem with #Singing.\n\n"
+msgstr ""
+"During your opponent's turn, when the holomem this fan is attached to is downed, you may reattach 1 cheer from this holomem to your other holomem with #Singing.\n"
+"\n"
 "You may only attach this fan to your <Nerissa Ravencroft>, and you may attach any number of this fan per holomem."
 
 msgid "hBD24-065_NAME"
@@ -8494,7 +8764,9 @@ msgid "hBP05-078_NAME"
 msgstr "Late-Night Drinking Stream"
 
 msgid "hBP05-078_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Alcohol from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hY01-007_NAME"
@@ -8870,16 +9142,21 @@ msgid "hBP05-085_NAME"
 msgstr "Mikodanye"
 
 msgid "hBP05-085_EFFECT"
-msgstr "The holomem this mascot is attached to gets +10 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +10 HP.\n"
+"\n"
 "◆Additional ability if attached to <Sakura Miko>\n"
-"During your opponent's turn, when the holomem this mascot is attached to is downed, your opponent archives 1 card from their hand.\n\n"
+"During your opponent's turn, when the holomem this mascot is attached to is downed, your opponent archives 1 card from their hand.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP05-077_NAME"
 msgstr "BAKATARE CIRCUS"
 
 msgid "hBP05-077_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of <Shirakami Fubuki>, <Shiranui Flare>, <Tsunomaki Watame> and <Omaru Polka> from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hY01-008_NAME"
@@ -9012,23 +9289,30 @@ msgid "hSD10-011_NAME"
 msgstr "WHAT'S UP!!!!! KEEEEEP GROWING!!!!!"
 
 msgid "hSD10-011_EFFECT"
-msgstr "This card can only be used if all holomem on your stage have #FLOW GLOW.\n\n"
+msgstr ""
+"This card can only be used if all holomem on your stage have #FLOW GLOW.\n"
+"\n"
 "Choose 3 cheers from your archive, and send them to your center holomem and collab holomem divided as you choose. However, you may only send up to 2 cheers to each holomem."
 
 msgid "hSD10-012_NAME"
 msgstr "FLOW GLOW"
 
 msgid "hSD10-012_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #FLOW GLOW from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hSD10-013_NAME"
 msgstr "Fugutaro"
 
 msgid "hSD10-013_EFFECT"
-msgstr "The holomem with #FLOW GLOW this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem with #FLOW GLOW this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to a holomem with #FLOW GLOW\n"
-"Usable at the start of your end phase, if the holomem this tool is attached to used Arts this turn:Reveal 1 [Debut holomem or Spot holomem] with #FLOW GLOW from your deck, and place it on stage. Then, shuffle the deck. Then, return this tool to the bottom of the deck.\n\n"
+"Usable at the start of your end phase, if the holomem this tool is attached to used Arts this turn:Reveal 1 [Debut holomem or Spot holomem] with #FLOW GLOW from your deck, and place it on stage. Then, shuffle the deck. Then, return this tool to the bottom of the deck.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hSD11-001_NAME"
@@ -9302,7 +9586,9 @@ msgid "hBP06-088_NAME"
 msgstr "Prank Rabbit"
 
 msgid "hBP06-088_EFFECT"
-msgstr "This card can only be used if your holomem was downed during your opponent's previous turn and your life is less than your opponent's.\n\n"
+msgstr ""
+"This card can only be used if your holomem was downed during your opponent's previous turn and your life is less than your opponent's.\n"
+"\n"
 "Choose your opponent's center holomem or collab holomem. Rest the chosen holomem and move it to the back position. The chosen holomem is not set to active during your opponent's next reset phase."
 
 msgid "hBP06-059_NAME"
@@ -9330,7 +9616,9 @@ msgid "hBP06-104_NAME"
 msgstr "Subatomo"
 
 msgid "hBP06-104_EFFECT"
-msgstr "During your opponent's turn, if the holomem this fan is attached to is downed, send the top card of your cheer deck to your <Oozora Subaru>.\n\n"
+msgstr ""
+"During your opponent's turn, if the holomem this fan is attached to is downed, send the top card of your cheer deck to your <Oozora Subaru>.\n"
+"\n"
 "You may only attach this fan to your <Oozora Subaru>, and you may attach any number of this fan per holomem."
 
 msgid "hBP06-041_NAME"
@@ -9484,9 +9772,12 @@ msgid "hBP06-098_NAME"
 msgstr "Demonic Sword Asura"
 
 msgid "hBP06-098_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Nakiri Ayame>\n"
-"When the holomem this tool is attached to collabs, if your life is 1 and your opponent has no collab holomem, your opponent moves 1 of their back holomem to the collab position (Moving is not regarded as collab).\n\n"
+"When the holomem this tool is attached to collabs, if your life is 1 and your opponent has no collab holomem, your opponent moves 1 of their back holomem to the collab position (Moving is not regarded as collab).\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP06-023_NAME"
@@ -9550,9 +9841,12 @@ msgid "hBP06-101_NAME"
 msgstr "Moonabito"
 
 msgid "hBP06-101_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Moona Hoshinova>\n"
-"[1/Turn]When the holomem this mascot is attached to deals special damage to your opponent's holomem, you may send 1 blue cheer from your archive to your back holomem.\n\n"
+"[1/Turn]When the holomem this mascot is attached to deals special damage to your opponent's holomem, you may send 1 blue cheer from your archive to your back holomem.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP06-032_NAME"
@@ -9583,9 +9877,11 @@ msgid "hBP06-097_NAME"
 msgstr "Cute Varsity Jacket"
 
 msgid "hBP06-097_EFFECT"
-msgstr "◆Additional ability if attached to Buzz holomem\n"
+msgstr ""
+"◆Additional ability if attached to Buzz holomem\n"
 "■The holomem this tool is attached to gets +30 HP.\n"
-"■During your opponent's main phase, the HP of the holomem this tool is attached to cannot be reduced or changed by your opponent's abilities.\n\n"
+"■During your opponent's main phase, the HP of the holomem this tool is attached to cannot be reduced or changed by your opponent's abilities.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP06-072_NAME"
@@ -9604,8 +9900,11 @@ msgid "hBP06-099_NAME"
 msgstr "Finger"
 
 msgid "hBP06-099_EFFECT"
-msgstr "The holomem this tool is attached to gets Arts+10.\n\n"
-"When this tool is attached to your <Inugami Korone> from hand, you may return 1 <Inugami Korone> from your archive to hand.\n\n"
+msgstr ""
+"The holomem this tool is attached to gets Arts+10.\n"
+"\n"
+"When this tool is attached to your <Inugami Korone> from hand, you may return 1 <Inugami Korone> from your archive to hand.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP06-009_NAME"
@@ -9648,7 +9947,9 @@ msgid "hBP06-103_NAME"
 msgstr "Matsurisu"
 
 msgid "hBP06-103_EFFECT"
-msgstr "If your [Oshi holomem or holomem with #Gen 1] rolled a die by an ability, you may archive this fan:Regard the result of 1 dice roll as 4.\n\n"
+msgstr ""
+"If your [Oshi holomem or holomem with #Gen 1] rolled a die by an ability, you may archive this fan:Regard the result of 1 dice roll as 4.\n"
+"\n"
 "You may only attach this fan to your <Natsuiro Matsuri>, and you may attach any number of this fan per holomem."
 
 msgid "hBP06-005_NAME"
@@ -9895,7 +10196,9 @@ msgid "hBP06-091_NAME"
 msgstr "hololive Gen 1"
 
 msgid "hBP06-091_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Gen 1 from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hBP06-012_NAME"
@@ -9992,7 +10295,9 @@ msgid "hBP06-087_NAME"
 msgstr "Shimeji Dance"
 
 msgid "hBP06-087_EFFECT"
-msgstr "This card can only be used if your Oshi holomem is <Juufuutei Raden>.\n\n"
+msgstr ""
+"This card can only be used if your Oshi holomem is <Juufuutei Raden>.\n"
+"\n"
 "Archive the top card of your cheer deck. Return 1 <Juufuutei Raden> from your archive to hand."
 
 msgid "hBP06-039_NAME"
@@ -10089,7 +10394,9 @@ msgid "hBP06-094_NAME"
 msgstr "Workout"
 
 msgid "hBP06-094_EFFECT"
-msgstr "This card can only be used if you have a collab holomem, or your opponent has no collab holomem.\n\n"
+msgstr ""
+"This card can only be used if you have a collab holomem, or your opponent has no collab holomem.\n"
+"\n"
 "During this turn, 1 of your holomem gets Arts+20. If that holomem is a Buzz holomem or 2nd holomem, that holomem gets Arts+50 instead."
 
 msgid "hBP06-068_NAME"
@@ -10183,16 +10490,21 @@ msgid "hBP06-093_NAME"
 msgstr "YamadaLui54Sei"
 
 msgid "hBP06-093_EFFECT"
-msgstr "This card can only be used if all holomem on your stage have #holoX.\n\n"
+msgstr ""
+"This card can only be used if all holomem on your stage have #holoX.\n"
+"\n"
 "Reveal 2 holomem with #holoX from your deck, and add them to hand. Then, shuffle the deck. If you have fewer cheers on stage than your opponent, you may send the top card of your cheer deck to your holomem."
 
 msgid "hBP06-102_NAME"
 msgstr "Ebifrion"
 
 msgid "hBP06-102_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Natsuiro Matsuri>\n"
-"During your opponent's turn, when the holomem this mascot is attached to is downed, you may reattach 1 yellow cheer from this holomem to your other <Natsuiro Matsuri>.\n\n"
+"During your opponent's turn, when the holomem this mascot is attached to is downed, you may reattach 1 yellow cheer from this holomem to your other <Natsuiro Matsuri>.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP06-051_NAME"
@@ -10250,9 +10562,12 @@ msgid "hBP06-100_NAME"
 msgstr "Chattino"
 
 msgid "hBP06-100_EFFECT"
-msgstr "The holomem this mascot is attached to gets +10 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +10 HP.\n"
+"\n"
 "◆Additional ability if attached to 1st or greater <Raora Panthera>\n"
-"If your Oshi holomem is <Raora Panthera>, the holomem this mascot is attached to gets +20 HP.\n\n"
+"If your Oshi holomem is <Raora Panthera>, the holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP06-029_NAME"
@@ -10313,7 +10628,9 @@ msgid "hBP06-095_NAME"
 msgstr "IDENTIFY -AREA 15-"
 
 msgid "hBP06-095_EFFECT"
-msgstr "This card can only be used if all holomem on your stage have #ID Gen 1.\n\n"
+msgstr ""
+"This card can only be used if all holomem on your stage have #ID Gen 1.\n"
+"\n"
 "Reveal 2 holomem with #ID Gen 1 from your deck, and add them to hand. Then, shuffle the deck. If there are 0 cards in your cheer deck, during this turn, when your holomem with #ID Gen 1 downed your opponent's center holomem, your opponent gets life-1."
 
 msgid "hBP06-013_NAME"
@@ -10599,16 +10916,21 @@ msgid "hSD13-016_NAME"
 msgstr "Justice"
 
 msgid "hSD13-016_EFFECT"
-msgstr "This card can only be used if you have 6 or less cards in hand excluding this card.\n\n"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
 "Look at the top 4 cards of your deck. Reveal any number of holomem with #Justice from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
 
 msgid "hSD13-018_NAME"
 msgstr "Popo"
 
 msgid "hSD13-018_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Gigi Murin>\n"
-"If there are no holomem stacked to this holomem, this holomem gets Arts+20.\n\n"
+"If there are no holomem stacked to this holomem, this holomem gets Arts+20.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hSD12-001_NAME"
@@ -10771,7 +11093,9 @@ msgid "hSD12-015_NAME"
 msgstr "Escaped Criminal Gang"
 
 msgid "hSD12-015_EFFECT"
-msgstr "This card can only be used if all holomem on your stage have #Advent.\n\n"
+msgstr ""
+"This card can only be used if all holomem on your stage have #Advent.\n"
+"\n"
 "Deal 20 special damage to your opponent's center holomem. Send 1 cheer from your archive to your holomem.\n"
 "You may only use the card <Escaped Criminal Gang> once per turn."
 
@@ -10779,8 +11103,11 @@ msgid "hSD12-016_NAME"
 msgstr "GEOW"
 
 msgid "hSD12-016_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
-"When this mascot is attached to your 1st or greater <Koseki Bijou> from hand, you may archive 1 cheer from your stage:Reveal 1 cheer from your cheer deck, and send it to your holomem. Then, shuffle the cheer deck.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
+"When this mascot is attached to your 1st or greater <Koseki Bijou> from hand, you may archive 1 cheer from your stage:Reveal 1 cheer from your cheer deck, and send it to your holomem. Then, shuffle the cheer deck.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP07-001_NAME"
@@ -10883,7 +11210,9 @@ msgid "hSD13-017_NAME"
 msgstr "JUSTICE, JUST LIKE THAT!!!!"
 
 msgid "hSD13-017_EFFECT"
-msgstr "This card can only be used if all holomem on your stage have #Justice.\n\n"
+msgstr ""
+"This card can only be used if all holomem on your stage have #Justice.\n"
+"\n"
 "Choose 1 holomem on your stage. Return 1~2 holomem stacked to that holomem to hand. During this turn, the chosen holomem gets Arts+20 for each holomem returned by this effect."
 
 msgid "hBP07-002_NAME"
@@ -11856,7 +12185,9 @@ msgid "hBP07-091_NAME"
 msgstr "Live Staff"
 
 msgid "hBP07-091_EFFECT"
-msgstr "This card can only be used if you archive 1 cheer from your stage.\n\n"
+msgstr ""
+"This card can only be used if you archive 1 cheer from your stage.\n"
+"\n"
 "Attach 1 fan from your archive to your holomem. If you do, return 1 holomem from your archive to hand."
 
 msgid "hBP07-092_NAME"
@@ -11875,7 +12206,9 @@ msgid "hBP07-095_NAME"
 msgstr "Cross Impact"
 
 msgid "hBP07-095_EFFECT"
-msgstr "This card cannot be used unless both players' center holomem are 2nd holomem.\n\n"
+msgstr ""
+"This card cannot be used unless both players' center holomem are 2nd holomem.\n"
+"\n"
 "Both players roll a die once. If your result is greater than or equal to your opponent's result, during this turn, your center holomem gets Arts+100. If your result is less than your opponent's result, send the top card of your cheer deck to your holomem."
 
 msgid "hBP07-096_NAME"
@@ -11888,14 +12221,18 @@ msgid "hBP07-097_NAME"
 msgstr "Ruler of Time -Promise-"
 
 msgid "hBP07-097_EFFECT"
-msgstr "This card can only be used if all holomem on your stage have #Promise.\n\n"
+msgstr ""
+"This card can only be used if all holomem on your stage have #Promise.\n"
+"\n"
 "Reveal 2 holomem with #Promise from your deck, and add them to hand. Then, shuffle the deck. If your life is less than your opponent's, choose 1 holomem on your stage. During this turn, the chosen holomem gets Arts+20."
 
 msgid "hBP07-098_NAME"
 msgstr "Big God Mion's Fortune Telling"
 
 msgid "hBP07-098_EFFECT"
-msgstr "This card can only be used if your Oshi holomem is <Ookami Mio>.\n\n"
+msgstr ""
+"This card can only be used if your Oshi holomem is <Ookami Mio>.\n"
+"\n"
 "Reveal the top 3 cards of your deck. During this turn, for each support card revealed, all holomem on your stage get Arts+20. Then, return the revealed cards to the top of the deck in any order."
 
 msgid "hBP07-099_NAME"
@@ -11908,42 +12245,54 @@ msgid "hBP07-100_NAME"
 msgstr "Frontier Spirit"
 
 msgid "hBP07-100_EFFECT"
-msgstr "Return 1 <AZKi> from your archive to hand. Send 1 cheer from your archive to 1 of your <AZKi> for each <Frontier Spirit> in your archive.\n"
+msgstr ""
+"Return 1 <AZKi> from your archive to hand. Send 1 cheer from your archive to 1 of your <AZKi> for each <Frontier Spirit> in your archive.\n"
 "You may only use the card <Frontier Spirit> once per turn."
 
 msgid "hBP07-101_NAME"
 msgstr "ASMR Microphone"
 
 msgid "hBP07-101_EFFECT"
-msgstr "◆Additional ability if attached to a Buzz holomem\n"
-"This holomem requires -1 colorless for its Arts.\n\n"
+msgstr ""
+"◆Additional ability if attached to a Buzz holomem\n"
+"This holomem requires -1 colorless for its Arts.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP07-103_NAME"
 msgstr "Giraffe Stag Beetle"
 
 msgid "hBP07-103_EFFECT"
-msgstr "The <Momosuzu Nene> with this tool attached gets Arts+20.\n\n"
+msgstr ""
+"The <Momosuzu Nene> with this tool attached gets Arts+20.\n"
+"\n"
 "◆Additional ability if attached to 1st or greater <Momosuzu Nene>\n"
-"This holomem's Arts damage cannot be reduced.\n\n"
+"This holomem's Arts damage cannot be reduced.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP07-104_NAME"
 msgstr "Thorn"
 
 msgid "hBP07-104_EFFECT"
-msgstr "The <Elizabeth Rose Bloodflame> with this tool attached gets Arts+20.\n\n"
+msgstr ""
+"The <Elizabeth Rose Bloodflame> with this tool attached gets Arts+20.\n"
+"\n"
 "◆Additional ability if attached to 2nd <Elizabeth Rose Bloodflame>\n"
-"While this holomem has reduced HP, this holomem gets Arts+20.\n\n"
+"While this holomem has reduced HP, this holomem gets Arts+20.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP07-106_NAME"
 msgstr "Pigeotaurus"
 
 msgid "hBP07-106_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Ookami Mio>\n"
-"When this holomem collabs, you may return 1 <Pigeotaurus> attached to this holomem to the top of the deck:Return 1 holomem from your archive to hand.\n\n"
+"When this holomem collabs, you may return 1 <Pigeotaurus> attached to this holomem to the top of the deck:Return 1 holomem from your archive to hand.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hY01-012_NAME"
@@ -12067,57 +12416,73 @@ msgid "hBP07-105_NAME"
 msgstr "BAZO"
 
 msgid "hBP07-105_EFFECT"
-msgstr "The holomem this mascot is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets Arts+10.\n"
+"\n"
 "◆Additional ability if attached to <Vestia Zeta>\n"
-"When this holomem uses Arts, return 1 fan from your archive to hand.\n\n"
+"When this holomem uses Arts, return 1 fan from your archive to hand.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP07-107_NAME"
 msgstr "Boros"
 
 msgid "hBP07-107_EFFECT"
-msgstr "The holomem this mascot is attached to gets +20 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
 "◆Additional ability if attached to <Ouro Kronii>\n"
-"If you have used your SP Oshi Skill \"Warden of Time\" this game, this holomem gets Arts+20.\n\n"
+"If you have used your SP Oshi Skill \"Warden of Time\" this game, this holomem gets Arts+20.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hBP07-108_NAME"
 msgstr "Zecretary"
 
 msgid "hBP07-108_EFFECT"
-msgstr "■If the holomem this fan is attached to would use Arts, if your Oshi holomem is <Vestia Zeta>, this fan is also regarded as a white cheer.\n"
-"■During your opponent's turn, when the holomem this fan is attached to takes damage, archive this fan.\n\n"
+msgstr ""
+"■If the holomem this fan is attached to would use Arts, if your Oshi holomem is <Vestia Zeta>, this fan is also regarded as a white cheer.\n"
+"■During your opponent's turn, when the holomem this fan is attached to takes damage, archive this fan.\n"
+"\n"
 "You may only attach this fan to your <Vestia Zeta>, and you may attach any number of this fan per holomem."
 
 msgid "hBP07-109_NAME"
 msgstr "Kronies"
 
 msgid "hBP07-109_EFFECT"
-msgstr "The holomem this fan is attached to gets Arts+10.\n\n"
+msgstr ""
+"The holomem this fan is attached to gets Arts+10.\n"
+"\n"
 "You may only attach this fan to your <Ouro Kronii>, and you may attach any number of this fan per holomem."
 
 msgid "hBP07-110_NAME"
 msgstr "Nekko"
 
 msgid "hBP07-110_EFFECT"
-msgstr "[1/Turn]When the bloom level of the holomem this fan is attached to increases, draw 1 card.\n\n"
+msgstr ""
+"[1/Turn]When the bloom level of the holomem this fan is attached to increases, draw 1 card.\n"
+"\n"
 "You may only attach this fan to your <Momosuzu Nene>, and you may attach any number of this fan per holomem."
 
 msgid "hBP07-093_NAME"
 msgstr "Umami!"
 
 msgid "hBP07-093_EFFECT"
-msgstr "Choose your <Vestia Zeta> in the collab position. During this turn, the chosen holomem gets Arts+40. Roll a die once. If the result is anything other than 6, return this card to the deck, and shuffle the deck.\n"
+msgstr ""
+"Choose your <Vestia Zeta> in the collab position. During this turn, the chosen holomem gets Arts+40. Roll a die once. If the result is anything other than 6, return this card to the deck, and shuffle the deck.\n"
 "You may only use the card <Umami!> once per turn."
 
 msgid "hBP07-102_NAME"
 msgstr "Tsunomaki Watame's Hammer"
 
 msgid "hBP07-102_EFFECT"
-msgstr "The <Tsunomaki Watame> with this tool attached gets Arts+20.\n\n"
+msgstr ""
+"The <Tsunomaki Watame> with this tool attached gets Arts+20.\n"
+"\n"
 "◆Additional ability if attached to 2nd <Tsunomaki Watame>\n"
 "■[Center Position Only]This holomem gets Arts+30.\n"
-"■[Center Position Only]When this holomem uses Arts, roll a die once. If it is 3 or 5, deal 50 special damage to 1 of your other holomem.\n\n"
+"■[Center Position Only]When this holomem uses Arts, roll a die once. If it is 3 or 5, deal 50 special damage to 1 of your other holomem.\n"
+"\n"
 "Only 1 tool can be attached to each of your holomem."
 
 msgid "hBP07-045_NAME"
@@ -12358,9 +12723,12 @@ msgid "hSD14-011_NAME"
 msgstr "Ari Yori no Alligator"
 
 msgid "hSD14-011_EFFECT"
-msgstr "The holomem this mascot is attached to gets +10 HP.\n\n"
+msgstr ""
+"The holomem this mascot is attached to gets +10 HP.\n"
+"\n"
 "◆Additional ability if attached to <Shirakami Fubuki>\n"
-"When this holomem downs your opponent's holomem, send the top card of your cheer deck to your holomem.\n\n"
+"When this holomem downs your opponent's holomem, send the top card of your cheer deck to your holomem.\n"
+"\n"
 "Only 1 mascot can be attached to each of your holomem."
 
 msgid "hSD15-001_NAME"
@@ -12664,7 +13032,8 @@ msgid "hSD17-010_NAME"
 msgstr "Stellar"
 
 msgid "hSD17-010_EFFECT"
-msgstr "Deal 20 special damage to 1 of your opponent's back holomem other than Debut.\n"
+msgstr ""
+"Deal 20 special damage to 1 of your opponent's back holomem other than Debut.\n"
 "You may only use the card <Stellar> once per turn."
 
 msgid "hSD18-001_NAME"
@@ -12871,3 +13240,1453 @@ msgstr "Good Mood Curry"
 msgid "hSD19-010_EFFECT"
 msgstr "Restore 30 HP to your holomem."
 
+msgid "hBP08-001_NAME"
+msgstr "IRyS"
+
+msgid "hBP08-001_SKILL_NAME"
+msgstr "Nephilim's Blessing"
+
+msgid "hBP08-001_SKILL_EFFECT"
+msgstr "[1/Turn] Choose 1 holomem on your stage. During this turn, the chosen holomem gets Arts+20. If the chosen holomem has purple cheer attached, it gets Arts+50 instead."
+
+msgid "hBP08-001_SPSKILL_NAME"
+msgstr "HOPE and DESPAIR"
+
+msgid "hBP08-001_SPSKILL_EFFECT"
+msgstr "[1/Game] Draw 1 card for each cheer attached to all of your <IRyS>. Put 1 card from the top of your deck to holo Power for each purple cheer attached to all of your <IRyS>."
+
+msgid "hBP08-002_NAME"
+msgstr "Cecilia Immergreen"
+
+msgid "hBP08-002_STAGESKILL_NAME"
+msgstr "Justice's Ancient Automaton"
+
+msgid "hBP08-002_STAGESKILL_EFFECT"
+msgstr "All of your <Cecilia Immergreen> are not set to active during your reset phase."
+
+msgid "hBP08-002_SKILL_NAME"
+msgstr "SPIN TO WIN!"
+
+msgid "hBP08-002_SKILL_EFFECT"
+msgstr "[1/Turn] Send the top 2 cards of your cheer deck divided as you choose to your resting <Cecilia Immergreen>. Then, set all holomem who received cheers from this ability to active."
+
+msgid "hBP08-003_NAME"
+msgstr "FUWAMOCO"
+
+msgid "hBP08-003_STAGESKILL_NAME"
+msgstr "Are You Ready?"
+
+msgid "hBP08-003_STAGESKILL_EFFECT"
+msgstr "All red cheers attached to your [<Fuwawa Abyssgard> and <Mococo Abyssgard>] are also regarded as blue cheers."
+
+msgid "hBP08-003_SKILL_NAME"
+msgstr "Mococo Will Protect Everyone's Smiles!"
+
+msgid "hBP08-003_SKILL_EFFECT"
+msgstr "[1/Turn] If you have red cheer on your stage, return 1 holomem with #Advent from your archive to hand. If you have blue cheer on your stage, send 1 cheer from your archive to your holomem with #Advent."
+
+msgid "hBP08-004_NAME"
+msgstr "Mizumiya Su"
+
+msgid "hBP08-004_SKILL_NAME"
+msgstr "It Would Be Great If You Just Watched Su"
+
+msgid "hBP08-004_SKILL_EFFECT"
+msgstr "[1/Turn] Choose your opponent's center holomem. Until the end of your opponent's next turn, the chosen holomem requires +3 colorless for its baton pass."
+
+msgid "hBP08-004_SPSKILL_NAME"
+msgstr "Ike Ike Don Don!"
+
+msgid "hBP08-004_SPSKILL_EFFECT"
+msgstr "[1/Game] Deal the same amount of special damage to 1 of your opponent's back holomem as the amount of damage taken by your opponent's center holomem."
+
+msgid "hBP08-005_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP08-005_STAGESKILL_NAME"
+msgstr " It's Already Friday Lui"
+
+msgid "hBP08-005_STAGESKILL_EFFECT"
+msgstr "At the end of your turn, if your center holomem is <Takane Lui> and you have a collab holomem, draw cards until your hand has 4 cards."
+
+msgid "hBP08-005_SKILL_NAME"
+msgstr "Hoisa Hoisa"
+
+msgid "hBP08-005_SKILL_EFFECT"
+msgstr "[1/Turn] Archive 2 cards from your hand. If you archived 2 cards with this ability, deal 50 special damage to your opponent's [center holomem and collab holomem] other than Debut."
+
+msgid "hBP08-006_NAME"
+msgstr "Ninomae Ina'nis"
+
+msgid "hBP08-006_STAGESKILL_NAME"
+msgstr "WORLD DOMINATION"
+
+msgid "hBP08-006_STAGESKILL_EFFECT"
+msgstr "If all holomem on your opponent's stage have a different color to their Oshi holomem, the Arts of all of your <Ninomae Ina'nis> may be used without cheer requirements."
+
+msgid "hBP08-006_SKILL_NAME"
+msgstr "Colors of Ina'nis"
+
+msgid "hBP08-006_SKILL_EFFECT"
+msgstr "[1/Turn] For each holo Power archived for this ability, choose 1 holomem on your opponent's stage. During this turn, the chosen holomem are regarded as holomem with all colors."
+
+msgid "hBP08-007_NAME"
+msgstr "Otonose Kanade"
+
+msgid "hBP08-007_SKILL_NAME"
+msgstr "Kanade Melody"
+
+msgid "hBP08-007_SKILL_EFFECT"
+msgstr "[1/Turn] Usable at the end of your turn if your center holomem <Otonose Kanade> used Arts during this turn: Swap your center holomem with 1 of your back holomem with #ReGLOSS."
+
+msgid "hBP08-007_SPSKILL_NAME"
+msgstr "Thank You for the Applause!"
+
+msgid "hBP08-007_SPSKILL_EFFECT"
+msgstr "[1/Game] Send the top 3 cards of your cheer deck to your center holomem <Otonose Kanade>. At the end of this turn, archive 3 cheers on your stage."
+
+msgid "hBP08-008_NAME"
+msgstr "IRyS"
+
+msgid "hBP08-008_ART_0_NAME"
+msgstr "Budding Spring"
+
+msgid "hBP08-008_COLLAB_NAME"
+msgstr "Promise of Spring"
+
+msgid "hBP08-008_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, choose 1 holomem on your stage with #Promise. During this turn, the chosen holomem gets Arts+30. Then, if there is purple cheer on your stage, draw 1 card."
+
+msgid "hBP08-009_NAME"
+msgstr "IRyS"
+
+msgid "hBP08-009_ART_0_NAME"
+msgstr "I'm Looking for Something Much Deeper"
+
+msgid "hBP08-009_COLLAB_NAME"
+msgstr "Maybe the Day Will Come When We Can Understand Each Other"
+
+msgid "hBP08-009_COLLAB_EFFECT"
+msgstr "Look at your holo Power. Reveal 1 support card from among them, and add it to hand. Then, shuffle your holo Power. If you added a card to hand, put the top card of your deck to holo Power."
+
+msgid "hBP08-010_NAME"
+msgstr "IRyS"
+
+msgid "hBP08-010_ART_0_NAME"
+msgstr "I am Lightning Speed"
+
+msgid "hBP08-010_BLOOM_NAME"
+msgstr "Race with Me!!"
+
+msgid "hBP08-010_BLOOM_EFFECT"
+msgstr "Reveal 1 [<Bloom&Gloom> or <GuyRyS>] from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP08-011_NAME"
+msgstr "IRyS"
+
+msgid "hBP08-011_ART_0_NAME"
+msgstr "Hot Ending"
+
+msgid "hBP08-011_ART_0_EFFECT"
+msgstr "If a purple cheer is attached to this holomem, draw 1 card."
+
+msgid "hBP08-011_COLLAB_NAME"
+msgstr "The Hot Pink One"
+
+msgid "hBP08-011_COLLAB_EFFECT"
+msgstr "If a white cheer is attached to this holomem, draw 1 card."
+
+msgid "hBP08-012_NAME"
+msgstr "IRyS"
+
+msgid "hBP08-012_ART_0_NAME"
+msgstr "One Part Angel, One Part Demon"
+
+msgid "hBP08-012_ART_0_EFFECT"
+msgstr "If a purple cheer is attached to this holomem, deal 20 special damage to your opponent's center holomem."
+
+msgid "hBP08-012_BLOOM_NAME"
+msgstr "A Road Illuminated by Hope"
+
+msgid "hBP08-012_BLOOM_EFFECT"
+msgstr "You may return 1 cheer from your stage to the bottom of the cheer deck: Send the top card of your cheer deck to your <IRyS>."
+
+msgid "hBP08-013_NAME"
+msgstr "IRyS"
+
+msgid "hBP08-013_ART_0_NAME"
+msgstr "Did it Make Your Heart Flutter?"
+
+msgid "hBP08-013_ART_0_EFFECT"
+msgstr "If this holomem has purple cheer attached, this Arts gets +50."
+
+msgid "hBP08-013_GIFT_NAME"
+msgstr "Victory Tea Time"
+
+msgid "hBP08-013_GIFT_EFFECT"
+msgstr "When this holomem downs your opponent's holomem, put the top card of your deck as holo power."
+
+msgid "hBP08-014_NAME"
+msgstr "IRyS"
+
+msgid "hBP08-014_ART_0_NAME"
+msgstr "Prismatic Anthem"
+
+msgid "hBP08-014_ART_0_EFFECT"
+msgstr "During this turn, all holomem on your stage get Arts+20 for each purple cheer attached to this holomem."
+
+msgid "hBP08-014_BLOOM_NAME"
+msgstr "The Light that Remains in Despair"
+
+msgid "hBP08-014_BLOOM_EFFECT"
+msgstr "Deal 30 special damage to your opponent's center holomem. Additionally, if a purple cheer is attached to this holomem, deal 30 special damage to your opponent's collab holomem."
+
+msgid "hBP08-015_NAME"
+msgstr "Tokino Sora"
+
+msgid "hBP08-015_ART_0_NAME"
+msgstr "Nine Darts"
+
+msgid "hBP08-015_GIFT_NAME"
+msgstr "Can You Beat Me?"
+
+msgid "hBP08-015_GIFT_EFFECT"
+msgstr "This holomem takes -10 Arts damage from your opponent's holomem."
+
+msgid "hBP08-016_NAME"
+msgstr "Tokino Sora"
+
+msgid "hBP08-016_ART_0_NAME"
+msgstr "Stairway to the Stars"
+
+msgid "hBP08-016_ART_0_EFFECT"
+msgstr "If there are 3 or more <Tokino Sora> on your stage, draw 1 card."
+
+msgid "hBP08-016_ART_1_NAME"
+msgstr "To the Skies of Time"
+
+msgid "hBP08-017_NAME"
+msgstr "Tokino Sora"
+
+msgid "hBP08-017_ART_0_NAME"
+msgstr "Let's All Keep Moving Forward!"
+
+msgid "hBP08-017_ART_0_EFFECT"
+msgstr "If you have a 2nd holomem with #Gen 0 on your stage, this Arts gets +20."
+
+msgid "hBP08-017_COLLAB_NAME"
+msgstr "\"Vah!\""
+
+msgid "hBP08-017_COLLAB_EFFECT"
+msgstr "Reveal 1 <Ankimo> from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP08-018_NAME"
+msgstr "Tokino Sora"
+
+msgid "hBP08-018_ART_0_NAME"
+msgstr "I Hope It Gets Everyone Excited!"
+
+msgid "hBP08-018_ART_0_EFFECT"
+msgstr "If your Oshi holomem is Tokino Sora, choose 1 other <Tokino Sora> on your stage. During this turn, you may also target your opponent's back 2nd holomem with the chosen holomem's Arts."
+
+msgid "hBP08-018_BLOOM_NAME"
+msgstr "I Want to Be an Idol"
+
+msgid "hBP08-018_BLOOM_EFFECT"
+msgstr "[Center Position・Collab Position Only] Draw 2 cards."
+
+msgid "hBP08-019_NAME"
+msgstr "Raora Panthera"
+
+msgid "hBP08-019_ART_0_NAME"
+msgstr "Let's Share This Happiness"
+
+msgid "hBP08-019_ART_0_EFFECT"
+msgstr "If this holomem does not have <Chattino> attached, attach 1 <Chattino> from your deck to this holomem. Then, shuffle the deck."
+
+msgid "hBP08-019_GIFT_NAME"
+msgstr "Buon Appetito -Enjoy Your Meal-"
+
+msgid "hBP08-019_GIFT_EFFECT"
+msgstr ""
+"■While this holomem does not have <Chattino> attached, this holomem requires -1 white cheer for its Arts.\n"
+"■While this holomem has <Chattino> attached, this holomem gets +30 HP."
+
+msgid "hBP08-020_NAME"
+msgstr "Isaki Riona"
+
+msgid "hBP08-020_ART_0_NAME"
+msgstr "A Challenging Gaze"
+
+msgid "hBP08-020_ART_0_EFFECT"
+msgstr "If you have archived 3 cards from your deck this turn, this Arts gets +40."
+
+msgid "hBP08-020_COLLAB_NAME"
+msgstr "Sexy Dance Queen"
+
+msgid "hBP08-020_COLLAB_EFFECT"
+msgstr "You may archive 1~2 cards from the top of your deck: Draw 1 card for each card archived."
+
+msgid "hBP08-021_NAME"
+msgstr "Cecilia Immergreen"
+
+msgid "hBP08-021_ART_0_NAME"
+msgstr "Let the Festival Resound"
+
+msgid "hBP08-021_COLLAB_NAME"
+msgstr "Automaton, Roll Out!"
+
+msgid "hBP08-021_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, reveal 2 <Otomo> from your deck, and add them to hand. Then, shuffle the deck."
+
+msgid "hBP08-022_NAME"
+msgstr "Cecilia Immergreen"
+
+msgid "hBP08-022_ART_0_NAME"
+msgstr "Let's Do It Elegantly"
+
+msgid "hBP08-022_GIFT_NAME"
+msgstr "Escapement"
+
+msgid "hBP08-022_GIFT_EFFECT"
+msgstr "When this holomem uses baton pass and moves to the back position, this holomem is rested."
+
+msgid "hBP08-023_NAME"
+msgstr "Cecilia Immergreen"
+
+msgid "hBP08-023_ART_0_NAME"
+msgstr "Very, Very Special!"
+
+msgid "hBP08-023_BLOOM_NAME"
+msgstr "Time to Be Together"
+
+msgid "hBP08-023_BLOOM_EFFECT"
+msgstr "You may rest this holomem. Then, if you have 2 or more resting holomem with #Justice, restore 50 HP to 1 of your holomem."
+
+msgid "hBP08-024_NAME"
+msgstr "Cecilia Immergreen"
+
+msgid "hBP08-024_ART_0_NAME"
+msgstr "Wherever the Wind Takes You"
+
+msgid "hBP08-024_ART_0_EFFECT"
+msgstr "Rest this holomem."
+
+msgid "hBP08-024_GIFT_NAME"
+msgstr "Gute Reise -Have a Nice Trip-"
+
+msgid "hBP08-024_GIFT_EFFECT"
+msgstr "[Center Position・Collab Position Only] During your opponent's main phase, the HP of all of your resting <Cecilia Immergreen> cannot be reduced or changed by your opponent's abilities."
+
+msgid "hBP08-025_NAME"
+msgstr "Cecilia Immergreen"
+
+msgid "hBP08-025_ART_0_NAME"
+msgstr "Isn't It Important to Take Breaks?"
+
+msgid "hBP08-025_COLLAB_NAME"
+msgstr "Café Time"
+
+msgid "hBP08-025_COLLAB_EFFECT"
+msgstr "If you have 2 or more resting holomem with #Justice, during this turn, all holomem on your stage get Arts+20."
+
+msgid "hBP08-026_NAME"
+msgstr "Cecilia Immergreen"
+
+msgid "hBP08-026_ART_0_NAME"
+msgstr "Musical Winde"
+
+msgid "hBP08-026_COLLAB_NAME"
+msgstr "Mechanical Streich"
+
+msgid "hBP08-026_COLLAB_EFFECT"
+msgstr "If you have 2 or more resting holomem with #Justice, during this turn, this holomem gets Arts+50."
+
+msgid "hBP08-027_NAME"
+msgstr "Cecilia Immergreen"
+
+msgid "hBP08-027_ART_0_NAME"
+msgstr "Verdant Sturm"
+
+msgid "hBP08-027_ART_0_EFFECT"
+msgstr "Draw 1 card for each of your resting holomem with #Justice. Then, rest this holomem."
+
+msgid "hBP08-027_BLOOM_NAME"
+msgstr " Clockwork Rhapsody"
+
+msgid "hBP08-027_BLOOM_EFFECT"
+msgstr "Send 1 cheer from your archive to this holomem for each of your resting holomem with #Justice."
+
+msgid "hBP08-028_NAME"
+msgstr "Aki Rosenthal"
+
+msgid "hBP08-028_ART_0_NAME"
+msgstr "Would You Like a Bite?"
+
+msgid "hBP08-028_ART_0_EFFECT"
+msgstr "Restore 30 HP to 1 of your holomem with tool attached."
+
+msgid "hBP08-028_BLOOM_NAME"
+msgstr "holonatsu Extra Large Parfait"
+
+msgid "hBP08-028_BLOOM_EFFECT"
+msgstr "Choose 1 of your <Aki Rosenthal> with tool attached. During this turn, the chosen holomem gets Arts+20. If the chosen holomem is a Buzz holomem or 2nd holomem, that holomem gets Arts+50 instead."
+
+msgid "hBP08-029_NAME"
+msgstr "Kazama Iroha"
+
+msgid "hBP08-029_ART_0_NAME"
+msgstr "On a Top Secret Mission, I Daresay"
+
+msgid "hBP08-029_GIFT_NAME"
+msgstr "Secret Love -Iroha-"
+
+msgid "hBP08-029_GIFT_EFFECT"
+msgstr "[Collab Position Only] [1/Turn] During your opponent's turn, when your center holomem with #holoX takes Arts damage, put the top card of your deck to holo Power."
+
+msgid "hBP08-030_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP08-030_ART_0_NAME"
+msgstr "Please Keep This in Mind..."
+
+msgid "hBP08-030_COLLAB_NAME"
+msgstr "Step By Step"
+
+msgid "hBP08-030_COLLAB_EFFECT"
+msgstr "You may archive 1 holomem with #ID Gen 2 from your hand: Send the top card of your cheer deck to your back holomem."
+
+msgid "hBP08-031_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP08-031_ART_0_NAME"
+msgstr "GWS+"
+
+msgid "hBP08-031_ART_0_EFFECT"
+msgstr "Archive the top card of your cheer deck. For every cheer color on your stage, restore 10 HP to 1 of your holomem."
+
+msgid "hBP08-031_GIFT_NAME"
+msgstr "SPY-C1000"
+
+msgid "hBP08-031_GIFT_EFFECT"
+msgstr "[Center Position・Collab Position Only][1/Turn] During your turn, when your cheer is moved to archive, draw 1 card."
+
+msgid "hBP08-032_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP08-032_ART_0_NAME"
+msgstr "Structural Color"
+
+msgid "hBP08-032_ART_0_EFFECT"
+msgstr "If you have a holomem with #ID Gen 2 other than <Pavolia Reine> with purple cheer or yellow cheer attached, this Arts gets +70."
+
+msgid "hBP08-032_BLOOM_NAME"
+msgstr "On a New Journey"
+
+msgid "hBP08-032_BLOOM_EFFECT"
+msgstr "Choose 1 2nd holomem [<Kureiji Ollie> or <Anya Melfissa>] on your stage. During this turn, the chosen holomem gets Arts+70."
+
+msgid "hBP08-033_NAME"
+msgstr "Pavolia Reine"
+
+msgid "hBP08-033_ART_0_NAME"
+msgstr "Knockout Twist"
+
+msgid "hBP08-033_ART_0_EFFECT"
+msgstr "Send 1~2 cheers from your archive to 1 of your <Pavolia Reine>."
+
+msgid "hBP08-033_COLLAB_NAME"
+msgstr "Watcher's Gaze"
+
+msgid "hBP08-033_COLLAB_EFFECT"
+msgstr "Send 1 cheer from your cheer deck to your holomem with #ID. Then, shuffle the cheer deck."
+
+msgid "hBP08-034_NAME"
+msgstr "Mococo Abyssgard"
+
+msgid "hBP08-034_ART_0_NAME"
+msgstr "Your Fuzzy Mococo"
+
+msgid "hBP08-034_COLLAB_NAME"
+msgstr "Trust in FUWAMOCO!"
+
+msgid "hBP08-034_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, place 1 debut holomem [<Fuwawa Abyssgard> and <Mococo Abyssgard>] each from your deck on stage. Then, shuffle the deck."
+
+msgid "hBP08-035_NAME"
+msgstr "Mococo Abyssgard"
+
+msgid "hBP08-035_ART_0_NAME"
+msgstr "Yay, a Big Win!"
+
+msgid "hBP08-035_ART_0_EFFECT"
+msgstr "If a blue cheer is attached to this holomem, this Arts gets +30."
+
+msgid "hBP08-036_NAME"
+msgstr "Mococo Abyssgard"
+
+msgid "hBP08-036_ART_0_NAME"
+msgstr "Together \"BAU\"DOL✩★"
+
+msgid "hBP08-036_BLOOM_NAME"
+msgstr "Dokidoki Doggy -Mococo-"
+
+msgid "hBP08-036_BLOOM_EFFECT"
+msgstr "Reveal 1 [<Pero>, <Ruffians> or <Mischievous Ruffians>] from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP08-037_NAME"
+msgstr "Mococo Abyssgard"
+
+msgid "hBP08-037_ART_0_NAME"
+msgstr "GanBAUrune!"
+
+msgid "hBP08-037_ART_0_EFFECT"
+msgstr "If 2 blue cheers are attached to this holomem, send the top card of your cheer deck to your <Fuwawa Abyssgard>."
+
+msgid "hBP08-037_BLOOM_NAME"
+msgstr "Twinkle Idol"
+
+msgid "hBP08-037_BLOOM_EFFECT"
+msgstr "If you have <Fuwawa Abyssgard> on your stage, deal 20 special damage to your opponent's center holomem or collab holomem."
+
+msgid "hBP08-038_NAME"
+msgstr "Mococo Abyssgard"
+
+msgid "hBP08-038_ART_0_NAME"
+msgstr "Mococo's Gonna Win!"
+
+msgid "hBP08-038_COLLAB_NAME"
+msgstr "It's a Magical Weapon!"
+
+msgid "hBP08-038_COLLAB_EFFECT"
+msgstr "If your Oshi holomem is blue <FUWAMOCO>, return 1 holomem with #Advent from your archive to hand."
+
+msgid "hBP08-039_NAME"
+msgstr "Mococo Abyssgard"
+
+msgid "hBP08-039_ART_0_NAME"
+msgstr "Fuzzy Bounty Hunter"
+
+msgid "hBP08-039_ART_0_EFFECT"
+msgstr "For each blue cheer attached to this holomem, this Arts gets +20. Then, choose any number of blue cheers attached to this holomem, and reattach them to 1 of your <Fuwawa Abyssgard>."
+
+msgid "hBP08-039_BLOOM_NAME"
+msgstr "Trust from the Abyss"
+
+msgid "hBP08-039_BLOOM_EFFECT"
+msgstr "If your stage has 6 or more blue cheers, set 1 of your resting <Fuwawa Abyssgard> to active."
+
+msgid "hBP08-040_NAME"
+msgstr "Nakiri Ayame"
+
+msgid "hBP08-040_ART_0_NAME"
+msgstr "Sakura Viewing Date"
+
+msgid "hBP08-040_ART_0_EFFECT"
+msgstr "This Arts gets +10 for each red cheer in your archive."
+
+msgid "hBP08-040_COLLAB_NAME"
+msgstr "Drawn In By the Scent of Sakura"
+
+msgid "hBP08-040_COLLAB_EFFECT"
+msgstr "If this holomem has <Demon Blade Asura> attached, and your opponent has no collab holomem, your opponent moves 1 of their back holomem to the collab position (Moving is not regarded as collab)."
+
+msgid "hBP08-041_NAME"
+msgstr "Takanashi Kiara"
+
+msgid "hBP08-041_ART_0_NAME"
+msgstr "It's a Real \"Fever Night\"!!!"
+
+msgid "hBP08-041_ART_0_EFFECT"
+msgstr "Archive the top card of your deck."
+
+msgid "hBP08-041_GIFT_NAME"
+msgstr "Phoenix Style Aerobics"
+
+msgid "hBP08-041_GIFT_EFFECT"
+msgstr ""
+"Phoenix Style Aerobics\n"
+"During your opponent's turn, when this holomem is downed, you may return this holomem to hand instead of archive."
+
+msgid "hBP08-042_NAME"
+msgstr "Takanashi Kiara"
+
+msgid "hBP08-042_ART_0_NAME"
+msgstr " Kiwawa with Chonkers & Smoothie"
+
+msgid "hBP08-042_BLOOM_NAME"
+msgstr "Guten Morgen -Good Morning-"
+
+msgid "hBP08-042_BLOOM_EFFECT"
+msgstr "You may archive 1~3 cards from your hand: Choose 1 holomem on your stage. During this turn, the chosen holomem gets Arts+10 for each card archived by this ability."
+
+msgid "hBP08-043_NAME"
+msgstr "Takanashi Kiara"
+
+msgid "hBP08-043_ART_0_NAME"
+msgstr "Resolve to Survive"
+
+msgid "hBP08-043_ART_0_EFFECT"
+msgstr "If all holomem on your stage have #Myth, put the top card of your deck to holo Power."
+
+msgid "hBP08-043_COLLAB_NAME"
+msgstr "Firebird Sword Dance"
+
+msgid "hBP08-043_COLLAB_EFFECT"
+msgstr "If you have 10 or more holomem in your archive, during this turn, this holomem requires -2 red cheer for its Arts."
+
+msgid "hBP08-044_NAME"
+msgstr "Takanashi Kiara"
+
+msgid "hBP08-044_ART_0_NAME"
+msgstr "Fearless Fire Vogel"
+
+msgid "hBP08-044_ART_0_EFFECT"
+msgstr "Archive 1~3 cards from the top of your deck."
+
+msgid "hBP08-044_GIFT_NAME"
+msgstr "The Light Shines Again"
+
+msgid "hBP08-044_GIFT_EFFECT"
+msgstr "During your main phase, if your archive has 10 or more holomem, you may bloom 1 of your holomem using this holomem from your archive. (This ability can only be used while this holomem is in archive)"
+
+msgid "hBP08-045_NAME"
+msgstr "Hakos Baelz"
+
+msgid "hBP08-045_ART_0_NAME"
+msgstr "I Want to Live True to Myself"
+
+msgid "hBP08-045_ART_0_EFFECT"
+msgstr "Choose 1 holomem on your stage and roll a die once. During this turn, the chosen holomem gets Arts+10x the result."
+
+msgid "hBP08-045_COLLAB_NAME"
+msgstr "Looks Like a Bountiful Harvest This Year!"
+
+msgid "hBP08-045_COLLAB_EFFECT"
+msgstr "During this turn, when you roll a die for the ability of your Oshi holomem <Hakos Baelz> or your holomem <Hakos Baelz>, regard all numbers on the die as doubled."
+
+msgid "hBP08-046_NAME"
+msgstr "Elizabeth Rose Bloodflame"
+
+msgid "hBP08-046_ART_0_NAME"
+msgstr "Sweet Tooth"
+
+msgid "hBP08-046_GIFT_NAME"
+msgstr "Majestic Devotion"
+
+msgid "hBP08-046_GIFT_EFFECT"
+msgstr "[Collab Position Only] During your opponent's turn, when your holomem with #Justice other than this holomem is downed, reveal 1 2nd holomem from your deck and add it to hand. Then, shuffle the deck."
+
+msgid "hBP08-047_NAME"
+msgstr "Mizumiya Su"
+
+msgid "hBP08-047_ART_0_NAME"
+msgstr "Is Your Su-Charge at 100%?"
+
+msgid "hBP08-047_COLLAB_NAME"
+msgstr "Yes, Genius!"
+
+msgid "hBP08-047_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, draw 1 card, and draw 1 more card for each colorless required for your opponent's center holomem's baton pass."
+
+msgid "hBP08-048_NAME"
+msgstr "Mizumiya Su"
+
+msgid "hBP08-048_ART_0_NAME"
+msgstr "Big. Huge. Strong."
+
+msgid "hBP08-048_COLLAB_NAME"
+msgstr "183cm With Aura"
+
+msgid "hBP08-048_COLLAB_EFFECT"
+msgstr "You may archive 1 cheer from your stage: Reveal 1 <Aura> from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP08-049_NAME"
+msgstr "Mizumiya Su"
+
+msgid "hBP08-049_ART_0_NAME"
+msgstr "If It's Okay with You, Let's Talk More"
+
+msgid "hBP08-049_GIFT_NAME"
+msgstr " I Get You on the Phone All to Myself"
+
+msgid "hBP08-049_GIFT_EFFECT"
+msgstr "[Collab Position Only]While you have a center holomem with #FLOW GLOW, your opponent's holomem's Arts can only target your collab holomem. However, it excludes special damage."
+
+msgid "hBP08-050_NAME"
+msgstr "Mizumiya Su"
+
+msgid "hBP08-050_ART_0_NAME"
+msgstr "Let's Build a Snowman"
+
+msgid "hBP08-050_ART_0_EFFECT"
+msgstr "Send 1 cheer from your archive to your holomem."
+
+msgid "hBP08-050_GIFT_NAME"
+msgstr "Should I Leave It to You?"
+
+msgid "hBP08-050_GIFT_EFFECT"
+msgstr "During your opponent's turn, when this holomem is downed, send the top card of your cheer deck to your back holomem."
+
+msgid "hBP08-051_NAME"
+msgstr "Mizumiya Su"
+
+msgid "hBP08-051_ART_0_NAME"
+msgstr "For 8 Hours 35 Minutes"
+
+msgid "hBP08-051_ART_0_EFFECT"
+msgstr "Send the top card of your cheer deck to your <Mizumiya Su>."
+
+msgid "hBP08-051_GIFT_NAME"
+msgstr " Love to Egosearch"
+
+msgid "hBP08-051_GIFT_EFFECT"
+msgstr "[Center Position Only] When your <Mizumiya Su> collabs, choose your opponent's center holomem. Until the end of your opponent's next turn, the chosen holomem requires +1 colorless for its baton pass."
+
+msgid "hBP08-052_NAME"
+msgstr "Mizumiya Su"
+
+msgid "hBP08-052_ART_0_NAME"
+msgstr "Energy Restoration Gummi"
+
+msgid "hBP08-052_ART_0_EFFECT"
+msgstr "If your opponent's center holomem requires 5 or more colorless cheers for its baton pass, send the top card of your cheer deck to your <Mizumiya Su>."
+
+msgid "hBP08-052_ART_1_NAME"
+msgstr "Gummis Are Yummy"
+
+msgid "hBP08-053_NAME"
+msgstr "Mizumiya Su"
+
+msgid "hBP08-053_ART_0_NAME"
+msgstr "Deliver This Love"
+
+msgid "hBP08-053_ART_0_EFFECT"
+msgstr "If your opponent's center holomem requires 5 or more colorless cheers for its baton pass, deal 100 special damage to 1 of your opponent's holomem other than Debut."
+
+msgid "hBP08-053_GIFT_NAME"
+msgstr "Shupi-shuwa~~!!!!"
+
+msgid "hBP08-053_GIFT_EFFECT"
+msgstr "[Center Position Only] While your opponent's center holomem requires 5 or more colorless cheers for its baton pass, your opponent's center holomem requires +2 colorless cheers for its Arts."
+
+msgid "hBP08-054_NAME"
+msgstr "Moona Hoshinova"
+
+msgid "hBP08-054_ART_0_NAME"
+msgstr "You're Not Alone, We're Together Now"
+
+msgid "hBP08-054_ART_0_EFFECT"
+msgstr "You may archive 3 cheers from this holomem: Draw 3 cards."
+
+msgid "hBP08-054_BLOOM_NAME"
+msgstr "This Bond Is Us!"
+
+msgid "hBP08-054_BLOOM_EFFECT"
+msgstr "If your Oshi holomem's color is green, blue or yellow, send 1 blue cheer each from your archive to 1~3 of your holomem with #ID Gen 1."
+
+msgid "hBP08-055_NAME"
+msgstr "Fuwawa Abyssgard"
+
+msgid "hBP08-055_ART_0_NAME"
+msgstr "Your Fluffy Fuwawa"
+
+msgid "hBP08-055_ART_0_EFFECT"
+msgstr "If a red cheer is attached to this holomem, draw 1 card."
+
+msgid "hBP08-055_COLLAB_NAME"
+msgstr "With FUWAMOCO, Everything Will Be Okay"
+
+msgid "hBP08-055_COLLAB_EFFECT"
+msgstr "Send 1 cheer from your archive to your holomem with #Advent."
+
+msgid "hBP08-056_NAME"
+msgstr "Fuwawa Abyssgard"
+
+msgid "hBP08-056_ART_0_NAME"
+msgstr "I'm Going to Give It My All!"
+
+msgid "hBP08-056_COLLAB_NAME"
+msgstr "Dokidoki Doggy -Fuwawa-"
+
+msgid "hBP08-056_COLLAB_EFFECT"
+msgstr "Reveal 1 1st holomem <Mococo Abyssgard> from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP08-057_NAME"
+msgstr "Fuwawa Abyssgard"
+
+msgid "hBP08-057_ART_0_NAME"
+msgstr "Two People Close Together"
+
+msgid "hBP08-057_ART_0_EFFECT"
+msgstr "If a red cheer is attached to this holomem, this Arts gets +20."
+
+msgid "hBP08-057_COLLAB_NAME"
+msgstr "Swing in the Sunlight Filtering through the Trees"
+
+msgid "hBP08-057_COLLAB_EFFECT"
+msgstr "You may choose any number of cheers on your stage, and reattach them to 1 of your <Mococo Abyssgard>. Then, if your stage has 8 or more cheers, during this turn, this holomem gets Arts+40."
+
+msgid "hBP08-058_NAME"
+msgstr "Fuwawa Abyssgard"
+
+msgid "hBP08-058_ART_0_NAME"
+msgstr "There's No Way You'll Win!"
+
+msgid "hBP08-058_ART_0_EFFECT"
+msgstr "Choose 1-2 blue cheers from your archive, and send them to your holomem with #Advent as you choose."
+
+msgid "hBP08-058_ART_1_NAME"
+msgstr "Now It's Our Turn!"
+
+msgid "hBP08-058_ART_1_EFFECT"
+msgstr "If your Oshi holomem is blue <FUWAMOCO>, you may archive 2 cheers from this holomem: Deal 50 special damage to 1 of your opponent's holomem other than Debut."
+
+msgid "hBP08-059_NAME"
+msgstr "Fuwawa Abyssgard"
+
+msgid "hBP08-059_ART_0_NAME"
+msgstr "Fluffy Boundary Spanner"
+
+msgid "hBP08-059_ART_0_EFFECT"
+msgstr "If your <Mococo Abyssgard> used Arts this turn, this Arts gets +50. Then, choose any number of red cheers attached to this holomem, and reattach them to 1 of your <Mococo Abyssgard>."
+
+msgid "hBP08-059_GIFT_NAME"
+msgstr "Love from the Abyss"
+
+msgid "hBP08-059_GIFT_EFFECT"
+msgstr "While your stage has 6 or more red cheers, you may also target your opponent's back holomem other than Debut with this holomem's Arts."
+
+msgid "hBP08-060_NAME"
+msgstr "FUWAMOCO"
+
+msgid "hBP08-060_ART_0_NAME"
+msgstr "Together Forever♡"
+
+msgid "hBP08-060_ART_0_EFFECT"
+msgstr "If your Oshi holomem is blue <FUWAMOCO>, put the top card of your deck to holo Power."
+
+msgid "hBP08-060_GIFT_NAME"
+msgstr "“BAU” DOL♡"
+
+msgid "hBP08-060_GIFT_EFFECT"
+msgstr "[Collab Position Only] Your Oshi Skill \"Moco-chan!\" has its \"[holo Power:-3]\" changed to \"[holo Power:-2]\"."
+
+msgid "hBP08-061_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP08-061_ART_0_NAME"
+msgstr "Have Some holoX Coffee"
+
+msgid "hBP08-061_COLLAB_NAME"
+msgstr "Secret Society Hospitality"
+
+msgid "hBP08-061_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, and your Oshi holomem is <Takane Lui>, your opponent adds the top card of their holo Power to hand."
+
+msgid "hBP08-062_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP08-062_ART_0_NAME"
+msgstr "The Will to Take Down"
+
+msgid "hBP08-062_COLLAB_NAME"
+msgstr "Prepared to be Taken Down"
+
+msgid "hBP08-062_COLLAB_EFFECT"
+msgstr "You may archive 1 card from your hand: Place 1 Debut holomem with Extra \"You may include any number of this holomem in the deck\" from your deck on stage. Then, shuffle the deck."
+
+msgid "hBP08-063_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP08-063_ART_0_NAME"
+msgstr "How Do You Like It???"
+
+msgid "hBP08-063_COLLAB_NAME"
+msgstr "holoX Deal"
+
+msgid "hBP08-063_COLLAB_EFFECT"
+msgstr "Look at the top 3 cards of your deck. Reveal 1 holomem with #holoX from among them, and add it to hand. Then, return the remaining cards to the bottom of the deck in any order."
+
+msgid "hBP08-064_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP08-064_ART_0_NAME"
+msgstr "Odd Jobs in the Sleepless City"
+
+msgid "hBP08-064_ART_0_EFFECT"
+msgstr "Attach 1 <Lui-tomo> from your deck to 1 of your holomem. Then, shuffle the deck."
+
+msgid "hBP08-064_COLLAB_NAME"
+msgstr "Large Problems"
+
+msgid "hBP08-064_COLLAB_EFFECT"
+msgstr "You may archive 1 card from your hand: Deal 30 special damage to your opponent's center holomem or collab holomem."
+
+msgid "hBP08-065_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP08-065_ART_0_NAME"
+msgstr "I'm Gonna Win!"
+
+msgid "hBP08-065_ART_0_EFFECT"
+msgstr "If your hand has 2 or less cards, this Arts gets +30."
+
+msgid "hBP08-065_BLOOM_NAME"
+msgstr "It's a Long Shot!"
+
+msgid "hBP08-065_BLOOM_EFFECT"
+msgstr "[Center Position Only] You may archive 1 card from your hand: Roll a die once. If it is 1, draw 3 cards. If it is a number other than 1, draw 1 card."
+
+msgid "hBP08-066_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP08-066_ART_0_NAME"
+msgstr " Let's Sober Up, Shall We?"
+
+msgid "hBP08-066_ART_0_EFFECT"
+msgstr "You may archive 1~2 cards from your hand: This Arts gets +20 for each card archived."
+
+msgid "hBP08-066_COLLAB_NAME"
+msgstr "Is My Face That Red?"
+
+msgid "hBP08-066_COLLAB_EFFECT"
+msgstr "You may return 1 support card from your archive to the top of your deck."
+
+msgid "hBP08-067_NAME"
+msgstr "Takane Lui"
+
+msgid "hBP08-067_ART_0_NAME"
+msgstr "One-Move Comeback"
+
+msgid "hBP08-067_ART_0_EFFECT"
+msgstr "If your hand has 2 or less cards, this Arts gets +50. If your hand has no cards, this Arts gets +70 instead."
+
+msgid "hBP08-067_BLOOM_NAME"
+msgstr "Violet Domination"
+
+msgid "hBP08-067_BLOOM_EFFECT"
+msgstr "[Center Position Only] You may archive 2 cards from your hand: Reattach 1 cheer on your opponent's stage to their holomem."
+
+msgid "hBP08-068_NAME"
+msgstr "Ninomae Ina'nis"
+
+msgid "hBP08-068_ART_0_NAME"
+msgstr "Dreamt I Went Outside"
+
+msgid "hBP08-068_ART_0_EFFECT"
+msgstr "Deal 20 special damage to your opponent's center holomem and collab holomem with a different color to their Oshi holomem."
+
+msgid "hBP08-068_COLLAB_NAME"
+msgstr "Tako This!"
+
+msgid "hBP08-068_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, all of your opponent's holomem are regarded as holomem with all colors."
+
+msgid "hBP08-069_NAME"
+msgstr "Ninomae Ina'nis"
+
+msgid "hBP08-069_ART_0_NAME"
+msgstr "That Went Well, But We Can Do Better"
+
+msgid "hBP08-069_COLLAB_NAME"
+msgstr "Arrival of Summer"
+
+msgid "hBP08-069_COLLAB_EFFECT"
+msgstr "If there are 3 or more holomem with #Painting on your stage, draw 1 card."
+
+msgid "hBP08-070_NAME"
+msgstr "Ninomae Ina'nis"
+
+msgid "hBP08-070_ART_0_NAME"
+msgstr "My Lifelong Friend"
+
+msgid "hBP08-070_ART_0_EFFECT"
+msgstr "Restore 10 HP to 1 of your holomem with #Myth for each holomem on your opponent's stage with a different color to their Oshi holomem."
+
+msgid "hBP08-070_COLLAB_NAME"
+msgstr "Ina Imagination"
+
+msgid "hBP08-070_COLLAB_EFFECT"
+msgstr "Reveal 1 <Takodachi> from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP08-071_NAME"
+msgstr "Ninomae Ina'nis"
+
+msgid "hBP08-071_ART_0_NAME"
+msgstr "Bonk!"
+
+msgid "hBP08-071_BLOOM_NAME"
+msgstr "TOMORROW!?"
+
+msgid "hBP08-071_BLOOM_EFFECT"
+msgstr "Deal 20 special damage to 1 of your opponent's holomem with a different color to their Oshi holomem."
+
+msgid "hBP08-072_NAME"
+msgstr "Ninomae Ina'nis"
+
+msgid "hBP08-072_ART_0_NAME"
+msgstr "Multicolor Sketch"
+
+msgid "hBP08-072_ART_0_EFFECT"
+msgstr "The Arts gets +10 for each holomem on your opponent's stage with a different color to their Oshi holomem."
+
+msgid "hBP08-072_BLOOM_NAME"
+msgstr "Natsu Ina!!"
+
+msgid "hBP08-072_BLOOM_EFFECT"
+msgstr "If you have 8 or more holomem with #Myth in your archive, return 1 holomem with #Myth from your archive to hand. You may only use Bloom Effect \"Natsu Ina!!\" once per turn."
+
+msgid "hBP08-073_NAME"
+msgstr "Ninomae Ina'nis"
+
+msgid "hBP08-073_ART_0_NAME"
+msgstr "No Cookies for Snack Time!"
+
+msgid "hBP08-073_COLLAB_NAME"
+msgstr "Behave Yourself, Okay?"
+
+msgid "hBP08-073_COLLAB_EFFECT"
+msgstr "Choose 2 holomem on your opponent's stage. During this turn, the chosen holomem are regarded as holomem with all colors."
+
+msgid "hBP08-074_NAME"
+msgstr "Ninomae Ina'nis"
+
+msgid "hBP08-074_ART_0_NAME"
+msgstr "Necro Elimination!!"
+
+msgid "hBP08-074_ART_0_EFFECT"
+msgstr "You may archive 1~3 cards from your hand: Choose 1 of your opponent's holomem for each card archived with this ability. During this turn, the chosen holomem are regarded as holomem with all colors."
+
+msgid "hBP08-074_BLOOM_NAME"
+msgstr "Awaken, Crimson Eyes Obsidian Dragon"
+
+msgid "hBP08-074_BLOOM_EFFECT"
+msgstr "[Center Position Only] Draw 1 card for each holomem on your opponent's stage with a different color to their Oshi holomem."
+
+msgid "hBP08-075_NAME"
+msgstr "Roboco-san"
+
+msgid "hBP08-075_ART_0_NAME"
+msgstr "Let's Go Outside Together"
+
+msgid "hBP08-075_ART_0_EFFECT"
+msgstr "This Arts gets +20 for each <Roboser> attached to this holomem."
+
+msgid "hBP08-075_BLOOM_NAME"
+msgstr "Robocosan↔Roboser"
+
+msgid "hBP08-075_BLOOM_EFFECT"
+msgstr "Reveal 1 <Roboser> from your deck, and add it to hand. Then, shuffle the deck."
+
+msgid "hBP08-076_NAME"
+msgstr "Yuzuki Choco"
+
+msgid "hBP08-076_ART_0_NAME"
+msgstr "After Eating a Big Meal"
+
+msgid "hBP08-076_ART_0_EFFECT"
+msgstr "If you have 3 or more events with #Food in your archive, restore 100 HP to this holomem."
+
+msgid "hBP08-076_COLLAB_NAME"
+msgstr "Dreaming of Delicious Food"
+
+msgid "hBP08-076_COLLAB_EFFECT"
+msgstr "Look at the top 3 cards of your deck. Reveal 1 [holomem with #Cooking and/or event with #Food] each from among them, and add the revealed ccards to hand. Then, return the remaining cards to the bottom of the deck in any order."
+
+msgid "hBP08-077_NAME"
+msgstr "Otonose Kanade"
+
+msgid "hBP08-077_ART_0_NAME"
+msgstr "Kanade Standby"
+
+msgid "hBP08-077_COLLAB_NAME"
+msgstr "Please Listen to My Cover Song"
+
+msgid "hBP08-077_COLLAB_EFFECT"
+msgstr "If you went second and it is your first turn, reveal 1 [1st holomem <Otonose Kanade> and/or <Recorder>] each from your deck, and add them to hand. Then, shuffle the deck."
+
+msgid "hBP08-078_NAME"
+msgstr "Otonose Kanade"
+
+msgid "hBP08-078_ART_0_NAME"
+msgstr "Nerr Nerrrr"
+
+msgid "hBP08-078_COLLAB_NAME"
+msgstr "It's a Fun Monday!!!!!!!!"
+
+msgid "hBP08-078_COLLAB_EFFECT"
+msgstr "Choose 1 2nd holomem with #Singing on your stage. During this turn, the chosen holomem gets Arts+20."
+
+msgid "hBP08-079_NAME"
+msgstr "Otonose Kanade"
+
+msgid "hBP08-079_ART_0_NAME"
+msgstr "Pure Singing Voice"
+
+msgid "hBP08-079_ART_0_EFFECT"
+msgstr "You may send 1 cheer from your archive to your center holomem with #ReGLOSS."
+
+msgid "hBP08-079_GIFT_NAME"
+msgstr "Dawn Diva"
+
+msgid "hBP08-079_GIFT_EFFECT"
+msgstr "While you have a 2nd holomem with #ReGLOSS on your stage, this holomem gets +50 HP."
+
+msgid "hBP08-080_NAME"
+msgstr "Otonose Kanade"
+
+msgid "hBP08-080_ART_0_NAME"
+msgstr "Kanad-extraction"
+
+msgid "hBP08-080_BLOOM_NAME"
+msgstr "Fighting Cheer"
+
+msgid "hBP08-080_BLOOM_EFFECT"
+msgstr "If the number of cheers on your stage is more than your opponent's, you may place 1 Debut holomem with #ReGLOSS from your deck on stage. Then, shuffle the deck."
+
+msgid "hBP08-081_NAME"
+msgstr "Otonose Kanade"
+
+msgid "hBP08-081_ART_0_NAME"
+msgstr "Still Growing this Year"
+
+msgid "hBP08-081_ART_0_EFFECT"
+msgstr "[Center Position Only] If you have 1 more cheer on your stage than your opponent, this Arts gets +20. If you have 2 or more, this Arts gets +40 instead."
+
+msgid "hBP08-081_BLOOM_NAME"
+msgstr "A Feast of Sound"
+
+msgid "hBP08-081_BLOOM_EFFECT"
+msgstr "Send 1 cheer from your archive to your center holomem <Otonose Kanade>."
+
+msgid "hBP08-082_NAME"
+msgstr "Otonose Kanade"
+
+msgid "hBP08-082_ART_0_NAME"
+msgstr "I Can't Stop Crying"
+
+msgid "hBP08-082_COLLAB_NAME"
+msgstr "It's Supposed to Be a Joyous Day, But..."
+
+msgid "hBP08-082_COLLAB_EFFECT"
+msgstr "If the number of cheers on your stage is more than your opponent's, during this turn, this holomem gets Arts+40."
+
+msgid "hBP08-083_NAME"
+msgstr "Otonose Kanade"
+
+msgid "hBP08-083_ART_0_NAME"
+msgstr "Kanade On Stage"
+
+msgid "hBP08-083_ART_0_EFFECT"
+msgstr "If the number of cheers on your stage is more than your opponent's, this Arts gets +20 for each cheer more."
+
+msgid "hBP08-083_BLOOM_NAME"
+msgstr "Hype Power-Up!"
+
+msgid "hBP08-083_BLOOM_EFFECT"
+msgstr "If the number of cheers on your stage is less than or equal to your opponent's, send 1~2 cheers from your archive to this holomem."
+
+msgid "hBP08-084_NAME"
+msgstr "Natsuiro Matsuri"
+
+msgid "hBP08-084_ART_0_NAME"
+msgstr "Machu is a Princess Too♡"
+
+msgid "hBP08-084_ART_0_EFFECT"
+msgstr "If there is a 2nd holomem with #Gen 1 on your stage, this Arts gets +30."
+
+msgid "hBP08-084_COLLAB_NAME"
+msgstr "Elegant Tea Time!"
+
+msgid "hBP08-084_COLLAB_EFFECT"
+msgstr "If your life is 3 or less, during this turn, all holomem with #Gen 1 on your stage get Arts+20."
+
+msgid "hBP08-085_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hBP08-085_ART_0_NAME"
+msgstr "You're Not Very Good at Hiding Your Embarrassment"
+
+msgid "hBP08-085_COLLAB_NAME"
+msgstr "Holding Hands Feels So Warm"
+
+msgid "hBP08-085_COLLAB_EFFECT"
+msgstr "You may archive 1 card from your hand: Return 1 [Debut holomem, 1st holomem or Spot holomem] from your archive to hand."
+
+msgid "hBP08-086_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hBP08-086_ART_0_NAME"
+msgstr "Best Friend"
+
+msgid "hBP08-086_ART_0_EFFECT"
+msgstr "If your center holomem is a 2nd holomem, this Arts gets +30."
+
+msgid "hBP08-086_BLOOM_NAME"
+msgstr "Ore no Ina!"
+
+msgid "hBP08-086_BLOOM_EFFECT"
+msgstr "You may send the top card of your cheer deck to your [<Shiranui Flare> or holomem with #EN]."
+
+msgid "hBP08-087_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hBP08-087_ART_0_NAME"
+msgstr "Waking From My Dream"
+
+msgid "hBP08-087_COLLAB_NAME"
+msgstr "Dreeming Cheer"
+
+msgid "hBP08-087_COLLAB_EFFECT"
+msgstr "You may send 1~2 cheers from your archive to your [<Shiranui Flare> or holomem with #EN] center holomem."
+
+msgid "hBP08-088_NAME"
+msgstr "Shiranui Flare"
+
+msgid "hBP08-088_ART_0_NAME"
+msgstr "Relation Fantasy"
+
+msgid "hBP08-088_ART_0_EFFECT"
+msgstr "[Collab Position Only] If your center holomem is a holomem with #Gen 3, this Arts gets +30."
+
+msgid "hBP08-088_GIFT_NAME"
+msgstr "Mellow and Flowery"
+
+msgid "hBP08-088_GIFT_EFFECT"
+msgstr "[1/Turn] During your turn, when this holomem moves to the collab position, deal 20 special damage to your opponent's center holomem and collab holomem."
+
+msgid "hBP08-089_NAME"
+msgstr "Gigi Murin"
+
+msgid "hBP08-089_ART_0_NAME"
+msgstr "I Am a Gamer"
+
+msgid "hBP08-089_ART_0_EFFECT"
+msgstr "Send 1 cheer from your archive to your holomem with #Justice."
+
+msgid "hBP08-089_BLOOM_NAME"
+msgstr "Rapid Fire Wit"
+
+msgid "hBP08-089_BLOOM_EFFECT"
+msgstr "You may archive 1 holomem that is stacked to this holomem: Attach 1 <Popo> from your deck to your holomem. Then, shuffle the deck."
+
+msgid "hBP08-090_NAME"
+msgstr "Elegant PC"
+
+msgid "hBP08-090_EFFECT"
+msgstr "Return 1~3 [mascots and fans] from your archive to the deck and shuffle it. Draw 2 cards."
+
+msgid "hBP08-091_NAME"
+msgstr "Creator PC"
+
+msgid "hBP08-091_EFFECT"
+msgstr "Place 1 Debut holomem with Extra \"You may include any number of this holomem in the deck\" from your deck on stage. Then, shuffle the deck. Place 1 Debut holomem from your archive on stage."
+
+msgid "hBP08-092_NAME"
+msgstr "Donut Shop Full of Memories"
+
+msgid "hBP08-092_EFFECT"
+msgstr "Reveal 1 [<Fuwawa Abyssgard> and/or <Mococo Abyssgard>] each from your deck, and add them to hand. Then, shuffle the deck. If your life is less than your opponent's, deal 20 special damage to 1 of your opponent's holomem."
+
+msgid "hBP08-093_NAME"
+msgstr "Choco's Eggplant Yukhoe"
+
+msgid "hBP08-093_EFFECT"
+msgstr ""
+"This card can only be used if all holomem on your stage are <Yuzuki Choco> and your life is 3 or less.\n"
+"\n"
+"During this turn, all [Debut holomem and 1st holomem] on your stage get Arts+20. Then, all 2nd holomem on your stage get Arts+60.\n"
+"\n"
+"You may only use the card <Choco's Eggplant Yukhoe> once per turn."
+
+msgid "hBP08-094_NAME"
+msgstr "Papa Quits His Job"
+
+msgid "hBP08-094_EFFECT"
+msgstr ""
+"This card can only be used if you have a collab holomem.\n"
+"\n"
+"Choose your center holomem. During your opponent's next turn, when the chosen holomem would take Arts damage for the first time while in the center position, that holomem takes -300 damage."
+
+msgid "hBP08-095_NAME"
+msgstr "Doom"
+
+msgid "hBP08-095_EFFECT"
+msgstr ""
+"This card can only be used if all holomem on your stage have #EN and you have 3 or less life.\n"
+"\n"
+"Deal 50 special damage to both players' center holomem and collab holomem. However, a player's life does not reduce even if downed."
+
+msgid "hBP08-096_NAME"
+msgstr "Gentle Monster"
+
+msgid "hBP08-096_EFFECT"
+msgstr ""
+"This card can only be used if your Oshi holomem is <Ichijou Ririka>.\n"
+"\n"
+"Reveal 1 [<Ichijou Ririka> and/or <Struggle Meal>] each from your deck, and add them to hand. Then, shuffle the deck. If there are 3 or more <Struggle Meal> in your archive, during this turn, all <Ichijou Ririka> on your stage get Arts+50."
+
+msgid "hBP08-097_NAME"
+msgstr "Rich Chocolat's Hamburg Steak"
+
+msgid "hBP08-097_EFFECT"
+msgstr ""
+"Choose 1 holomem on your stage. Restore 20 HP to the chosen holomem. If you have 2 or more events with #Food in your archive, send 1 cheer from your archive to that holomem.\n"
+"\n"
+"You may only use the card <Rich Chocolat's Hamburg Steak> once per turn."
+
+msgid "hBP08-098_NAME"
+msgstr "hololive Mythology"
+
+msgid "hBP08-098_EFFECT"
+msgstr ""
+"This card can only be used if all holomem on your stage have #Myth.\n"
+"\n"
+"Reveal the top 4 cards of your deck. Add 2 of them to hand. Then, archive the remaining cards."
+
+msgid "hBP08-099_NAME"
+msgstr "HOLOTORI"
+
+msgid "hBP08-099_EFFECT"
+msgstr ""
+"Choose 1 of the following abilities to use.\n"
+"\n"
+"■Archive 1 cheer from your holomem with #Bird. If you archived a cheer, draw 2 cards, and return 1 card from your hand to the bottom of the deck.\n"
+"■Send 1 cheer from your archive to your holomem with #Bird.\n"
+"\n"
+"You may only use the card <HOLOTORI> once per turn."
+
+msgid "hBP08-100_NAME"
+msgstr "Myth"
+
+msgid "hBP08-100_EFFECT"
+msgstr ""
+"This card can only be used if you have 6 or less cards in hand excluding this card.\n"
+"\n"
+"Look at the top 4 cards of your deck. Reveal any number of holomem with #Myth from among them, and add the revealed holomem to hand. Then, return the remaining cards to the bottom of the deck in any order."
+
+msgid "hBP08-101_NAME"
+msgstr "We are ReGLOSS"
+
+msgid "hBP08-101_EFFECT"
+msgstr ""
+"This card can only be used if all holomem on your stage have #ReGLOSS.\n"
+"\n"
+"Reveal 2 holomem with #ReGLOSS from your deck, and add them to hand. Then, shuffle the deck. If you have fewer holomem on stage than your opponent, draw 1 card, and archive 1 card from your hand."
+
+msgid "hBP08-102_NAME"
+msgstr "Cool Hoodie"
+
+msgid "hBP08-102_EFFECT"
+msgstr ""
+"The holomem with this tool attached gets Arts+10.\n"
+"\n"
+"◆Additional ability if attached to a Buzz holomem\n"
+"[1/Turn]When this holomem downs your opponent's holomem, draw 2 cards.\n"
+"\n"
+"Only 1 tool can be attached to each of your holomem."
+
+msgid "hBP08-103_NAME"
+msgstr "holoCape"
+
+msgid "hBP08-103_EFFECT"
+msgstr ""
+"■The holomem with this tool attached gets +50 HP.\n"
+"■If the holomem with this tool attached is downed, you get life-1.\n"
+"\n"
+"Only 1 tool can be attached to each of your holomem."
+
+msgid "hBP08-104_NAME"
+msgstr "Aura"
+
+msgid "hBP08-104_EFFECT"
+msgstr ""
+"◆Additional ability if attached to <Mizumiya Su>\n"
+"■[Center Position・Collab Position Only] Your opponent's center holomem requires +1 colorless for its baton pass.\n"
+"■When this holomem's bloom level increases, draw 1 card.\n"
+"\n"
+"Only 1 tool can be attached to each of your holomem."
+
+msgid "hBP08-105_NAME"
+msgstr "Bloom&Gloom"
+
+msgid "hBP08-105_EFFECT"
+msgstr ""
+"The holomem this mascot is attached to gets +20 HP.\n"
+"\n"
+"◆Additional ability if attached to <IRyS>\n"
+"While this holomem has white cheer and purple cheer attached, this holomem gets Arts+20.\n"
+"\n"
+"Only 1 mascot can be attached to each of your holomem."
+
+msgid "hBP08-106_NAME"
+msgstr "GuyRyS"
+
+msgid "hBP08-106_EFFECT"
+msgstr ""
+"During your opponent's turn, if the holomem this fan is attached to is downed, reattach 1 cheer from the holomem this fan is attached to to your other holomem.\n"
+"\n"
+"You may only attach this fan to your <IRyS>, and you may attach any number of this fan per holomem."
+
+msgid "hBP08-107_NAME"
+msgstr "Otomo"
+
+msgid "hBP08-107_EFFECT"
+msgstr ""
+"The holomem this fan is attached to gets Arts+10.\n"
+"\n"
+"When this fan is attached to holomem from hand or archive, the holomem this fan is attached to is set to either active or resting.\n"
+"\n"
+"You may only attach this fan to your <Cecilia Immergreen>, and you may attach any number of this fan per holomem."
+
+msgid "hBP08-108_NAME"
+msgstr "Mischievous Ruffians"
+
+msgid "hBP08-108_EFFECT"
+msgstr ""
+"The holomem this fan is attached to gets +10 HP.\n"
+"\n"
+"During your opponent's turn, if the holomem this fan is attached to is downed, if that holomem has red cheer attached, draw 1 card.\n"
+"\n"
+"You may only attach this fan to your <Fuwawa Abyssgard> or <Mococo Abyssgard>, and you may attach any number of this fan per holomem."
+
+msgid "hBP08-109_NAME"
+msgstr "Lui-tomo"
+
+msgid "hBP08-109_EFFECT"
+msgstr ""
+"The holomem this fan is attached to gets Arts+10.\n"
+"\n"
+"During your opponent's turn, if the holomem this fan is attached to is downed, reattach 1 [red cheer or purple cheer] from the holomem this fan is attached to to your other holomem.\n"
+"\n"
+"You may only attach this fan to your <Takane Lui>, and you may attach any number of this fan per holomem."
+
+msgid "hBP08-110_NAME"
+msgstr "Takodachi"
+
+msgid "hBP08-110_EFFECT"
+msgstr ""
+"The holomem this fan is attached to gets Arts+10.\n"
+"\n"
+"[Center Position Only] Your opponent's center holomem and collab holomem are regarded as holomem with all colors.\n"
+"\n"
+"You may only attach this fan to your <Ninomae Ina'nis>, and you may attach any number of this fan per holomem."
+
+msgid "hY01-013_NAME"
+msgstr "White Cheer"
+
+msgid "hY02-011_NAME"
+msgstr "Green Cheer"
+
+msgid "hY03-015_NAME"
+msgstr "Red Cheer"
+
+msgid "hY04-012_NAME"
+msgstr "Blue Cheer"
+
+msgid "hY05-010_NAME"
+msgstr "Purple Cheer"
+
+msgid "hY06-10_NAME"
+msgstr "Yellow Cheer"
