@@ -13936,6 +13936,45 @@ msgstr ""
 msgid "hY05-010_NAME"
 msgstr ""
 
-msgid "hY06-10_NAME"
+msgid "hEB01-002_NAME"
+msgstr ""
+
+msgid "hEB01-002_STAGESKILL_NAME"
+msgstr ""
+
+msgid "hEB01-002_STAGESKILL_EFFECT"
+msgstr ""
+
+msgid "hEB01-002_SKILL_NAME"
+msgstr ""
+
+msgid "hEB01-002_SKILL_EFFECT"
+msgstr ""
+
+msgid "hEB01-028_NAME"
+msgstr ""
+
+msgid "hEB01-028_EFFECT"
+msgstr ""
+
+msgid "hY06-010_NAME"
+msgstr ""
+
+msgid "hEB01-013_NAME"
+msgstr ""
+
+msgid "hEB01-013_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-013_COLLAB_NAME"
+msgstr ""
+
+msgid "hEB01-013_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hEB01-034_NAME"
+msgstr ""
+
+msgid "hEB01-034_EFFECT"
 msgstr ""
 
