@@ -95,6 +95,7 @@ var zone_to_deal_damage_to
 @export var side_info = {}
 
 var art_metadata = null
+var art_base_damage = 20
 var losing_reason = ""
 
 signal ended_turn
@@ -1301,7 +1302,7 @@ func _on_card_clicked(card_id : int) -> void:
 								if found_card.cardNumber not in found_other:
 									for art in found_card.holomem_arts:
 										%PopupSubMenu.add_item(Settings.trans("%s_ART_%s_NAME" % [found_card.cardNumber, art[0]]), 80)
-										%PopupSubMenu.set_item_metadata(current_index, {"holomem_number":found_card.cardNumber, "art_index":art[0]})
+										%PopupSubMenu.set_item_metadata(current_index, {"holomem_number":found_card.cardNumber, "card_id":found_card.cardID, "art_index":art[0]})
 										current_index += 1
 							
 							if current_index > 0:
@@ -1755,8 +1756,16 @@ func _popup_from_id(id, metadata = null):
 			oppSide.showZoneSelection(oppSide.all_occupied_zones())
 			oppSide.currentPrompt = id
 			currentPrompt = id
+			var actualCard = all_cards[currentCard]
+			var art_index = id - 80
 			if metadata:
 				art_metadata = metadata
+				actualCard = all_cards[metadata["card_id"]]
+				art_index = metadata["art_index"]
+			for art in actualCard.holomem_arts:
+				if art[0] == art_index:
+					oppSide.art_base_damage = art[2]
+					break
 		
 		100: #Play to Back
 			var possibleZones = all_unoccupied_back_zones()
@@ -1994,7 +2003,7 @@ func _on_zone_clicked(zone_id):
 			80,81: #Holomem Arts (called on opponent's side)
 				var yourSide = get_parent().yourSide
 				yourSide.currentAttacking = find_in_zone(actualZoneInfo[0])
-				yourSide.set_prompt(tr("PROMPT_ART_DAMAGE"),20,3)
+				yourSide.set_prompt(tr("PROMPT_ART_DAMAGE"),art_base_damage,3)
 		
 		currentAttached = null
 		hideZoneSelection()
