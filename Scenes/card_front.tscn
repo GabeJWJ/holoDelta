@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfjyb5e027l76"]
+[gd_scene format=3 uid="uid://dfjyb5e027l76"]
 
-[ext_resource type="Texture2D" uid="uid://gxcpgcuj06xt" path="res://Sou_Desu_Ne.png" id="1_801l5"]
 [ext_resource type="Script" uid="uid://cbqwkwthyf3os" path="res://Scripts/card_front.gd" id="1_krnet"]
+[ext_resource type="Texture2D" uid="uid://cthuygpaehwok" path="res://loadingImage.webp" id="2_cqdtj"]
 
-[node name="CardFront" type="Control"]
+[node name="CardFront" type="Control" unique_id=234445103]
 layout_mode = 3
 anchor_right = 0.241
 anchor_bottom = 0.596
@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_krnet")
 
-[node name="Front" type="TextureRect" parent="."]
+[node name="Front" type="TextureRect" parent="." unique_id=1956821953]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
@@ -21,4 +21,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -517.32
 offset_bottom = -657.56
-texture = ExtResource("1_801l5")
+texture = ExtResource("2_cqdtj")

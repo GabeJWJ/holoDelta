@@ -22,5 +22,5 @@ func _on_texture_button_mouse_entered():
 func _on_texture_button_mouse_exited():
 	emit_signal("mouse_exited")
 
-func set_texture(text):
-	$TextureRect.texture = text
+func set_art(cardNumber: String, artNum: int) -> void:
+	$CardFront._initialize(cardNumber, artNum)

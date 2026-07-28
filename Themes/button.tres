@@ -115,6 +115,9 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fiq7h"]
+bg_color = Color(0.063355684, 0.09938582, 0.14095011, 0.90588236)
+
 [resource]
 BoxContainer/constants/separation = 30
 Button/colors/font_color = Color(0.384314, 0.356863, 0.576471, 1)
@@ -159,3 +162,6 @@ TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_ledp1")
 TooltipLabel/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 TooltipLabel/fonts/font = ExtResource("1_qct6y")
 TooltipPanel/styles/panel = SubResource("StyleBoxFlat_gv6e5")
+Tree/colors/font_color = Color(0.9355364, 0.9355364, 0.93553627, 1)
+Tree/fonts/font = ExtResource("1_qct6y")
+Tree/styles/panel = SubResource("StyleBoxFlat_fiq7h")

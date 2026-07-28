@@ -57,10 +57,10 @@ var tag_order = ["JP", "ID", "EN", "DEV_IS",
 	"IDGen1", "IDGen2", "IDGen3",
 	"Myth", "Council", "Promise", "Advent", "Justice",
 	"ReGloss", "FLOWGLOW",
-	"AnimalEars", "Art", "Bird", "Cooking", "Food", "HalfElf", "HoloWitch", "Kaela'sArms",
+	"AnimalEars", "Art", "Bird", "Cooking", "Food", "HalfElf", "HoloWitch", "Kaela'sArms", "Lamy'sAlcohol",
 	"Languages", "Magic", "Sea", "ShirakamiCharacter", "Shooter", "Song", "Baby", "Alcohol", "Summer", "BuzzMerch"]
 
-#Constants filled up at runtime. So the name select isn't giving you options that aren't in the game
+#Constants filled up at runtime. So the name select isn't giving you options that aren't in the game for example
 var oshi_colors = []
 var oshi_names = []
 var oshi_setcodes = []
@@ -126,7 +126,7 @@ var cheer_multiple = 1
 @onready var mainSleeveSelect = $CanvasLayer/YourStuff/TAB_SLEEVES/Main
 @onready var cheerSleeveSelect = $CanvasLayer/YourStuff/TAB_SLEEVES/Cheer
 
-var banlist = Database.en_current_banlist if Settings.settings.OnlyEN else Database.current_banlist
+var banlist = Database.en_unreleased if Settings.settings.OnlyEN else Database.unreleased
 
 #endregion
 
@@ -152,6 +152,8 @@ func findByClass(node: Node, className : String, result : Array) -> void:
 func _ready() -> void:
 	tr("LEVEL_ANY") #for POT generation - Godot's automatic system won't find it in a popupmenu list
 	
+	Database.downloader = %HTTPManager
+	
 	if Settings.settings.OnlyEN:
 		$CanvasLayer/BanlistChoice.selected = 2
 	
@@ -162,11 +164,17 @@ func _ready() -> void:
 	for cardNumber in Database.cardData:
 		if cardNumber in Database.cardArts:
 			var newCardButton
+			
+			if Settings.settings.OnlyEN:
+				var found_en_art = false
+				for art_code in Database.cardData[cardNumber]["cardArt"]:
+					if "en" in Database.cardData[cardNumber]["cardArt"][art_code] and !Database.cardData[cardNumber]["cardArt"][art_code]["en"]["proxy"]:
+						found_en_art = true
+						break
+				if !found_en_art:
+					continue
+			
 			for art_code in Database.cardData[cardNumber]["cardArt"]:
-				if Settings.settings.OnlyEN and ("en" not in Database.cardData[cardNumber]["cardArt"][art_code] or Database.cardData[cardNumber]["cardArt"][art_code]["en"]["proxy"]):
-					continue
-				if !Settings.settings.OnlyEN and "ja" not in Database.cardData[cardNumber]["cardArt"][art_code]:
-					continue
 				newCardButton = add_to_collection(cardNumber,int(art_code))
 			
 			if !newCardButton:
@@ -315,6 +323,11 @@ func _ready() -> void:
 		GameState.deck_to_import = null
 		pass
 	
+	if OS.has_feature("web"):
+		$CanvasLayer/YourStuff/TAB_IMPORT/VBoxContainer/DownloadJSON.visible = true
+	else:
+		$CanvasLayer/YourStuff/TAB_IMPORT.queue_free()
+	
 	%Loading.visible = false
 
 #region Filter And Sort
@@ -376,7 +389,7 @@ func _holomem_filter(holomem_to_check) -> bool:
 	if holomem_filter.Advantage != null:
 		var found_art_with_correct_advantage = false
 		for possible_art in holomem_to_check.holomem_arts:
-			if possible_art[-1] == holomem_filter.Advantage:
+			if possible_art[5] == holomem_filter.Advantage:
 				found_art_with_correct_advantage = true
 				break
 		if !found_art_with_correct_advantage:
@@ -887,7 +900,9 @@ func add_holomem_or_support(card_added, amount=1) -> void:
 
 func add_to_collection(number : String, art_code : int):
 	var newCollection
+	
 	if number.begins_with("hBD"):
+		#Collect the BD Oshis together by color
 		var color = Database.cardData[number]["color"][0]
 		if color in bd_collections:
 			newCollection = bd_collections[color]
@@ -899,8 +914,11 @@ func add_to_collection(number : String, art_code : int):
 			bd_collections[color] = newCollection
 			oshi_cards.append(newCollection)
 	elif number in collections:
+		#We've already done at least one version of this card
+		#Add this one to the collection
 		newCollection = collections[number]
 	else:
+		#New card, new collection
 		newCollection = collection.instantiate()
 		newCollection.card_clicked.connect(_on_menu_card_clicked)
 		newCollection.card_right_clicked.connect(_on_menu_card_right_clicked)
@@ -1175,7 +1193,11 @@ func is_deck_legal():
 		if cardNumber in banlist and banlist[cardNumber] < in_deck_dictionary[cardNumber]:
 			$CanvasLayer/SaveDeck.tooltip_text += tr("DECKERROR_RESTRICTED").format({cardNum = cardNumber}) + "\n"
 	
-	return $CanvasLayer/SaveDeck.tooltip_text == ""
+	var deck_is_legal = $CanvasLayer/SaveDeck.tooltip_text == ""
+	if OS.has_feature("web"):
+		$CanvasLayer/YourStuff/TAB_IMPORT/VBoxContainer/DownloadJSON.disabled = !deck_is_legal
+	
+	return deck_is_legal
 
 func update_analytics():
 	var result = ""
@@ -1214,13 +1236,13 @@ func _on_banlist_choice_item_selected(index: int) -> void:
 		0:
 			banlist = []
 		1:
-			banlist = Database.current_banlist
-		2:
-			banlist = Database.en_current_banlist
-		3:
 			banlist = Database.unreleased
-		4:
+		2:
 			banlist = Database.en_unreleased
+		3:
+			banlist = Database.current_banlist
+		4:
+			banlist = Database.en_current_banlist
 	
 	for potential_card in all_cards:
 		if is_instance_valid(potential_card):
@@ -1246,8 +1268,6 @@ func _on_save_deck_pressed():
 	else:
 		print("An error occurred when trying to access the path.")
 	$CanvasLayer/SavePrompt.visible = true
-	if OS.has_feature("web"):
-		$CanvasLayer/SavePrompt/FileName/Download.visible = true
 
 func _save_deck_to_file(path, download=false):
 	if !path.ends_with(".json"):
@@ -1291,7 +1311,8 @@ func _save_deck_to_file(path, download=false):
 		file_access.store_line(json_string)
 		file_access.close()
 	
-	_hide_save_prompt()
+	if !download:
+		_hide_save_prompt()
 
 func _on_save_pressed(confirmed=false):
 	var file_name = $CanvasLayer/SavePrompt/FileName.text

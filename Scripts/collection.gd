@@ -13,7 +13,7 @@ signal card_mouse_left
 func addCard(number, artCode):
 	var newCard = card.instantiate()
 	newCard.inEditor = true
-	newCard.setup_info(number, artCode)
+	newCard.setup_info(number, artCode, null, cards.size() == 0)
 	if cards.size() > 0:
 		newCard.visible = false
 	$Cards.add_child(newCard)
@@ -37,6 +37,7 @@ func setAltArt(art_index):
 	$LastAltArt.visible = false
 	cards[current_card].visible = false
 	cards[art_index].visible = true
+	cards[art_index].start_loading_art()
 	current_card = art_index
 	if cards.size() - art_index > 1:
 		$NextAltArt.visible = true

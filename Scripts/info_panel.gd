@@ -23,10 +23,22 @@ var cheer_attached = {"White":[],"Green":[],"Red":[],"Blue":[],"Purple":[],"Yell
 @export var allowed_to_scroll = true
 var locked = false
 
-var cheer = {"Blue":load("res://CheerIcons/Blue.webp"),"Red":load("res://CheerIcons/Red.webp"),
-"Green":load("res://CheerIcons/Green.webp"),"White":load("res://CheerIcons/White.webp"),
-"Purple":load("res://CheerIcons/Purple.webp"),"Yellow":load("res://CheerIcons/Yellow.webp"),
-"Colorless":load("res://CheerIcons/Colorless.webp")}
+var all_art_loaded = false
+
+var cheer = {"Blue":preload("res://CheerIcons/Blue.webp"),"Red":preload("res://CheerIcons/Red.webp"),
+"Green":preload("res://CheerIcons/Green.webp"),"White":preload("res://CheerIcons/White.webp"),
+"Purple":preload("res://CheerIcons/Purple.webp"),"Yellow":preload("res://CheerIcons/Yellow.webp"),
+"Colorless":preload("res://CheerIcons/Colorless.webp")}
+var cheer_count_scene = preload("res://Scenes/cheer_count.tscn")
+
+func _process(_delta: float) -> void:
+	if !all_art_loaded:
+		var found_unloaded_art = false
+		for entry in showing:
+			if entry[0].texture == null:
+				entry[0].texture = entry[2].cardFront
+				found_unloaded_art = true
+		all_art_loaded = !found_unloaded_art
 
 func _new_info(top_card, card_to_show) -> void:
 	#Reads all of the proper info and passes it along to _set_showing to display
@@ -45,10 +57,10 @@ func _new_info(top_card, card_to_show) -> void:
 	
 	#We add the cards in the order top_card, top_card.onTopOf, top_card.attached (skipping cheers)
 	showing_card_ids.append(top_card.cardID)
-	result.append([top_card.cardFront,top_card.full_desc()])
+	result.append([top_card.cardFront,top_card.full_desc(),top_card])
 	for stacked_card in top_card.onTopOf:
 		showing_card_ids.append(stacked_card.cardID)
-		result.append([stacked_card.cardFront,stacked_card.full_desc()])
+		result.append([stacked_card.cardFront,stacked_card.full_desc(),stacked_card])
 	for attached_card in top_card.attached:
 		if attached_card.cardType == "Cheer":
 			var preview = TextureRect.new()
@@ -59,6 +71,16 @@ func _new_info(top_card, card_to_show) -> void:
 		else:
 			showing_card_ids.append(attached_card.cardID)
 			result.append([attached_card.cardFront,attached_card.full_desc()])
+	
+	#If at least 5 cheer of the same color, condense into one cheer icon with number
+	for cheer_color in cheer_result:
+		if cheer_result[cheer_color].size() >= 5:
+			var cheer_count = cheer_count_scene.instantiate()
+			cheer_count.z_index = 1
+			cheer_count.scale = CHEER_SCALE
+			cheer_count.cheer_texture = cheer[cheer_color]
+			cheer_count.count = cheer_result[cheer_color].size()
+			cheer_result[cheer_color] = [cheer_count]
 	
 	#If you hover over an attached cheer the index is -1, which just shows the last card
 	#That doesn't feel right, so we'll clamp to 0
@@ -103,7 +125,7 @@ func _set_showing(to_show : Array, cheer_show : Dictionary, start_index : int) -
 		preview.size = CARD_SIZE
 		preview.position = Vector2(starting_pos - (each_offset * i), NORMAL_Y)
 		preview.texture = entry[0]
-		showing.insert(0,[preview,entry[1]])
+		showing.insert(0,[preview,entry[1],entry[2]])
 		var gray = TextureRect.new()
 		%Preview.add_child(gray)
 		gray.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
@@ -167,6 +189,7 @@ func _clear_showing() -> void:
 	%CardText.text = ""
 	showing_card_ids = []
 	%ScrollIcon.visible = false
+	all_art_loaded = false
 
 func update_word_wrap() -> void:
 	#For some reason, Japanese won't word wrap under word smart mode when exported

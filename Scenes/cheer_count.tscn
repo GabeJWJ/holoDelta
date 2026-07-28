@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bqdqrhqhb0a3g"]
+
+[ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="1_0kqii"]
+[ext_resource type="Script" uid="uid://1xx0yie53yhy" path="res://Scripts/cheer_count.gd" id="1_m0na4"]
+[ext_resource type="Texture2D" uid="uid://c8om4l4iai0xd" path="res://CheerIcons/Colorless.webp" id="2_0kqii"]
+[ext_resource type="FontFile" uid="uid://d1prs0o0rldol" path="res://CyberAssets/Main Menu Assets/TCG2SAB002.ttf" id="3_x0f58"]
+
+[node name="CheerCount" type="Control" unique_id=952056579]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 44.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0kqii")
+script = ExtResource("1_m0na4")
+
+[node name="CheerBase" type="TextureRect" parent="." unique_id=1457776428]
+unique_name_in_owner = true
+layout_mode = 1
+offset_right = 44.0
+offset_bottom = 44.0
+texture = ExtResource("2_0kqii")
+
+[node name="Count" type="Label" parent="CheerBase" unique_id=426707352]
+unique_name_in_owner = true
+auto_translate_mode = 2
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 44.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_x0f58")
+theme_override_font_sizes/font_size = 25
+text = "20"
+horizontal_alignment = 2

@@ -420,6 +420,7 @@ func specialStart3(fmc):
 	
 	$CanvasLayer/Question.visible = false
 	$CanvasLayer/Ready.visible = true
+	$CanvasLayer/OpponentLabel/ReadyGuide.visible = true
 	can_do_things = true
 
 func _call_ready():
@@ -1033,7 +1034,7 @@ func showLookAt(list_of_cards):
 		if actualCard == null:
 			continue
 		var newButton = betterButton.instantiate()
-		newButton.set_texture(actualCard.cardFront)
+		newButton.set_art(actualCard.cardNumber, actualCard.artNum)
 		newButton.id = actualCard.cardID
 		newButton.pressed.connect(_on_list_card_clicked.bind(actualCard.cardID))
 		if actualCard.temporary:
@@ -1353,8 +1354,11 @@ func _on_card_clicked(card_id : int) -> void:
 								popup.add_item(tr("CARD_SUPPORT_ATTACH"), 121)
 						else:
 							var cantUseLimited = used_limited or (first_turn and player1)
-							if playing == null and !(actualCard.limited and cantUseLimited):
-								popup.add_item(tr("CARD_SUPPORT_PLAY"),120)
+							if playing == null:
+								if actualCard.limited and cantUseLimited:
+									popup.add_item(tr("CARD_SUPPORT_PLAY_ANYWAY"),120)
+								else:
+									popup.add_item(tr("CARD_SUPPORT_PLAY"),120)
 				elif playing == currentCard:
 					popup.add_item(tr("CARD_SUPPORT_ARCHIVE"),20)
 			"Oshi":
@@ -1788,7 +1792,10 @@ func _popup_from_id(id, metadata = null):
 		102: #Play Hidden to Center
 			preliminary_holomem_in_center = true
 			if mulligan_to_bottom == 0:
+				$CanvasLayer/OpponentLabel/ReadyGuide/Label.text = tr("READY_GUIDE_3")
 				$CanvasLayer/Ready.disabled = false
+			else:
+				$CanvasLayer/OpponentLabel/ReadyGuide/Label.text = tr("READY_GUIDE_2").format({"num":mulligan_to_bottom})
 		103: #Play Hidden to Back
 			var possibleZones = all_unoccupied_back_zones()
 			showZoneSelection(possibleZones)
@@ -1798,7 +1805,10 @@ func _popup_from_id(id, metadata = null):
 			if mulligan_to_bottom > 0:
 				mulligan_to_bottom -= 1
 				if mulligan_to_bottom == 0:
+					$CanvasLayer/OpponentLabel/ReadyGuide/Label.text = tr("READY_GUIDE_3")
 					$CanvasLayer/Ready.disabled = false
+				else:
+					$CanvasLayer/OpponentLabel/ReadyGuide/Label.text = tr("READY_GUIDE_2").format({"num":mulligan_to_bottom})
 		121: #Attach Support
 			var possibleZones = all_occupied_zones()
 			showZoneSelection(possibleZones)

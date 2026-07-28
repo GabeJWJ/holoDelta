@@ -1,18 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://ytwles2vik3j"]
+[gd_scene format=3 uid="uid://ytwles2vik3j"]
 
 [ext_resource type="Texture2D" uid="uid://djuk0g87nhrhc" path="res://cardbutton.png" id="1_5o57l"]
-[ext_resource type="Script" path="res://Scripts/better_texture_button.gd" id="1_pfkje"]
+[ext_resource type="Script" uid="uid://dre8r4gtuwmmd" path="res://Scripts/better_texture_button.gd" id="1_pfkje"]
+[ext_resource type="PackedScene" uid="uid://dfjyb5e027l76" path="res://Scenes/card_front.tscn" id="2_dd5cp"]
 [ext_resource type="Texture2D" uid="uid://ckina22q7em5y" path="res://cardbuttonhover.png" id="2_wtcn7"]
 
-[node name="betterTextureButton" type="Node2D"]
+[node name="betterTextureButton" type="Node2D" unique_id=2078928601]
 script = ExtResource("1_pfkje")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="CardFront" parent="." unique_id=234445103 instance=ExtResource("2_dd5cp")]
 offset_right = 309.0
 offset_bottom = 429.0
 scale = Vector2(0.75, 0.75)
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1672062423]
 offset_right = 309.0
 offset_bottom = 429.0
 scale = Vector2(0.75, 0.75)

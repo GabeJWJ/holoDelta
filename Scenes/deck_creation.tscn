@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://w54g66g0fow1"]
+[gd_scene format=3 uid="uid://w54g66g0fow1"]
 
 [ext_resource type="Script" uid="uid://lmw0oejm2vaf" path="res://Scripts/deck_creation.gd" id="1_vhmc0"]
 [ext_resource type="Texture2D" uid="uid://cx76tmf8royup" path="res://CyberAssets/Game Side Menu/Side Menu.png" id="2_dcm3l"]
@@ -15,39 +15,39 @@
 [ext_resource type="AudioStream" uid="uid://dx0hyqv3whb28" path="res://ChikuTaku The Game VGM Menu Select Watson Amelia WUNDER RiKU ✨ チクタク オリジナル曲.mp3" id="10_ncvki"]
 [ext_resource type="Script" uid="uid://dpmwhedq5ws5x" path="res://addons/HTTPManager/classes/HTTPManager.gd" id="11_h6gkd"]
 
-[node name="DeckCreation" type="Node2D"]
+[node name="DeckCreation" type="Node2D" unique_id=767185352]
 script = ExtResource("1_vhmc0")
 
-[node name="DeckBuilderBg" type="Sprite2D" parent="."]
+[node name="DeckBuilderBg" type="Sprite2D" parent="." unique_id=40775526]
 position = Vector2(587, 347)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("6_t38qv")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1958007491]
 
-[node name="SideMenu" type="Sprite2D" parent="CanvasLayer"]
+[node name="SideMenu" type="Sprite2D" parent="CanvasLayer" unique_id=35074032]
 position = Vector2(-84, 0)
 scale = Vector2(1.01172, 0.997)
 texture = ExtResource("2_dcm3l")
 centered = false
 
-[node name="InfoMargins" parent="CanvasLayer" instance=ExtResource("4_aw7bg")]
+[node name="InfoMargins" parent="CanvasLayer" unique_id=1468629795 instance=ExtResource("4_aw7bg")]
 unique_name_in_owner = true
 offset_right = 295.0
 offset_bottom = 685.0
 
-[node name="PossibleCards" type="TabContainer" parent="CanvasLayer"]
+[node name="PossibleCards" type="TabContainer" parent="CanvasLayer" unique_id=1723327127]
 offset_left = 886.0
 offset_right = 1280.0
 offset_bottom = 720.0
 theme = ExtResource("3_da1xd")
 current_tab = 0
 
-[node name="TAB_OSHI" type="Control" parent="CanvasLayer/PossibleCards"]
+[node name="TAB_OSHI" type="Control" parent="CanvasLayer/PossibleCards" unique_id=21234292]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI" unique_id=459194484]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
@@ -55,16 +55,16 @@ offset_right = 393.0
 offset_bottom = 691.0
 theme_override_constants/separation = 10
 
-[node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer"]
+[node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer" unique_id=1505637064]
 layout_mode = 2
 placeholder_text = "SEARCH"
 
-[node name="OshiFilters1" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer"]
+[node name="OshiFilters1" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer" unique_id=795121140]
 layout_mode = 2
 theme_override_constants/separation = 15
 alignment = 1
 
-[node name="NameSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1"]
+[node name="NameSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1" unique_id=39211944]
 custom_minimum_size = Vector2(90, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -73,7 +73,7 @@ flat = false
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="ColorSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1"]
+[node name="ColorSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1" unique_id=1104181589]
 custom_minimum_size = Vector2(90, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -82,21 +82,21 @@ flat = false
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="5LifeSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1"]
+[node name="5LifeSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1" unique_id=837947986]
 layout_mode = 2
 button_group = ExtResource("6_102vr")
 text = "LIFE_5"
 
-[node name="6LifeSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1"]
+[node name="6LifeSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters1" unique_id=1186868400]
 layout_mode = 2
 button_group = ExtResource("6_102vr")
 text = "LIFE_6"
 
-[node name="OshiFilters2" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer"]
+[node name="OshiFilters2" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer" unique_id=1700996787]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="SetcodeSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters2"]
+[node name="SetcodeSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters2" unique_id=1105109969]
 custom_minimum_size = Vector2(180, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -105,7 +105,7 @@ flat = false
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters2"]
+[node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/OshiFilters2" unique_id=1461393882]
 custom_minimum_size = Vector2(180, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -113,29 +113,29 @@ text = "FILTER_CLEAR"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer" unique_id=982286382]
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer" unique_id=1830043963]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="OshiGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="OshiGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/ScrollContainer/MarginContainer" unique_id=281180468]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 4
 
-[node name="TAB_HOLOMEM" type="Control" parent="CanvasLayer/PossibleCards"]
+[node name="TAB_HOLOMEM" type="Control" parent="CanvasLayer/PossibleCards" unique_id=574325776]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM" unique_id=565095237]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
@@ -143,15 +143,15 @@ offset_right = 392.0
 offset_bottom = 691.0
 theme_override_constants/separation = 10
 
-[node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer"]
+[node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer" unique_id=14258857]
 layout_mode = 2
 placeholder_text = "SEARCH"
 
-[node name="HolomemFilters1" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer"]
+[node name="HolomemFilters1" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer" unique_id=986335058]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="NameSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters1"]
+[node name="NameSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters1" unique_id=1930316794]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -160,7 +160,7 @@ flat = false
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="ColorSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters1"]
+[node name="ColorSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters1" unique_id=602379062]
 custom_minimum_size = Vector2(100, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -169,7 +169,7 @@ flat = false
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="LevelSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters1"]
+[node name="LevelSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters1" unique_id=1206392585]
 custom_minimum_size = Vector2(100, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -189,11 +189,11 @@ popup/item_3/id = 3
 popup/item_4/text = "LEVEL_SPOT"
 popup/item_4/id = 4
 
-[node name="HolomemFilters2" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer"]
+[node name="HolomemFilters2" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer" unique_id=213843402]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="HPCompareSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2"]
+[node name="HPCompareSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2" unique_id=1001641459]
 auto_translate_mode = 2
 custom_minimum_size = Vector2(10, 25)
 layout_mode = 2
@@ -208,14 +208,14 @@ popup/item_1/id = 1
 popup/item_2/text = "≤"
 popup/item_2/id = 2
 
-[node name="HPSelect" type="SpinBox" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2"]
+[node name="HPSelect" type="SpinBox" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2" unique_id=1355308306]
 custom_minimum_size = Vector2(90, 25)
 layout_mode = 2
 max_value = 990.0
 step = 10.0
 prefix = "HP"
 
-[node name="AdvantageSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2"]
+[node name="AdvantageSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2" unique_id=1729101285]
 custom_minimum_size = Vector2(70, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -224,7 +224,7 @@ flat = false
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="EffectSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2"]
+[node name="EffectSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2" unique_id=677294674]
 custom_minimum_size = Vector2(70, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -236,7 +236,7 @@ item_count = 1
 popup/item_0/text = "EFFECT_ANY"
 popup/item_0/id = 0
 
-[node name="TagSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2"]
+[node name="TagSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters2" unique_id=799530806]
 custom_minimum_size = Vector2(70, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -245,21 +245,21 @@ flat = false
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="HolomemFilters3" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer"]
+[node name="HolomemFilters3" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer" unique_id=1090173784]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="BuzzSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3"]
+[node name="BuzzSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3" unique_id=564903396]
 layout_mode = 2
 button_group = ExtResource("7_ynd4k")
 text = "BUZZ"
 
-[node name="NotBuzzSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3"]
+[node name="NotBuzzSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3" unique_id=332968555]
 layout_mode = 2
 button_group = ExtResource("7_ynd4k")
 text = "NOTBUZZ"
 
-[node name="SetcodeSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3"]
+[node name="SetcodeSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3" unique_id=825550879]
 custom_minimum_size = Vector2(85, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -268,7 +268,7 @@ flat = false
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3"]
+[node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/HolomemFilters3" unique_id=1028590717]
 custom_minimum_size = Vector2(85, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -277,29 +277,29 @@ text = "FILTER_CLEAR"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer" unique_id=1112044748]
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer" unique_id=708005816]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HolomemGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="HolomemGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_HOLOMEM/VBoxContainer/ScrollContainer/MarginContainer" unique_id=1182775242]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 4
 
-[node name="TAB_SUPPORT" type="Control" parent="CanvasLayer/PossibleCards"]
+[node name="TAB_SUPPORT" type="Control" parent="CanvasLayer/PossibleCards" unique_id=658265745]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT" unique_id=1232250628]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 4.0
@@ -307,15 +307,15 @@ offset_right = 391.0
 offset_bottom = 692.0
 theme_override_constants/separation = 10
 
-[node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer"]
+[node name="Search" type="LineEdit" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer" unique_id=793094603]
 layout_mode = 2
 placeholder_text = "SEARCH"
 
-[node name="SupportFilters1" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer"]
+[node name="SupportFilters1" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer" unique_id=155239718]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="TypeSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters1"]
+[node name="TypeSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters1" unique_id=138235193]
 custom_minimum_size = Vector2(110, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -324,7 +324,7 @@ flat = false
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="LimitedSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters1"]
+[node name="LimitedSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters1" unique_id=570109376]
 custom_minimum_size = Vector2(110, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -333,7 +333,7 @@ text = "SUPPORT_LIMITED"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="UnlimitedSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters1"]
+[node name="UnlimitedSelect" type="CheckBox" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters1" unique_id=1777603740]
 custom_minimum_size = Vector2(115, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -342,11 +342,11 @@ text = "SUPPORT_UNLIMITED"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="SupportFilters2" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer"]
+[node name="SupportFilters2" type="HBoxContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer" unique_id=562030973]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="SetcodeSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters2"]
+[node name="SetcodeSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters2" unique_id=342492744]
 custom_minimum_size = Vector2(110, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -355,7 +355,7 @@ flat = false
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="TagSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters2"]
+[node name="TagSelect" type="MenuButton" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters2" unique_id=1866147723]
 custom_minimum_size = Vector2(110, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -364,7 +364,7 @@ flat = false
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters2"]
+[node name="ClearFilters" type="Button" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/SupportFilters2" unique_id=2097267729]
 custom_minimum_size = Vector2(115, 25)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -373,48 +373,48 @@ text = "FILTER_CLEAR"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer" unique_id=2098664849]
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer" unique_id=1026159406]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="SupportGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="SupportGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_SUPPORT/VBoxContainer/ScrollContainer/MarginContainer" unique_id=761761801]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 4
 
-[node name="TAB_CHEER" type="Control" parent="CanvasLayer/PossibleCards"]
+[node name="TAB_CHEER" type="Control" parent="CanvasLayer/PossibleCards" unique_id=1509924109]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 3
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER" unique_id=938460110]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 47.0
 horizontal_scroll_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER/ScrollContainer" unique_id=1314683838]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="CheerGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER/ScrollContainer/MarginContainer"]
+[node name="CheerGrid" type="GridContainer" parent="CanvasLayer/PossibleCards/TAB_CHEER/ScrollContainer/MarginContainer" unique_id=426569287]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 4
 
-[node name="Multiple" type="Label" parent="CanvasLayer/PossibleCards/TAB_CHEER"]
+[node name="Multiple" type="Label" parent="CanvasLayer/PossibleCards/TAB_CHEER" unique_id=1050457991]
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 10.0
@@ -425,7 +425,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 text = "1x"
 
-[node name="OneMultiple" type="Button" parent="CanvasLayer/PossibleCards/TAB_CHEER"]
+[node name="OneMultiple" type="Button" parent="CanvasLayer/PossibleCards/TAB_CHEER" unique_id=1359056328]
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 98.0
@@ -434,7 +434,7 @@ offset_right = 138.0
 offset_bottom = 27.0
 text = "1"
 
-[node name="FiveMultiple" type="Button" parent="CanvasLayer/PossibleCards/TAB_CHEER"]
+[node name="FiveMultiple" type="Button" parent="CanvasLayer/PossibleCards/TAB_CHEER" unique_id=538052775]
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 170.0
@@ -444,7 +444,7 @@ offset_bottom = 27.0
 text = "5
 "
 
-[node name="TenMultiple" type="Button" parent="CanvasLayer/PossibleCards/TAB_CHEER"]
+[node name="TenMultiple" type="Button" parent="CanvasLayer/PossibleCards/TAB_CHEER" unique_id=732061718]
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 245.0
@@ -453,7 +453,7 @@ offset_right = 285.0
 offset_bottom = 27.0
 text = "10"
 
-[node name="TwentyMultiple" type="Button" parent="CanvasLayer/PossibleCards/TAB_CHEER"]
+[node name="TwentyMultiple" type="Button" parent="CanvasLayer/PossibleCards/TAB_CHEER" unique_id=92962866]
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 319.0
@@ -462,7 +462,7 @@ offset_right = 359.0
 offset_bottom = 27.0
 text = "20"
 
-[node name="YourStuff" type="TabContainer" parent="CanvasLayer"]
+[node name="YourStuff" type="TabContainer" parent="CanvasLayer" unique_id=1334643678]
 offset_left = 303.0
 offset_top = 2.0
 offset_right = 884.0
@@ -470,20 +470,20 @@ offset_bottom = 626.0
 theme = ExtResource("3_da1xd")
 current_tab = 0
 
-[node name="TAB_DECK" type="ColorRect" parent="CanvasLayer/YourStuff"]
+[node name="TAB_DECK" type="ColorRect" parent="CanvasLayer/YourStuff" unique_id=601386527]
 layout_mode = 2
 theme = ExtResource("3_da1xd")
 color = Color(0.113725, 0.164706, 0.223529, 0)
 metadata/_tab_index = 0
 
-[node name="OshiPlace" type="CenterContainer" parent="CanvasLayer/YourStuff/TAB_DECK"]
+[node name="OshiPlace" type="CenterContainer" parent="CanvasLayer/YourStuff/TAB_DECK" unique_id=740532230]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 422.0
 offset_right = 123.0
 offset_bottom = 585.0
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/YourStuff/TAB_DECK"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/YourStuff/TAB_DECK" unique_id=24738255]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 6.0
@@ -493,7 +493,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.180392, 0.32549, 0.45098, 1)
 
-[node name="MainDeck" type="ScrollContainer" parent="CanvasLayer/YourStuff/TAB_DECK"]
+[node name="MainDeck" type="ScrollContainer" parent="CanvasLayer/YourStuff/TAB_DECK" unique_id=315262226]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 6.0
@@ -501,7 +501,7 @@ offset_right = 573.0
 offset_bottom = 412.0
 horizontal_scroll_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/YourStuff/TAB_DECK/MainDeck"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/YourStuff/TAB_DECK/MainDeck" unique_id=1736032582]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -510,13 +510,13 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/YourStuff/TAB_DECK/MainDeck/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/YourStuff/TAB_DECK/MainDeck/MarginContainer" unique_id=1645072446]
 layout_mode = 2
 theme_override_constants/h_separation = 11
 theme_override_constants/v_separation = 12
 columns = 6
 
-[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/YourStuff/TAB_DECK"]
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/YourStuff/TAB_DECK" unique_id=1885129033]
 layout_mode = 0
 offset_left = 131.0
 offset_top = 422.0
@@ -526,14 +526,14 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.180392, 0.32549, 0.45098, 1)
 
-[node name="CheerDeck" type="ScrollContainer" parent="CanvasLayer/YourStuff/TAB_DECK"]
+[node name="CheerDeck" type="ScrollContainer" parent="CanvasLayer/YourStuff/TAB_DECK" unique_id=1132906127]
 layout_mode = 0
 offset_left = 131.0
 offset_top = 422.0
 offset_right = 573.0
 offset_bottom = 583.0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/YourStuff/TAB_DECK/CheerDeck"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/YourStuff/TAB_DECK/CheerDeck" unique_id=1013401102]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -542,11 +542,11 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/YourStuff/TAB_DECK/CheerDeck/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/YourStuff/TAB_DECK/CheerDeck/MarginContainer" unique_id=442596115]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="MainCount" type="Label" parent="CanvasLayer/YourStuff/TAB_DECK"]
+[node name="MainCount" type="Label" parent="CanvasLayer/YourStuff/TAB_DECK" unique_id=1864420932]
 auto_translate_mode = 2
 z_index = 1
 layout_mode = 0
@@ -560,7 +560,7 @@ theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 15
 text = "0/50"
 
-[node name="CheerCount" type="Label" parent="CanvasLayer/YourStuff/TAB_DECK"]
+[node name="CheerCount" type="Label" parent="CanvasLayer/YourStuff/TAB_DECK" unique_id=1706418699]
 auto_translate_mode = 2
 z_index = 1
 layout_mode = 0
@@ -574,38 +574,37 @@ theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 15
 text = "0/20"
 
-[node name="TAB_ANALYTICS" type="ColorRect" parent="CanvasLayer/YourStuff"]
+[node name="TAB_IMPORT" type="Control" parent="CanvasLayer/YourStuff" unique_id=2027762892]
 visible = false
 layout_mode = 2
-theme = ExtResource("3_da1xd")
-color = Color(0, 0, 0, 0)
 metadata/_tab_index = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/YourStuff/TAB_ANALYTICS"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/YourStuff/TAB_IMPORT" unique_id=1116699733]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 575.0
-offset_bottom = 582.0
+offset_right = 581.0
+offset_bottom = 593.0
 
-[node name="Stats" type="Label" parent="CanvasLayer/YourStuff/TAB_ANALYTICS/ScrollContainer"]
-auto_translate_mode = 2
+[node name="Control" type="Control" parent="CanvasLayer/YourStuff/TAB_IMPORT/VBoxContainer" unique_id=1860617546]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
-[node name="TAB_SLEEVES" type="Control" parent="CanvasLayer/YourStuff"]
+[node name="DownloadJSON" type="Button" parent="CanvasLayer/YourStuff/TAB_IMPORT/VBoxContainer" unique_id=847824757]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+text = "DECK_DOWNLOAD"
+
+[node name="TAB_SLEEVES" type="Control" parent="CanvasLayer/YourStuff" unique_id=1588702480]
 visible = false
 layout_mode = 2
 theme = ExtResource("3_da1xd")
 metadata/_tab_index = 2
 
-[node name="Main" parent="CanvasLayer/YourStuff/TAB_SLEEVES" instance=ExtResource("5_0bh18")]
+[node name="Main" parent="CanvasLayer/YourStuff/TAB_SLEEVES" unique_id=960555896 instance=ExtResource("5_0bh18")]
 position = Vector2(50, 50)
 scale = Vector2(0.5, 0.5)
 default_sleeve = ExtResource("6_to43o")
 
-[node name="Label" type="Label" parent="CanvasLayer/YourStuff/TAB_SLEEVES/Main"]
+[node name="Label" type="Label" parent="CanvasLayer/YourStuff/TAB_SLEEVES/Main" unique_id=2086704077]
 offset_top = -60.0
 offset_right = 313.0
 offset_bottom = 9.0
@@ -615,12 +614,12 @@ theme_override_font_sizes/font_size = 50
 text = "MAIN_DECK"
 horizontal_alignment = 1
 
-[node name="Cheer" parent="CanvasLayer/YourStuff/TAB_SLEEVES" instance=ExtResource("5_0bh18")]
+[node name="Cheer" parent="CanvasLayer/YourStuff/TAB_SLEEVES" unique_id=430897148 instance=ExtResource("5_0bh18")]
 position = Vector2(300, 50)
 scale = Vector2(0.5, 0.5)
 default_sleeve = ExtResource("7_kh04n")
 
-[node name="Label" type="Label" parent="CanvasLayer/YourStuff/TAB_SLEEVES/Cheer"]
+[node name="Label" type="Label" parent="CanvasLayer/YourStuff/TAB_SLEEVES/Cheer" unique_id=85053053]
 offset_top = -60.0
 offset_right = 313.0
 offset_bottom = 9.0
@@ -630,7 +629,27 @@ theme_override_font_sizes/font_size = 50
 text = "CHEER"
 horizontal_alignment = 1
 
-[node name="LoadDeck" type="Button" parent="CanvasLayer"]
+[node name="TAB_ANALYTICS" type="ColorRect" parent="CanvasLayer/YourStuff" unique_id=980762687]
+visible = false
+layout_mode = 2
+theme = ExtResource("3_da1xd")
+color = Color(0, 0, 0, 0)
+metadata/_tab_index = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/YourStuff/TAB_ANALYTICS" unique_id=84625569]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 575.0
+offset_bottom = 582.0
+
+[node name="Stats" type="Label" parent="CanvasLayer/YourStuff/TAB_ANALYTICS/ScrollContainer" unique_id=156298306]
+auto_translate_mode = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LoadDeck" type="Button" parent="CanvasLayer" unique_id=1347654200]
 offset_left = 313.0
 offset_top = 639.0
 offset_right = 469.0
@@ -641,7 +660,7 @@ text = "LOAD"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="SaveDeck" type="Button" parent="CanvasLayer"]
+[node name="SaveDeck" type="Button" parent="CanvasLayer" unique_id=57277451]
 offset_left = 798.0
 offset_top = 640.0
 offset_right = 874.0
@@ -652,7 +671,7 @@ text = "DECK_SAVE"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="DeckName" type="LineEdit" parent="CanvasLayer"]
+[node name="DeckName" type="LineEdit" parent="CanvasLayer" unique_id=1638027780]
 offset_left = 507.0
 offset_top = 631.0
 offset_right = 775.0
@@ -661,11 +680,11 @@ theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 15
 placeholder_text = "DEFAULT_DECK_NAME"
 
-[node name="DeckList" parent="CanvasLayer" instance=ExtResource("4_lmglq")]
+[node name="DeckList" parent="CanvasLayer" unique_id=687946059 instance=ExtResource("4_lmglq")]
 visible = false
 z_index = 4
 
-[node name="MainMenu" type="Button" parent="CanvasLayer"]
+[node name="MainMenu" type="Button" parent="CanvasLayer" unique_id=403504818]
 offset_left = 400.0
 offset_top = 689.0
 offset_right = 470.0
@@ -676,7 +695,7 @@ text = "MENU"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="Clear" type="Button" parent="CanvasLayer"]
+[node name="Clear" type="Button" parent="CanvasLayer" unique_id=2126328215]
 offset_left = 313.0
 offset_top = 689.0
 offset_right = 387.0
@@ -687,7 +706,7 @@ text = "DECK_CLEAR"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="BanlistChoice" type="OptionButton" parent="CanvasLayer"]
+[node name="BanlistChoice" type="OptionButton" parent="CanvasLayer" unique_id=188161628]
 offset_left = 518.0
 offset_top = 684.0
 offset_right = 764.0
@@ -706,7 +725,7 @@ popup/item_3/id = 3
 popup/item_4/text = "LOBBY_BANLIST_UNRELEASED_EN"
 popup/item_4/id = 4
 
-[node name="SavePrompt" type="ColorRect" parent="CanvasLayer"]
+[node name="SavePrompt" type="ColorRect" parent="CanvasLayer" unique_id=1177481543]
 visible = false
 z_index = 3
 offset_left = 470.0
@@ -715,18 +734,18 @@ offset_right = 907.0
 offset_bottom = 681.0
 color = Color(0.113725, 0.164706, 0.223529, 0.905882)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/SavePrompt"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/SavePrompt" unique_id=746223416]
 layout_mode = 0
 offset_right = 437.0
 offset_bottom = 520.0
 theme = ExtResource("3_da1xd")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SavePrompt/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SavePrompt/ScrollContainer" unique_id=947075608]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="FileName" type="LineEdit" parent="CanvasLayer/SavePrompt"]
+[node name="FileName" type="LineEdit" parent="CanvasLayer/SavePrompt" unique_id=239547978]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 571.0
@@ -736,7 +755,7 @@ theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 20
 placeholder_text = "DEFAULT_DECK_FILE"
 
-[node name="Save" type="Button" parent="CanvasLayer/SavePrompt/FileName"]
+[node name="Save" type="Button" parent="CanvasLayer/SavePrompt/FileName" unique_id=994597248]
 layout_mode = 0
 offset_left = 326.0
 offset_top = 5.0
@@ -745,17 +764,7 @@ offset_bottom = 26.0
 theme_override_font_sizes/font_size = 20
 text = "DECK_SAVE"
 
-[node name="Download" type="Button" parent="CanvasLayer/SavePrompt/FileName"]
-visible = false
-layout_mode = 0
-offset_left = 326.0
-offset_top = 50.0
-offset_right = 472.0
-offset_bottom = 71.0
-theme_override_font_sizes/font_size = 20
-text = "DECK_DOWNLOAD"
-
-[node name="Cancel" type="Button" parent="CanvasLayer/SavePrompt"]
+[node name="Cancel" type="Button" parent="CanvasLayer/SavePrompt" unique_id=1508121545]
 layout_mode = 0
 offset_left = 454.0
 offset_top = 576.0
@@ -765,7 +774,7 @@ theme = ExtResource("3_da1xd")
 theme_override_font_sizes/font_size = 20
 text = "DECK_SAVE_CANCEL"
 
-[node name="OverwriteConfirm" type="ColorRect" parent="CanvasLayer/SavePrompt"]
+[node name="OverwriteConfirm" type="ColorRect" parent="CanvasLayer/SavePrompt" unique_id=1646270536]
 visible = false
 layout_mode = 0
 offset_left = -361.0
@@ -775,7 +784,7 @@ offset_bottom = 514.0
 theme = ExtResource("3_da1xd")
 color = Color(0.113725, 0.164706, 0.223529, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/SavePrompt/OverwriteConfirm"]
+[node name="Label" type="Label" parent="CanvasLayer/SavePrompt/OverwriteConfirm" unique_id=1233670592]
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 12.0
@@ -788,7 +797,7 @@ text = "Overwrite ?"
 horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="Yes" type="Button" parent="CanvasLayer/SavePrompt/OverwriteConfirm"]
+[node name="Yes" type="Button" parent="CanvasLayer/SavePrompt/OverwriteConfirm" unique_id=1205454495]
 layout_mode = 0
 offset_left = 228.0
 offset_top = 353.0
@@ -797,7 +806,7 @@ offset_bottom = 394.0
 theme_override_font_sizes/font_size = 40
 text = "YES"
 
-[node name="No" type="Button" parent="CanvasLayer/SavePrompt/OverwriteConfirm"]
+[node name="No" type="Button" parent="CanvasLayer/SavePrompt/OverwriteConfirm" unique_id=365583957]
 layout_mode = 0
 offset_left = 667.0
 offset_top = 355.0
@@ -806,7 +815,7 @@ offset_bottom = 396.0
 theme_override_font_sizes/font_size = 40
 text = "NO"
 
-[node name="Loading" type="ColorRect" parent="CanvasLayer"]
+[node name="Loading" type="ColorRect" parent="CanvasLayer" unique_id=1150633941]
 unique_name_in_owner = true
 visible = false
 z_index = 3
@@ -814,7 +823,7 @@ offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0.180392, 0.32549, 0.45098, 0.623529)
 
-[node name="Label" type="Label" parent="CanvasLayer/Loading"]
+[node name="Label" type="Label" parent="CanvasLayer/Loading" unique_id=1373390368]
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 720.0
@@ -825,14 +834,16 @@ text = "LOADING"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BGM" type="AudioStreamPlayer" parent="."]
+[node name="BGM" type="AudioStreamPlayer" parent="." unique_id=620249497]
 stream = ExtResource("10_ncvki")
 volume_db = -18.0
 autoplay = true
 bus = &"BGM"
 
-[node name="HTTPManager" type="Node" parent="."]
+[node name="HTTPManager" type="Node" parent="." unique_id=1669366651]
+unique_name_in_owner = true
 script = ExtResource("11_h6gkd")
+parallel_connections_count = 15
 print_debug = true
 
 [connection signal="text_changed" from="CanvasLayer/PossibleCards/TAB_OSHI/VBoxContainer/Search" to="." method="_on_oshi_search"]
@@ -852,6 +863,7 @@ print_debug = true
 [connection signal="pressed" from="CanvasLayer/PossibleCards/TAB_CHEER/FiveMultiple" to="." method="_five_multiple"]
 [connection signal="pressed" from="CanvasLayer/PossibleCards/TAB_CHEER/TenMultiple" to="." method="_ten_multiple"]
 [connection signal="pressed" from="CanvasLayer/PossibleCards/TAB_CHEER/TwentyMultiple" to="." method="_twenty_multiple"]
+[connection signal="pressed" from="CanvasLayer/YourStuff/TAB_IMPORT/VBoxContainer/DownloadJSON" to="." method="_on_download_pressed"]
 [connection signal="pressed" from="CanvasLayer/LoadDeck" to="." method="_on_load_deck_pressed"]
 [connection signal="pressed" from="CanvasLayer/SaveDeck" to="." method="_on_save_deck_pressed"]
 [connection signal="cancel" from="CanvasLayer/DeckList" to="." method="_hide_deck_list"]
@@ -861,6 +873,5 @@ print_debug = true
 [connection signal="item_selected" from="CanvasLayer/BanlistChoice" to="." method="_on_banlist_choice_item_selected"]
 [connection signal="text_submitted" from="CanvasLayer/SavePrompt/FileName" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="CanvasLayer/SavePrompt/FileName/Save" to="." method="_on_save_pressed"]
-[connection signal="pressed" from="CanvasLayer/SavePrompt/FileName/Download" to="." method="_on_download_pressed"]
 [connection signal="pressed" from="CanvasLayer/SavePrompt/Cancel" to="." method="_hide_save_prompt"]
 [connection signal="pressed" from="CanvasLayer/SavePrompt/OverwriteConfirm/No" to="." method="_hide_save_prompt"]

@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bdmwjxyb7a1pn"]
+
+[ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="1_desdp"]
+[ext_resource type="Script" uid="uid://55w7a0chbkwm" path="res://Scripts/look_at.gd" id="2_ktb40"]
+
+[node name="LookAt" type="Control" unique_id=968619706]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 408.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_desdp")
+script = ExtResource("2_ktb40")
+
+[node name="FullBack" type="ColorRect" parent="." unique_id=1132069275]
+layout_mode = 0
+offset_right = 872.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.09411765)
+
+[node name="LookBack" type="ColorRect" parent="." unique_id=725295370]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 314.0
+offset_right = 858.0
+offset_bottom = 596.0
+color = Color(0.113725, 0.164706, 0.223529, 0.905882)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1955241184]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 314.0
+offset_right = 858.0
+offset_bottom = 596.0
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer" unique_id=1573145034]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cancel" type="Button" parent="." unique_id=1089762157]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 654.0
+offset_right = 852.0
+offset_bottom = 682.0
+text = "PROMPT_CANCEL"
+
+[node name="Tree" type="Tree" parent="." unique_id=1128160591]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 23.0
+offset_top = 28.0
+offset_right = 857.0
+offset_bottom = 289.0
+hide_root = true
+scroll_horizontal_enabled = false

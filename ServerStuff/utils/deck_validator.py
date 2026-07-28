@@ -18,7 +18,7 @@ def check_legal(deck, banlist = None, only_en = False):
                 if oshi_card["cardType"] == "Oshi":
                     if str(oshi_art) in oshi_card["cardArt"]:
                         if find_in_list(banlist, oshi_number) is None:
-                            if only_en and not check_if_card_is_en(oshi_number, oshi_art):
+                            if only_en and not check_if_card_is_en(oshi_number):
                                 result["legal"] = False
                                 result["reasons"].append(["DECKERROR_ONLYEN",oshi_number])
                         else:
@@ -46,6 +46,8 @@ def check_legal(deck, banlist = None, only_en = False):
             found_debut = False
             total_main = 0
 
+            found_of_each_number = {}
+
             for main_row in deck_info:
                 main_number = main_row[0]
                 main_card = card_info(card_id=main_number)
@@ -58,19 +60,25 @@ def check_legal(deck, banlist = None, only_en = False):
                     if main_card["cardType"] in ["Holomem","Support"]:
                         if main_card["cardType"] == "Holomem" and main_card["level"] == 0:
                             found_debut = True
-                        if main_card["cardLimit"] == -1 or main_count <= main_card["cardLimit"]:
+                        
+                        if main_number in found_of_each_number:
+                            found_of_each_number[main_number] += main_count
+                        else:
+                            found_of_each_number[main_number] = main_count
+
+                        if main_card["cardLimit"] == -1 or found_of_each_number[main_number] <= main_card["cardLimit"]:
                             if main_count > 0:
                                 if str(main_art) in main_card["cardArt"]:
                                     banned_code = find_in_list(banlist, main_number)
                                     if banned_code is None:
-                                        if only_en and not check_if_card_is_en(main_number, main_art):
+                                        if only_en and not check_if_card_is_en(main_number):
                                             result["legal"] = False
                                             result["reasons"].append(["DECKERROR_ONLYEN",main_number])
                                     else:
                                         if banlist[banned_code] == 0:
                                             result["legal"] = False
                                             result["reasons"].append(["DECKERROR_BANNED",main_number])
-                                        elif banlist[banned_code] < main_count:
+                                        elif banlist[banned_code] < found_of_each_number[main_number]:
                                             result["legal"] = False
                                             result["reasons"].append(["DECKERROR_RESTRICTED",main_number])
                                 else:
@@ -128,7 +136,7 @@ def check_legal(deck, banlist = None, only_en = False):
                                 if str(cheer_art) in cheer_card["cardArt"]:
                                     banned_code = find_in_list(banlist, cheer_number)
                                     if banned_code is None:
-                                        if only_en and not check_if_card_is_en(cheer_number, cheer_art):
+                                        if only_en and not check_if_card_is_en(cheer_number):
                                             result["legal"] = False
                                             result["reasons"].append(["DECKERROR_ONLYEN",cheer_number])
                                     else:
@@ -172,7 +180,7 @@ def check_legal(deck, banlist = None, only_en = False):
     
     return real_deck, result
 
-def check_if_card_is_en(cardNumber, artNum):
+def check_if_card_is_en(cardNumber):
     card_data = get_data("card_data")
-    return cardNumber in card_data and str(artNum) in card_data[cardNumber]["cardArt"] and \
-		"en" in card_data[cardNumber]["cardArt"][str(artNum)] and not card_data[cardNumber]["cardArt"][str(artNum)]["en"]["proxy"]
+    return cardNumber in card_data and \
+          any("en" in card_data[cardNumber]["cardArt"][artNum] and not card_data[cardNumber]["cardArt"][artNum]["en"]["proxy"] for artNum in card_data[cardNumber]["cardArt"])		

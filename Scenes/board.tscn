@@ -968,6 +968,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "LOBBY_GAMECODE"
 
+[node name="PasteGameCodeButton" type="Button" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox" unique_id=1939481952]
+unique_name_in_owner = true
+layout_mode = 2
+text = "LOBBY_SPECTATECODE_PASTE"
+
 [node name="SpectateByCode" type="Button" parent="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox" unique_id=1601458461]
 unique_name_in_owner = true
 layout_mode = 2
@@ -1481,6 +1486,13 @@ fit_content = true
 context_menu_enabled = true
 selection_enabled = true
 deselect_on_focus_loss_enabled = false
+
+[node name="CopyGameCodeButton" type="Button" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox" unique_id=1092887559]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("5_fdkx6")
+theme_override_font_sizes/font_size = 15
+text = "LOBBY_GAMECODE_COPY"
 
 [node name="SFXLabel" type="Label" parent="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox" unique_id=885354296]
 auto_translate_mode = 2
@@ -2236,6 +2248,7 @@ bus = &"BGM"
 unique_name_in_owner = true
 script = ExtResource("20_v32ia")
 route = "/ws"
+use_WSS = false
 autoconnect_mode = 2
 
 [node name="Timer" type="Timer" parent="." unique_id=1611810139]
@@ -2281,6 +2294,7 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/GoldfishStartMenu/LobbyCreateMargins/LobbyCreateVBox/CreateBack" to="." method="_close_goldfish_menu"]
 [connection signal="text_changed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/SpectateListCode" to="." method="update_spectate_from_code_button"]
 [connection signal="text_submitted" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/SpectateListCode" to="." method="spectate_game"]
+[connection signal="pressed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/PasteGameCodeButton" to="." method="_on_paste_game_code_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/LobbyCodeHBox/SpectateByCode" to="." method="spectate_game_from_code"]
 [connection signal="pressed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer/Refresh" to="." method="find_games"]
 [connection signal="pressed" from="CanvasLayer/SpectatePanel/SpectateListMargins/SpectateVBox/HBoxContainer/SpectateBack" to="." method="close_game_list"]
@@ -2302,6 +2316,7 @@ one_shot = true
 [connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ButtonMargins/Buttons/OptionTabButton" to="." method="_on_sidebar_options_pressed"]
 [connection signal="text_submitted" from="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox/ToSend" to="." method="send_message"]
 [connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/ChatVBoxMargins/ChatVBox/ChatHBox/Send" to="." method="send_message_on_click"]
+[connection signal="pressed" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/CopyGameCodeButton" to="." method="_on_copy_game_code_button_pressed"]
 [connection signal="drag_ended" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="drag_started" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="value_changed" from="CanvasLayer/Sidebar/SidebarHBox/OptionMargins/OptionsVBox/InGameSFXSlider" to="." method="_on_sfx_slider_value_changed"]

@@ -35,14 +35,14 @@ func _all_decks() -> void:
 			if INTJSON.parse(FileAccess.get_file_as_string(path + "/" + file_name)) == 0:
 				if Settings.settings.OnlyEN:
 					var found_not_en = false
-					if !check_if_card_is_en(INTJSON.data.oshi[0],INTJSON.data.oshi[1]):
+					if !check_if_card_is_en(INTJSON.data.oshi[0]):
 						found_not_en = true
 					for card_info in INTJSON.data.deck:
-						if !check_if_card_is_en(card_info[0],card_info[2]):
+						if !check_if_card_is_en(card_info[0]):
 							found_not_en = true
 							break
 					for card_info in INTJSON.data.cheerDeck:
-						if !check_if_card_is_en(card_info[0],card_info[2]):
+						if !check_if_card_is_en(card_info[0]):
 							found_not_en = true
 							break
 					if found_not_en:
@@ -57,9 +57,9 @@ func _all_decks() -> void:
 	else:
 		print("An error occurred when trying to access the path.")
 
-func check_if_card_is_en(cardNumber, artNum):
-	return cardNumber in Database.cardData and str(artNum) in Database.cardData[cardNumber]["cardArt"] and \
-		"en" in Database.cardData[cardNumber]["cardArt"][str(artNum)] and !Database.cardData[cardNumber]["cardArt"][str(artNum)]["en"]["proxy"]
+func check_if_card_is_en(cardNumber):
+	return cardNumber in Database.cardData and \
+	 Database.cardData[cardNumber]["cardArt"].keys().any(func(artNum): return "en" in Database.cardData[cardNumber]["cardArt"][artNum] and !Database.cardData[cardNumber]["cardArt"][artNum]["en"]["proxy"])
 
 
 func _set_selected(deckInfo : Dictionary) -> void:

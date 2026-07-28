@@ -80,4 +80,7 @@ func show_damage() -> void:
 	%ZoneButton.visible = true
 
 func add_note(new_note: String) -> void:
+	if notes_this_turn.size() == 0:
+		%ZoneButton.tooltip_text += "\n" + tr("GOLDFISH_NOTES_THIS_TURN")
 	notes_this_turn.append(new_note)
+	%ZoneButton.tooltip_text += "\n" + new_note

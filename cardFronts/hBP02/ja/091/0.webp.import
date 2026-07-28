@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/0.webp-49c5c4c67aaa7f3d65a904e7df57225e.ctex"
 
 [params]
 
-compress/mode=1
+compress/mode=4
 compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -23,8 +23,8 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=2
 compress/channel_pack=0
-mipmaps/generate=false
-mipmaps/limit=-1
+mipmaps/generate=true
+mipmaps/limit=1
 roughness/mode=0
 roughness/src_normal=""
 process/channel_remap/red=0

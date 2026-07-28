@@ -206,9 +206,11 @@ var attached = []
 		%CardInfo.extraNames = value
 
 
-func setup_info(number,art_code,back=null):
-	%CardInfo.setup_info(number, art_code, back)
+func setup_info(number,art_code,back=null,load_front=true):
+	%CardInfo.setup_info(number, art_code, back, load_front)
 
+func start_loading_art() -> void:
+	%CardInfo.start_loading_art()
 
 func set_ban(num: int):
 	%CardInfo.set_ban(num)

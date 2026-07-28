@@ -13,7 +13,11 @@ signal card_right_clicked(card_id)
 signal card_mouse_over(card_id)
 signal card_mouse_left
 
-var cardFront
+var cardFront:
+	get:
+		return %Front.cardFront
+	set(value):
+		%CardInfo.cardFront = value
 var cardBack
 var fullText = ""
 @export var artNum:int
@@ -60,7 +64,7 @@ var attached = []
 # Android input handling
 var android_click_handled := false
 
-func setup_info(number,art_code,back=null):
+func setup_info(number,art_code,back=null,load_art=true) -> void:
 	cardNumber = number
 	artNum = art_code
 	
@@ -69,8 +73,7 @@ func setup_info(number,art_code,back=null):
 	
 	var card_data = Database.cardData[cardNumber]
 	
-	%Front._initialize(cardNumber, artNum)
-	cardFront = %Front.cardFront
+	%Front._initialize(cardNumber, artNum, load_art)
 	notFound = %Front.notFound
 	
 	cardType = card_data.cardType
@@ -152,6 +155,10 @@ func setup_info(number,art_code,back=null):
 				cheer_color = "COLORLESS"
 	
 	fullText = full_desc()
+
+func start_loading_art() -> void:
+	if cardFront == null and !%Front.cardFrontLoading:
+		%Front._start_loading_art()
 
 func set_ban(num: int):
 	if num < 0:

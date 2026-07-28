@@ -86,6 +86,7 @@ func findByClass(node: Node, className : String, result : Array) -> void:
 func _ready():
 	proper_hypertext = "https://" if %WebSocket.use_WSS else "http://"
 	%WebSocket.host = Server.websocketURL
+	Database.downloader = %HTTPManager
 	
 	randomize()
 	
@@ -94,7 +95,10 @@ func _ready():
 	#Intialize Decks folder and starter decks
 	if !DirAccess.dir_exists_absolute("user://Decks"):
 		DirAccess.make_dir_absolute("user://Decks")
-		
+	
+	#Little song-and-dance to load default decks that haven't been loaded before
+	#We wish for the user to be able to delete default decks without them coming right back the next time they go to the main menu
+	#So we need to store a list of decks that have previously been loaded
 	var dir = DirAccess.open("res://Decks")
 	var temp_loaded_decks = Settings.settings.LoadedDecks.duplicate()
 	for file_name in dir.get_files():
@@ -351,6 +355,12 @@ func _go_to_github():
 
 func _start_data():
 	Settings.card_version = FileAccess.get_file_as_string("res://cardLocalization/card_version.txt")
+	if Database.needs_to_download_images and (!FileAccess.file_exists("user://tempCardFronts/card_version.txt") or \
+	 		Settings.card_version != FileAccess.get_file_as_string("user://tempCardFronts/card_version.txt")):
+		#Reset the temporary folder
+		Database.delete_folder_recursive("user://tempCardFronts")
+		DirAccess.make_dir_absolute("user://tempCardFronts")
+		DirAccess.copy_absolute("res://cardLocalization/card_version.txt", "user://tempCardFronts/card_version.txt")
 	%CardVersionText.text = "Card Version " + Settings.card_version
 	INTJSON.parse(FileAccess.get_file_as_string("res://cardData.json"))
 	Database.setup_data(INTJSON.data, Settings._connect_local.bind(%Timer2.start))
@@ -874,10 +884,12 @@ func _on_websocket_received(raw_data):
 								for number in data["current"]:
 									Database.current_banlist[number] = int(data["current"][number])
 									Database.unreleased[number] = int(data["current"][number])
+									Database.unreleased_server[number] = int(data["current"][number])
 								for number in data["en_current"]:
 									Database.en_current_banlist[number] = int(data["en_current"][number])
 									Database.en_unreleased[number] = int(data["en_current"][number])
 								for number in data["unreleased"]:
+									Database.unreleased_server[number] = int(data["unreleased"][number])
 									for found in _serf_placeholder_numbers(number):
 										Database.unreleased[found] = int(data["unreleased"][number])
 								for number in data["en_unreleased"]:
@@ -1003,13 +1015,13 @@ func create_lobby() -> void:
 	if Settings.settings.OnlyEN:
 		settings["onlyEN"] = true
 	if lobby_banlist.selected == 1:
-		settings["banlist"] = Database.current_banlist
+		settings["banlist"] = Database.unreleased_server
 	elif lobby_banlist.selected == 2:
-		settings["banlist"] = Database.en_current_banlist
-	elif lobby_banlist.selected == 3:
-		settings["banlist"] = Database.unreleased
-	elif lobby_banlist.selected == 4:
 		settings["banlist"] = Database.en_unreleased
+	elif lobby_banlist.selected == 3:
+		settings["banlist"] = Database.current_banlist
+	elif lobby_banlist.selected == 4:
+		settings["banlist"] = Database.en_current_banlist
 	else:
 		settings["banlist"] = {}
 	send_command("Server","Create Lobby",{"settings":settings})
@@ -1036,11 +1048,11 @@ func found_lobbies(found:Array) -> void:
 				0:
 					lobbyButton.text += tr("LOBBY_BANLIST_NONE")
 				1:
-					lobbyButton.text += tr("LOBBY_BANLIST_CURRENT")
+					lobbyButton.text += tr("LOBBY_BANLIST_UNRELEASED")
 				2:
 					lobbyButton.text += tr("LOBBY_BANLIST_CURRENT_EN")
 				3:
-					lobbyButton.text += tr("LOBBY_BANLIST_UNRELEASED")
+					lobbyButton.text += tr("LOBBY_BANLIST_CURRENT")
 				4:
 					lobbyButton.text += tr("LOBBY_BANLIST_UNRELEASED_EN")
 				_:
@@ -1112,6 +1124,14 @@ func spectate_game_from_code() -> void:
 	if game_list_code.text != "":
 		spectate_game(game_list_code.text)
 
+func _on_paste_game_code_button_pressed() -> void:
+	var clipboard_contents: String = DisplayServer.clipboard_get()
+	var filtered_text: String = lobby_code_regex.sub(clipboard_contents, "", true)
+
+	# Game code is 10 characters long.
+	game_list_code.text = filtered_text.substr(0, 10)
+	update_spectate_from_code_button(game_list_code.text)
+
 func update_spectate_from_code_button(current_string:String) -> void:
 	game_list_code_button.disabled = (current_string == "")
 
@@ -1170,6 +1190,9 @@ func update_lobby(lobby_id:String, waiting:Dictionary, chosen, you_are_chosen:bo
 
 func _on_copy_lobby_code_button_pressed() -> void:
 	DisplayServer.clipboard_set(current_lobby)
+
+func _on_copy_game_code_button_pressed() -> void:
+	DisplayServer.clipboard_set(yourSide.game_id)
 
 func choose_opponent(player_id):
 	send_command("Lobby","Choose Opponent",{"chosen":player_id})
