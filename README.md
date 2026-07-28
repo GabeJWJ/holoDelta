@@ -9,6 +9,8 @@ After extracting zip file somewhere, open a terminal at the folder containing th
 
 The discord is at https://discord.com/invite/dDCpFMMENM.
 
+The website is at https://holodelta.azurewebsites.net.
+
 
 # Setup
 
