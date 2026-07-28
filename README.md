@@ -285,6 +285,19 @@ There is a keybind (default [) to return to the previous phase in the phase trac
 There is a keybind (default ]) to go to the next phase in the phase tracker. It will pass the turn if used on the end phase.
 
 
+# Cosmetics
+
+Delta supports using custom images for card sleeves, the playmat, the die, and the SP marker.
+
+Each deck can have custom images set separately for the main deck sleeves and cheer deck sleeves. You can go to the “Sleeves” tab in the deckbuilder to add them.
+
+Pressing the “Cosmetics” button on the main menu will take you to a menu with two tabs. The “Playmat/Dice” tab will let you set the playmat, die, and sp marker images. The “Default Sleeves” tab will let you set which sleeves to use when your chosen deck doesn’t have any sleeves of its own.
+
+You can find templates for all of these in the pinned posts in #delta-cosmetics on the discord.
+
+While in-game, you can go to the settings panel on the sidebar and check “Hide Opponent Cosmetics” if you find them distasteful.
+
+
 # Future Features
 
 I am busy, both with ‘real’ work and just other personal projects I’d like to do. As such, updates have been slow and infrequent lately (though I place a strong emphasis on keeping things up-to-date). I have a lengthy list of features I’d like to implement without even getting into the massive undertakings like implementing custom cards or some form of automation.
