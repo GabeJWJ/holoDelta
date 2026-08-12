@@ -14488,3 +14488,147 @@ msgstr ""
 msgid "hEB01-032_EFFECT"
 msgstr ""
 
+msgid "hEB01-016_NAME"
+msgstr ""
+
+msgid "hEB01-016_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-016_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-033_NAME"
+msgstr ""
+
+msgid "hEB01-033_EFFECT"
+msgstr ""
+
+msgid "hEB01-031_NAME"
+msgstr ""
+
+msgid "hEB01-031_EFFECT"
+msgstr ""
+
+msgid "hEB01-030_NAME"
+msgstr ""
+
+msgid "hEB01-030_EFFECT"
+msgstr ""
+
+msgid "hEB01-024_NAME"
+msgstr ""
+
+msgid "hEB01-024_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-024_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-024_GIFT_NAME"
+msgstr ""
+
+msgid "hEB01-024_GIFT_EFFECT"
+msgstr ""
+
+msgid "hEB01-023_NAME"
+msgstr ""
+
+msgid "hEB01-023_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-023_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-023_BLOOM_NAME"
+msgstr ""
+
+msgid "hEB01-023_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hEB01-021_NAME"
+msgstr ""
+
+msgid "hEB01-021_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-021_COLLAB_NAME"
+msgstr ""
+
+msgid "hEB01-021_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hEB01-019_NAME"
+msgstr ""
+
+msgid "hEB01-019_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-019_COLLAB_NAME"
+msgstr ""
+
+msgid "hEB01-019_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hEB01-017_NAME"
+msgstr ""
+
+msgid "hEB01-017_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-017_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-017_BLOOM_NAME"
+msgstr ""
+
+msgid "hEB01-017_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hEB01-015_NAME"
+msgstr ""
+
+msgid "hEB01-015_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-015_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-014_NAME"
+msgstr ""
+
+msgid "hEB01-014_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-014_BLOOM_NAME"
+msgstr ""
+
+msgid "hEB01-014_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hEB01-009_NAME"
+msgstr ""
+
+msgid "hEB01-009_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-009_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-009_COLLAB_NAME"
+msgstr ""
+
+msgid "hEB01-009_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hEB01-005_NAME"
+msgstr ""
+
+msgid "hEB01-005_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-005_COLLAB_NAME"
+msgstr ""
+
+msgid "hEB01-005_COLLAB_EFFECT"
+msgstr ""
+
