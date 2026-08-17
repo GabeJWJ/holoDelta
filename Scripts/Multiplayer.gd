@@ -1588,6 +1588,7 @@ func _on_close_error_pressed() -> void:
 
 func _not_real():
 	#This is all for POT generation
+	#Do not call this function
 	tr("MESSAGE_MULLIGAN")
 	tr("MESSAGE_DRAW")
 	tr("MESSAGE_DRAWX")
@@ -1673,6 +1674,7 @@ func _not_real():
 	tr("MESSAGE_ARCHIVE_HOLOMEM_PLAY")
 	tr("MESSAGE_ARCHIVE_CHEER_ATTACH")
 	tr("MESSAGE_ATTACHED_CHEER_ATTACH")
+	tr("MESSAGE_ATTACHED_SUPPORT_ATTACH")
 	tr("MESSAGE_ENDTURN")
 	tr("MESSAGE_DIERESULT")
 	tr("MESSAGE_RPS")
@@ -1761,6 +1763,7 @@ func _not_real():
 	tr("YOU_MESSAGE_ARCHIVE_HOLOMEM_PLAY")
 	tr("YOU_MESSAGE_ARCHIVE_CHEER_ATTACH")
 	tr("YOU_MESSAGE_ATTACHED_CHEER_ATTACH")
+	tr("YOU_MESSAGE_ATTACHED_SUPPORT_ATTACH")
 	tr("YOU_MESSAGE_ENDTURN")
 	tr("YOU_MESSAGE_DIERESULT")
 	tr("YOU_MESSAGE_RPS")

@@ -389,7 +389,7 @@ func _holomem_filter(holomem_to_check) -> bool:
 	if holomem_filter.Advantage != null:
 		var found_art_with_correct_advantage = false
 		for possible_art in holomem_to_check.holomem_arts:
-			if possible_art[5] == holomem_filter.Advantage:
+			if possible_art.advantage == holomem_filter.Advantage:
 				found_art_with_correct_advantage = true
 				break
 		if !found_art_with_correct_advantage:

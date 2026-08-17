@@ -140,8 +140,8 @@ func setup_info(number,art_code,back=null,load_art=true) -> void:
 							cost_dict.Yellow += 1
 						"N":
 							cost_dict.Any += 1
-				holomem_arts.append([art.artIndex,cost_dict,art.damage,bool(art.hasPlus),bool(art.hasEffect),null if !art.has("advantage") else art.advantage,null if !art.has("advantage") else art.advantageAmount])
-			holomem_arts.sort_custom(func(a,b): return a[0] < b[0]) #Order arts by index
+				holomem_arts.append({"index":art.artIndex,"cost":cost_dict,"damage":art.damage,"hasPlus":bool(art.hasPlus),"hasMinus":bool(art.hasMinus),"hasEffect":bool(art.hasEffect),"advantage":null if !art.has("advantage") else art.advantage,"advantageAmount":null if !art.has("advantage") else art.advantageAmount})
+			holomem_arts.sort_custom(func(a,b): return a.index < b.index) #Order arts by index
 			holomem_effects = []
 			if card_data.has("effect"):
 				holomem_effects.append(card_data.effect)
@@ -289,32 +289,40 @@ func full_desc():
 			
 			for art in holomem_arts:
 				result += "\n\n[center]"
-				for i in range(art[1].White):
+				for i in range(art.cost.White):
 					result += "[img=18]res://CheerIcons/WhiteArts.webp[/img]"
-				for i in range(art[1].Green):
+				for i in range(art.cost.Green):
 					result += "[img=18]res://CheerIcons/GreenArts.webp[/img]"
-				for i in range(art[1].Red):
+				for i in range(art.cost.Red):
 					result += "[img=18]res://CheerIcons/RedArts.webp[/img]"
-				for i in range(art[1].Blue):
+				for i in range(art.cost.Blue):
 					result += "[img=18]res://CheerIcons/BlueArts.webp[/img]"
-				for i in range(art[1].Purple):
+				for i in range(art.cost.Purple):
 					result += "[img=18]res://CheerIcons/PurpleArts.webp[/img]"
-				for i in range(art[1].Yellow):
+				for i in range(art.cost.Yellow):
 					result += "[img=18]res://CheerIcons/YellowArts.webp[/img]"
-				for i in range(art[1].Any):
+				for i in range(art.cost.Any):
 					result += "[img=18]res://CheerIcons/ColorlessArts.webp[/img]"
-				result += " " + Settings.trans("%s_ART_%s_NAME" % [cardNumber, art[0]]).replace("[", "[lb]")
-				result += " " + str(art[2]) + ("+" if art[3] else "")
-				if art[5] != null:
-					if art[6] in [null, 50]:
-						result += " [img=40]res://Icons/tokkou_50_%s.png[/img]" % art[5].to_lower()
-					elif art[6] == 30:
-						result += " [img=40]res://Icons/tokkou_30_%s.png[/img]" % art[5].to_lower()
+				result += " " + Settings.trans("%s_ART_%s_NAME" % [cardNumber, art.index]).replace("[", "[lb]")
+				result += " " + str(art.damage)
+				
+				if art.hasPlus and art.hasMinus:
+					result += "±"
+				elif art.hasPlus:
+					result += "+"
+				elif art.hasMinus:
+					result += "-"
+				
+				if art.advantage != null:
+					if art.advantageAmount in [null, 50]:
+						result += " [img=40]res://Icons/tokkou_50_%s.png[/img]" % art.advantage.to_lower()
+					elif art.advantageAmount == 30:
+						result += " [img=40]res://Icons/tokkou_30_%s.png[/img]" % art.advantage.to_lower()
 					else:
-						result += " (+%d [img=18]res://CheerIcons/%s.webp[/img])" % [art[6], art[5]]
+						result += " (+%d [img=18]res://CheerIcons/%s.webp[/img])" % [art.advantageAmount, art.advantage]
 				result += "[/center]"
-				if art[4]:
-					result += "\n\n" + Settings.trans("%s_ART_%s_EFFECT" % [cardNumber, art[0]]).replace("[", "[lb]")
+				if art.hasEffect:
+					result += "\n\n" + Settings.trans("%s_ART_%s_EFFECT" % [cardNumber, art.index]).replace("[", "[lb]")
 			
 			var costText = ""
 			for i in range(default_baton_pass_cost):

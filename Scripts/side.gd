@@ -1294,7 +1294,7 @@ func _on_card_clicked(card_id : int) -> void:
 					if is_turn:
 						if !actualCard.rested and currentZone in [centerZone, collabZone] and !(first_turn and player1) and !is_goldfishing:
 							for art in actualCard.holomem_arts:
-								popup.add_item(Settings.trans("%s_ART_%s_NAME" % [actualCard.cardNumber, art[0]]), 80+art[0])
+								popup.add_item(Settings.trans("%s_ART_%s_NAME" % [actualCard.cardNumber, art.index]), 80+art.index)
 							
 							var found_other = [actualCard.cardNumber]
 							var current_index = 0
@@ -1302,8 +1302,8 @@ func _on_card_clicked(card_id : int) -> void:
 								var found_card = all_cards[find_in_zone(zone)]
 								if found_card.cardNumber not in found_other:
 									for art in found_card.holomem_arts:
-										%PopupSubMenu.add_item(Settings.trans("%s_ART_%s_NAME" % [found_card.cardNumber, art[0]]), 80)
-										%PopupSubMenu.set_item_metadata(current_index, {"holomem_number":found_card.cardNumber, "card_id":found_card.cardID, "art_index":art[0]})
+										%PopupSubMenu.add_item(Settings.trans("%s_ART_%s_NAME" % [found_card.cardNumber, art.index]), 80)
+										%PopupSubMenu.set_item_metadata(current_index, {"holomem_number":found_card.cardNumber, "card_id":found_card.cardID, "art_index":art.index})
 										current_index += 1
 							
 							if current_index > 0:
@@ -1616,6 +1616,10 @@ func _on_list_card_clicked(card_id):
 			
 			if life.size() < 6:
 				popup.add_item(tr("LIST_CHEER_LIFE"),603)
+		
+		"Support":
+			if currentAttached != null and all_occupied_zones().size() > 1:
+					popup.add_item(tr("LIST_ATTACHED_SUPPORT_ATTACH"),642)
 	
 	if currentFuda in [deck,archive,holopower] and actualCard.cardType != "Cheer" and revealed.size() < 10:
 		popup.add_item(tr("LIST_CARD_REVEAL"), 630)
@@ -1767,8 +1771,8 @@ func _popup_from_id(id, metadata = null):
 				actualCard = all_cards[metadata["card_id"]]
 				art_index = metadata["art_index"]
 			for art in actualCard.holomem_arts:
-				if art[0] == art_index:
-					oppSide.art_base_damage = art[2]
+				if art.index == art_index:
+					oppSide.art_base_damage = art.damage
 					break
 		
 		100: #Play to Back
@@ -1923,6 +1927,11 @@ func _popup_from_id(id, metadata = null):
 			var possibleZones = all_bloomable_zones(all_cards[currentCard])[Settings.bloomCode.Instant]
 			showZoneSelection(possibleZones)
 			currentPrompt = 624
+		642: #Attach Support From Attach
+			hideLookAt(false)
+			var possibleZones = all_occupied_zones()
+			showZoneSelection(possibleZones)
+			currentPrompt = 642
 		
 		901: #Goldfish Zone Damage
 			set_prompt("PROMPT_DAMAGE", 20, 3)

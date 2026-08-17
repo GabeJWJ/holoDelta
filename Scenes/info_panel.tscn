@@ -46,11 +46,6 @@ texture = ExtResource("4_onx1c")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="ScrollIconTimer" type="Timer" parent="InfoVBox/Icons/ScrollIcon" unique_id=459691171]
-unique_name_in_owner = true
-wait_time = 2.0
-one_shot = true
-
 [node name="LockVBox" type="VBoxContainer" parent="InfoVBox/Icons" unique_id=501657068]
 layout_mode = 1
 anchors_preset = 1

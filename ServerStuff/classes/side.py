@@ -1159,6 +1159,19 @@ class Side:
                     await self.tell_others("Attach Card", {"attachee_info" : await actualCard.to_dict(), "attach_to_info": await attachTo.to_dict()})
                 except IndexError:
                     return
+            case 642: #Attach Support From Attach
+                try:
+                    currentAttached = self.cards[data["currentAttached"]]
+                    await self.remove_from_attached(currentCard,currentAttached)
+                    actualCard = self.cards[currentCard]
+                    attachTo = self.cards[self.zones[chosenZone]]
+                    await self.send_message(self.player,"MESSAGE_ATTACHED_SUPPORT_ATTACH",{"attachName":actualCard.number+"_NAME","toName":attachTo.number+"_NAME","fromName":currentAttached.number + "_NAME"},
+                                                                                            {"toZone":chosenZone,"fromZone":await self.find_what_zone(currentAttached.id)})
+                    await attachTo.attach(actualCard)
+                    await self.tell_player("Attach Card", {"attachee" : actualCard.id, "attach_to": attachTo.id})
+                    await self.tell_others("Attach Card", {"attachee_info" : await actualCard.to_dict(), "attach_to_info": await attachTo.to_dict()})
+                except IndexError:
+                    return
             case _:
                 pass
     

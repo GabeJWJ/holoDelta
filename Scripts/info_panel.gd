@@ -70,7 +70,7 @@ func _new_info(top_card, card_to_show) -> void:
 			cheer_result[attached_card.cheer_color].append(preview)
 		else:
 			showing_card_ids.append(attached_card.cardID)
-			result.append([attached_card.cardFront,attached_card.full_desc()])
+			result.append([attached_card.cardFront,attached_card.full_desc(),attached_card])
 	
 	#If at least 5 cheer of the same color, condense into one cheer icon with number
 	for cheer_color in cheer_result:
