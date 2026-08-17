@@ -71,7 +71,10 @@ func shuffle() -> void:
 	emit_signal("shuffled")
 
 func archive_texture_sanity() -> void:
-	update_back(cardList[0].cardFront.get_image())
+	if cardList[0].cardFront:
+		update_back(cardList[0].cardFront.get_image())
+	else:
+		%ArchiveSanityFixTimer.start()
 
 func _on_static_body_3d_input_event(_camera, event, _position, _normal, _shape_idx) -> void:
 	#Fires when the static body 3d (a bounding rectangle for the fuda) is clicked
