@@ -2058,7 +2058,7 @@ func _on_reject_damage(card_id):
 func _unhandled_key_input(event):
 	if event.is_action_pressed("Draw") and currentPrompt == -1 and is_your_side and can_do_things and deck.cardList.size() > 0:
 		send_command("Popup Command",{"command_id":200})
-	elif event.is_action_pressed("Cheer") and currentPrompt == -1 and is_your_side and can_do_things and all_occupied_zones().size() > 0:
+	elif event.is_action_pressed("Cheer") and currentPrompt == -1 and is_your_side and can_do_things and cheerDeck.cardList.size() > 0 and all_occupied_zones().size() > 0:
 		send_command("Popup Command",{"command_id":300})
 	elif event.is_action_pressed("Reset") and currentPrompt == -1 and is_your_side and can_do_things:
 		for zone in zones:

@@ -15001,3 +15001,21 @@ msgstr ""
 msgid "hEB01-025_EFFECT"
 msgstr ""
 
+msgid "hY01-014_NAME"
+msgstr ""
+
+msgid "hY02-012_NAME"
+msgstr ""
+
+msgid "hY03-016_NAME"
+msgstr ""
+
+msgid "hY04-013_NAME"
+msgstr ""
+
+msgid "hY05-011_NAME"
+msgstr ""
+
+msgid "hY06-011_NAME"
+msgstr ""
+

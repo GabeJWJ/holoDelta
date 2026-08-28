@@ -10,16 +10,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2026-07-26 23:26\n"
+"PO-Revision-Date: 2026-08-27 21:02\n"
 
 msgid "EXTRA_BUZZ"
-msgstr "Quand cet Holomem est Inconscient, perdez 2 VIE"
+msgstr "Lorsque cette Holomem est mise Inconsciente, perdez 2 VIES."
 
 msgid "EXTRA_UNLIM"
-msgstr "Vous pouvez mettre n'importe quel nombre de copies de cet Holomem dans votre Deck"
+msgstr "Vous pouvez mettre n'importe quel nombre de copies de cette Holomem dans votre Deck."
 
 msgid "EXTRA_EXTRANAME"
-msgstr "Cette {cardType} est considéré comme <{extraName}>"
+msgstr "Cette {cardType} est considérée comme <{extraName}>"
 
 msgid "Blue"
 msgstr "Bleu"
@@ -367,7 +367,10 @@ msgid "AI Koyori"
 msgstr ""
 
 msgid "HoloWitch"
-msgstr "HoloSorcière"
+msgstr "HoloWitch"
+
+msgid "Lamy'sAlcohol"
+msgstr ""
 
 msgid "Languages"
 msgstr "Langues"
@@ -379,7 +382,7 @@ msgid "Alcohol"
 msgstr "Alcool"
 
 msgid "AnimalEars"
-msgstr "OreilleAnimal"
+msgstr "Kemomimi"
 
 msgid "Art"
 msgstr ""
@@ -445,7 +448,7 @@ msgid "Sea"
 msgstr "Océan"
 
 msgid "SecretSocietyholoX"
-msgstr "SociétéSecrèteHoloX"
+msgstr "HoloX"
 
 msgid "Song"
 msgstr "Chanson"
@@ -7648,7 +7651,7 @@ msgid "hBP05-003_SKILL_NAME"
 msgstr "La légende de Polka"
 
 msgid "hBP05-003_SKILL_EFFECT"
-msgstr "[1/Tour] Piochez dans votre Deck jusqu'à ce que vous ayez dans votre Main autant de cartes que de ⟨Zain⟩ sur votre Scène. Vous ne pouvez pas piocher plus de 4 cartes."
+msgstr "[1/Tour] Piochez de votre Deck jusqu'à ce que vous ayez dans votre Main autant de cartes que de ⟨Zain⟩ sur votre Scène. Vous ne pouvez pas piochez plus de 4 cartes."
 
 msgid "hBP05-003_SPSKILL_NAME"
 msgstr "Experience Réussie~ !!!"
@@ -8608,13 +8611,13 @@ msgid "hBP05-070_ART_0_NAME"
 msgstr "Bienvenue au café Fubuki"
 
 msgid "hBP05-070_ART_0_EFFECT"
-msgstr "Puissance : 60, +50 vs Bleu Vous pouvez choisir n'importe quel nombre de [Mascottes et Fans] avec #PersoShirakami de votre Archive et les attacher à vos Holomems."
+msgstr "Vous pouvez choisir n'importe quel nombre de [Mascottes et Fans] avec #PersoShirakami de votre Archive et les attacher à vos Holomems."
 
 msgid "hBP05-070_ART_1_NAME"
 msgstr "Roi et propriétaire d'un café"
 
 msgid "hBP05-070_ART_1_EFFECT"
-msgstr "Puissance : 100, +50 vs Bleu Si votre Oshi est ⟨Shirakami Fubuki⟩ ou de couleur Jaune, et qu'il y a 4 [Outils, Mascottes ou Fans] ou plus sur votre Scène, cet Art gagne +100 dégâts."
+msgstr "Si votre Oshi est ⟨Shirakami Fubuki⟩ ou de couleur Jaune, et qu'il y a 4 [Outils, Mascottes ou Fans] ou plus sur votre Scène, cet Art gagne +100 dégâts."
 
 msgid "hBP05-071_NAME"
 msgstr "Inugami Korone"
@@ -8716,7 +8719,7 @@ msgid "hSD10-005_COLLAB_NAME"
 msgstr "La DJ et pilote de FLOW GLOW"
 
 msgid "hSD10-005_COLLAB_EFFECT"
-msgstr "Vous pouvez mettre 1~3 Holomems avec #FlOW GLOW de votre Archive sous votre Deck. Si vous avez remis 3 Holomems, vous pouvez attacher la première carte de votre Deck de Cheers à l'une de vos Holomems."
+msgstr "Vous pouvez mettre 1~3 Holomems avec #FLOW GLOW de votre Archive sous votre Deck. Si vous avez remis 3 Holomems, vous pouvez attacher la première carte de votre Deck de Cheers à l'une de vos Holomems."
 
 msgid "hSD10-006_NAME"
 msgstr "Rindo Chihaya"
@@ -8941,7 +8944,7 @@ msgid "hBP06-014_ART_0_NAME"
 msgstr "Rinascimento des couleurs"
 
 msgid "hBP06-014_ART_0_EFFECT"
-msgstr "[Position Centrale] Pendant ce tour, les Arts de votre Holomem Collab avec #Art gagnent +50 dégâts, et le coût en Cheer de cet Art est réduit de 1 Cheer Neutre."
+msgstr "[Position Centrale] Pendant ce tour, les Arts de votre Holomem Collab avec #Art gagnent +50 dégâts, et le coût en Cheer des Arts de l'Holomem Collab sont réduits de 1 Cheer Neutre."
 
 msgid "hBP06-014_GIFT_NAME"
 msgstr "Atelier de tissage de rêves"
@@ -11803,7 +11806,8 @@ msgid "hBP07-109_NAME"
 msgstr "Kronies"
 
 msgid "hBP07-109_EFFECT"
-msgstr "L'Holomem avec cette Mascotte attachée gagne +10 dégâts.  Ce Fan ne peut être attaché qu'à ⟨Ouro Kronii⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à une Holomem."
+msgstr "L'Holomem avec ce Fan attaché gagne +10 dégâts.  \n\n"
+"Ce Fan ne peut être attaché qu'à ⟨Ouro Kronii⟩, et vous pouvez attacher n'importe quel nombre de ce Fan à une Holomem."
 
 msgid "hBP07-110_NAME"
 msgstr "Nekko"
@@ -14224,5 +14228,797 @@ msgid "hEB01-026_NAME"
 msgstr ""
 
 msgid "hEB01-026_EFFECT"
+msgstr ""
+
+msgid "hBP09-002_NAME"
+msgstr ""
+
+msgid "hBP09-002_STAGESKILL_NAME"
+msgstr ""
+
+msgid "hBP09-002_STAGESKILL_EFFECT"
+msgstr ""
+
+msgid "hBP09-002_SKILL_NAME"
+msgstr ""
+
+msgid "hBP09-002_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP09-007_NAME"
+msgstr ""
+
+msgid "hBP09-007_STAGESKILL_NAME"
+msgstr ""
+
+msgid "hBP09-007_STAGESKILL_EFFECT"
+msgstr ""
+
+msgid "hBP09-007_SKILL_NAME"
+msgstr ""
+
+msgid "hBP09-007_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP09-008_NAME"
+msgstr ""
+
+msgid "hBP09-008_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-008_GIFT_NAME"
+msgstr ""
+
+msgid "hBP09-008_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP09-026_NAME"
+msgstr ""
+
+msgid "hBP09-026_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-026_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP09-026_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP09-041_NAME"
+msgstr ""
+
+msgid "hBP09-041_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-041_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-041_GIFT_NAME"
+msgstr ""
+
+msgid "hBP09-041_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP09-051_NAME"
+msgstr ""
+
+msgid "hBP09-051_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-051_ART_1_NAME"
+msgstr ""
+
+msgid "hBP09-051_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP09-060_NAME"
+msgstr ""
+
+msgid "hBP09-060_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-060_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-060_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP09-060_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP09-066_NAME"
+msgstr ""
+
+msgid "hBP09-066_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-066_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP09-066_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP09-073_NAME"
+msgstr ""
+
+msgid "hBP09-073_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-073_GIFT_NAME"
+msgstr ""
+
+msgid "hBP09-073_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP09-077_NAME"
+msgstr ""
+
+msgid "hBP09-077_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-077_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP09-077_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP09-085_NAME"
+msgstr ""
+
+msgid "hBP09-085_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-085_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP09-085_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP09-087_NAME"
+msgstr ""
+
+msgid "hBP09-087_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-087_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-087_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP09-087_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP09-090_NAME"
+msgstr ""
+
+msgid "hBP09-090_EFFECT"
+msgstr ""
+
+msgid "hBP09-099_NAME"
+msgstr ""
+
+msgid "hBP09-099_EFFECT"
+msgstr ""
+
+msgid "hBP09-110_NAME"
+msgstr ""
+
+msgid "hBP09-110_EFFECT"
+msgstr ""
+
+msgid "hEB01-006_NAME"
+msgstr ""
+
+msgid "hEB01-006_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-006_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-006_GIFT_NAME"
+msgstr ""
+
+msgid "hEB01-006_GIFT_EFFECT"
+msgstr ""
+
+msgid "hEB01-008_NAME"
+msgstr ""
+
+msgid "hEB01-008_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-008_BLOOM_NAME"
+msgstr ""
+
+msgid "hEB01-008_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hEB01-010_NAME"
+msgstr ""
+
+msgid "hEB01-010_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-010_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-010_BLOOM_NAME"
+msgstr ""
+
+msgid "hEB01-010_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hEB01-011_NAME"
+msgstr ""
+
+msgid "hEB01-011_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-011_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-022_NAME"
+msgstr ""
+
+msgid "hEB01-022_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-022_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-022_BLOOM_NAME"
+msgstr ""
+
+msgid "hEB01-022_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hEB01-027_NAME"
+msgstr ""
+
+msgid "hEB01-027_EFFECT"
+msgstr ""
+
+msgid "hEB01-029_NAME"
+msgstr ""
+
+msgid "hEB01-029_EFFECT"
+msgstr ""
+
+msgid "hEB01-032_NAME"
+msgstr ""
+
+msgid "hEB01-032_EFFECT"
+msgstr ""
+
+msgid "hEB01-016_NAME"
+msgstr ""
+
+msgid "hEB01-016_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-016_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-033_NAME"
+msgstr ""
+
+msgid "hEB01-033_EFFECT"
+msgstr ""
+
+msgid "hEB01-031_NAME"
+msgstr ""
+
+msgid "hEB01-031_EFFECT"
+msgstr ""
+
+msgid "hEB01-030_NAME"
+msgstr ""
+
+msgid "hEB01-030_EFFECT"
+msgstr ""
+
+msgid "hEB01-024_NAME"
+msgstr ""
+
+msgid "hEB01-024_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-024_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-024_GIFT_NAME"
+msgstr ""
+
+msgid "hEB01-024_GIFT_EFFECT"
+msgstr ""
+
+msgid "hEB01-023_NAME"
+msgstr ""
+
+msgid "hEB01-023_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-023_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-023_BLOOM_NAME"
+msgstr ""
+
+msgid "hEB01-023_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hEB01-021_NAME"
+msgstr ""
+
+msgid "hEB01-021_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-021_COLLAB_NAME"
+msgstr ""
+
+msgid "hEB01-021_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hEB01-019_NAME"
+msgstr ""
+
+msgid "hEB01-019_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-019_COLLAB_NAME"
+msgstr ""
+
+msgid "hEB01-019_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hEB01-017_NAME"
+msgstr ""
+
+msgid "hEB01-017_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-017_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-017_BLOOM_NAME"
+msgstr ""
+
+msgid "hEB01-017_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hEB01-015_NAME"
+msgstr ""
+
+msgid "hEB01-015_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-015_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-014_NAME"
+msgstr ""
+
+msgid "hEB01-014_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-014_BLOOM_NAME"
+msgstr ""
+
+msgid "hEB01-014_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hEB01-009_NAME"
+msgstr ""
+
+msgid "hEB01-009_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-009_ART_0_EFFECT"
+msgstr ""
+
+msgid "hEB01-009_COLLAB_NAME"
+msgstr ""
+
+msgid "hEB01-009_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hEB01-005_NAME"
+msgstr ""
+
+msgid "hEB01-005_ART_0_NAME"
+msgstr ""
+
+msgid "hEB01-005_COLLAB_NAME"
+msgstr ""
+
+msgid "hEB01-005_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP09-004_NAME"
+msgstr ""
+
+msgid "hBP09-004_STAGESKILL_NAME"
+msgstr ""
+
+msgid "hBP09-004_STAGESKILL_EFFECT"
+msgstr ""
+
+msgid "hBP09-004_SKILL_NAME"
+msgstr ""
+
+msgid "hBP09-004_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP09-005_NAME"
+msgstr ""
+
+msgid "hBP09-005_STAGESKILL_NAME"
+msgstr ""
+
+msgid "hBP09-005_STAGESKILL_EFFECT"
+msgstr ""
+
+msgid "hBP09-005_SKILL_NAME"
+msgstr ""
+
+msgid "hBP09-005_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP09-010_NAME"
+msgstr ""
+
+msgid "hBP09-010_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-010_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-010_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP09-010_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP09-012_NAME"
+msgstr ""
+
+msgid "hBP09-012_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-012_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-012_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP09-012_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP09-014_NAME"
+msgstr ""
+
+msgid "hBP09-014_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-014_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-014_GIFT_NAME"
+msgstr ""
+
+msgid "hBP09-014_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP09-016_NAME"
+msgstr ""
+
+msgid "hBP09-016_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-016_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP09-016_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP09-019_NAME"
+msgstr ""
+
+msgid "hBP09-019_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-019_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-019_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP09-019_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP09-024_NAME"
+msgstr ""
+
+msgid "hBP09-024_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-024_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-024_GIFT_NAME"
+msgstr ""
+
+msgid "hBP09-024_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP09-029_NAME"
+msgstr ""
+
+msgid "hBP09-029_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-029_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-031_NAME"
+msgstr ""
+
+msgid "hBP09-031_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-031_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-031_GIFT_NAME"
+msgstr ""
+
+msgid "hBP09-031_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP09-032_NAME"
+msgstr ""
+
+msgid "hBP09-032_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-032_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP09-032_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP09-042_NAME"
+msgstr ""
+
+msgid "hBP09-042_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-042_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-042_GIFT_NAME"
+msgstr ""
+
+msgid "hBP09-042_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP09-045_NAME"
+msgstr ""
+
+msgid "hBP09-045_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-045_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-045_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP09-045_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP09-049_NAME"
+msgstr ""
+
+msgid "hBP09-049_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-049_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-049_GIFT_NAME"
+msgstr ""
+
+msgid "hBP09-049_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP09-055_NAME"
+msgstr ""
+
+msgid "hBP09-055_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-055_ART_1_NAME"
+msgstr ""
+
+msgid "hBP09-055_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP09-058_NAME"
+msgstr ""
+
+msgid "hBP09-058_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-058_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-058_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP09-058_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP09-064_NAME"
+msgstr ""
+
+msgid "hBP09-064_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-064_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-065_NAME"
+msgstr ""
+
+msgid "hBP09-065_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-065_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP09-065_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP09-076_NAME"
+msgstr ""
+
+msgid "hBP09-076_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-076_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-076_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP09-076_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP09-081_NAME"
+msgstr ""
+
+msgid "hBP09-081_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-081_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-081_GIFT_NAME"
+msgstr ""
+
+msgid "hBP09-081_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP09-082_NAME"
+msgstr ""
+
+msgid "hBP09-082_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-082_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP09-082_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP09-083_NAME"
+msgstr ""
+
+msgid "hBP09-083_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-083_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-083_GIFT_NAME"
+msgstr ""
+
+msgid "hBP09-083_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP09-086_NAME"
+msgstr ""
+
+msgid "hBP09-086_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-086_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP09-086_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP09-088_NAME"
+msgstr ""
+
+msgid "hBP09-088_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-088_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-088_GIFT_NAME"
+msgstr ""
+
+msgid "hBP09-088_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP09-089_NAME"
+msgstr ""
+
+msgid "hBP09-089_ART_0_NAME"
+msgstr ""
+
+msgid "hBP09-089_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP09-089_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP09-089_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP09-093_NAME"
+msgstr ""
+
+msgid "hBP09-093_EFFECT"
+msgstr ""
+
+msgid "hBP09-095_NAME"
+msgstr ""
+
+msgid "hBP09-095_EFFECT"
+msgstr ""
+
+msgid "hBP09-105_NAME"
+msgstr ""
+
+msgid "hBP09-105_EFFECT"
+msgstr ""
+
+msgid "hEB01-025_NAME"
+msgstr ""
+
+msgid "hEB01-025_EFFECT"
+msgstr ""
+
+msgid "hY01-014_NAME"
+msgstr ""
+
+msgid "hY02-012_NAME"
+msgstr ""
+
+msgid "hY03-016_NAME"
+msgstr ""
+
+msgid "hY04-013_NAME"
+msgstr ""
+
+msgid "hY05-011_NAME"
+msgstr ""
+
+msgid "hY06-011_NAME"
 msgstr ""
 
