@@ -6,6 +6,10 @@ extends Node2D
 
 @export var id:int
 
+var filter_info = {"holomem" : false, "holomem_level" : null, "holomem_color" : null, "holomem_name" : null, "holomem_tag" : [], "holomem_extra" : null,
+						"support" : false, "support_type" : null, "support_tag" : [],
+						"cheer" : false, "cheer_color" : null }
+
 signal pressed
 signal mouse_entered
 signal mouse_exited
