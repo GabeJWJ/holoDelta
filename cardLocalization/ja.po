@@ -15679,3 +15679,21 @@ msgstr "Pemaloe"
 msgid "hBP09-111_EFFECT"
 msgstr "相手のターンで、このファンが付いているホロメンがダウンした時、このファンが付いているホロメンのエール1枚を自分の他のホロメンに付け替える。\n\nこのファンは、自分の〈カエラ・コヴァルスキア〉だけに付けられ、1人につき何枚でも付けられる。"
 
+msgid "hY01-015_NAME"
+msgstr "白エール"
+
+msgid "hY02-013_NAME"
+msgstr "緑エール"
+
+msgid "hY03-017_NAME"
+msgstr "赤エール"
+
+msgid "hY04-014_NAME"
+msgstr "青エール"
+
+msgid "hY05-012_NAME"
+msgstr "紫エール"
+
+msgid "hY06-012_NAME"
+msgstr "黄エール"
+

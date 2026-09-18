@@ -52,7 +52,7 @@ timers/tooltip_delay_sec=0.0
 
 texture={
 &"compress/high_quality": true,
-&"compress/mode": 4,
+&"compress/mode": 1,
 &"compress/normal_map": 2,
 &"mipmaps/generate": true,
 &"mipmaps/limit": 1

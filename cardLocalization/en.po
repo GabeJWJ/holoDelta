@@ -15679,3 +15679,21 @@ msgstr "Pemaloe"
 msgid "hBP09-111_EFFECT"
 msgstr "During your opponent's turn, when the holomem this fan is attached to is downed, you may reattach 1 cheer from this holomem to your other holomem.\n\nYou may only attach this fan to your <Kaela Kovalskia>, and you may attach any number of this fan per holomem."
 
+msgid "hY01-015_NAME"
+msgstr "White Cheer"
+
+msgid "hY02-013_NAME"
+msgstr "Green Cheer"
+
+msgid "hY03-017_NAME"
+msgstr "Red Cheer"
+
+msgid "hY04-014_NAME"
+msgstr "Blue Cheer"
+
+msgid "hY05-012_NAME"
+msgstr "Purple Cheer"
+
+msgid "hY06-012_NAME"
+msgstr "Yellow Cheer"
+

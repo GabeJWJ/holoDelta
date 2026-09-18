@@ -297,7 +297,7 @@ func _on_deck_creation_pressed():
 #region Setup
 
 func _attempt_download_zip():
-	%PopupProgressBar.max_value = 60000000 #Yeah I'm just hard-coding that it expects ~60 MB cuz getting the actual number is tricky
+	%PopupProgressBar.max_value = 160000000 #Yeah I'm just hard-coding that it expects ~160 MB cuz getting the actual number is tricky
 	%Failure.visible = false
 	%Update.visible = false
 	%Popup.visible = true
