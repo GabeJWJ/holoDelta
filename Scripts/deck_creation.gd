@@ -57,6 +57,7 @@ var tag_order = ["JP", "ID", "EN", "DEV_IS",
 	"IDGen1", "IDGen2", "IDGen3",
 	"Myth", "Council", "Promise", "Advent", "Justice",
 	"ReGloss", "FLOWGLOW",
+	"AsobiMawariTai",
 	"AnimalEars", "Art", "Bird", "Cooking", "Food", "HalfElf", "HoloWitch", "Kaela'sArms", "Lamy'sAlcohol",
 	"Languages", "Magic", "Sea", "ShirakamiCharacter", "Shooter", "Song", "Baby", "Alcohol", "Summer", "BuzzMerch"]
 

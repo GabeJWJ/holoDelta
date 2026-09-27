@@ -42,6 +42,7 @@ var oshiCard
 var hand = []
 var life = []
 var revealed = []
+const REVEALED_LIMIT = 15
 
 @export var oshi:Array
 @export var deckList:Array
@@ -564,7 +565,7 @@ func get_real_card(card_dict, back, temp=false):
 
 func reveal_card(card_id):
 	var actualCard = all_cards[card_id]
-	actualCard.position = Vector2(300,100*revealed.size() - 400)
+	actualCard.position = Vector2(300,80*revealed.size() - 400)
 	actualCard.reparent(cardLayers["Above"],true)
 	actualCard.visible = true
 	revealed.append(card_id)
@@ -1469,8 +1470,9 @@ func _on_deck_clicked():
 		popup.add_item(tr("DECK_ARCHIVE"),202)
 		popup.add_item(tr("DECK_ARCHIVEX"),203)
 		popup.add_item(tr("DECK_HOLOPOWER"),204)
-		if revealed.size() < 10:
+		if revealed.size() < REVEALED_LIMIT:
 			popup.add_item(tr("DECK_REVEAL"),205)
+			popup.add_item(tr("DECK_REVEALX"),207)
 		popup.add_item(tr("DECK_DRAWBOTTOM"),206)
 		
 		popup.add_separator()
@@ -1484,6 +1486,10 @@ func _on_deck_clicked():
 		if can_undo_shuffle_hand != null:
 			popup.add_separator()
 			popup.add_item(tr("DECK_MULLIGAN_UNDO"), 251)
+		
+		if revealed.size() > 0:
+			popup.add_separator()
+			popup.add_item(tr("DECK_REVEALEDSHUFFLE"), 260)
 		
 		if !get_parent().rps:
 			popup.add_separator()
@@ -1545,7 +1551,7 @@ func _on_holopower_clicked():
 		popup.add_item(tr("HOLOPOWER_ARCHIVE"),500)
 		popup.add_item(tr("HOLOPOWER_ARCHIVEX"),501)
 		
-		if revealed.size() < 10:
+		if revealed.size() < REVEALED_LIMIT:
 			popup.add_item(tr("HOLOPOWER_REVEAL"),505)
 		
 		popup.add_separator()
@@ -1621,7 +1627,7 @@ func _on_list_card_clicked(card_id):
 			if currentAttached != null and all_occupied_zones().size() > 1:
 					popup.add_item(tr("LIST_ATTACHED_SUPPORT_ATTACH"),642)
 	
-	if currentFuda in [deck,archive,holopower] and actualCard.cardType != "Cheer" and revealed.size() < 10:
+	if currentFuda in [deck,archive,holopower] and actualCard.cardType != "Cheer" and revealed.size() < REVEALED_LIMIT:
 		popup.add_item(tr("LIST_CARD_REVEAL"), 630)
 	
 	if popup.item_count > 0:
@@ -1824,6 +1830,9 @@ func _popup_from_id(id, metadata = null):
 		203: #Mill X
 			set_prompt(tr("PROMPT_DECK_ARCHIVE") + "\nX=",3)
 			currentPrompt = 203
+		207: #Reveal X
+			set_prompt(tr("PROMPT_DECK_REVEAL") + "\nX=")
+			currentPrompt = 207
 		250: #Shuffle Hand Into Deck
 			can_undo_shuffle_hand = hand.duplicate()
 		295: #Take an Extra Turn

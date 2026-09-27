@@ -297,7 +297,7 @@ func _on_deck_creation_pressed():
 #region Setup
 
 func _attempt_download_zip():
-	%PopupProgressBar.max_value = 160000000 #Yeah I'm just hard-coding that it expects ~160 MB cuz getting the actual number is tricky
+	%PopupProgressBar.max_value = 180000000 #Yeah I'm just hard-coding that it expects ~180 MB cuz getting the actual number is tricky
 	%Failure.visible = false
 	%Update.visible = false
 	%Popup.visible = true
@@ -1622,6 +1622,7 @@ func _not_real():
 	tr("MESSAGE_HOLOPOWER_REVEAL")
 	tr("MESSAGE_DECK_MULLIGAN")
 	tr("MESSAGE_DECK_UNDOMULLIGAN")
+	tr("MESSAGE_DECK_REVEALEDSHUFFLE")
 	tr("MESSAGE_DECK_SEARCH")
 	tr("MESSAGE_DECK_SHUFFLE")
 	tr("MESSAGE_CHEERDECK_SEARCH")
@@ -1711,6 +1712,7 @@ func _not_real():
 	tr("YOU_MESSAGE_HOLOPOWER_REVEAL")
 	tr("YOU_MESSAGE_DECK_MULLIGAN")
 	tr("YOU_MESSAGE_DECK_UNDOMULLIGAN")
+	tr("YOU_MESSAGE_DECK_REVEALEDSHUFFLE")
 	tr("YOU_MESSAGE_DECK_SEARCH")
 	tr("YOU_MESSAGE_DECK_SHUFFLE")
 	tr("YOU_MESSAGE_CHEERDECK_SEARCH")

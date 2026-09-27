@@ -364,6 +364,21 @@ msgstr ""
 msgid "AI Koyori"
 msgstr ""
 
+msgid "Achichi Mela"
+msgstr ""
+
+msgid "Sorashina Sopia"
+msgstr ""
+
+msgid "Suzuna Tsuzuri"
+msgstr ""
+
+msgid "Hyakuto Kyoko"
+msgstr ""
+
+msgid "AsobiMawariTai"
+msgstr ""
+
 msgid "HoloWitch"
 msgstr ""
 
