@@ -2,6 +2,8 @@
 #Pulls double duty as the cards you see in game and the cards in the deckbuilder
 
 extends Node2D
+class_name Card
+
 
 @export var cardID:int:
 	get:

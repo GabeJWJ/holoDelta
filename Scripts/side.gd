@@ -31,6 +31,7 @@ var currentAttached = null
 var currentPrompt = -1
 var currentAttacking = ["", ""]
 var playing = null
+var revealed_life = null
 
 @onready var zones = [[centerZone,-1], [collabZone,-1], [backZone1,-1], [backZone2,-1], [backZone3,-1], [backZone4,-1], [backZone5,-1], [backZone6,-1]]
 
@@ -445,6 +446,8 @@ func specialStart4(life_info,ist):
 	%TurnCount.text = tr("TURN_COUNT").format({"turn": turn})
 	%TurnCount.visible = true
 	
+	var LIFE_MAX_CONSTANT = max(len(life_info), 6)
+	var LIFE_BETWEEN_CONSTANT = 318 / LIFE_MAX_CONSTANT
 	for index in range(len(life_info)):
 		var newLife = all_cards[int(life_info[index])]
 		cheerDeck.cardList.erase(newLife)
@@ -452,7 +455,7 @@ func specialStart4(life_info,ist):
 		if index > 0:
 			move_behind(newLife,life[index-1])
 		newLife.trulyHide()
-		newLife.position = Vector2(-960,-145-(53*(6-oshiCard.life+index)))
+		newLife.position = Vector2(-955,-122-(LIFE_BETWEEN_CONSTANT*(LIFE_MAX_CONSTANT-oshiCard.life+index)))
 		newLife.rest()
 		newLife.visible = true
 	
@@ -481,6 +484,8 @@ func specialStart4_fake(zone_info):
 	$CanvasLayer/Ready.visible = false
 	$CanvasLayer/OpponentLabel.visible = false
 	
+	var LIFE_MAX_CONSTANT = max(oshiCard.life, 6)
+	var LIFE_BETWEEN_CONSTANT = 318 / LIFE_MAX_CONSTANT
 	for i in range(oshiCard.life):
 		cheerDeck.cardList.pop_front()
 		var newLife = create_fake_card(cheerBack)
@@ -488,7 +493,7 @@ func specialStart4_fake(zone_info):
 		if i > 0:
 			move_behind(newLife,life[i-1])
 		newLife.trulyHide()
-		newLife.position = Vector2(-960,-145-(53*(6-oshiCard.life+i)))
+		newLife.position = Vector2(-955,-122-(LIFE_BETWEEN_CONSTANT*(LIFE_MAX_CONSTANT-oshiCard.life+i)))
 		newLife.rest()
 		newLife.visible = true
 	
@@ -610,6 +615,7 @@ func reveal_fake_cheer(card_info):
 func reveal_fake_life(card_info):
 	var actualCard = get_real_card(card_info, cheerBack)
 	actualCard.reparent(cardLayers["Above"],true)
+	revealed_life = actualCard.cardID
 	var oldCard = life.pop_front()
 	actualCard.position = oldCard.position
 	oldCard.queue_free()
@@ -1385,12 +1391,14 @@ func _on_card_clicked(card_id : int) -> void:
 			"Cheer":
 				if !actualCard.faceDown and actualCard.attachedTo == currentCard:
 					popup.add_item(tr("CHEER_ATTACH"),62)
+					popup.add_item(tr("CHEER_BOTTOMCHEERDECK"),64)
 		
 		if popup.item_count > 0 and actualCard.cardType != "Oshi" and playing != currentCard:
 			popup.add_separator()
 		
 		if life.size() > 0 and actualCard == life[0] and all_occupied_zones().size() > 0:
 			popup.add_item(tr("CARD_CHEER_LIFE_REVEAL"), 30)
+			popup.add_item(tr("CARD_CHEER_LIFE_REVEAL_ONLY"),31)
 		
 		if find_what_zone(currentCard):
 			var serf = false
@@ -1707,6 +1715,9 @@ func _popup_from_id(id, metadata = null):
 			var possibleZones = all_occupied_zones()
 			showZoneSelection(possibleZones,false)
 			currentPrompt = 30
+		31: #Reveal Life Only
+			if life.size() <= 1:
+				_show_loss_consent("LIFE")
 		40: #Play to Back from Revealed
 			var possibleZones = all_unoccupied_back_zones()
 			showZoneSelection(possibleZones)
@@ -2154,7 +2165,7 @@ func _move_sfx():
 
 func _is_card_onstage(card_to_check):
 	var actual_card = all_cards[int(card_to_check)]
-	return actual_card.onstage or int(card_to_check) in revealed or int(card_to_check) == playing
+	return actual_card.onstage or int(card_to_check) in revealed or int(card_to_check) == playing or int(card_to_check) == revealed_life
 
 
 func send_command(command:String, data=null) -> void:

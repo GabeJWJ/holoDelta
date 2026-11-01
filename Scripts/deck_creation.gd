@@ -59,7 +59,7 @@ var tag_order = ["JP", "ID", "EN", "DEV_IS",
 	"ReGloss", "FLOWGLOW",
 	"AsobiMawariTai",
 	"AnimalEars", "Art", "Bird", "Cooking", "Food", "HalfElf", "HoloWitch", "Kaela'sArms", "Lamy'sAlcohol",
-	"Languages", "Magic", "Sea", "ShirakamiCharacter", "Shooter", "Song", "Baby", "Alcohol", "Summer", "BuzzMerch"]
+	"Languages", "Magic", "Sea", "ShirakamiCharacter", "Shooter", "Song", "Baby", "Alcohol", "Summer", "BuzzMerch", "Dinosaur", "Culture"]
 
 #Constants filled up at runtime. So the name select isn't giving you options that aren't in the game for example
 var oshi_colors = []
