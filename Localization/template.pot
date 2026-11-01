@@ -1,4 +1,4 @@
-# LANGUAGE translation for EXECUTABLE_NAME for the following files:
+# LANGUAGE translation for holoDelta for the following files:
 # res://Scenes/board.tscn
 # res://Scenes/deck_list.tscn
 # res://Scenes/sleeve_select.tscn
@@ -49,7 +49,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: EXECUTABLE_NAME\n"
+"Project-Id-Version: holoDelta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
@@ -2456,5 +2456,5 @@ msgstr ""
 msgid "GOLDFISH_NOTES_THIS_TURN"
 msgstr ""
 
-msgid "EXECUTABLE_NAME"
+msgid "holoDelta"
 msgstr ""
