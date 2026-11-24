@@ -456,6 +456,12 @@ func showNotice():
 	tween.tween_interval(0.2)
 	tween.tween_property($Notice,"modulate",Color(1,1,1,0),0.1)
 
+func showDeclare():
+	var tween = get_tree().create_tween()
+	tween.tween_property($Declare,"modulate",Color(1,1,1,1),0.1)
+	tween.tween_interval(0.2)
+	tween.tween_property($Declare,"modulate",Color(1,1,1,0),0.1)
+
 func hitAndBack(hitPos):
 	var differencePos = hitPos - position
 	var tween = get_tree().create_tween()

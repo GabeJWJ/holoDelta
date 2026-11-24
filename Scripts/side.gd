@@ -45,6 +45,11 @@ var life = []
 var revealed = []
 const REVEALED_LIMIT = 15
 
+var LIFE_MAX_CONSTANT:int
+var LIFE_BETWEEN_CONSTANT:int:
+	get:
+		return 318 / LIFE_MAX_CONSTANT
+
 @export var oshi:Array
 @export var deckList:Array
 @export var cheerDeckList:Array
@@ -446,8 +451,7 @@ func specialStart4(life_info,ist):
 	%TurnCount.text = tr("TURN_COUNT").format({"turn": turn})
 	%TurnCount.visible = true
 	
-	var LIFE_MAX_CONSTANT = max(len(life_info), 6)
-	var LIFE_BETWEEN_CONSTANT = 318 / LIFE_MAX_CONSTANT
+	LIFE_MAX_CONSTANT = max(len(life_info), 6)
 	for index in range(len(life_info)):
 		var newLife = all_cards[int(life_info[index])]
 		cheerDeck.cardList.erase(newLife)
@@ -484,8 +488,7 @@ func specialStart4_fake(zone_info):
 	$CanvasLayer/Ready.visible = false
 	$CanvasLayer/OpponentLabel.visible = false
 	
-	var LIFE_MAX_CONSTANT = max(oshiCard.life, 6)
-	var LIFE_BETWEEN_CONSTANT = 318 / LIFE_MAX_CONSTANT
+	LIFE_MAX_CONSTANT = max(oshiCard.life, 6)
 	for i in range(oshiCard.life):
 		cheerDeck.cardList.pop_front()
 		var newLife = create_fake_card(cheerBack)
@@ -622,11 +625,11 @@ func reveal_fake_life(card_info):
 
 func add_to_life(card_id):
 	var actualCard = all_cards[card_id]
-	if life.size() < 6 and actualCard.cardType == "Cheer":
+	if life.size() < LIFE_MAX_CONSTANT and actualCard.cardType == "Cheer":
 		life.insert(0, actualCard)
 		actualCard.reparent(cardLayers["Cheer"],true)
 		actualCard.trulyHide()
-		actualCard.position = Vector2(-960,-145-(53*(6-life.size())))
+		actualCard.position = Vector2(-955,-122-(LIFE_BETWEEN_CONSTANT*(LIFE_MAX_CONSTANT-life.size())))
 		actualCard.rest()
 		actualCard.visible = true
 		for i in range(life.size()):
@@ -634,11 +637,11 @@ func add_to_life(card_id):
 				move_behind(life[i],life[i-1])
 
 func add_fake_to_life():
-	if life.size() < 6:
+	if life.size() < LIFE_MAX_CONSTANT:
 		var actualCard = create_fake_card(cheerBack)
 		life.insert(0, actualCard)
 		actualCard.trulyHide()
-		actualCard.position = Vector2(-960,-145-(53*(6-life.size())))
+		actualCard.position = Vector2(-955,-122-(LIFE_BETWEEN_CONSTANT*(LIFE_MAX_CONSTANT-life.size())))
 		actualCard.rest()
 		actualCard.visible = true
 		for i in range(life.size()):
@@ -1111,6 +1114,9 @@ func hideLookAt(endOfAction=true):
 func flipSPdown():
 	spMarker.region_rect = Rect2(0,120,200,120)
 
+func flipSPup():
+	spMarker.region_rect = Rect2(0,0,200,120)
+
 func showZoneSelection(zones_list,show_cancel=true):
 	for zone in zones_list:
 		var card_in_zone = find_in_zone(zone)
@@ -1393,6 +1399,11 @@ func _on_card_clicked(card_id : int) -> void:
 					popup.add_item(tr("CHEER_ATTACH"),62)
 					popup.add_item(tr("CHEER_BOTTOMCHEERDECK"),64)
 		
+		if actualCard.cardType != "Cheer" and actualCard not in hand and currentCard not in revealed and playing != currentCard:
+			if popup.item_count > 0:
+				popup.add_separator()
+			popup.add_item(tr("CARD_DECLARE_EFFECT"), 990)
+		
 		if popup.item_count > 0 and actualCard.cardType != "Oshi" and playing != currentCard:
 			popup.add_separator()
 		
@@ -1459,11 +1470,11 @@ func _on_card_right_clicked(card_id):
 		return
 	
 	if is_your_side and can_do_things and find_what_zone(card_id):
-			var actualCard = all_cards[card_id]
-			if actualCard.rested:
-				send_command("Popup Command", {"currentCard":card_id, "command_id":1})
-			else:
-				send_command("Popup Command", {"currentCard":card_id, "command_id":0})
+		var actualCard = all_cards[card_id]
+		if actualCard.rested:
+			send_command("Popup Command", {"currentCard":card_id, "command_id":1})
+		else:
+			send_command("Popup Command", {"currentCard":card_id, "command_id":0})
 
 func _on_deck_clicked():
 	reset_popup()
@@ -1472,12 +1483,12 @@ func _on_deck_clicked():
 		return
 	
 	if is_your_side and can_do_things:
-		
 		popup.add_item(tr("DECK_DRAW"),200)
 		popup.add_item(tr("DECK_DRAWX"),201)
 		popup.add_item(tr("DECK_ARCHIVE"),202)
 		popup.add_item(tr("DECK_ARCHIVEX"),203)
 		popup.add_item(tr("DECK_HOLOPOWER"),204)
+		popup.add_item(tr("DECK_HOLOPOWERX"),214)
 		if revealed.size() < REVEALED_LIMIT:
 			popup.add_item(tr("DECK_REVEAL"),205)
 			popup.add_item(tr("DECK_REVEALX"),207)
@@ -1628,7 +1639,7 @@ func _on_list_card_clicked(card_id):
 				elif currentAttached != null and all_occupied_zones().size() > 1:
 					popup.add_item(tr("LIST_ATTACHED_CHEER_ATTACH"),622)
 			
-			if life.size() < 6:
+			if life.size() < LIFE_MAX_CONSTANT:
 				popup.add_item(tr("LIST_CHEER_LIFE"),603)
 		
 		"Support":
@@ -1655,6 +1666,16 @@ func _on_list_card_clicked(card_id):
 		popup.add_item(tr("LIST_CARD_ARCHIVE"),655)
 	if currentFuda != holopower and actualCard.cardType != "Cheer":
 		popup.add_item(tr("LIST_CARD_HOLOPOWER"),656)
+	
+	show_popup()
+
+func _on_sp_marker_button_pressed() -> void:
+	if preliminary_phase or currentPrompt != -1 or !is_your_side or !can_do_things:
+		return
+	
+	reset_popup()
+	
+	popup.add_item(tr("SP_MARKER_FLIP"),801)
 	
 	show_popup()
 
@@ -1841,6 +1862,9 @@ func _popup_from_id(id, metadata = null):
 		203: #Mill X
 			set_prompt(tr("PROMPT_DECK_ARCHIVE") + "\nX=",3)
 			currentPrompt = 203
+		214: #Holopower X
+			set_prompt(tr("PROMPT_DECK_HOLOPOWER") + "\nX=",4)
+			currentPrompt = 214
 		207: #Reveal X
 			set_prompt(tr("PROMPT_DECK_REVEAL") + "\nX=")
 			currentPrompt = 207
@@ -1952,6 +1976,14 @@ func _popup_from_id(id, metadata = null):
 			var possibleZones = all_occupied_zones()
 			showZoneSelection(possibleZones)
 			currentPrompt = 642
+		
+		801: #Flip SP Marker
+			if used_sp_oshi_skill:
+				used_sp_oshi_skill = false
+				flipSPup()
+			else:
+				used_sp_oshi_skill = true
+				flipSPdown()
 		
 		901: #Goldfish Zone Damage
 			set_prompt("PROMPT_DAMAGE", 20, 3)
@@ -2299,6 +2331,9 @@ func side_command(command: String, data: Dictionary) -> void:
 		"Click Notification":
 			if "card_id" in data:
 				all_cards[int(data["card_id"])].showNotice()
+		"Declare Effect":
+			if "card_id" in data:
+				all_cards[int(data["card_id"])].showDeclare()
 		
 		_:
 			pass
@@ -2386,6 +2421,14 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 		"To Life":
 			add_fake_to_life()
 		
+		"Flip SP Marker":
+			if used_sp_oshi_skill:
+				used_sp_oshi_skill = false
+				flipSPup()
+			else:
+				used_sp_oshi_skill = true
+				flipSPdown()
+		
 		"Look At X":
 			if "fuda" in data and "X" in data:
 				var actualFuda = fuda_list[int(data["fuda"])]
@@ -2401,6 +2444,7 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 				fuda_opponent_looking_at._update_looking(false)
 				fuda_opponent_looking_at = null
 		"Used SP Skill":
+			used_sp_oshi_skill = true
 			flipSPdown()
 		
 		"Shuffle Fuda":
@@ -2429,6 +2473,9 @@ func opponent_side_command(command: String, data: Dictionary) -> void:
 		"Click Notification":
 			if "card_id" in data and int(data["card_id"]) in all_cards:
 				all_cards[int(data["card_id"])].showNotice()
+		"Declare Effect":
+			if "card_id" in data and int(data["card_id"]) in all_cards:
+				all_cards[int(data["card_id"])].showDeclare()
 		
 		"Cosmetics":
 			if "cosmetics_type" in data:

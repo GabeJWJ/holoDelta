@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d2bjrwsls2wp5" path="res://damageCounter.png" id="5_p2v7u"]
 [ext_resource type="Texture2D" uid="uid://b1x4nb22w47b5" path="res://extraCounter.png" id="6_tkoyl"]
 [ext_resource type="Theme" uid="uid://c2xsywtxro80x" path="res://Themes/button.tres" id="8_o7lry"]
+[ext_resource type="Texture2D" uid="uid://s5m7fkn1lou3" path="res://zonebutton.png" id="9_mm04k"]
 [ext_resource type="Texture2D" uid="uid://btg5aam80nbly" path="res://accept.png" id="9_ru47b"]
 [ext_resource type="Texture2D" uid="uid://bhmffm1trkxb3" path="res://reject.png" id="10_he2sa"]
 
@@ -128,9 +129,9 @@ size_flags_vertical = 3
 [node name="PotentialDamageRested" type="Label" parent="." unique_id=1907898421]
 auto_translate_mode = 2
 visible = false
-offset_left = -248.75002
-offset_top = 221.25
-offset_right = -137.75002
+offset_left = -248.75
+offset_top = 221.24998
+offset_right = -137.75
 offset_bottom = 280.25
 rotation = -1.5708
 scale = Vector2(1.3, 1.3)
@@ -183,6 +184,10 @@ icon = ExtResource("10_he2sa")
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[node name="Declare" type="Sprite2D" parent="." unique_id=725421629]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("9_mm04k")
 
 [connection signal="card_clicked" from="CardInfo" to="." method="_on_card_info_pressed"]
 [connection signal="card_mouse_left" from="CardInfo" to="." method="_on_card_info_mouse_exited"]

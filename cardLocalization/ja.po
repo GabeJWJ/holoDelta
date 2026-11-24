@@ -10159,7 +10159,7 @@ msgstr "2人あわせてラムダック！"
 msgid "hBP06-096_EFFECT"
 msgstr "自分の[〈角巻わため〉と〈大空スバル〉]1人ずつを選ぶ。自分のアーカイブのエールを選んだホロメンに1枚ずつ送る。その後、このターンの間、選んだホロメンのアーツ+20。"
 
-msgid "hY01-11_NAME"
+msgid "hY01-011_NAME"
 msgstr "白エール"
 
 msgid "hY02-009_NAME"
@@ -16464,4 +16464,373 @@ msgstr "儒烏風亭らでんの博物館巡り"
 
 msgid "hBP10-093_EFFECT"
 msgstr "このカードは、自分の推しホロメンが〈儒烏風亭らでん〉でなければ使えない。\n\n自分のデッキを2枚引き、手札1枚をホロパワーにする。その後、自分のアーカイブに#文化を持つサポートが3枚以上あるなら、自分のエールデッキの上から1枚を自分の#ReGLOSSを持つホロメンに送る。"
+
+msgid "hBP10-002_NAME"
+msgstr "アユンダ・リス"
+
+msgid "hBP10-002_STAGESKILL_NAME"
+msgstr "クールなアユンダ"
+
+msgid "hBP10-002_STAGESKILL_EFFECT"
+msgstr "[ターンに1回]自分のセンターが〈アユンダ・リス〉なら、自分のエールステップの後に、もう1回エールステップを開始する。"
+
+msgid "hBP10-002_SKILL_NAME"
+msgstr "天真爛漫なリス"
+
+msgid "hBP10-002_SKILL_EFFECT"
+msgstr "[ターンに1回]自分のアーカイブの[緑青黄]エールすべてを自分のセンターホロメンに送る。自分のステージにエールが10枚以上あるなら、このターンの間、自分のステージの〈アユンダ・リス〉全員のアーツ+50。"
+
+msgid "hBP10-008_NAME"
+msgstr "獅白ぼたん"
+
+msgid "hBP10-008_ART_0_NAME"
+msgstr "さすしし"
+
+msgid "hBP10-008_ART_0_EFFECT"
+msgstr "このホロメンのエール1枚を自分の他のホロメンに付け替えられる。"
+
+msgid "hBP10-008_COLLAB_NAME"
+msgstr "ｽﾃﾝﾊﾞｰｲ"
+
+msgid "hBP10-008_COLLAB_EFFECT"
+msgstr "自分が後攻で最初のターンなら、自分のデッキから、[1st〈獅白ぼたん〉と〈獅白ぼたんのアケコン〉]1枚ずつを公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP10-010_NAME"
+msgstr "獅白ぼたん"
+
+msgid "hBP10-010_ART_0_NAME"
+msgstr "スタンコンボ！"
+
+msgid "hBP10-010_ART_0_EFFECT"
+msgstr "このアーツでダメージを与えた時、前の相手のターンに自分のホロメンがダウンしていたなら、このアーツの対象のホロメンをお休みさせてバックポジションに移動させる。そのホロメンは次の相手のリセットステップでアクティブにならない。"
+
+msgid "hBP10-010_GIFT_NAME"
+msgstr "ガードもなんとかする獅白ぼたん"
+
+msgid "hBP10-010_GIFT_EFFECT"
+msgstr "[センターポジション限定]このホロメンがアーツダメージを受ける時、受けるダメージが30～50なら、そのダメージを受けない。"
+
+msgid "hBP10-012_NAME"
+msgstr "獅白ぼたん"
+
+msgid "hBP10-012_ART_0_NAME"
+msgstr "ラッシュ！"
+
+msgid "hBP10-012_ART_0_EFFECT"
+msgstr "[ターンに1回]このアーツを使った後、同じアーツをもう1回使える。"
+
+msgid "hBP10-012_COLLAB_NAME"
+msgstr "ねぼらぼの絆"
+
+msgid "hBP10-012_COLLAB_EFFECT"
+msgstr "自分のデッキから、#5期生を持つ2ndホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP10-013_NAME"
+msgstr "獅白ぼたん"
+
+msgid "hBP10-013_ART_0_NAME"
+msgstr "どんどん行こうか"
+
+msgid "hBP10-013_ART_0_EFFECT"
+msgstr "このアーツを使った後、このホロメンが持つ異なるアーツ名のをもう1回使える。"
+
+msgid "hBP10-013_ART_1_NAME"
+msgstr "ずっと、ぼターン！"
+
+msgid "hBP10-013_ART_1_EFFECT"
+msgstr "このアーツがこのターンに使う3回目のアーツなら、このアーツ+50。4回目のアーツならかわりに、このアーツ+70し、自分のデッキの上から1枚をホロパワーにする。"
+
+msgid "hBP10-014_NAME"
+msgstr "大空スバル"
+
+msgid "hBP10-014_ART_0_NAME"
+msgstr "スバルの底力なめんじゃねぇ！"
+
+msgid "hBP10-014_ART_0_EFFECT"
+msgstr "自分のステージに〈大空スバル〉が4人以上いるなら、このアーツ+70。"
+
+msgid "hBP10-014_COLLAB_NAME"
+msgstr "国際部からの応援"
+
+msgid "hBP10-014_COLLAB_EFFECT"
+msgstr "自分のステージに〈ハコス・ベールズ〉がいるなら、このホロメンのアーツに必要な無色エール-1。"
+
+msgid "hBP10-017_NAME"
+msgstr "兎田ぺこら"
+
+msgid "hBP10-017_ART_0_NAME"
+msgstr "ぺこちゃん、壊れちゃうよ～"
+
+msgid "hBP10-017_ART_0_EFFECT"
+msgstr "サイコロを3回振る。出た目の合計数が15以上なら、手札が7枚になるまで、自分のデッキを引く。"
+
+msgid "hBP10-017_COLLAB_NAME"
+msgstr "汚くてもなんでも勝つ!"
+
+msgid "hBP10-017_COLLAB_EFFECT"
+msgstr "このターンの間、自分のSP推しスキル「幸運兎」の[ホロパワー:-3]を[ホロパワー:-1]に変更する。"
+
+msgid "hBP10-023_NAME"
+msgstr "アユンダ・リス"
+
+msgid "hBP10-023_ART_0_NAME"
+msgstr "United AREA 15"
+
+msgid "hBP10-023_ART_0_EFFECT"
+msgstr "自分のエールデッキの上から1枚を自分の#ID1期生を持つBuzzホロメンに送る。このホロメンに[緑エール青エール黄エール]が合計10枚以上付いているなら、このアーツ+200。"
+
+msgid "hBP10-026_NAME"
+msgstr "アユンダ・リス"
+
+msgid "hBP10-026_ART_0_NAME"
+msgstr "エールの導き"
+
+msgid "hBP10-026_ART_0_EFFECT"
+msgstr "[センターポジション限定]このホロメンのエールすべてをアーカイブする。自分のデッキを2枚引き、自分のデッキの上から2枚をホロパワーにする。自分のアーカイブのエール2枚を#ID1期生を持つホロメン1人に送る。"
+
+msgid "hBP10-026_GIFT_NAME"
+msgstr "The Rise of the NUT Warrior"
+
+msgid "hBP10-026_GIFT_EFFECT"
+msgstr "自分のエールデッキの枚数が0枚なら、このホロメンのアーツダメージは軽減されない。"
+
+msgid "hBP10-031_NAME"
+msgstr "セシリア・イマーグリーン"
+
+msgid "hBP10-031_ART_0_NAME"
+msgstr "古き時代より目覚めし者"
+
+msgid "hBP10-031_BLOOM_NAME"
+msgstr "微睡みのトラウム"
+
+msgid "hBP10-031_BLOOM_EFFECT"
+msgstr "自分の推しホロメンが〈セシリア・イマーグリーン〉なら、このホロメンをお休みさせ、自分のデッキの上から2枚を見る。その中から、1枚を手札に加える。そして残ったカードをデッキの下に戻す。"
+
+msgid "hBP10-036_NAME"
+msgstr "アキ・ローゼンタール"
+
+msgid "hBP10-036_ART_0_NAME"
+msgstr "頼もしき相棒"
+
+msgid "hBP10-036_GIFT_NAME"
+msgstr "熟練のサバイバル術"
+
+msgid "hBP10-036_GIFT_EFFECT"
+msgstr "[コラボポジション限定]自分のセンターホロメンに#恐竜を持つツールが付いているなら、相手のホロメンのアーツは、自分のセンターホロメンしか対象にできない。"
+
+msgid "hBP10-039_NAME"
+msgstr "アキ・ローゼンタール"
+
+msgid "hBP10-039_ART_0_NAME"
+msgstr "恐竜ちゃんたち、やっちゃって！"
+
+msgid "hBP10-039_ART_0_EFFECT"
+msgstr "[センターポジション限定]このホロメンに<ティラノサウルス>が付いているなら、相手のセンターホロメンとコラボホロメンに特殊ダメージ50を与える。"
+
+msgid "hBP10-039_GIFT_NAME"
+msgstr "テイムの名手"
+
+msgid "hBP10-039_GIFT_EFFECT"
+msgstr "このホロメンは、Buzzホロメンからアーツダメージを受けない。"
+
+msgid "hBP10-042_NAME"
+msgstr "モココ・アビスガード"
+
+msgid "hBP10-042_ART_0_NAME"
+msgstr "シンクロドロー"
+
+msgid "hBP10-042_ART_0_EFFECT"
+msgstr "自分のセンターが自分の推しホロメンと同じカード名なら、自分のデッキを1枚引く。"
+
+msgid "hBP10-042_BLOOM_NAME"
+msgstr "モココたちといつも一緒！"
+
+msgid "hBP10-042_BLOOM_EFFECT"
+msgstr "自分のアーカイブの自分の推しホロメンと同じカード名の#Adventを持つホロメン1～2枚を手札に戻す。"
+
+msgid "hBP10-044_NAME"
+msgstr "百灯キョーコ"
+
+msgid "hBP10-044_ART_0_NAME"
+msgstr "情熱チャージ完了"
+
+msgid "hBP10-044_GIFT_NAME"
+msgstr "休憩もそろそろ終わりかな"
+
+msgid "hBP10-044_GIFT_EFFECT"
+msgstr "[センターポジション限定][ターンに1回]このホロメンがアーツダメージを受けた時、自分のエールデッキの上から1枚を自分の#アソビ★まわり隊！を持つバックホロメンに送れる。"
+
+msgid "hBP10-046_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBP10-046_ART_0_NAME"
+msgstr "仲良くやろうじゃありませんか"
+
+msgid "hBP10-046_ART_0_EFFECT"
+msgstr "自分のホロパワー1枚をアーカイブできる:自分のデッキから、#ReGLOSSを持つDebutホロメン2枚をステージに出す。そしてデッキをシャッフルする。"
+
+msgid "hBP10-048_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBP10-048_ART_0_NAME"
+msgstr "風流な返礼"
+
+msgid "hBP10-048_ART_0_EFFECT"
+msgstr "自分のアーカイブのエール1枚を自分の#ReGLOSSを持つホロメンに送れる。"
+
+msgid "hBP10-048_COLLAB_NAME"
+msgstr "小粋なおすそわけ"
+
+msgid "hBP10-048_COLLAB_EFFECT"
+msgstr "自分のホロパワー1枚をアーカイブできる：自分のエールデッキの上から1枚を自分の#ReGLOSSを持つホロメンに送る。"
+
+msgid "hBP10-049_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBP10-049_ART_0_NAME"
+msgstr "革新の体現者"
+
+msgid "hBP10-049_ART_0_EFFECT"
+msgstr "自分のアーカイブに#文化を持つサポートが3枚以上あるなら、相手のホロメン1人に特殊ダメージ30を与える。"
+
+msgid "hBP10-049_GIFT_NAME"
+msgstr "伝統の申し子"
+
+msgid "hBP10-049_GIFT_EFFECT"
+msgstr "自分のアーカイブに#文化を持つサポートが3枚以上あるなら、このホロメンのHP+30。"
+
+msgid "hBP10-051_NAME"
+msgstr "儒烏風亭らでん"
+
+msgid "hBP10-051_ART_0_NAME"
+msgstr "これを言うためにホロライブに入った！"
+
+msgid "hBP10-051_ART_0_EFFECT"
+msgstr "自分のホロパワー1～2枚をアーカイブできる：アーカイブしたホロパワー1枚につき、このアーツ+50。"
+
+msgid "hBP10-051_COLLAB_NAME"
+msgstr "いい質問ですねぇ"
+
+msgid "hBP10-051_COLLAB_EFFECT"
+msgstr "自分のデッキから、#文化を持つサポート1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP10-055_NAME"
+msgstr "フワワ・アビスガード"
+
+msgid "hBP10-055_ART_0_NAME"
+msgstr "シンクロアタック"
+
+msgid "hBP10-055_ART_0_EFFECT"
+msgstr "自分のセンターが自分の推しホロメンと同じカード名なら、相手のホロメン1人に特殊ダメージ30を与える。"
+
+msgid "hBP10-055_BLOOM_NAME"
+msgstr "フワワたちはいつも仲良し！"
+
+msgid "hBP10-055_BLOOM_EFFECT"
+msgstr "自分のアーカイブのエール1～2枚を自分の推しホロメンと同じカード名の#Adventを持つホロメン1人に送れる。"
+
+msgid "hBP10-063_NAME"
+msgstr "一条莉々華"
+
+msgid "hBP10-063_ART_0_NAME"
+msgstr "いいこと思いついた!!"
+
+msgid "hBP10-063_COLLAB_NAME"
+msgstr "社長からの招集"
+
+msgid "hBP10-063_COLLAB_EFFECT"
+msgstr "自分のデッキの上から3枚を見る。その中から、#ReGLOSSを持つホロメン1枚を公開し、手札に加える。そして残ったカードを好きな順でデッキの下に戻す。"
+
+msgid "hBP10-068_NAME"
+msgstr "綺々羅々ヴィヴィ"
+
+msgid "hBP10-068_ART_0_NAME"
+msgstr "やーらし！"
+
+msgid "hBP10-068_ART_0_EFFECT"
+msgstr "相手の手札が7枚以上あるなら、このアーツ+50。"
+
+msgid "hBP10-068_BLOOM_NAME"
+msgstr "お金取るで？"
+
+msgid "hBP10-068_BLOOM_EFFECT"
+msgstr "自分のアーカイブの#FLOWGLOWを持つホロメン1枚を手札に戻せる。戻したなら、相手は、自身のデッキを1枚引く。自分のブルームエフェクト「お金取るで？」はターンに1回しか使えない。"
+
+msgid "hBP10-070_NAME"
+msgstr "熱千めら"
+
+msgid "hBP10-070_ART_0_NAME"
+msgstr "見回りタイム"
+
+msgid "hBP10-070_ART_0_EFFECT"
+msgstr "自分のアーカイブにギフトを持つホロメンが4枚以上あるなら、自分のデッキを1枚引く。"
+
+msgid "hBP10-070_BLOOM_NAME"
+msgstr "火消しの心意気"
+
+msgid "hBP10-070_BLOOM_EFFECT"
+msgstr "自分のデッキから、ギフトを持つホロメン1～3枚をアーカイブする。そしてデッキをシャッフルする。"
+
+msgid "hBP10-073_NAME"
+msgstr "鈴鳴つづり"
+
+msgid "hBP10-073_ART_0_NAME"
+msgstr "一緒に笑顔もお届け"
+
+msgid "hBP10-073_COLLAB_NAME"
+msgstr "荷物のお届け"
+
+msgid "hBP10-073_COLLAB_EFFECT"
+msgstr "自分が後攻で最初のターンなら、自分のデッキから、〈鈴鳴つづり〉2枚を公開し、手札に加える。そしてデッキをシャッフルする。さらに、相手のエールデッキの上から1枚を相手のホロメンに送る。"
+
+msgid "hBP10-079_NAME"
+msgstr "雪花ラミィ"
+
+msgid "hBP10-079_ART_0_NAME"
+msgstr "酔えば酔うほど強くなる"
+
+msgid "hBP10-079_ART_0_EFFECT"
+msgstr "自分のアーカイブに #ラミィのお酒 を持つサポートが5枚以上あるなら、このアーツ+50。"
+
+msgid "hBP10-079_GIFT_NAME"
+msgstr "酒は百薬の長"
+
+msgid "hBP10-079_GIFT_EFFECT"
+msgstr "[コラボポジション限定][ターンに1回]自分のターンで、自分の #ラミィのお酒 を持つサポートがアーカイブに置かれた時、自分のデッキを1枚引く。"
+
+msgid "hBP10-084_NAME"
+msgstr "虎金妃笑虎"
+
+msgid "hBP10-084_ART_0_NAME"
+msgstr "研ぎ澄まされるセンス"
+
+msgid "hBP10-084_GIFT_NAME"
+msgstr "自分を虎だと思ってる成人女性"
+
+msgid "hBP10-084_GIFT_EFFECT"
+msgstr "自分のパフォーマンスステップの間、自分のセンターの〈虎金妃目笑虎〉の黄エールすべては、2枚として扱う。"
+
+msgid "hBP10-085_NAME"
+msgstr "バトルパソコン"
+
+msgid "hBP10-085_EFFECT"
+msgstr "サイコロを1回振る。1なら、自分のデッキから、1stホロメン1枚を公開し、手札に加える。1以外なら、自分のデッキから、エクストラを持つDebutホロメン1枚を公開し、手札に加える。そしてデッキをシャッフルする。"
+
+msgid "hBP10-089_NAME"
+msgstr "皆勤賞"
+
+msgid "hBP10-089_EFFECT"
+msgstr "自分のステージのホロメン1人を選ぶ。このターンの間、選んだホロメンのアーツ+20。その後、自分のステージに同じカード名の[Debut と1stと2nd]ホロメンがいるなら、自分のデッキを2枚引く。"
+
+msgid "hBP10-092_NAME"
+msgstr "獅白杯"
+
+msgid "hBP10-092_EFFECT"
+msgstr "このカードは、自分の推しホロメンが〈獅白ぼたん〉でなければ使えない。\n\nこのターンの間、自分のステージの〈獅白ぼたん〉全員のアーツダメージ＋20し、自分のステージの〈獅白ぼたん〉がアーツダメージで相手のセンターホロメンをダウンさせた時、相手は、自身のバックホロメン1人を選び、選んだホロメンと相手のセンターホロメンを交代させる。"
+
+msgid "hBP10-101_NAME"
+msgstr "プテラノドン"
+
+msgid "hBP10-101_EFFECT"
+msgstr "◆〈アキ・ローゼンタール〉に付いていたら能力追加\n■このホロメンがコラボした時、自分のデッキの上から４枚を見る。その中から、〈アキ・ローゼンタール〉１枚を公開し、手札に加える。そして残ったカードを好きな順でデッキの下に戻す。\n■このホロメンがダウンした時、このホロメンに付いている 〈プテラノドン〉１枚をデッキの下に戻す。\n\nツールは、自分のホロメン１人につき１枚だけ付けられる。"
 

@@ -10159,7 +10159,7 @@ msgstr ""
 msgid "hBP06-096_EFFECT"
 msgstr ""
 
-msgid "hY01-11_NAME"
+msgid "hY01-011_NAME"
 msgstr ""
 
 msgid "hY02-009_NAME"
@@ -16463,5 +16463,374 @@ msgid "hBP10-093_NAME"
 msgstr ""
 
 msgid "hBP10-093_EFFECT"
+msgstr ""
+
+msgid "hBP10-002_NAME"
+msgstr ""
+
+msgid "hBP10-002_STAGESKILL_NAME"
+msgstr ""
+
+msgid "hBP10-002_STAGESKILL_EFFECT"
+msgstr ""
+
+msgid "hBP10-002_SKILL_NAME"
+msgstr ""
+
+msgid "hBP10-002_SKILL_EFFECT"
+msgstr ""
+
+msgid "hBP10-008_NAME"
+msgstr ""
+
+msgid "hBP10-008_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-008_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-008_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP10-008_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP10-010_NAME"
+msgstr ""
+
+msgid "hBP10-010_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-010_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-010_GIFT_NAME"
+msgstr ""
+
+msgid "hBP10-010_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP10-012_NAME"
+msgstr ""
+
+msgid "hBP10-012_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-012_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-012_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP10-012_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP10-013_NAME"
+msgstr ""
+
+msgid "hBP10-013_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-013_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-013_ART_1_NAME"
+msgstr ""
+
+msgid "hBP10-013_ART_1_EFFECT"
+msgstr ""
+
+msgid "hBP10-014_NAME"
+msgstr ""
+
+msgid "hBP10-014_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-014_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-014_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP10-014_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP10-017_NAME"
+msgstr ""
+
+msgid "hBP10-017_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-017_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-017_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP10-017_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP10-023_NAME"
+msgstr ""
+
+msgid "hBP10-023_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-023_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-026_NAME"
+msgstr ""
+
+msgid "hBP10-026_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-026_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-026_GIFT_NAME"
+msgstr ""
+
+msgid "hBP10-026_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP10-031_NAME"
+msgstr ""
+
+msgid "hBP10-031_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-031_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP10-031_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP10-036_NAME"
+msgstr ""
+
+msgid "hBP10-036_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-036_GIFT_NAME"
+msgstr ""
+
+msgid "hBP10-036_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP10-039_NAME"
+msgstr ""
+
+msgid "hBP10-039_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-039_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-039_GIFT_NAME"
+msgstr ""
+
+msgid "hBP10-039_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP10-042_NAME"
+msgstr ""
+
+msgid "hBP10-042_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-042_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-042_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP10-042_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP10-044_NAME"
+msgstr ""
+
+msgid "hBP10-044_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-044_GIFT_NAME"
+msgstr ""
+
+msgid "hBP10-044_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP10-046_NAME"
+msgstr ""
+
+msgid "hBP10-046_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-046_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-048_NAME"
+msgstr ""
+
+msgid "hBP10-048_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-048_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-048_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP10-048_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP10-049_NAME"
+msgstr ""
+
+msgid "hBP10-049_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-049_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-049_GIFT_NAME"
+msgstr ""
+
+msgid "hBP10-049_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP10-051_NAME"
+msgstr ""
+
+msgid "hBP10-051_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-051_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-051_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP10-051_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP10-055_NAME"
+msgstr ""
+
+msgid "hBP10-055_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-055_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-055_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP10-055_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP10-063_NAME"
+msgstr ""
+
+msgid "hBP10-063_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-063_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP10-063_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP10-068_NAME"
+msgstr ""
+
+msgid "hBP10-068_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-068_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-068_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP10-068_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP10-070_NAME"
+msgstr ""
+
+msgid "hBP10-070_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-070_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-070_BLOOM_NAME"
+msgstr ""
+
+msgid "hBP10-070_BLOOM_EFFECT"
+msgstr ""
+
+msgid "hBP10-073_NAME"
+msgstr ""
+
+msgid "hBP10-073_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-073_COLLAB_NAME"
+msgstr ""
+
+msgid "hBP10-073_COLLAB_EFFECT"
+msgstr ""
+
+msgid "hBP10-079_NAME"
+msgstr ""
+
+msgid "hBP10-079_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-079_ART_0_EFFECT"
+msgstr ""
+
+msgid "hBP10-079_GIFT_NAME"
+msgstr ""
+
+msgid "hBP10-079_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP10-084_NAME"
+msgstr ""
+
+msgid "hBP10-084_ART_0_NAME"
+msgstr ""
+
+msgid "hBP10-084_GIFT_NAME"
+msgstr ""
+
+msgid "hBP10-084_GIFT_EFFECT"
+msgstr ""
+
+msgid "hBP10-085_NAME"
+msgstr ""
+
+msgid "hBP10-085_EFFECT"
+msgstr ""
+
+msgid "hBP10-089_NAME"
+msgstr ""
+
+msgid "hBP10-089_EFFECT"
+msgstr ""
+
+msgid "hBP10-092_NAME"
+msgstr ""
+
+msgid "hBP10-092_EFFECT"
+msgstr ""
+
+msgid "hBP10-101_NAME"
+msgstr ""
+
+msgid "hBP10-101_EFFECT"
 msgstr ""
 
